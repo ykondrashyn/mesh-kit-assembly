@@ -1,0 +1,111 @@
+{
+  "board": "xiao",
+  "kind": "rf",
+  "schematic": false,
+  "selection_box_normalized_mm": [
+    12.0,
+    17.65,
+    1.2,
+    15.22,
+    20.8,
+    2.55
+  ],
+  "origin_normalized_mm": [
+    13.61668,
+    19.23344,
+    1.25
+  ],
+  "board_surface": "XIAO PCB top",
+  "mating_plane_local_z_mm": 1.25,
+  "source_component": "U.FL-R-SMT-1_10_ v1:1",
+  "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+  "source_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+  "geometry_provenance": "Complete manufacturer STEP connector solid",
+  "source_to_normalized_mm_3x4": [
+    0,
+    0,
+    -1,
+    2.7786,
+    -1,
+    0,
+    0,
+    12.2817,
+    0,
+    1,
+    0,
+    0.25
+  ],
+  "normalized_to_local_translation_mm": [
+    -13.61668,
+    -19.23344,
+    -1.25
+  ],
+  "origin_on_board_ldu": [
+    34.0417,
+    -3.125,
+    48.0836
+  ],
+  "axis_local_mm": [
+    0,
+    0
+  ],
+  "local_board_plane_z_mm": 0,
+  "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+  "selected_whole_solids": [
+    {
+      "index_zero_based": 35,
+      "bbox_normalized_mm": [
+        12.066678569380398,
+        17.733441733602533,
+        1.2500000149011594,
+        15.1666785693804,
+        20.733441733602533,
+        2.5000000149011594
+      ],
+      "volume_mm3": 3.16424201391766
+    }
+  ],
+  "selected_source_volume_mm3": 3.16424201391766,
+  "exported_local_volume_mm3": 3.1642420139176575,
+  "bbox_on_original_board_mm": [
+    12.066678569380398,
+    17.733441733602533,
+    1.2500000149011594,
+    15.1666785693804,
+    20.733441733602533,
+    2.5000000149011594
+  ],
+  "source_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+  "filename": "detail-xiao-rf-official.dat",
+  "triangles": 3284,
+  "type_2_segments": 671,
+  "faces": 67,
+  "unique_brep_edges": 176,
+  "suppressed_periodic_or_degenerate_edges": 9,
+  "output_sha256": "639c3451aec4a904d0670ee61efce707e254dd4efc5c01b9ad8177ac9b353250",
+  "mesh_bounds_ldu": {
+    "min": [
+      -3.875004,
+      -3.125,
+      -3.749996
+    ],
+    "max": [
+      3.874996,
+      -0.0,
+      3.750004
+    ]
+  },
+  "file_bytes": 343602,
+  "cad_bounds_local_mm": {
+    "min": [
+      -1.5500014306196022,
+      -1.499998266397471,
+      1.4901159417490817e-08
+    ],
+    "max": [
+      1.5499985693803993,
+      1.5000017336025304,
+      1.2500000149011596
+    ]
+  }
+}

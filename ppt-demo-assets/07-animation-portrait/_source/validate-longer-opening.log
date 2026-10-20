@@ -1,0 +1,365 @@
+00:00.711  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/assembly-showcase.blend"
+{
+  "source_blend_sha256": "8c90c091d6b1899ee150c36a73ffdda8329e0301af7c0d33cf70002e9108a54a",
+  "frames_checked": 510,
+  "official_solids": {
+    "xiao": 37,
+    "wio": 9
+  },
+  "cable_endpoint_max_error_mm": 2.8635053990994247e-06,
+  "source_ring_max_error_pixels": 0.0009935803586486637,
+  "lora_film_min_projected_clearance_pixels": 54.360005312842866,
+  "lora_cable_min_projected_clearance_pixels": -80.49946823671121,
+  "lora_cable_min_physical_clearance_mm": 7.8157136071777344,
+  "antenna_labels": {
+    "wifi": "Wi-Fi / 2.4 GHz",
+    "lora": "LoRa / 868 MHz"
+  },
+  "antenna_font_and_material_match_chip_labels": true,
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "opening_layout": "vertical",
+  "board_spacing_final_mm": 5,
+  "preserved_original_assets": 22,
+  "original_assets_unchanged": true,
+  "errors": []
+}
+{
+  "frames_checked": 510,
+  "opening_names": {
+    "lora": "LoRa antenna\n868 MHz",
+    "wio": "Wio-SX1262",
+    "wifi": "Wi-Fi antenna\n2.4 GHz",
+    "xiao": "XIAO ESP32S3"
+  },
+  "opening_read_hold_seconds": 2.0,
+  "all_labels_readable_before_motion_seconds": 2.34,
+  "font_matches_chip_labels": true,
+  "opening_label_starts_seconds": {
+    "lora": 0.0,
+    "wio": 0.2,
+    "wifi": 0.4,
+    "xiao": 0.6000000000000001
+  },
+  "opening_label_opacity_samples": [
+    {
+      "frame": 1,
+      "source_frame": 1,
+      "opacities": {
+        "lora": 0.0,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 4,
+      "source_frame": 4,
+      "opacities": {
+        "lora": 0.72479248046875,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 7,
+      "source_frame": 7,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 10,
+      "source_frame": 10,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 0.72479248046875,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 13,
+      "source_frame": 13,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 16,
+      "source_frame": 16,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 0.72479248046875,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 19,
+      "source_frame": 19,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 22,
+      "source_frame": 22,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 0.72479248046875
+      }
+    },
+    {
+      "frame": 24,
+      "source_frame": 24,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 1.0
+      }
+    },
+    {
+      "frame": 31,
+      "source_frame": 31,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 1.0
+      }
+    },
+    {
+      "frame": 100,
+      "source_frame": 40,
+      "opacities": {
+        "lora": 0.6321175694465637,
+        "wio": 0.6321175694465637,
+        "wifi": 0.6321175694465637,
+        "xiao": 0.6321175694465637
+      }
+    },
+    {
+      "frame": 106,
+      "source_frame": 46,
+      "opacities": {
+        "lora": 0.0,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    }
+  ],
+  "step_titles_never_overlap": true,
+  "source_ring_hidden_at_step_changes": true,
+  "rf_steps_show_only_active_pair": true,
+  "pair_visibility_samples": [
+    {
+      "frame": 1,
+      "source_frame": 1,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 106,
+      "source_frame": 46,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 154,
+      "source_frame": 94,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 190,
+      "source_frame": 130,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 210,
+      "source_frame": 150,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 211,
+      "source_frame": 151,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 232,
+      "source_frame": 172,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 259,
+      "source_frame": 199,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 295,
+      "source_frame": 235,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 315,
+      "source_frame": 255,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 316,
+      "source_frame": 256,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 327,
+      "source_frame": 267,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 379,
+      "source_frame": 319,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 510,
+      "source_frame": 450,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    }
+  ],
+  "transition_style": "Native white dissolves and quintic camera easing",
+  "errors": [],
+  "source_blend_sha256": "8c90c091d6b1899ee150c36a73ffdda8329e0301af7c0d33cf70002e9108a54a"
+}
+{
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "layout": "vertical",
+  "opening_bounds_pixels": {
+    "lora": [
+      474.9879848957062,
+      1470.6318283081055,
+      639.431848526001,
+      1638.3896255493164
+    ],
+    "WIO": [
+      456.40774369239807,
+      1138.5068893432617,
+      617.3067784309387,
+      1258.5625076293945
+    ],
+    "wifi": [
+      448.4685230255127,
+      806.0969924926758,
+      665.9513425827026,
+      985.2390289306641
+    ],
+    "XIAO": [
+      456.4080011844635,
+      457.78801918029785,
+      615.8070158958435,
+      599.4629859924316
+    ]
+  },
+  "opening_adjacent_body_gaps_pixels": [
+    212.06932067871094,
+    153.26786041259766,
+    206.63400650024414
+  ],
+  "detached_plug_to_socket_mm": {
+    "wifi": 56.85485563586456,
+    "lora": 49.55551618989432
+  },
+  "transition_frames_checked": 139,
+  "checks": "Surface intersections between both board bodies and the antenna films",
+  "connection_sequence_starts_at_frame": 139,
+  "errors": [],
+  "source_blend_sha256": "8c90c091d6b1899ee150c36a73ffdda8329e0301af7c0d33cf70002e9108a54a"
+}
+{
+  "frames_checked": 510,
+  "portrait": [
+    1080,
+    1920
+  ],
+  "circular_detail_diameter_pixels": 600,
+  "assembly_motion_matches_landscape_after_opening": true,
+  "return_to_front_retained": true,
+  "hud_text_within_frame": true,
+  "leader_avoids_inset_heading": true,
+  "errors": []
+}
+RENDER 1 of 510
+00:39.549  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0001.png'
+RENDER 34 of 510
+00:41.036  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0034.png'
+RENDER 64 of 510
+00:42.425  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0064.png'
+RENDER 94 of 510
+00:43.762  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0094.png'
+RENDER 95 of 510
+00:45.190  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0095.png'
+RENDER 106 of 510
+00:46.500  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0106.png'
+RENDER 154 of 510
+00:48.158  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0154.png'
+RENDER 259 of 510
+00:49.770  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0259.png'
+RENDER 481 of 510
+00:50.970  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0481.png'
+RENDER 510 of 510
+00:52.017  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/longer-opening-probes/frame-0510.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,362 @@
+00:00.627  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/assembly-showcase.blend"
+{
+  "source_blend_sha256": "7bd5a8abf7a5ed4165fcdfa6eced6bac9ab89d791170f4de8afa8cd523adaaac",
+  "frames_checked": 450,
+  "official_solids": {
+    "xiao": 37,
+    "wio": 9
+  },
+  "cable_endpoint_max_error_mm": 1.1246181883879427e-06,
+  "source_ring_max_error_pixels": 0.0009650505554713071,
+  "lora_film_min_projected_clearance_pixels": 64.52392218782211,
+  "lora_cable_min_projected_clearance_pixels": -95.55077988586285,
+  "lora_cable_min_physical_clearance_mm": 7.8157136071777344,
+  "antenna_labels": {
+    "wifi": "Wi-Fi / 2.4 GHz",
+    "lora": "LoRa / 868 MHz"
+  },
+  "antenna_font_and_material_match_chip_labels": true,
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "opening_layout": "horizontal",
+  "board_spacing_final_mm": 5,
+  "preserved_original_assets": 22,
+  "original_assets_unchanged": true,
+  "errors": []
+}
+{
+  "frames_checked": 450,
+  "opening_names": {
+    "lora": "LoRa antenna\n868 MHz",
+    "wio": "Wio-SX1262",
+    "wifi": "Wi-Fi antenna\n2.4 GHz",
+    "xiao": "XIAO ESP32S3"
+  },
+  "font_matches_chip_labels": true,
+  "opening_label_starts_seconds": {
+    "lora": 0.0,
+    "wio": 0.2,
+    "wifi": 0.4,
+    "xiao": 0.6000000000000001
+  },
+  "opening_label_opacity_samples": [
+    {
+      "frame": 1,
+      "opacities": {
+        "lora": 0.0,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 4,
+      "opacities": {
+        "lora": 0.72479248046875,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 7,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 10,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 0.72479248046875,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 13,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 16,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 0.72479248046875,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 19,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 0.0
+      }
+    },
+    {
+      "frame": 22,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 0.72479248046875
+      }
+    },
+    {
+      "frame": 24,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 1.0
+      }
+    },
+    {
+      "frame": 31,
+      "opacities": {
+        "lora": 1.0,
+        "wio": 1.0,
+        "wifi": 1.0,
+        "xiao": 1.0
+      }
+    },
+    {
+      "frame": 40,
+      "opacities": {
+        "lora": 0.6321175694465637,
+        "wio": 0.6321175694465637,
+        "wifi": 0.6321175694465637,
+        "xiao": 0.6321175694465637
+      }
+    },
+    {
+      "frame": 46,
+      "opacities": {
+        "lora": 0.0,
+        "wio": 0.0,
+        "wifi": 0.0,
+        "xiao": 0.0
+      }
+    }
+  ],
+  "step_titles_never_overlap": true,
+  "source_ring_hidden_at_step_changes": true,
+  "rf_steps_show_only_active_pair": true,
+  "pair_visibility_samples": [
+    {
+      "frame": 1,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 46,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 94,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 130,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 150,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 151,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 0
+      }
+    },
+    {
+      "frame": 172,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 199,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 235,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 255,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 256,
+      "visible_counts": {
+        "wifi": 0,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 267,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 319,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    },
+    {
+      "frame": 450,
+      "visible_counts": {
+        "wifi": 117,
+        "lora": 32
+      }
+    }
+  ],
+  "transition_style": "Native white dissolves and quintic camera easing",
+  "errors": [],
+  "source_blend_sha256": "7bd5a8abf7a5ed4165fcdfa6eced6bac9ab89d791170f4de8afa8cd523adaaac"
+}
+{
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "layout": "horizontal",
+  "opening_bounds_pixels": {
+    "lora": [
+      228.82098197937012,
+      432.26879596710205,
+      461.28896713256836,
+      669.4214987754822
+    ],
+    "WIO": [
+      649.6176910400391,
+      428.4468412399292,
+      877.0745658874512,
+      598.1649470329285
+    ],
+    "wifi": [
+      1085.4572296142578,
+      424.2220079898834,
+      1392.9043579101562,
+      677.4682545661926
+    ],
+    "XIAO": [
+      1543.743896484375,
+      397.5213038921356,
+      1769.0801239013672,
+      597.8017544746399
+    ]
+  },
+  "opening_adjacent_body_gaps_pixels": [
+    188.3287239074707,
+    208.38266372680664,
+    150.83953857421875
+  ],
+  "detached_plug_to_socket_mm": {
+    "wifi": 75.5666613825171,
+    "lora": 71.43394850699492
+  },
+  "transition_frames_checked": 79,
+  "checks": "Surface intersections between both board bodies and the antenna films",
+  "connection_sequence_starts_at_frame": 79,
+  "errors": [],
+  "source_blend_sha256": "7bd5a8abf7a5ed4165fcdfa6eced6bac9ab89d791170f4de8afa8cd523adaaac"
+}
+RENDER 1 of 450
+00:21.541  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0001.png'
+RENDER 2 of 450
+00:23.573  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0002.png'
+RENDER 3 of 450
+00:24.998  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0003.png'
+RENDER 4 of 450
+00:26.534  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0004.png'
+RENDER 5 of 450
+00:28.084  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0005.png'
+RENDER 6 of 450
+00:29.623  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0006.png'
+RENDER 7 of 450
+00:31.110  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0007.png'
+RENDER 8 of 450
+00:32.647  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0008.png'
+RENDER 9 of 450
+00:34.124  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0009.png'
+RENDER 10 of 450
+00:35.657  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0010.png'
+RENDER 11 of 450
+00:37.220  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0011.png'
+RENDER 12 of 450
+00:38.829  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0012.png'
+RENDER 13 of 450
+00:40.303  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0013.png'
+RENDER 14 of 450
+00:41.589  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0014.png'
+RENDER 15 of 450
+00:42.983  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0015.png'
+RENDER 16 of 450
+00:44.382  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0016.png'
+RENDER 17 of 450
+00:45.725  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0017.png'
+RENDER 18 of 450
+00:47.142  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0018.png'
+RENDER 19 of 450
+00:48.463  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0019.png'
+RENDER 20 of 450
+00:49.797  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0020.png'
+RENDER 21 of 450
+00:51.068  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0021.png'
+RENDER 22 of 450
+00:52.413  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0022.png'
+RENDER 23 of 450
+00:53.814  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0023.png'
+RENDER 24 of 450
+00:55.113  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0024.png'
+RENDER 25 of 450
+00:56.409  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0025.png'
+RENDER 34 of 450
+00:57.703  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0034.png'
+RENDER 94 of 450
+00:59.239  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0094.png'
+RENDER 199 of 450
+01:00.693  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0199.png'
+RENDER 450 of 450
+01:02.018  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/previews/sequential-labels/frame-0450.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "units": "mm",
+    "manufacturer": "I-PEX",
+    "family": "MHF I",
+    "model": "20278-1xxR-13C PLUG R15",
+    "product_page": "https://www.i-pex.com/product/mhf-I",
+    "download_url": "https://www.i-pex.com/sites/default/files/downloads/zip/MHF_I_20278_113_20279_STEP.zip",
+    "source_path": "source-models/rf-plug/20278-1xxR-13C PLUG R15 STEP ALL.STEP",
+    "source_sha256": "45cce1238d2c2687e042d6c67c433a013d0e030b04e0f5888c7e7fb1cd28897b",
+    "reference_files": {
+      "20278-1xxR-13+20279-001E-xxC R15R9 STEP ALL.STEP": {
+        "path": "source-models/rf-plug/20278-1xxR-13+20279-001E-xxC R15R9 STEP ALL.STEP",
+        "sha256": "fb48cf7b8337d1deccfd7fd3930e2dc31f88e40c30cb2fe1dbbfb7b85b80554a"
+      },
+      "20279-001E-xxC RECEPTACLE R9 STEP ALL.STEP": {
+        "path": "source-models/rf-plug/20279-001E-xxC RECEPTACLE R9 STEP ALL.STEP",
+        "sha256": "dd19353369cd4c68be409446922a3470c1e8125fd6fff5790625744dfc2a1816"
+      }
+    },
+    "source_to_normalized_mm_3x4": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2.1
+    ],
+    "axes": "Mating axis +Z, opening faces down, cable extends +Y, origin is the mated reference PCB surface at the connector axis",
+    "mated_reference": {
+      "basis": "Matching exact outer cup cylinders and cable centerline to the supplied combined plug/receptacle STEP",
+      "combined_source_xyz_from_plug_source_xyz": "[plug.Z, plug.Y+2.1, -plug.X]",
+      "pcb_plane_z_mm": 0.0,
+      "receptacle_top_z_mm": 1.25,
+      "plug_bottom_z_mm": 0.3,
+      "plug_top_z_mm": 2.4,
+      "place_for_socket_top_z": "Translate normalized plug Z by socket_top_z - 1.25",
+      "xiao_seated_board_translation_mm": [
+        13.6167,
+        19.2334,
+        1.25
+      ],
+      "wio_seated_board_translation_mm": [
+        5.3984,
+        19.4793,
+        1.65
+      ]
+    },
+    "cable_join": {
+      "centerline_start_mm": [
+        0,
+        4,
+        1.635
+      ],
+      "centerline_end_mm": [
+        0,
+        7,
+        1.635
+      ],
+      "native_curve_start_mm": [
+        0,
+        7,
+        1.635
+      ],
+      "native_curve_tangent": [
+        0,
+        1,
+        0
+      ],
+      "radius_mm": 0.56501,
+      "nominal_radius_mm": 0.565,
+      "diameter_mm": 1.13002,
+      "geometry_removed": false,
+      "trim_boundary": null,
+      "note": "Preserve the complete original straight stub. Continue its circular end with a native Bezier cable."
+    },
+    "materials": "Original AP203 file has no color metadata. The four exact jacket faces are styled dark. Metallic surfaces use the gold finish visible in the Seeed reference photo.",
+    "geometry_policy": "All 378 original faces and the entire single solid retained. No Boolean cuts, clipping, deformation or replacement geometry.",
+    "mesh_chordal_deflection_mm": 0.004,
+    "mesh_angle_rad": 0.15,
+    "limitations": [
+      "Representative manufacturer model for the matching MHF I family. The exact supplier and revision of the kit antenna plug were not verified.",
+      "The model is a single fused solid. Fine internal surfaces are preserved, but material identities are not encoded by the source.",
+      "Mating offsets derive from the I-PEX reference pair. Actual fit with the Seeed receptacle is not mechanically validated."
+    ]
+  },
+  "library": "rf-plug.json.gz",
+  "sha256": "d88b0a4ffaa40517d4b0b1157eb3264e4dcfff85d31fb85a6ddcfbaf41060095",
+  "object": {
+    "name": "ipex_mhf_i_20278_official_plug",
+    "category": "rf_plug",
+    "kind": "rf_plug",
+    "role": "rf_plug",
+    "board": null,
+    "solid_index": 0,
+    "material": "gold",
+    "schematic": false,
+    "source": {
+      "path": "source-models/rf-plug/20278-1xxR-13C PLUG R15 STEP ALL.STEP",
+      "sha256": "45cce1238d2c2687e042d6c67c433a013d0e030b04e0f5888c7e7fb1cd28897b",
+      "url": "https://www.i-pex.com/sites/default/files/downloads/zip/MHF_I_20278_113_20279_STEP.zip"
+    },
+    "bounds": {
+      "min": [
+        -1.5,
+        -1.3450000999999996,
+        0.29999990000000004
+      ],
+      "max": [
+        1.5000000000000004,
+        7.0000001,
+        2.400001213765698
+      ]
+    },
+    "material_names": [
+      "gold",
+      "cable"
+    ],
+    "statistics": {
+      "cad_faces": 378,
+      "vertices": 9414,
+      "triangles": 18821,
+      "feature_segments": 2569,
+      "cable_styling_source_faces": [
+        3,
+        346,
+        347,
+        348
+      ],
+      "unique_brep_edges": 1031,
+      "suppressed_periodic_or_degenerate_edges": 4
+    }
+  }
+}

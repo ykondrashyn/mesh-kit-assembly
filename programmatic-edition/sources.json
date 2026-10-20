@@ -1,0 +1,69 @@
+{
+  "title": "XIAO ESP32S3 + Wio-SX1262 assembly guide",
+  "date": "2026-10-19",
+  "ai_image_generation_used": false,
+  "method": "Official STEP projections and procedural SVG composition",
+  "source_chats": [
+    "codex://threads/01a08f79-ecf0-7870-8a2e-32f3d9cbe333",
+    "codex://threads/01a14fab-9be4-7e50-98c6-7f03b1e219d0"
+  ],
+  "geometry_sources": [
+    {
+      "path": "../references/wio-sx1262-for-xiao.step",
+      "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+      "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c"
+    },
+    {
+      "path": "../references/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+      "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd"
+    }
+  ],
+  "physical_photo_references": [
+    "PXL_20260814_183701502.jpg",
+    "PXL_20260814_183837394.jpg",
+    "PXL_20260814_184306445.jpg",
+    "PXL_20260814_184542767.jpg"
+  ],
+  "source_images_in_deliverables": false,
+  "supplemental_geometry": [
+    "XIAO populated B2B connector",
+    "XIAO installed seven-pin headers",
+    "Wio button",
+    "FPC antenna bodies",
+    "RF plugs and cables",
+    "connector schematic"
+  ],
+  "geometry_hashes": {
+    "wio-bottom.svg": "83c4f85c4595a728703cc11a81c3fb652a9d5bcd065718205f2d8629ad65235c",
+    "stack-iso.svg": "dbd79eb90e3ac0c5f9dd4d23da5218e3c9324381f6d31640dac4af2f7ac63257",
+    "wio-iso.svg": "3d48b1aa510a60ece9423d8e86c76fce86cbcb71b3a1e2d458daa85dcfa751f9",
+    "xiao-iso.svg": "bd74772ae30a8526cbdda3a76c1b06ed12ad96d098409537bed00a516412e987"
+  },
+  "output_hashes": {
+    "01-parts.png": "5646b693cb519e6afdd68b762ce8b5db11ac23d0a9fe1591782942418f624c9b",
+    "01-parts.svg": "1387386b52f89c0ec4175805dac9dd3fee47ab365b93f66e0f935885dd58662f",
+    "02-wifi-antenna.png": "454737b3c4f83a84fa2eb6764635a555c9f89d6dfda9899e7dfc23815c6def4b",
+    "02-wifi-antenna.svg": "db5adbadd613d1021dda4362d55243e5ec8cca61f9743778bd3136da5de7df90",
+    "03-lora-antenna.png": "3a62e8061a451570457464c32ac8e5c69ecbdd7cebd2def0673bfc3ba31e13b6",
+    "03-lora-antenna.svg": "f1d32411a5d48bfd1de66ec2170eeaa5ee1f4cd22c43519d43b323644f80f9f7",
+    "04-join-boards.png": "e90d0d42e2bef5c541ffa353c25c3ff2f49c9fc6acbb8ea97d5bdddeecb909a2",
+    "04-join-boards.svg": "e4e5fe02d1ca38904089c5b585f6a306324e816e08ba2a6f9b49eaacca7d8115",
+    "xiao-wio-assembly-preview.png": "8b64172f96810ede7491fc9322d02e584ce834dc838f9937554a4f4167dc72dc",
+    "xiao-wio-assembly.pdf": "fac05315d896c5b7a1af6db6c6f127bf90ed0067c2ec497aa4aa626a141ce142",
+    "xiao-wio-assembly.png": "cf6637ef09107313884e65f8ebe1b62cf5aede580691dbee0735e7c89de043c8",
+    "xiao-wio-assembly.svg": "a2eb06eb590f78ae956c3742d6ed61de7fd40b1d89517796117340ae3fbf9de7"
+  },
+  "validation": {
+    "pdf_pages": 1,
+    "pdf_embedded_raster_images": 0,
+    "pdf_points": [
+      0,
+      0,
+      1191.12,
+      841.91998
+    ],
+    "svg_no_raster_elements": true,
+    "pdf_source_links": 1
+  }
+}

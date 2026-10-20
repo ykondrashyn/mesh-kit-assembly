@@ -1,0 +1,97 @@
+{
+  "board": "xiao",
+  "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+  "source_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+  "source_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+  "source_to_normalized_mm_3x4": [
+    0,
+    0,
+    -1,
+    2.7786,
+    -1,
+    0,
+    0,
+    12.2817,
+    0,
+    1,
+    0,
+    0.25
+  ],
+  "landmarks_normalized_mm": {
+    "rf": [
+      13.617,
+      19.233,
+      2.5
+    ],
+    "b2b": [
+      6.7307,
+      19.4056,
+      2.2
+    ],
+    "usb": [
+      8.89,
+      -1.527,
+      2.36
+    ],
+    "shield_center": [
+      8.89,
+      12.01,
+      3.25
+    ]
+  },
+  "landmarks_ldu": {
+    "rf": [
+      34.0425,
+      -6.25,
+      48.0825
+    ],
+    "b2b": [
+      16.82675,
+      -5.5,
+      48.514
+    ],
+    "usb": [
+      22.225,
+      -5.9,
+      -3.8175
+    ],
+    "shield_center": [
+      22.225,
+      -8.125,
+      30.025
+    ]
+  },
+  "geometry_provenance": "Manufacturer STEP",
+  "filename": "xiao-official.dat",
+  "triangles": 26954,
+  "type_2_segments": 4432,
+  "faces": 894,
+  "unique_brep_edges": 2271,
+  "suppressed_periodic_or_degenerate_edges": 45,
+  "output_sha256": "eef4e5c883e4c946f1c410ea03e6da2a90ff6c0b03d7407442822c1419db31db",
+  "cad_bounds_normalized_mm": {
+    "min": [
+      -4.458750235691866e-08,
+      -1.5269398357403463,
+      1.4901160971803051e-08
+    ],
+    "max": [
+      17.77999995541252,
+      20.95504131441358,
+      4.460000014901311
+    ]
+  },
+  "mesh_bounds_ldu": {
+    "min": [
+      -0.0,
+      -11.15,
+      -3.81735
+    ],
+    "max": [
+      44.45,
+      -0.0,
+      52.387603
+    ]
+  },
+  "file_bytes": 2801491
+}

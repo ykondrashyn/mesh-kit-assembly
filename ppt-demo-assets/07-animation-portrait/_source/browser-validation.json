@@ -1,0 +1,13 @@
+{
+  "duration": 17,
+  "width": 1080,
+  "height": 1920,
+  "h264": "probably",
+  "ended": true,
+  "currentTime": 17,
+  "totalVideoFrames": 510,
+  "droppedVideoFrames": 4,
+  "browser": "153.0.8010.37",
+  "video_sha256": "81b82e76ff058d23c82c25b52a6d67a5137df4a24446ef931eda73251a2e554f",
+  "source_blend_sha256": "8c90c091d6b1899ee150c36a73ffdda8329e0301af7c0d33cf70002e9108a54a"
+}

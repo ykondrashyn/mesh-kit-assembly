@@ -1,0 +1,421 @@
+{
+  "format": "Native 3D LDraw DAT",
+  "ldu_per_mm": 2.5,
+  "coordinate_mapping": "ldraw = 2.5 * [normalized_X, -normalized_Z, normalized_Y]",
+  "normalization": "X across board, Y from USB end toward antenna edge, Z upward",
+  "triangle_colour": "15 White",
+  "feature_edge_colour": "0 Black",
+  "edge_policy": "Original BRep feature curves only, periodic seams omitted, renderer hides occluded 3D lines",
+  "mesh_chordal_deflection_mm": 0.025,
+  "mesh_angle_rad": 0.25,
+  "supplement_definition_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+  "supplement_definition_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+  "stacking": {
+    "wio_z_offset_mm": 5.0,
+    "wio_ldraw_translation": [
+      0,
+      -12.5,
+      0
+    ],
+    "status": "Illustrative nominal spacing, not a manufacturing measurement"
+  },
+  "parts": {
+    "xiao-official": {
+      "board": "xiao",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+      "source_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+      "source_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+      "source_to_normalized_mm_3x4": [
+        0,
+        0,
+        -1,
+        2.7786,
+        -1,
+        0,
+        0,
+        12.2817,
+        0,
+        1,
+        0,
+        0.25
+      ],
+      "landmarks_normalized_mm": {
+        "rf": [
+          13.617,
+          19.233,
+          2.5
+        ],
+        "b2b": [
+          6.7307,
+          19.4056,
+          2.2
+        ],
+        "usb": [
+          8.89,
+          -1.527,
+          2.36
+        ],
+        "shield_center": [
+          8.89,
+          12.01,
+          3.25
+        ]
+      },
+      "landmarks_ldu": {
+        "rf": [
+          34.0425,
+          -6.25,
+          48.0825
+        ],
+        "b2b": [
+          16.82675,
+          -5.5,
+          48.514
+        ],
+        "usb": [
+          22.225,
+          -5.9,
+          -3.8175
+        ],
+        "shield_center": [
+          22.225,
+          -8.125,
+          30.025
+        ]
+      },
+      "geometry_provenance": "Manufacturer STEP",
+      "filename": "xiao-official.dat",
+      "triangles": 26954,
+      "type_2_segments": 4432,
+      "faces": 894,
+      "unique_brep_edges": 2271,
+      "suppressed_periodic_or_degenerate_edges": 45,
+      "output_sha256": "eef4e5c883e4c946f1c410ea03e6da2a90ff6c0b03d7407442822c1419db31db",
+      "cad_bounds_normalized_mm": {
+        "min": [
+          -4.458750235691866e-08,
+          -1.5269398357403463,
+          1.4901160971803051e-08
+        ],
+        "max": [
+          17.77999995541252,
+          20.95504131441358,
+          4.460000014901311
+        ]
+      },
+      "mesh_bounds_ldu": {
+        "min": [
+          -0.0,
+          -11.15,
+          -3.81735
+        ],
+        "max": [
+          44.45,
+          -0.0,
+          52.387603
+        ]
+      },
+      "file_bytes": 2801491
+    },
+    "xiao-kit-details": {
+      "board": "xiao",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+      "source_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+      "source_to_normalized_mm_3x4": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "landmarks_normalized_mm": {
+        "rf": [
+          13.617,
+          19.233,
+          2.5
+        ],
+        "b2b": [
+          6.7307,
+          19.4056,
+          2.2
+        ],
+        "usb": [
+          8.89,
+          -1.527,
+          2.36
+        ],
+        "shield_center": [
+          8.89,
+          12.01,
+          3.25
+        ]
+      },
+      "landmarks_ldu": {
+        "rf": [
+          34.0425,
+          -6.25,
+          48.0825
+        ],
+        "b2b": [
+          16.82675,
+          -5.5,
+          48.514
+        ],
+        "usb": [
+          22.225,
+          -5.9,
+          -3.8175
+        ],
+        "shield_center": [
+          22.225,
+          -8.125,
+          30.025
+        ]
+      },
+      "geometry_provenance": "Illustrative additions from photographed kit, authored with CAD primitives",
+      "supplements": [
+        "Simplified populated B2B socket",
+        "Two seven-pin header bodies and pins"
+      ],
+      "official_step_source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+      "official_step_source_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+      "filename": "xiao-kit-details.dat",
+      "triangles": 220,
+      "type_2_segments": 216,
+      "faces": 107,
+      "unique_brep_edges": 216,
+      "suppressed_periodic_or_degenerate_edges": 0,
+      "output_sha256": "6796c0f28a7c9e432226a61ba13854ccaf409ea22bea7b5d30cec6db4bdb8eb1",
+      "cad_bounds_normalized_mm": {
+        "min": [
+          0.050000000000000044,
+          1.651,
+          -6.2
+        ],
+        "max": [
+          17.73,
+          21.1228,
+          2.2
+        ]
+      },
+      "mesh_bounds_ldu": {
+        "min": [
+          0.125,
+          -5.5,
+          4.1275
+        ],
+        "max": [
+          44.325,
+          15.5,
+          52.807
+        ]
+      },
+      "file_bytes": 34420
+    },
+    "wio-official": {
+      "board": "wio",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/wio-sx1262-for-xiao.step",
+      "source_url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+      "source_sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+      "source_to_normalized_mm_3x4": [
+        -1,
+        0,
+        0,
+        123.2916,
+        0,
+        -1,
+        0,
+        -110.3625,
+        0,
+        0,
+        1,
+        0
+      ],
+      "landmarks_normalized_mm": {
+        "rf": [
+          5.3984,
+          19.4793,
+          2.9
+        ],
+        "b2b": [
+          6.731,
+          19.406,
+          -3.5
+        ],
+        "button": [
+          8.89,
+          8.07,
+          2.6
+        ],
+        "shield_center": [
+          8.89,
+          15.4,
+          3.8
+        ]
+      },
+      "landmarks_ldu": {
+        "rf": [
+          13.496,
+          -7.25,
+          48.69825
+        ],
+        "b2b": [
+          16.8275,
+          8.75,
+          48.515
+        ],
+        "button": [
+          22.225,
+          -6.5,
+          20.175
+        ],
+        "shield_center": [
+          22.225,
+          -9.5,
+          38.5
+        ]
+      },
+      "geometry_provenance": "Manufacturer STEP",
+      "filename": "wio-official.dat",
+      "triangles": 58208,
+      "type_2_segments": 4300,
+      "faces": 829,
+      "unique_brep_edges": 2090,
+      "suppressed_periodic_or_degenerate_edges": 33,
+      "output_sha256": "2f4f108083704dbdb481938a5271ad860812698a15d1a80625897cc7a051a48e",
+      "cad_bounds_normalized_mm": {
+        "min": [
+          -1.0000000003174137e-05,
+          -1.000004300211188e-05,
+          -3.5000001597825072
+        ],
+        "max": [
+          17.78009000000567,
+          21.43979800000001,
+          3.80000078
+        ]
+      },
+      "mesh_bounds_ldu": {
+        "min": [
+          -2.5e-05,
+          -9.500002,
+          -2.5e-05
+        ],
+        "max": [
+          44.450225,
+          8.75,
+          53.599495
+        ]
+      },
+      "file_bytes": 5649858
+    },
+    "wio-kit-details": {
+      "board": "wio",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+      "source_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+      "source_to_normalized_mm_3x4": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "landmarks_normalized_mm": {
+        "rf": [
+          5.3984,
+          19.4793,
+          2.9
+        ],
+        "b2b": [
+          6.731,
+          19.406,
+          -3.5
+        ],
+        "button": [
+          8.89,
+          8.07,
+          2.6
+        ],
+        "shield_center": [
+          8.89,
+          15.4,
+          3.8
+        ]
+      },
+      "landmarks_ldu": {
+        "rf": [
+          13.496,
+          -7.25,
+          48.69825
+        ],
+        "b2b": [
+          16.8275,
+          8.75,
+          48.515
+        ],
+        "button": [
+          22.225,
+          -6.5,
+          20.175
+        ],
+        "shield_center": [
+          22.225,
+          -9.5,
+          38.5
+        ]
+      },
+      "geometry_provenance": "Illustrative additions from photographed kit, authored with CAD primitives",
+      "supplements": [
+        "Simplified user button"
+      ],
+      "official_step_source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/wio-sx1262-for-xiao.step",
+      "official_step_source_sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+      "filename": "wio-kit-details.dat",
+      "triangles": 212,
+      "type_2_segments": 52,
+      "faces": 9,
+      "unique_brep_edges": 15,
+      "suppressed_periodic_or_degenerate_edges": 1,
+      "output_sha256": "da284d96c3be2d6186d52a618eef65ed0a85b01602fea8300ccc6209fec660ab",
+      "cad_bounds_normalized_mm": {
+        "min": [
+          7.0,
+          6.72,
+          1.6
+        ],
+        "max": [
+          10.78,
+          9.42,
+          2.6
+        ]
+      },
+      "mesh_bounds_ldu": {
+        "min": [
+          17.5,
+          -6.5,
+          16.8
+        ],
+        "max": [
+          26.95,
+          -4.0,
+          23.55
+        ]
+      },
+      "file_bytes": 24008
+    }
+  }
+}

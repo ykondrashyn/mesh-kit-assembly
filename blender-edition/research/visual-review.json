@@ -1,0 +1,28 @@
+{
+  "reviewed_outputs": [
+    "qa/final/page-1.png",
+    "qa/final/page-2.png",
+    "qa/final/page-3.png",
+    "qa/final/page-4.png",
+    "qa/final/page-5.png"
+  ],
+  "reviewed_reference_photos": [
+    "references/seeed-kit.png",
+    "references/seeed-wifi-top-original.jpg",
+    "references/seeed-wifi-bottom-original.jpg",
+    "references/seeed-lora.png",
+    "references/ipex-mhf-i.jpg"
+  ],
+  "result": "All five final PDF pages visually inspected after the connector update. Wi-Fi retains 13. Every LoRa plug has the original 37 engraving and added C M artwork. The 1.37 mm cable joins the full source stub smoothly. The combined page retains all three circular details. Step 04 retains the relaxed cable arc and validated XIAO clearance.",
+  "plug_model": "Two complete official I-PEX reference models, 20278 for 1.13 mm and 20351 for 1.37 mm. C M is separately tagged native text based on user observation. Exact kit supplier and meaning of C M unverified.",
+  "rendered_page_content_source": "Native Blender geometry, curves and text only",
+  "ai_image_generation_used": false,
+  "visual_language": "Monochrome CAD line art, thin unarrowed magnification leaders, source rings and true circular detail insets. Filled arrows indicate pressing direction.",
+  "pdf_sha256": "499479d42d86db0472d987eaf5a75079bd2716631e37f5c56e8657b155300aff",
+  "blend_sha256": "6e2fe7d92bf656096fe6b93db24671c8286dc085f4e34a2d45763f3d97c98bf7",
+  "circle_validation": "All eight projected connector diagrams remain 12 logical page units inside the circular boundary.",
+  "reference_drawings": [
+    "references/ipex-mhf-i-drawing.pdf",
+    "references/ipex-mhf-i-137-drawing.pdf"
+  ]
+}

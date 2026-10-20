@@ -1,0 +1,13 @@
+{
+  "frames_checked": 450,
+  "portrait": [
+    1080,
+    1920
+  ],
+  "circular_detail_diameter_pixels": 600,
+  "assembly_motion_matches_landscape": true,
+  "return_to_front_retained": true,
+  "hud_text_within_frame": true,
+  "leader_avoids_inset_heading": true,
+  "errors": []
+}

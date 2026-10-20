@@ -1,0 +1,7 @@
+Edit this accessory asset sheet only. Keep its transparent background, antenna shapes, lengths, widths, locations and perspective unchanged.
+
+On BOTH antenna bodies, replace the existing raised square-and-circle hardware-looking feed with a tiny FLAT permanently soldered feedpoint: two simple adjacent silver rectangular solder pads on the FPC, no round socket, no removable connector, no raised housing.
+
+Replace the RIGHTMOST plug illustration with the low-profile round snap-on COAX PLUG seen in the magnified inset of reference2: solid silver circular TOP cap, short flat rectangular crimp neck exiting toward the right, seen from above and slightly from front. The round top is solid metal with NO central hole, NO black circular underside insert. Do not draw a board socket. Keep the plug isolated and same approximate visual size in its third of the sheet. Short cable neck only, no wire.
+
+No other changes. Keep both antenna rectangles and all spacing exactly. Monochrome fine-line IKEA manual style.

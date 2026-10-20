@@ -1,0 +1,111 @@
+{
+  "board": "wio",
+  "kind": "rf",
+  "schematic": false,
+  "selection_box_normalized_mm": [
+    3.85,
+    17.88,
+    1.59,
+    6.95,
+    21.08,
+    2.95
+  ],
+  "origin_normalized_mm": [
+    5.3984,
+    19.47932,
+    1.6
+  ],
+  "board_surface": "Wio PCB top",
+  "mating_plane_local_z_mm": 1.3,
+  "source_component": "RF socket solid within U1 Wio-SX1262 module",
+  "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/wio-sx1262-for-xiao.step",
+  "source_sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+  "geometry_provenance": "Complete manufacturer STEP connector solid",
+  "source_to_normalized_mm_3x4": [
+    -1,
+    0,
+    0,
+    123.2916,
+    0,
+    -1,
+    0,
+    -110.3625,
+    0,
+    0,
+    1,
+    0
+  ],
+  "normalized_to_local_translation_mm": [
+    -5.3984,
+    -19.47932,
+    -1.6
+  ],
+  "origin_on_board_ldu": [
+    13.496,
+    -4.0,
+    48.6983
+  ],
+  "axis_local_mm": [
+    0,
+    0
+  ],
+  "local_board_plane_z_mm": 0,
+  "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+  "selected_whole_solids": [
+    {
+      "index_zero_based": 5,
+      "bbox_normalized_mm": [
+        3.898401506994,
+        17.929316802849478,
+        1.6399998999999998,
+        6.898401919968004,
+        21.02931700426003,
+        2.9
+      ],
+      "volume_mm3": 3.4117840982899392
+    }
+  ],
+  "selected_source_volume_mm3": 3.4117840982899392,
+  "exported_local_volume_mm3": 3.4117840982899406,
+  "bbox_on_original_board_mm": [
+    3.898401506994,
+    17.929316802849478,
+    1.6399998999999998,
+    6.898401919968004,
+    21.02931700426003,
+    2.9
+  ],
+  "source_url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+  "filename": "detail-wio-rf-official.dat",
+  "triangles": 21968,
+  "type_2_segments": 899,
+  "faces": 121,
+  "unique_brep_edges": 287,
+  "suppressed_periodic_or_degenerate_edges": 11,
+  "output_sha256": "01ec88ffd12797aa0ce6fb274d5ef86dd8dbd78cb04d97469ecf695e39401358",
+  "mesh_bounds_ldu": {
+    "min": [
+      -3.749996,
+      -3.25,
+      -3.875008
+    ],
+    "max": [
+      3.750005,
+      -0.1,
+      3.874992
+    ]
+  },
+  "file_bytes": 2076675,
+  "cad_bounds_local_mm": {
+    "min": [
+      -1.4999984930059955,
+      -1.5500031971505361,
+      0.03999989999999981
+    ],
+    "max": [
+      1.5000019199680088,
+      1.5499970042600129,
+      1.2999999999999998
+    ]
+  }
+}

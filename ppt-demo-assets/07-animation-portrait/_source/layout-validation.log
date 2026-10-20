@@ -1,0 +1,17 @@
+00:00.517  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/assembly-showcase.blend"
+{
+  "frames_checked": 450,
+  "portrait": [
+    1080,
+    1920
+  ],
+  "circular_detail_diameter_pixels": 600,
+  "assembly_motion_matches_landscape": true,
+  "return_to_front_retained": true,
+  "hud_text_within_frame": true,
+  "leader_avoids_inset_heading": true,
+  "errors": []
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

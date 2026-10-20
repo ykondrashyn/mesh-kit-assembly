@@ -1,0 +1,125 @@
+{
+  "resolution": [
+    1920,
+    1080
+  ],
+  "rendered_frames": 450,
+  "identical_final_hold_frames": [
+    421,
+    450
+  ],
+  "contact_sheet_frames": {
+    "opening": [
+      1,
+      16,
+      34,
+      40,
+      46,
+      55,
+      64,
+      70,
+      76,
+      79,
+      85,
+      94
+    ],
+    "timeline": [
+      1,
+      31,
+      46,
+      76,
+      106,
+      130,
+      151,
+      181,
+      211,
+      235,
+      256,
+      281,
+      307,
+      331,
+      355,
+      376,
+      391,
+      406,
+      421,
+      450
+    ],
+    "connections": [
+      94,
+      115,
+      124,
+      130,
+      199,
+      220,
+      229,
+      235,
+      319,
+      340,
+      349,
+      355
+    ],
+    "return": [
+      376,
+      383,
+      390,
+      397,
+      404,
+      411,
+      421,
+      450
+    ],
+    "transitions": [
+      40,
+      43,
+      46,
+      49,
+      53,
+      79,
+      83,
+      88,
+      140,
+      145,
+      149,
+      151,
+      153,
+      157,
+      162,
+      245,
+      250,
+      255,
+      256,
+      260,
+      265,
+      307,
+      310,
+      315,
+      364,
+      369,
+      375,
+      376,
+      380,
+      385
+    ]
+  },
+  "ai_image_generation": false,
+  "source_blend_sha256": "392d1fc95f8081a987ce5baebf9b2715484e4e7da6ac1d6fed7eaed88efe8ac7",
+  "visually_reviewed_contact_sheets": [
+    "timeline",
+    "connections",
+    "return",
+    "transitions"
+  ],
+  "visually_reviewed_full_resolution_frames": [
+    1,
+    145
+  ],
+  "visual_review": [
+    "Opening part names are readable, centered under the corresponding parts and clear of the geometry.",
+    "Titles, captions and circular details fade between steps without overlapping titles.",
+    "Tracking rings and leaders fade out before changing connector targets.",
+    "Sampled opening deployment, connector seating, rear view and front return retain cable continuity and legible callouts.",
+    "The completed front view remains pixel-identical throughout the final second."
+  ],
+  "video_sha256": "4ff5094797977b35a39ce958b05611cdc4c10a6e4870bd2037a37e6cb56d6115"
+}

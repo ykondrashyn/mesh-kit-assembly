@@ -1,0 +1,146 @@
+{
+  "browser": "153.0.8010.37",
+  "scenarios": [
+    {
+      "profile": {
+        "name": "desktop-local",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "cpu": 1,
+        "throttle": false
+      },
+      "firstFrameMs": 207.5999999642372,
+      "durationMs": 4003,
+      "scrollDistancePx": 2500,
+      "frameUpdatesDuringScroll": 94,
+      "longestFrozenMs": 101.60000001192088,
+      "maximumFrameLag": 0,
+      "loadingSampleFraction": 0,
+      "scrollHintDomReplacements": 239,
+      "rafIntervalP95Ms": 16.700000000000273,
+      "displayedFrameAtScrollEnd": 94,
+      "requestedFrameAtScrollEnd": 94,
+      "displayedOrientation": "landscape",
+      "decodedFrameLimitObserved": 12,
+      "accessibleCanvasDescription": "Step 2. Connect the 2.4 GHz Wi-Fi antenna to XIAO. The circle magnifies the same connector.",
+      "visibleText": "XIAO + Wio\n\nScroll to assemble \u2193\n\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n\u2713\nAssembled\n\nStep 2. Connect the 2.4 GHz Wi-Fi antenna to XIAO. The circle magnifies the same connector.",
+      "canvasCssSize": {
+        "width": 1377,
+        "height": 774.5625
+      },
+      "canvasBackingSize": {
+        "width": 1377,
+        "height": 775
+      },
+      "recoveredAfterStopping": true,
+      "recoveryAfterStoppingMs": 328,
+      "frameRequests": 106,
+      "completedFrameRequests": 106,
+      "failedFrameRequests": 0,
+      "completedFrameTransferBytes": 4248424
+    },
+    {
+      "profile": {
+        "name": "simulated-slow-mobile",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "cpu": 4,
+        "throttle": true
+      },
+      "firstFrameMs": 1548,
+      "durationMs": 4002.399999976158,
+      "scrollDistancePx": 2500,
+      "frameUpdatesDuringScroll": 8,
+      "longestFrozenMs": 3583.2000000000003,
+      "maximumFrameLag": 92,
+      "loadingSampleFraction": 0.8423236514522822,
+      "scrollHintDomReplacements": 239,
+      "rafIntervalP95Ms": 16.700000000000728,
+      "displayedFrameAtScrollEnd": 8,
+      "requestedFrameAtScrollEnd": 100,
+      "displayedOrientation": "portrait",
+      "decodedFrameLimitObserved": 10,
+      "accessibleCanvasDescription": "Step 2. Connect the 2.4 GHz Wi-Fi antenna to XIAO. The circle magnifies the same connector.",
+      "visibleText": "XIAO + Wio\n\nScroll to assemble \u2193\n\nLoading assembly\u2026\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n\u2713\nAssembled\n\nStep 2. Connect the 2.4 GHz Wi-Fi antenna to XIAO. The circle magnifies the same connector.",
+      "canvasCssSize": {
+        "width": 351,
+        "height": 624
+      },
+      "canvasBackingSize": {
+        "width": 702,
+        "height": 1248
+      },
+      "recoveredAfterStopping": true,
+      "recoveryAfterStoppingMs": 1377,
+      "frameRequests": 109,
+      "completedFrameRequests": 14,
+      "failedFrameRequests": 91,
+      "completedFrameTransferBytes": 496812
+    }
+  ],
+  "scriptFailure": {
+    "renderedFrame": null,
+    "fallbackImages": 0,
+    "errorVisible": false,
+    "bodyText": "XIAO + Wio\n\nScroll to assemble \u2193\n\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n\u2713\nAssembled"
+  },
+  "reducedMotion": {
+    "frame": "33",
+    "modeToggleVisible": true,
+    "navigationTargets": [
+      {
+        "name": "01\nParts",
+        "width": 67,
+        "height": 44
+      },
+      {
+        "name": "02\nWi-Fi",
+        "width": 67,
+        "height": 44
+      },
+      {
+        "name": "03\nLoRa",
+        "width": 67,
+        "height": 44
+      },
+      {
+        "name": "04\nBoards",
+        "width": 67,
+        "height": 44
+      },
+      {
+        "name": "\u2713\nAssembled",
+        "width": 67,
+        "height": 44
+      }
+    ]
+  },
+  "limitations": [
+    "Synthetic Chromium checks on this Mac with a localhost server.",
+    "Network profile is 1.6 Mbps download, 150 ms latency and 4x CPU slowdown with browser cache disabled.",
+    "These are laboratory measurements, not real-device results or field Core Web Vitals.",
+    "Site implementation was not modified during the audit."
+  ],
+  "site_source_matches_previous_validation": true,
+  "source_sha256": {
+    "dist/app.js": "44729c8f642c4824dc674e3e5ed25f0a7f81384b48041cb68e73469d7b0850a7",
+    "dist/frame-loader.mjs": "3263cbc08f7216c0253073e768f6ef17fa4fc941d997f11638441cb49ac711c4",
+    "dist/index.html": "b93291cadb5c00ba3f3f1d6b0e704211db2fb8238e630470d798e1e941901244",
+    "dist/styles.css": "005e5e646714546204c6ce104996b17a101d420568783cbf643bcdde58076766",
+    "dist/timeline.mjs": "f00c13910047066a00c813a6a23972441ccf02f1468fd4ec9c6e1fe5b6503200"
+  },
+  "reference_sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas",
+    "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
+    "https://web.dev/articles/serve-responsive-images",
+    "https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement",
+    "https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing",
+    "https://developer.chrome.com/docs/css-ui/scroll-driven-animations"
+  ]
+}

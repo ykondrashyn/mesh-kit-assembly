@@ -1,0 +1,22 @@
+{
+  "local_preview": "http://127.0.0.1:8766/",
+  "publication": "local only",
+  "source_sha256": {
+    "dist/app.js": "44729c8f642c4824dc674e3e5ed25f0a7f81384b48041cb68e73469d7b0850a7",
+    "dist/frame-loader.mjs": "3263cbc08f7216c0253073e768f6ef17fa4fc941d997f11638441cb49ac711c4",
+    "dist/index.html": "b93291cadb5c00ba3f3f1d6b0e704211db2fb8238e630470d798e1e941901244",
+    "dist/styles.css": "005e5e646714546204c6ce104996b17a101d420568783cbf643bcdde58076766",
+    "dist/timeline.mjs": "f00c13910047066a00c813a6a23972441ccf02f1468fd4ec9c6e1fe5b6503200"
+  },
+  "browser": "153.0.8010.37",
+  "browser_checks_passed": 12,
+  "timeline_tests_passed": 6,
+  "scroll_viewport_heights": 12,
+  "easing_response_ms": 100,
+  "smoothing_checked_in_both_layouts": true,
+  "unchanged_asset_traversal_evidence": "browser-validation-before-smoothing.json",
+  "maximum_decoded_frames": 12,
+  "limitations": [
+    "Chromium tested on macOS. Safari, Firefox and physical mobile devices were not tested."
+  ]
+}

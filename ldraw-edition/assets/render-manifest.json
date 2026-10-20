@@ -1,0 +1,72 @@
+[
+  {
+    "name": "part-xiao",
+    "scale": 4,
+    "angles": "40 30"
+  },
+  {
+    "name": "part-wio",
+    "scale": 4,
+    "angles": "40 30"
+  },
+  {
+    "name": "main-wifi",
+    "scale": 2.4,
+    "angles": "40 30"
+  },
+  {
+    "name": "main-lora",
+    "scale": 2.4,
+    "angles": "40 30"
+  },
+  {
+    "name": "main-exploded",
+    "scale": 2.4,
+    "angles": "40 30"
+  },
+  {
+    "name": "main-assembled",
+    "scale": 2.4,
+    "angles": "40 30"
+  },
+  {
+    "name": "overview-parts",
+    "scale": 1.7,
+    "angles": "40 30"
+  },
+  {
+    "name": "part-wifi",
+    "scale": 4,
+    "angles": "40 30"
+  },
+  {
+    "name": "part-lora",
+    "scale": 4,
+    "angles": "40 30"
+  },
+  {
+    "name": "close-xiao-align",
+    "scale": 12,
+    "angles": "35 30"
+  },
+  {
+    "name": "close-xiao-seated",
+    "scale": 12,
+    "angles": "35 30"
+  },
+  {
+    "name": "close-wio-align",
+    "scale": 12,
+    "angles": "35 30"
+  },
+  {
+    "name": "close-wio-seated",
+    "scale": 12,
+    "angles": "35 30"
+  },
+  {
+    "name": "close-b2b",
+    "scale": 9,
+    "angles": "28 30"
+  }
+]

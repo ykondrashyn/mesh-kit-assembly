@@ -1,0 +1,63 @@
+{
+  "title": "XIAO ESP32S3 + Wio-SX1262 illustrated assembly",
+  "date": "2026-10-19",
+  "source_chats": [
+    "codex://threads/01a08f79-ecf0-7870-8a2e-32f3d9cbe333",
+    "codex://threads/01a14fab-9be4-7e50-98c6-7f03b1e219d0"
+  ],
+  "kit": "https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/",
+  "board_models": {
+    "wio": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+    "xiao": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip"
+  },
+  "antenna_references": {
+    "wifi": "https://files.seeedstudio.com/wiki/XIAO_WiFi/antenna/FPC_Antenna_2.4GHz_1.16dbi_for_XIAO_ESP32S3/res/Datasheet_2.4GHz_FPC_Antenna_1.16dbi_for_XIAO_ESP32S3.pdf",
+    "lora": "https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/37.png"
+  },
+  "physical_photo_references": [
+    "../../PXL_20260814_183701502.jpg",
+    "../../PXL_20260814_183837394.jpg",
+    "../../PXL_20260814_184306445.jpg",
+    "../../PXL_20260814_184542767.jpg"
+  ],
+  "scope": "Four physical assembly steps. Firmware flashing and radio configuration are outside this sheet.",
+  "method": "Official STEP board geometry, supplemented with reconstructed kit parts and antenna geometry from manufacturer drawings and physical photos. Fixed geometry reused across steps.",
+  "supplemental_geometry": [
+    "Populated XIAO board-to-board connector",
+    "Two already installed seven-pin XIAO headers",
+    "Wio user button",
+    "FPC antennas",
+    "Coax cables and low-profile crimped plugs"
+  ],
+  "dimensions_mm": {
+    "xiao_pcb": [
+      17.78,
+      20.955,
+      1.25
+    ],
+    "wio_pcb": [
+      17.78,
+      21.44,
+      1.6
+    ],
+    "wifi_fpc_A02": [
+      17.5,
+      37.4
+    ],
+    "lora_fpc": [
+      7,
+      40
+    ]
+  },
+  "limitations": [
+    "Illustrations are for assembly, not enclosure machining or dimensional inspection.",
+    "Antenna bends and exploded gap are arranged for readability.",
+    "Supplemental connector, button and header shapes are simplified.",
+    "Wi-Fi A-02 antenna reference is not proof of exact dimensions of every kit revision."
+  ],
+  "presentation": {
+    "page_id": "page_6917491909e481918a80475100365f4e",
+    "artifactRef": "artifact_external_edb417eb-30b4-42ef-9e5b-bb44860a516a",
+    "state_version": 4
+  }
+}

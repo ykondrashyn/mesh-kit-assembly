@@ -1,0 +1,10 @@
+{
+  "method": "Flat LDraw polygons on the official shield surfaces",
+  "source": "https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/",
+  "labels": {
+    "xiao": "ESP32-S3",
+    "wio": "SX1262"
+  },
+  "purpose": "Simplified device identifiers, not exact factory artwork",
+  "official_geometry_modified": false
+}

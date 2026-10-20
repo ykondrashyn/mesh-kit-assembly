@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: scroll easing is time-based, reversible and does not overshoot
+ok 1 - scroll easing is time-based, reversible and does not overshoot
+  ---
+  duration_ms: 5.131709
+  type: 'test'
+  ...
+# Subtest: source map retains all motion and excludes only duplicated holds
+ok 2 - source map retains all motion and excludes only duplicated holds
+  ---
+  duration_ms: 1.770625
+  type: 'test'
+  ...
+# Subtest: forward and reverse mapping round-trip all frames with clamped endpoints
+ok 3 - forward and reverse mapping round-trip all frames with clamped endpoints
+  ---
+  duration_ms: 0.609541
+  type: 'test'
+  ...
+# Subtest: chapter boundaries match the original Blender timeline
+ok 4 - chapter boundaries match the original Blender timeline
+  ---
+  duration_ms: 1.015791
+  type: 'test'
+  ...
+# Subtest: adaptive layout fits the full image without clipping
+ok 5 - adaptive layout fits the full image without clipping
+  ---
+  duration_ms: 0.607791
+  type: 'test'
+  ...
+# Subtest: directional prefetch is bounded and prioritizes the requested frame
+ok 6 - directional prefetch is bounded and prioritizes the requested frame
+  ---
+  duration_ms: 0.66175
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 126.051709

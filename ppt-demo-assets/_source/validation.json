@@ -1,0 +1,377 @@
+{
+  "assets": 21,
+  "transparent_assets": 16,
+  "source_master_unchanged": true,
+  "checks": [
+    {
+      "file": "01-parts/xiao-esp32s3.png",
+      "pixels": [
+        2000,
+        1835
+      ],
+      "alpha_bounds": [
+        46,
+        46,
+        1954,
+        1789
+      ],
+      "uncropped": true,
+      "sha256": "de8d32fa9ca152beeae6f4586599d69206d044fbad0ee498d00aa95a653dd566"
+    },
+    {
+      "file": "01-parts/wio-sx1262.png",
+      "pixels": [
+        2000,
+        1602
+      ],
+      "alpha_bounds": [
+        46,
+        47,
+        1954,
+        1555
+      ],
+      "uncropped": true,
+      "sha256": "7fe493461b7d3dc3c121ef03b80656a1234bb4c20394d4439c7120bf6964ef4e"
+    },
+    {
+      "file": "01-parts/wifi-antenna-13.png",
+      "pixels": [
+        2000,
+        1817
+      ],
+      "alpha_bounds": [
+        46,
+        46,
+        1954,
+        1771
+      ],
+      "uncropped": true,
+      "sha256": "ba1529a47ad519af0b9340c3e650cdf3308ca1f0bc85de7183436baf72b673b9"
+    },
+    {
+      "file": "01-parts/lora-antenna-37-cm.png",
+      "pixels": [
+        2000,
+        1964
+      ],
+      "alpha_bounds": [
+        46,
+        47,
+        1954,
+        1917
+      ],
+      "uncropped": true,
+      "sha256": "023e0ddc11c5541b502d172612cf392f2514a25762e7d769521c71925d1f3008"
+    },
+    {
+      "file": "02-assembly/02-connect-wifi.png",
+      "pixels": [
+        2400,
+        1616
+      ],
+      "alpha_bounds": [
+        56,
+        56,
+        2344,
+        1560
+      ],
+      "uncropped": true,
+      "sha256": "6e4d1ed5c42cc65e7b7e430e762a3a815b745072142ac34d16f69e8fe7ed47bb"
+    },
+    {
+      "file": "02-assembly/03-connect-lora.png",
+      "pixels": [
+        2400,
+        2119
+      ],
+      "alpha_bounds": [
+        56,
+        56,
+        2344,
+        2063
+      ],
+      "uncropped": true,
+      "sha256": "3b13deffad9cf13d577f5d56e19d0e3dcb89f169710728defa950ff1179d7008"
+    },
+    {
+      "file": "02-assembly/04-align-boards.png",
+      "pixels": [
+        2400,
+        1646
+      ],
+      "alpha_bounds": [
+        56,
+        56,
+        2344,
+        1590
+      ],
+      "uncropped": true,
+      "sha256": "60cdb07badd3a5ebe00a2fc5cf3a2ec188983b0f9387cbd661d2297c3ab8608e"
+    },
+    {
+      "file": "02-assembly/04-boards-joined.png",
+      "pixels": [
+        2400,
+        1563
+      ],
+      "alpha_bounds": [
+        56,
+        56,
+        2344,
+        1507
+      ],
+      "uncropped": true,
+      "sha256": "d23dfb31162941755136fdc4f76bf6e0ec587945d1ba891d77d1d4ea41b8003d"
+    },
+    {
+      "file": "03-closeups/wifi-plug-13-align.png",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "alpha_bounds": [
+        42,
+        42,
+        1758,
+        1758
+      ],
+      "uncropped": true,
+      "sha256": "bd8198f2b5c3b056667c317ad225e111ff90a10d5a85aa8e1b60acf79e180e71"
+    },
+    {
+      "file": "03-closeups/wifi-plug-13-seated.png",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "alpha_bounds": [
+        42,
+        42,
+        1758,
+        1758
+      ],
+      "uncropped": true,
+      "sha256": "ff64473160b05915bb6145e5c775ea717803d2ccbec32ef0939eadac9d0d6235"
+    },
+    {
+      "file": "03-closeups/lora-plug-37-cm-align.png",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "alpha_bounds": [
+        42,
+        42,
+        1758,
+        1758
+      ],
+      "uncropped": true,
+      "sha256": "36b4e4e2c7c578704b8e237eb175526e600ff0a16cfb059115bef03ea83ec1be"
+    },
+    {
+      "file": "03-closeups/lora-plug-37-cm-seated.png",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "alpha_bounds": [
+        42,
+        42,
+        1758,
+        1758
+      ],
+      "uncropped": true,
+      "sha256": "e397f682ce230977d27a8aa28510078ea54bed76caa999d1e6b8ab33b04e761a"
+    },
+    {
+      "file": "03-closeups/board-connector-align.png",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "alpha_bounds": [
+        42,
+        42,
+        1758,
+        1758
+      ],
+      "uncropped": true,
+      "sha256": "5c8af27b33196d7203f91ef3639497e4092ff2874e38ed207dacd6e280afdae7"
+    },
+    {
+      "file": "04-linked-panels/02-wifi-with-closeup.png",
+      "pixels": [
+        3200,
+        1395
+      ],
+      "alpha_bounds": [
+        75,
+        75,
+        3125,
+        1320
+      ],
+      "uncropped": true,
+      "sha256": "2fc6fa026ac756a389b6364ae1aa61c7d740132db0504652bfd1a295e13d6331"
+    },
+    {
+      "file": "04-linked-panels/03-lora-with-closeup.png",
+      "pixels": [
+        3200,
+        1476
+      ],
+      "alpha_bounds": [
+        75,
+        75,
+        3125,
+        1401
+      ],
+      "uncropped": true,
+      "sha256": "c299656ff2730724757ab9ea31505f57ee4aae008a7677aa7dfe6509d6a4464a"
+    },
+    {
+      "file": "04-linked-panels/04-boards-with-closeup.png",
+      "pixels": [
+        3200,
+        1426
+      ],
+      "alpha_bounds": [
+        75,
+        75,
+        3125,
+        1351
+      ],
+      "uncropped": true,
+      "sha256": "23272930c05defe328d08ad5c2d64924a533b0eeb54e261acdbf92f9682fc589"
+    },
+    {
+      "file": "05-ready-slides/01-parts.png",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "alpha_bounds": null,
+      "uncropped": true,
+      "sha256": "482956f2e9fc357435d0e233938c1ccf0d3e403df12deb640e9e6d57e8fb9234"
+    },
+    {
+      "file": "05-ready-slides/02-wifi.png",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "alpha_bounds": null,
+      "uncropped": true,
+      "sha256": "b5c4c7743ec689c7c95364f6abcc46ec9ab1a527ef77f241a2e1ac5b2ca45c78"
+    },
+    {
+      "file": "05-ready-slides/03-lora.png",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "alpha_bounds": null,
+      "uncropped": true,
+      "sha256": "e5bb9f1742264d7d4817ed438170c0b47efa73efdb2e6238458038b1c09ee1da"
+    },
+    {
+      "file": "05-ready-slides/04-boards.png",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "alpha_bounds": null,
+      "uncropped": true,
+      "sha256": "29c6dd4ccd98400dc88f77ab785cc0816987b26cb1d84f7c2f3d9266baff3baf"
+    },
+    {
+      "file": "05-ready-slides/05-all-steps.png",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "alpha_bounds": null,
+      "uncropped": true,
+      "sha256": "8f1ee4c1e7b0ac0dc543445b08a0f575f2f90e88d5f177c279575ddf9fa24fb8"
+    }
+  ],
+  "visual_review": "Reviewed the current 21-asset contact sheet and the combined 01-04 slide. Labels use the same regular Arial font and ink material as the chip labels.",
+  "animation": {
+    "video": {
+      "file": "assembly-showcase.mp4",
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 510,
+      "duration_seconds": 17.0,
+      "audio_streams": 0,
+      "decode_errors": 0,
+      "bytes": 2727781,
+      "sha256": "126672c3f072edc91aeffbc0b879217fbf6a1941cc854f0d806218e987196d36",
+      "source_blend_sha256": "e4e8e8e8f5d962225342deff002cefde00ac7d030160c0d6febc0d7fe42b0b43",
+      "ai_image_generation": false,
+      "visual_renderer": "Blender EEVEE",
+      "encoder": "FFmpeg libx264"
+    },
+    "motion_validation": "06-animation/_source/animation-validation.json",
+    "opening_validation": "06-animation/_source/opening-validation.json",
+    "transition_validation": "06-animation/_source/transition-validation.json"
+  },
+  "antenna_labels": {
+    "wifi": "Wi-Fi / 2.4 GHz",
+    "lora": "LoRa / 868 MHz"
+  },
+  "antenna_label_instances": {
+    "wifi": 7,
+    "lora": 7
+  },
+  "animations": {
+    "06-animation": {
+      "video": {
+        "file": "assembly-showcase.mp4",
+        "codec": "h264",
+        "pixel_format": "yuv420p",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "frames": 510,
+        "duration_seconds": 17.0,
+        "audio_streams": 0,
+        "decode_errors": 0,
+        "bytes": 2727781,
+        "sha256": "126672c3f072edc91aeffbc0b879217fbf6a1941cc854f0d806218e987196d36",
+        "source_blend_sha256": "e4e8e8e8f5d962225342deff002cefde00ac7d030160c0d6febc0d7fe42b0b43",
+        "ai_image_generation": false,
+        "visual_renderer": "Blender EEVEE",
+        "encoder": "FFmpeg libx264"
+      },
+      "motion_validation": "06-animation/_source/animation-validation.json",
+      "opening_validation": "06-animation/_source/opening-validation.json",
+      "transition_validation": "06-animation/_source/transition-validation.json"
+    },
+    "07-animation-portrait": {
+      "video": {
+        "file": "assembly-showcase.mp4",
+        "codec": "h264",
+        "pixel_format": "yuv420p",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30,
+        "frames": 510,
+        "duration_seconds": 17.0,
+        "audio_streams": 0,
+        "decode_errors": 0,
+        "bytes": 2538524,
+        "sha256": "81b82e76ff058d23c82c25b52a6d67a5137df4a24446ef931eda73251a2e554f",
+        "source_blend_sha256": "8c90c091d6b1899ee150c36a73ffdda8329e0301af7c0d33cf70002e9108a54a",
+        "ai_image_generation": false,
+        "visual_renderer": "Blender EEVEE",
+        "encoder": "FFmpeg libx264"
+      },
+      "motion_validation": "07-animation-portrait/_source/animation-validation.json",
+      "opening_validation": "07-animation-portrait/_source/opening-validation.json",
+      "transition_validation": "07-animation-portrait/_source/transition-validation.json"
+    }
+  }
+}

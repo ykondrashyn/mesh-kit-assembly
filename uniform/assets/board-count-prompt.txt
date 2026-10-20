@@ -1,0 +1,5 @@
+Targeted correction to LEFT XIAO board only. Keep RIGHT Wio board and all overall composition unchanged.
+
+The LEFT XIAO currently has seven solder joints along its near-left long edge but only FOUR along its far-right long edge. It must have EXACTLY SEVEN on each long edge. Keep the seven near-left joints unchanged. Replace the four far-right joints with seven slightly smaller evenly spaced solder joints, running down the full far-right long edge from rear to front. Make enough room by slightly narrowing the metal shield if necessary, preserving its label. The Wi-Fi socket belongs at the REAR SHORT edge, so it must not replace a GPIO position. Move it inward a little if required to clear the seven-joint row. Matching1x7 male header strip below the far-right edge, visible legs can be occluded naturally. Preserve near-left7 legs.
+
+Keep the left PCB outer shape, perspective, USB-C, B2B, two small front buttons, transparent background, labels, and the entire right Wio image unchanged. No antennas, caps, wires, arrows or new objects. No pins across the USB/front edge.

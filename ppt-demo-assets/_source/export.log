@@ -1,0 +1,37 @@
+00:00.587  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/blender-edition/mesh-kit.blend"
+EXPORT 01-parts/xiao-esp32s3.png [2000, 1835]
+00:04.473  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/xiao-esp32s3.png'
+EXPORT 01-parts/wio-sx1262.png [2000, 1602]
+00:07.655  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/wio-sx1262.png'
+EXPORT 01-parts/wifi-antenna-13.png [2000, 1817]
+00:10.139  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/wifi-antenna-13.png'
+EXPORT 01-parts/lora-antenna-37-cm.png [2000, 1964]
+00:12.201  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/lora-antenna-37-cm.png'
+EXPORT 02-assembly/02-connect-wifi.png [2400, 1616]
+00:14.906  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/02-connect-wifi.png'
+EXPORT 02-assembly/03-connect-lora.png [2400, 2119]
+00:18.268  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/03-connect-lora.png'
+EXPORT 02-assembly/04-align-boards.png [2400, 1646]
+00:20.387  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/04-align-boards.png'
+EXPORT 02-assembly/04-boards-joined.png [2400, 1563]
+00:22.537  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/04-boards-joined.png'
+EXPORT 03-closeups/wifi-plug-13-align.png [1800, 1800]
+00:25.861  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/03-closeups/wifi-plug-13-align.png'
+EXPORT 03-closeups/wifi-plug-13-seated.png [1800, 1800]
+00:29.193  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/03-closeups/wifi-plug-13-seated.png'
+EXPORT 03-closeups/lora-plug-37-cm-align.png [1800, 1800]
+00:32.526  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/03-closeups/lora-plug-37-cm-align.png'
+EXPORT 03-closeups/lora-plug-37-cm-seated.png [1800, 1800]
+00:35.890  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/03-closeups/lora-plug-37-cm-seated.png'
+EXPORT 03-closeups/board-connector-align.png [1800, 1800]
+00:39.196  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/03-closeups/board-connector-align.png'
+EXPORT 04-linked-panels/02-wifi-with-closeup.png [3200, 1395]
+00:42.683  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/04-linked-panels/02-wifi-with-closeup.png'
+EXPORT 04-linked-panels/03-lora-with-closeup.png [3200, 1476]
+00:46.159  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/04-linked-panels/03-lora-with-closeup.png'
+EXPORT 04-linked-panels/04-boards-with-closeup.png [3200, 1426]
+00:49.283  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/04-linked-panels/04-boards-with-closeup.png'
+Exported 21 PowerPoint assets to /Users/ykondras/vid/assembly-manual/ppt-demo-assets
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

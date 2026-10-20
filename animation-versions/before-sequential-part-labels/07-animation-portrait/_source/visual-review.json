@@ -1,0 +1,141 @@
+{
+  "resolution": [
+    1080,
+    1920
+  ],
+  "rendered_frames": 450,
+  "identical_final_hold_frames": [
+    421,
+    450
+  ],
+  "contact_sheet_frames": {
+    "opening": [
+      1,
+      16,
+      34,
+      40,
+      46,
+      55,
+      64,
+      70,
+      76,
+      79,
+      85,
+      94
+    ],
+    "focused-steps": [
+      79,
+      94,
+      115,
+      130,
+      140,
+      145,
+      151,
+      157,
+      172,
+      199,
+      220,
+      235,
+      245,
+      250,
+      256,
+      267
+    ],
+    "timeline": [
+      1,
+      31,
+      46,
+      76,
+      106,
+      130,
+      151,
+      181,
+      211,
+      235,
+      256,
+      281,
+      307,
+      331,
+      355,
+      376,
+      391,
+      406,
+      421,
+      450
+    ],
+    "connections": [
+      94,
+      115,
+      124,
+      130,
+      199,
+      220,
+      229,
+      235,
+      319,
+      340,
+      349,
+      355
+    ],
+    "return": [
+      376,
+      383,
+      390,
+      397,
+      404,
+      411,
+      421,
+      450
+    ],
+    "transitions": [
+      40,
+      43,
+      46,
+      49,
+      53,
+      79,
+      83,
+      88,
+      140,
+      145,
+      149,
+      151,
+      153,
+      157,
+      162,
+      245,
+      250,
+      255,
+      256,
+      260,
+      265,
+      307,
+      310,
+      315,
+      364,
+      369,
+      375,
+      376,
+      380,
+      385
+    ]
+  },
+  "ai_image_generation": false,
+  "source_blend_sha256": "2ae6b08d07324a17dbf394b004556602f696cf8cee1d010b2c4611ca1fa81944",
+  "visually_reviewed_contact_sheets": [
+    "focused-steps",
+    "timeline"
+  ],
+  "visually_reviewed_full_resolution_frames": [
+    199
+  ],
+  "visual_review": [
+    "Step 2 shows only the XIAO board and Wi-Fi antenna, enlarged with the matching circular detail.",
+    "Step 3 shows only the Wio board and LoRa antenna, enlarged with the matching circular detail.",
+    "The Wi-Fi pair fades out before the LoRa pair fades in. Both return for the board stacking stage.",
+    "The sampled seating frames retain cable continuity, connector alignment and readable labels.",
+    "The final front view is still held for one second.",
+    "The RF detail leader uses the left gutter and avoids crossing chip and antenna labels."
+  ],
+  "video_sha256": "b6f83dd6bbf921b2a8e872601094ffa9e4214fd4c21d616a69363ad6da98dae2"
+}

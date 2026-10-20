@@ -1,0 +1,26 @@
+{
+  "pages_reviewed": 5,
+  "native_png_size": [
+    2000,
+    1125
+  ],
+  "independent_pdf_renderer": "Poppler Cairo",
+  "headings_within_page": true,
+  "no_material_text_or_diagram_overlaps": true,
+  "rf_arrows_centered_on_official_sockets": true,
+  "b2b_arrow_centered_on_mating_axis": true,
+  "rf_seated_caps_touch_socket_plane": true,
+  "xiao_mating_socket_label": "XIAO socket shown simplified.",
+  "all_steps_overview_page": 5,
+  "review_revision": "Combined overview with three close-ups and shield identifiers",
+  "overview_closeups": [
+    "Wi-Fi plug",
+    "LoRa plug",
+    "Rear board-to-board connector"
+  ],
+  "shield_identifiers": [
+    "ESP32-S3",
+    "SX1262"
+  ],
+  "labels_follow_board_perspective": true
+}

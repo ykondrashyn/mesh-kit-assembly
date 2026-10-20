@@ -1,0 +1,71 @@
+00:00.878  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/assembly-showcase.blend"
+{
+  "frames_checked": 450,
+  "official_solids": {
+    "xiao": 37,
+    "wio": 9
+  },
+  "cable_endpoint_max_error_mm": 2.8635053990994247e-06,
+  "source_ring_max_error_pixels": 0.0006171798222704066,
+  "lora_film_min_projected_clearance_pixels": 55.49975104748676,
+  "lora_cable_min_projected_clearance_pixels": -80.49946823671121,
+  "lora_cable_min_physical_clearance_mm": 7.8157136071777344,
+  "antenna_labels": {
+    "wifi": "Wi-Fi / 2.4 GHz",
+    "lora": "LoRa / 868 MHz"
+  },
+  "antenna_font_and_material_match_chip_labels": true,
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "opening_layout": "vertical",
+  "board_spacing_final_mm": 5,
+  "preserved_original_assets": 22,
+  "original_assets_unchanged": true,
+  "errors": []
+}
+{
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "layout": "vertical",
+  "opening_bounds_pixels": {
+    "lora": [
+      474.9879848957062,
+      1470.6318283081055,
+      639.431848526001,
+      1638.3896255493164
+    ],
+    "WIO": [
+      456.40774369239807,
+      1138.5068893432617,
+      617.3067784309387,
+      1258.5625076293945
+    ],
+    "wifi": [
+      448.4685230255127,
+      806.0969924926758,
+      665.9513425827026,
+      985.2390289306641
+    ],
+    "XIAO": [
+      456.4080011844635,
+      457.78801918029785,
+      615.8070158958435,
+      599.4629859924316
+    ]
+  },
+  "opening_adjacent_body_gaps_pixels": [
+    212.06932067871094,
+    153.26786041259766,
+    206.63400650024414
+  ],
+  "detached_plug_to_socket_mm": {
+    "wifi": 56.85485563586456,
+    "lora": 49.55551618989432
+  },
+  "transition_frames_checked": 79,
+  "checks": "Surface intersections between both board bodies and the antenna films",
+  "connection_sequence_starts_at_frame": 79,
+  "errors": [],
+  "source_blend_sha256": "1cfffbb47700b3bb7e04d13f236aca8ea3c9d1c3d53814b99c0b47d1f37c0e3f"
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

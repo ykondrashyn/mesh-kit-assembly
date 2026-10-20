@@ -1,0 +1,30 @@
+0 Instruction scene - 04-stack.dat
+0 Name: 04-stack.dat
+0 Author: Programmatic assembly guide
+0 !LDRAW_ORG Unofficial_Part
+0 BFC NOCERTIFY
+1 16 -95.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 xiao-official.dat
+1 16 -95.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 xiao-kit-details.dat
+1 16 -95.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 xiao-markings.dat
+1 16 -95.0000 -80.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-official.dat
+1 16 -95.0000 -80.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-kit-details.dat
+1 16 -95.0000 -80.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-markings.dat
+1 16 -30.0000 0.0000 37.5000 1 0 0 0 1 0 0 0 1 wifi-fpc.dat
+1 16 -60.9582 -6.2500 48.0835 1 0 0 0 1 0 0 0 1 rf-plug.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 step4-exploded-wifi-cable.dat
+1 16 -157.5000 -55.0000 -25.0000 1 0 0 0 1 0 0 0 1 lora-fpc.dat
+1 16 -81.5040 -87.2500 48.6982 1 0 0 0 1 0 0 0 1 rf-plug.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 step4-exploded-lora-cable.dat
+1 16 -78.1732 -7.5000 48.5140 1.35 0 0 0 1.35 0 0 0 1.35 press-arrow.dat
+1 16 100.0000 0.0000 112.5000 1 0 0 0 1 0 0 0 1 xiao-official.dat
+1 16 100.0000 0.0000 112.5000 1 0 0 0 1 0 0 0 1 xiao-kit-details.dat
+1 16 100.0000 0.0000 112.5000 1 0 0 0 1 0 0 0 1 xiao-markings.dat
+1 16 100.0000 -12.5000 112.5000 1 0 0 0 1 0 0 0 1 wio-official.dat
+1 16 100.0000 -12.5000 112.5000 1 0 0 0 1 0 0 0 1 wio-kit-details.dat
+1 16 100.0000 -12.5000 112.5000 1 0 0 0 1 0 0 0 1 wio-markings.dat
+1 16 162.5000 0.0000 100.0000 1 0 0 0 1 0 0 0 1 wifi-fpc.dat
+1 16 134.0418 -6.2500 160.5835 1 0 0 0 1 0 0 0 1 rf-plug.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 step4-final-wifi-cable.dat
+1 16 25.0000 -12.5000 137.5000 1 0 0 0 1 0 0 0 1 lora-fpc.dat
+1 16 113.4960 -19.7500 161.1982 1 0 0 0 1 0 0 0 1 rf-plug.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 step4-final-lora-cable.dat

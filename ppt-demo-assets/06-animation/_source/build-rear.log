@@ -1,0 +1,7 @@
+/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/build_animation.py:40: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+Info: Saved as "assembly-showcase.blend"
+Saved 450-frame native Blender animation
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

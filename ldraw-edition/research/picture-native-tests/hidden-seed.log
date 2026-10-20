@@ -1,0 +1,112 @@
+
+
+LPub3D v2.4.9 r86 (Release) for macOS ARM 64bit
+==========================
+Arguments: --process-export --export-option pdf --preferred-renderer native --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/hidden-seed.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/hidden-seed.mpd
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mInitializing application LPub3D... [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D v2.4.9 r86 (Release) for macOS ARM 64bit [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32m============================= [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mArguments....................(--process-export --export-option pdf --preferred-renderer native --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/hidden-seed.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/hidden-seed.mpd) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mmacOS Binary Directory.......(MacOS) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mmacOS Base Directory.........(Applications) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Bundle App Path.......(/Applications) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Application Data Path.(/Users/ykondras/Library/Application Support/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Extras Resource Path..(/Applications/LPub3D.app/Contents/Resources) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Config File Path......(/Users/ykondras/Library/Preferences) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D 3D Editor Cache Path..(/Users/ykondras/Library/Caches/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Homebrew Installation.(Apple Silicon) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Homebrew Path Prefix..(/opt/homebrew/opt) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Loaded LDraw Library..(LEGO® Parts) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLPub3D Logging Level.........(STATUS (0), Levels: [status,info,trace,debug,notice,warning,error,fatal,off]) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mDebug Logging................(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mLog To Standard Output.......(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mCheck For Updates............(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mAuto Restart On Abnormal End.(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mSecure Socket Layer..........(Supported) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32mApplication Distribution.....(Installed) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:49:46.972 [22;32m5% - Loading library for LEGO® Parts... [0m
+[22;32mINFO [0m2026-10-19T01:49:46.973 [22;32m15% - Preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:46.991 [22;32mSystem Theme: Dark (1) [0m
+[22;32mINFO [0m2026-10-19T01:49:46.991 [22;32m15% - Selecting update settings... [0m
+[22;32mINFO [0m2026-10-19T01:49:46.992 [22;32mLGEO library status... [0m
+[22;32mINFO [0m2026-10-19T01:49:46.992 [22;32mLGEO library path  : Not found [0m
+[22;32mINFO [0m2026-10-19T01:49:46.992 [22;32mImage renderers... [0m
+[22;32mINFO [0m2026-10-19T01:49:46.992 [22;32mLDGLite : /Applications/LPub3D.app/Contents/3rdParty/ldglite-1.3/bin/ldglite [0m
+[22;32mINFO [0m2026-10-19T01:49:46.992 [22;32m25% - LPub3D macOS Required Library Check... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2677[0m 2026-10-19T01:49:46.992 [22;32mLDView  : /Applications/LPub3D.app/Contents/3rdParty/ldview-4.5/bin/LDView [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:47.388 [22;32mLibrary check - [/opt/homebrew/opt/libpng/lib/libpng.dylib] minimum :[1.6.37] installed:[1.6.59] [0m
+The following LDView libraries were not validated:  -/opt/X11/lib/libOSMesa.dylib - not found.  -/opt/homebrew/opt/gl2ps/lib/libgl2ps.dylib - not found.  -/opt/homebrew/opt/jpeg/lib/libjpeg.dylib - not found.  -/opt/homebrew/opt/tinyxml/lib/libtinyxml.dylib - not found.  -/opt/homebrew/opt/minizip/lib/libminizip.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2770[0m 2026-10-19T01:49:47.389 [22;32mPOVRay  : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/bin/lpub3d_trace_cui [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:47.762 [22;32mLibrary check - [/opt/homebrew/opt/libtiff/lib/libtiff.dylib] minimum :[4.0.10] installed:[4.7.2] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:48.258 [22;32mLibrary check - [/opt/homebrew/opt/sdl2/lib/libSDL2.dylib] minimum :[2.0.10] installed:[2.32.74] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:48.603 [22;32mLibrary check - [/opt/homebrew/opt/openexr/lib/libOpenEXR.dylib] minimum :[2.3.0] installed:[3.5.2] [0m
+The following required POVRay libraries were not validated:  -/opt/X11/lib/libX11.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m2026-10-19T01:49:48.604 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2887[0m 2026-10-19T01:49:48.604 [22;32mProcessing renderer configuration files... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34msetLDGLiteIniParams[0m([22;36m[0m) [22;32m@ln 3151[0m 2026-10-19T01:49:48.604 [22;32mLDGLite.ini file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldglite-1.3/config/ldglite.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3166[0m 2026-10-19T01:49:48.604 [22;32mNative Export file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3249[0m 2026-10-19T01:49:48.604 [22;32mLDView ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3322[0m 2026-10-19T01:49:48.604 [22;32mLDViewPOV ini file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3402[0m 2026-10-19T01:49:48.604 [22;32mPOVRay conf file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.conf [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3608[0m 2026-10-19T01:49:48.604 [22;32mPOVRay ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2921[0m 2026-10-19T01:49:48.604 [22;32mBlender: not configured [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3015[0m 2026-10-19T01:49:48.604 [22;32mPOVRay ini path    : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3020[0m 2026-10-19T01:49:48.604 [22;32mPOVRay include path: /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/include [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3025[0m 2026-10-19T01:49:48.604 [22;32mPOVRay scene path  : Not found [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3027[0m 2026-10-19T01:49:48.604 [22;32mRenderer is Native. [0m
+[22;32mINFO [0m2026-10-19T01:49:48.608 [22;32m20% - OpenGL context initialization... [0m
+[22;32mINFO [0m2026-10-19T01:49:48.675 [22;32m25% - LPub3D GUI window loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:48.679 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:48.680 [22;32m30% - Visual Editor loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:48.680 [22;32m40% - Visual Editor initialization... [0m
+[22;32mINFO [0m2026-10-19T01:49:48.680 [22;32m50% - Search directory preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:48.681 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:48.682 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:48.682 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:48.682 [22;32m70% - Skip parts archive per application preference... [0m
+Fade Steps is OFF.
+[22;32mINFO [0m2026-10-19T01:49:48.699 [22;32mFade Steps is OFF. [0m
+Highlight Step is OFF.
+[22;32mINFO [0m2026-10-19T01:49:48.699 [22;32mHighlight Step is OFF. [0m
+LDrawINI not found, loading LDSearch directories from registry key...
+[22;32mINFO [0m2026-10-19T01:49:48.699 [22;32mLDrawINI not found, loading LDSearch directories from registry key... [0m
+Added search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models
+[22;32mINFO [0m2026-10-19T01:49:48.699 [22;32mAdded search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models [0m
+[22;32mINFO [0m2026-10-19T01:49:51.682 [22;32m75% - Archive libraries loading... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip...
+[22;32mINFO [0m2026-10-19T01:49:51.682 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip...
+[22;32mINFO [0m2026-10-19T01:49:51.709 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip... [0m
+[22;32mINFO [0m2026-10-19T01:49:51.718 [22;32m85% - LPub3D initialization... [0m
+[22;32mINFO [0m2026-10-19T01:49:51.719 [22;32m90% - LPub3D widgets loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:51.734 [22;32m95% - LDraw colors loading... [0m
+- Number of default openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:49:51.734 [22;34m- Number of default openWith programs: 0 [0m
+- Number of loaded openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:49:51.735 [22;34m- Number of loaded openWith programs: 0 [0m
+[22;32mINFO [0m2026-10-19T01:49:51.735 [22;32m100% - LPub3D loaded. [0m
+[22;32mINFO [0m2026-10-19T01:49:51.735 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:51.735 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:51.735 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+Loading file 'hidden-seed.mpd'...
+[22;32mINFO [0m2026-10-19T01:49:51.736 [22;32mLoading file 'hidden-seed.mpd'... [0m
+File 'hidden-seed.mpd' identified as Multi-Part LDraw System (MPD) Document
+[22;32mINFO [0m2026-10-19T01:49:51.737 [22;32mFile 'hidden-seed.mpd' identified as Multi-Part LDraw System (MPD) Document [0m
+Loading subfile 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:51.737 [22;32mLoading subfile 'picture-seeded.ldr'... [0m
+MPD model 'picture-seeded.ldr' with 25 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:49:51.737 [22;36mMPD model 'picture-seeded.ldr' with 25 lines loaded. [0m
+MPD file 'hidden-seed.mpd' with 27 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:49:51.737 [22;36mMPD file 'hidden-seed.mpd' with 27 lines loaded. [0m
+Model [picture-seeded.ldr] is a SUBMODEL
+[22;36mNOTICE [0m2026-10-19T01:49:51.737 [22;36mModel [picture-seeded.ldr] is a SUBMODEL [0m
+Part 1 [3001.dat] validated.
+[22;36mNOTICE [0m2026-10-19T01:49:51.737 [22;36mPart 1 [3001.dat] validated. [0m
+Loading user interface items...
+[22;32mINFO [0m2026-10-19T01:49:51.737 [22;32mLoading user interface items... [0m
+Open file '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/hidden-seed.mpd' completed.
+[22;32mINFO [0m2026-10-19T01:49:51.738 [22;32mOpen file '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/hidden-seed.mpd' completed. [0m
+Loaded LDraw MPD model file 'hidden-seed.mpd'. Unique Part 1. Model Total Part 1. Elapsed time: 0.000 second
+[22;32mINFO [0m2026-10-19T01:49:51.739 [22;32mLoaded LDraw MPD model file 'hidden-seed.mpd'. Unique Part 1. Model Total Part 1. Elapsed time: 0.000 second [0m

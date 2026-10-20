@@ -1,0 +1,9 @@
+00:00.603  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/assembly-showcase.blend"
+Traceback (most recent call last):
+  File "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/validate_opening.py", line 59, in <module>
+    assert not errors,errors
+           ^^^^^^^^^^
+AssertionError: [{'frame': 67, 'parts': ['XIAO', 'wifi'], 'intersecting_triangle_pairs': 58}, {'frame': 68, 'parts': ['XIAO', 'wifi'], 'intersecting_triangle_pairs': 182}, {'frame': 69, 'parts': ['XIAO', 'wifi'], 'intersecting_triangle_pairs': 112}, {'frame': 70, 'parts': ['XIAO', 'wifi'], 'intersecting_triangle_pairs': 112}, {'frame': 71, 'parts': ['XIAO', 'wifi'], 'intersecting_triangle_pairs': 98}]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

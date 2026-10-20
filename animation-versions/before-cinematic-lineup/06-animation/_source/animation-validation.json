@@ -1,0 +1,1184 @@
+{
+  "frames_checked": 450,
+  "official_solids": {
+    "xiao": 37,
+    "wio": 9
+  },
+  "cable_endpoint_max_error_mm": 1.1246181883879427e-06,
+  "source_ring_max_error_pixels": 0.000704553001746533,
+  "lora_film_min_projected_clearance_pixels": 65.87678586214831,
+  "lora_cable_min_projected_clearance_pixels": -95.55077988586285,
+  "lora_cable_min_physical_clearance_mm": 7.8157136071777344,
+  "connector_face_visibility": [
+    {
+      "frame": 307,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 307,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 308,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 308,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 309,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 309,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 310,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 310,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 311,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 311,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 312,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 312,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 313,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 313,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 314,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 314,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 315,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 315,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 316,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 316,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 317,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 317,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 318,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 318,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 319,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 319,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 320,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 320,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 321,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 321,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 322,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 322,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 323,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 323,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 324,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 324,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 325,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 325,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 326,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 326,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 327,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 327,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 328,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 328,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 329,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 329,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 330,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 330,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 331,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 331,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 332,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 332,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 333,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 333,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 334,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 334,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 335,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 335,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 336,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 336,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 337,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 337,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 338,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 338,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 339,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 339,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 340,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 340,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 341,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 341,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 342,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 342,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 343,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 343,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 344,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 344,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 345,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 345,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 346,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 346,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 347,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 347,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 348,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 348,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 349,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 349,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 350,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 350,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 351,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 351,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 352,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 352,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 353,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 353,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 354,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 354,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 355,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 355,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 356,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 356,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 357,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 357,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 358,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 358,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 359,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 359,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 360,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 360,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 361,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 361,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 362,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 362,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 363,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 363,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 364,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 364,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 365,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 365,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 366,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 366,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 367,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 367,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 368,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 368,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 369,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 369,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 370,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 370,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 371,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 371,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 372,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 372,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 373,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 373,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 374,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 374,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    },
+    {
+      "frame": 375,
+      "half": "lower",
+      "visible": true,
+      "hit": "xiao_socket_schematic.001"
+    },
+    {
+      "frame": 375,
+      "half": "upper",
+      "visible": true,
+      "hit": "wio_official_007_b2b_connector.001"
+    }
+  ],
+  "antenna_labels": {
+    "wifi": "Wi-Fi / 2.4 GHz",
+    "lora": "LoRa / 868 MHz"
+  },
+  "antenna_font_and_material_match_chip_labels": true,
+  "board_spacing_final_mm": 5,
+  "main_bounds": [
+    {
+      "frame": 1,
+      "xyxy": [
+        479.534912109375,
+        204.29251098632812,
+        1440.4652099609375,
+        846.1045532226562
+      ]
+    },
+    {
+      "frame": 34,
+      "xyxy": [
+        478.1942138671875,
+        204.29225158691406,
+        1441.8060302734375,
+        846.1668090820312
+      ]
+    },
+    {
+      "frame": 46,
+      "xyxy": [
+        345.7655029296875,
+        204.2918243408203,
+        1311.5181884765625,
+        846.2161865234375
+      ]
+    },
+    {
+      "frame": 70,
+      "xyxy": [
+        159.24708557128906,
+        204.2912139892578,
+        1130.7523193359375,
+        846.3486328125
+      ]
+    },
+    {
+      "frame": 94,
+      "xyxy": [
+        155.61825561523438,
+        204.29006958007812,
+        1134.382080078125,
+        846.548095703125
+      ]
+    },
+    {
+      "frame": 115,
+      "xyxy": [
+        152.04234313964844,
+        204.28887939453125,
+        1137.95751953125,
+        846.7542114257812
+      ]
+    },
+    {
+      "frame": 130,
+      "xyxy": [
+        149.37127685546875,
+        204.2882080078125,
+        1140.62841796875,
+        846.9075317382812
+      ]
+    },
+    {
+      "frame": 150,
+      "xyxy": [
+        145.82981872558594,
+        204.28750610351562,
+        1144.169677734375,
+        847.071533203125
+      ]
+    },
+    {
+      "frame": 151,
+      "xyxy": [
+        145.66099548339844,
+        204.2873992919922,
+        1144.3389892578125,
+        847.0723266601562
+      ]
+    },
+    {
+      "frame": 180,
+      "xyxy": [
+        144.13233947753906,
+        204.28689575195312,
+        1145.8675537109375,
+        847.103271484375
+      ]
+    },
+    {
+      "frame": 199,
+      "xyxy": [
+        141.7045440673828,
+        204.28646850585938,
+        1148.29541015625,
+        847.1148681640625
+      ]
+    },
+    {
+      "frame": 220,
+      "xyxy": [
+        125.30690002441406,
+        204.28192138671875,
+        1164.6929931640625,
+        847.1771850585938
+      ]
+    },
+    {
+      "frame": 235,
+      "xyxy": [
+        115.18183135986328,
+        204.27871704101562,
+        1174.8172607421875,
+        847.2667846679688
+      ]
+    },
+    {
+      "frame": 255,
+      "xyxy": [
+        114.5737075805664,
+        204.27845764160156,
+        1175.4259033203125,
+        847.2644653320312
+      ]
+    },
+    {
+      "frame": 256,
+      "xyxy": [
+        114.57225799560547,
+        204.27838134765625,
+        1175.427490234375,
+        847.264404296875
+      ]
+    },
+    {
+      "frame": 280,
+      "xyxy": [
+        103.89042663574219,
+        223.58822631835938,
+        1185.8546142578125,
+        821.3690795898438
+      ]
+    },
+    {
+      "frame": 307,
+      "xyxy": [
+        104.14472198486328,
+        342.32470703125,
+        1185.8551025390625,
+        682.9637451171875
+      ]
+    },
+    {
+      "frame": 319,
+      "xyxy": [
+        104.14472198486328,
+        342.32470703125,
+        1185.8551025390625,
+        682.9637451171875
+      ]
+    },
+    {
+      "frame": 335,
+      "xyxy": [
+        104.14488983154297,
+        360.9288635253906,
+        1185.8553466796875,
+        664.35986328125
+      ]
+    },
+    {
+      "frame": 355,
+      "xyxy": [
+        104.14497375488281,
+        385.6633605957031,
+        1185.8553466796875,
+        660.3497314453125
+      ]
+    },
+    {
+      "frame": 375,
+      "xyxy": [
+        104.14497375488281,
+        385.6633605957031,
+        1185.8553466796875,
+        660.3497314453125
+      ]
+    },
+    {
+      "frame": 376,
+      "xyxy": [
+        104.14497375488281,
+        385.6633605957031,
+        1185.8553466796875,
+        660.3497314453125
+      ]
+    },
+    {
+      "frame": 383,
+      "xyxy": [
+        137.98663330078125,
+        347.76300048828125,
+        1205.614990234375,
+        697.145263671875
+      ]
+    },
+    {
+      "frame": 390,
+      "xyxy": [
+        317.2712707519531,
+        287.1793212890625,
+        1157.9940185546875,
+        757.8933715820312
+      ]
+    },
+    {
+      "frame": 397,
+      "xyxy": [
+        526.0675659179688,
+        265.5084533691406,
+        1115.20751953125,
+        779.79443359375
+      ]
+    },
+    {
+      "frame": 404,
+      "xyxy": [
+        401.2838134765625,
+        274.6044616699219,
+        1396.633056640625,
+        770.9481811523438
+      ]
+    },
+    {
+      "frame": 411,
+      "xyxy": [
+        475.9375915527344,
+        360.8178405761719,
+        1425.5401611328125,
+        719.1253051757812
+      ]
+    },
+    {
+      "frame": 421,
+      "xyxy": [
+        449.7592468261719,
+        267.4606628417969,
+        1470.24072265625,
+        783.9508056640625
+      ]
+    },
+    {
+      "frame": 450,
+      "xyxy": [
+        449.7592468261719,
+        267.4606628417969,
+        1470.24072265625,
+        783.9508056640625
+      ]
+    }
+  ],
+  "inset_bounds": [
+    {
+      "frame": 46,
+      "maximum_radius_pixels": 231.9999873720363
+    },
+    {
+      "frame": 70,
+      "maximum_radius_pixels": 232.9362716294416
+    },
+    {
+      "frame": 94,
+      "maximum_radius_pixels": 233.89681635953278
+    },
+    {
+      "frame": 115,
+      "maximum_radius_pixels": 212.7774705017545
+    },
+    {
+      "frame": 130,
+      "maximum_radius_pixels": 202.81522292085845
+    },
+    {
+      "frame": 150,
+      "maximum_radius_pixels": 202.81527347872498
+    },
+    {
+      "frame": 151,
+      "maximum_radius_pixels": 232.00002946524597
+    },
+    {
+      "frame": 180,
+      "maximum_radius_pixels": 234.77969643769242
+    },
+    {
+      "frame": 199,
+      "maximum_radius_pixels": 234.9687354535173
+    },
+    {
+      "frame": 220,
+      "maximum_radius_pixels": 211.9638226428628
+    },
+    {
+      "frame": 235,
+      "maximum_radius_pixels": 199.41604691103723
+    },
+    {
+      "frame": 255,
+      "maximum_radius_pixels": 199.41640929691567
+    },
+    {
+      "frame": 307,
+      "maximum_radius_pixels": 232.36383571553793
+    },
+    {
+      "frame": 319,
+      "maximum_radius_pixels": 232.36383571553793
+    },
+    {
+      "frame": 335,
+      "maximum_radius_pixels": 195.40566278098237
+    },
+    {
+      "frame": 355,
+      "maximum_radius_pixels": 165.20132796005493
+    },
+    {
+      "frame": 375,
+      "maximum_radius_pixels": 165.20132796005493
+    }
+  ],
+  "preserved_original_assets": 6,
+  "original_assets_unchanged": true,
+  "errors": []
+}

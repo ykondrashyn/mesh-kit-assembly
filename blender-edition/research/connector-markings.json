@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-19",
+  "user_observation": {
+    "wifi": "13",
+    "lora": "37 with C M underneath"
+  },
+  "confirmed_manufacturer_reference": {
+    "url": "https://www.i-pex.com/product/mhf-I",
+    "wifi_reference": {
+      "part_number": "20278-112R-13",
+      "nominal_cable_diameter_mm": 1.13
+    },
+    "lora_reference": {
+      "part_number": "20351-112R-37",
+      "nominal_cable_diameter_mm": 1.37
+    },
+    "interpretation": "13 and 37 identify cable diameter variants in these I-PEX part numbers. Both belong to MHF I. They do not identify antenna frequency.",
+    "drawing": "references/ipex-mhf-i-137-drawing.pdf",
+    "drawing_observation": "Official 20351 drawing shows 37 on the cap. Its printed brand is IPX, not C M.",
+    "cad_observation": "The downloaded 20351 R7 plug STEP includes the 37 engraving. It does not include C M."
+  },
+  "inference_for_user_hardware": "The reported stamps are consistent with 1.13 and 1.37 mm coax variants. Kit plug supplier and exact dimensions have not been independently confirmed.",
+  "cm_status": {
+    "meaning": "unverified",
+    "manufacturer": "unverified",
+    "rendering_basis": "User report, reproduced as separate simple native Blender text beneath the original 37 engraving."
+  },
+  "implemented": {
+    "wifi": "Unchanged complete 20278 CAD and 1.13 mm lead",
+    "lora": "Complete 20351 CAD, 1.37 mm lead, original 37 and separate C M text",
+    "coverage": "All LoRa plugs in inventory, connection views, circular insets, board alignment, joined view and combined 01-04 page",
+    "geometry_preserved": "All 378 faces of Wi-Fi and all 374 faces of LoRa reference plugs. No cuts or deformations.",
+    "ai_image_generation": false
+  }
+}

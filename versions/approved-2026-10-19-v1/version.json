@@ -1,0 +1,18 @@
+{
+  "status": "user-approved",
+  "date": "2026-10-19",
+  "page_id": "page_579fb55b6e9c8191803cef1c5f5aceee",
+  "cloud_state_version": 11,
+  "sha256": {
+    "build_sheet.py": "f0c5a2b79337e8d49f80a53ba3a32167389faefec03691910ae30012950da7f2",
+    "output/00-parts.png": "f4cb948995177db0ffc5cbba14a02e1169e7813efdf9f8ab7d19e39d06c8f46d",
+    "output/01-wifi-antenna.png": "a6e953fbe8a762a119707336cd89a12b60f5250a5e0cea78d7f56430085846d9",
+    "output/02-lora-antenna.png": "008f4aa57ba528cd5a481b9cf474bc885cd566683e35e6e67ffa0c54408cf798",
+    "output/03-board-stack.png": "db1c6a6531b3dd93fc5b7ff7baa508ab2970e406bbec27ff6b59593ef9c76e75",
+    "output/sources.json": "5ec79e24c929e22dbed045c697aef8f39207c86053b6973aa64566fae4dec5dd",
+    "output/xiao-wio-assembly-sheet.pdf": "6515142f8054a1116434c0481ac80b149efa1362ab12fedf3e022c8d6bdb5708",
+    "output/xiao-wio-assembly-sheet.png": "513f0bae520effd2aab56b2d832f1ff09f8f5564c43403c7810b0a4077dee8fd",
+    "output/xiao-wio-slide-images-and-prompts.zip": "f03a330310a010a4c7fe10579aa8f381ca3d9f44dec05deaeb7039113a2c4c9f",
+    "package_outputs.py": "9cc0a83eefcdb9314c337c7a326c72cd53989c9ff76da63bf47893ed6caf10ef"
+  }
+}

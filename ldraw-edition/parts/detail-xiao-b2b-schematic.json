@@ -1,0 +1,111 @@
+{
+  "board": "xiao",
+  "kind": "b2b",
+  "schematic": true,
+  "selection_box_normalized_mm": [
+    2.38,
+    17.63,
+    1.2,
+    11.08,
+    21.18,
+    2.25
+  ],
+  "origin_normalized_mm": [
+    6.731,
+    19.4056,
+    1.25
+  ],
+  "board_surface": "XIAO PCB top",
+  "socket_rim_local_z_mm": 0.95,
+  "socket_floor_local_z_mm": 0.25,
+  "source_component": "Illustrative B2B socket from kit supplemental geometry",
+  "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+  "source_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+  "geometry_provenance": "Schematic supplemental XIAO B2B socket, not manufacturer geometry",
+  "source_to_normalized_mm_3x4": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ],
+  "normalized_to_local_translation_mm": [
+    -6.731,
+    -19.4056,
+    -1.25
+  ],
+  "origin_on_board_ldu": [
+    16.8275,
+    -3.125,
+    48.514
+  ],
+  "axis_local_mm": [
+    0,
+    0
+  ],
+  "local_board_plane_z_mm": 0,
+  "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+  "selected_whole_solids": [
+    {
+      "index_zero_based": 0,
+      "bbox_normalized_mm": [
+        2.4307,
+        17.6884,
+        1.25,
+        11.0307,
+        21.1228,
+        2.2
+      ],
+      "volume_mm3": 16.225548
+    }
+  ],
+  "selected_source_volume_mm3": 16.225548,
+  "exported_local_volume_mm3": 16.225548000000003,
+  "bbox_on_original_board_mm": [
+    2.4307,
+    17.6884,
+    1.25,
+    11.0307,
+    21.1228,
+    2.2
+  ],
+  "filename": "detail-xiao-b2b-schematic.dat",
+  "triangles": 28,
+  "type_2_segments": 24,
+  "faces": 11,
+  "unique_brep_edges": 24,
+  "suppressed_periodic_or_degenerate_edges": 0,
+  "output_sha256": "238d025219ae896c51c4ed335b7cc69b24cc2426b54ba4d55f6e6e64f133f25a",
+  "mesh_bounds_ldu": {
+    "min": [
+      -10.75075,
+      -2.375,
+      -4.293
+    ],
+    "max": [
+      10.74925,
+      -0.0,
+      4.293
+    ]
+  },
+  "file_bytes": 4651,
+  "cad_bounds_local_mm": {
+    "min": [
+      -4.3003,
+      -1.7171999999999983,
+      0.0
+    ],
+    "max": [
+      4.2997,
+      1.7172000000000018,
+      0.9500000000000002
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "duration": 15,
+  "width": 1920,
+  "height": 1080,
+  "h264": "probably",
+  "ended": true,
+  "currentTime": 15,
+  "totalVideoFrames": 450,
+  "droppedVideoFrames": 0,
+  "browser": "153.0.8010.37"
+}

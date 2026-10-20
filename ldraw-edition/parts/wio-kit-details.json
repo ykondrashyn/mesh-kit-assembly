@@ -1,0 +1,101 @@
+{
+  "board": "wio",
+  "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+  "source_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+  "source_to_normalized_mm_3x4": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ],
+  "landmarks_normalized_mm": {
+    "rf": [
+      5.3984,
+      19.4793,
+      2.9
+    ],
+    "b2b": [
+      6.731,
+      19.406,
+      -3.5
+    ],
+    "button": [
+      8.89,
+      8.07,
+      2.6
+    ],
+    "shield_center": [
+      8.89,
+      15.4,
+      3.8
+    ]
+  },
+  "landmarks_ldu": {
+    "rf": [
+      13.496,
+      -7.25,
+      48.69825
+    ],
+    "b2b": [
+      16.8275,
+      8.75,
+      48.515
+    ],
+    "button": [
+      22.225,
+      -6.5,
+      20.175
+    ],
+    "shield_center": [
+      22.225,
+      -9.5,
+      38.5
+    ]
+  },
+  "geometry_provenance": "Illustrative additions from photographed kit, authored with CAD primitives",
+  "supplements": [
+    "Simplified user button"
+  ],
+  "official_step_source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/wio-sx1262-for-xiao.step",
+  "official_step_source_sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+  "filename": "wio-kit-details.dat",
+  "triangles": 212,
+  "type_2_segments": 52,
+  "faces": 9,
+  "unique_brep_edges": 15,
+  "suppressed_periodic_or_degenerate_edges": 1,
+  "output_sha256": "da284d96c3be2d6186d52a618eef65ed0a85b01602fea8300ccc6209fec660ab",
+  "cad_bounds_normalized_mm": {
+    "min": [
+      7.0,
+      6.72,
+      1.6
+    ],
+    "max": [
+      10.78,
+      9.42,
+      2.6
+    ]
+  },
+  "mesh_bounds_ldu": {
+    "min": [
+      17.5,
+      -6.5,
+      16.8
+    ],
+    "max": [
+      26.95,
+      -4.0,
+      23.55
+    ]
+  },
+  "file_bytes": 24008
+}

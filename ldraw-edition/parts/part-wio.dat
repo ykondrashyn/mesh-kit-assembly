@@ -1,0 +1,8 @@
+0 Native LPub3D asset: part-wio
+0 Name: part-wio.dat
+0 Author: Programmatic assembly guide
+0 !LDRAW_ORG Unofficial_Part
+0 BFC NOCERTIFY
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-official.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-kit-details.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-markings.dat

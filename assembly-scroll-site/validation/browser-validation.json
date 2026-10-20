@@ -1,0 +1,371 @@
+{
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "results": [
+    {
+      "name": "initial load selects landscape only",
+      "passed": true,
+      "details": {
+        "frameRequests": 9,
+        "bounds": {
+          "canvas": {
+            "x": 24,
+            "y": 50.71875,
+            "width": 1377,
+            "height": 774.5625,
+            "top": 50.71875,
+            "right": 1401,
+            "bottom": 825.28125,
+            "left": 24
+          },
+          "area": {
+            "x": 24,
+            "y": 42,
+            "width": 1377,
+            "height": 792,
+            "top": 42,
+            "right": 1401,
+            "bottom": 834,
+            "left": 24
+          },
+          "controls": {
+            "x": 332.5,
+            "y": 834,
+            "width": 760,
+            "height": 54,
+            "top": 834,
+            "right": 1092.5,
+            "bottom": 888,
+            "left": 332.5
+          },
+          "innerHeight": 900
+        }
+      }
+    },
+    {
+      "name": "mouse wheel advances and reverse wheel reverses",
+      "passed": true,
+      "details": {
+        "forward": {
+          "frame": 31,
+          "requested": 31,
+          "orientation": "landscape",
+          "progress": 0.074074,
+          "decoded": 12,
+          "maxDecoded": 12
+        },
+        "backward": {
+          "frame": 12,
+          "requested": 12,
+          "orientation": "landscape",
+          "progress": 0.027778,
+          "decoded": 12,
+          "maxDecoded": 12
+        }
+      }
+    },
+    {
+      "name": "complete forward and reverse frame traversal",
+      "skipped": true,
+      "reason": "Frame assets are unchanged, verified in the previous full traversal."
+    },
+    {
+      "name": "desktop labels and connection seating views fit",
+      "passed": true,
+      "details": [
+        {
+          "index": 33,
+          "bounds": {
+            "canvas": {
+              "x": 24,
+              "y": 50.71875,
+              "width": 1377,
+              "height": 774.5625,
+              "top": 50.71875,
+              "right": 1401,
+              "bottom": 825.28125,
+              "left": 24
+            },
+            "area": {
+              "x": 24,
+              "y": 42,
+              "width": 1377,
+              "height": 792,
+              "top": 42,
+              "right": 1401,
+              "bottom": 834,
+              "left": 24
+            },
+            "controls": {
+              "x": 332.5,
+              "y": 834,
+              "width": 760,
+              "height": 54,
+              "top": 834,
+              "right": 1092.5,
+              "bottom": 888,
+              "left": 332.5
+            },
+            "innerHeight": 900
+          }
+        },
+        {
+          "index": 129,
+          "bounds": {
+            "canvas": {
+              "x": 24,
+              "y": 50.71875,
+              "width": 1377,
+              "height": 774.5625,
+              "top": 50.71875,
+              "right": 1401,
+              "bottom": 825.28125,
+              "left": 24
+            },
+            "area": {
+              "x": 24,
+              "y": 42,
+              "width": 1377,
+              "height": 792,
+              "top": 42,
+              "right": 1401,
+              "bottom": 834,
+              "left": 24
+            },
+            "controls": {
+              "x": 332.5,
+              "y": 834,
+              "width": 760,
+              "height": 54,
+              "top": 834,
+              "right": 1092.5,
+              "bottom": 888,
+              "left": 332.5
+            },
+            "innerHeight": 900
+          }
+        },
+        {
+          "index": 234,
+          "bounds": {
+            "canvas": {
+              "x": 24,
+              "y": 50.71875,
+              "width": 1377,
+              "height": 774.5625,
+              "top": 50.71875,
+              "right": 1401,
+              "bottom": 825.28125,
+              "left": 24
+            },
+            "area": {
+              "x": 24,
+              "y": 42,
+              "width": 1377,
+              "height": 792,
+              "top": 42,
+              "right": 1401,
+              "bottom": 834,
+              "left": 24
+            },
+            "controls": {
+              "x": 332.5,
+              "y": 834,
+              "width": 760,
+              "height": 54,
+              "top": 834,
+              "right": 1092.5,
+              "bottom": 888,
+              "left": 332.5
+            },
+            "innerHeight": 900
+          }
+        },
+        {
+          "index": 363,
+          "bounds": {
+            "canvas": {
+              "x": 24,
+              "y": 50.71875,
+              "width": 1377,
+              "height": 774.5625,
+              "top": 50.71875,
+              "right": 1401,
+              "bottom": 825.28125,
+              "left": 24
+            },
+            "area": {
+              "x": 24,
+              "y": 42,
+              "width": 1377,
+              "height": 792,
+              "top": 42,
+              "right": 1401,
+              "bottom": 834,
+              "left": 24
+            },
+            "controls": {
+              "x": 332.5,
+              "y": 834,
+              "width": 760,
+              "height": 54,
+              "top": 834,
+              "right": 1092.5,
+              "bottom": 888,
+              "left": 332.5
+            },
+            "innerHeight": 900
+          }
+        },
+        {
+          "index": 420,
+          "bounds": {
+            "canvas": {
+              "x": 24,
+              "y": 50.71875,
+              "width": 1377,
+              "height": 774.5625,
+              "top": 50.71875,
+              "right": 1401,
+              "bottom": 825.28125,
+              "left": 24
+            },
+            "area": {
+              "x": 24,
+              "y": 42,
+              "width": 1377,
+              "height": 792,
+              "top": 42,
+              "right": 1401,
+              "bottom": 834,
+              "left": 24
+            },
+            "controls": {
+              "x": 332.5,
+              "y": 834,
+              "width": 760,
+              "height": 54,
+              "top": 834,
+              "right": 1092.5,
+              "bottom": 888,
+              "left": 332.5
+            },
+            "innerHeight": 900
+          }
+        }
+      ]
+    },
+    {
+      "name": "chapter links and keyboard endpoints",
+      "passed": true,
+      "details": {
+        "frame": 420,
+        "requested": 420,
+        "orientation": "landscape",
+        "progress": 0.998824,
+        "decoded": 12,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "tablet and phone resize preserve progress",
+      "passed": true,
+      "details": {
+        "frame": 420,
+        "requested": 420,
+        "orientation": "landscape",
+        "progress": 1,
+        "decoded": 4,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "portrait traverses every frame forward and backward",
+      "skipped": true,
+      "reason": "Frame assets are unchanged, verified in the previous full traversal."
+    },
+    {
+      "name": "orientation change rejects a delayed old-orientation frame",
+      "passed": true,
+      "details": {
+        "frame": 150,
+        "requested": 150,
+        "orientation": "landscape",
+        "progress": 0.35713,
+        "decoded": 4,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "delayed frames retain the current picture and stale results cannot replace it",
+      "passed": true,
+      "details": {
+        "frame": 20,
+        "requested": 20,
+        "orientation": "landscape",
+        "progress": 0.047593,
+        "decoded": 12,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "frame failure exposes retry and recovers",
+      "passed": true,
+      "details": {
+        "frame": 250,
+        "requested": 250,
+        "orientation": "landscape",
+        "progress": 0.595278,
+        "decoded": 12,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "rapid direction changes settle at the exact requested frame",
+      "passed": true,
+      "details": {
+        "frame": 129,
+        "requested": 129,
+        "orientation": "landscape",
+        "progress": 0.30713,
+        "decoded": 12,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "reduced motion uses chapter stills with opt-in full animation",
+      "passed": true,
+      "details": {
+        "frame": 160,
+        "requested": 160,
+        "orientation": "portrait",
+        "progress": 0.380924,
+        "decoded": 12,
+        "maxDecoded": 12
+      }
+    },
+    {
+      "name": "JavaScript-disabled fallback displays the labeled parts",
+      "passed": true,
+      "details": {
+        "imageLoaded": true
+      }
+    },
+    {
+      "name": "emulated phone touch swipe advances the assembly",
+      "passed": true,
+      "details": {
+        "frame": 14,
+        "requested": 14,
+        "orientation": "portrait",
+        "progress": 0.032171,
+        "decoded": 12,
+        "maxDecoded": 12
+      }
+    }
+  ],
+  "uncaughtErrors": [],
+  "limitations": [
+    "Chromium tested on macOS. Safari, Firefox and physical mobile devices were not tested."
+  ]
+}

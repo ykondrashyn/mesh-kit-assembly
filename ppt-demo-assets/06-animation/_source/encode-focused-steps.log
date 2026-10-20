@@ -1,0 +1,18 @@
+{
+  "file": "assembly-showcase.mp4",
+  "codec": "h264",
+  "pixel_format": "yuv420p",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 450,
+  "duration_seconds": 15,
+  "audio_streams": 0,
+  "decode_errors": 0,
+  "bytes": 2600392,
+  "sha256": "61d70f03ebcbc7758c5e5feaa2f2d2ffe3bc108232ff5786b0b64a851526a67b",
+  "source_blend_sha256": "7b50e2acd0299b9d0d2936f683d96479e0e2a326e552682991f4c397f84f8e0a",
+  "ai_image_generation": false,
+  "visual_renderer": "Blender EEVEE",
+  "encoder": "FFmpeg libx264"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "frame": 1,
+    "identical_pixels": true,
+    "mean_absolute_channel_error": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "frame": 140,
+    "identical_pixels": true,
+    "mean_absolute_channel_error": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "frame": 245,
+    "identical_pixels": true,
+    "mean_absolute_channel_error": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "frame": 335,
+    "identical_pixels": true,
+    "mean_absolute_channel_error": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+]

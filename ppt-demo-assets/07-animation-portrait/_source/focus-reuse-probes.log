@@ -1,0 +1,27 @@
+00:00.414  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/assembly-showcase.blend"
+{
+  "frames_checked": 450,
+  "portrait": [
+    1080,
+    1920
+  ],
+  "circular_detail_diameter_pixels": 600,
+  "assembly_motion_matches_landscape_after_opening": true,
+  "return_to_front_retained": true,
+  "hud_text_within_frame": true,
+  "leader_avoids_inset_heading": true,
+  "errors": []
+}
+RENDER 1 of 450
+00:02.265  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/focus-reuse-probes/frame-0001.png'
+RENDER 34 of 450
+00:03.523  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/focus-reuse-probes/frame-0034.png'
+RENDER 270 of 450
+00:04.793  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/focus-reuse-probes/frame-0270.png'
+RENDER 335 of 450
+00:06.172  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/focus-reuse-probes/frame-0335.png'
+RENDER 450 of 450
+00:07.304  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/focus-reuse-probes/frame-0450.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

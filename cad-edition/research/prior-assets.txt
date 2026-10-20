@@ -1,0 +1,102 @@
+Prior chat and assets review, 2026-10-19
+
+Chat reviewed completely: codex://threads/01a14fab-9be4-7e50-98c6-7f03b1e219d0
+Title: Create Mesh Kit assembly slides
+Latest turn status: interrupted. This was the uniform-board revision and antenna-cap correction, not a completed approved revision.
+
+User corrections and established intent
+- The original manual was explicitly approved with: "Ok, save this version this is good." The same message requested consistent board appearance across all steps.
+- The user then rejected the uniform version's antenna caps: "These antenna caps look weird and tehy're attached weirdly". This correction remains the last user feedback in that chat.
+- Earlier direct user requests: readable XIAO ESP32S3 and WIO SX1262 identification on the shields, identical antenna connector type in Wi-Fi and LoRa steps, soldered XIAO pin headers, correct relative dimensions, no cut XIAO corners, no erroneous three-pin groups near the front, official Seeed page images as references for all illustrations.
+- Preserve the original approved output and create a separate revised edition.
+
+Approved snapshot
+/Users/ykondras/vid/assembly-manual/versions/approved-2026-10-19-v1
+Snapshot version.json records page_579fb55b6e9c8191803cef1c5f5aceee, state version 11.
+All snapshot hashes checked and matched.
+The four illustration PNGs, A4 landscape assembly sheet PDF and PNG, source manifest and ZIP bundle are present.
+The original has a clean visual manual layout and was approved, but board appearance drifts between panels because the illustrations were independently generated.
+
+Uniform revision
+/Users/ykondras/vid/assembly-manual/uniform
+sources.json records page_978b18565d78819186773ca3ceeb12c6, state version 17.
+Repeated board-master crops make the board outlines, components and labels visually consistent across panels. The current local sheet is clean and usable as a design/layout reference.
+The currently saved local output still shows the bulky round stacked caps the user rejected. The latest rf-plug-final.png is a separate stamped-metal plug asset with a square-ish plate and cable tail. The fix-caps.mjs script exists, but the interrupted chat does not establish a completed export containing that correction.
+Do not describe uniform output as user approved or fully corrected.
+
+Useful existing local source assets
+references/wio-sx1262-for-xiao.step
+references/xiao-esp32s3-model.zip
+references/xiao-esp32s3-model/XIAO-ESP32S3 v2.step
+references/xiao-esp32s3-model/Top view.jpg
+references/xiao-esp32s3-model/Bottom View.jpg
+references/xiao-esp32s3-model/XIAO-ESP32S3.png
+references/kit-photo.png
+references/wio-hardware.png
+references/xiao-front-indication.png
+references/xiao-back-indication.png
+references/antenna-comparison.png
+references/extension-comparison.jpg
+references/b2b-mapping.png
+references/visual-reference-sources.json
+output/sources.json includes the official URLs and source photos.
+All paths above are relative to /Users/ykondras/vid/assembly-manual.
+
+Physical-kit evidence to preserve
+- Source photos exist in /Users/ykondras/vid, names recorded in output/sources.json: PXL_20260814_183701502.jpg, PXL_20260814_183729433.jpg, PXL_20260814_183758225.jpg, PXL_20260814_183837394.jpg, PXL_20260814_184048488.jpg, PXL_20260814_184306445.jpg, PXL_20260814_184542767.jpg.
+- The demonstrated XIAO has two already soldered 1x7 male headers beneath the long edges. The Wio through holes remain empty.
+- Stack Wio above XIAO with component faces up. The Wio hole/button end faces the XIAO USB-C end.
+- The side GPIO headers are not the joining mechanism. The kit uses the small B2B connector.
+- With USB-C toward viewer, XIAO RF socket is rear-right and Wio LoRa socket is rear-left.
+- Broad 2.4 GHz FPC attaches to XIAO. Slim LoRa FPC attaches to Wio. They use matching snap-on coax connectors. Permanent FPC feedpoint is soldered, not a removable board-style socket.
+- Board footprints are nearly equal. Cached source values: XIAO 21 x 17.8 mm, Wio 21.44 x 17.78 mm. CAD should supersede cached approximations.
+- Antenna lengths nearly equal. Wi-Fi body 37.4 x 17.5 mm, LoRa body 40 x 7 mm. Keep these ratios consistent.
+- Exploded gap is deliberately enlarged and should be described as such.
+- Attach both antennas before USB power. Keep cables outside the mating stack.
+
+CAD limitations established by earlier work
+- output/sources.json explicitly notes that the downloaded base XIAO CAD omits the populated kit B2B connector. The supplied top-view image shows the empty B2B pads. A literal STEP render alone will therefore miss a crucial part of this assembly.
+- Base CAD also needs the demonstrated soldered headers added if absent.
+- Antenna leads, plug geometry and FPC body geometry are separate reconstruction tasks. Avoid perpetuating image-generated socket/plug errors.
+
+Quality assessment
+Reuse the established monochrome language, large step number, limited text and circular RF connection close-up, but use CAD geometry consistently instead of the generated board master if pursuing accurate model-based illustrations. The unchanged approved original is a useful comparison target. Neither old generated artwork nor an earlier assistant statement that no errors remained is proof of physical accuracy.
+
+Connector geometry review, 2026-10-19
+
+Best physical-kit evidence inspected
+- PXL_20260814_183837394.jpg: close-up of seated Wi-Fi plug on the XIAO.
+- PXL_20260814_184306445.jpg: close-up of seated LoRa plug on the Wio.
+- PXL_20260814_183758225.jpg: loose Wi-Fi plug with mating face visible.
+- PXL_20260814_184048488.jpg: loose LoRa plug side profile.
+All four photos are in /Users/ykondras/vid. The official kit-photo.png also shows both seated plugs and cable directions.
+
+Observed visual shape
+The loose connectors have a circular mating cup beneath a formed metal shell. From above, the shell is a flattened rounded lid with shoulders at the crimped neck. The cable leaves the neck horizontally relative to the board, perpendicular to the mating axis. Both antenna plugs use the same visual family. Their shell color is gold in the photos, though gray is suitable in the monochrome manual. The exact commercial part number has not been established.
+The seated plug covers the socket's center pin and circular receptacle. Some square socket base remains visible. Never leave the pin sticking through the cap.
+rf-plug-final.png improves upon the stacked discs, but its broad square lid and bulky neck are still exaggerated compared with the actual kit.
+
+Recommended small icon
+Use a compact flat rounded cap, one thin lower rim and a short tapered neck. Omit all but one fine crimp line. Reuse the same part. When routing the cable, rotate the plug around the mating axis rather than flipping its top and bottom. The first cable segment must follow the neck axis, then curve smoothly. A representative plug is approximately 3 mm wide and 4 mm long including its neck, small beside a 17.8 mm board. Use the CAD receptacle to control scale.
+
+Recommended zoom icon
+Show a flat closed top plate, short skirt, circular mating opening underneath and two subtle neck crimp tabs. The top has no hole. Keep the plug parallel to the board with the cup centered over the socket. Use one downward arrow normal to the board plane. Do not show the underside facing the viewer while implying a straight downward mate onto an upward-facing socket. In the attached state, the cap hides the pin. Arrows should align to the cup center, not the neck.
+
+Primary references
+Seeed's XIAO hardware pin map names the RF receptacle U.FL-R-SMT1:
+https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
+Seeed's A-02 antenna drawing specifies 1.13 mm coax diameter:
+https://files.seeedstudio.com/wiki/XIAO_WiFi/antenna/FPC_Antenna_2.4GHz_1.16dbi_for_XIAO_ESP32S3/res/Datasheet_2.4GHz_FPC_Antenna_1.16dbi_for_XIAO_ESP32S3.pdf
+Hirose U.FL catalog, page 9: representative U.FL-LP-068HF for 1.13 mm cable is 3 mm wide, 4 mm long and 1.93 mm tall as a plug, with 2.4 mm nominal mated height. Page 33 recommends matched mating axes and avoiding extreme angles. These are family-level dimensions, not identification of the kit's exact plug:
+https://www.hirose.com/product/download/?distributor=all&lang=en&series=U.FL&type=catalogue
+I-PEX MHF I catalog recommends matching axes and vertical mating:
+https://www.i-pex.com/sites/default/files/downloads/pdf/CATALOG_MHF_I_E.pdf
+
+Instruction discrepancy
+Seeed's general getting-started prose suggests placing one edge first. Connector-manufacturer guidance favors matched axes and vertical mating. For the manual show a centered plug and gentle downward seating, avoiding a large tilt or levering motion.
+
+Independent scene QA, 2026-10-19
+Reviewed scene-0.png through scene-3.png on white. Proof images are in research/qa-white.
+Material issue 1: scene-3 LoRa cap is perched above the socket with its center pin and entire receiving cup visible below. Wi-Fi also leaves a tall stack of receptacle rings. Seated caps should cover the pin and upper socket cup, leaving only the base or a short mating seam visible.
+Material issue 2: scene-0 cables approach the underside of the neck, wrapping below the cap. Correct the last curve segment or flip the cap so each cable exits the actual neck tip tangentially, away from the cap body.
+Board proportions, board identities, stack orientation and the main-view RF mating axes appear consistent with the references. Arrows were intentionally absent at this review stage and will be added in layout.

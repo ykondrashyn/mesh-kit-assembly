@@ -1,0 +1,18 @@
+0 Native LPub3D asset: main-exploded
+0 Name: main-exploded.dat
+0 Author: Programmatic assembly guide
+0 !LDRAW_ORG Unofficial_Part
+0 BFC NOCERTIFY
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 xiao-official.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 xiao-kit-details.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 xiao-markings.dat
+1 16 0.0000 -60.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-official.dat
+1 16 0.0000 -60.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-kit-details.dat
+1 16 0.0000 -60.0000 0.0000 1 0 0 0 1 0 0 0 1 wio-markings.dat
+1 16 60.0000 0.0000 -7.5000 1 0 0 0 1 0 0 0 1 wifi-fpc.dat
+1 16 34.0418 -6.2500 48.0835 1 0 0 0 1 0 0 0 1 rf-plug.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 detailmain-exploded-wifi-cable.dat
+1 16 -45.0000 -40.0000 -25.0000 1 0 0 0 1 0 0 0 1 lora-fpc.dat
+1 16 13.4960 -67.2500 48.6982 1 0 0 0 1 0 0 0 1 rf-plug.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 detailmain-exploded-lora-cable.dat
+1 16 16.8268 -7.5000 48.5140 1.0 0 0 0 1.0 0 0 0 1.0 press-arrow.dat

@@ -1,0 +1,7 @@
+Make only three very small corrections to this assembly diagram. Preserve ALL board shapes, labels, components, SEVEN holes per side, SEVEN XIAO pins per side, arrows and composition exactly. The two PCBs now match correctly.
+
+1. Broad Wi-Fi antenna left: keep the existing long-edge length and angle exactly, but narrow its SHORT dimension by10 percent. It should be37.4x17.5mm relative to a21x17.8mm board.
+2. Thin LoRa antenna right: keep existing long-edge length and angle exactly, narrow its SHORT dimension by15 percent, giving40x7mm relative to21x17.8mm board.
+3. Broad antenna cable must follow a continuous visible OUTSIDE route. From the XIAO round connector at rear-right, arc outward to far right of XIAO, down BELOW all header pin tips, then curve across clear white space below the assembly and left to the WiFi antenna feed. It must not pass through or behind the pins or under the PCB. Preserve lead diameter and round board connector. Add a little bottom white margin if needed.
+
+Do not change anything else. Do not add text.

@@ -1,0 +1,8 @@
+Use case: precise-object-edit.
+Image1 is the Step3 exploded assembly illustration to correct. Image2 is the official Seeed Wio top-layout diagram. Image3 is the official XIAO top-layout diagram. Both reference diagrams come from the kit wiki.
+
+Make exactly ONE hardware correction in image1: move the UPPER Wio board's LoRa RF snap-on socket AND its attached cable cap from the current rear-right corner (near image coordinates870,130) to the OPPOSITE REAR CORNER at the left end of that board's rear short edge (around700,215). The upper Wio and lower XIAO antenna sockets belong at OPPOSITE ends of their rear short edges. Upper Wio RF must be rear-LEFT, lower XIAO RF remains rear-RIGHT. USB-C is at the front. Image2 has to be rotated180degrees to align its mounting-hole end with this drawing's front.
+
+Place the upper RF socket on the PCB just inward from its rear-left corner, adjacent to the first left GPIO hole, not replacing or covering that hole. Erase its old rear-right socket completely and restore underlying plain PCB. Route its existing LoRa cable naturally from the new rear-left position up into the empty white space above the Wio, then across to the existing slim antenna at right. Do not run cable across the shield or holes.
+
+Preserve ALL other details and their geometry exactly: both nearly equal board footprints, exploded registration, all7 empty holes each side of Wio, XIAO7 solder joints and underside male pins per side, button and circular mounting hole at front, USB-C, both shield labels, lower WiFi socket/cable/antenna, LoRa antenna dimensions/location, all arrows, dashed guides, monochrome style and white canvas. Do not rotate or resize either board. Do not move the lower XIAO socket.

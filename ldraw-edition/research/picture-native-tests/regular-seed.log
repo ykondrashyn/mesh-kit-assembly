@@ -1,0 +1,237 @@
+
+
+LPub3D v2.4.9 r86 (Release) for macOS ARM 64bit
+==========================
+Arguments: --process-export --export-option pdf --preferred-renderer native --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/regular-seed.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/regular-seed.mpd
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mInitializing application LPub3D... [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D v2.4.9 r86 (Release) for macOS ARM 64bit [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32m============================= [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mArguments....................(--process-export --export-option pdf --preferred-renderer native --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/regular-seed.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/regular-seed.mpd) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mmacOS Binary Directory.......(MacOS) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mmacOS Base Directory.........(Applications) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Bundle App Path.......(/Applications) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Application Data Path.(/Users/ykondras/Library/Application Support/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Extras Resource Path..(/Applications/LPub3D.app/Contents/Resources) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Config File Path......(/Users/ykondras/Library/Preferences) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D 3D Editor Cache Path..(/Users/ykondras/Library/Caches/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Homebrew Installation.(Apple Silicon) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Homebrew Path Prefix..(/opt/homebrew/opt) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Loaded LDraw Library..(LEGO® Parts) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLPub3D Logging Level.........(STATUS (0), Levels: [status,info,trace,debug,notice,warning,error,fatal,off]) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mDebug Logging................(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mLog To Standard Output.......(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mCheck For Updates............(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.170 [22;32mAuto Restart On Abnormal End.(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.171 [22;32mSecure Socket Layer..........(Supported) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.171 [22;32mApplication Distribution.....(Installed) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.171 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:49:33.171 [22;32m5% - Loading library for LEGO® Parts... [0m
+[22;32mINFO [0m2026-10-19T01:49:33.171 [22;32m15% - Preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:33.187 [22;32mSystem Theme: Dark (1) [0m
+[22;32mINFO [0m2026-10-19T01:49:33.188 [22;32m15% - Selecting update settings... [0m
+[22;32mINFO [0m2026-10-19T01:49:33.188 [22;32mLGEO library status... [0m
+[22;32mINFO [0m2026-10-19T01:49:33.188 [22;32mLGEO library path  : Not found [0m
+[22;32mINFO [0m2026-10-19T01:49:33.188 [22;32mImage renderers... [0m
+[22;32mINFO [0m2026-10-19T01:49:33.188 [22;32mLDGLite : /Applications/LPub3D.app/Contents/3rdParty/ldglite-1.3/bin/ldglite [0m
+[22;32mINFO [0m2026-10-19T01:49:33.188 [22;32m25% - LPub3D macOS Required Library Check... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2677[0m 2026-10-19T01:49:33.188 [22;32mLDView  : /Applications/LPub3D.app/Contents/3rdParty/ldview-4.5/bin/LDView [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:33.789 [22;32mLibrary check - [/opt/homebrew/opt/libpng/lib/libpng.dylib] minimum :[1.6.37] installed:[1.6.59] [0m
+The following LDView libraries were not validated:  -/opt/X11/lib/libOSMesa.dylib - not found.  -/opt/homebrew/opt/gl2ps/lib/libgl2ps.dylib - not found.  -/opt/homebrew/opt/jpeg/lib/libjpeg.dylib - not found.  -/opt/homebrew/opt/tinyxml/lib/libtinyxml.dylib - not found.  -/opt/homebrew/opt/minizip/lib/libminizip.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2770[0m 2026-10-19T01:49:33.790 [22;32mPOVRay  : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/bin/lpub3d_trace_cui [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:34.131 [22;32mLibrary check - [/opt/homebrew/opt/libtiff/lib/libtiff.dylib] minimum :[4.0.10] installed:[4.7.2] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:34.586 [22;32mLibrary check - [/opt/homebrew/opt/sdl2/lib/libSDL2.dylib] minimum :[2.0.10] installed:[2.32.74] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:49:34.907 [22;32mLibrary check - [/opt/homebrew/opt/openexr/lib/libOpenEXR.dylib] minimum :[2.3.0] installed:[3.5.2] [0m
+The following required POVRay libraries were not validated:  -/opt/X11/lib/libX11.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m2026-10-19T01:49:34.908 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2887[0m 2026-10-19T01:49:34.908 [22;32mProcessing renderer configuration files... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34msetLDGLiteIniParams[0m([22;36m[0m) [22;32m@ln 3151[0m 2026-10-19T01:49:34.908 [22;32mLDGLite.ini file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldglite-1.3/config/ldglite.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3166[0m 2026-10-19T01:49:34.908 [22;32mNative Export file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3249[0m 2026-10-19T01:49:34.908 [22;32mLDView ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3322[0m 2026-10-19T01:49:34.908 [22;32mLDViewPOV ini file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3402[0m 2026-10-19T01:49:34.908 [22;32mPOVRay conf file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.conf [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3608[0m 2026-10-19T01:49:34.908 [22;32mPOVRay ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2921[0m 2026-10-19T01:49:34.908 [22;32mBlender: not configured [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3015[0m 2026-10-19T01:49:34.908 [22;32mPOVRay ini path    : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3020[0m 2026-10-19T01:49:34.908 [22;32mPOVRay include path: /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/include [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3025[0m 2026-10-19T01:49:34.908 [22;32mPOVRay scene path  : Not found [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3027[0m 2026-10-19T01:49:34.908 [22;32mRenderer is Native. [0m
+[22;32mINFO [0m2026-10-19T01:49:34.912 [22;32m20% - OpenGL context initialization... [0m
+[22;32mINFO [0m2026-10-19T01:49:34.984 [22;32m25% - LPub3D GUI window loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:34.994 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:34.997 [22;32m30% - Visual Editor loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:34.997 [22;32m40% - Visual Editor initialization... [0m
+[22;32mINFO [0m2026-10-19T01:49:34.997 [22;32m50% - Search directory preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:34.999 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:35.000 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:35.000 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:35.001 [22;32m70% - Skip parts archive per application preference... [0m
+Fade Steps is OFF.
+[22;32mINFO [0m2026-10-19T01:49:35.022 [22;32mFade Steps is OFF. [0m
+Highlight Step is OFF.
+[22;32mINFO [0m2026-10-19T01:49:35.022 [22;32mHighlight Step is OFF. [0m
+LDrawINI not found, loading LDSearch directories from registry key...
+[22;32mINFO [0m2026-10-19T01:49:35.022 [22;32mLDrawINI not found, loading LDSearch directories from registry key... [0m
+Added search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models
+[22;32mINFO [0m2026-10-19T01:49:35.022 [22;32mAdded search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models [0m
+[22;32mINFO [0m2026-10-19T01:49:38.001 [22;32m75% - Archive libraries loading... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip...
+[22;32mINFO [0m2026-10-19T01:49:38.001 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip...
+[22;32mINFO [0m2026-10-19T01:49:38.028 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip... [0m
+[22;32mINFO [0m2026-10-19T01:49:38.044 [22;32m85% - LPub3D initialization... [0m
+[22;32mINFO [0m2026-10-19T01:49:38.044 [22;32m90% - LPub3D widgets loading... [0m
+[22;32mINFO [0m2026-10-19T01:49:38.072 [22;32m95% - LDraw colors loading... [0m
+- Number of default openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:49:38.072 [22;34m- Number of default openWith programs: 0 [0m
+- Number of loaded openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:49:38.072 [22;34m- Number of loaded openWith programs: 0 [0m
+[22;32mINFO [0m2026-10-19T01:49:38.073 [22;32m100% - LPub3D loaded. [0m
+[22;32mINFO [0m2026-10-19T01:49:38.073 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:38.074 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:49:38.074 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+Loading file 'regular-seed.mpd'...
+[22;32mINFO [0m2026-10-19T01:49:38.075 [22;32mLoading file 'regular-seed.mpd'... [0m
+File 'regular-seed.mpd' identified as Multi-Part LDraw System (MPD) Document
+[22;32mINFO [0m2026-10-19T01:49:38.076 [22;32mFile 'regular-seed.mpd' identified as Multi-Part LDraw System (MPD) Document [0m
+Loading subfile 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:38.076 [22;32mLoading subfile 'picture-seeded.ldr'... [0m
+MPD model 'picture-seeded.ldr' with 23 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:49:38.076 [22;36mMPD model 'picture-seeded.ldr' with 23 lines loaded. [0m
+MPD file 'regular-seed.mpd' with 25 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:49:38.076 [22;36mMPD file 'regular-seed.mpd' with 25 lines loaded. [0m
+Model [picture-seeded.ldr] is a SUBMODEL
+[22;36mNOTICE [0m2026-10-19T01:49:38.076 [22;36mModel [picture-seeded.ldr] is a SUBMODEL [0m
+Part 1 [3001.dat] validated.
+[22;36mNOTICE [0m2026-10-19T01:49:38.076 [22;36mPart 1 [3001.dat] validated. [0m
+Loading user interface items...
+[22;32mINFO [0m2026-10-19T01:49:38.077 [22;32mLoading user interface items... [0m
+Open file '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/regular-seed.mpd' completed.
+[22;32mINFO [0m2026-10-19T01:49:38.078 [22;32mOpen file '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/regular-seed.mpd' completed. [0m
+Loaded LDraw MPD model file 'regular-seed.mpd'. Unique Part 1. Model Total Part 1. Elapsed time: 0.000 second
+[22;32mINFO [0m2026-10-19T01:49:38.079 [22;32mLoaded LDraw MPD model file 'regular-seed.mpd'. Unique Part 1. Model Total Part 1. Elapsed time: 0.000 second [0m
+Writing  submodel 'picture-seeded.ldr' to temp folder...
+[22;32mINFO [0m2026-10-19T01:49:38.131 [22;32mWriting  submodel 'picture-seeded.ldr' to temp folder... [0m
+1 file written to temp folder. Elapsed time: 0.002 second
+[22;32mINFO [0m2026-10-19T01:49:38.131 [22;32m1 file written to temp folder. Elapsed time: 0.002 second [0m
+Processing find page for picture-seeded.ldr...
+Processing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:38.131 [22;32mProcessing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'... [0m
+Processing CSI for picture-seeded.ldr...
+[22;32mINFO [0m2026-10-19T01:49:38.131 [22;32mProcessing CSI for picture-seeded.ldr... [0m
+Executing Native Orthographic CSI image render - please wait...
+[22;32mINFO [0m2026-10-19T01:49:38.131 [22;32mExecuting Native Orthographic CSI image render - please wait... [0m
+Native CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png'
+[22;32mINFO [0m2026-10-19T01:49:38.131 [22;32mNative CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png' [0m
+Native Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 1): 4886796, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 23, CameraLongitude: 45, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+
+[22;32mINFO [0m2026-10-19T01:49:38.132 [22;32mNative Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 1): 4886796, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 23, CameraLongitude: 45, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+ [0m
+Native CSI render call took 0.039 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png for simple, single step 1 on page 1.
+[22;32mINFO [0m2026-10-19T01:49:38.132 [22;32mNative CSI render call took 0.039 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/research/picture-native-tests/LPub3D/assem/picture-seeded-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_1_30_23_45.png for simple, single step 1 on page 1. [0m
+Processing PLI for picture-seeded.ldr...
+[22;32mINFO [0m2026-10-19T01:49:38.132 [22;32mProcessing PLI for picture-seeded.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:49:38.132 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.046 second
+[22;35mTRACE [0m2026-10-19T01:49:38.132 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.046 second [0m
+Processed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'
+Processed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'
+[22;35mTRACE [0m2026-10-19T01:49:38.132 [22;35mProcessed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr' [0m
+Page 2 exported. Elapsed time: 0.053 second.
+[22;32mINFO [0m2026-10-19T01:49:38.132 [22;32mPage 2 exported. Elapsed time: 0.053 second. [0m
+Loaded LDraw file regular-seed.mpd (3 pages, 1 parts). Elapsed time: 0.058 second
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:49:38.141 [22;32mNo files written to temp folder.  [0m
+Processing find page for picture-seeded.ldr...
+Page 1 exported. Elapsed time: 0.002 second.
+[22;32mINFO [0m2026-10-19T01:49:38.141 [22;32mPage 1 exported. Elapsed time: 0.002 second. [0m
+Starting export instructions to pdf...
+[22;32mINFO [0m2026-10-19T01:49:38.142 [22;32mStarting export instructions to pdf... [0m
+Export 3 pages to pdf
+[22;32mINFO [0m2026-10-19T01:49:38.142 [22;32mExport 3 pages to pdf [0m
+Exporting page  1 of 3...
+[22;32mINFO [0m2026-10-19T01:49:38.142 [22;32mExporting page  1 of 3... [0m
+                  Exporting page  1 of 3, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:49:38.142 [22;36m                  Exporting page  1 of 3, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:49:38.145 [22;32mNo files written to temp folder.  [0m
+Processing find page for picture-seeded.ldr...
+Processing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:38.145 [22;32mProcessing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'... [0m
+Processing CSI for picture-seeded.ldr...
+[22;32mINFO [0m2026-10-19T01:49:38.145 [22;32mProcessing CSI for picture-seeded.ldr... [0m
+Processing PLI for picture-seeded.ldr...
+[22;32mINFO [0m2026-10-19T01:49:38.145 [22;32mProcessing PLI for picture-seeded.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:49:38.145 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.001 second
+[22;35mTRACE [0m2026-10-19T01:49:38.145 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.001 second [0m
+Processed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'
+Processed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'
+[22;35mTRACE [0m2026-10-19T01:49:38.145 [22;35mProcessed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr' [0m
+Page 2 exported. Elapsed time: 0.007 second.
+[22;32mINFO [0m2026-10-19T01:49:38.145 [22;32mPage 2 exported. Elapsed time: 0.007 second. [0m
+Exporting page  2 of 3...
+[22;32mINFO [0m2026-10-19T01:49:38.154 [22;32mExporting page  2 of 3... [0m
+                  Exporting page  2 of 3, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:49:38.154 [22;36m                  Exporting page  2 of 3, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:49:38.165 [22;32mNo files written to temp folder.  [0m
+Processing find page for picture-seeded.ldr...
+Processing single-step draw-page for page 2, step 2, model 'picture-seeded.ldr'...
+Processing single-step draw-page for page 2, step 2, model 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:38.165 [22;32mProcessing single-step draw-page for page 2, step 2, model 'picture-seeded.ldr'... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:49:38.165 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 2 - Elapsed time: 0.008 second
+[22;35mTRACE [0m2026-10-19T01:49:38.165 [22;35mLPub3D using Native render rendered page 2 - Elapsed time: 0.008 second [0m
+Processed single-step draw-page for page 2, step 2, model 'picture-seeded.ldr'
+Processed single-step draw-page for page 2, step 2, model 'picture-seeded.ldr'
+[22;35mTRACE [0m2026-10-19T01:49:38.165 [22;35mProcessed single-step draw-page for page 2, step 2, model 'picture-seeded.ldr' [0m
+Page 3 exported. Elapsed time: 0.027 second.
+[22;32mINFO [0m2026-10-19T01:49:38.165 [22;32mPage 3 exported. Elapsed time: 0.027 second. [0m
+Exporting page  3 of 3...
+[22;32mINFO [0m2026-10-19T01:49:38.173 [22;32mExporting page  3 of 3... [0m
+                  Exporting page  3 of 3, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:49:38.173 [22;36m                  Exporting page  3 of 3, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:49:38.176 [22;32mNo files written to temp folder.  [0m
+Processing find page for picture-seeded.ldr...
+Processing single-step draw-page for page 3, step 2, model 'picture-seeded.ldr'...
+Processing single-step draw-page for page 3, step 2, model 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:38.176 [22;32mProcessing single-step draw-page for page 3, step 2, model 'picture-seeded.ldr'... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:49:38.176 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 3 - Elapsed time: 0.000 second
+[22;35mTRACE [0m2026-10-19T01:49:38.176 [22;35mLPub3D using Native render rendered page 3 - Elapsed time: 0.000 second [0m
+Processed single-step draw-page for page 3, step 2, model 'picture-seeded.ldr'
+Processed single-step draw-page for page 3, step 2, model 'picture-seeded.ldr'
+[22;35mTRACE [0m2026-10-19T01:49:38.176 [22;35mProcessed single-step draw-page for page 3, step 2, model 'picture-seeded.ldr' [0m
+Page 3 exported. Elapsed time: 0.038 second.
+[22;32mINFO [0m2026-10-19T01:49:38.176 [22;32mPage 3 exported. Elapsed time: 0.038 second. [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:49:38.189 [22;32mNo files written to temp folder.  [0m
+Processing find page for picture-seeded.ldr...
+Processing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'...
+[22;32mINFO [0m2026-10-19T01:49:38.189 [22;32mProcessing single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'... [0m
+Processing CSI for picture-seeded.ldr...
+[22;32mINFO [0m2026-10-19T01:49:38.189 [22;32mProcessing CSI for picture-seeded.ldr... [0m
+Processing PLI for picture-seeded.ldr...
+[22;32mINFO [0m2026-10-19T01:49:38.189 [22;32mProcessing PLI for picture-seeded.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:49:38.189 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.001 second
+[22;35mTRACE [0m2026-10-19T01:49:38.189 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.001 second [0m
+Processed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'
+Processed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr'
+[22;35mTRACE [0m2026-10-19T01:49:38.189 [22;35mProcessed single-step draw-page for page 1, step 1, model 'picture-seeded.ldr' [0m
+Page 1 loaded. Elapsed time: 0.004 second.
+[22;32mINFO [0m2026-10-19T01:49:38.189 [22;32mPage 1 loaded. Elapsed time: 0.004 second. [0m
+Model file 'regular-seed.mpd' process succeeded (result code 0). Elapsed time: 0.117 second.
+[22;32mINFO [0m2026-10-19T01:49:38.190 [22;32mModel file 'regular-seed.mpd' process succeeded (result code 0). Elapsed time: 0.117 second. [0m
+LPub3D Run: Application terminated with return code 0.
+[22;32mINFO [0m2026-10-19T01:49:38.190 [22;32mLPub3D Run: Application terminated with return code 0. [0m

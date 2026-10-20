@@ -1,0 +1,8 @@
+0 Native LPub3D asset: part-lora
+0 Name: part-lora.dat
+0 Author: Programmatic assembly guide
+0 !LDRAW_ORG Unofficial_Part
+0 BFC NOCERTIFY
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 lora-fpc.dat
+1 16 0.0000 0.0000 0.0000 1 0 0 0 1 0 0 0 1 part-lora-cable.dat
+1 16 -1.2500 0.0000 -32.5000 1 0 0 0 1 0 0 0 1 rf-plug.dat

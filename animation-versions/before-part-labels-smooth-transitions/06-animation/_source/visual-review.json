@@ -1,0 +1,76 @@
+{
+  "resolution": [
+    1920,
+    1080
+  ],
+  "rendered_frames": 450,
+  "identical_final_hold_frames": [
+    421,
+    450
+  ],
+  "contact_sheet_frames": {
+    "opening": [
+      1,
+      16,
+      34,
+      40,
+      46,
+      55,
+      64,
+      70,
+      76,
+      79,
+      85,
+      94
+    ],
+    "timeline": [
+      1,
+      31,
+      46,
+      76,
+      106,
+      130,
+      151,
+      181,
+      211,
+      235,
+      256,
+      281,
+      307,
+      331,
+      355,
+      376,
+      391,
+      406,
+      421,
+      450
+    ],
+    "connections": [
+      94,
+      115,
+      124,
+      130,
+      199,
+      220,
+      229,
+      235,
+      319,
+      340,
+      349,
+      355
+    ],
+    "return": [
+      376,
+      383,
+      390,
+      397,
+      404,
+      411,
+      421,
+      450
+    ]
+  },
+  "ai_image_generation": false,
+  "source_blend_sha256": "a205c8f4c28e3fee1476c817d46a763c8121f9e9ffbfa9d98741a6390652f6e5",
+  "visual_review": "Reviewed the opening progression, sampled timeline, all three connector seating events, the return to front and full-resolution frames 55 and 319. The ordered horizontal lineup transitions into the connection sequence. Antenna labels remain attached and use the chip-label font and ink material."
+}

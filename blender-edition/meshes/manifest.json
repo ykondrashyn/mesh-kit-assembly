@@ -1,0 +1,3308 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "units": "mm",
+    "axes": "X across board, Y from USB end toward antenna edge, Z upward",
+    "coordinate_system": "Right handed normalized manufacturer geometry",
+    "sources": {
+      "xiao": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "wio": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "landmarks_normalized_mm": {
+      "xiao": {
+        "rf": [
+          13.617,
+          19.233,
+          2.5
+        ],
+        "b2b": [
+          6.7307,
+          19.4056,
+          2.2
+        ],
+        "usb": [
+          8.89,
+          -1.527,
+          2.36
+        ],
+        "shield_center": [
+          8.89,
+          12.01,
+          3.25
+        ]
+      },
+      "wio": {
+        "rf": [
+          5.3984,
+          19.4793,
+          2.9
+        ],
+        "b2b": [
+          6.731,
+          19.406,
+          -3.5
+        ],
+        "button": [
+          8.89,
+          8.07,
+          2.6
+        ],
+        "shield_center": [
+          8.89,
+          15.4,
+          3.8
+        ]
+      }
+    },
+    "feature_edges": "Original BRep curves sampled as segments, periodic seams and duplicates removed, no triangle edges",
+    "material_tags": "Simplified diagram styling from component geometry, not manufacturer color replication",
+    "official_solids_expected": {
+      "xiao": 37,
+      "wio": 9
+    },
+    "mesh_chordal_deflection_mm": 0.025,
+    "detail_chordal_deflection_mm": 0.008,
+    "mesh_angle_rad": 0.25,
+    "detail_angle_rad": 0.2,
+    "limitations": [
+      "XIAO mating socket, side headers and Wio pushbutton are schematic kit additions omitted from the supplied STEP models.",
+      "The XIAO socket omits contacts, so the nominal board spacing is illustrative rather than a verified mechanical fit.",
+      "Material tags apply uniformly to solids that can contain both plastic and metal surfaces."
+    ],
+    "b2b_composition": {
+      "xiao_origin_local_mm": [
+        0,
+        0,
+        0
+      ],
+      "wio_nominal_mating_origin_local_mm": [
+        0,
+        0,
+        3.75
+      ],
+      "suggested_exploded_wio_origin_local_mm": [
+        0,
+        0,
+        8
+      ],
+      "rotations": "None"
+    }
+  },
+  "library": "official-meshes.json.gz",
+  "sha256": "daabf4df357ca7c2c3fc416766617bcfc433091cafabfc19a10db39e98424018",
+  "objects": [
+    {
+      "name": "xiao_official_000_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 0,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          6.147325947072833,
+          5.373060164259738,
+          1.2500000149011505
+        ],
+        "max": [
+          6.747325947072834,
+          6.373060164259739,
+          1.5500000149011537
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_001_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 1,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          10.247325947072836,
+          -0.16427245788226372,
+          2.480000014901136
+        ],
+        "max": [
+          10.547325947072837,
+          3.6201573736747377,
+          3.230000014901143
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_002_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 2,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          9.747325947072836,
+          -0.16427245788226372,
+          2.480000014901136
+        ],
+        "max": [
+          10.047325947072837,
+          3.6201573736747377,
+          3.2300000149011447
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_003_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 3,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          9.997325947072834,
+          5.37306016425974,
+          1.2500000149011468
+        ],
+        "max": [
+          10.297325947072835,
+          6.373060164259741,
+          1.5500000149011497
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_004_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 4,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          11.047325947072832,
+          5.37306016425974,
+          1.2500000149011452
+        ],
+        "max": [
+          11.647325947072835,
+          6.373060164259741,
+          1.5500000149011477
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_005_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 5,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          7.9973259470728335,
+          5.373060164259739,
+          1.2500000149011488
+        ],
+        "max": [
+          8.297325947072835,
+          6.37306016425974,
+          1.5500000149011515
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_006_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 6,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          7.747325947072835,
+          -0.16427245788226372,
+          2.4800000149011394
+        ],
+        "max": [
+          8.047325947072839,
+          3.620157373674737,
+          3.2300000149011465
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_007_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 7,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          6.9973259470728335,
+          5.373060164259738,
+          1.2500000149011496
+        ],
+        "max": [
+          7.297325947072834,
+          6.37306016425974,
+          1.5500000149011524
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_008_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 8,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          9.497325947072833,
+          5.37306016425974,
+          1.250000014901147
+        ],
+        "max": [
+          9.797325947072835,
+          6.373060164259741,
+          1.5500000149011497
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_009_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 9,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          5.347325947072834,
+          5.373060164259738,
+          1.2500000149011508
+        ],
+        "max": [
+          5.947325947072835,
+          6.373060164259739,
+          1.5500000149011537
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_010_usb_insert",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 10,
+      "role": "usb_insert",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          5.547325947072837,
+          -0.8269398357402634,
+          2.5050000149011344
+        ],
+        "max": [
+          12.247325947072838,
+          3.773060164259739,
+          3.205000014901148
+        ]
+      },
+      "statistics": {
+        "cad_faces": 26,
+        "vertices": 48,
+        "triangles": 92,
+        "feature_segments": 72,
+        "unique_brep_edges": 72,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_011_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 11,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          10.49732594707283,
+          5.37306016425974,
+          1.2500000149011468
+        ],
+        "max": [
+          10.797325947072835,
+          6.373060164259741,
+          1.5500000149011488
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_012_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 12,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          8.497325947072833,
+          5.373060164259739,
+          1.2500000149011479
+        ],
+        "max": [
+          8.797325947072835,
+          6.37306016425974,
+          1.5500000149011506
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_013_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 13,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          7.247325947072835,
+          -0.16427245788226372,
+          2.4800000149011394
+        ],
+        "max": [
+          7.547325947072838,
+          3.620157373674737,
+          3.2300000149011483
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_014_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 14,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          8.747325947072836,
+          -0.16427245788226372,
+          2.4800000149011376
+        ],
+        "max": [
+          9.047325947072839,
+          3.6201573736747377,
+          3.2300000149011465
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_015_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 15,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          7.4973259470728335,
+          5.373060164259738,
+          1.2500000149011494
+        ],
+        "max": [
+          7.797325947072834,
+          6.37306016425974,
+          1.5500000149011524
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_016_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 16,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          6.747325947072835,
+          -0.1642724578822646,
+          2.4800000149011394
+        ],
+        "max": [
+          7.047325947072838,
+          3.620157373674737,
+          3.2300000149011483
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_017_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 17,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          11.847325947072832,
+          5.37306016425974,
+          1.2500000149011443
+        ],
+        "max": [
+          12.447325947072834,
+          6.373060164259741,
+          1.5500000149011475
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_018_usb_shell",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 18,
+      "role": "usb_shell",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          4.427325947072834,
+          -1.5269398357403463,
+          0.26000001490113755
+        ],
+        "max": [
+          13.367325947072839,
+          5.773060164259743,
+          4.460000014901311
+        ]
+      },
+      "statistics": {
+        "cad_faces": 103,
+        "vertices": 1136,
+        "triangles": 2296,
+        "feature_segments": 506,
+        "unique_brep_edges": 294,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_019_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 19,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          8.997325947072833,
+          5.373060164259739,
+          1.2500000149011476
+        ],
+        "max": [
+          9.297325947072835,
+          6.373060164259741,
+          1.5500000149011504
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_020_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 20,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          8.247325947072834,
+          -0.16427245788226372,
+          2.4800000149011394
+        ],
+        "max": [
+          8.547325947072839,
+          3.6201573736747377,
+          3.2300000149011465
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_021_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 21,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          9.247325947072836,
+          -0.16427245788226372,
+          2.480000014901136
+        ],
+        "max": [
+          9.547325947072839,
+          3.6201573736747377,
+          3.2300000149011465
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_022_usb_insert",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 22,
+      "role": "usb_insert",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          4.727324704967395,
+          3.773060164259735,
+          0.5700000149011434
+        ],
+        "max": [
+          13.06732720466515,
+          5.77306016425974,
+          4.160000014901151
+        ]
+      },
+      "statistics": {
+        "cad_faces": 129,
+        "vertices": 3854,
+        "triangles": 7704,
+        "feature_segments": 563,
+        "unique_brep_edges": 337,
+        "suppressed_periodic_or_degenerate_edges": 12
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_023_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 23,
+      "role": "contact",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          10.747325947072836,
+          -0.16427245788226327,
+          2.4800000149011363
+        ],
+        "max": [
+          11.047325947072837,
+          3.620157373674738,
+          3.230000014901144
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 108,
+        "triangles": 212,
+        "feature_segments": 24,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_024_shield",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 24,
+      "role": "shield",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          2.5899999554000637,
+          6.71012576873386,
+          0.550000014901161
+        ],
+        "max": [
+          15.189999955436901,
+          17.309990569155662,
+          3.2500000149011603
+        ]
+      },
+      "statistics": {
+        "cad_faces": 38,
+        "vertices": 256,
+        "triangles": 508,
+        "feature_segments": 124,
+        "unique_brep_edges": 100,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_025_button_body",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 25,
+      "role": "button_body",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          14.0235355973593,
+          0.2724698227154032,
+          1.3500000149011588
+        ],
+        "max": [
+          15.623535597359302,
+          2.8724698227154035,
+          1.98000001490116
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_026_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 26,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          14.9785355973593,
+          2.677469822715403,
+          1.2500000149011594
+        ],
+        "max": [
+          15.418535597359302,
+          3.117469822715403,
+          1.3500000149011595
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_027_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 27,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          14.9785355973593,
+          0.02746982271540299,
+          1.2500000149011594
+        ],
+        "max": [
+          15.418535597359302,
+          0.46746982271540294,
+          1.3500000149011595
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_028_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 28,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          14.2285355973593,
+          2.677469822715403,
+          1.2500000149011594
+        ],
+        "max": [
+          14.668535597359302,
+          3.117469822715403,
+          1.3500000149011595
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_029_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 29,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          14.2285355973593,
+          0.02746982271540299,
+          1.2500000149011594
+        ],
+        "max": [
+          14.668535597359302,
+          0.46746982271540294,
+          1.3500000149011595
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_030_button_body",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 30,
+      "role": "button_body",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          2.1654177892116127,
+          0.2906103631458006,
+          1.3500000149011602
+        ],
+        "max": [
+          3.765417789211613,
+          2.8906103631458007,
+          1.9800000149011603
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_031_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 31,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          3.120417789211613,
+          2.6956103631458017,
+          1.25000001490116
+        ],
+        "max": [
+          3.560417789211613,
+          3.135610363145802,
+          1.3500000149011602
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_032_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 32,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          3.120417789211613,
+          0.045610363145802024,
+          1.25000001490116
+        ],
+        "max": [
+          3.560417789211613,
+          0.48561036314580197,
+          1.3500000149011602
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_033_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 33,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          2.370417789211613,
+          2.6956103631458017,
+          1.25000001490116
+        ],
+        "max": [
+          2.810417789211613,
+          3.135610363145802,
+          1.3500000149011602
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_034_contact",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 34,
+      "role": "contact",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          2.370417789211613,
+          0.045610363145802024,
+          1.25000001490116
+        ],
+        "max": [
+          2.810417789211613,
+          0.48561036314580197,
+          1.3500000149011602
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_035_rf_socket",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 35,
+      "role": "rf_socket",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          12.066678569380398,
+          17.733441733602533,
+          1.2500000149011594
+        ],
+        "max": [
+          15.1666785693804,
+          20.733441733602533,
+          2.5000000149011594
+        ]
+      },
+      "statistics": {
+        "cad_faces": 67,
+        "vertices": 1197,
+        "triangles": 2390,
+        "feature_segments": 445,
+        "unique_brep_edges": 176,
+        "suppressed_periodic_or_degenerate_edges": 9
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_official_036_pcb",
+      "board": "xiao",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "solid_index": 36,
+      "role": "pcb",
+      "material": "pcb",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          -4.458750235691866e-08,
+          4.1314413581128306e-05,
+          1.4901160971803051e-08
+        ],
+        "max": [
+          17.77999995541252,
+          20.95504131441358,
+          1.25000001490116
+        ]
+      },
+      "statistics": {
+        "cad_faces": 345,
+        "vertices": 5870,
+        "triangles": 11808,
+        "feature_segments": 2290,
+        "unique_brep_edges": 920,
+        "suppressed_periodic_or_degenerate_edges": 24
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_000_resistor",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 0,
+      "role": "resistor",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          5.185600000000008,
+          7.222099999999994,
+          1.65
+        ],
+        "max": [
+          5.685600000000008,
+          8.222100000000001,
+          2.0
+        ]
+      },
+      "statistics": {
+        "cad_faces": 26,
+        "vertices": 236,
+        "triangles": 468,
+        "feature_segments": 68,
+        "unique_brep_edges": 68,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_001_resistor",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 1,
+      "role": "resistor",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          12.703935999999995,
+          6.692828000000006,
+          1.65
+        ],
+        "max": [
+          13.703936000000002,
+          7.192828000000006,
+          2.0
+        ]
+      },
+      "statistics": {
+        "cad_faces": 26,
+        "vertices": 236,
+        "triangles": 468,
+        "feature_segments": 68,
+        "unique_brep_edges": 68,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_002_resistor",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 2,
+      "role": "resistor",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          4.296599999999998,
+          7.222099999999994,
+          1.65
+        ],
+        "max": [
+          4.796599999999998,
+          8.222100000000001,
+          2.0
+        ]
+      },
+      "statistics": {
+        "cad_faces": 26,
+        "vertices": 236,
+        "triangles": 468,
+        "feature_segments": 68,
+        "unique_brep_edges": 68,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_003_led",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 3,
+      "role": "led",
+      "material": "ceramic",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          12.402920000000009,
+          7.720371999999998,
+          1.65
+        ],
+        "max": [
+          14.002920000000003,
+          8.520372000000009,
+          2.75
+        ]
+      },
+      "statistics": {
+        "cad_faces": 50,
+        "vertices": 278,
+        "triangles": 552,
+        "feature_segments": 133,
+        "unique_brep_edges": 133,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_004_module_pcb",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 4,
+      "role": "module_pcb",
+      "material": "pcb",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          3.3919998550419934,
+          9.522514000000015,
+          0.8515763999999999
+        ],
+        "max": [
+          14.390000000000002,
+          21.122514381470026,
+          1.65
+        ]
+      },
+      "statistics": {
+        "cad_faces": 31,
+        "vertices": 734,
+        "triangles": 1468,
+        "feature_segments": 194,
+        "unique_brep_edges": 87,
+        "suppressed_periodic_or_degenerate_edges": 1
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_005_rf_socket",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 5,
+      "role": "rf_socket",
+      "material": "gold",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          3.898401506994,
+          17.929316802849478,
+          1.6399998999999998
+        ],
+        "max": [
+          6.898401919968004,
+          21.02931700426003,
+          2.9
+        ]
+      },
+      "statistics": {
+        "cad_faces": 121,
+        "vertices": 4716,
+        "triangles": 9428,
+        "feature_segments": 623,
+        "unique_brep_edges": 287,
+        "suppressed_periodic_or_degenerate_edges": 11
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_006_shield",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 6,
+      "role": "shield",
+      "material": "metal",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          3.8364003690920034,
+          9.649799602577984,
+          1.65
+        ],
+        "max": [
+          13.937980369092005,
+          20.947719602578054,
+          3.80000078
+        ]
+      },
+      "statistics": {
+        "cad_faces": 61,
+        "vertices": 118,
+        "triangles": 232,
+        "feature_segments": 177,
+        "unique_brep_edges": 177,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_007_b2b_connector",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 7,
+      "role": "b2b_connector",
+      "material": "dark",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          2.4310020000099772,
+          17.688662705009015,
+          -3.5000001597825072
+        ],
+        "max": [
+          11.03100200000999,
+          21.12251729509601,
+          -0.10000006019858337
+        ]
+      },
+      "statistics": {
+        "cad_faces": 461,
+        "vertices": 20896,
+        "triangles": 41776,
+        "feature_segments": 2429,
+        "unique_brep_edges": 1127,
+        "suppressed_periodic_or_degenerate_edges": 6
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "wio_official_008_pcb",
+      "board": "wio",
+      "kind": "official_board",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "solid_index": 8,
+      "role": "pcb",
+      "material": "pcb",
+      "schematic": false,
+      "bounds": {
+        "min": [
+          -1.0000000003174137e-05,
+          -1.000004300211188e-05,
+          0.0
+        ],
+        "max": [
+          17.78009000000567,
+          21.43979800000001,
+          1.6
+        ]
+      },
+      "statistics": {
+        "cad_faces": 27,
+        "vertices": 1646,
+        "triangles": 3348,
+        "feature_segments": 540,
+        "unique_brep_edges": 75,
+        "suppressed_periodic_or_degenerate_edges": 15
+      },
+      "category": "official_board"
+    },
+    {
+      "name": "xiao_socket_schematic",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "b2b_socket",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "dark",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          2.4307,
+          17.6884,
+          1.25
+        ],
+        "max": [
+          11.0307,
+          21.1228,
+          2.2
+        ]
+      },
+      "statistics": {
+        "cad_faces": 11,
+        "vertices": 16,
+        "triangles": 28,
+        "feature_segments": 24,
+        "unique_brep_edges": 24,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_spacer",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_spacer",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "dark",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.050000000000000044,
+          1.651,
+          -2.2
+        ],
+        "max": [
+          2.49,
+          19.431,
+          0.0
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_0",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          2.601,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          3.241,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_1",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          5.141,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          5.781,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_2",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          7.680999999999999,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          8.321,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_3",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          10.221,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          10.861,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_4",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          12.761,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          13.401,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_5",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          15.300999999999998,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          15.940999999999999,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_0_pin_6",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          0.95,
+          17.841,
+          -6.2
+        ],
+        "max": [
+          1.5899999999999999,
+          18.481,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_spacer",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_spacer",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "dark",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          15.290000000000001,
+          1.651,
+          -2.2
+        ],
+        "max": [
+          17.73,
+          19.431,
+          0.0
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_0",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          2.601,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          3.241,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_1",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          5.141,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          5.781,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_2",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          7.680999999999999,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          8.321,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_3",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          10.221,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          10.861,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_4",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          12.761,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          13.401,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_5",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          15.300999999999998,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          15.940999999999999,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "xiao_header_1_pin_6",
+      "board": "xiao",
+      "kind": "supplemental_board",
+      "role": "header_pin",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "gold",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          16.19,
+          17.841,
+          -6.2
+        ],
+        "max": [
+          16.830000000000002,
+          18.481,
+          0.09999999999999964
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "wio_button_base",
+      "board": "wio",
+      "kind": "supplemental_board",
+      "role": "button_base",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "metal",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          7.0,
+          6.72,
+          1.6
+        ],
+        "max": [
+          10.78,
+          9.42,
+          2.1500000000000004
+        ]
+      },
+      "statistics": {
+        "cad_faces": 6,
+        "vertices": 8,
+        "triangles": 12,
+        "feature_segments": 12,
+        "unique_brep_edges": 12,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "wio_button_cap",
+      "board": "wio",
+      "kind": "supplemental_board",
+      "role": "button_cap",
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural kit illustration"
+      },
+      "material": "dark",
+      "schematic": true,
+      "bounds": {
+        "min": [
+          7.960000000000001,
+          7.140000000000001,
+          2.15
+        ],
+        "max": [
+          9.82,
+          9.0,
+          2.6
+        ]
+      },
+      "statistics": {
+        "cad_faces": 3,
+        "vertices": 102,
+        "triangles": 200,
+        "feature_segments": 40,
+        "unique_brep_edges": 3,
+        "suppressed_periodic_or_degenerate_edges": 1
+      },
+      "category": "supplemental_board"
+    },
+    {
+      "name": "detail_xiao_rf",
+      "detail_key": "xiao-rf",
+      "board": "xiao",
+      "solid_index": 35,
+      "role": "rf_socket",
+      "origin": [
+        13.61668,
+        19.23344,
+        1.25
+      ],
+      "material": "gold",
+      "bounds_expected": [
+        12.0,
+        17.65,
+        1.2,
+        15.22,
+        20.8,
+        2.55
+      ],
+      "mating_plane_local_z_mm": 1.25,
+      "source_component": "U.FL-R-SMT-1_10_ v1:1",
+      "kind": "connector_detail",
+      "source": {
+        "path": "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+        "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+        "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+        "source_to_normalized_mm_3x4": [
+          0,
+          0,
+          -1,
+          2.7786,
+          -1,
+          0,
+          0,
+          12.2817,
+          0,
+          1,
+          0,
+          0.25
+        ]
+      },
+      "schematic": false,
+      "origin_normalized_mm": [
+        13.61668,
+        19.23344,
+        1.25
+      ],
+      "original_board_bounds": {
+        "min": [
+          12.066678569380398,
+          17.733441733602533,
+          1.2500000149011594
+        ],
+        "max": [
+          15.1666785693804,
+          20.733441733602533,
+          2.5000000149011594
+        ]
+      },
+      "geometry_provenance": "Whole manufacturer solid, translated without clipping",
+      "bounds": {
+        "min": [
+          -1.5500014306196022,
+          -1.499998266397471,
+          1.4901159417490817e-08
+        ],
+        "max": [
+          1.5499985693803993,
+          1.5000017336025304,
+          1.2500000149011596
+        ]
+      },
+      "statistics": {
+        "cad_faces": 67,
+        "vertices": 1644,
+        "triangles": 3284,
+        "feature_segments": 671,
+        "unique_brep_edges": 176,
+        "suppressed_periodic_or_degenerate_edges": 9
+      },
+      "category": "connector_detail"
+    },
+    {
+      "name": "detail_wio_rf",
+      "detail_key": "wio-rf",
+      "board": "wio",
+      "solid_index": 5,
+      "role": "rf_socket",
+      "origin": [
+        5.3984,
+        19.47932,
+        1.6
+      ],
+      "material": "gold",
+      "bounds_expected": [
+        3.85,
+        17.88,
+        1.59,
+        6.95,
+        21.08,
+        2.95
+      ],
+      "mating_plane_local_z_mm": 1.3,
+      "source_component": "RF socket solid within Wio-SX1262 module",
+      "kind": "connector_detail",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "schematic": false,
+      "origin_normalized_mm": [
+        5.3984,
+        19.47932,
+        1.6
+      ],
+      "original_board_bounds": {
+        "min": [
+          3.898401506994,
+          17.929316802849478,
+          1.6399998999999998
+        ],
+        "max": [
+          6.898401919968004,
+          21.02931700426003,
+          2.9
+        ]
+      },
+      "geometry_provenance": "Whole manufacturer solid, translated without clipping",
+      "bounds": {
+        "min": [
+          -1.4999984930059955,
+          -1.5500031971505361,
+          0.03999989999999981
+        ],
+        "max": [
+          1.5000019199680088,
+          1.5499970042600129,
+          1.2999999999999998
+        ]
+      },
+      "statistics": {
+        "cad_faces": 121,
+        "vertices": 10986,
+        "triangles": 21968,
+        "feature_segments": 899,
+        "unique_brep_edges": 287,
+        "suppressed_periodic_or_degenerate_edges": 11
+      },
+      "category": "connector_detail"
+    },
+    {
+      "name": "detail_wio_b2b",
+      "detail_key": "wio-b2b",
+      "board": "wio",
+      "solid_index": 7,
+      "role": "b2b_connector",
+      "origin": [
+        6.731,
+        19.4056,
+        0.0
+      ],
+      "material": "dark",
+      "bounds_expected": [
+        2.38,
+        17.63,
+        -3.55,
+        11.08,
+        21.18,
+        -0.05
+      ],
+      "mating_tip_local_z_mm": -3.5,
+      "source_component": "J3 BF04-30pin-35H",
+      "kind": "connector_detail",
+      "source": {
+        "path": "source-models/wio-sx1262-for-xiao.step",
+        "sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+        "url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+        "source_to_normalized_mm_3x4": [
+          -1,
+          0,
+          0,
+          123.2916,
+          0,
+          -1,
+          0,
+          -110.3625,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "schematic": false,
+      "origin_normalized_mm": [
+        6.731,
+        19.4056,
+        0.0
+      ],
+      "original_board_bounds": {
+        "min": [
+          2.4310020000099772,
+          17.688662705009015,
+          -3.5000001597825072
+        ],
+        "max": [
+          11.03100200000999,
+          21.12251729509601,
+          -0.10000006019858337
+        ]
+      },
+      "geometry_provenance": "Whole manufacturer solid, translated without clipping",
+      "bounds": {
+        "min": [
+          -4.299997999990023,
+          -1.716937294990976,
+          -3.5000001597825072
+        ],
+        "max": [
+          4.300002000009989,
+          1.7169172950960163,
+          -0.10000006019858337
+        ]
+      },
+      "statistics": {
+        "cad_faces": 461,
+        "vertices": 25869,
+        "triangles": 51722,
+        "feature_segments": 3393,
+        "unique_brep_edges": 1127,
+        "suppressed_periodic_or_degenerate_edges": 6
+      },
+      "category": "connector_detail"
+    },
+    {
+      "name": "detail_xiao_b2b_schematic",
+      "detail_key": "xiao-b2b",
+      "board": "xiao",
+      "kind": "connector_detail",
+      "role": "b2b_socket",
+      "material": "dark",
+      "schematic": true,
+      "source": {
+        "path": "scripts/export_step_meshes.py",
+        "description": "Procedural mating socket"
+      },
+      "origin_normalized_mm": [
+        6.731,
+        19.4056,
+        1.25
+      ],
+      "socket_rim_local_z_mm": 0.95,
+      "socket_floor_local_z_mm": 0.25,
+      "bounds": {
+        "min": [
+          -4.3003,
+          -1.7171999999999983,
+          0.0
+        ],
+        "max": [
+          4.2997,
+          1.7172000000000018,
+          0.9500000000000002
+        ]
+      },
+      "statistics": {
+        "cad_faces": 11,
+        "vertices": 16,
+        "triangles": 28,
+        "feature_segments": 24,
+        "unique_brep_edges": 24,
+        "suppressed_periodic_or_degenerate_edges": 0
+      },
+      "category": "connector_detail"
+    }
+  ],
+  "totals": {
+    "objects": 69,
+    "vertices": 81374,
+    "triangles": 162612,
+    "feature_segments": 14035
+  }
+}

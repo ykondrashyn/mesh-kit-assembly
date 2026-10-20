@@ -1,0 +1,272 @@
+{
+  "source_blend": "../blender-edition/mesh-kit.blend",
+  "source_blend_sha256": "6e2fe7d92bf656096fe6b93db24671c8286dc085f4e34a2d45763f3d97c98bf7",
+  "ai_image_generation": false,
+  "source_unchanged": true,
+  "assets": [
+    {
+      "file": "01-parts/xiao-esp32s3.png",
+      "label": "XIAO ESP32S3",
+      "category": "parts",
+      "pixels": [
+        2000,
+        1835
+      ],
+      "transparent_background": true,
+      "source_page": 1,
+      "native_blender_render": true
+    },
+    {
+      "file": "01-parts/wio-sx1262.png",
+      "label": "Wio-SX1262",
+      "category": "parts",
+      "pixels": [
+        2000,
+        1602
+      ],
+      "transparent_background": true,
+      "source_page": 1,
+      "native_blender_render": true
+    },
+    {
+      "file": "01-parts/wifi-antenna-13.png",
+      "label": "Wi-Fi antenna, 13 plug",
+      "category": "parts",
+      "pixels": [
+        2000,
+        1817
+      ],
+      "transparent_background": true,
+      "source_page": 1,
+      "native_blender_render": true
+    },
+    {
+      "file": "01-parts/lora-antenna-37-cm.png",
+      "label": "LoRa antenna, 37 / C M plug",
+      "category": "parts",
+      "pixels": [
+        2000,
+        1964
+      ],
+      "transparent_background": true,
+      "source_page": 1,
+      "native_blender_render": true
+    },
+    {
+      "file": "02-assembly/02-connect-wifi.png",
+      "label": "Connect Wi-Fi",
+      "category": "assembly",
+      "pixels": [
+        2400,
+        1616
+      ],
+      "transparent_background": true,
+      "source_page": 2,
+      "native_blender_render": true
+    },
+    {
+      "file": "02-assembly/03-connect-lora.png",
+      "label": "Connect LoRa",
+      "category": "assembly",
+      "pixels": [
+        2400,
+        2119
+      ],
+      "transparent_background": true,
+      "source_page": 3,
+      "native_blender_render": true
+    },
+    {
+      "file": "02-assembly/04-align-boards.png",
+      "label": "Align the boards",
+      "category": "assembly",
+      "pixels": [
+        2400,
+        1646
+      ],
+      "transparent_background": true,
+      "source_page": 4,
+      "native_blender_render": true
+    },
+    {
+      "file": "02-assembly/04-boards-joined.png",
+      "label": "Boards joined",
+      "category": "assembly",
+      "pixels": [
+        2400,
+        1563
+      ],
+      "transparent_background": true,
+      "source_page": 4,
+      "native_blender_render": true
+    },
+    {
+      "file": "03-closeups/wifi-plug-13-align.png",
+      "label": "Wi-Fi plug, align",
+      "category": "closeups",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "transparent_background": true,
+      "source_page": 2,
+      "native_blender_render": true
+    },
+    {
+      "file": "03-closeups/wifi-plug-13-seated.png",
+      "label": "Wi-Fi plug, seated",
+      "category": "closeups",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "transparent_background": true,
+      "source_page": 2,
+      "native_blender_render": true
+    },
+    {
+      "file": "03-closeups/lora-plug-37-cm-align.png",
+      "label": "LoRa plug, align",
+      "category": "closeups",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "transparent_background": true,
+      "source_page": 3,
+      "native_blender_render": true
+    },
+    {
+      "file": "03-closeups/lora-plug-37-cm-seated.png",
+      "label": "LoRa plug, seated",
+      "category": "closeups",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "transparent_background": true,
+      "source_page": 3,
+      "native_blender_render": true
+    },
+    {
+      "file": "03-closeups/board-connector-align.png",
+      "label": "Board connector, align",
+      "category": "closeups",
+      "pixels": [
+        1800,
+        1800
+      ],
+      "transparent_background": true,
+      "source_page": 4,
+      "native_blender_render": true
+    },
+    {
+      "file": "04-linked-panels/02-wifi-with-closeup.png",
+      "label": "Wi-Fi with linked close-up",
+      "category": "linked panels",
+      "pixels": [
+        3200,
+        1395
+      ],
+      "transparent_background": true,
+      "source_page": 5,
+      "native_blender_render": true
+    },
+    {
+      "file": "04-linked-panels/03-lora-with-closeup.png",
+      "label": "LoRa with linked close-up",
+      "category": "linked panels",
+      "pixels": [
+        3200,
+        1476
+      ],
+      "transparent_background": true,
+      "source_page": 5,
+      "native_blender_render": true
+    },
+    {
+      "file": "04-linked-panels/04-boards-with-closeup.png",
+      "label": "Boards with linked close-up",
+      "category": "linked panels",
+      "pixels": [
+        3200,
+        1426
+      ],
+      "transparent_background": true,
+      "source_page": 5,
+      "native_blender_render": true
+    },
+    {
+      "file": "05-ready-slides/01-parts.png",
+      "label": "01-parts",
+      "category": "ready slides",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "transparent_background": false,
+      "native_blender_render": true
+    },
+    {
+      "file": "05-ready-slides/02-wifi.png",
+      "label": "02-wifi",
+      "category": "ready slides",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "transparent_background": false,
+      "native_blender_render": true
+    },
+    {
+      "file": "05-ready-slides/03-lora.png",
+      "label": "03-lora",
+      "category": "ready slides",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "transparent_background": false,
+      "native_blender_render": true
+    },
+    {
+      "file": "05-ready-slides/04-boards.png",
+      "label": "04-boards",
+      "category": "ready slides",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "transparent_background": false,
+      "native_blender_render": true
+    },
+    {
+      "file": "05-ready-slides/05-all-steps.png",
+      "label": "05-all-steps",
+      "category": "ready slides",
+      "pixels": [
+        3200,
+        1800
+      ],
+      "transparent_background": false,
+      "native_blender_render": true
+    }
+  ],
+  "animations": [
+    {
+      "file": "06-animation/assembly-showcase.mp4",
+      "label": "Assembly showcase",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 15,
+      "silent": true,
+      "native_blender_render": true,
+      "poster": "06-animation/assembly-showcase-poster.png",
+      "editable_source": "06-animation/_source/assembly-showcase.blend",
+      "sha256": "300e49b5f88aafb115cff13d34838b8380cee8c8196f82b90961b25988d9d15d"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+MESH KIT: 15-SECOND ASSEMBLY SHOWCASE
+
+assembly-showcase.mp4
+  1920 x 1080, 16:9, 30 fps, 15 seconds
+  H.264 video in an MP4 container, YUV420p, no audio
+  White background, playback ends on the assembled kit
+
+assembly-showcase-poster.png
+  Full-resolution final assembled view, suitable as the video's poster
+  or as a separate still image on a slide.
+
+POWERPOINT
+
+Insert assembly-showcase.mp4 as a video from your computer.
+Keep its 16:9 aspect ratio when resizing. Choose playback on click or
+automatically, according to how you want to present the slide.
+Leave looping and rewind-after-playing disabled to retain the final view.
+Use assembly-showcase-poster.png if you want the assembled kit to appear
+before playback. The clip is silent so you can explain the sequence live.
+
+SEQUENCE
+
+  0.0-1.5 s    Two boards and two antennas
+  1.5-5.0 s    Connect Wi-Fi to XIAO, with a circular connector close-up
+  5.0-8.5 s    Connect LoRa to Wio, with a circular connector close-up
+  8.5-12.5 s   Orbit 180 degrees to the rear, align and seat the board connector
+ 12.5-14.0 s   Rotate back to the front of the completed assembly
+ 14.0-15.0 s   Hold the final front view still
+
+EDITABLE SOURCE
+
+Open _source/assembly-showcase.blend in Blender.
+The timeline contains 450 frames and named step markers. The project opens
+on the final assembly. All motion is baked into ordinary editable keyframes,
+including cable points, camera movement, circular close-ups and tracking
+leaders. Playback does not depend on Python handlers or external images.
+
+The project contains the complete official XIAO and Wio board geometry,
+representative manufacturer RF plug models and native Blender additions.
+The camera moves around the assembly using an orthographic projection to
+preserve the visual language of the original assembly guide.
+During stacking, the camera turns 180 degrees to expose the rear connector.
+The circular detail uses the same rear orientation and follows the connector
+separation. A tracking ring encloses both mating halves in the main view.
+After seating, the camera turns back to the front while pulling back slightly.
+The final second holds this front view still.
+
+REBUILD OR RENDER
+
+Requires Blender 5.2.1 or a compatible newer version, Python 3 and FFmpeg
+with libx264. Commands can be run from this directory:
+
+  python3 _source/make_video.py
+
+To rebuild the scene from the included geometry and scripts first:
+
+  python3 _source/make_video.py --rebuild
+
+To encode an already rendered sequence:
+
+  python3 _source/make_video.py --skip-render
+
+To check the animation's geometric and layout constraints:
+
+  blender --background _source/assembly-showcase.blend --python _source/validate_animation.py
+
+Source geometry and fonts are included under _source/geometry-data.
+The ZIP excludes intermediate PNG frame sequences, previews, logs and
+Blender backup files. Rendering recreates the frames locally.
+
+MODEL NOTES
+
+Wi-Fi uses the representative I-PEX MHF I 1.13 mm plug with its 13 stamp.
+LoRa uses the representative 1.37 mm plug with its 37 stamp and separate
+C M artwork matching the user's observation. The exact kit supplier and
+the meaning of C M remain unverified.
+
+The XIAO mating socket is simplified, as labelled in the animation.
+The nominal 5 mm joined board spacing, antenna films, cable bends and
+supplemental components are instructional geometry. The animation is an
+assembly illustration, not a mechanical fit or cable-length simulation.
+
+No AI-generated imagery is used. Blender generates all visible pixels.
+FFmpeg encodes the Blender PNG frames. The original manual and its 21 PNG
+assets remain unchanged.
+
+Official board sources:
+https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip
+https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step
+
+Representative RF plug source:
+https://www.i-pex.com/product/mhf-I

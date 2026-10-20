@@ -1,0 +1,48 @@
+{
+  "animations": [
+    {
+      "file": "06-animation/assembly-showcase.mp4",
+      "label": "Assembly showcase, landscape",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 15,
+      "silent": true,
+      "native_blender_render": true,
+      "opening_layout": "horizontal",
+      "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+      "poster": "06-animation/assembly-showcase-poster.png",
+      "editable_source": "06-animation/_source/assembly-showcase.blend",
+      "sha256": "e047c2fb2edd051ed7002063874d12447b6dda06489df63bbc6effe90cb8ea37"
+    },
+    {
+      "file": "07-animation-portrait/assembly-showcase.mp4",
+      "label": "Assembly showcase, portrait",
+      "pixels": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "duration_seconds": 15,
+      "silent": true,
+      "native_blender_render": true,
+      "opening_layout": "vertical",
+      "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+      "poster": "07-animation-portrait/assembly-showcase-poster.png",
+      "editable_source": "07-animation-portrait/_source/assembly-showcase.blend",
+      "sha256": "0ece0e6be77e29c0c4d24d4636f9103e83c5c2d27992113c5ff58742bf1300e3"
+    }
+  ],
+  "html_links_checked": 56,
+  "static_png_count": 21,
+  "poster_count": 2,
+  "portrait_rendered_frames": 450,
+  "portrait_cached_frames": 450,
+  "source_geometry_sha256": {
+    "rf-plug.json.gz": "d88b0a4ffaa40517d4b0b1157eb3264e4dcfff85d31fb85a6ddcfbaf41060095",
+    "rf-plug-137.json.gz": "a74f3375cc788a17e6056147375955759b95e4888b50a41b32bdefcc64b48d42",
+    "official-meshes.json.gz": "daabf4df357ca7c2c3fc416766617bcfc433091cafabfc19a10db39e98424018"
+  }
+}

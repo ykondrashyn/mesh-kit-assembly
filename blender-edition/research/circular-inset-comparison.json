@@ -1,0 +1,58 @@
+[
+  {
+    "page": 2,
+    "diagram": "close-xiao-align",
+    "old_scale": 25.277666108650017,
+    "new_scale": 27.269695014610807,
+    "scale_increase_percent": 7.880588727608506
+  },
+  {
+    "page": 2,
+    "diagram": "close-xiao-seated",
+    "old_scale": 28.206259052707857,
+    "new_scale": 31.06756171431815,
+    "scale_increase_percent": 10.144211808675152
+  },
+  {
+    "page": 3,
+    "diagram": "close-wio-align",
+    "old_scale": 25.196820147547616,
+    "new_scale": 27.22075664977763,
+    "scale_increase_percent": 8.032507635400975
+  },
+  {
+    "page": 3,
+    "diagram": "close-wio-seated",
+    "old_scale": 28.08707474184991,
+    "new_scale": 31.018144360272586,
+    "scale_increase_percent": 10.435652859410682
+  },
+  {
+    "page": 4,
+    "diagram": "close-b2b",
+    "old_scale": 36.96365723333559,
+    "new_scale": 40.09364807182095,
+    "scale_increase_percent": 8.467752037432552
+  },
+  {
+    "page": 5,
+    "diagram": "close-xiao-align",
+    "old_scale": 19.90616206056189,
+    "new_scale": 23.37402828015565,
+    "scale_increase_percent": 17.421068958663312
+  },
+  {
+    "page": 5,
+    "diagram": "close-wio-align",
+    "old_scale": 19.29131542546614,
+    "new_scale": 23.332077672098634,
+    "scale_increase_percent": 20.94601719745015
+  },
+  {
+    "page": 5,
+    "diagram": "close-b2b",
+    "old_scale": 17.06014949230873,
+    "new_scale": 22.520134836886573,
+    "scale_increase_percent": 32.00432298110505
+  }
+]

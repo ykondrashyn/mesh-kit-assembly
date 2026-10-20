@@ -1,0 +1,20 @@
+00:00.924  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/assembly-showcase.blend"
+{
+  "frames_checked": 450,
+  "official_solids": {
+    "xiao": 37,
+    "wio": 9
+  },
+  "cable_endpoint_max_error_mm": 1.1246181883879427e-06,
+  "source_ring_max_error_pixels": 0.000704553001746533,
+  "lora_film_min_projected_clearance_pixels": 65.87678586214831,
+  "lora_cable_min_projected_clearance_pixels": -95.55077988586285,
+  "lora_cable_min_physical_clearance_mm": 7.8157136071777344,
+  "board_spacing_final_mm": 5,
+  "preserved_original_assets": 22,
+  "original_assets_unchanged": true,
+  "errors": []
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

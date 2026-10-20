@@ -1,0 +1,491 @@
+{
+  "extraction": "Whole source solids selected by bounding-box containment, no Boolean cuts or clipped faces",
+  "ldu_per_mm": 2.5,
+  "coordinate_mapping": "LDraw = 2.5 * [local_X, -local_Z, local_Y]",
+  "orientation": "Local X and Y match normalized boards, local Z points up, the named PCB surface is local Z=0",
+  "board_geometry_included": false,
+  "detail_mesh_chordal_deflection_mm": 0.008,
+  "detail_mesh_angle_rad": 0.2,
+  "b2b_composition": {
+    "xiao_origin_local_mm": [
+      0,
+      0,
+      0
+    ],
+    "wio_origin_for_nominal_mating_local_mm": [
+      0,
+      0,
+      3.75
+    ],
+    "wio_origin_for_nominal_mating_ldu": [
+      0,
+      -9.375,
+      0
+    ],
+    "rotations": "None, both connectors retain their installed board orientation",
+    "suggested_exploded_wio_origin_local_mm": [
+      0,
+      0,
+      8
+    ],
+    "limitation": "XIAO socket is schematic and omits contacts. Nominal mating is illustrative, not a verified mechanical fit.",
+    "underside_view_transform_ldraw_3x3": [
+      1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      -1
+    ],
+    "underside_view_note": "Optional 180 degree X rotation only for a separately labeled Wio underside inspection view, not the mating scene"
+  },
+  "parts": {
+    "detail-xiao-rf-official": {
+      "board": "xiao",
+      "kind": "rf",
+      "schematic": false,
+      "selection_box_normalized_mm": [
+        12.0,
+        17.65,
+        1.2,
+        15.22,
+        20.8,
+        2.55
+      ],
+      "origin_normalized_mm": [
+        13.61668,
+        19.23344,
+        1.25
+      ],
+      "board_surface": "XIAO PCB top",
+      "mating_plane_local_z_mm": 1.25,
+      "source_component": "U.FL-R-SMT-1_10_ v1:1",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+      "source_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+      "geometry_provenance": "Complete manufacturer STEP connector solid",
+      "source_to_normalized_mm_3x4": [
+        0,
+        0,
+        -1,
+        2.7786,
+        -1,
+        0,
+        0,
+        12.2817,
+        0,
+        1,
+        0,
+        0.25
+      ],
+      "normalized_to_local_translation_mm": [
+        -13.61668,
+        -19.23344,
+        -1.25
+      ],
+      "origin_on_board_ldu": [
+        34.0417,
+        -3.125,
+        48.0836
+      ],
+      "axis_local_mm": [
+        0,
+        0
+      ],
+      "local_board_plane_z_mm": 0,
+      "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+      "selected_whole_solids": [
+        {
+          "index_zero_based": 35,
+          "bbox_normalized_mm": [
+            12.066678569380398,
+            17.733441733602533,
+            1.2500000149011594,
+            15.1666785693804,
+            20.733441733602533,
+            2.5000000149011594
+          ],
+          "volume_mm3": 3.16424201391766
+        }
+      ],
+      "selected_source_volume_mm3": 3.16424201391766,
+      "exported_local_volume_mm3": 3.1642420139176575,
+      "bbox_on_original_board_mm": [
+        12.066678569380398,
+        17.733441733602533,
+        1.2500000149011594,
+        15.1666785693804,
+        20.733441733602533,
+        2.5000000149011594
+      ],
+      "source_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+      "filename": "detail-xiao-rf-official.dat",
+      "triangles": 3284,
+      "type_2_segments": 671,
+      "faces": 67,
+      "unique_brep_edges": 176,
+      "suppressed_periodic_or_degenerate_edges": 9,
+      "output_sha256": "639c3451aec4a904d0670ee61efce707e254dd4efc5c01b9ad8177ac9b353250",
+      "mesh_bounds_ldu": {
+        "min": [
+          -3.875004,
+          -3.125,
+          -3.749996
+        ],
+        "max": [
+          3.874996,
+          -0.0,
+          3.750004
+        ]
+      },
+      "file_bytes": 343602,
+      "cad_bounds_local_mm": {
+        "min": [
+          -1.5500014306196022,
+          -1.499998266397471,
+          1.4901159417490817e-08
+        ],
+        "max": [
+          1.5499985693803993,
+          1.5000017336025304,
+          1.2500000149011596
+        ]
+      }
+    },
+    "detail-wio-rf-official": {
+      "board": "wio",
+      "kind": "rf",
+      "schematic": false,
+      "selection_box_normalized_mm": [
+        3.85,
+        17.88,
+        1.59,
+        6.95,
+        21.08,
+        2.95
+      ],
+      "origin_normalized_mm": [
+        5.3984,
+        19.47932,
+        1.6
+      ],
+      "board_surface": "Wio PCB top",
+      "mating_plane_local_z_mm": 1.3,
+      "source_component": "RF socket solid within U1 Wio-SX1262 module",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/wio-sx1262-for-xiao.step",
+      "source_sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+      "geometry_provenance": "Complete manufacturer STEP connector solid",
+      "source_to_normalized_mm_3x4": [
+        -1,
+        0,
+        0,
+        123.2916,
+        0,
+        -1,
+        0,
+        -110.3625,
+        0,
+        0,
+        1,
+        0
+      ],
+      "normalized_to_local_translation_mm": [
+        -5.3984,
+        -19.47932,
+        -1.6
+      ],
+      "origin_on_board_ldu": [
+        13.496,
+        -4.0,
+        48.6983
+      ],
+      "axis_local_mm": [
+        0,
+        0
+      ],
+      "local_board_plane_z_mm": 0,
+      "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+      "selected_whole_solids": [
+        {
+          "index_zero_based": 5,
+          "bbox_normalized_mm": [
+            3.898401506994,
+            17.929316802849478,
+            1.6399998999999998,
+            6.898401919968004,
+            21.02931700426003,
+            2.9
+          ],
+          "volume_mm3": 3.4117840982899392
+        }
+      ],
+      "selected_source_volume_mm3": 3.4117840982899392,
+      "exported_local_volume_mm3": 3.4117840982899406,
+      "bbox_on_original_board_mm": [
+        3.898401506994,
+        17.929316802849478,
+        1.6399998999999998,
+        6.898401919968004,
+        21.02931700426003,
+        2.9
+      ],
+      "source_url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+      "filename": "detail-wio-rf-official.dat",
+      "triangles": 21968,
+      "type_2_segments": 899,
+      "faces": 121,
+      "unique_brep_edges": 287,
+      "suppressed_periodic_or_degenerate_edges": 11,
+      "output_sha256": "01ec88ffd12797aa0ce6fb274d5ef86dd8dbd78cb04d97469ecf695e39401358",
+      "mesh_bounds_ldu": {
+        "min": [
+          -3.749996,
+          -3.25,
+          -3.875008
+        ],
+        "max": [
+          3.750005,
+          -0.1,
+          3.874992
+        ]
+      },
+      "file_bytes": 2076675,
+      "cad_bounds_local_mm": {
+        "min": [
+          -1.4999984930059955,
+          -1.5500031971505361,
+          0.03999989999999981
+        ],
+        "max": [
+          1.5000019199680088,
+          1.5499970042600129,
+          1.2999999999999998
+        ]
+      }
+    },
+    "detail-wio-b2b-official": {
+      "board": "wio",
+      "kind": "b2b",
+      "schematic": false,
+      "selection_box_normalized_mm": [
+        2.38,
+        17.63,
+        -3.55,
+        11.08,
+        21.18,
+        -0.05
+      ],
+      "origin_normalized_mm": [
+        6.731,
+        19.4056,
+        0.0
+      ],
+      "board_surface": "Wio PCB underside",
+      "mating_tip_local_z_mm": -3.5,
+      "source_component": "J3 BF04-30pin-35H",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/wio-sx1262-for-xiao.step",
+      "source_sha256": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+      "geometry_provenance": "Complete manufacturer STEP connector solid",
+      "source_to_normalized_mm_3x4": [
+        -1,
+        0,
+        0,
+        123.2916,
+        0,
+        -1,
+        0,
+        -110.3625,
+        0,
+        0,
+        1,
+        0
+      ],
+      "normalized_to_local_translation_mm": [
+        -6.731,
+        -19.4056,
+        -0.0
+      ],
+      "origin_on_board_ldu": [
+        16.8275,
+        -0.0,
+        48.514
+      ],
+      "axis_local_mm": [
+        0,
+        0
+      ],
+      "local_board_plane_z_mm": 0,
+      "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+      "selected_whole_solids": [
+        {
+          "index_zero_based": 7,
+          "bbox_normalized_mm": [
+            2.4310020000099772,
+            17.688662705009015,
+            -3.5000001597825072,
+            11.03100200000999,
+            21.12251729509601,
+            -0.10000006019858337
+          ],
+          "volume_mm3": 70.4583164263206
+        }
+      ],
+      "selected_source_volume_mm3": 70.4583164263206,
+      "exported_local_volume_mm3": 70.45831642632075,
+      "bbox_on_original_board_mm": [
+        2.4310020000099772,
+        17.688662705009015,
+        -3.5000001597825072,
+        11.03100200000999,
+        21.12251729509601,
+        -0.10000006019858337
+      ],
+      "source_url": "https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.step",
+      "filename": "detail-wio-b2b-official.dat",
+      "triangles": 51722,
+      "type_2_segments": 3393,
+      "faces": 461,
+      "unique_brep_edges": 1127,
+      "suppressed_periodic_or_degenerate_edges": 6,
+      "output_sha256": "e66a9802ecd26189f575c8201b74ef77ce138d2db16dc574107a98efbd25638d",
+      "mesh_bounds_ldu": {
+        "min": [
+          -10.749995,
+          0.25,
+          -4.292343
+        ],
+        "max": [
+          10.750005,
+          8.75,
+          4.292293
+        ]
+      },
+      "file_bytes": 4789792,
+      "cad_bounds_local_mm": {
+        "min": [
+          -4.299997999990023,
+          -1.716937294990976,
+          -3.5000001597825072
+        ],
+        "max": [
+          4.300002000009989,
+          1.7169172950960163,
+          -0.10000006019858337
+        ]
+      }
+    },
+    "detail-xiao-b2b-schematic": {
+      "board": "xiao",
+      "kind": "b2b",
+      "schematic": true,
+      "selection_box_normalized_mm": [
+        2.38,
+        17.63,
+        1.2,
+        11.08,
+        21.18,
+        2.25
+      ],
+      "origin_normalized_mm": [
+        6.731,
+        19.4056,
+        1.25
+      ],
+      "board_surface": "XIAO PCB top",
+      "socket_rim_local_z_mm": 0.95,
+      "socket_floor_local_z_mm": 0.25,
+      "source_component": "Illustrative B2B socket from kit supplemental geometry",
+      "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+      "source_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+      "geometry_provenance": "Schematic supplemental XIAO B2B socket, not manufacturer geometry",
+      "source_to_normalized_mm_3x4": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "normalized_to_local_translation_mm": [
+        -6.731,
+        -19.4056,
+        -1.25
+      ],
+      "origin_on_board_ldu": [
+        16.8275,
+        -3.125,
+        48.514
+      ],
+      "axis_local_mm": [
+        0,
+        0
+      ],
+      "local_board_plane_z_mm": 0,
+      "local_orientation": "X rightward across board, Y toward rear antenna edge, Z up",
+      "selected_whole_solids": [
+        {
+          "index_zero_based": 0,
+          "bbox_normalized_mm": [
+            2.4307,
+            17.6884,
+            1.25,
+            11.0307,
+            21.1228,
+            2.2
+          ],
+          "volume_mm3": 16.225548
+        }
+      ],
+      "selected_source_volume_mm3": 16.225548,
+      "exported_local_volume_mm3": 16.225548000000003,
+      "bbox_on_original_board_mm": [
+        2.4307,
+        17.6884,
+        1.25,
+        11.0307,
+        21.1228,
+        2.2
+      ],
+      "filename": "detail-xiao-b2b-schematic.dat",
+      "triangles": 28,
+      "type_2_segments": 24,
+      "faces": 11,
+      "unique_brep_edges": 24,
+      "suppressed_periodic_or_degenerate_edges": 0,
+      "output_sha256": "238d025219ae896c51c4ed335b7cc69b24cc2426b54ba4d55f6e6e64f133f25a",
+      "mesh_bounds_ldu": {
+        "min": [
+          -10.75075,
+          -2.375,
+          -4.293
+        ],
+        "max": [
+          10.74925,
+          -0.0,
+          4.293
+        ]
+      },
+      "file_bytes": 4651,
+      "cad_bounds_local_mm": {
+        "min": [
+          -4.3003,
+          -1.7171999999999983,
+          0.0
+        ],
+        "max": [
+          4.2997,
+          1.7172000000000018,
+          0.9500000000000002
+        ]
+      }
+    }
+  }
+}

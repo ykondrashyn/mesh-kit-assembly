@@ -1,0 +1,38 @@
+00:01.471  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/blender-edition/mesh-kit.blend"
+Info: Saved as "ppt-assets-labeled.blend"
+EXPORT LABELLED PAGE 1
+00:13.369  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/05-ready-slides/01-parts.png'
+EXPORT LABELLED PAGE 2
+00:25.565  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/05-ready-slides/02-wifi.png'
+EXPORT LABELLED PAGE 3
+00:35.037  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/05-ready-slides/03-lora.png'
+EXPORT LABELLED PAGE 4
+00:44.049  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/05-ready-slides/04-boards.png'
+EXPORT LABELLED PAGE 5
+00:52.893  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/05-ready-slides/05-all-steps.png'
+EXPORT 01-parts/xiao-esp32s3.png [2000, 1835]
+01:03.057  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/xiao-esp32s3.png'
+EXPORT 01-parts/wio-sx1262.png [2000, 1602]
+01:12.738  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/wio-sx1262.png'
+EXPORT 01-parts/wifi-antenna-13.png [2000, 1817]
+01:21.856  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/wifi-antenna-13.png'
+EXPORT 01-parts/lora-antenna-37-cm.png [2000, 1964]
+01:29.441  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/01-parts/lora-antenna-37-cm.png'
+EXPORT 02-assembly/02-connect-wifi.png [2400, 1616]
+01:38.313  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/02-connect-wifi.png'
+EXPORT 02-assembly/03-connect-lora.png [2400, 2119]
+01:50.334  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/03-connect-lora.png'
+EXPORT 02-assembly/04-align-boards.png [2400, 1646]
+01:58.829  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/04-align-boards.png'
+EXPORT 02-assembly/04-boards-joined.png [2400, 1563]
+02:07.026  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/02-assembly/04-boards-joined.png'
+EXPORT 04-linked-panels/02-wifi-with-closeup.png [3200, 1395]
+02:19.871  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/04-linked-panels/02-wifi-with-closeup.png'
+EXPORT 04-linked-panels/03-lora-with-closeup.png [3200, 1476]
+02:32.623  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/04-linked-panels/03-lora-with-closeup.png'
+EXPORT 04-linked-panels/04-boards-with-closeup.png [3200, 1426]
+02:44.579  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/04-linked-panels/04-boards-with-closeup.png'
+Exported 21 PowerPoint assets to /Users/ykondras/vid/assembly-manual/ppt-demo-assets
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

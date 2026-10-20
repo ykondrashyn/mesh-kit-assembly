@@ -1,0 +1,44 @@
+{
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "layout": "horizontal",
+  "opening_bounds_pixels": {
+    "lora": [
+      228.82098197937012,
+      432.26879596710205,
+      461.28896713256836,
+      669.4214987754822
+    ],
+    "WIO": [
+      649.6176910400391,
+      428.4468412399292,
+      877.0745658874512,
+      598.1649470329285
+    ],
+    "wifi": [
+      1085.4572296142578,
+      424.2220079898834,
+      1392.9043579101562,
+      677.4682545661926
+    ],
+    "XIAO": [
+      1543.743896484375,
+      397.5213038921356,
+      1769.0801239013672,
+      597.8017544746399
+    ]
+  },
+  "opening_adjacent_body_gaps_pixels": [
+    188.3287239074707,
+    208.38266372680664,
+    150.83953857421875
+  ],
+  "detached_plug_to_socket_mm": {
+    "wifi": 75.5666613825171,
+    "lora": 71.43394850699492
+  },
+  "transition_frames_checked": 79,
+  "checks": "Surface intersections between both board bodies and the antenna films",
+  "connection_sequence_starts_at_frame": 79,
+  "errors": [],
+  "source_blend_sha256": "7b50e2acd0299b9d0d2936f683d96479e0e2a326e552682991f4c397f84f8e0a"
+}

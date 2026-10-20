@@ -1,0 +1,791 @@
+
+
+LPub3D v2.4.9 r86 (Release) for macOS ARM 64bit
+==========================
+Arguments: --process-export --export-option pdf --preferred-renderer native --projection orthographic --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/research/smoke.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/research/smoke.ldr
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mInitializing application LPub3D... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D v2.4.9 r86 (Release) for macOS ARM 64bit [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32m============================= [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mArguments....................(--process-export --export-option pdf --preferred-renderer native --projection orthographic --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/research/smoke.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/research/smoke.ldr) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mmacOS Binary Directory.......(MacOS) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mmacOS Base Directory.........(Applications) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Bundle App Path.......(/Applications) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Application Data Path.(/Users/ykondras/Library/Application Support/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Extras Resource Path..(/Applications/LPub3D.app/Contents/Resources) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Config File Path......(/Users/ykondras/Library/Preferences) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D 3D Editor Cache Path..(/Users/ykondras/Library/Caches/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Homebrew Installation.(Apple Silicon) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Homebrew Path Prefix..(/opt/homebrew/opt) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Loaded LDraw Library..(LEGO® Parts) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLPub3D Logging Level.........(STATUS (0), Levels: [status,info,trace,debug,notice,warning,error,fatal,off]) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mDebug Logging................(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mLog To Standard Output.......(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mCheck For Updates............(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mAuto Restart On Abnormal End.(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mSecure Socket Layer..........(Supported) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32mApplication Distribution.....(Installed) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:33:10.422 [22;32m5% - Loading library for LEGO® Parts... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.423 [22;32m10% - Copying archive libraries... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.424 [22;32m15% - Preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.448 [22;32mSystem Theme: Dark (1) [0m
+[22;32mINFO [0m2026-10-19T01:33:10.458 [22;32m15% - Selecting update settings... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.458 [22;32mLGEO library status... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.458 [22;32mLGEO library path  : Not found [0m
+[22;32mINFO [0m2026-10-19T01:33:10.459 [22;32mImage renderers... [0m
+[22;32mINFO [0m2026-10-19T01:33:10.459 [22;32mLDGLite : /Applications/LPub3D.app/Contents/3rdParty/ldglite-1.3/bin/ldglite [0m
+[22;32mINFO [0m2026-10-19T01:33:10.459 [22;32m25% - LPub3D macOS Required Library Check... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2677[0m 2026-10-19T01:33:10.459 [22;32mLDView  : /Applications/LPub3D.app/Contents/3rdParty/ldview-4.5/bin/LDView [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:33:24.795 [22;32mLibrary check - [/opt/homebrew/opt/libpng/lib/libpng.dylib] minimum :[1.6.37] installed:[1.6.59] [0m
+The following LDView libraries were not validated:  -/opt/X11/lib/libOSMesa.dylib - not found.  -/opt/homebrew/opt/gl2ps/lib/libgl2ps.dylib - not found.  -/opt/homebrew/opt/jpeg/lib/libjpeg.dylib - not found.  -/opt/homebrew/opt/tinyxml/lib/libtinyxml.dylib - not found.  -/opt/homebrew/opt/minizip/lib/libminizip.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2770[0m 2026-10-19T01:33:24.798 [22;32mPOVRay  : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/bin/lpub3d_trace_cui [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:33:25.821 [22;32mLibrary check - [/opt/homebrew/opt/libtiff/lib/libtiff.dylib] minimum :[4.0.10] installed:[4.7.2] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:33:26.713 [22;32mLibrary check - [/opt/homebrew/opt/sdl2/lib/libSDL2.dylib] minimum :[2.0.10] installed:[2.32.74] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:33:27.496 [22;32mLibrary check - [/opt/homebrew/opt/openexr/lib/libOpenEXR.dylib] minimum :[2.3.0] installed:[3.5.2] [0m
+The following required POVRay libraries were not validated:  -/opt/X11/lib/libX11.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m2026-10-19T01:33:27.497 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2887[0m 2026-10-19T01:33:27.499 [22;32mProcessing renderer configuration files... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34msetLDGLiteIniParams[0m([22;36m[0m) [22;32m@ln 3097[0m 2026-10-19T01:33:27.499 [22;32mInitializing /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldglite-1.3/config/ldglite.ini... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34msetLDGLiteIniParams[0m([22;36m[0m) [22;32m@ln 3151[0m 2026-10-19T01:33:27.500 [22;32mLDGLite.ini file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldglite-1.3/config/ldglite.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3174[0m 2026-10-19T01:33:27.500 [22;32mInitializing /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: [General] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: Antialias=64 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: CurveQuality=4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: HFOV=0.00999999977648258209228516 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: [3dsExporter] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: SeamWidth=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: [CustomColors] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: [ExtraSearchDirs] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: [PovExporter] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: Ambient=0.4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: BottomInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: ChromeBril=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: ChromeRefl=0.85 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: ChromeRoughness=0.01 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: ChromeSpecular=0.8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: ConditionalEdges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: CustomAspectRatio=1.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: Diffuse=0.4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: EdgeRadius=0.15 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.501 [22;32mNativePOV.ini OUT: Edges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: FileVersion=3.6 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: FindReplacements=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Floor=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: FloorAxis=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: HideStuds=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: InlinePov=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Phong=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: PhongSize=40 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: PovLights=1 0 45 0 <0,0,0> <1,1,1> 1 0 0 0 0 0 0 250 250 4 4;0 0 30 120 <0,0,0> <1,1,1> 0 0 0 0 0 0 0 0 0 0 0;1 0 60 -120 <0,0,0> <1,1,1> 1 0 0 0 0 0 0 250 250 3 3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: PrimitiveSubstitution=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Quality=3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Refl=0.08 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Reflections=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: RubberPhong=0.1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: RubberPhongSize=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: RubberRefl=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: SeamWidth=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: SelectedAspectRatio=ffffffff [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Shadows=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: SmoothCurves=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: TextureOffsetFactor=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: TopInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: TransFilter=0.8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: TransIoR=1.25 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: TransRefl=0.2 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: UnmirrorStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: XmlMap=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: XmlMapPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: [RecentFiles] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: [Sessions] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.502 [22;32mNativePOV.ini OUT: Native 3DS/Antialias=64 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/CheckPartTracker=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/CurveQuality=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/DrawLightDats=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/EdgeThickness=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/FOV=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/HiResPrimitives=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/IgnorePBuffer=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/LineSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/PartsListLookupSite=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/PartsListsDirMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/SaveActualSize=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/SaveAlpha=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/SaveHeight=548 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/SaveSteps=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/SaveWidth=384 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/Seams=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/ShowHighlightLines=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/SubduedLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/TransDefaultColor=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/UseQualityLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/UseQualityStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/UseSpecular=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/ViewMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/_SessionPlaceholder=DO NOT DELETE. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native 3DS/3dsExporter/SeamWidth=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native POV/Antialias=64 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native POV/AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native POV/CheckPartTracker=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native POV/CurveQuality=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.503 [22;32mNativePOV.ini OUT: Native POV/DrawLightDats=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/EdgeThickness=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/FOV=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/HiResPrimitives=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/IgnorePBuffer=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/LineSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PartsListLookupSite=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PartsListsDirMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/SaveActualSize=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/SaveAlpha=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/SaveHeight=548 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/SaveSteps=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/SaveWidth=384 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/Seams=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/ShowHighlightLines=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/SubduedLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/TransDefaultColor=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/UseQualityLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/UseQualityStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/UseSpecular=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/ViewMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/_SessionPlaceholder=DO NOT DELETE. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Ambient=0.400000005960464477539063 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/BottomInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/ChromeBril=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/ChromeRefl=0.85000002384185791015625 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/ChromeRoughness=0.00999999977648258209228516 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/ChromeSpecular=0.800000011920928955078125 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/ConditionalEdges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/CustomAspectRatio=1.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Diffuse=0.400000005960464477539063 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.504 [22;32mNativePOV.ini OUT: Native POV/PovExporter/EdgeRadius=0.150000005960464477539063 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Edges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/FileVersion=3.599999904632568359375 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/FindReplacements=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Floor=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/FloorAxis=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/HideStuds=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/InlinePov=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Phong=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/PhongSize=40 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/PovLights=1 0 45 0 <0,0,0> <1,1,1> 1 0 0 0 0 0 0 250 250 4 4;0 0 30 120 <0,0,0> <1,1,1> 0 0 0 0 0 0 0 0 0 0 0;1 0 60 -120 <0,0,0> <1,1,1> 1 0 0 0 0 0 0 250 250 3 3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/PrimitiveSubstitution=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Quality=3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Refl=0.0799999982118606567382813 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Reflections=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/RubberPhong=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/RubberPhongSize=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/RubberRefl=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/SelectedAspectRatio=-1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/Shadows=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/SmoothCurves=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/TextureOffsetFactor=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/TopInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/TransFilter=0.800000011920928955078125 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/TransIoR=1.25 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/TransRefl=0.200000002980232238769531 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/UnmirrorStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/XmlMap=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native POV/PovExporter/XmlMapPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native Part List/Antialias=64 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native Part List/AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native Part List/CheckPartTracker=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native Part List/CurveQuality=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native Part List/DrawLightDats=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.505 [22;32mNativePOV.ini OUT: Native Part List/EdgeThickness=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/FOV=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/HiResPrimitives=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/IgnorePBuffer=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InventoryColumnOrder00=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InventoryColumnOrder01=3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InventoryColumnOrder02=4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InventoryColumnOrder03=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InventoryOverwriteSnapshot=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/InventoryShowModel=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/LineSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/PartsListLookupSite=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/PartsListsDirMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/SaveActualSize=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/SaveAlpha=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/SaveHeight=548 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/SaveSteps=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/SaveWidth=384 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/Seams=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/ShowHighlightLines=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/SubduedLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/TransDefaultColor=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/UseQualityLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/UseQualityStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/UseSpecular=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/ViewMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native Part List/_SessionPlaceholder=DO NOT DELETE. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/Antialias=64 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/CheckPartTracker=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/CurveQuality=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/DrawLightDats=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/EdgeThickness=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/FOV=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.506 [22;32mNativePOV.ini OUT: Native STL/HiResPrimitives=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/IgnorePBuffer=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/LineSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/PartsListLookupSite=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/PartsListsDirMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/SaveActualSize=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/SaveAlpha=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/SaveHeight=548 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/SaveSteps=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/SaveWidth=384 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/Seams=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/ShowHighlightLines=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/SubduedLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/TransDefaultColor=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/UseQualityLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/UseQualityStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/UseSpecular=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/ViewMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/_SessionPlaceholder=DO NOT DELETE. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: Native STL/StlExporter/Scale=2 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/Antialias=64 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/CheckPartTracker=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/CurveQuality=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/DrawLightDats=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/EdgeThickness=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/FOV=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/HiResPrimitives=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/IgnorePBuffer=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/LineSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/PartsListLookupSite=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/PartsListsDirMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.507 [22;32mNativePOV.ini OUT: POV-Ray Render/ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/SaveActualSize=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/SaveAlpha=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/SaveHeight=548 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/SaveSteps=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/SaveWidth=384 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/Seams=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/ShowHighlightLines=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/SubduedLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/TransDefaultColor=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/UseQualityLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/UseQualityStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/UseSpecular=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/ViewMode=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/_SessionPlaceholder=DO NOT DELETE. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Ambient=0.400000005960464477539063 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/BottomInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/ChromeBril=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/ChromeRefl=0.85000002384185791015625 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/ChromeRoughness=0.00999999977648258209228516 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/ChromeSpecular=0.800000011920928955078125 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/ConditionalEdges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/CustomAspectRatio=1.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Diffuse=0.400000005960464477539063 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/EdgeRadius=0.150000005960464477539063 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Edges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/FileVersion=3.599999904632568359375 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/FindReplacements=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Floor=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/FloorAxis=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/HideStuds=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/InlinePov=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Phong=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/PhongSize=40 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/PovLights=1 0 45 0 <0,0,0> <1,1,1> 1 0 0 0 0 0 0 250 250 4 4;0 0 30 120 <0,0,0> <1,1,1> 0 0 0 0 0 0 0 0 0 0 0;1 0 60 -120 <0,0,0> <1,1,1> 1 0 0 0 0 0 0 250 250 3 3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/PrimitiveSubstitution=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.508 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Quality=3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Refl=0.0799999982118606567382813 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Reflections=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/RubberPhong=0.100000001490116119384766 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/RubberPhongSize=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/RubberRefl=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/SelectedAspectRatio=-1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/Shadows=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/SmoothCurves=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/TextureOffsetFactor=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/TopInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/TransFilter=0.800000011920928955078125 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/TransIoR=1.25 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/TransRefl=0.200000002980232238769531 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/UnmirrorStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/XmlMap=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: POV-Ray Render/PovExporter/XmlMapPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: [StlExporter] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3214[0m 2026-10-19T01:33:27.509 [22;32mNativePOV.ini OUT: Scale=2 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3231[0m 2026-10-19T01:33:27.509 [22;32mNativePOV ini file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3257[0m 2026-10-19T01:33:27.509 [22;32mInitializing /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.509 [22;32mLDView.ini OUT: [General] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.509 [22;32mLDView.ini OUT: Antialias=4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: AutoCrop=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: BackgroundColor3=00a9b4d8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: CameraGlobe=0.0,0.0,4106503 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: ConditionalHighlights=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: CurveQuality=4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: DrawLightDats=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: EdgesOnly=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: HFOV=0.00999999977648258209228516 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: HiResPrimitives=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: LDrawDir=/Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: LDrawZip= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: LDrawZipShowWarning=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: LastOpenPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: LightVector=-0.163398,-0.235473,0.958047 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: Lighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: LineSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: MemoryUsage=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: PerformSmoothing=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: PolygonOffset=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: SaveActualSize=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: SaveAlpha=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: SaveZoomToFit=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: Seams=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: ShowHighlightLines=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: SnapshotSuffix=.png [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: SubduedLighting=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: Texmaps=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: TextureOffsetFactor=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: TextureStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: TransDefaultColor=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: UseQualityLighting=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: UseQualityStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: UseSpecular=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.510 [22;32mLDView.ini OUT: Wireframe=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT: [CustomColors] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT: [ExtraSearchDirs] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT: [RecentFiles] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3287[0m 2026-10-19T01:33:27.511 [22;32mLDView.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3304[0m 2026-10-19T01:33:27.511 [22;32mLDView ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3330[0m 2026-10-19T01:33:27.511 [22;32mInitializing /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: [General] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: Antialias=4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: CameraGlobe=0.0,0.0,2410914 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: CurveQuality=4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: HFOV=0.00999999977648258209228516 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: InstallPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: InstallPath 4.1= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: ProcessLDConfig=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: LDrawDir=/Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: LDrawZip= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: LDrawZipShowWarning=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: LastOpenPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: [CustomColors] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT: [ExtraSearchDirs] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.511 [22;32mLDViewPOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: [PovExporter] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Ambient=0.4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: BottomInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: ChromeBril=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: ChromeRefl=0.85 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: ChromeRoughness=0.01 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: ChromeSpecular=0.8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: ConditionalEdges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: CustomAspectRatio=1.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Diffuse=0.4 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: EdgeRadius=0.15 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Edges=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: FileVersion=3.6 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: FindReplacements=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Floor=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: FloorAxis=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: HideStuds=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: InlinePov=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Phong=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: PhongSize=40 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: PrimitiveSubstitution=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Quality=3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Refl=0.08 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Reflections=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: RubberPhong=0.1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: RubberPhongSize=10 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: RubberRefl=0 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: SeamWidth=0.5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: SelectedAspectRatio=ffffffff [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: Shadows=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: SmoothCurves=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: TextureOffsetFactor=5 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: TopInclude= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: TransFilter=0.8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: TransIoR=1.25 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: TransRefl=0.2 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: UnmirrorStuds=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: XmlMap=1 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT: XmlMapPath= [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.512 [22;32mLDViewPOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.513 [22;32mLDViewPOV.ini OUT: [RecentFiles] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3366[0m 2026-10-19T01:33:27.513 [22;32mLDViewPOV.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3383[0m 2026-10-19T01:33:27.513 [22;32mLDViewPOV ini file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3411[0m 2026-10-19T01:33:27.513 [22;32mInitializing /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.conf... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ;                     PERSISTENCE OF VISION RAY TRACER [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ;                           POV-Ray VERSION 3.8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ;                         SAMPLE POVRAY.CONF FILE [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ;                      FOR I/O RESTRICTIONS SETTINGS [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; The general form of the options is: [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [Section] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; setting [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; Note: characters after a semi-colon are treated as a comment. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; This file is used primarily to define security settings, i.e. to [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; restrict reading and writing of files and running of scripts beyond [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; the security provided by the file system.  Regardless of the settings [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.513 [22;32mPOV-Ray.conf OUT: ; in this file, POV-Ray will not allow users to read files they would [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; not ordinarily be allowed to read, write files they would not [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; ordinarily be allowed to write, or execute files they would not [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; ordinarily be allowed to execute, unless someone has made the binary [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; setuid or setgid. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; POV-Ray will look in two places for this file: in a system-wide directory [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; (typically /usr/local/etc/povray/X.Y/povray.conf, where X.Y represents the [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; first two fields of the version number, e.g. for v3.8.1 this would be 3.8) [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; and in the user's home directory (as ~/.povray/X.Y/povray.conf).  POV-Ray [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; will always use the most strict version of what is specified; user settings [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; can only make security more strict. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; [File I/O Security] determines whether POV-Ray will be allowed to perform [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; read-write operations on files.  Specify one of the 3 following values: [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; - "none" means that there are no restrictions other than those enforced [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ;   by the file system, i.e. normal UNIX file and directory permissions. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; - "read-only" means that files may be read without restriction. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; - "restricted" means that files access is subject to restrictions as [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ;   specified in the rest of this file.  See the other variables for details. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: [File I/O Security] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ;none       ; all read and write operations on files are allowed. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ;read-only  ; uses the "read+write" directories for writing (see below). [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: restricted  ; uses _only_ "read" and "read+write" directories for file I/O. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; [Shellout Security] determines whether POV-Ray will be allowed to call [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; scripts (e.g. Post_Frame_Command) as specified in the documentation. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; Specify one of the 2 following values: [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; - "allowed" means that shellout will work as specified in the documentation. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ; - "forbidden" means that shellout will be disabled. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: [Shellout Security] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: ;allowed [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.514 [22;32mPOV-Ray.conf OUT: forbidden [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; [Permitted Paths] specifies a list of directories for which reading or [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; reading + writting is permitted (in those directories and optionnally [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; in their descendents).  Any entry of the directory list is specified on [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; a single line.  These paths are only used when the file I/O security [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; is enabled (i.e. "read-only" or "restricted"). [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; The list entries must be formatted as following: [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ;   read = directory	     ; read-only directory [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ;   read* = directory        ; read-only directory including its descendents [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ;   read+write = directory   ; read/write directory [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ;   read+write* = directory  ; read/write directory including its descendents [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; where directory is a string (to be quoted or doubly-quoted if it contains [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; space caracters; see the commented example below).  Any number of spaces [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; can be placed before and after the equal sign.  Read-only and read/write [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; entries can be specified in any order. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; Both relative and absolute paths are possible (which makes "." particularly [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; useful for defining the current working directory).  The POV-Ray install [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; directory (e.g. /usr/local/share/povray-X.Y or /usr/share/povray-X.Y) [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; can be specified with "%INSTALLDIR%".  The install directory and its [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; descendents are typically only writable by root; therefore you should not [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; specify "%INSTALLDIR%" in read/write directory paths.  The user home [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; directory can be specified with "%HOME%". [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; Note that since user-level restrictions are at least as strict as system- [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; level restrictions, any paths specified in the system-wide povray.conf [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ; will also need to be specified in the user povray.conf file. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: [Permitted Paths] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: ;read = "/this/directory/contains space caracters" [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: read* = %INSTALLDIR%/include [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: read* = %INSTALLDIR%/scenes [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: read* = %INSTALLDIR%/../../etc [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: read* = %HOME% [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: read+write* = /tmp [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3484[0m 2026-10-19T01:33:27.515 [22;32mPOV-Ray.conf OUT: read+write  = . [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3501[0m 2026-10-19T01:33:27.516 [22;32mPOVRay conf file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.conf [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3616[0m 2026-10-19T01:33:27.516 [22;32mInitializing /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.ini... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;                         LPUB3D-TRACE RAY TRACER [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;                         LPUB3D-TRACE VERSION 3.8 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;                          LPUB3D-TRACE.INI FILE [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  The general form of the options is "Variable=value".  Everything [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  between the equals sign and the end of the line is considered part [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  of the value.  The spacing and layout is free-form but only one option [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  per line is allowed.  Variables and values are not case-sensitive. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  Note: characters after a semi-colon are treated as a comment [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  Traditional POV-Ray switches beginning with + or - are also allowed [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  and they may be given with more than one switch per line. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  Add your own options at the bottom and/or edit these to suit. See the [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ;  general documentation for full instructions on how to use INI options. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; Width of image in pixels.  Accepts integer values. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: Width = 800 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; Height of image in pixels.  Accepts integer values. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: Height = 600 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; Sets minimum number of objects before auto bounding kicks in. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: Bounding_Threshold = 3 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.516 [22;32mPOV-Ray.ini OUT: ; Turn display on [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: Display=On [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; Turn verbose mode on [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: Verbose=On [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; Specify path to search for any files not found in current directory. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; For example: Library_Path="C:\Program Files\POV-Ray for Windows\include" [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; There may be some entries already here; if there are they were [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; probably added by the install process or whoever set up the [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; software for you. At the least you can expect an entry that [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; points to the standard POV-Ray include files directory; on [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; some operating systems there may also be one which points to [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; the system's fonts directory. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; Note that some platforms (e.g. Windows, unless this feature is [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; turned off via the configuration file) will automatically append [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; standard locations like those mentioned above to the library [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; path list after reading this file, so in those cases you don't [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; necessarily have to have anything at all here. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; Search path for #include source files or command line ini files not [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; found in the current directory.  New directories are added to the [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; search path, up to a maximum of 25. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; Search path for #include source files or command line ini files not [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; found in the current directory.  New directories are added to the [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; search path, up to a maximum of 25. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: Library_Path="/Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources" [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: Library_Path="/Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/ini" [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: Library_Path="/Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/include" [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ; File output type control. [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ;     T    Uncompressed Targa-24 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ;     C    Compressed Targa-24 [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ;     P    UNIX PPM [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ;     N    PNG (8-bits per colour RGB) [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.517 [22;32mPOV-Ray.ini OUT: ;     Nc   PNG ('c' bit per colour RGB where 5 <= c <= 16) [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.518 [22;32mPOV-Ray.ini OUT:  [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.518 [22;32mPOV-Ray.ini OUT: Output_to_File=true [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3633[0m 2026-10-19T01:33:27.518 [22;32mPOV-Ray.ini OUT: Output_File_Type=N8             ; (+/-Ftype) [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3650[0m 2026-10-19T01:33:27.518 [22;32mPOVRay ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2921[0m 2026-10-19T01:33:27.518 [22;32mBlender: not configured [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3015[0m 2026-10-19T01:33:27.518 [22;32mPOVRay ini path    : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3020[0m 2026-10-19T01:33:27.518 [22;32mPOVRay include path: /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/include [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3025[0m 2026-10-19T01:33:27.518 [22;32mPOVRay scene path  : Not found [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3027[0m 2026-10-19T01:33:27.518 [22;32mRenderer is Native. [0m
+[22;32mINFO [0m2026-10-19T01:33:27.531 [22;32m20% - OpenGL context initialization... [0m
+[22;32mINFO [0m2026-10-19T01:33:27.612 [22;32m25% - LPub3D GUI window loading... [0m
+[22;32mINFO [0m2026-10-19T01:33:27.625 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m2026-10-19T01:33:27.628 [22;32m30% - Visual Editor loading... [0m
+[22;32mINFO [0m2026-10-19T01:33:27.629 [22;32m40% - Visual Editor initialization... [0m
+[22;32mINFO [0m2026-10-19T01:33:27.629 [22;32m50% - Search directory preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:33:27.630 [22;32m60% - Search directories loading... [0m
+
+LDRAW SEARCH DIR PUSHED: .
+[22;32mINFO [0m2026-10-19T01:33:27.633 [22;32mLDRAW SEARCH DIR PUSHED: . [0m
+LDRAW SEARCH DIR PUSHED: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/p
+[22;32mINFO [0m2026-10-19T01:33:27.633 [22;32mLDRAW SEARCH DIR PUSHED: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/p [0m
+LDRAW SEARCH DIR PUSHED: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/parts
+[22;32mINFO [0m2026-10-19T01:33:27.633 [22;32mLDRAW SEARCH DIR PUSHED: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/parts [0m
+LDRAW SEARCH DIR PUSHED: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models
+[22;32mINFO [0m2026-10-19T01:33:27.633 [22;32mLDRAW SEARCH DIR PUSHED: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models [0m
+
+[22;32mINFO [0m2026-10-19T01:33:27.634 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:33:27.634 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:33:27.635 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m2026-10-19T01:33:27.635 [22;32m70% - Skip parts archive per application preference... [0m
+Fade Steps is OFF.
+[22;32mINFO [0m2026-10-19T01:33:27.669 [22;32mFade Steps is OFF. [0m
+Highlight Step is OFF.
+[22;32mINFO [0m2026-10-19T01:33:27.669 [22;32mHighlight Step is OFF. [0m
+Added search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models
+[22;32mINFO [0m2026-10-19T01:33:27.669 [22;32mAdded search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models [0m
+Loading LDraw parts search directories...
+[22;32mINFO [0m2026-10-19T01:33:27.669 [22;32mLoading LDraw parts search directories... [0m
+[22;32mINFO [0m2026-10-19T01:33:30.635 [22;32m75% - Archive libraries loading... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip...
+[22;32mINFO [0m2026-10-19T01:33:30.635 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip...
+[22;32mINFO [0m2026-10-19T01:33:30.661 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip... [0m
+[22;32mINFO [0m2026-10-19T01:33:30.946 [22;32m85% - LPub3D initialization... [0m
+[22;32mINFO [0m2026-10-19T01:33:30.946 [22;32m90% - LPub3D widgets loading... [0m
+[22;32mINFO [0m2026-10-19T01:33:30.990 [22;32m95% - LDraw colors loading... [0m
+- Number of default openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:33:30.991 [22;34m- Number of default openWith programs: 0 [0m
+- Number of loaded openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:33:30.991 [22;34m- Number of loaded openWith programs: 0 [0m
+[22;32mINFO [0m2026-10-19T01:33:30.991 [22;32m100% - LPub3D loaded. [0m
+Camera projection set to Orthographic
+[22;32mINFO [0m2026-10-19T01:33:30.992 [22;32mCamera projection set to Orthographic [0m
+[22;32mINFO [0m2026-10-19T01:33:30.993 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:33:30.993 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:33:30.993 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+Loading file 'smoke.ldr'...
+[22;32mINFO [0m2026-10-19T01:33:30.994 [22;32mLoading file 'smoke.ldr'... [0m
+File 'smoke.ldr' identified as LDraw System (LDR) Document
+[22;32mINFO [0m2026-10-19T01:33:30.994 [22;32mFile 'smoke.ldr' identified as LDraw System (LDR) Document [0m
+Loading 'smoke.ldr'...
+[22;32mINFO [0m2026-10-19T01:33:30.995 [22;32mLoading 'smoke.ldr'... [0m
+LDR  model 'smoke.ldr' with 9 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:33:30.995 [22;36mLDR  model 'smoke.ldr' with 9 lines loaded. [0m
+LDR file 'smoke.ldr' with 9 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:33:30.995 [22;36mLDR file 'smoke.ldr' with 9 lines loaded. [0m
+Model [smoke.ldr] is a SUBMODEL
+[22;36mNOTICE [0m2026-10-19T01:33:30.995 [22;36mModel [smoke.ldr] is a SUBMODEL [0m
+Part 1 [3001.dat] validated.
+[22;36mNOTICE [0m2026-10-19T01:33:30.995 [22;36mPart 1 [3001.dat] validated. [0m
+Loading user interface items...
+[22;32mINFO [0m2026-10-19T01:33:30.996 [22;32mLoading user interface items... [0m
+Open file '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/smoke.ldr' completed.
+[22;32mINFO [0m2026-10-19T01:33:31.001 [22;32mOpen file '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/smoke.ldr' completed. [0m
+Loaded LDraw LDR model file 'smoke.ldr'. Unique Part 1. Model Total Part 1. Elapsed time: 0.000 second
+[22;32mINFO [0m2026-10-19T01:33:31.002 [22;32mLoaded LDraw LDR model file 'smoke.ldr'. Unique Part 1. Model Total Part 1. Elapsed time: 0.000 second [0m
+Writing  submodel 'smoke.ldr' to temp folder...
+[22;32mINFO [0m2026-10-19T01:33:31.119 [22;32mWriting  submodel 'smoke.ldr' to temp folder... [0m
+1 file written to temp folder. Elapsed time: 0.001 second
+[22;32mINFO [0m2026-10-19T01:33:31.119 [22;32m1 file written to temp folder. Elapsed time: 0.001 second [0m
+Processing find page for smoke.ldr...
+Processing single-step draw-page for page 1, step 1, model 'smoke.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'smoke.ldr'...
+[22;32mINFO [0m2026-10-19T01:33:31.119 [22;32mProcessing single-step draw-page for page 1, step 1, model 'smoke.ldr'... [0m
+Processing CSI for smoke.ldr...
+[22;32mINFO [0m2026-10-19T01:33:31.119 [22;32mProcessing CSI for smoke.ldr... [0m
+Executing Native Orthographic CSI image render - please wait...
+[22;32mINFO [0m2026-10-19T01:33:31.119 [22;32mExecuting Native Orthographic CSI image render - please wait... [0m
+Native CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png'
+[22;32mINFO [0m2026-10-19T01:33:31.119 [22;32mNative CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png' [0m
+Native Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1753, ImageHeight: 1240, PageWidth: 1753, PageHeight: 1240, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 1): 4285419, CameraName: Default, CameraProjection: Perspective, UsingViewpoint: False, CameraLatitude: 23, CameraLongitude: 45, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+
+[22;32mINFO [0m2026-10-19T01:33:31.120 [22;32mNative Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1753, ImageHeight: 1240, PageWidth: 1753, PageHeight: 1240, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 1): 4285419, CameraName: Default, CameraProjection: Perspective, UsingViewpoint: False, CameraLatitude: 23, CameraLongitude: 45, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+ [0m
+Native CSI render call took 0.105 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png for simple, single step 1 on page 1.
+[22;32mINFO [0m2026-10-19T01:33:31.120 [22;32mNative CSI render call took 0.105 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/research/LPub3D/assem/smoke-0_1_0_0_0_1_0_0_0_1_1_1753_150_DPI_1_30_23_45.png for simple, single step 1 on page 1. [0m
+Processing PLI for smoke.ldr...
+[22;32mINFO [0m2026-10-19T01:33:31.120 [22;32mProcessing PLI for smoke.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:33:31.120 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.111 second
+[22;35mTRACE [0m2026-10-19T01:33:31.120 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.111 second [0m
+Processed single-step draw-page for page 1, step 1, model 'smoke.ldr'
+Processed single-step draw-page for page 1, step 1, model 'smoke.ldr'
+[22;35mTRACE [0m2026-10-19T01:33:31.120 [22;35mProcessed single-step draw-page for page 1, step 1, model 'smoke.ldr' [0m
+Page 1 exported. Elapsed time: 0.118 second.
+[22;32mINFO [0m2026-10-19T01:33:31.120 [22;32mPage 1 exported. Elapsed time: 0.118 second. [0m
+Loaded LDraw file smoke.ldr (1 pages, 1 parts). Elapsed time: 0.127 second
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:33:31.158 [22;32mNo files written to temp folder.  [0m
+Processing find page for smoke.ldr...
+Page 1 exported. Elapsed time: 0.002 second.
+[22;32mINFO [0m2026-10-19T01:33:31.158 [22;32mPage 1 exported. Elapsed time: 0.002 second. [0m
+Starting export instructions to pdf...
+[22;32mINFO [0m2026-10-19T01:33:31.159 [22;32mStarting export instructions to pdf... [0m
+Export 1 pages to pdf
+[22;32mINFO [0m2026-10-19T01:33:31.159 [22;32mExport 1 pages to pdf [0m
+Exporting page  1 of 1...
+[22;32mINFO [0m2026-10-19T01:33:31.159 [22;32mExporting page  1 of 1... [0m
+                  Exporting page  1 of 1, size(pixels) W 1754 x H 1240, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:33:31.159 [22;36m                  Exporting page  1 of 1, size(pixels) W 1754 x H 1240, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:33:31.162 [22;32mNo files written to temp folder.  [0m
+Processing find page for smoke.ldr...
+Processing single-step draw-page for page 1, step 1, model 'smoke.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'smoke.ldr'...
+[22;32mINFO [0m2026-10-19T01:33:31.162 [22;32mProcessing single-step draw-page for page 1, step 1, model 'smoke.ldr'... [0m
+Processing CSI for smoke.ldr...
+[22;32mINFO [0m2026-10-19T01:33:31.162 [22;32mProcessing CSI for smoke.ldr... [0m
+Processing PLI for smoke.ldr...
+[22;32mINFO [0m2026-10-19T01:33:31.162 [22;32mProcessing PLI for smoke.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:33:31.162 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.001 second
+[22;35mTRACE [0m2026-10-19T01:33:31.162 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.001 second [0m
+Processed single-step draw-page for page 1, step 1, model 'smoke.ldr'
+Processed single-step draw-page for page 1, step 1, model 'smoke.ldr'
+[22;35mTRACE [0m2026-10-19T01:33:31.162 [22;35mProcessed single-step draw-page for page 1, step 1, model 'smoke.ldr' [0m
+Page 1 exported. Elapsed time: 0.006 second.
+[22;32mINFO [0m2026-10-19T01:33:31.162 [22;32mPage 1 exported. Elapsed time: 0.006 second. [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:33:31.179 [22;32mNo files written to temp folder.  [0m
+Processing find page for smoke.ldr...
+Processing single-step draw-page for page 1, step 1, model 'smoke.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'smoke.ldr'...
+[22;32mINFO [0m2026-10-19T01:33:31.179 [22;32mProcessing single-step draw-page for page 1, step 1, model 'smoke.ldr'... [0m
+Processing CSI for smoke.ldr...
+[22;32mINFO [0m2026-10-19T01:33:31.179 [22;32mProcessing CSI for smoke.ldr... [0m
+Processing PLI for smoke.ldr...
+[22;32mINFO [0m2026-10-19T01:33:31.179 [22;32mProcessing PLI for smoke.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:33:31.179 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.001 second
+[22;35mTRACE [0m2026-10-19T01:33:31.179 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.001 second [0m
+Processed single-step draw-page for page 1, step 1, model 'smoke.ldr'
+Processed single-step draw-page for page 1, step 1, model 'smoke.ldr'
+[22;35mTRACE [0m2026-10-19T01:33:31.179 [22;35mProcessed single-step draw-page for page 1, step 1, model 'smoke.ldr' [0m
+Page 1 loaded. Elapsed time: 0.004 second.
+[22;32mINFO [0m2026-10-19T01:33:31.179 [22;32mPage 1 loaded. Elapsed time: 0.004 second. [0m
+Model file 'smoke.ldr' process succeeded (result code 0). Elapsed time: 0.187 second.
+[22;32mINFO [0m2026-10-19T01:33:31.180 [22;32mModel file 'smoke.ldr' process succeeded (result code 0). Elapsed time: 0.187 second. [0m
+LPub3D Run: Application terminated with return code 0.
+[22;32mINFO [0m2026-10-19T01:33:31.180 [22;32mLPub3D Run: Application terminated with return code 0. [0m

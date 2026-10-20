@@ -1,0 +1,82 @@
+{
+  "pages": [
+    {
+      "page": "01-parts.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_mediabox": [
+        0.0,
+        0.0,
+        960.0,
+        540.0
+      ],
+      "lossless_pixels_match": true
+    },
+    {
+      "page": "02-wifi.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_mediabox": [
+        0.0,
+        0.0,
+        960.0,
+        540.0
+      ],
+      "lossless_pixels_match": true
+    },
+    {
+      "page": "03-lora.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_mediabox": [
+        0.0,
+        0.0,
+        960.0,
+        540.0
+      ],
+      "lossless_pixels_match": true
+    },
+    {
+      "page": "04-boards.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_mediabox": [
+        0.0,
+        0.0,
+        960.0,
+        540.0
+      ],
+      "lossless_pixels_match": true
+    },
+    {
+      "page": "05-all-steps.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_mediabox": [
+        0.0,
+        0.0,
+        960.0,
+        540.0
+      ],
+      "lossless_pixels_match": true
+    }
+  ],
+  "pdf_pages": 5,
+  "pdf_pixels_exactly_match_native_blender_renders": true,
+  "pdf_sha256": "79d8269bbc2351df37f571485280e2b805655608f5e3d58daec8de53841e0dd9",
+  "unchanged_page_pixels": [
+    "01-parts.png",
+    "02-wifi.png",
+    "03-lora.png"
+  ]
+}

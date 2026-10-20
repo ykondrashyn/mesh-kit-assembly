@@ -1,0 +1,46 @@
+{
+  "pdf_sha256": "499479d42d86db0472d987eaf5a75079bd2716631e37f5c56e8657b155300aff",
+  "pages": [
+    {
+      "png": "output/pages/01-parts.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_pixels_equal_png": true
+    },
+    {
+      "png": "output/pages/02-wifi.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_pixels_equal_png": true
+    },
+    {
+      "png": "output/pages/03-lora.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_pixels_equal_png": true
+    },
+    {
+      "png": "output/pages/04-boards.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_pixels_equal_png": true
+    },
+    {
+      "png": "output/pages/05-all-steps.png",
+      "size": [
+        3200,
+        1800
+      ],
+      "pdf_pixels_equal_png": true
+    }
+  ],
+  "passed": true
+}

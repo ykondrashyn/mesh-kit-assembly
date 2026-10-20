@@ -1,0 +1,50 @@
+{
+  "application": "LPub3D 2.4.9 r86 ARM64",
+  "pdf_creator": "LPub3D 2.4.9",
+  "pdf_pages": 5,
+  "page_aspect": "16:9",
+  "png_export": "Direct LPub3D PNG page export",
+  "png_size": [
+    2000,
+    1125
+  ],
+  "all_steps_slide": "output/mesh-kit-all-steps.png",
+  "render_projection": [
+    "Orthographic"
+  ],
+  "geometry_render_assets": 14,
+  "layout_mpd_sections": 5,
+  "geometry_mpd_sections": 54,
+  "all_part_references_resolve": true,
+  "all_picture_dependencies_present": true,
+  "official_parts_match_converted_DAT_files": true,
+  "connector_detail_parts_match_extracted_DAT_files": true,
+  "overview_includes_all_three_connector_closeups": true,
+  "shield_labels": [
+    "ESP32-S3",
+    "SX1262"
+  ],
+  "primitive_counts": {
+    "1": 151,
+    "2": 14109,
+    "3": 163359,
+    "4": 5180,
+    "5": 0
+  },
+  "ai_image_generation_used": false,
+  "outputs": {
+    "output/mesh-kit-all-steps.png": "b627d20cd6b7c9c79911cd45c63fbf7c4a3c6e7d33b0c82492f69bec641a5dba",
+    "output/mesh-kit-assembly-sheet.png": "386aac2830184100e348d3ecba32584bc945879f39bf276d7ac5e3fca36ec654",
+    "output/mesh-kit-lpub3d.pdf": "ccd40fde0734affc18f52d419ebc6d335edf197d9fc5317881ca3cf6eaf96251",
+    "output/mesh-kit-preview.png": "3dc1993d820a616422a1413f8fa94a03cdd274ce45d9eb01ba06418bd5d2015b",
+    "output/pages/mesh-kit_150_DPI_page_1.png": "1c926d7ec961eaff1fcddfcceea83eb4927b0a5e74a8189e3adb8ab81bff8027",
+    "output/pages/mesh-kit_150_DPI_page_2.png": "5d14007e29265052c3abfd3afec0824208b3e21f32ba714f248ea882d37a942b",
+    "output/pages/mesh-kit_150_DPI_page_3.png": "14ce1366eb1bb3d429fb17f981741e98f226d5ebc45a8e70121c0eee12af9310",
+    "output/pages/mesh-kit_150_DPI_page_4.png": "b33d0c86e4aae5e151d0a89fb4bf456c957bba70f21678c0c9551075d178a9ae",
+    "output/pages/mesh-kit_150_DPI_page_5.png": "b627d20cd6b7c9c79911cd45c63fbf7c4a3c6e7d33b0c82492f69bec641a5dba"
+  },
+  "source_model_hashes": {
+    "source-models/wio-sx1262-for-xiao.step": "6a4c8592691cf821314ea96482c5946a64d479317316bfa81e509cec9284782c",
+    "source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd"
+  }
+}

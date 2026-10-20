@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "units": "mm",
+    "manufacturer": "I-PEX",
+    "family": "MHF I",
+    "model": "20351-1xxR-37C PLUG R7",
+    "product_page": "https://www.i-pex.com/product/mhf-I",
+    "download_url": "https://www.i-pex.com/sites/default/files/downloads/zip/MHF_I_20351_137_20279_STEP.zip",
+    "source_path": "source-models/rf-plug-137/20351-1xxR-37C PLUG R7 STEP ALL.STEP",
+    "source_sha256": "85089a723eaa468be17174d6ffaa2cccb35c554ae3ae86d6faac36ce4640d53b",
+    "reference_files": {
+      "20279-001E-xxC RECEPTACLE R9 STEP ALL.STEP": {
+        "path": "source-models/rf-plug-137/20279-001E-xxC RECEPTACLE R9 STEP ALL.STEP",
+        "sha256": "dd19353369cd4c68be409446922a3470c1e8125fd6fff5790625744dfc2a1816"
+      },
+      "20279-001E-01C+20351-1xxR-37C MATING R9R7 STEP ALL.STEP": {
+        "path": "source-models/rf-plug-137/20279-001E-01C+20351-1xxR-37C MATING R9R7 STEP ALL.STEP",
+        "sha256": "eeae91b8d256528582f441fee72b97b918162dcaf08a1274972b5c2be67953bc"
+      }
+    },
+    "source_to_normalized_mm_3x4": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2.1
+    ],
+    "axes": "Mating axis +Z, opening down, cable +Y, reference PCB surface Z=0",
+    "mated_reference": {
+      "basis": "Matching cup cylinders and cable centerline against supplied mated STEP",
+      "combined_source_xyz_from_plug_source_xyz": "[plug.Z, plug.Y+2.1, -plug.X]",
+      "pcb_plane_z_mm": 0,
+      "receptacle_top_z_mm": 1.25,
+      "plug_bottom_z_mm": 0.3,
+      "plug_top_z_mm": 2.4,
+      "place_for_socket_top_z": "Translate normalized plug Z by socket_top_z - 1.25"
+    },
+    "cable_join": {
+      "centerline_start_mm": [
+        0,
+        4.7,
+        1.515
+      ],
+      "centerline_end_mm": [
+        0,
+        7.7,
+        1.515
+      ],
+      "native_curve_start_mm": [
+        0,
+        7.7,
+        1.515
+      ],
+      "native_curve_tangent": [
+        0,
+        1,
+        0
+      ],
+      "radius_mm": 0.685015,
+      "nominal_radius_mm": 0.685,
+      "diameter_mm": 1.37003,
+      "geometry_removed": false
+    },
+    "geometry_policy": "All 374 source faces retained. Blender may add a separately tagged marking surface to reproduce the user-observed 37 / C M stamp.",
+    "mesh_chordal_deflection_mm": 0.004,
+    "mesh_angle_rad": 0.15,
+    "limitations": [
+      "Representative 1.37 mm MHF I geometry. Exact supplier of the kit plug is unverified.",
+      "The C M stamp is user-observed. Its meaning and manufacturer are unverified.",
+      "Source geometry is preserved. Any added stamp artwork is illustrative.",
+      "Fit with the Seeed board receptacle has not been mechanically tested."
+    ]
+  },
+  "library": "rf-plug-137.json.gz",
+  "sha256": "a74f3375cc788a17e6056147375955759b95e4888b50a41b32bdefcc64b48d42",
+  "object": {
+    "name": "ipex_mhf_i_20351_official_plug",
+    "category": "rf_plug",
+    "kind": "rf_plug",
+    "role": "rf_plug",
+    "board": null,
+    "solid_index": 0,
+    "material": "gold",
+    "schematic": false,
+    "source": {
+      "path": "source-models/rf-plug-137/20351-1xxR-37C PLUG R7 STEP ALL.STEP",
+      "sha256": "85089a723eaa468be17174d6ffaa2cccb35c554ae3ae86d6faac36ce4640d53b",
+      "url": "https://www.i-pex.com/sites/default/files/downloads/zip/MHF_I_20351_137_20279_STEP.zip"
+    },
+    "bounds": {
+      "min": [
+        -1.5,
+        -1.3450000999999996,
+        0.29999990000000004
+      ],
+      "max": [
+        1.5000000000000004,
+        7.7000001000000005,
+        2.400001213765698
+      ]
+    },
+    "material_names": [
+      "gold",
+      "cable"
+    ],
+    "statistics": {
+      "cad_faces": 374,
+      "vertices": 9078,
+      "triangles": 18149,
+      "feature_segments": 2486,
+      "cable_styling_source_faces": [
+        0,
+        331,
+        372,
+        373
+      ],
+      "unique_brep_edges": 1010,
+      "suppressed_periodic_or_degenerate_edges": 4
+    }
+  }
+}

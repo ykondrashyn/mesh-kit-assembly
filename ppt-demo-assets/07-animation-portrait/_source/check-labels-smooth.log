@@ -1,0 +1,114 @@
+00:00.631  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/assembly-showcase.blend"
+{
+  "frames_checked": 450,
+  "official_solids": {
+    "xiao": 37,
+    "wio": 9
+  },
+  "cable_endpoint_max_error_mm": 2.8635053990994247e-06,
+  "source_ring_max_error_pixels": 0.0006171798222704066,
+  "lora_film_min_projected_clearance_pixels": 54.360005312842866,
+  "lora_cable_min_projected_clearance_pixels": -80.49946823671121,
+  "lora_cable_min_physical_clearance_mm": 7.8157136071777344,
+  "antenna_labels": {
+    "wifi": "Wi-Fi / 2.4 GHz",
+    "lora": "LoRa / 868 MHz"
+  },
+  "antenna_font_and_material_match_chip_labels": true,
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "opening_layout": "vertical",
+  "board_spacing_final_mm": 5,
+  "preserved_original_assets": 22,
+  "original_assets_unchanged": true,
+  "errors": []
+}
+{
+  "opening_order": "LoRa antenna, Wio-SX1262, Wi-Fi antenna, XIAO ESP32S3",
+  "layout": "vertical",
+  "opening_bounds_pixels": {
+    "lora": [
+      474.9879848957062,
+      1470.6318283081055,
+      639.431848526001,
+      1638.3896255493164
+    ],
+    "WIO": [
+      456.40774369239807,
+      1138.5068893432617,
+      617.3067784309387,
+      1258.5625076293945
+    ],
+    "wifi": [
+      448.4685230255127,
+      806.0969924926758,
+      665.9513425827026,
+      985.2390289306641
+    ],
+    "XIAO": [
+      456.4080011844635,
+      457.78801918029785,
+      615.8070158958435,
+      599.4629859924316
+    ]
+  },
+  "opening_adjacent_body_gaps_pixels": [
+    212.06932067871094,
+    153.26786041259766,
+    206.63400650024414
+  ],
+  "detached_plug_to_socket_mm": {
+    "wifi": 56.85485563586456,
+    "lora": 49.55551618989432
+  },
+  "transition_frames_checked": 79,
+  "checks": "Surface intersections between both board bodies and the antenna films",
+  "connection_sequence_starts_at_frame": 79,
+  "errors": [],
+  "source_blend_sha256": "e77c442a365e018ed36ce4b36c66358a9ac02c05b2d76df6e9850572fac531f8"
+}
+{
+  "frames_checked": 450,
+  "opening_names": {
+    "lora": "LoRa antenna\n868 MHz",
+    "wio": "Wio-SX1262",
+    "wifi": "Wi-Fi antenna\n2.4 GHz",
+    "xiao": "XIAO ESP32S3"
+  },
+  "font_matches_chip_labels": true,
+  "step_titles_never_overlap": true,
+  "source_ring_hidden_at_step_changes": true,
+  "transition_style": "Native white dissolves and quintic camera easing",
+  "errors": [],
+  "source_blend_sha256": "e77c442a365e018ed36ce4b36c66358a9ac02c05b2d76df6e9850572fac531f8"
+}
+RENDER 1 of 450
+00:26.064  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0001.png'
+RENDER 34 of 450
+00:28.019  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0034.png'
+RENDER 43 of 450
+00:29.707  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0043.png'
+RENDER 58 of 450
+00:31.715  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0058.png'
+RENDER 80 of 450
+00:33.769  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0080.png'
+RENDER 145 of 450
+00:35.595  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0145.png'
+RENDER 149 of 450
+00:37.473  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0149.png'
+RENDER 153 of 450
+00:39.376  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0153.png'
+RENDER 158 of 450
+00:41.185  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0158.png'
+RENDER 280 of 450
+00:42.909  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0280.png'
+RENDER 310 of 450
+00:44.542  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0310.png'
+RENDER 369 of 450
+00:46.355  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0369.png'
+RENDER 380 of 450
+00:47.947  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0380.png'
+RENDER 395 of 450
+00:49.524  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/07-animation-portrait/_source/previews/frame-0395.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

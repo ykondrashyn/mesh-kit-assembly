@@ -1,0 +1,332 @@
+{
+  "frames_checked": 450,
+  "opening_names": {
+    "lora": "LoRa antenna\n868 MHz",
+    "wio": "Wio-SX1262",
+    "wifi": "Wi-Fi antenna\n2.4 GHz",
+    "xiao": "XIAO ESP32S3"
+  },
+  "font_matches_chip_labels": true,
+  "label_bounds": [
+    {
+      "frame": 1,
+      "labels": {
+        "lora": [
+          430.6546425819397,
+          1317.7171325683594,
+          623.7892055511475,
+          1382.1819305419922
+        ],
+        "wio": [
+          449.34212923049927,
+          1047.8813552856445,
+          623.1036972999573,
+          1071.0617065429688
+        ],
+        "wifi": [
+          444.9310004711151,
+          663.8358879089355,
+          638.1420707702637,
+          728.3006858825684
+        ],
+        "xiao": [
+          424.4794034957886,
+          369.7705936431885,
+          642.2470736503601,
+          392.9817581176758
+        ]
+      }
+    },
+    {
+      "frame": 16,
+      "labels": {
+        "lora": [
+          430.45804738998413,
+          1323.4370040893555,
+          623.5926103591919,
+          1387.9019165039062
+        ],
+        "wio": [
+          449.2956840991974,
+          1049.0248489379883,
+          623.0571556091309,
+          1072.2053146362305
+        ],
+        "wifi": [
+          444.96090173721313,
+          659.8615837097168,
+          638.1720042228699,
+          724.3264961242676
+        ],
+        "xiao": [
+          424.3906009197235,
+          360.8610534667969,
+          642.1581745147705,
+          384.0720462799072
+        ]
+      }
+    },
+    {
+      "frame": 34,
+      "labels": {
+        "lora": [
+          430.1905131340027,
+          1331.2201309204102,
+          623.3250761032104,
+          1395.684928894043
+        ],
+        "wio": [
+          449.23221230506897,
+          1050.5806732177734,
+          622.9936838150024,
+          1073.7612533569336
+        ],
+        "wifi": [
+          445.00139236450195,
+          654.4528770446777,
+          638.2124304771423,
+          718.9177894592285
+        ],
+        "xiao": [
+          424.2696440219879,
+          348.7368392944336,
+          642.0373463630676,
+          371.94783210754395
+        ]
+      }
+    },
+    {
+      "frame": 39,
+      "labels": {
+        "lora": [
+          421.8887436389923,
+          1328.3800506591797,
+          615.0233387947083,
+          1392.8449630737305
+        ],
+        "wio": [
+          445.74251890182495,
+          1067.0746994018555,
+          619.504086971283,
+          1090.2551651000977
+        ],
+        "wifi": [
+          454.6376144886017,
+          663.475513458252,
+          647.8486847877502,
+          727.9404258728027
+        ],
+        "xiao": [
+          449.5442605018616,
+          348.7364959716797,
+          667.3119306564331,
+          371.9476318359375
+        ]
+      }
+    },
+    {
+      "frame": 43,
+      "labels": {
+        "lora": [
+          399.50920701026917,
+          1326.126594543457,
+          592.6438665390015,
+          1390.5915069580078
+        ],
+        "wio": [
+          432.65101075172424,
+          1100.3516006469727,
+          606.4124822616577,
+          1123.5319519042969
+        ],
+        "wifi": [
+          470.68989515304565,
+          678.6792182922363,
+          663.9010620117188,
+          743.1441307067871
+        ],
+        "xiao": [
+          494.85127687454224,
+          348.7365245819092,
+          712.6189470291138,
+          371.9475746154785
+        ]
+      }
+    },
+    {
+      "frame": 45,
+      "labels": {
+        "lora": [
+          376.0847997665405,
+          1326.9055938720703,
+          569.2193627357483,
+          1391.3703918457031
+        ],
+        "wio": [
+          415.0069463253021,
+          1121.6513442993164,
+          588.7684178352356,
+          1144.8316955566406
+        ],
+        "wifi": [
+          471.24263405799866,
+          685.8386993408203,
+          664.4537687301636,
+          750.3036689758301
+        ],
+        "xiao": [
+          514.9256479740143,
+          348.7365531921387,
+          732.6932859420776,
+          371.947546005249
+        ]
+      }
+    },
+    {
+      "frame": 46,
+      "labels": {}
+    }
+  ],
+  "callout_fade_samples": [
+    {
+      "frame": 140,
+      "callout_opacity": 1.0,
+      "callout_hidden": false
+    },
+    {
+      "frame": 144,
+      "callout_opacity": 0.790123462677002,
+      "callout_hidden": false
+    },
+    {
+      "frame": 147,
+      "callout_opacity": 0.28507816791534424,
+      "callout_hidden": false
+    },
+    {
+      "frame": 150,
+      "callout_opacity": 0.007451334036886692,
+      "callout_hidden": false
+    },
+    {
+      "frame": 151,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 152,
+      "callout_opacity": 0.011532794684171677,
+      "callout_hidden": false
+    },
+    {
+      "frame": 155,
+      "callout_opacity": 0.39668750762939453,
+      "callout_hidden": false
+    },
+    {
+      "frame": 158,
+      "callout_opacity": 0.9235888719558716,
+      "callout_hidden": false
+    },
+    {
+      "frame": 161,
+      "callout_opacity": 1.0,
+      "callout_hidden": false
+    },
+    {
+      "frame": 245,
+      "callout_opacity": 1.0,
+      "callout_hidden": false
+    },
+    {
+      "frame": 250,
+      "callout_opacity": 0.6321175694465637,
+      "callout_hidden": false
+    },
+    {
+      "frame": 255,
+      "callout_opacity": 0.007451334036886692,
+      "callout_hidden": false
+    },
+    {
+      "frame": 256,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 257,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 260,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 264,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 307,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 310,
+      "callout_opacity": 0.20987653732299805,
+      "callout_hidden": false
+    },
+    {
+      "frame": 314,
+      "callout_opacity": 0.9235888719558716,
+      "callout_hidden": false
+    },
+    {
+      "frame": 317,
+      "callout_opacity": 1.0,
+      "callout_hidden": false
+    },
+    {
+      "frame": 364,
+      "callout_opacity": 1.0,
+      "callout_hidden": false
+    },
+    {
+      "frame": 370,
+      "callout_opacity": 0.6321175694465637,
+      "callout_hidden": false
+    },
+    {
+      "frame": 375,
+      "callout_opacity": 0.007451334036886692,
+      "callout_hidden": false
+    },
+    {
+      "frame": 376,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 377,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 382,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    },
+    {
+      "frame": 385,
+      "callout_opacity": 0.0,
+      "callout_hidden": true
+    }
+  ],
+  "step_titles_never_overlap": true,
+  "source_ring_hidden_at_step_changes": true,
+  "transition_style": "Native white dissolves and quintic camera easing",
+  "errors": [],
+  "source_blend_sha256": "6cc872596f005aa7ac5644e60edc747f799db898854c4eb459323b80ed84bd49"
+}

@@ -1,0 +1,62 @@
+{
+  "resolution": [
+    1920,
+    1080
+  ],
+  "rendered_frames": 450,
+  "identical_final_hold_frames": [
+    421,
+    450
+  ],
+  "contact_sheet_frames": {
+    "timeline": [
+      1,
+      31,
+      46,
+      76,
+      106,
+      130,
+      151,
+      181,
+      211,
+      235,
+      256,
+      281,
+      307,
+      331,
+      355,
+      376,
+      391,
+      406,
+      421,
+      450
+    ],
+    "connections": [
+      94,
+      115,
+      124,
+      130,
+      199,
+      220,
+      229,
+      235,
+      319,
+      340,
+      349,
+      355
+    ],
+    "return": [
+      376,
+      383,
+      390,
+      397,
+      404,
+      411,
+      421,
+      450
+    ]
+  },
+  "ai_image_generation": false,
+  "source_blend_sha256": "bbed2f6bf3eb627175c2b6b0a6878cd5cd1efaf20c90e1eb50c88abfcef9a0a5",
+  "visual_review": "Reviewed timeline contact sheet, all three connector seating events, the return to front and full-resolution frame 319. Antenna labels remain attached and use the chip-label font and ink material."
+}

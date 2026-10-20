@@ -1,0 +1,13 @@
+Edit this assembly illustration, preserving the single exploded view, monochrome manual style, two attached antennas and labels. Correct the geometry and pin counts, do not redesign.
+
+1. MOST IMPORTANT: the lower XIAO PCB is currently longer than the upper Wio PCB. Give both PCBs IDENTICAL outer parallelograms, with corresponding corners vertically registered. Use the upper Wio footprint as the master. XIAO is 21x17.8mm and Wio21.4x17.8mm, essentially same size. Shorten XIAO long edges to match Wio, reposition USB at the shortened front edge, scale/reflow components to fit. USB is centered on front short edge.
+
+2. Wio must have EXACTLY SEVEN empty holes along each long side, fourteen total. Currently eight per side, remove one and evenly redistribute all seven. XIAO must have EXACTLY SEVEN solder pads and SEVEN downward metal header pins on each long side, fourteen total. Currently too many. Remove surplus, evenly redistribute seven. Use modest rounded solder joints, not big spikes. All male pins extend below XIAO only. Wio has no pin headers.
+
+3. Wio front circular mounting hole and pushbutton should sit one behind the other on the PCB centerline leading to the USB-C end below. Do not place these side by side across the front edge. Copy relative layout from reference2. Shield sits toward rear, button between shield and mounting hole.
+
+4. The broad Wi-Fi rectangle at left is too wide. Retain its long edges and length, reduce its SHORT-edge width by25 percent. Its real rectangle is37.4x17.5mm. The narrow LoRa rectangle at right is40x7mm. Its long edge currently too long, shorten its length by10 percent, retain its slender width. The two antennas should look almost the same length, with Wi-Fi2.5 times as wide. Keep soldered flat feeds at antenna ends, low-profile round snap caps at board ends.
+
+5. Remove dashed alignment lines from faces of the PCBs and labels. Dashed guides visible ONLY in empty gap between boards. Keep both bold downward arrows in gap. Show tiny B2B socket on lower rear edge and corresponding mating feature above. B2B connector joins the two PCBs, headers do not.
+
+Everything else preserved. Keep XIAO / ESP32S3 and WIO / SX1262 shield text clear. Pure white canvas, all objects within frame. Thin black line drawing, lightly shaded silver shields, restrained dark PCB. Reference2 is actual assembled hardware for hole/button alignment and correct7 pins.

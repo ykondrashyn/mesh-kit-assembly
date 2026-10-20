@@ -1,0 +1,102 @@
+{
+  "board": "xiao",
+  "source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/supplement-definition.py",
+  "source_sha256": "84676d35566347a0be410efd963559f679b40a2c7f5647f47c54dcf3d39bfbcc",
+  "source_to_normalized_mm_3x4": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ],
+  "landmarks_normalized_mm": {
+    "rf": [
+      13.617,
+      19.233,
+      2.5
+    ],
+    "b2b": [
+      6.7307,
+      19.4056,
+      2.2
+    ],
+    "usb": [
+      8.89,
+      -1.527,
+      2.36
+    ],
+    "shield_center": [
+      8.89,
+      12.01,
+      3.25
+    ]
+  },
+  "landmarks_ldu": {
+    "rf": [
+      34.0425,
+      -6.25,
+      48.0825
+    ],
+    "b2b": [
+      16.82675,
+      -5.5,
+      48.514
+    ],
+    "usb": [
+      22.225,
+      -5.9,
+      -3.8175
+    ],
+    "shield_center": [
+      22.225,
+      -8.125,
+      30.025
+    ]
+  },
+  "geometry_provenance": "Illustrative additions from photographed kit, authored with CAD primitives",
+  "supplements": [
+    "Simplified populated B2B socket",
+    "Two seven-pin header bodies and pins"
+  ],
+  "official_step_source_file": "/Users/ykondras/vid/assembly-manual/ldraw-edition/source-models/xiao-esp32s3-model/XIAO-ESP32S3 v2.step",
+  "official_step_source_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+  "filename": "xiao-kit-details.dat",
+  "triangles": 220,
+  "type_2_segments": 216,
+  "faces": 107,
+  "unique_brep_edges": 216,
+  "suppressed_periodic_or_degenerate_edges": 0,
+  "output_sha256": "6796c0f28a7c9e432226a61ba13854ccaf409ea22bea7b5d30cec6db4bdb8eb1",
+  "cad_bounds_normalized_mm": {
+    "min": [
+      0.050000000000000044,
+      1.651,
+      -6.2
+    ],
+    "max": [
+      17.73,
+      21.1228,
+      2.2
+    ]
+  },
+  "mesh_bounds_ldu": {
+    "min": [
+      0.125,
+      -5.5,
+      4.1275
+    ],
+    "max": [
+      44.325,
+      15.5,
+      52.807
+    ]
+  },
+  "file_bytes": 34420
+}

@@ -1,0 +1,5 @@
+
+
+LPub3D v2.4.9 r86 (Release) for macOS ARM 64bit
+==========================
+Arguments: --app-paths

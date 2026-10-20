@@ -1,0 +1,6 @@
+Use case: precise-object-edit.
+Image1 is the parts-lineup illustration to edit. Image2 is the official Seeed Wio-SX1262 hardware diagram, image3 is the official assembled kit photo, both from https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/ .
+
+Make ONLY this local correction in image1: on the WIO / SX1262 board (second object from the left), the circular mounting-hole metal ring at the bottom incorrectly touches the bottom PCB outline. Move the circle upward about15pixels and slightly reduce its outer diameter if needed so there is clearly visible PCB material between the entire ring and the outer board edge. Move the button immediately above it upward a little if needed to preserve clearance. Keep button and mounting hole on the same centerline, with mounting hole closest to board end. Match the official reference2 arrangement, rotated180degrees to the illustration orientation.
+
+Keep all other objects and details unchanged: XIAO board, 7 pads and long-side headers, Wio7 holes each side, rectangular board shapes with small rounded corners, WIO/SX1262 and XIAO/ESP32S3 shield labels, both antennas/cables/plugs, proportions, monochrome style, white background, layout and canvas. Do not add labels or dimensions.

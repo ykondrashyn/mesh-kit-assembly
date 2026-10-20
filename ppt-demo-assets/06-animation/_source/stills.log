@@ -1,0 +1,12 @@
+00:00.453  blend            | Read blend: "/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/assembly-showcase.blend"
+RENDER 140 of 450
+00:02.850  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/frames/frame-0140.png'
+RENDER 245 of 450
+00:05.043  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/frames/frame-0245.png'
+RENDER 360 of 450
+00:07.058  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/frames/frame-0360.png'
+RENDER 450 of 450
+00:09.054  render           | Saved: '/Users/ykondras/vid/assembly-manual/ppt-demo-assets/06-animation/_source/frames/frame-0450.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

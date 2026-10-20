@@ -1,0 +1,21 @@
+/Users/ykondras/vid/assembly-manual/blender-edition/scripts/build_blender.py:49: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+/Users/ykondras/vid/assembly-manual/blender-edition/scripts/build_blender.py:63: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+/Users/ykondras/vid/assembly-manual/blender-edition/scripts/build_blender.py:398: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+Info: Saved as "mesh-kit.blend"
+RENDER PAGE 1 01 / Check the parts
+00:02.874  render           | Saved: '/Users/ykondras/vid/assembly-manual/blender-edition/output/pages/01-parts.png'
+RENDER PAGE 2 02 / Connect wifi
+00:03.578  render           | Saved: '/Users/ykondras/vid/assembly-manual/blender-edition/output/pages/02-wifi.png'
+RENDER PAGE 3 03 / Connect lora
+00:04.180  render           | Saved: '/Users/ykondras/vid/assembly-manual/blender-edition/output/pages/03-lora.png'
+RENDER PAGE 4 04 / Join the boards
+00:04.817  render           | Saved: '/Users/ykondras/vid/assembly-manual/blender-edition/output/pages/04-boards.png'
+RENDER PAGE 5 05 / All steps 01-04
+00:05.619  render           | Saved: '/Users/ykondras/vid/assembly-manual/blender-edition/output/pages/05-all-steps.png'
+Blender guide complete /Users/ykondras/vid/assembly-manual/blender-edition/mesh-kit.blend
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

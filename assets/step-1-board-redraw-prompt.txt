@@ -1,0 +1,11 @@
+Use case: precise-object-edit.
+Image1: Step1 illustration to fix.
+Image2: corrected Step3 illustration. Its LOWER board is the XIAO design to reuse.
+Image3: actual XIAO hardware photo for accuracy.
+
+In image1, replace ONLY the large XIAO board at lower left with a faithful larger version of the LOWER XIAO board from image2. Copy that lower board's proportions, perspective, full rectangular PCB, USB-C shell, shield, RF socket, B2B connector and two straight rows of pin headers. Do not include the upper Wio, other antenna, or arrows from image2.
+The current image1 wrongly has two groups of THREE pins growing from the FRONT SHORT EDGE beside USB. Remove these incorrect groups completely. The real XIAO has TWO parallel rows of SEVEN soldered male pins beneath the TWO LONG SIDE EDGES. Black plastic strips run lengthwise under those edges. Each of the seven metal legs points downward from its own solder joint. They are not rows across the USB edge. Copy their arrangement from image2 exactly, clearly visible on near side and partly occluded on far side.
+
+PCB shape: full rectangular board21x17.8mm with tiny rounded corner radius, no large clipped or chamfered corners, no oversize empty border. Shield text XIAO / ESP32S3. Two rows of seven solder joints. USB protrudes from front SHORT edge. Use image2's camera angle looking front-right. Keep natural perspective and correct component scale.
+
+Preserve image1's white canvas, black-and-white fine line manual style, Wi-Fi antenna at top, its cable, the round coax plug above the board, circular magnified connector inset at right and its contents. Adjust ONLY the final few pixels of cable/arrow/leader as needed so the plug arrow points exactly at the replacement XIAO's rear-right RF socket and dashed line links this same socket to inset. The round cap must be centered above its socket, visibly unseated. Do not add any other objects or explanatory text.

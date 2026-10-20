@@ -1,0 +1,9 @@
+{
+  "reference": "https://www.ikea.com/sa/en/assembly_instructions/hemnes-wash-stand-with-2-drawers-white__AA-565861-18-100.pdf",
+  "reference_page": 18,
+  "observed": "Enclosed magnifications with thin leader lines to source details",
+  "implementation": "Native Blender source rings, unarrowed leader curves and eight true circular detail insets. Each inset is fitted to the projected geometry using its minimum enclosing circle.",
+  "copied_artwork": false,
+  "ai_image_generation": false,
+  "connector_geometry": "Original manufacturer meshes retained in full. Only the illustrative cable continuation beyond the original stub is shortened in close-ups to give the connector more space."
+}

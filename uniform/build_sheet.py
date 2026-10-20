@@ -1,0 +1,88 @@
+from pathlib import Path
+from shutil import copy2
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.utils import ImageReader
+
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT / 'output'
+OUT.mkdir(exist_ok=True)
+RENDERS = Path('/Users/ykondras/Library/Application Support/Codex/artifact-sessions/exports/latest/0ebdad97bc6d429371fa7e8d772e29ddc5f0f10162626ef346a01b27cdd5667b')
+NAMES = ['00-parts.png', '01-wifi-antenna.png', '02-lora-antenna.png', '03-board-stack.png']
+for i, name in enumerate(NAMES, 1):
+    copy2(RENDERS / f'slide-{i}.png', OUT / name)
+W, H = landscape(A4)
+pdf = OUT / 'xiao-wio-uniform-assembly-sheet.pdf'
+c = canvas.Canvas(str(pdf), pagesize=(W, H))
+c.setTitle('XIAO ESP32S3 + Wio-SX1262 assembly guide, uniform illustrations')
+c.setAuthor('Illustrations based on Seeed Studio kit images')
+
+def text(x, top, value, size=11, bold=False, grey=0):
+    c.setFillGray(grey)
+    c.setFont('Helvetica-Bold' if bold else 'Helvetica', size)
+    c.drawString(x, H-top-size, value)
+
+def centered(x, top, value, size=10, bold=False, grey=0):
+    c.setFillGray(grey)
+    c.setFont('Helvetica-Bold' if bold else 'Helvetica', size)
+    c.drawCentredString(x, H-top-size, value)
+
+def slide_body(index, x, top, width):
+    scale = width / 1280
+    first, last = 125, 615 if index == 0 else 625
+    c.saveState()
+    p = c.beginPath()
+    p.rect(x, H-top-(last-first)*scale, width, (last-first)*scale)
+    c.clipPath(p, stroke=0, fill=0)
+    c.drawImage(ImageReader(str(OUT/NAMES[index])), x,
+                H-top-(720-first)*scale, 1280*scale, 720*scale,
+                mask='auto')
+    c.restoreState()
+
+text(28, 18, 'XIAO ESP32S3 + Wio-SX1262', 24, True)
+text(28, 49, 'Assembly guide', 12)
+text(530, 25, 'Antennas first. USB power last.', 13, True)
+text(530, 47, 'Use the matching ESP32S3 kit with B2B connector.', 9, False, .3)
+c.setStrokeGray(.7)
+c.setLineWidth(.5)
+c.line(28, H-76, W-28, H-76)
+c.line(W/2, H-90, W/2, 51)
+c.line(28, H-319, W-28, H-319)
+
+panels = [(28, 88), (440, 88), (28, 331), (440, 331)]
+titles = ['Parts', 'Wi-Fi / Bluetooth antenna', 'LoRa antenna', 'Board stack']
+refs = [
+    'https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png',
+    'https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png',
+    'https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/10.png',
+    'https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png'
+]
+for i, ((x, y), title) in enumerate(zip(panels, titles)):
+    text(x, y, str(i), 34, True)
+    text(x+42, y+8, title, 16, True)
+    slide_body(i, x+2, y+44, 370)
+    c.linkURL(refs[i], (x+2, H-y-194, x+372, H-y-44), relative=0, thickness=0)
+
+x, y = panels[0]
+for cx, label, detail in [(x+51, '1x XIAO', 'with pin headers'),
+                          (x+140, '1x Wio', 'SX1262'),
+                          (x+239, '1x Wi-Fi', '2.4 GHz'),
+                          (x+332, '1x LoRa', '860-930 MHz')]:
+    centered(cx, y+201, label, 10, True)
+    centered(cx, y+214, detail, 9, False, .25)
+x, y = panels[1]
+text(x, y+201, 'Broad antenna connects to XIAO.', 11, True)
+text(x, y+218, 'Align the metal cap, then seat it gently.', 10, False, .25)
+x, y = panels[2]
+text(x, y+201, 'Slim antenna connects to Wio.', 11, True)
+text(x, y+218, 'Align the metal cap, then seat it gently.', 10, False, .25)
+x, y = panels[3]
+text(x, y+201, 'Wio above XIAO. Align the small B2B connector.', 10.5, True)
+text(x, y+218, 'Press evenly. Keep antenna cables outside the stack.', 9.7, False, .25)
+
+text(28, 570, 'Attach antennas before USB power. Simplified drawings, click for references. Step 3 gap enlarged.', 8, False, .35)
+text(670, 570, 'Images: Seeed Studio kit wiki', 8, False, .35)
+c.linkURL('https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/',
+          (670, 13, 816, 26), relative=0, thickness=0)
+c.save()
+print(pdf)

@@ -1,0 +1,520 @@
+
+
+LPub3D v2.4.9 r86 (Release) for macOS ARM 64bit
+==========================
+Arguments: --process-export --export-option pdf --preferred-renderer native --projection orthographic --clear-cache --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/output/mesh-kit-lpub3d.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/mesh-kit.mpd
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mInitializing application LPub3D... [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D v2.4.9 r86 (Release) for macOS ARM 64bit [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32m============================= [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mArguments....................(--process-export --export-option pdf --preferred-renderer native --projection orthographic --clear-cache --output-file /Users/ykondras/vid/assembly-manual/ldraw-edition/output/mesh-kit-lpub3d.pdf /Users/ykondras/vid/assembly-manual/ldraw-edition/mesh-kit.mpd) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mmacOS Binary Directory.......(MacOS) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mmacOS Base Directory.........(Applications) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Bundle App Path.......(/Applications) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Application Data Path.(/Users/ykondras/Library/Application Support/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Extras Resource Path..(/Applications/LPub3D.app/Contents/Resources) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Config File Path......(/Users/ykondras/Library/Preferences) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D 3D Editor Cache Path..(/Users/ykondras/Library/Caches/LPub3D Software/LPub3D) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Homebrew Installation.(Apple Silicon) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Homebrew Path Prefix..(/opt/homebrew/opt) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Loaded LDraw Library..(LEGO® Parts) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLPub3D Logging Level.........(STATUS (0), Levels: [status,info,trace,debug,notice,warning,error,fatal,off]) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mDebug Logging................(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mLog To Standard Output.......(Enabled) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mCheck For Updates............(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mAuto Restart On Abnormal End.(Disabled) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mSecure Socket Layer..........(Supported) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32mApplication Distribution.....(Installed) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32m----------------------------- [0m
+[22;32mINFO [0m2026-10-19T01:41:02.951 [22;32m5% - Loading library for LEGO® Parts... [0m
+[22;32mINFO [0m2026-10-19T01:41:02.952 [22;32m15% - Preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:41:02.968 [22;32mSystem Theme: Dark (1) [0m
+[22;32mINFO [0m2026-10-19T01:41:02.968 [22;32m15% - Selecting update settings... [0m
+[22;32mINFO [0m2026-10-19T01:41:02.968 [22;32mLGEO library status... [0m
+[22;32mINFO [0m2026-10-19T01:41:02.968 [22;32mLGEO library path  : Not found [0m
+[22;32mINFO [0m2026-10-19T01:41:02.968 [22;32mImage renderers... [0m
+[22;32mINFO [0m2026-10-19T01:41:02.969 [22;32mLDGLite : /Applications/LPub3D.app/Contents/3rdParty/ldglite-1.3/bin/ldglite [0m
+[22;32mINFO [0m2026-10-19T01:41:02.969 [22;32m25% - LPub3D macOS Required Library Check... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2677[0m 2026-10-19T01:41:02.969 [22;32mLDView  : /Applications/LPub3D.app/Contents/3rdParty/ldview-4.5/bin/LDView [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:41:03.559 [22;32mLibrary check - [/opt/homebrew/opt/libpng/lib/libpng.dylib] minimum :[1.6.37] installed:[1.6.59] [0m
+The following LDView libraries were not validated:  -/opt/X11/lib/libOSMesa.dylib - not found.  -/opt/homebrew/opt/gl2ps/lib/libgl2ps.dylib - not found.  -/opt/homebrew/opt/jpeg/lib/libjpeg.dylib - not found.  -/opt/homebrew/opt/tinyxml/lib/libtinyxml.dylib - not found.  -/opt/homebrew/opt/minizip/lib/libminizip.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2770[0m 2026-10-19T01:41:03.560 [22;32mPOVRay  : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/bin/lpub3d_trace_cui [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:41:03.884 [22;32mLibrary check - [/opt/homebrew/opt/libtiff/lib/libtiff.dylib] minimum :[4.0.10] installed:[4.7.2] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:41:04.319 [22;32mLibrary check - [/opt/homebrew/opt/sdl2/lib/libSDL2.dylib] minimum :[2.0.10] installed:[2.32.74] [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mvalidRendererLib[0m([22;36mconst QString &[0m,[22;36m const QString &[0m) [22;32m@ln 1302[0m 2026-10-19T01:41:04.638 [22;32mLibrary check - [/opt/homebrew/opt/openexr/lib/libOpenEXR.dylib] minimum :[2.3.0] installed:[3.5.2] [0m
+The following required POVRay libraries were not validated:  -/opt/X11/lib/libX11.dylib - not found. See /Applications/LPub3D.app/Contents/Resources/README_macOS.txt for details.
+[22;32mINFO [0m2026-10-19T01:41:04.638 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2887[0m 2026-10-19T01:41:04.638 [22;32mProcessing renderer configuration files... [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34msetLDGLiteIniParams[0m([22;36m[0m) [22;32m@ln 3151[0m 2026-10-19T01:41:04.638 [22;32mLDGLite.ini file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldglite-1.3/config/ldglite.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDVExportIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3166[0m 2026-10-19T01:41:04.638 [22;32mNative Export file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3249[0m 2026-10-19T01:41:04.639 [22;32mLDView ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdateLDViewPOVIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3322[0m 2026-10-19T01:41:04.639 [22;32mLDViewPOV ini file : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayConfFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3402[0m 2026-10-19T01:41:04.639 [22;32mPOVRay conf file   : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.conf [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mupdatePOVRayIniFile[0m([22;36mUpdateFlag[0m) [22;32m@ln 3608[0m 2026-10-19T01:41:04.639 [22;32mPOVRay ini file    : /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/lpub3d_trace_cui-3.8/config/povray.ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 2921[0m 2026-10-19T01:41:04.639 [22;32mBlender: not configured [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3015[0m 2026-10-19T01:41:04.639 [22;32mPOVRay ini path    : /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/ini [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3020[0m 2026-10-19T01:41:04.639 [22;32mPOVRay include path: /Applications/LPub3D.app/Contents/3rdParty/lpub3d_trace_cui-3.8/resources/include [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3025[0m 2026-10-19T01:41:04.639 [22;32mPOVRay scene path  : Not found [0m
+[22;32mINFO [0m[01;30mstatic [0m[22;32mPreferences[0m::[22;34mrendererPreferences[0m([22;36m[0m) [22;32m@ln 3027[0m 2026-10-19T01:41:04.639 [22;32mRenderer is Native. [0m
+[22;32mINFO [0m2026-10-19T01:41:04.642 [22;32m20% - OpenGL context initialization... [0m
+[22;32mINFO [0m2026-10-19T01:41:04.712 [22;32m25% - LPub3D GUI window loading... [0m
+[22;32mINFO [0m2026-10-19T01:41:04.722 [22;32m25% - LPub3D window defaults loading... [0m
+[22;32mINFO [0m2026-10-19T01:41:04.723 [22;32m30% - Visual Editor loading... [0m
+[22;32mINFO [0m2026-10-19T01:41:04.723 [22;32m40% - Visual Editor initialization... [0m
+[22;32mINFO [0m2026-10-19T01:41:04.723 [22;32m50% - Search directory preferences loading... [0m
+[22;32mINFO [0m2026-10-19T01:41:04.726 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:41:04.726 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:41:04.726 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+[22;32mINFO [0m2026-10-19T01:41:04.727 [22;32m70% - Skip parts archive per application preference... [0m
+Fade Steps is OFF.
+[22;32mINFO [0m2026-10-19T01:41:04.747 [22;32mFade Steps is OFF. [0m
+Highlight Step is OFF.
+[22;32mINFO [0m2026-10-19T01:41:04.747 [22;32mHighlight Step is OFF. [0m
+LDrawINI not found, loading LDSearch directories from registry key...
+[22;32mINFO [0m2026-10-19T01:41:04.747 [22;32mLDrawINI not found, loading LDSearch directories from registry key... [0m
+Added search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models
+[22;32mINFO [0m2026-10-19T01:41:04.747 [22;32mAdded search directory: /Users/ykondras/vid/assembly-manual/ldraw-edition/library/ldraw/models [0m
+[22;32mINFO [0m2026-10-19T01:41:07.727 [22;32m75% - Archive libraries loading... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip...
+[22;32mINFO [0m2026-10-19T01:41:07.728 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/complete.zip... [0m
+Loading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip...
+[22;32mINFO [0m2026-10-19T01:41:07.752 [22;32mLoading archive /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/libraries/lpub3dldrawunf.zip... [0m
+[22;32mINFO [0m2026-10-19T01:41:07.761 [22;32m85% - LPub3D initialization... [0m
+[22;32mINFO [0m2026-10-19T01:41:07.761 [22;32m90% - LPub3D widgets loading... [0m
+[22;32mINFO [0m2026-10-19T01:41:07.783 [22;32m95% - LDraw colors loading... [0m
+- Number of default openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:41:07.784 [22;34m- Number of default openWith programs: 0 [0m
+- Number of loaded openWith programs: 0
+[22;34mDEBUG [0m2026-10-19T01:41:07.784 [22;34m- Number of loaded openWith programs: 0 [0m
+[22;32mINFO [0m2026-10-19T01:41:07.784 [22;32m100% - LPub3D loaded. [0m
+Camera projection set to Orthographic
+[22;32mINFO [0m2026-10-19T01:41:07.784 [22;32mCamera projection set to Orthographic [0m
+Reset parts cache specified.
+[22;32mINFO [0m2026-10-19T01:41:07.784 [22;32mReset parts cache specified. [0m
+[22;32mINFO [0m2026-10-19T01:41:07.795 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldview.ini [0m
+[22;32mINFO [0m2026-10-19T01:41:07.796 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/3rdParty/ldview-4.5/config/ldviewPOV.ini [0m
+[22;32mINFO [0m2026-10-19T01:41:07.796 [22;32mUpdating LDV ExtraSearchDirs in /Users/ykondras/Library/Application Support/LPub3D Software/LPub3D/ldv/ldvExport.ini [0m
+File closed - /Users/ykondras/vid/assembly-manual/ldraw-edition/mesh-kit.mpd.
+[22;34mDEBUG [0m2026-10-19T01:41:07.796 [22;34mFile closed - /Users/ykondras/vid/assembly-manual/ldraw-edition/mesh-kit.mpd. [0m
+Loading file 'mesh-kit.mpd'...
+[22;32mINFO [0m2026-10-19T01:41:07.797 [22;32mLoading file 'mesh-kit.mpd'... [0m
+Reset parts cache is destructive!
+[22;35mTRACE [0m2026-10-19T01:41:07.801 [22;35mReset parts cache is destructive! [0m
+Reset parts cache directory /Users/ykondras/vid/assembly-manual/ldraw-edition
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mReset parts cache directory /Users/ykondras/vid/assembly-manual/ldraw-edition [0m
+Parts content cache cleaned. 0 items removed.
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mParts content cache cleaned. 0 items removed. [0m
+Bill of material content cache cleaned. 0 items removed.
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mBill of material content cache cleaned. 0 items removed. [0m
+Assembly content cache cleaned. 4 items removed.
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mAssembly content cache cleaned. 4 items removed. [0m
+Submodel content cache cleaned. 0 items removed.
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mSubmodel content cache cleaned. 0 items removed. [0m
+Temporary model file cache cleaned. 22 items removed.
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mTemporary model file cache cleaned. 22 items removed. [0m
+Parts, bill of material, assembly, submodel and temporary LDraw file caches reset (0 models, 0 parts). Elapsed time: 0.010 second
+[22;32mINFO [0m2026-10-19T01:41:07.801 [22;32mParts, bill of material, assembly, submodel and temporary LDraw file caches reset (0 models, 0 parts). Elapsed time: 0.010 second [0m
+All caches reset (0 models, 0 parts). Elapsed time: 0.010 second
+[22;32mINFO [0m2026-10-19T01:41:07.802 [22;32mAll caches reset (0 models, 0 parts). Elapsed time: 0.010 second [0m
+File 'mesh-kit.mpd' identified as Multi-Part LDraw System (MPD) Document
+[22;32mINFO [0m2026-10-19T01:41:07.802 [22;32mFile 'mesh-kit.mpd' identified as Multi-Part LDraw System (MPD) Document [0m
+Loading subfile 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:07.813 [22;32mLoading subfile 'mesh-kit.ldr'... [0m
+MPD model 'mesh-kit.ldr' with 92 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.813 [22;36mMPD model 'mesh-kit.ldr' with 92 lines loaded. [0m
+Loading subfile '01-parts.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.813 [22;32mLoading subfile '01-parts.dat'... [0m
+Subfile '01-parts.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile '01-parts.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part '01-parts.dat' with 15 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part '01-parts.dat' with 15 lines loaded. [0m
+Loading subfile '02-wifi.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile '02-wifi.dat'... [0m
+Subfile '02-wifi.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile '02-wifi.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part '02-wifi.dat' with 11 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part '02-wifi.dat' with 11 lines loaded. [0m
+Loading subfile '03-lora.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile '03-lora.dat'... [0m
+Subfile '03-lora.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile '03-lora.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part '03-lora.dat' with 11 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part '03-lora.dat' with 11 lines loaded. [0m
+Loading subfile '04-stack.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile '04-stack.dat'... [0m
+Subfile '04-stack.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile '04-stack.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part '04-stack.dat' with 26 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part '04-stack.dat' with 26 lines loaded. [0m
+Loading subfile 'inventory-lora-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile 'inventory-lora-cable.dat'... [0m
+Subfile 'inventory-lora-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile 'inventory-lora-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'inventory-lora-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part 'inventory-lora-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'inventory-wifi-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile 'inventory-wifi-cable.dat'... [0m
+Subfile 'inventory-wifi-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile 'inventory-wifi-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'inventory-wifi-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part 'inventory-wifi-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'lora-fpc.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile 'lora-fpc.dat'... [0m
+Subfile 'lora-fpc.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.814 [22;35mSubfile 'lora-fpc.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'lora-fpc.dat' with 45 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.814 [22;36mMPD Unofficial Part 'lora-fpc.dat' with 45 lines loaded. [0m
+Loading subfile 'press-arrow.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.814 [22;32mLoading subfile 'press-arrow.dat'... [0m
+Subfile 'press-arrow.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.815 [22;35mSubfile 'press-arrow.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'press-arrow.dat' with 10 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.815 [22;36mMPD Unofficial Part 'press-arrow.dat' with 10 lines loaded. [0m
+Loading subfile 'rf-plug.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.815 [22;32mLoading subfile 'rf-plug.dat'... [0m
+Subfile 'rf-plug.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.815 [22;35mSubfile 'rf-plug.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'rf-plug.dat' with 71 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.815 [22;36mMPD Unofficial Part 'rf-plug.dat' with 71 lines loaded. [0m
+Loading subfile 'step2-wifi-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.815 [22;32mLoading subfile 'step2-wifi-cable.dat'... [0m
+Subfile 'step2-wifi-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.815 [22;35mSubfile 'step2-wifi-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'step2-wifi-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.815 [22;36mMPD Unofficial Part 'step2-wifi-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'step3-lora-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.815 [22;32mLoading subfile 'step3-lora-cable.dat'... [0m
+Subfile 'step3-lora-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.815 [22;35mSubfile 'step3-lora-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'step3-lora-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.815 [22;36mMPD Unofficial Part 'step3-lora-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'step4-exploded-lora-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.815 [22;32mLoading subfile 'step4-exploded-lora-cable.dat'... [0m
+Subfile 'step4-exploded-lora-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.815 [22;35mSubfile 'step4-exploded-lora-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'step4-exploded-lora-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.816 [22;36mMPD Unofficial Part 'step4-exploded-lora-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'step4-exploded-wifi-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.816 [22;32mLoading subfile 'step4-exploded-wifi-cable.dat'... [0m
+Subfile 'step4-exploded-wifi-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.816 [22;35mSubfile 'step4-exploded-wifi-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'step4-exploded-wifi-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.816 [22;36mMPD Unofficial Part 'step4-exploded-wifi-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'step4-final-lora-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.816 [22;32mLoading subfile 'step4-final-lora-cable.dat'... [0m
+Subfile 'step4-final-lora-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.816 [22;35mSubfile 'step4-final-lora-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'step4-final-lora-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.816 [22;36mMPD Unofficial Part 'step4-final-lora-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'step4-final-wifi-cable.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.816 [22;32mLoading subfile 'step4-final-wifi-cable.dat'... [0m
+Subfile 'step4-final-wifi-cable.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.816 [22;35mSubfile 'step4-final-wifi-cable.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'step4-final-wifi-cable.dat' with 285 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.817 [22;36mMPD Unofficial Part 'step4-final-wifi-cable.dat' with 285 lines loaded. [0m
+Loading subfile 'wifi-fpc.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.817 [22;32mLoading subfile 'wifi-fpc.dat'... [0m
+Subfile 'wifi-fpc.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.817 [22;35mSubfile 'wifi-fpc.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'wifi-fpc.dat' with 45 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.817 [22;36mMPD Unofficial Part 'wifi-fpc.dat' with 45 lines loaded. [0m
+Loading subfile 'wio-kit-details.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.817 [22;32mLoading subfile 'wio-kit-details.dat'... [0m
+Subfile 'wio-kit-details.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.817 [22;35mSubfile 'wio-kit-details.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'wio-kit-details.dat' with 274 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.817 [22;36mMPD Unofficial Part 'wio-kit-details.dat' with 274 lines loaded. [0m
+Loading subfile 'wio-official.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.817 [22;32mLoading subfile 'wio-official.dat'... [0m
+Subfile 'wio-official.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.817 [22;35mSubfile 'wio-official.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'wio-official.dat' with 62518 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.878 [22;36mMPD Unofficial Part 'wio-official.dat' with 62518 lines loaded. [0m
+Loading subfile 'xiao-kit-details.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.878 [22;32mLoading subfile 'xiao-kit-details.dat'... [0m
+Subfile 'xiao-kit-details.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.878 [22;35mSubfile 'xiao-kit-details.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'xiao-kit-details.dat' with 446 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.879 [22;36mMPD Unofficial Part 'xiao-kit-details.dat' with 446 lines loaded. [0m
+Loading subfile 'xiao-official.dat'...
+[22;32mINFO [0m2026-10-19T01:41:07.879 [22;32mLoading subfile 'xiao-official.dat'... [0m
+Subfile 'xiao-official.dat' spcified as Unofficial Part.
+[22;35mTRACE [0m2026-10-19T01:41:07.879 [22;35mSubfile 'xiao-official.dat' spcified as Unofficial Part. [0m
+MPD Unofficial Part 'xiao-official.dat' with 31396 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.909 [22;36mMPD Unofficial Part 'xiao-official.dat' with 31396 lines loaded. [0m
+MPD file 'mesh-kit.mpd' with 97282 lines loaded.
+[22;36mNOTICE [0m2026-10-19T01:41:07.909 [22;36mMPD file 'mesh-kit.mpd' with 97282 lines loaded. [0m
+Model [mesh-kit.ldr] is a SUBMODEL
+[22;36mNOTICE [0m2026-10-19T01:41:07.910 [22;36mModel [mesh-kit.ldr] is a SUBMODEL [0m
+Part 01-parts.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:07.910 [22;36mPart 01-parts.dat is an INLINE PART. [0m
+Part xiao-official.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:07.910 [22;36mPart xiao-official.dat is an INLINE PART. [0m
+Part xiao-kit-details.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:07.940 [22;36mPart xiao-kit-details.dat is an INLINE PART. [0m
+Part wio-official.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:07.940 [22;36mPart wio-official.dat is an INLINE PART. [0m
+Part wio-kit-details.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.002 [22;36mPart wio-kit-details.dat is an INLINE PART. [0m
+Part wifi-fpc.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.002 [22;36mPart wifi-fpc.dat is an INLINE PART. [0m
+Part inventory-wifi-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.002 [22;36mPart inventory-wifi-cable.dat is an INLINE PART. [0m
+Part rf-plug.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.003 [22;36mPart rf-plug.dat is an INLINE PART. [0m
+Part lora-fpc.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.003 [22;36mPart lora-fpc.dat is an INLINE PART. [0m
+Part inventory-lora-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.003 [22;36mPart inventory-lora-cable.dat is an INLINE PART. [0m
+Part 02-wifi.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.003 [22;36mPart 02-wifi.dat is an INLINE PART. [0m
+Part step2-wifi-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.035 [22;36mPart step2-wifi-cable.dat is an INLINE PART. [0m
+Part press-arrow.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.036 [22;36mPart press-arrow.dat is an INLINE PART. [0m
+Part 03-lora.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.036 [22;36mPart 03-lora.dat is an INLINE PART. [0m
+Part step3-lora-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.097 [22;36mPart step3-lora-cable.dat is an INLINE PART. [0m
+Part 04-stack.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.097 [22;36mPart 04-stack.dat is an INLINE PART. [0m
+Part step4-exploded-wifi-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.188 [22;36mPart step4-exploded-wifi-cable.dat is an INLINE PART. [0m
+Part step4-exploded-lora-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.188 [22;36mPart step4-exploded-lora-cable.dat is an INLINE PART. [0m
+Part step4-final-wifi-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.280 [22;36mPart step4-final-wifi-cable.dat is an INLINE PART. [0m
+Part step4-final-lora-cable.dat is an INLINE PART.
+[22;36mNOTICE [0m2026-10-19T01:41:08.280 [22;36mPart step4-final-lora-cable.dat is an INLINE PART. [0m
+Loading user interface items...
+[22;32mINFO [0m2026-10-19T01:41:08.281 [22;32mLoading user interface items... [0m
+Open file '/Users/ykondras/vid/assembly-manual/ldraw-edition/mesh-kit.mpd' completed.
+[22;32mINFO [0m2026-10-19T01:41:08.283 [22;32mOpen file '/Users/ykondras/vid/assembly-manual/ldraw-edition/mesh-kit.mpd' completed. [0m
+Loaded LDraw MPD model file 'mesh-kit.mpd'. Unique Parts 0. Model Total Parts 47. Elapsed time: 0.480 second
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mLoaded LDraw MPD model file 'mesh-kit.mpd'. Unique Parts 0. Model Total Parts 47. Elapsed time: 0.480 second [0m
+Writing  submodel 'mesh-kit.ldr' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  submodel 'mesh-kit.ldr' to temp folder... [0m
+Writing  unofficial part '01-parts.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part '01-parts.dat' to temp folder... [0m
+Writing  unofficial part '02-wifi.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part '02-wifi.dat' to temp folder... [0m
+Writing  unofficial part '03-lora.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part '03-lora.dat' to temp folder... [0m
+Writing  unofficial part '04-stack.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part '04-stack.dat' to temp folder... [0m
+Writing  unofficial part 'inventory-lora-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part 'inventory-lora-cable.dat' to temp folder... [0m
+Writing  unofficial part 'inventory-wifi-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part 'inventory-wifi-cable.dat' to temp folder... [0m
+Writing  unofficial part 'lora-fpc.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part 'lora-fpc.dat' to temp folder... [0m
+Writing  unofficial part 'press-arrow.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part 'press-arrow.dat' to temp folder... [0m
+Writing  unofficial part 'rf-plug.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:08.284 [22;32mWriting  unofficial part 'rf-plug.dat' to temp folder... [0m
+Writing  unofficial part 'step2-wifi-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'step2-wifi-cable.dat' to temp folder... [0m
+Writing  unofficial part 'step3-lora-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'step3-lora-cable.dat' to temp folder... [0m
+Writing  unofficial part 'step4-exploded-lora-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'step4-exploded-lora-cable.dat' to temp folder... [0m
+Writing  unofficial part 'step4-exploded-wifi-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'step4-exploded-wifi-cable.dat' to temp folder... [0m
+Writing  unofficial part 'step4-final-lora-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'step4-final-lora-cable.dat' to temp folder... [0m
+Writing  unofficial part 'step4-final-wifi-cable.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'step4-final-wifi-cable.dat' to temp folder... [0m
+Writing  unofficial part 'wifi-fpc.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'wifi-fpc.dat' to temp folder... [0m
+Writing  unofficial part 'wio-kit-details.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'wio-kit-details.dat' to temp folder... [0m
+Writing  unofficial part 'wio-official.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'wio-official.dat' to temp folder... [0m
+Writing  unofficial part 'xiao-kit-details.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'xiao-kit-details.dat' to temp folder... [0m
+Writing  unofficial part 'xiao-official.dat' to temp folder...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mWriting  unofficial part 'xiao-official.dat' to temp folder... [0m
+21 files written to temp folder. Elapsed time: 0.245 second
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32m21 files written to temp folder. Elapsed time: 0.245 second [0m
+Processing find page for mesh-kit.ldr...
+Processing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:09.665 [22;32mProcessing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'... [0m
+Processing CSI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mProcessing CSI for mesh-kit.ldr... [0m
+Executing Native Orthographic CSI image render - please wait...
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mExecuting Native Orthographic CSI image render - please wait... [0m
+Native CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png'
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mNative CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png' [0m
+Native Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 2.2): 2221271, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mNative Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 2.2): 2221271, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+ [0m
+Native CSI render call took 1.020 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png for simple, single step 1 on page 1.
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mNative CSI render call took 1.020 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_1_1999_150_DPI_2.2_30_40_30.png for simple, single step 1 on page 1. [0m
+Processing PLI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mProcessing PLI for mesh-kit.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 1.127 second
+[22;35mTRACE [0m2026-10-19T01:41:09.666 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 1.127 second [0m
+Processed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'
+Processed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'
+[22;35mTRACE [0m2026-10-19T01:41:09.666 [22;35mProcessed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr' [0m
+Page 2 exported. Elapsed time: 1.381 second.
+[22;32mINFO [0m2026-10-19T01:41:09.666 [22;32mPage 2 exported. Elapsed time: 1.381 second. [0m
+Loaded LDraw file mesh-kit.mpd (4 pages, 47 parts). Elapsed time: 1.870 second
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:41:09.682 [22;32mNo files written to temp folder.  [0m
+Processing find page for mesh-kit.ldr...
+Page 1 exported. Elapsed time: 0.007 second.
+[22;32mINFO [0m2026-10-19T01:41:09.682 [22;32mPage 1 exported. Elapsed time: 0.007 second. [0m
+Starting export instructions to pdf...
+[22;32mINFO [0m2026-10-19T01:41:09.684 [22;32mStarting export instructions to pdf... [0m
+Export 4 pages to pdf
+[22;32mINFO [0m2026-10-19T01:41:09.684 [22;32mExport 4 pages to pdf [0m
+Exporting page  1 of 4...
+[22;32mINFO [0m2026-10-19T01:41:09.684 [22;32mExporting page  1 of 4... [0m
+                  Exporting page  1 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:41:09.684 [22;36m                  Exporting page  1 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:41:09.792 [22;32mNo files written to temp folder.  [0m
+Processing find page for mesh-kit.ldr...
+Processing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:09.792 [22;32mProcessing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'... [0m
+Processing CSI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:09.792 [22;32mProcessing CSI for mesh-kit.ldr... [0m
+Processing PLI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:09.792 [22;32mProcessing PLI for mesh-kit.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:41:09.792 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.102 second
+[22;35mTRACE [0m2026-10-19T01:41:09.792 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.102 second [0m
+Processed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'
+Processed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'
+[22;35mTRACE [0m2026-10-19T01:41:09.792 [22;35mProcessed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr' [0m
+Page 2 exported. Elapsed time: 0.117 second.
+[22;32mINFO [0m2026-10-19T01:41:09.792 [22;32mPage 2 exported. Elapsed time: 0.117 second. [0m
+Exporting page  2 of 4...
+[22;32mINFO [0m2026-10-19T01:41:09.803 [22;32mExporting page  2 of 4... [0m
+                  Exporting page  2 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:41:09.803 [22;36m                  Exporting page  2 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mNo files written to temp folder.  [0m
+Processing find page for mesh-kit.ldr...
+Processing single-step draw-page for page 2, step 2, model 'mesh-kit.ldr'...
+Processing single-step draw-page for page 2, step 2, model 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mProcessing single-step draw-page for page 2, step 2, model 'mesh-kit.ldr'... [0m
+Processing CSI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mProcessing CSI for mesh-kit.ldr... [0m
+Executing Native Orthographic CSI image render - please wait...
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mExecuting Native Orthographic CSI image render - please wait... [0m
+Native CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png'
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mNative CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png' [0m
+Native Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 2.7): 1809924, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mNative Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 2.7): 1809924, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+ [0m
+Native CSI render call took 0.376 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png for simple, single step 2 on page 2.
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mNative CSI render call took 0.376 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_2_1999_150_DPI_2.7_30_40_30.png for simple, single step 2 on page 2. [0m
+Processing PLI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mProcessing PLI for mesh-kit.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 2 - Elapsed time: 0.413 second
+[22;35mTRACE [0m2026-10-19T01:41:10.223 [22;35mLPub3D using Native render rendered page 2 - Elapsed time: 0.413 second [0m
+Processed single-step draw-page for page 2, step 2, model 'mesh-kit.ldr'
+Processed single-step draw-page for page 2, step 2, model 'mesh-kit.ldr'
+[22;35mTRACE [0m2026-10-19T01:41:10.223 [22;35mProcessed single-step draw-page for page 2, step 2, model 'mesh-kit.ldr' [0m
+Page 3 exported. Elapsed time: 0.548 second.
+[22;32mINFO [0m2026-10-19T01:41:10.223 [22;32mPage 3 exported. Elapsed time: 0.548 second. [0m
+Exporting page  3 of 4...
+[22;32mINFO [0m2026-10-19T01:41:10.230 [22;32mExporting page  3 of 4... [0m
+                  Exporting page  3 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:41:10.230 [22;36m                  Exporting page  3 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mNo files written to temp folder.  [0m
+Processing find page for mesh-kit.ldr...
+Processing single-step draw-page for page 3, step 3, model 'mesh-kit.ldr'...
+Processing single-step draw-page for page 3, step 3, model 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mProcessing single-step draw-page for page 3, step 3, model 'mesh-kit.ldr'... [0m
+Processing CSI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mProcessing CSI for mesh-kit.ldr... [0m
+Executing Native Orthographic CSI image render - please wait...
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mExecuting Native Orthographic CSI image render - please wait... [0m
+Native CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png'
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mNative CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png' [0m
+Native Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 2.7): 1809924, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mNative Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 2.7): 1809924, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+ [0m
+Native CSI render call took 0.715 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png for simple, single step 3 on page 3.
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mNative CSI render call took 0.715 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_3_1999_150_DPI_2.7_30_40_30.png for simple, single step 3 on page 3. [0m
+Processing PLI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mProcessing PLI for mesh-kit.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 3 - Elapsed time: 0.783 second
+[22;35mTRACE [0m2026-10-19T01:41:11.021 [22;35mLPub3D using Native render rendered page 3 - Elapsed time: 0.783 second [0m
+Processed single-step draw-page for page 3, step 3, model 'mesh-kit.ldr'
+Processed single-step draw-page for page 3, step 3, model 'mesh-kit.ldr'
+[22;35mTRACE [0m2026-10-19T01:41:11.021 [22;35mProcessed single-step draw-page for page 3, step 3, model 'mesh-kit.ldr' [0m
+Page 4 exported. Elapsed time: 1.345 second.
+[22;32mINFO [0m2026-10-19T01:41:11.021 [22;32mPage 4 exported. Elapsed time: 1.345 second. [0m
+Exporting page  4 of 4...
+[22;32mINFO [0m2026-10-19T01:41:11.028 [22;32mExporting page  4 of 4... [0m
+                  Exporting page  4 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1...
+[22;36mNOTICE [0m2026-10-19T01:41:11.028 [22;36m                  Exporting page  4 of 4, size(pixels) W 2000 x H 1125, orientation Landscape, DPI 150, pixel ratio 1... [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mNo files written to temp folder.  [0m
+Processing find page for mesh-kit.ldr...
+Processing single-step draw-page for page 4, step 4, model 'mesh-kit.ldr'...
+Processing single-step draw-page for page 4, step 4, model 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mProcessing single-step draw-page for page 4, step 4, model 'mesh-kit.ldr'... [0m
+Processing CSI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mProcessing CSI for mesh-kit.ldr... [0m
+Executing Native Orthographic CSI image render - please wait...
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mExecuting Native Orthographic CSI image render - please wait... [0m
+Native CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png'
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mNative CSI image file rendered '/Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png' [0m
+Native Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 1.6): 3054247, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mNative Renderer CSI Arguments: InputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/tmp/csi.ldr, OutputFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png, ImageFileName: /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png, ExportMode: PDF, TransBackground: True, HighlightNewParts: False, UseImageSize: False, LineWidth: 1, Resolution: 150, ImageWidth: 1999, ImageHeight: 1125, PageWidth: 1999, PageHeight: 1125, PreferencesFoV: 30, OptionsFoV: 30, CameraFoVy: 45, CameraZNear: 25, CameraZFar: 50000, CameraDDF: 8, CameraDistance (Scale: 1.6): 3054247, CameraName: Default, CameraProjection: Orthographic, UsingViewpoint: False, CameraLatitude: 40, CameraLongitude: 30, ZoomExtents: False, CameraTarget: X(0) Y(0) Z(0), LPubFadeHighlight: False, FadeParts: False, HighlightParts: False
+ [0m
+Native CSI render call took 1.042 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png for simple, single step 4 on page 4.
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mNative CSI render call took 1.042 second to render /Users/ykondras/vid/assembly-manual/ldraw-edition/LPub3D/assem/mesh-kit-0_1_0_0_0_1_0_0_0_1_4_1999_150_DPI_1.6_30_40_30.png for simple, single step 4 on page 4. [0m
+Processing PLI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mProcessing PLI for mesh-kit.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 4 - Elapsed time: 1.145 second
+[22;35mTRACE [0m2026-10-19T01:41:12.180 [22;35mLPub3D using Native render rendered page 4 - Elapsed time: 1.145 second [0m
+Processed single-step draw-page for page 4, step 4, model 'mesh-kit.ldr'
+Processed single-step draw-page for page 4, step 4, model 'mesh-kit.ldr'
+[22;35mTRACE [0m2026-10-19T01:41:12.180 [22;35mProcessed single-step draw-page for page 4, step 4, model 'mesh-kit.ldr' [0m
+Page 4 exported. Elapsed time: 2.505 seconds.
+[22;32mINFO [0m2026-10-19T01:41:12.180 [22;32mPage 4 exported. Elapsed time: 2.505 seconds. [0m
+No files written to temp folder. 
+[22;32mINFO [0m2026-10-19T01:41:12.206 [22;32mNo files written to temp folder.  [0m
+Processing find page for mesh-kit.ldr...
+Processing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'...
+Processing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'...
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mProcessing single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'... [0m
+Processing CSI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mProcessing CSI for mesh-kit.ldr... [0m
+Processing PLI for mesh-kit.ldr...
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mProcessing PLI for mesh-kit.ldr... [0m
+Generate CSI image for single-step page...
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mGenerate CSI image for single-step page... [0m
+LPub3D using Native render rendered page 1 - Elapsed time: 0.003 second
+[22;35mTRACE [0m2026-10-19T01:41:12.207 [22;35mLPub3D using Native render rendered page 1 - Elapsed time: 0.003 second [0m
+Processed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'
+Processed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr'
+[22;35mTRACE [0m2026-10-19T01:41:12.207 [22;35mProcessed single-step draw-page for page 1, step 1, model 'mesh-kit.ldr' [0m
+Page 1 loaded. Elapsed time: 0.011 second.
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mPage 1 loaded. Elapsed time: 0.011 second. [0m
+Model file 'mesh-kit.mpd' process succeeded (result code 0). Elapsed time: 4.422 seconds.
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mModel file 'mesh-kit.mpd' process succeeded (result code 0). Elapsed time: 4.422 seconds. [0m
+LPub3D Run: Application terminated with return code 0.
+[22;32mINFO [0m2026-10-19T01:41:12.207 [22;32mLPub3D Run: Application terminated with return code 0. [0m

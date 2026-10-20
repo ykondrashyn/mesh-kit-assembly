@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Assemble the XIAO ESP32S3 and Wio-SX1262 kit at your own pace. Scroll to connect the antennas and join the boards.">
+  <title>Mesh kit · Scroll to assemble</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <noscript><style>.controls, #scroll-hint, #assembly { display: none }</style></noscript>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main id="story" aria-label="Interactive mesh kit assembly">
+    <section id="stage" aria-label="Assembly viewer">
+      <header class="masthead">
+        <h1>XIAO <span>+</span> Wio</h1>
+        <p id="scroll-hint">Scroll to assemble <span aria-hidden="true">↓</span></p>
+      </header>
+      <div id="artwork">
+        <canvas id="assembly" role="img" aria-label="Assembly animation. Step 1, check the two boards and two antennas."></canvas>
+        <div id="load-state" role="status" aria-live="polite" hidden>
+          <span id="load-message">Loading assembly…</span>
+          <button id="retry" type="button" hidden>Try again</button>
+        </div>
+        <noscript>
+          <picture class="fallback">
+            <source media="(orientation: landscape)" srcset="./assets/landscape/frame-0034.webp">
+            <img src="./assets/portrait/frame-0034.webp" alt="The four kit parts: LoRa antenna, Wio-SX1262, Wi-Fi antenna and XIAO ESP32S3.">
+          </picture>
+          <p class="noscript-note">Enable JavaScript to scroll through the assembly.</p>
+        </noscript>
+      </div>
+      <footer class="controls">
+        <nav aria-label="Assembly steps">
+          <button type="button" data-chapter="parts" aria-current="step"><span class="number">01</span><span>Parts</span></button>
+          <button type="button" data-chapter="wifi"><span class="number">02</span><span>Wi-Fi</span></button>
+          <button type="button" data-chapter="lora"><span class="number">03</span><span>LoRa</span></button>
+          <button type="button" data-chapter="boards"><span class="number">04</span><span>Boards</span></button>
+          <button type="button" data-chapter="assembled"><span class="number" aria-hidden="true">✓</span><span>Assembled</span></button>
+        </nav>
+        <div class="progress-track" aria-hidden="true"><div id="progress-fill"></div></div>
+        <div id="motion-options" hidden>
+          <span id="motion-description">Reduced motion: chapter stills</span>
+          <button id="motion-toggle" type="button" aria-pressed="false">Enable full animation</button>
+        </div>
+      </footer>
+      <p id="chapter-announcement" class="visually-hidden" aria-live="polite" aria-atomic="true"></p>
+    </section>
+  </main>
+</body>
+</html>

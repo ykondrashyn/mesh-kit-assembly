@@ -1,0 +1,28 @@
+{
+  "source_blend_sha256": "e4e8e8e8f5d962225342deff002cefde00ac7d030160c0d6febc0d7fe42b0b43",
+  "baseline_blend_sha256": "7bd5a8abf7a5ed4165fcdfa6eced6bac9ab89d791170f4de8afa8cd523adaaac",
+  "original_frame_count": 450,
+  "final_frame_count": 510,
+  "inserted_hold_frames": [
+    35,
+    94
+  ],
+  "hold_source_frame": 34,
+  "subsequent_frame_offset": 60,
+  "identical_full_resolution_probe_frames": [
+    1,
+    34,
+    64,
+    94,
+    95,
+    106,
+    154,
+    259,
+    481,
+    510
+  ],
+  "all_native_blender_poses_match_source_frames": true,
+  "all_510_frame_checksums_match_mapped_originals": true,
+  "all_frame_sizes_verified": true,
+  "hold_created_from_verified_identical_Blender_pose": true
+}

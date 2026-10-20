@@ -1,0 +1,519 @@
+{
+  "blend_path": "/Users/ykondras/vid/assembly-manual/blender-edition/mesh-kit.blend",
+  "blender_version": "5.2.1 LTS",
+  "validation_is_read_only": true,
+  "scenes": [
+    {
+      "page": 1,
+      "name": "01 / Check the parts",
+      "camera_type": "ORTHO",
+      "objects": 168,
+      "diagrams": [
+        "part-xiao",
+        "part-wio",
+        "part-wifi",
+        "part-lora"
+      ],
+      "editable_text_objects": 17
+    },
+    {
+      "page": 2,
+      "name": "02 / Connect wifi",
+      "camera_type": "ORTHO",
+      "objects": 152,
+      "diagrams": [
+        "main-wifi",
+        "close-xiao-align",
+        "close-xiao-seated"
+      ],
+      "editable_text_objects": 7
+    },
+    {
+      "page": 3,
+      "name": "03 / Connect lora",
+      "camera_type": "ORTHO",
+      "objects": 69,
+      "diagrams": [
+        "main-lora",
+        "close-wio-align",
+        "close-wio-seated"
+      ],
+      "editable_text_objects": 10
+    },
+    {
+      "page": 4,
+      "name": "04 / Join the boards",
+      "camera_type": "ORTHO",
+      "objects": 326,
+      "diagrams": [
+        "main-exploded",
+        "close-b2b",
+        "main-assembled"
+      ],
+      "editable_text_objects": 17
+    },
+    {
+      "page": 5,
+      "name": "05 / All steps 01-04",
+      "camera_type": "ORTHO",
+      "objects": 512,
+      "diagrams": [
+        "part-xiao",
+        "part-wio",
+        "part-wifi",
+        "part-lora",
+        "main-wifi",
+        "close-xiao-align",
+        "main-lora",
+        "close-wio-align",
+        "main-exploded",
+        "close-b2b"
+      ],
+      "editable_text_objects": 24
+    }
+  ],
+  "board_views": [
+    {
+      "page": 1,
+      "diagram": "part-xiao",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 1,
+      "diagram": "part-wio",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    },
+    {
+      "page": 2,
+      "diagram": "main-wifi",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 3,
+      "diagram": "main-lora",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    },
+    {
+      "page": 4,
+      "diagram": "main-exploded",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 4,
+      "diagram": "main-exploded",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    },
+    {
+      "page": 4,
+      "diagram": "main-assembled",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 4,
+      "diagram": "main-assembled",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    },
+    {
+      "page": 5,
+      "diagram": "part-xiao",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 5,
+      "diagram": "part-wio",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    },
+    {
+      "page": 5,
+      "diagram": "main-wifi",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 5,
+      "diagram": "main-lora",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    },
+    {
+      "page": 5,
+      "diagram": "main-exploded",
+      "board": "xiao",
+      "official_solids": 37,
+      "expected": 37,
+      "complete": true
+    },
+    {
+      "page": 5,
+      "diagram": "main-exploded",
+      "board": "wio",
+      "official_solids": 9,
+      "expected": 9,
+      "complete": true
+    }
+  ],
+  "overlap_checks": [
+    {
+      "page": 4,
+      "diagram": "main-exploded",
+      "render_resolution": [
+        3200,
+        1800
+      ],
+      "xiao_projected_hull_vertices": 41,
+      "xiao_projected_hull_area_px2": 59011.402373926925,
+      "method": "Conservative complete XIAO hull versus every evaluated LoRa triangle, including cable bevel and film outline",
+      "components": {
+        "film": {
+          "objects": 2,
+          "triangles_checked": 108,
+          "intersection_area_upper_bound_px2": 0.0,
+          "minimum_clearance_from_xiao_convex_hull_px": 453.6248931884457,
+          "no_overlap": true
+        },
+        "cable": {
+          "objects": 1,
+          "triangles_checked": 976,
+          "intersection_area_upper_bound_px2": 0.0,
+          "minimum_clearance_from_xiao_convex_hull_px": 379.8346254352281,
+          "no_overlap": true
+        }
+      },
+      "no_lora_overlap_with_xiao": true
+    },
+    {
+      "page": 4,
+      "diagram": "main-assembled",
+      "render_resolution": [
+        3200,
+        1800
+      ],
+      "xiao_projected_hull_vertices": 42,
+      "xiao_projected_hull_area_px2": 27310.28548436873,
+      "method": "Conservative complete XIAO hull versus every evaluated LoRa triangle, including cable bevel and film outline",
+      "components": {
+        "film": {
+          "objects": 2,
+          "triangles_checked": 108,
+          "intersection_area_upper_bound_px2": 0.0,
+          "minimum_clearance_from_xiao_convex_hull_px": 210.5330695806521,
+          "no_overlap": true
+        },
+        "cable": {
+          "objects": 1,
+          "triangles_checked": 976,
+          "intersection_area_upper_bound_px2": 0.0,
+          "minimum_clearance_from_xiao_convex_hull_px": 70.43211165209729,
+          "no_overlap": true
+        }
+      },
+      "no_lora_overlap_with_xiao": true
+    },
+    {
+      "page": 5,
+      "diagram": "main-exploded",
+      "render_resolution": [
+        3200,
+        1800
+      ],
+      "xiao_projected_hull_vertices": 38,
+      "xiao_projected_hull_area_px2": 20230.343272172802,
+      "method": "Conservative complete XIAO hull versus every evaluated LoRa triangle, including cable bevel and film outline",
+      "components": {
+        "film": {
+          "objects": 2,
+          "triangles_checked": 108,
+          "intersection_area_upper_bound_px2": 0.0,
+          "minimum_clearance_from_xiao_convex_hull_px": 265.6014814834285,
+          "no_overlap": true
+        },
+        "cable": {
+          "objects": 1,
+          "triangles_checked": 976,
+          "intersection_area_upper_bound_px2": 0.0,
+          "minimum_clearance_from_xiao_convex_hull_px": 222.39660656037879,
+          "no_overlap": true
+        }
+      },
+      "no_lora_overlap_with_xiao": true
+    }
+  ],
+  "magnification_callouts": [
+    {
+      "page": 2,
+      "identifier": "RF plug detail",
+      "details": [
+        "close-xiao-align / move or scale this view",
+        "close-xiao-seated / move or scale this view"
+      ],
+      "has_source_ring_frame_and_leader": true,
+      "frame_count": 2,
+      "frames_are_true_circles": true,
+      "source_exists_in_same_scene": true,
+      "details_exist_in_same_scene": true,
+      "leader_is_not_a_motion_arrow": true
+    },
+    {
+      "page": 3,
+      "identifier": "RF plug detail",
+      "details": [
+        "close-wio-align / move or scale this view",
+        "close-wio-seated / move or scale this view"
+      ],
+      "has_source_ring_frame_and_leader": true,
+      "frame_count": 2,
+      "frames_are_true_circles": true,
+      "source_exists_in_same_scene": true,
+      "details_exist_in_same_scene": true,
+      "leader_is_not_a_motion_arrow": true
+    },
+    {
+      "page": 4,
+      "identifier": "Board connector detail",
+      "details": [
+        "close-b2b / move or scale this view"
+      ],
+      "has_source_ring_frame_and_leader": true,
+      "frame_count": 1,
+      "frames_are_true_circles": true,
+      "source_exists_in_same_scene": true,
+      "details_exist_in_same_scene": true,
+      "leader_is_not_a_motion_arrow": true
+    },
+    {
+      "page": 5,
+      "identifier": "Board connector detail",
+      "details": [
+        "close-b2b / move or scale this view.001"
+      ],
+      "has_source_ring_frame_and_leader": true,
+      "frame_count": 1,
+      "frames_are_true_circles": true,
+      "source_exists_in_same_scene": true,
+      "details_exist_in_same_scene": true,
+      "leader_is_not_a_motion_arrow": true
+    },
+    {
+      "page": 5,
+      "identifier": "LoRa plug detail",
+      "details": [
+        "close-wio-align / move or scale this view.001"
+      ],
+      "has_source_ring_frame_and_leader": true,
+      "frame_count": 1,
+      "frames_are_true_circles": true,
+      "source_exists_in_same_scene": true,
+      "details_exist_in_same_scene": true,
+      "leader_is_not_a_motion_arrow": true
+    },
+    {
+      "page": 5,
+      "identifier": "Wi-Fi plug detail",
+      "details": [
+        "close-xiao-align / move or scale this view.001"
+      ],
+      "has_source_ring_frame_and_leader": true,
+      "frame_count": 1,
+      "frames_are_true_circles": true,
+      "source_exists_in_same_scene": true,
+      "details_exist_in_same_scene": true,
+      "leader_is_not_a_motion_arrow": true
+    }
+  ],
+  "closeup_views": [
+    {
+      "page": 2,
+      "diagram": "close-xiao-align",
+      "linked_callout": "RF plug detail",
+      "circle": [
+        1640,
+        386,
+        208
+      ],
+      "maximum_geometry_radius": 196.00008248118849,
+      "clearance": 11.999917518811515,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 2,
+      "diagram": "close-xiao-seated",
+      "linked_callout": "RF plug detail",
+      "circle": [
+        1640,
+        846,
+        208
+      ],
+      "maximum_geometry_radius": 196.00007088546255,
+      "clearance": 11.999929114537451,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 3,
+      "diagram": "close-wio-align",
+      "linked_callout": "RF plug detail",
+      "circle": [
+        1640,
+        386,
+        208
+      ],
+      "maximum_geometry_radius": 196.00012515136322,
+      "clearance": 11.999874848636779,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 3,
+      "diagram": "close-wio-seated",
+      "linked_callout": "RF plug detail",
+      "circle": [
+        1640,
+        846,
+        208
+      ],
+      "maximum_geometry_radius": 196.00003740641617,
+      "clearance": 11.999962593583831,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 4,
+      "diagram": "close-b2b",
+      "linked_callout": "Board connector detail",
+      "circle": [
+        1120,
+        600,
+        320
+      ],
+      "maximum_geometry_radius": 308.0000406548281,
+      "clearance": 11.999959345171874,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 5,
+      "diagram": "close-xiao-align",
+      "linked_callout": "Wi-Fi plug detail",
+      "circle": [
+        1780,
+        405,
+        180
+      ],
+      "maximum_geometry_radius": 167.9999837238511,
+      "clearance": 12.000016276148898,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 5,
+      "diagram": "close-wio-align",
+      "linked_callout": "LoRa plug detail",
+      "circle": [
+        785,
+        865,
+        180
+      ],
+      "maximum_geometry_radius": 168.00005579904706,
+      "clearance": 11.999944200952939,
+      "all_geometry_inside_circle": true
+    },
+    {
+      "page": 5,
+      "diagram": "close-b2b",
+      "linked_callout": "Board connector detail",
+      "circle": [
+        1770,
+        865,
+        185
+      ],
+      "maximum_geometry_radius": 173.00003005534074,
+      "clearance": 11.999969944659256,
+      "all_geometry_inside_circle": true
+    }
+  ],
+  "blend_sha256": "6e2fe7d92bf656096fe6b93db24671c8286dc085f4e34a2d45763f3d97c98bf7",
+  "fonts": [
+    {
+      "name": "Arial Bold",
+      "filepath": "//../../../../../System/Library/Fonts/Supplemental/Arial Bold.ttf",
+      "packed": true,
+      "users": 18
+    },
+    {
+      "name": "Arial Regular",
+      "filepath": "//../../../../../System/Library/Fonts/Supplemental/Arial.ttf",
+      "packed": true,
+      "users": 57
+    },
+    {
+      "name": "Bfont Regular",
+      "filepath": "<builtin>",
+      "packed": false,
+      "users": 225
+    }
+  ],
+  "images": [],
+  "raster_input_nodes": [],
+  "rf_plugs": {
+    "instances": 20,
+    "shared_mesh_names": [
+      "RF plug / ipex_mhf_i_20278_official_plug",
+      "RF plug / ipex_mhf_i_20351_official_plug"
+    ],
+    "triangle_counts": [
+      18149,
+      18821
+    ],
+    "instances_by_antenna": {
+      "wifi": 10,
+      "lora": 10
+    },
+    "observed_cm_stamps": 10,
+    "provenance": "Two complete I-PEX MHF I reference meshes. 1.13 mm / 13 for Wi-Fi, 1.37 mm / 37 for LoRa. Separate C M artwork follows user observation, meaning unverified."
+  },
+  "checks": {
+    "five_native_scenes": true,
+    "all_orthographic": true,
+    "all_font_files_packed": true,
+    "no_raster_inputs": true,
+    "all_official_board_views_complete": true,
+    "combined_page_has_all_three_closeups": true,
+    "lora_does_not_overlap_xiao_in_step4": true,
+    "all_rf_plugs_use_correct_complete_manufacturer_variant": true,
+    "every_lora_plug_has_observed_cm_stamp": true,
+    "every_closeup_has_a_magnification_callout": true,
+    "all_eight_insets_are_true_circles": true,
+    "all_closeup_geometry_fits_inside_circles": true,
+    "six_complete_linked_callouts": true
+  },
+  "passed": true
+}

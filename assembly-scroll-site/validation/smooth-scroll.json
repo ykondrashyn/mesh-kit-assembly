@@ -1,0 +1,222 @@
+{
+  "passed": true,
+  "browser": "153.0.8010.37",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollHeight": 10800,
+      "forward": [
+        {
+          "frame": 0,
+          "time": 456.5
+        },
+        {
+          "frame": 3,
+          "time": 506.5
+        },
+        {
+          "frame": 5,
+          "time": 523.2
+        },
+        {
+          "frame": 7,
+          "time": 539.9
+        },
+        {
+          "frame": 9,
+          "time": 556.5
+        },
+        {
+          "frame": 11,
+          "time": 573.2
+        },
+        {
+          "frame": 12,
+          "time": 589.8
+        },
+        {
+          "frame": 13,
+          "time": 606.5
+        },
+        {
+          "frame": 14,
+          "time": 623.1
+        },
+        {
+          "frame": 15,
+          "time": 656.5
+        },
+        {
+          "frame": 16,
+          "time": 673.2
+        },
+        {
+          "frame": 17,
+          "time": 706.5
+        },
+        {
+          "frame": 18,
+          "time": 773.2
+        },
+        {
+          "frame": 19,
+          "time": 973.1
+        }
+      ],
+      "backward": [
+        {
+          "frame": 19,
+          "time": 1023.1
+        },
+        {
+          "frame": 17,
+          "time": 1056.5
+        },
+        {
+          "frame": 16,
+          "time": 1073.2
+        },
+        {
+          "frame": 15,
+          "time": 1089.8
+        },
+        {
+          "frame": 14,
+          "time": 1106.5
+        },
+        {
+          "frame": 13,
+          "time": 1123.1
+        },
+        {
+          "frame": 12,
+          "time": 1156.5
+        },
+        {
+          "frame": 11,
+          "time": 1189.8
+        },
+        {
+          "frame": 10,
+          "time": 1256.5
+        },
+        {
+          "frame": 9,
+          "time": 1456.5
+        }
+      ],
+      "settledWithoutOvershoot": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollHeight": 10128,
+      "forward": [
+        {
+          "frame": 0,
+          "time": 467.7
+        },
+        {
+          "frame": 3,
+          "time": 517.7
+        },
+        {
+          "frame": 6,
+          "time": 534.4
+        },
+        {
+          "frame": 8,
+          "time": 551
+        },
+        {
+          "frame": 10,
+          "time": 567.7
+        },
+        {
+          "frame": 11,
+          "time": 584.3
+        },
+        {
+          "frame": 13,
+          "time": 601
+        },
+        {
+          "frame": 14,
+          "time": 617.7
+        },
+        {
+          "frame": 15,
+          "time": 634.4
+        },
+        {
+          "frame": 16,
+          "time": 667.7
+        },
+        {
+          "frame": 17,
+          "time": 684.3
+        },
+        {
+          "frame": 18,
+          "time": 717.6
+        },
+        {
+          "frame": 19,
+          "time": 767.7
+        },
+        {
+          "frame": 20,
+          "time": 901
+        }
+      ],
+      "backward": [
+        {
+          "frame": 20,
+          "time": 1051
+        },
+        {
+          "frame": 18,
+          "time": 1084.4
+        },
+        {
+          "frame": 17,
+          "time": 1101
+        },
+        {
+          "frame": 16,
+          "time": 1117.7
+        },
+        {
+          "frame": 15,
+          "time": 1134.3
+        },
+        {
+          "frame": 14,
+          "time": 1151
+        },
+        {
+          "frame": 13,
+          "time": 1184.3
+        },
+        {
+          "frame": 12,
+          "time": 1217.7
+        },
+        {
+          "frame": 11,
+          "time": 1267.7
+        },
+        {
+          "frame": 10,
+          "time": 1367.7
+        }
+      ],
+      "settledWithoutOvershoot": true
+    }
+  ]
+}

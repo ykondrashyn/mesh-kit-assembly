@@ -1,0 +1,17 @@
+Use case: scientific-educational.
+Asset type: wide 2:1 assembly instruction illustration on a pure white background, for a minimal IKEA-like or LEGO-like manual.
+Primary request: accurately illustrate stacking the Wio-SX1262 expansion board onto the XIAO ESP32S3 using their tiny B2B connector, with both antennas already attached.
+
+Input images are hardware references, not edit targets. The original two-board photo shows the XIAO component face on the RIGHT and the Wio UNDERSIDE on the LEFT. The assembled photo shows Wio on TOP, its component face upward, with USB-C from XIAO visible at the front bottom. Official diagrams are reference for component positions, rotate them 180 degrees to put USB-C toward viewer.
+
+Style: crisp BLACK technical contour drawing, white faces with restrained light-gray component faces, uniform precise outlines, elegant simplified product details, restrained isometric perspective. No photo textures, shadows, gradients, color, text, titles, numbers, logos, branding or watermark.
+
+Composition: large exploded stack fills left 60% of the image. A simple right-pointing arrow in middle. Smaller completely seated assembly fills right 30%. Leave broad white margins. No decorative objects.
+
+EXPLODED VIEW:
+Lower board is XIAO ESP32S3, front COMPONENT face UP, USB-C toward viewer at bottom/front. Main rectangular RF shield on top face. Tiny Wi-Fi U.FL socket at far upper-right corner connected to broad rectangular FPC Wi-Fi antenna, cable routed to the RIGHT, outside the board outline. Narrow rectangular black B2B connector on top face at far upper-left, opposite USB-C. Use proper small edge solder pads, no tall pin headers.
+Upper board is Wio-SX1262, hovering directly above in the SAME orientation and SAME dimensions, top COMPONENT face UP. Seven EMPTY circular side holes on EACH long side. Large mounting hole and small pushbutton near the FRONT/USB end. Rectangular radio shield toward FAR end. Tiny LoRa U.FL socket near FAR LEFT corner, connected to long slim strip FPC LoRa antenna routed LEFT, entirely outside board outline. Wio UNDERSIDE has the short black B2B mating connector at its far edge, aligned over XIAO's B2B. Only this low-profile B2B connection joins the boards. Show short connector in gap if visible.
+Align board corners vertically, use thin vertical dashed guide lines and two bold DOWN arrows in the air gap. Keep the two antenna cables out of the gap and away from guide lines.
+
+FINISHED VIEW on right:
+Two boards seated in parallel with small realistic separation, Wio above and XIAO below. USB-C clearly visible at front bottom. Wio top shows large mounting hole, pushbutton, radio shield and seven empty side holes per edge. Both antenna cables visibly exit FAR end outside the boards. Long slim LoRa FPC antenna on LEFT, broader rectangular Wi-Fi FPC antenna on RIGHT. No header pins running between boards. Do not show electrical connections through side holes. Match both boards and antennas exactly between views.

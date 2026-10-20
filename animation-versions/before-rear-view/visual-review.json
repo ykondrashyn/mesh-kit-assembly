@@ -1,0 +1,50 @@
+{
+  "review_frames": [
+    1,
+    16,
+    31,
+    46,
+    61,
+    76,
+    91,
+    106,
+    121,
+    136,
+    151,
+    166,
+    181,
+    196,
+    211,
+    226,
+    241,
+    256,
+    271,
+    286,
+    301,
+    316,
+    331,
+    346,
+    361,
+    376,
+    391,
+    406,
+    421,
+    436,
+    450
+  ],
+  "final_hold_identical_pixels": [
+    421,
+    430,
+    440,
+    450
+  ],
+  "viewport_render_matches": [
+    1,
+    140,
+    245,
+    335,
+    450
+  ],
+  "white_background": true,
+  "all_visuals_rendered_in_blender": true
+}
