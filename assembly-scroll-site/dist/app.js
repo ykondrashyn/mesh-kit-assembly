@@ -1,4 +1,4 @@
-import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame } from './timeline.mjs';
+import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit } from './timeline.mjs';
 import { FrameLoader } from './frame-loader.mjs';
 
 const story = document.querySelector('#story');
@@ -53,7 +53,9 @@ function resizeStage() {
     height: Math.round(nextFit.height * ratio),
   };
   variant = nextVariant;
-  loader.selectVariant(variant);
+  const resolution = resolutionForFit(nextFit, dimensions.resolutions, window.devicePixelRatio || 1);
+  loader.selectVariant(variant, resolution);
+  stage.dataset.resolution = resolution.id;
   stage.dataset.orientation = variant;
   displayedKey = '';
   window.scrollTo({ top: savedProgress * scrollSpan(), behavior: 'instant' });
@@ -99,7 +101,7 @@ function render(now) {
   stage.dataset.settled = String(progress === targetProgress);
   stage.dataset.decodedFrames = String(loader.cache.size);
   stage.dataset.maxDecodedFrames = String(loader.maxDecoded);
-  const key = `${variant}:${index}`;
+  const key = `${variant}:${loader.resolution.id}:${index}`;
   const bitmap = loader.get(index);
   if (bitmap) {
     if (displayedKey !== key) {

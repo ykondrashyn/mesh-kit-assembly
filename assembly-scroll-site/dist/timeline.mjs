@@ -22,6 +22,11 @@ export function variantForStage(width, height) {
   return width > height ? 'landscape' : 'portrait';
 }
 
+export function resolutionForFit(fit, resolutions, pixelRatio = 1) {
+  const required = Math.min(fit.width, fit.height) * clamp(pixelRatio, 1, 2);
+  return resolutions.find(item => Math.min(item.width, item.height) >= required) || resolutions.at(-1);
+}
+
 export function fitFrame(width, height, sourceWidth, sourceHeight) {
   const scale = Math.min(width / sourceWidth, height / sourceHeight);
   const fittedWidth = sourceWidth * scale;

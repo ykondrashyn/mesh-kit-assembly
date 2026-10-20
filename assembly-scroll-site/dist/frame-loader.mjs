@@ -15,8 +15,8 @@ export class FrameLoader {
     this.disposed = false;
   }
 
-  selectVariant(variant) {
-    if (variant === this.variant) return;
+  selectVariant(variant, resolution = this.manifest.variants[variant].resolutions.at(-1)) {
+    if (variant === this.variant && resolution.id === this.resolution?.id) return;
     this.epoch++;
     for (const controller of this.jobs.values()) controller.abort();
     this.jobs.clear();
@@ -25,6 +25,7 @@ export class FrameLoader {
     this.errors.clear();
     this.order = [];
     this.variant = variant;
+    this.resolution = resolution;
   }
 
   request(target, direction = 1, stillsOnly = false) {
@@ -46,7 +47,7 @@ export class FrameLoader {
 
   url(index) {
     const source = String(this.manifest.frames[index]).padStart(4, '0');
-    return `./assets/${this.variant}/frame-${source}.webp?v=${this.manifest.version}`;
+    return `${this.resolution.urlTemplate.replace('{frame}', source)}?v=${this.manifest.version}`;
   }
 
   pump() {

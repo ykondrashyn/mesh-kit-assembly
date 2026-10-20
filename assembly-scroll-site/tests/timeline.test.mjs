@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, nearbyFrames } from '../dist/timeline.mjs';
+import { easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, nearbyFrames, resolutionForFit } from '../dist/timeline.mjs';
 
 const manifest = JSON.parse(readFileSync(new URL('../dist/assets/manifest.json', import.meta.url)));
 
@@ -29,6 +29,20 @@ test('source map retains all motion and excludes only duplicated holds', () => {
     ...Array.from({ length: 34 }, (_, i) => i + 1),
     ...Array.from({ length: 387 }, (_, i) => i + 95),
   ]);
+});
+
+test('image resolution matches fitted size and caps high-density demand', () => {
+  const choices = manifest.variants.portrait.resolutions;
+  assert.equal(resolutionForFit({ width: 351, height: 624 }, choices, 1).id, '540');
+  assert.equal(resolutionForFit({ width: 351, height: 624 }, choices, 2).id, '720');
+  assert.equal(resolutionForFit({ width: 351, height: 624 }, choices, 4).id, '720');
+  assert.equal(resolutionForFit({ width: 800, height: 1422 }, choices, 2).id, '1080');
+  for (const variant of Object.values(manifest.variants)) {
+    assert.deepEqual(variant.resolutions.map(item => item.id), ['540', '720', '1080']);
+    for (const resolution of variant.resolutions) {
+      assert.equal(resolution.width / resolution.height, variant.width / variant.height);
+    }
+  }
 });
 
 test('forward and reverse mapping round-trip all frames with clamped endpoints', () => {

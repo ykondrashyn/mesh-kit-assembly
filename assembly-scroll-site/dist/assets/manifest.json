@@ -1,5 +1,5 @@
 {
-  "version": "f07ee06519caab83",
+  "version": "6654678198c78ad9",
   "frames": [
     1,
     2,
@@ -426,11 +426,51 @@
   "variants": {
     "landscape": {
       "width": 1920,
-      "height": 1080
+      "height": 1080,
+      "resolutions": [
+        {
+          "id": "540",
+          "width": 960,
+          "height": 540,
+          "urlTemplate": "./assets/landscape/540/frame-{frame}.webp"
+        },
+        {
+          "id": "720",
+          "width": 1280,
+          "height": 720,
+          "urlTemplate": "./assets/landscape/720/frame-{frame}.webp"
+        },
+        {
+          "id": "1080",
+          "width": 1920,
+          "height": 1080,
+          "urlTemplate": "./assets/landscape/frame-{frame}.webp"
+        }
+      ]
     },
     "portrait": {
       "width": 1080,
-      "height": 1920
+      "height": 1920,
+      "resolutions": [
+        {
+          "id": "540",
+          "width": 540,
+          "height": 960,
+          "urlTemplate": "./assets/portrait/540/frame-{frame}.webp"
+        },
+        {
+          "id": "720",
+          "width": 720,
+          "height": 1280,
+          "urlTemplate": "./assets/portrait/720/frame-{frame}.webp"
+        },
+        {
+          "id": "1080",
+          "width": 1080,
+          "height": 1920,
+          "urlTemplate": "./assets/portrait/frame-{frame}.webp"
+        }
+      ]
     }
   },
   "chapters": [
