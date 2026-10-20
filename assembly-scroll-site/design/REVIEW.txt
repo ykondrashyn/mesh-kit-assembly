@@ -1,0 +1,74 @@
+ASSEMBLY VIEWER: VISUAL HIERARCHY REVIEW
+2026-10-20
+
+Observed on the live GitHub Pages viewer and checked against its source.
+
+The two progress indicators have different origins. Four segments are
+embedded in the Blender images, while a continuous line belongs to the
+website footer. The viewer now hides the embedded segments using a small
+display clip. It retains the bottom line and the full artwork geometry.
+The original images, movies and Blender files are unchanged.
+
+The remaining clutter comes from repeated interface layers:
+- The website title repeats the kit name already inside each image.
+- The scroll hint and "Scroll at your own pace" repeat the same guidance.
+- Navigation, motion settings and instructions occupy three footer rows.
+- The persistent resolution message describes an implementation detail.
+
+RECOMMENDED LAYOUT
+
+Use the existing image's step heading, illustration and short instruction
+as the main content. Remove the extra website title. Keep one bottom
+chapter row with names and one thin progress line below it. On phones,
+put chapter numbers above their names and keep generous touch targets.
+
+Show "Scroll to assemble" at the beginning, then hide it after the first
+intentional scroll. Move written instructions and the optional still mode
+into one plainly labelled "Instructions & options" disclosure. Preserve
+automatic reduced motion and make its animation opt-in easy to find.
+
+Show loading feedback only while necessary. Remove the persistent
+resolution announcement from the default visual layout. Keep readable
+error and retry controls when something actually fails.
+
+Do not remove useful connector captions, labels or the simplified-socket
+note merely to make the design sparse. Keep keyboard chapter navigation,
+visible focus and screen-reader descriptions. A smaller visual control
+must still have a usable pointer target.
+
+layout-concept.html demonstrates the proposed layout with the original
+chapter stills and working chapter buttons. It is a visual proposal,
+not the continuous-animation implementation. Open it directly in a browser.
+The main site's only implemented visual change is hiding the extra bar.
+Nothing from this review has been deployed.
+
+VALIDATION
+
+All 14 existing timeline and loader tests passed. Six focused browser
+checks covered desktop and phone chapter poses, wheel scrolling, reverse
+jumps, still-mode selection, orientation changes, progress preservation,
+no-JavaScript image fitting, and concept navigation. Screenshots were
+reviewed in both orientations. Results are in validation/single-progress.json.
+Checks used Chromium on macOS with emulated viewport sizes. Physical
+devices, Safari and Firefox were not checked.
+
+SOURCES
+
+Nielsen Norman Group, Aesthetic and Minimalist Design:
+https://www.nngroup.com/articles/aesthetic-minimalist-design/
+Reduce competing, low-value information without removing useful controls.
+
+Nielsen Norman Group, Progressive Disclosure:
+https://www.nngroup.com/articles/progressive-disclosure/
+Keep primary tasks visible and make secondary functions available on demand.
+
+W3C, WCAG 2.2, Target Size (Minimum):
+https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+Target size or spacing matters even when controls are visually minimal.
+
+W3C, WCAG 2.2, Animation from Interactions:
+https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html
+Retain a way to disable interaction-driven motion.
+
+These principles support the recommendation. The precise arrangement is a
+design proposal, not a claim that this layout has passed user testing.

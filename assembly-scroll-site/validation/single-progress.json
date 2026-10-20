@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-20T18:32:22.433Z",
+  "browser": "153.0.8010.37",
+  "checks": [
+    {
+      "name": "desktop chapter poses, reverse jump, wheel scrolling, still toggle, resize handoff, one progress track",
+      "passed": true
+    },
+    {
+      "name": "desktop no-JavaScript image retains aspect ratio and hides duplicate bar",
+      "passed": true,
+      "width": 1333.328125,
+      "height": 749.984375,
+      "clip": "inset(0px 0px 5.92593%)",
+      "source": "http://127.0.0.1:8766/assets/landscape/540/frame-0034.webp"
+    },
+    {
+      "name": "desktop layout concept and chapter navigation",
+      "passed": true
+    },
+    {
+      "name": "phone chapter poses, reverse jump, wheel scrolling, still toggle, resize handoff, one progress track",
+      "passed": true
+    },
+    {
+      "name": "phone no-JavaScript image retains aspect ratio and hides duplicate bar",
+      "passed": true,
+      "width": 351,
+      "height": 624,
+      "clip": "inset(0px 0px 3.33333%)",
+      "source": "http://127.0.0.1:8766/assets/portrait/540/frame-0034.webp"
+    },
+    {
+      "name": "phone layout concept and chapter navigation",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Chromium viewport emulation only. No physical devices, Safari or Firefox."
+  ],
+  "completed": true,
+  "unit_tests_passed": 14,
+  "runtime_hashes": {
+    "dist/index.html": "ecaf46a553d630c1bca676eeb385e335105d01ea296d0d872be616fef525da49",
+    "dist/styles.css": "834efe5c61b3bd34a92fc8b466fb3900d673af243d8a0d6086f05251e7b89b0f"
+  }
+}

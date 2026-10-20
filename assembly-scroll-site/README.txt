@@ -54,6 +54,14 @@ and no overshoot. Chapter links jump directly to a step. Resize and device
 orientation changes retain progress. Drawing stops once the position
 settles. Reading time is controlled by the visitor pausing their scroll.
 
+The viewer shows one progress bar, below the chapter links. CSS hides the
+duplicate track embedded in the bottom 64 pixels of the Blender frames,
+including the baseline parts image. Artwork sizing and all source files
+remain unchanged. The display mask follows the image actually on screen.
+validation/single-progress.json and its screenshots cover this display
+change. design/layout-concept.html is a separate chapter-still proposal
+for simplifying the remaining interface, not the production viewer.
+
 The loader prioritizes the newest target and nearby frames. Active
 requests finish during normal scrolling instead of being repeatedly
 cancelled. Changes to orientation or resolution cancel the old selection.
