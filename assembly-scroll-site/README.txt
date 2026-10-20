@@ -1,9 +1,10 @@
 MESH KIT: SCROLL TO ASSEMBLE
 
-A standalone local website driven by normal page scrolling.
+A static website driven by normal page scrolling.
+Live site: https://ykondrashyn.github.io/mesh-kit-assembly/
 Scroll down to assemble, scroll up to reverse, or select a chapter.
 Wheel, trackpad, touch and keyboard use native scrolling. There is no
-sound, autoplay, backend or deployment.
+sound, autoplay or backend.
 
 PREVIEW
 
@@ -120,5 +121,15 @@ REPOSITORY
 The Git repository lives in the parent assembly-manual directory and
 includes the existing manuals and media. Its initial commit preserves
 the state before these improvements. Python environments, Python caches
-and macOS metadata are ignored. No remote is configured and nothing is
-pushed or published.
+and macOS metadata are ignored. The repository is published at
+https://github.com/ykondrashyn/mesh-kit-assembly.
+
+GITHUB PAGES
+
+.github/workflows/pages.yml at the repository root publishes only dist.
+It uses a sparse checkout of this site, runs the unit tests and validates
+all exported frame hashes with scripts/verify_publish.py. Relevant changes
+on main deploy automatically. The Actions tab also supports manual runs.
+Original Blender projects, videos and manual archives remain in the
+repository and are not part of the Pages payload. Local validation
+reports retain the context in which their measurements were captured.
