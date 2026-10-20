@@ -156,6 +156,7 @@ laboratory measurements on this Mac, not field Core Web Vitals or physical
 phone results. Safari, Firefox and physical devices remain unverified.
 clean-layout.json covers the simplified interface, with screenshots for
 desktop, tablet, phone, small phone and short landscape viewports.
+clean-layout-live.json repeats those checks against GitHub Pages.
 
 REPOSITORY
 

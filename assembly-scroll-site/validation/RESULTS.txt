@@ -45,9 +45,25 @@ original files are unchanged. Twelve-viewport scroll travel, 100 ms easing,
 
 PUBLICATION
 
-Local validation is complete. Publication and live verification will be
-recorded after this source revision is deployed. Earlier live-source and
-continuous-scroll-live evidence remains historical until replaced.
+Published source: 07e08526bd10e7c709fa3c64884883f370be5070.
+GitHub Actions run 39477577365 completed successfully, including the unit
+tests, asset verification and Pages deployment. The five served runtime
+files and frame manifest match the local SHA-256 hashes in live-source.json.
+
+All five layout checks also passed on the public site. Continuous native
+wheel scrolling passed in all three profiles, forward and backward:
+desktop: 540p, 142 forward updates, 232 reverse updates
+desktop-throttled: 540p, 67 forward updates, 84 reverse updates
+phone-throttled: 540p, 77 forward updates, 90 reverse updates
+
+All live profiles kept animation active, displayed intermediate poses,
+settled on exact endpoints and respected download and bitmap limits.
+No uncaught JavaScript errors occurred. Live screenshots were reviewed in
+both orientations. A cold connection may lower resolution even without
+synthetic throttling, as it did in the desktop run.
+
+clean-layout-live.json and continuous-scroll-live.json record these checks.
+The public URL is https://ykondrashyn.github.io/mesh-kit-assembly/.
 
 LIMITS AND REPRODUCTION
 
