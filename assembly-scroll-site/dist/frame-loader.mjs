@@ -1,9 +1,15 @@
 import { nearbyFrames } from './timeline.mjs';
 
+export const MAX_IMAGES = 12;
+export const MAX_DECODED_BYTES = 48 * 1024 * 1024;
+export const MAX_REQUESTS = 4;
+
 export class FrameLoader {
-  constructor(manifest, notify) {
+  constructor(manifest, notify, { fetchFrame = globalThis.fetch, decodeFrame = globalThis.createImageBitmap } = {}) {
     this.manifest = manifest;
     this.notify = notify;
+    this.fetchFrame = fetchFrame.bind(globalThis);
+    this.decodeFrame = decodeFrame.bind(globalThis);
     this.variant = null;
     this.epoch = 0;
     this.cache = new Map();
@@ -11,17 +17,20 @@ export class FrameLoader {
     this.errors = new Map();
     this.order = [];
     this.decodeChain = Promise.resolve();
+    this.decodedBytes = 0;
+    this.reservedBytes = 0;
     this.maxDecoded = 0;
+    this.maxDecodedBytes = 0;
+    this.maxRequests = 0;
     this.disposed = false;
   }
 
   selectVariant(variant, resolution = this.manifest.variants[variant].resolutions.at(-1)) {
     if (variant === this.variant && resolution.id === this.resolution?.id) return;
     this.epoch++;
-    for (const controller of this.jobs.values()) controller.abort();
-    this.jobs.clear();
-    for (const bitmap of this.cache.values()) bitmap.close();
-    this.cache.clear();
+    for (const job of this.jobs.values()) job.controller.abort();
+    // Keep aborted jobs accounted for until their promises settle.
+    for (const index of this.cache.keys()) this.evict(index);
     this.errors.clear();
     this.order = [];
     this.variant = variant;
@@ -30,72 +39,99 @@ export class FrameLoader {
 
   request(target, direction = 1, stillsOnly = false) {
     this.target = target;
-    this.order = stillsOnly ? [target] : nearbyFrames(target, direction, this.manifest.frames.length);
-    for (const [index, controller] of this.jobs) {
-      if (!this.order.includes(index)) controller.abort();
-    }
+    const capacity = Math.min(MAX_IMAGES, Math.floor(MAX_DECODED_BYTES / this.imageBytes));
+    this.order = stillsOnly ? [target] : nearbyFrames(target, direction, this.manifest.frames.length, capacity);
+    // Replace queued work, but let active downloads finish so scrolling cannot starve them.
     this.pump();
   }
+
+  get imageBytes() { return this.resolution.width * this.resolution.height * 4; }
+  get allocatedBytes() { return this.decodedBytes + this.reservedBytes; }
+  get allocatedImages() { return this.cache.size + Number(this.reservedBytes > 0); }
+  get(index) { return this.cache.get(index); }
+  error(index) { return this.errors.get(index); }
 
   retry() {
     this.errors.clear();
     this.pump();
   }
 
-  get(index) { return this.cache.get(index); }
-  error(index) { return this.errors.get(index); }
-
   url(index) {
     const source = String(this.manifest.frames[index]).padStart(4, '0');
     return `${this.resolution.urlTemplate.replace('{frame}', source)}?v=${this.manifest.version}`;
   }
 
+  evict(index) {
+    const bitmap = this.cache.get(index);
+    this.decodedBytes -= bitmap.width * bitmap.height * 4;
+    bitmap.close();
+    this.cache.delete(index);
+  }
+
+  reserve(bytes) {
+    while (this.cache.size && (this.cache.size >= MAX_IMAGES || this.decodedBytes + bytes > MAX_DECODED_BYTES)) {
+      const victim = [...this.cache.keys()].sort((a, b) =>
+        Number(this.order.includes(a)) - Number(this.order.includes(b)) ||
+        Math.abs(b - this.target) - Math.abs(a - this.target))[0];
+      this.evict(victim);
+    }
+    this.reservedBytes = bytes;
+    this.maxDecoded = Math.max(this.maxDecoded, this.allocatedImages);
+    this.maxDecodedBytes = Math.max(this.maxDecodedBytes, this.allocatedBytes);
+  }
+
   pump() {
     if (this.disposed) return;
     for (const index of this.order) {
-      if (this.jobs.size >= 4) break;
+      if (this.jobs.size >= MAX_REQUESTS) break;
       if (this.cache.has(index) || this.jobs.has(index) || this.errors.has(index)) continue;
-      const controller = new AbortController();
-      this.jobs.set(index, controller);
-      this.load(index, controller, this.epoch);
+      const job = { controller: new AbortController(), epoch: this.epoch };
+      this.jobs.set(index, job);
+      this.maxRequests = Math.max(this.maxRequests, this.jobs.size);
+      this.load(index, job);
     }
   }
 
-  async load(index, controller, epoch) {
-    const valid = () => !this.disposed && epoch === this.epoch &&
-      !controller.signal.aborted && this.order.includes(index);
+  async load(index, job) {
+    const { controller, epoch } = job;
+    const valid = () => !this.disposed && epoch === this.epoch;
+    const wanted = () => valid() && this.order.includes(index);
+    const expectedBytes = this.imageBytes;
+    let timedOut = false;
+    const timeout = setTimeout(() => { timedOut = true; controller.abort(); }, 8000);
     try {
-      const response = await fetch(this.url(index), { signal: controller.signal, cache: 'force-cache' });
+      const response = await this.fetchFrame(this.url(index), { signal: controller.signal, cache: 'force-cache' });
       if (!response.ok) throw new Error(`Frame request returned ${response.status}`);
       const blob = await response.blob();
+      clearTimeout(timeout);
       const decode = this.decodeChain.then(async () => {
-        if (!valid()) return;
-        // Decode serially, releasing an image first so the total stays at 12.
-        if (this.cache.size >= 12) {
-          const victim = [...this.cache.keys()].sort((a, b) =>
-            Number(this.order.includes(a)) - Number(this.order.includes(b)) ||
-            Math.abs(b - this.target) - Math.abs(a - this.target))[0];
-          this.cache.get(victim).close();
-          this.cache.delete(victim);
+        if (!wanted()) return;
+        this.reserve(expectedBytes);
+        let bitmap;
+        try {
+          bitmap = await this.decodeFrame(blob);
+          if (!wanted() || bitmap.width * bitmap.height * 4 !== expectedBytes) {
+            bitmap.close();
+            if (wanted()) throw new Error('Unexpected frame dimensions');
+            return;
+          }
+          this.cache.set(index, bitmap);
+          this.decodedBytes += expectedBytes;
+        } finally {
+          this.reservedBytes = 0;
         }
-        const bitmap = await createImageBitmap(blob);
-        if (!valid()) {
-          bitmap.close();
-          return;
-        }
-        this.cache.set(index, bitmap);
-        this.maxDecoded = Math.max(this.maxDecoded, this.cache.size);
         this.notify();
       });
       this.decodeChain = decode.catch(() => {});
       await decode;
     } catch (error) {
-      if (valid() && error.name !== 'AbortError') {
-        this.errors.set(index, error.message);
+      if (wanted() && (timedOut || error.name !== 'AbortError')) {
+        this.errors.set(index, timedOut ? 'Frame request timed out' : error.message);
         this.notify();
       }
     } finally {
-      if (this.jobs.get(index) === controller) this.jobs.delete(index);
+      clearTimeout(timeout);
+      if (this.jobs.get(index) === job) this.jobs.delete(index);
       this.pump();
     }
   }
@@ -103,8 +139,7 @@ export class FrameLoader {
   dispose() {
     this.disposed = true;
     this.epoch++;
-    for (const controller of this.jobs.values()) controller.abort();
-    for (const bitmap of this.cache.values()) bitmap.close();
-    this.cache.clear();
+    for (const job of this.jobs.values()) job.controller.abort();
+    for (const index of this.cache.keys()) this.evict(index);
   }
 }

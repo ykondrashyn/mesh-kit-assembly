@@ -39,11 +39,12 @@ export function fitFrame(width, height, sourceWidth, sourceHeight) {
   };
 }
 
-export function nearbyFrames(target, direction, count) {
+export function nearbyFrames(target, direction, count, limit = 12) {
   const result = [target];
-  for (let offset = 1; offset <= 8; offset++) {
+  const behind = Math.floor((limit - 1) / 3);
+  for (let offset = 1; offset < limit - behind; offset++) {
     result.push(target + offset * direction);
-    if (offset <= 3) result.push(target - offset * direction);
+    if (offset <= behind) result.push(target - offset * direction);
   }
   return [...new Set(result)].filter(index => index >= 0 && index < count);
 }

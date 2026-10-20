@@ -9,6 +9,9 @@ const context = canvas.getContext('2d', { alpha: false });
 const loadState = document.querySelector('#load-state');
 const loadMessage = document.querySelector('#load-message');
 const retry = document.querySelector('#retry');
+const progressFill = document.querySelector('#progress-fill');
+const scrollHint = document.querySelector('#scroll-hint');
+const announcement = document.querySelector('#chapter-announcement');
 const navButtons = [...document.querySelectorAll('[data-chapter]')];
 const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
 const motionOptions = document.querySelector('#motion-options');
@@ -18,9 +21,10 @@ let previousTick = 0;
 let raf = 0, loadingTimer = 0, pendingSince = 0, pendingKey = '';
 let displayedKey = '', currentChapter = '', variant = '', fitted, fittedStyle;
 let fullMotionOverride = false, resizePending = false, booting = false;
+let cachedScrollSpan = 1, hintAtEnd = false, previousProgress = -1, stylePending = true;
 
 function reducedMotion() { return reducedQuery.matches && !fullMotionOverride; }
-function scrollSpan() { return Math.max(1, story.offsetHeight - stage.offsetHeight); }
+function scrollSpan() { return cachedScrollSpan; }
 function schedule() { if (!raf) raf = requestAnimationFrame(render); }
 
 function showLoad(message, failed = false) {
@@ -36,7 +40,7 @@ function resizeStage() {
   const nextVariant = variantForStage(width, height);
   const dimensions = manifest.variants[nextVariant];
   const nextFit = fitFrame(width, height, dimensions.width, dimensions.height);
-  const ratio = Math.min(window.devicePixelRatio || 1, 2, dimensions.width / nextFit.width);
+  const resolution = resolutionForFit(nextFit, dimensions.resolutions, window.devicePixelRatio || 1);
   fittedStyle = {
     width: `${nextFit.width}px`, height: `${nextFit.height}px`,
     left: `${nextFit.left}px`, top: `${nextFit.top}px`,
@@ -49,25 +53,22 @@ function resizeStage() {
     left: `${shownFit.left}px`, top: `${shownFit.top}px`,
   });
   fitted = {
-    width: Math.round(nextFit.width * ratio),
-    height: Math.round(nextFit.height * ratio),
+    width: resolution.width,
+    height: resolution.height,
   };
   variant = nextVariant;
-  const resolution = resolutionForFit(nextFit, dimensions.resolutions, window.devicePixelRatio || 1);
   loader.selectVariant(variant, resolution);
   stage.dataset.resolution = resolution.id;
   stage.dataset.orientation = variant;
   displayedKey = '';
+  stylePending = true;
+  cachedScrollSpan = Math.max(1, story.offsetHeight - stage.offsetHeight);
   window.scrollTo({ top: savedProgress * scrollSpan(), behavior: 'instant' });
   targetProgress = savedProgress;
 }
 
 function updateNavigation(index) {
   const chapter = chapterAtFrame(index, manifest.chapters);
-  document.querySelector('#progress-fill').style.transform = `scaleX(${progress})`;
-  document.querySelector('#scroll-hint').innerHTML = progress >= .999 ?
-    'Scroll back to disassemble <span aria-hidden="true">↑</span>' :
-    'Scroll to assemble <span aria-hidden="true">↓</span>';
   if (currentChapter === chapter.id) return;
   currentChapter = chapter.id;
   for (const button of navButtons) {
@@ -75,7 +76,7 @@ function updateNavigation(index) {
     else button.removeAttribute('aria-current');
   }
   canvas.setAttribute('aria-label', chapter.description);
-  document.querySelector('#chapter-announcement').textContent = chapter.description;
+  announcement.textContent = chapter.description;
 }
 
 function render(now) {
@@ -93,7 +94,16 @@ function render(now) {
   lastIndex = logicalIndex;
   const chapter = chapterAtFrame(logicalIndex, manifest.chapters);
   const index = reducedMotion() ? chapter.stillIndex : logicalIndex;
-  updateNavigation(logicalIndex);
+  if (progress !== previousProgress) {
+    progressFill.style.transform = `scaleX(${progress})`;
+    previousProgress = progress;
+  }
+  const atEnd = progress >= .999;
+  if (atEnd !== hintAtEnd) {
+    hintAtEnd = atEnd;
+    scrollHint.firstChild.textContent = atEnd ? 'Scroll back to disassemble ' : 'Scroll to assemble ';
+    scrollHint.querySelector('span').textContent = atEnd ? '↑' : '↓';
+  }
   loader.request(index, direction, reducedMotion());
   stage.dataset.requestedFrame = String(index);
   stage.dataset.progress = progress.toFixed(6);
@@ -101,20 +111,27 @@ function render(now) {
   stage.dataset.settled = String(progress === targetProgress);
   stage.dataset.decodedFrames = String(loader.cache.size);
   stage.dataset.maxDecodedFrames = String(loader.maxDecoded);
+  stage.dataset.decodedBytes = String(loader.allocatedBytes);
+  stage.dataset.maxDecodedBytes = String(loader.maxDecodedBytes);
+  stage.dataset.maxRequests = String(loader.maxRequests);
   const key = `${variant}:${loader.resolution.id}:${index}`;
   const bitmap = loader.get(index);
   if (bitmap) {
     if (displayedKey !== key) {
-      Object.assign(canvas.style, fittedStyle);
+      if (stylePending) {
+        Object.assign(canvas.style, fittedStyle);
+        stylePending = false;
+      }
       if (canvas.width !== fitted.width || canvas.height !== fitted.height) {
         canvas.width = fitted.width;
         canvas.height = fitted.height;
       }
-      context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+      context.drawImage(bitmap, 0, 0);
       displayedKey = key;
       canvas.dataset.frame = String(index);
       canvas.dataset.sourceFrame = String(manifest.frames[index]);
       canvas.dataset.orientation = variant;
+      updateNavigation(index);
     }
     loadState.hidden = true;
     clearTimeout(loadingTimer);
@@ -161,6 +178,7 @@ async function boot() {
     document.documentElement.classList.add('enhanced');
     motionOptions.hidden = !reducedQuery.matches;
     document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+    cachedScrollSpan = Math.max(1, story.offsetHeight - stage.offsetHeight);
     progress = targetProgress = clamp(window.scrollY / scrollSpan());
     resizeStage();
     navButtons.forEach(button => button.disabled = false);
