@@ -15,6 +15,8 @@ const state = page => page.evaluate(() => ({
   progress: Number(document.querySelector('#stage').dataset.progress),
   decoded: Number(document.querySelector('#stage').dataset.decodedFrames),
   maxDecoded: Number(document.querySelector('#stage').dataset.maxDecodedFrames),
+  maxDecodedBytes: Number(document.querySelector('#stage').dataset.maxDecodedBytes),
+  maxRequests: Number(document.querySelector('#stage').dataset.maxRequests),
 }));
 async function waitFrame(page, index) {
   await page.waitForFunction(i => Number(document.querySelector('canvas').dataset.frame) === i, index);
@@ -22,14 +24,14 @@ async function waitFrame(page, index) {
 async function waitSettled(page) {
   await page.waitForFunction(() => document.querySelector('#stage').dataset.settled === 'true');
 }
-async function go(page, index, expected = index) {
+async function go(page, index, expected = index, settle = true) {
   await page.evaluate(i => {
     const span = document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight;
     window.scrollTo(0, i / 420 * span);
   }, index);
   await page.waitForFunction(i => Number(document.querySelector('#stage').dataset.requestedFrame) === i, expected);
   await waitFrame(page, expected);
-  await waitSettled(page);
+  if (settle) await waitSettled(page);
 }
 async function fits(page) {
   const bounds = await page.evaluate(() => {
@@ -48,7 +50,7 @@ async function fits(page) {
 }
 async function run(name, fn) {
   if (process.env.SKIP_FULL_TRAVERSAL && /travers/.test(name)) {
-    results.push({ name, skipped: true, reason: 'Frame assets are unchanged, verified in the previous full traversal.' });
+    results.push({ name, skipped: true, reason: 'Explicitly skipped by SKIP_FULL_TRAVERSAL.' });
     return;
   }
   const details = await fn();
@@ -93,10 +95,13 @@ async function run(name, fn) {
       return { forward, backward };
     });
     await run('complete forward and reverse frame traversal', async () => {
-      for (let index = 0; index <= 420; index++) await go(page, index);
-      for (let index = 420; index >= 0; index--) await go(page, index);
+      for (let index = 0; index <= 420; index++) await go(page, index, index, false);
+      for (let index = 420; index >= 0; index--) await go(page, index, index, false);
+      await waitSettled(page);
       const final = await state(page);
       assert.ok(final.maxDecoded <= 12);
+      assert.ok(final.maxDecodedBytes <= 48 * 1024 * 1024);
+      assert.ok(final.maxRequests <= 4);
       return { positionsChecked: 842, ...final };
     });
     await run('desktop labels and connection seating views fit', async () => {
@@ -148,10 +153,13 @@ async function run(name, fn) {
     await run('portrait traverses every frame forward and backward', async () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
-      for (let index = 0; index <= 420; index++) await go(page, index);
-      for (let index = 420; index >= 0; index--) await go(page, index);
+      for (let index = 0; index <= 420; index++) await go(page, index, index, false);
+      for (let index = 420; index >= 0; index--) await go(page, index, index, false);
+      await waitSettled(page);
       const result = await state(page);
       assert.ok(result.maxDecoded <= 12);
+      assert.ok(result.maxDecodedBytes <= 48 * 1024 * 1024);
+      assert.ok(result.maxRequests <= 4);
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'landscape');
       return { positionsChecked: 842, ...result };

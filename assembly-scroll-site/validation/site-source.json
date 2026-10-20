@@ -2,21 +2,29 @@
   "local_preview": "http://127.0.0.1:8766/",
   "publication": "local only",
   "source_sha256": {
-    "dist/app.js": "44729c8f642c4824dc674e3e5ed25f0a7f81384b48041cb68e73469d7b0850a7",
-    "dist/frame-loader.mjs": "3263cbc08f7216c0253073e768f6ef17fa4fc941d997f11638441cb49ac711c4",
-    "dist/index.html": "b93291cadb5c00ba3f3f1d6b0e704211db2fb8238e630470d798e1e941901244",
-    "dist/styles.css": "005e5e646714546204c6ce104996b17a101d420568783cbf643bcdde58076766",
-    "dist/timeline.mjs": "f00c13910047066a00c813a6a23972441ccf02f1468fd4ec9c6e1fe5b6503200"
+    "dist/app.js": "82947402c2ff720f2e1e84cbcf7988012d2e9a70bedbd1fd15bf3740a42e9ce0",
+    "dist/frame-loader.mjs": "57e410b36cac2660e750a39991d798bd5af6cbe5f7718041510c2fbd3f8184f4",
+    "dist/index.html": "b7b6a1412176e88ce8f264e174380148392dc27e8dce98304d2547623fa05f1e",
+    "dist/styles.css": "2fb339f483c2faed09b5662b92ff769cc379eeb9403a0ded3dc736224327d356",
+    "dist/timeline.mjs": "9ad0e4e0f10cc59f34575f0ae138615201ad498dbdd895bab6ed16c49ca603ad",
+    "dist/assets/manifest.json": "eb68dd04657fca5c1e7fddb9d73ea21c6263de37a2027e70ab794f536b3951d4"
   },
   "browser": "153.0.8010.37",
-  "browser_checks_passed": 12,
-  "timeline_tests_passed": 6,
+  "browser_checks_passed": 14,
+  "fallback_checks_passed": 5,
+  "unit_tests_passed": 12,
+  "traversed_positions": 1684,
+  "exported_frames_checked": 2526,
+  "protected_files_checked": 30,
   "scroll_viewport_heights": 12,
   "easing_response_ms": 100,
-  "smoothing_checked_in_both_layouts": true,
-  "unchanged_asset_traversal_evidence": "browser-validation-before-smoothing.json",
   "maximum_decoded_frames": 12,
+  "maximum_decoded_pixel_bytes": 50331648,
+  "maximum_loader_jobs": 4,
+  "fallback_lag_threshold_ms": 800,
   "limitations": [
-    "Chromium tested on macOS. Safari, Firefox and physical mobile devices were not tested."
+    "Chromium tested on macOS. Safari, Firefox and physical mobile devices were not tested.",
+    "Network and CPU throttling are synthetic laboratory conditions.",
+    "Bitmap pixel limits exclude canvas buffers, GPU storage and other browser overhead."
   ]
 }

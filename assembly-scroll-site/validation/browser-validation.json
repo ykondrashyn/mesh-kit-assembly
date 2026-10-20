@@ -52,7 +52,9 @@
           "orientation": "landscape",
           "progress": 0.074074,
           "decoded": 12,
-          "maxDecoded": 12
+          "maxDecoded": 12,
+          "maxDecodedBytes": 44236800,
+          "maxRequests": 4
         },
         "backward": {
           "frame": 12,
@@ -60,14 +62,26 @@
           "orientation": "landscape",
           "progress": 0.027778,
           "decoded": 12,
-          "maxDecoded": 12
+          "maxDecoded": 12,
+          "maxDecodedBytes": 44236800,
+          "maxRequests": 4
         }
       }
     },
     {
       "name": "complete forward and reverse frame traversal",
-      "skipped": true,
-      "reason": "Frame assets are unchanged, verified in the previous full traversal."
+      "passed": true,
+      "details": {
+        "positionsChecked": 842,
+        "frame": 0,
+        "requested": 0,
+        "orientation": "landscape",
+        "progress": 0,
+        "decoded": 12,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
+      }
     },
     {
       "name": "desktop labels and connection seating views fit",
@@ -262,9 +276,11 @@
         "frame": 420,
         "requested": 420,
         "orientation": "landscape",
-        "progress": 0.998833,
+        "progress": 0.998835,
         "decoded": 12,
-        "maxDecoded": 12
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
       }
     },
     {
@@ -276,13 +292,25 @@
         "orientation": "landscape",
         "progress": 1,
         "decoded": 4,
-        "maxDecoded": 12
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
       }
     },
     {
       "name": "portrait traverses every frame forward and backward",
-      "skipped": true,
-      "reason": "Frame assets are unchanged, verified in the previous full traversal."
+      "passed": true,
+      "details": {
+        "positionsChecked": 842,
+        "frame": 0,
+        "requested": 0,
+        "orientation": "portrait",
+        "progress": 0,
+        "decoded": 12,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
+      }
     },
     {
       "name": "orientation change rejects a delayed old-orientation frame",
@@ -292,8 +320,10 @@
         "requested": 150,
         "orientation": "landscape",
         "progress": 0.35713,
-        "decoded": 11,
-        "maxDecoded": 12
+        "decoded": 6,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
       }
     },
     {
@@ -305,7 +335,9 @@
         "orientation": "landscape",
         "progress": 0.047593,
         "decoded": 12,
-        "maxDecoded": 12
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
       }
     },
     {
@@ -317,7 +349,9 @@
         "orientation": "landscape",
         "progress": 0.595278,
         "decoded": 12,
-        "maxDecoded": 12
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
       }
     },
     {
@@ -329,7 +363,9 @@
         "orientation": "landscape",
         "progress": 0.30713,
         "decoded": 12,
-        "maxDecoded": 12
+        "maxDecoded": 12,
+        "maxDecodedBytes": 44236800,
+        "maxRequests": 4
       }
     },
     {
@@ -341,7 +377,9 @@
         "orientation": "portrait",
         "progress": 0.380924,
         "decoded": 12,
-        "maxDecoded": 12
+        "maxDecoded": 12,
+        "maxDecodedBytes": 24883200,
+        "maxRequests": 4
       }
     },
     {
@@ -355,12 +393,14 @@
       "name": "emulated phone touch swipe advances the assembly",
       "passed": true,
       "details": {
-        "frame": 14,
-        "requested": 14,
+        "frame": 13,
+        "requested": 13,
         "orientation": "portrait",
-        "progress": 0.032489,
+        "progress": 0.031974,
         "decoded": 6,
-        "maxDecoded": 6
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
       }
     }
   ],

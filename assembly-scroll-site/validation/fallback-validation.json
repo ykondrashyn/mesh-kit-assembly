@@ -15,7 +15,7 @@
     {
       "name": "automatic still fallback and explicit recovery",
       "passed": true,
-      "elapsedMs": 1011,
+      "elapsedMs": 962,
       "lagMs": 817
     },
     {
