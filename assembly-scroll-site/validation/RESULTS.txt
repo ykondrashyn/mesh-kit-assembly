@@ -16,7 +16,15 @@ All 2,526 WebP assets match their existing hashes. The only changed file
 under dist is assets/manifest.json, containing three targetIndex changes.
 No full-sequence traversal, Safari, Firefox or physical-device testing was
 repeated for this navigation-only fix. See chapter-navigation.json and
-its screenshots. Publication verification will be recorded separately.
+its screenshots.
+
+Published source: cf41fe15632118ff418f5726d60bf2ea64c33f95.
+GitHub Actions run 39482559546 completed successfully. The same six
+chapter checks passed on GitHub Pages in both orientations, including
+forward and reverse wheel scrolling through all three connections.
+All five runtime files and the served manifest match the published
+commit. See chapter-navigation-live.json, its six screenshots and
+chapter-navigation-live-source.json for the source fingerprints.
 
 PREVIOUS CLEANER LAYOUT VALIDATION, BEFORE THE CHAPTER LINK CORRECTION
 

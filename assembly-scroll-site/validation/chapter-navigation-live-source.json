@@ -1,0 +1,44 @@
+{
+  "url": "https://ykondrashyn.github.io/mesh-kit-assembly/",
+  "sourceCommit": "cf41fe15632118ff418f5726d60bf2ea64c33f95",
+  "workflowRun": 39482559546,
+  "verifiedAt": "2026-10-20T19:21:03.589227+00:00",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "8f40d454714ce025f0e1836013150703775631d0e31a422f0473c47f878d7e0a",
+      "bytes": 4192,
+      "matches": true
+    },
+    {
+      "path": "styles.css",
+      "sha256": "cc2ba7dc4e27c5ff674e5db56fe2f79faee92dfeef980ca690b2827d714b7cd4",
+      "bytes": 5220,
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "sha256": "f27c28003b8978e3d4d710c8ab3fa24ebb86e519fa103da7137cb4e19ecd9f03",
+      "bytes": 11520,
+      "matches": true
+    },
+    {
+      "path": "timeline.mjs",
+      "sha256": "9ad0e4e0f10cc59f34575f0ae138615201ad498dbdd895bab6ed16c49ca603ad",
+      "bytes": 1844,
+      "matches": true
+    },
+    {
+      "path": "frame-loader.mjs",
+      "sha256": "b63295d84cbd608cb7a08dfcb8e20b5c6645b835da84436dfc2ab62f3174b429",
+      "bytes": 8294,
+      "matches": true
+    },
+    {
+      "path": "assets/manifest.json",
+      "sha256": "f026e519b7d147ebec821a4f83a86b3138a040a3a47944a279847011a2452975",
+      "bytes": 6239,
+      "matches": true
+    }
+  ]
+}

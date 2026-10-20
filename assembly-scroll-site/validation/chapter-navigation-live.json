@@ -1,0 +1,143 @@
+{
+  "url": "https://ykondrashyn.github.io/mesh-kit-assembly/?v=chapter-links-1",
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "manifestSHA256": "f026e519b7d147ebec821a4f83a86b3138a040a3a47944a279847011a2452975",
+  "checks": [
+    {
+      "orientation": "landscape",
+      "id": "wifi",
+      "index": 90,
+      "source": 151,
+      "seated": 129,
+      "ink": {
+        "assembly": 0.06154174579100977,
+        "connector": 0.04131844996366434
+      },
+      "legs": [
+        {
+          "end": 129,
+          "updates": 27
+        },
+        {
+          "end": 90,
+          "updates": 15
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "landscape",
+      "id": "lora",
+      "index": 180,
+      "source": 241,
+      "seated": 234,
+      "ink": {
+        "assembly": 0.04717978100331042,
+        "connector": 0.05001810706601623
+      },
+      "legs": [
+        {
+          "end": 234,
+          "updates": 27
+        },
+        {
+          "end": 180,
+          "updates": 53
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "landscape",
+      "id": "boards",
+      "index": 315,
+      "source": 376,
+      "seated": 363,
+      "ink": {
+        "assembly": 0.05008912655971479,
+        "connector": 0.09456148946594807
+      },
+      "legs": [
+        {
+          "end": 363,
+          "updates": 26
+        },
+        {
+          "end": 315,
+          "updates": 45
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "portrait",
+      "id": "wifi",
+      "index": 90,
+      "source": 151,
+      "seated": 129,
+      "ink": {
+        "assembly": 0.04305652853370696,
+        "connector": 0.05139441483372119
+      },
+      "legs": [
+        {
+          "end": 129,
+          "updates": 32
+        },
+        {
+          "end": 90,
+          "updates": 39
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "portrait",
+      "id": "lora",
+      "index": 180,
+      "source": 241,
+      "seated": 234,
+      "ink": {
+        "assembly": 0.05272403944603115,
+        "connector": 0.05431273928383755
+      },
+      "legs": [
+        {
+          "end": 234,
+          "updates": 27
+        },
+        {
+          "end": 180,
+          "updates": 51
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "portrait",
+      "id": "boards",
+      "index": 315,
+      "source": 376,
+      "seated": 363,
+      "ink": {
+        "assembly": 0.03602414183327046,
+        "connector": 0.11186284813452443
+      },
+      "legs": [
+        {
+          "end": 363,
+          "updates": 25
+        },
+        {
+          "end": 315,
+          "updates": 44
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Chromium on macOS with a phone viewport. No physical phone, Safari or Firefox checks."
+  ]
+}
