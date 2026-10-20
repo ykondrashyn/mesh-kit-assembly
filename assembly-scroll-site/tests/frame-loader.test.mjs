@@ -100,3 +100,30 @@ test('failed targets expose an error and can be retried', async () => {
     assert.equal(loader.error(200), undefined);
   } finally { loader.dispose(); }
 });
+
+test('chapter stills warm before animation and remain available when the network fails', async () => {
+  const requests = [];
+  let offline = false;
+  const loader = new FrameLoader(manifest, () => {}, {
+    fetchFrame: async url => {
+      requests.push(url);
+      if (offline) throw new Error('Offline');
+      return response();
+    },
+    decodeFrame: async () => image(960, 540),
+  });
+  try {
+    loader.selectVariant('landscape', manifest.variants.landscape.resolutions[0]);
+    loader.warmStills();
+    loader.request(0, 1, true);
+    await until(() => loader.get(0));
+    assert.equal(loader.stillBlobs.size, 5);
+    assert.ok(requests.slice(0, 5).every(url => /frame-(0034|0190|0295|0424|0481)\.webp/.test(url)));
+    const before = requests.length;
+    offline = true;
+    loader.request(363, 1, true);
+    await until(() => loader.get(363));
+    assert.equal(requests.length, before);
+    assert.ok(loader.maxRequests <= MAX_REQUESTS);
+  } finally { loader.dispose(); }
+});

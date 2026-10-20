@@ -6,34 +6,34 @@
       "name": "initial load selects landscape only",
       "passed": true,
       "details": {
-        "frameRequests": 9,
+        "frameRequests": 19,
         "bounds": {
           "canvas": {
-            "x": 24,
-            "y": 50.71875,
-            "width": 1377,
-            "height": 774.5625,
-            "top": 50.71875,
-            "right": 1401,
-            "bottom": 825.28125,
-            "left": 24
+            "x": 86.71875,
+            "y": 42,
+            "width": 1251.546875,
+            "height": 704,
+            "top": 42,
+            "right": 1338.265625,
+            "bottom": 746,
+            "left": 86.71875
           },
           "area": {
             "x": 24,
             "y": 42,
             "width": 1377,
-            "height": 792,
+            "height": 704,
             "top": 42,
             "right": 1401,
-            "bottom": 834,
+            "bottom": 746,
             "left": 24
           },
           "controls": {
             "x": 332.5,
-            "y": 834,
+            "y": 746,
             "width": 760,
-            "height": 54,
-            "top": 834,
+            "height": 142,
+            "top": 746,
             "right": 1092.5,
             "bottom": 888,
             "left": 332.5
@@ -77,31 +77,31 @@
           "index": 33,
           "bounds": {
             "canvas": {
-              "x": 24,
-              "y": 50.71875,
-              "width": 1377,
-              "height": 774.5625,
-              "top": 50.71875,
-              "right": 1401,
-              "bottom": 825.28125,
-              "left": 24
+              "x": 86.71875,
+              "y": 42,
+              "width": 1251.546875,
+              "height": 704,
+              "top": 42,
+              "right": 1338.265625,
+              "bottom": 746,
+              "left": 86.71875
             },
             "area": {
               "x": 24,
               "y": 42,
               "width": 1377,
-              "height": 792,
+              "height": 704,
               "top": 42,
               "right": 1401,
-              "bottom": 834,
+              "bottom": 746,
               "left": 24
             },
             "controls": {
               "x": 332.5,
-              "y": 834,
+              "y": 746,
               "width": 760,
-              "height": 54,
-              "top": 834,
+              "height": 142,
+              "top": 746,
               "right": 1092.5,
               "bottom": 888,
               "left": 332.5
@@ -113,31 +113,31 @@
           "index": 129,
           "bounds": {
             "canvas": {
-              "x": 24,
-              "y": 50.71875,
-              "width": 1377,
-              "height": 774.5625,
-              "top": 50.71875,
-              "right": 1401,
-              "bottom": 825.28125,
-              "left": 24
+              "x": 86.71875,
+              "y": 42,
+              "width": 1251.546875,
+              "height": 704,
+              "top": 42,
+              "right": 1338.265625,
+              "bottom": 746,
+              "left": 86.71875
             },
             "area": {
               "x": 24,
               "y": 42,
               "width": 1377,
-              "height": 792,
+              "height": 704,
               "top": 42,
               "right": 1401,
-              "bottom": 834,
+              "bottom": 746,
               "left": 24
             },
             "controls": {
               "x": 332.5,
-              "y": 834,
+              "y": 746,
               "width": 760,
-              "height": 54,
-              "top": 834,
+              "height": 142,
+              "top": 746,
               "right": 1092.5,
               "bottom": 888,
               "left": 332.5
@@ -149,31 +149,31 @@
           "index": 234,
           "bounds": {
             "canvas": {
-              "x": 24,
-              "y": 50.71875,
-              "width": 1377,
-              "height": 774.5625,
-              "top": 50.71875,
-              "right": 1401,
-              "bottom": 825.28125,
-              "left": 24
+              "x": 86.71875,
+              "y": 42,
+              "width": 1251.546875,
+              "height": 704,
+              "top": 42,
+              "right": 1338.265625,
+              "bottom": 746,
+              "left": 86.71875
             },
             "area": {
               "x": 24,
               "y": 42,
               "width": 1377,
-              "height": 792,
+              "height": 704,
               "top": 42,
               "right": 1401,
-              "bottom": 834,
+              "bottom": 746,
               "left": 24
             },
             "controls": {
               "x": 332.5,
-              "y": 834,
+              "y": 746,
               "width": 760,
-              "height": 54,
-              "top": 834,
+              "height": 142,
+              "top": 746,
               "right": 1092.5,
               "bottom": 888,
               "left": 332.5
@@ -185,31 +185,31 @@
           "index": 363,
           "bounds": {
             "canvas": {
-              "x": 24,
-              "y": 50.71875,
-              "width": 1377,
-              "height": 774.5625,
-              "top": 50.71875,
-              "right": 1401,
-              "bottom": 825.28125,
-              "left": 24
+              "x": 86.71875,
+              "y": 42,
+              "width": 1251.546875,
+              "height": 704,
+              "top": 42,
+              "right": 1338.265625,
+              "bottom": 746,
+              "left": 86.71875
             },
             "area": {
               "x": 24,
               "y": 42,
               "width": 1377,
-              "height": 792,
+              "height": 704,
               "top": 42,
               "right": 1401,
-              "bottom": 834,
+              "bottom": 746,
               "left": 24
             },
             "controls": {
               "x": 332.5,
-              "y": 834,
+              "y": 746,
               "width": 760,
-              "height": 54,
-              "top": 834,
+              "height": 142,
+              "top": 746,
               "right": 1092.5,
               "bottom": 888,
               "left": 332.5
@@ -221,31 +221,31 @@
           "index": 420,
           "bounds": {
             "canvas": {
-              "x": 24,
-              "y": 50.71875,
-              "width": 1377,
-              "height": 774.5625,
-              "top": 50.71875,
-              "right": 1401,
-              "bottom": 825.28125,
-              "left": 24
+              "x": 86.71875,
+              "y": 42,
+              "width": 1251.546875,
+              "height": 704,
+              "top": 42,
+              "right": 1338.265625,
+              "bottom": 746,
+              "left": 86.71875
             },
             "area": {
               "x": 24,
               "y": 42,
               "width": 1377,
-              "height": 792,
+              "height": 704,
               "top": 42,
               "right": 1401,
-              "bottom": 834,
+              "bottom": 746,
               "left": 24
             },
             "controls": {
               "x": 332.5,
-              "y": 834,
+              "y": 746,
               "width": 760,
-              "height": 54,
-              "top": 834,
+              "height": 142,
+              "top": 746,
               "right": 1092.5,
               "bottom": 888,
               "left": 332.5
@@ -262,7 +262,7 @@
         "frame": 420,
         "requested": 420,
         "orientation": "landscape",
-        "progress": 0.998824,
+        "progress": 0.998833,
         "decoded": 12,
         "maxDecoded": 12
       }
@@ -292,7 +292,7 @@
         "requested": 150,
         "orientation": "landscape",
         "progress": 0.35713,
-        "decoded": 4,
+        "decoded": 11,
         "maxDecoded": 12
       }
     },
@@ -358,9 +358,9 @@
         "frame": 14,
         "requested": 14,
         "orientation": "portrait",
-        "progress": 0.032171,
-        "decoded": 12,
-        "maxDecoded": 12
+        "progress": 0.032489,
+        "decoded": 6,
+        "maxDecoded": 6
       }
     }
   ],

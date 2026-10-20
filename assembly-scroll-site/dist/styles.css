@@ -9,13 +9,13 @@
 html { scrollbar-gutter: stable; overflow-anchor: none; }
 body { margin: 0; }
 button { font: inherit; color: inherit; cursor: pointer; }
-button:focus-visible { outline: 2px solid #202020; outline-offset: 4px; }
+:is(button, a, summary, [tabindex]):focus-visible { outline: 2px solid #202020; outline-offset: 4px; }
 button:disabled { cursor: default; }
 [hidden] { display: none !important; }
 #story { height: var(--viewport-height); }
 .enhanced #story { height: calc(var(--viewport-height) * 13); }
 #stage {
-  position: sticky;
+  position: relative;
   top: 0;
   height: var(--viewport-height);
   display: grid;
@@ -47,8 +47,8 @@ h1 span { font-weight: 400; color: #777; margin: 0 3px; }
 }
 #retry, #motion-toggle { border: 0; padding: 3px 0; background: transparent; text-decoration: underline; text-underline-offset: 3px; }
 .controls { width: min(100%, 760px); justify-self: center; padding-top: 8px; }
-nav { display: flex; gap: 4px; justify-content: space-between; }
-nav button {
+nav { display: flex; flex-wrap: wrap; gap: 4px; justify-content: space-between; }
+nav a {
   border: 0;
   background: transparent;
   min-height: 44px;
@@ -60,8 +60,8 @@ nav button {
   color: #737373;
   font-size: 12px;
 }
-nav button[aria-current] { color: #202020; font-weight: 600; }
-nav button:hover { color: #202020; }
+nav a[aria-current] { color: #202020; font-weight: 600; }
+nav a:hover { color: #202020; }
 .number { font-size: 11px; font-variant-numeric: tabular-nums; }
 .progress-track { height: 2px; background: #e9e9e9; }
 #progress-fill { height: 100%; width: 100%; background: #292929; transform: scaleX(0); transform-origin: left; }
@@ -69,13 +69,13 @@ nav button:hover { color: #202020; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .fallback { position: absolute; inset: 0; display: flex; }
 .fallback img { width: 100%; height: 100%; object-fit: contain; }
-.noscript-note { position: absolute; bottom: 0; width: 100%; text-align: center; background: #fff; font-size: 12px; }
+
 @media (max-width: 600px) {
   #stage { padding-left: 12px; padding-right: 12px; }
   .masthead { gap: 6px; }
   h1 { font-size: 11px; }
   #scroll-hint { font-size: 11px; }
-  nav button { flex: 1; flex-direction: column; gap: 4px; padding: 7px 2px; font-size: 11px; }
+  nav a { flex: 1; flex-direction: column; gap: 4px; padding: 7px 2px; font-size: 11px; }
   .number { font-size: 10px; }
 }
 @media (max-height: 460px) and (min-width: 601px) {
@@ -83,3 +83,22 @@ nav button:hover { color: #202020; }
   .masthead { min-height: 20px; }
   .controls { padding-top: 0; }
 }
+
+.enhanced #stage { position: sticky; }
+nav a { text-decoration: none; min-width: max-content; white-space: nowrap; text-align: center; }
+#instructions-link { display: block; width: fit-content; margin: 0 auto; padding: 14px 8px; font-size: 12px; color: inherit; text-underline-offset: 3px; }
+#instructions { width: min(100% - 32px, 760px); margin: 24px auto; font-size: 15px; line-height: 1.5; }
+#instructions summary { cursor: pointer; min-height: 44px; padding: 12px 4px; }
+#instructions h2 { font-size: 1em; margin: 14px 0 4px; }
+#instructions p { margin: 0 0 10px; }
+#instructions ol { padding-left: 24px; margin-bottom: 0; }
+#instructions li { padding-left: 4px; scroll-margin: 12px; }
+.enhanced #instructions { width: 100%; margin: 0; }
+.enhanced #instructions summary { font-size: 12px; text-align: center; }
+.enhanced .instruction-body { max-height: 36svh; overflow-y: auto; padding: 8px 14px 14px; border-top: 1px solid #ddd; }
+#motion-options { padding-top: 0; min-height: 44px; }
+#retry, #motion-toggle { min-height: 44px; padding: 8px; }
+#load-state { padding: 2px 12px; }
+#motion-description { max-width: 440px; }
+#motion-toggle { white-space: nowrap; }
+@media (max-width: 600px) { #motion-options { gap: 0 6px; } }

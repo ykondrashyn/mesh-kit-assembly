@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   try {
     for (const profile of [
-      { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, orientation: 'landscape', resolution: '1080' },
+      { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, orientation: 'landscape', resolution: '720' },
       { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, orientation: 'portrait', resolution: '540' },
       { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '720' },
     ]) {

@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "name": "javascript-disabled",
+      "passed": true
+    },
+    {
+      "name": "script-blocked",
+      "passed": true
+    },
+    {
+      "name": "manifest-blocked",
+      "passed": true
+    },
+    {
+      "name": "automatic still fallback and explicit recovery",
+      "passed": true,
+      "elapsedMs": 1011,
+      "lagMs": 817
+    },
+    {
+      "name": "expanded instructions, enlarged text and keyboard scrolling",
+      "passed": true,
+      "bounds": {
+        "width": 375,
+        "viewport": 390,
+        "bottom": 832,
+        "height": 844
+      }
+    }
+  ]
+}

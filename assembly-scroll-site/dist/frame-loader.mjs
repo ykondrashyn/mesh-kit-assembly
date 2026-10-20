@@ -23,6 +23,9 @@ export class FrameLoader {
     this.maxDecodedBytes = 0;
     this.maxRequests = 0;
     this.disposed = false;
+    this.stillBlobs = new Map();
+    this.stillErrors = new Map();
+    this.warmOrder = [];
   }
 
   selectVariant(variant, resolution = this.manifest.variants[variant].resolutions.at(-1)) {
@@ -33,8 +36,21 @@ export class FrameLoader {
     for (const index of this.cache.keys()) this.evict(index);
     this.errors.clear();
     this.order = [];
+    if (variant !== this.variant) {
+      this.stillBlobs.clear();
+      this.stillErrors.clear();
+    }
     this.variant = variant;
     this.resolution = resolution;
+  }
+
+  warmStills() {
+    this.warmOrder = this.manifest.chapters.map(chapter => chapter.stillIndex);
+    this.pump();
+  }
+
+  get warmReady() {
+    return this.warmOrder.every(index => this.stillBlobs.has(index) || this.stillErrors.has(index));
   }
 
   request(target, direction = 1, stillsOnly = false) {
@@ -53,12 +69,13 @@ export class FrameLoader {
 
   retry() {
     this.errors.clear();
+    this.stillErrors.clear();
     this.pump();
   }
 
-  url(index) {
+  url(index, resolution = this.resolution) {
     const source = String(this.manifest.frames[index]).padStart(4, '0');
-    return `${this.resolution.urlTemplate.replace('{frame}', source)}?v=${this.manifest.version}`;
+    return `${resolution.urlTemplate.replace('{frame}', source)}?v=${this.manifest.version}`;
   }
 
   evict(index) {
@@ -82,6 +99,18 @@ export class FrameLoader {
 
   pump() {
     if (this.disposed) return;
+    if (!this.warmReady) {
+      for (const index of this.warmOrder) {
+        if (this.jobs.size >= MAX_REQUESTS) break;
+        const key = `still:${index}`;
+        if (this.stillBlobs.has(index) || this.stillErrors.has(index) || this.jobs.has(key)) continue;
+        const job = { controller: new AbortController(), epoch: this.epoch };
+        this.jobs.set(key, job);
+        this.maxRequests = Math.max(this.maxRequests, this.jobs.size);
+        this.loadStill(index, key, job);
+      }
+      return;
+    }
     for (const index of this.order) {
       if (this.jobs.size >= MAX_REQUESTS) break;
       if (this.cache.has(index) || this.jobs.has(index) || this.errors.has(index)) continue;
@@ -89,6 +118,25 @@ export class FrameLoader {
       this.jobs.set(index, job);
       this.maxRequests = Math.max(this.maxRequests, this.jobs.size);
       this.load(index, job);
+    }
+  }
+
+  async loadStill(index, key, job) {
+    const valid = () => !this.disposed && job.epoch === this.epoch;
+    const timeout = setTimeout(() => job.controller.abort(), 8000);
+    try {
+      const small = this.manifest.variants[this.variant].resolutions[0];
+      const response = await this.fetchFrame(this.url(index, small), { signal: job.controller.signal, cache: 'force-cache' });
+      if (!response.ok) throw new Error(`Chapter request returned ${response.status}`);
+      const blob = await response.blob();
+      if (valid()) this.stillBlobs.set(index, blob);
+    } catch (error) {
+      if (valid()) this.stillErrors.set(index, error.message);
+    } finally {
+      clearTimeout(timeout);
+      if (this.jobs.get(key) === job) this.jobs.delete(key);
+      if (valid()) this.notify();
+      this.pump();
     }
   }
 
@@ -100,9 +148,12 @@ export class FrameLoader {
     let timedOut = false;
     const timeout = setTimeout(() => { timedOut = true; controller.abort(); }, 8000);
     try {
-      const response = await this.fetchFrame(this.url(index), { signal: controller.signal, cache: 'force-cache' });
-      if (!response.ok) throw new Error(`Frame request returned ${response.status}`);
-      const blob = await response.blob();
+      let blob = this.resolution.id === '540' && this.stillBlobs.get(index);
+      if (!blob) {
+        const response = await this.fetchFrame(this.url(index), { signal: controller.signal, cache: 'force-cache' });
+        if (!response.ok) throw new Error(`Frame request returned ${response.status}`);
+        blob = await response.blob();
+      }
       clearTimeout(timeout);
       const decode = this.decodeChain.then(async () => {
         if (!wanted()) return;
@@ -141,5 +192,6 @@ export class FrameLoader {
     this.epoch++;
     for (const job of this.jobs.values()) job.controller.abort();
     for (const index of this.cache.keys()) this.evict(index);
+    this.stillBlobs.clear();
   }
 }

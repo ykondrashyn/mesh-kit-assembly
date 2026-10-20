@@ -54,7 +54,7 @@ const path = require('node:path');
       const stoppedFrame = backward.at(-1).frame;
       await page.waitForTimeout(400);
       assert.equal(await page.locator('canvas').getAttribute('data-frame'), String(stoppedFrame));
-      await page.getByRole('button', { name: '03 LoRa', exact: true }).click();
+      await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
       await page.waitForFunction(() => document.querySelector('canvas').dataset.frame === '150');
       assert.equal(await page.locator('#stage').getAttribute('data-settled'), 'true');
       results.push({ viewport, scrollHeight: span, forward, backward, settledWithoutOvershoot: true });

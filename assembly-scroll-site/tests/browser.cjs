@@ -6,6 +6,7 @@ const url = process.argv[2] || 'http://127.0.0.1:8766';
 const output = path.resolve(__dirname, '../validation');
 const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
 const results = [];
+const framePattern = (orientation, index) => new RegExp(`/${orientation}/(?:[0-9]+/)?frame-${String(manifest.frames[index]).padStart(4, '0')}\\.webp\\?`);
 
 const state = page => page.evaluate(() => ({
   frame: Number(document.querySelector('canvas').dataset.frame),
@@ -108,9 +109,9 @@ async function run(name, fn) {
       return views;
     });
     await run('chapter links and keyboard endpoints', async () => {
-      await page.getByRole('button', { name: '03 LoRa', exact: true }).click();
+      await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
       await waitFrame(page, 150);
-      await page.getByRole('button', { name: 'Assembled', exact: true }).click();
+      await page.getByRole('link', { name: 'Assembled', exact: true }).click();
       await waitFrame(page, 420);
       await page.keyboard.press('Home');
       await waitFrame(page, 0);
@@ -157,13 +158,13 @@ async function run(name, fn) {
     });
     await run('orientation change rejects a delayed old-orientation frame', async () => {
       await go(page, 10);
-      await page.route(`**/landscape/frame-${String(manifest.frames[150]).padStart(4, '0')}.webp?*`, async route => {
+      await page.route(framePattern('landscape', 150), async route => {
         await new Promise(resolve => setTimeout(resolve, 500));
         await route.continue().catch(() => {});
       });
-      await page.getByRole('button', { name: '03 LoRa', exact: true }).click();
+      await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
       await page.waitForTimeout(70);
-      await page.route(`**/portrait/frame-${String(manifest.frames[150]).padStart(4, '0')}.webp?*`, async route => {
+      await page.route(framePattern('portrait', 150), async route => {
         await new Promise(resolve => setTimeout(resolve, 350));
         await route.continue().catch(() => {});
       });
@@ -184,7 +185,7 @@ async function run(name, fn) {
     await run('delayed frames retain the current picture and stale results cannot replace it', async () => {
       await go(page, 10);
       let delayStarted = false;
-      await page.route(`**/landscape/frame-${String(manifest.frames[333]).padStart(4, '0')}.webp?*`, async route => {
+      await page.route(framePattern('landscape', 333), async route => {
         delayStarted = true;
         await new Promise(resolve => setTimeout(resolve, 450));
         await route.continue().catch(() => {});
@@ -202,7 +203,7 @@ async function run(name, fn) {
     });
     await run('frame failure exposes retry and recovers', async () => {
       let fail = true;
-      const pattern = `**/landscape/frame-${String(manifest.frames[250]).padStart(4, '0')}.webp?*`;
+      const pattern = framePattern('landscape', 250);
       await page.route(pattern, route => fail ? route.abort('failed') : route.continue());
       await page.evaluate(() => window.scrollTo(0, 250 / 420 *
         (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)));
@@ -234,8 +235,9 @@ async function run(name, fn) {
       p.on('request', req => { if (req.url().includes('.webp')) fetched.push(req.url()); });
       await p.goto(url);
       await waitFrame(p, 33);
-      assert.equal(fetched.length, 1);
-      await p.getByRole('button', { name: '03 LoRa', exact: true }).click();
+      assert.ok(fetched.length >= 5);
+      assert.ok(fetched.every(url => /frame-(0034|0190|0295|0424|0481)\.webp/.test(url)));
+      await p.getByRole('link', { name: '03 LoRa', exact: true }).click();
       await waitFrame(p, 234);
       await p.screenshot({ path: path.join(output, 'reduced-motion.png') });
       await fits(p);
