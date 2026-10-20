@@ -1,0 +1,3845 @@
+{
+  "url": "https://ykondrashyn.github.io/mesh-kit-assembly/?v=continuous-2",
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "profiles": [
+    {
+      "profile": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900,
+        "slow": false
+      },
+      "initial": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "requestedFrame": "0",
+          "progress": "0.000000",
+          "targetProgress": "0.000000",
+          "settled": "true",
+          "decodedFrames": "4",
+          "maxDecodedFrames": "4",
+          "decodedBytes": "33177600",
+          "maxDecodedBytes": "33177600",
+          "maxRequests": "4"
+        },
+        "canvas": {
+          "frame": "0",
+          "sourceFrame": "1",
+          "orientation": "landscape",
+          "resolution": "1080"
+        }
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "landscape",
+          "resolution": "540",
+          "requestedFrame": "0",
+          "progress": "0.000000",
+          "targetProgress": "0.000000",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "0",
+          "sourceFrame": "1",
+          "orientation": "landscape",
+          "resolution": "540"
+        }
+      },
+      "legs": [
+        {
+          "direction": 1,
+          "durationMs": 10542,
+          "updates": 112,
+          "intermediatePoses": 111,
+          "samples": [
+            {
+              "time": 1691.300000011921,
+              "frame": 1,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 1724.300000011921,
+              "frame": 2,
+              "requested": 2,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 1757.3999999761581,
+              "frame": 3,
+              "requested": 3,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 1824.1000000238419,
+              "frame": 4,
+              "requested": 5,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 1957.300000011921,
+              "frame": 5,
+              "requested": 10,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 1974.199999988079,
+              "frame": 7,
+              "requested": 11,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2024,
+              "frame": 8,
+              "requested": 14,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2174.100000023842,
+              "frame": 11,
+              "requested": 20,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2190.699999988079,
+              "frame": 12,
+              "requested": 21,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2290.699999988079,
+              "frame": 13,
+              "requested": 25,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2440.699999988079,
+              "frame": 20,
+              "requested": 32,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2474.199999988079,
+              "frame": 21,
+              "requested": 33,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2490.800000011921,
+              "frame": 24,
+              "requested": 34,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2640.800000011921,
+              "frame": 31,
+              "requested": 41,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2874.199999988079,
+              "frame": 44,
+              "requested": 50,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 3057.399999976158,
+              "frame": 50,
+              "requested": 59,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 3074.300000011921,
+              "frame": 52,
+              "requested": 59,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 3340.899999976158,
+              "frame": 61,
+              "requested": 71,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 3674.100000023842,
+              "frame": 78,
+              "requested": 85,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 3690.600000023842,
+              "frame": 79,
+              "requested": 86,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 3874.100000023842,
+              "frame": 86,
+              "requested": 94,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4040.699999988079,
+              "frame": 93,
+              "requested": 100,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4074,
+              "frame": 95,
+              "requested": 102,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4240.800000011921,
+              "frame": 99,
+              "requested": 109,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4274.300000011921,
+              "frame": 103,
+              "requested": 111,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4424.100000023842,
+              "frame": 108,
+              "requested": 117,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4440.699999988079,
+              "frame": 110,
+              "requested": 118,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4474.199999988079,
+              "frame": 111,
+              "requested": 120,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4624,
+              "frame": 117,
+              "requested": 125,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4640.800000011921,
+              "frame": 118,
+              "requested": 126,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4707.399999976158,
+              "frame": 119,
+              "requested": 129,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4907.399999976158,
+              "frame": 128,
+              "requested": 137,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5107.199999988079,
+              "frame": 139,
+              "requested": 145,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5324,
+              "frame": 147,
+              "requested": 155,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5524.100000023842,
+              "frame": 156,
+              "requested": 163,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5707.399999976158,
+              "frame": 163,
+              "requested": 171,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5724.300000011921,
+              "frame": 164,
+              "requested": 172,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5957.300000011921,
+              "frame": 171,
+              "requested": 182,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6074.100000023842,
+              "frame": 172,
+              "requested": 187,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6157.5,
+              "frame": 181,
+              "requested": 191,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6190.899999976158,
+              "frame": 182,
+              "requested": 192,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6257.699999988079,
+              "frame": 187,
+              "requested": 195,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6340.699999988079,
+              "frame": 191,
+              "requested": 199,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6357.300000011921,
+              "frame": 192,
+              "requested": 200,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6490.699999988079,
+              "frame": 195,
+              "requested": 205,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6507.5,
+              "frame": 198,
+              "requested": 206,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6557.300000011921,
+              "frame": 200,
+              "requested": 209,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6673.899999976158,
+              "frame": 205,
+              "requested": 214,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6707.399999976158,
+              "frame": 206,
+              "requested": 215,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6757.300000011921,
+              "frame": 209,
+              "requested": 217,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6874,
+              "frame": 214,
+              "requested": 222,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7007.699999988079,
+              "frame": 218,
+              "requested": 228,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7040.600000023842,
+              "frame": 222,
+              "requested": 230,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7057.300000011921,
+              "frame": 223,
+              "requested": 231,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7190.600000023842,
+              "frame": 228,
+              "requested": 236,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7224,
+              "frame": 229,
+              "requested": 238,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7240.600000023842,
+              "frame": 230,
+              "requested": 239,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7407.399999976158,
+              "frame": 237,
+              "requested": 246,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7524.100000023842,
+              "frame": 239,
+              "requested": 251,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7590.699999988079,
+              "frame": 246,
+              "requested": 254,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7707.600000023842,
+              "frame": 252,
+              "requested": 259,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7774,
+              "frame": 254,
+              "requested": 262,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7874,
+              "frame": 259,
+              "requested": 267,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7924,
+              "frame": 262,
+              "requested": 269,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7940.600000023842,
+              "frame": 263,
+              "requested": 270,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8057.399999976158,
+              "frame": 266,
+              "requested": 275,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8073.899999976158,
+              "frame": 267,
+              "requested": 275,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8107.300000011921,
+              "frame": 269,
+              "requested": 277,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8240.600000023842,
+              "frame": 274,
+              "requested": 283,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8257.399999976158,
+              "frame": 275,
+              "requested": 284,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8274.199999988079,
+              "frame": 276,
+              "requested": 284,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8307.800000011921,
+              "frame": 277,
+              "requested": 286,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8440.800000011921,
+              "frame": 282,
+              "requested": 292,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8457.300000011921,
+              "frame": 284,
+              "requested": 293,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8474,
+              "frame": 285,
+              "requested": 293,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8623.899999976158,
+              "frame": 292,
+              "requested": 300,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8640.699999988079,
+              "frame": 293,
+              "requested": 301,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8657.199999988079,
+              "frame": 294,
+              "requested": 301,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8790.699999988079,
+              "frame": 299,
+              "requested": 307,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8807.5,
+              "frame": 300,
+              "requested": 308,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8840.699999988079,
+              "frame": 302,
+              "requested": 310,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8957.199999988079,
+              "frame": 306,
+              "requested": 315,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9007.5,
+              "frame": 307,
+              "requested": 317,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9107.300000011921,
+              "frame": 310,
+              "requested": 321,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9157.199999988079,
+              "frame": 314,
+              "requested": 323,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9307.5,
+              "frame": 316,
+              "requested": 329,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9340.600000023842,
+              "frame": 322,
+              "requested": 331,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9490.600000023842,
+              "frame": 329,
+              "requested": 337,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9507.300000011921,
+              "frame": 331,
+              "requested": 338,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9624,
+              "frame": 332,
+              "requested": 342,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9657.199999988079,
+              "frame": 336,
+              "requested": 344,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9690.699999988079,
+              "frame": 337,
+              "requested": 346,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9823.899999976158,
+              "frame": 343,
+              "requested": 351,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9840.699999988079,
+              "frame": 344,
+              "requested": 352,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9873.899999976158,
+              "frame": 345,
+              "requested": 354,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9990.600000023842,
+              "frame": 352,
+              "requested": 359,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10057.199999988079,
+              "frame": 353,
+              "requested": 362,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10190.899999976158,
+              "frame": 359,
+              "requested": 368,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10207.199999988079,
+              "frame": 360,
+              "requested": 368,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10390.600000023842,
+              "frame": 369,
+              "requested": 377,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10557.300000011921,
+              "frame": 376,
+              "requested": 384,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10573.899999976158,
+              "frame": 377,
+              "requested": 385,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10673.899999976158,
+              "frame": 380,
+              "requested": 389,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10740.800000011921,
+              "frame": 383,
+              "requested": 392,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10857.5,
+              "frame": 389,
+              "requested": 397,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10923.899999976158,
+              "frame": 391,
+              "requested": 400,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11040.600000023842,
+              "frame": 396,
+              "requested": 404,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11057.399999976158,
+              "frame": 398,
+              "requested": 405,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11207.399999976158,
+              "frame": 399,
+              "requested": 412,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11223.800000011921,
+              "frame": 405,
+              "requested": 413,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11395.800000011921,
+              "frame": 414,
+              "requested": 418,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11512.399999976158,
+              "frame": 420,
+              "requested": 420,
+              "mode": "animation",
+              "resolution": "540"
+            }
+          ],
+          "stopped": {
+            "stage": {
+              "mode": "animation",
+              "orientation": "landscape",
+              "resolution": "540",
+              "requestedFrame": "420",
+              "progress": "1.000000",
+              "targetProgress": "1.000000",
+              "settled": "true",
+              "decodedFrames": "12",
+              "maxDecodedFrames": "12",
+              "decodedBytes": "24883200",
+              "maxDecodedBytes": "49766400",
+              "maxRequests": "4",
+              "qualityLagMs": "800",
+              "qualityDrops": "2"
+            },
+            "canvas": {
+              "frame": "420",
+              "sourceFrame": "481",
+              "orientation": "landscape",
+              "resolution": "540"
+            }
+          }
+        },
+        {
+          "direction": -1,
+          "durationMs": 10668,
+          "updates": 123,
+          "intermediatePoses": 121,
+          "samples": [
+            {
+              "time": 12224.5,
+              "frame": 419,
+              "requested": 419,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12257.300000011921,
+              "frame": 418,
+              "requested": 418,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12291,
+              "frame": 417,
+              "requested": 417,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12324.899999976158,
+              "frame": 416,
+              "requested": 416,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12373.899999976158,
+              "frame": 414,
+              "requested": 414,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12407.399999976158,
+              "frame": 413,
+              "requested": 413,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12440.899999976158,
+              "frame": 412,
+              "requested": 412,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12457.300000011921,
+              "frame": 411,
+              "requested": 411,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12490.800000011921,
+              "frame": 410,
+              "requested": 410,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12507.800000011921,
+              "frame": 409,
+              "requested": 409,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12540.800000011921,
+              "frame": 408,
+              "requested": 408,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12607.300000011921,
+              "frame": 405,
+              "requested": 405,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12640.800000011921,
+              "frame": 404,
+              "requested": 404,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12657.399999976158,
+              "frame": 403,
+              "requested": 403,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12773.899999976158,
+              "frame": 399,
+              "requested": 398,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12840.5,
+              "frame": 396,
+              "requested": 395,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13023.899999976158,
+              "frame": 393,
+              "requested": 387,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13040.800000011921,
+              "frame": 392,
+              "requested": 387,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13124.100000023842,
+              "frame": 388,
+              "requested": 383,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13190.699999988079,
+              "frame": 383,
+              "requested": 380,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13290.699999988079,
+              "frame": 380,
+              "requested": 376,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13357.600000023842,
+              "frame": 376,
+              "requested": 373,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13474.399999976158,
+              "frame": 375,
+              "requested": 368,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13541.100000023842,
+              "frame": 372,
+              "requested": 365,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13557.300000011921,
+              "frame": 369,
+              "requested": 365,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13607.5,
+              "frame": 363,
+              "requested": 363,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13824.399999976158,
+              "frame": 359,
+              "requested": 354,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13907.300000011921,
+              "frame": 353,
+              "requested": 351,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13990.600000023842,
+              "frame": 352,
+              "requested": 347,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14107.5,
+              "frame": 344,
+              "requested": 342,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14190.899999976158,
+              "frame": 342,
+              "requested": 339,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14340.800000011921,
+              "frame": 337,
+              "requested": 331,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14423.899999976158,
+              "frame": 331,
+              "requested": 328,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14473.800000011921,
+              "frame": 330,
+              "requested": 326,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14507.399999976158,
+              "frame": 329,
+              "requested": 324,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14624.199999988079,
+              "frame": 327,
+              "requested": 319,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14657.5,
+              "frame": 326,
+              "requested": 317,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14690.600000023842,
+              "frame": 325,
+              "requested": 316,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14724.199999988079,
+              "frame": 320,
+              "requested": 314,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14874,
+              "frame": 317,
+              "requested": 308,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14923.800000011921,
+              "frame": 315,
+              "requested": 306,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14957.199999988079,
+              "frame": 309,
+              "requested": 304,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14990.5,
+              "frame": 307,
+              "requested": 303,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15107.300000011921,
+              "frame": 300,
+              "requested": 298,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15190.600000023842,
+              "frame": 299,
+              "requested": 294,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15257.199999988079,
+              "frame": 294,
+              "requested": 291,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15407.300000011921,
+              "frame": 292,
+              "requested": 284,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15474,
+              "frame": 285,
+              "requested": 282,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15673.899999976158,
+              "frame": 282,
+              "requested": 273,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15757.300000011921,
+              "frame": 274,
+              "requested": 269,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15924.199999988079,
+              "frame": 271,
+              "requested": 262,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15957.300000011921,
+              "frame": 270,
+              "requested": 260,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15990.399999976158,
+              "frame": 262,
+              "requested": 259,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16057.399999976158,
+              "frame": 259,
+              "requested": 256,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16207.399999976158,
+              "frame": 254,
+              "requested": 250,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16224.100000023842,
+              "frame": 253,
+              "requested": 250,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16257.199999988079,
+              "frame": 251,
+              "requested": 249,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16440.80000001192,
+              "frame": 248,
+              "requested": 241,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16474.100000023842,
+              "frame": 247,
+              "requested": 240,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16707.5,
+              "frame": 240,
+              "requested": 230,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16790.69999998808,
+              "frame": 229,
+              "requested": 228,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16857.100000023842,
+              "frame": 228,
+              "requested": 224,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16873.80000001192,
+              "frame": 227,
+              "requested": 224,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17040.69999998808,
+              "frame": 225,
+              "requested": 216,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17057.5,
+              "frame": 224,
+              "requested": 216,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17107.30000001192,
+              "frame": 217,
+              "requested": 214,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17223.80000001192,
+              "frame": 216,
+              "requested": 208,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17307.399999976158,
+              "frame": 209,
+              "requested": 206,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17390.69999998808,
+              "frame": 206,
+              "requested": 202,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17407.600000023842,
+              "frame": 205,
+              "requested": 201,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17557.600000023842,
+              "frame": 203,
+              "requested": 194,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17574.30000001192,
+              "frame": 202,
+              "requested": 194,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17624.30000001192,
+              "frame": 195,
+              "requested": 192,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17674.100000023842,
+              "frame": 192,
+              "requested": 189,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17757.30000001192,
+              "frame": 190,
+              "requested": 185,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17824.399999976158,
+              "frame": 187,
+              "requested": 183,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18007.5,
+              "frame": 185,
+              "requested": 175,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18024.100000023842,
+              "frame": 181,
+              "requested": 174,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18207.399999976158,
+              "frame": 175,
+              "requested": 166,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18224.399999976158,
+              "frame": 173,
+              "requested": 165,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18323.80000001192,
+              "frame": 164,
+              "requested": 161,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18557.5,
+              "frame": 162,
+              "requested": 151,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18723.80000001192,
+              "frame": 150,
+              "requested": 144,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18740.5,
+              "frame": 149,
+              "requested": 143,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18790.5,
+              "frame": 144,
+              "requested": 141,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18907.100000023842,
+              "frame": 143,
+              "requested": 136,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18923.80000001192,
+              "frame": 142,
+              "requested": 135,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18957.100000023842,
+              "frame": 136,
+              "requested": 133,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19073.80000001192,
+              "frame": 129,
+              "requested": 128,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19140.5,
+              "frame": 128,
+              "requested": 125,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19224,
+              "frame": 126,
+              "requested": 122,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19390,
+              "frame": 118,
+              "requested": 114,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19590.5,
+              "frame": 114,
+              "requested": 105,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19624,
+              "frame": 112,
+              "requested": 104,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19706.899999976158,
+              "frame": 103,
+              "requested": 101,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19790.69999998808,
+              "frame": 101,
+              "requested": 97,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19840,
+              "frame": 99,
+              "requested": 95,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19923.30000001192,
+              "frame": 95,
+              "requested": 91,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19990.899999976158,
+              "frame": 92,
+              "requested": 88,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20157.600000023842,
+              "frame": 88,
+              "requested": 81,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20223.80000001192,
+              "frame": 83,
+              "requested": 78,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20307.19999998808,
+              "frame": 79,
+              "requested": 74,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20506.30000001192,
+              "frame": 74,
+              "requested": 65,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20523.69999998808,
+              "frame": 72,
+              "requested": 65,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20707,
+              "frame": 63,
+              "requested": 57,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20873.30000001192,
+              "frame": 58,
+              "requested": 51,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20890.100000023842,
+              "frame": 57,
+              "requested": 50,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20923.100000023842,
+              "frame": 56,
+              "requested": 48,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21057,
+              "frame": 51,
+              "requested": 43,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21157.19999998808,
+              "frame": 48,
+              "requested": 38,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21240.19999998808,
+              "frame": 43,
+              "requested": 35,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21339.399999976158,
+              "frame": 39,
+              "requested": 30,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21357,
+              "frame": 38,
+              "requested": 30,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21423.80000001192,
+              "frame": 35,
+              "requested": 26,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21507.19999998808,
+              "frame": 30,
+              "requested": 23,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21523.69999998808,
+              "frame": 29,
+              "requested": 22,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21689.899999976158,
+              "frame": 24,
+              "requested": 16,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21706.69999998808,
+              "frame": 22,
+              "requested": 15,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21873.600000023842,
+              "frame": 15,
+              "requested": 7,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21890.399999976158,
+              "frame": 14,
+              "requested": 7,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22078.399999976158,
+              "frame": 5,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22245,
+              "frame": 1,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22295,
+              "frame": 0,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            }
+          ],
+          "stopped": {
+            "stage": {
+              "mode": "animation",
+              "orientation": "landscape",
+              "resolution": "540",
+              "requestedFrame": "0",
+              "progress": "0.000000",
+              "targetProgress": "0.000000",
+              "settled": "true",
+              "decodedFrames": "12",
+              "maxDecodedFrames": "12",
+              "decodedBytes": "24883200",
+              "maxDecodedBytes": "49766400",
+              "maxRequests": "4",
+              "qualityLagMs": "800",
+              "qualityDrops": "2"
+            },
+            "canvas": {
+              "frame": "0",
+              "sourceFrame": "1",
+              "orientation": "landscape",
+              "resolution": "540"
+            }
+          }
+        }
+      ],
+      "requests": 442,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "profile": {
+        "name": "desktop-throttled",
+        "width": 1440,
+        "height": 900,
+        "slow": true
+      },
+      "initial": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "requestedFrame": "0",
+          "progress": "0.000000",
+          "targetProgress": "0.000000",
+          "settled": "true",
+          "decodedFrames": "2",
+          "maxDecodedFrames": "2",
+          "decodedBytes": "16588800",
+          "maxDecodedBytes": "16588800",
+          "maxRequests": "4"
+        },
+        "canvas": {
+          "frame": "0",
+          "sourceFrame": "1",
+          "orientation": "landscape",
+          "resolution": "1080"
+        }
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "landscape",
+          "resolution": "540",
+          "requestedFrame": "0",
+          "progress": "0.000000",
+          "targetProgress": "0.000000",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "817",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "0",
+          "sourceFrame": "1",
+          "orientation": "landscape",
+          "resolution": "540"
+        }
+      },
+      "legs": [
+        {
+          "direction": 1,
+          "durationMs": 10647,
+          "updates": 52,
+          "intermediatePoses": 49,
+          "samples": [
+            {
+              "time": 2616.800000011921,
+              "frame": 1,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2646.2000000476837,
+              "frame": 2,
+              "requested": 2,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2678.800000011921,
+              "frame": 3,
+              "requested": 3,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3128.300000011921,
+              "frame": 4,
+              "requested": 22,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3393.900000035763,
+              "frame": 5,
+              "requested": 32,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3428.600000023842,
+              "frame": 6,
+              "requested": 33,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3478.400000035763,
+              "frame": 7,
+              "requested": 36,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 4146.100000023842,
+              "frame": 38,
+              "requested": 64,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 4194.700000047684,
+              "frame": 40,
+              "requested": 66,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 4879.100000023842,
+              "frame": 75,
+              "requested": 97,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4894.5,
+              "frame": 77,
+              "requested": 97,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5495.100000023842,
+              "frame": 96,
+              "requested": 124,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5544.400000035763,
+              "frame": 99,
+              "requested": 126,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6012.200000047684,
+              "frame": 123,
+              "requested": 146,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6112.200000047684,
+              "frame": 125,
+              "requested": 150,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6129.100000023842,
+              "frame": 126,
+              "requested": 151,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6228.600000023842,
+              "frame": 145,
+              "requested": 156,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6280.800000011921,
+              "frame": 150,
+              "requested": 158,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6311.700000047684,
+              "frame": 151,
+              "requested": 159,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6462.800000011921,
+              "frame": 155,
+              "requested": 165,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6794.800000011921,
+              "frame": 157,
+              "requested": 181,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6846.400000035763,
+              "frame": 159,
+              "requested": 183,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6861.700000047684,
+              "frame": 160,
+              "requested": 183,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6911.600000023842,
+              "frame": 165,
+              "requested": 185,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7161.800000011921,
+              "frame": 180,
+              "requested": 196,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7328.100000023842,
+              "frame": 182,
+              "requested": 204,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7412.400000035763,
+              "frame": 183,
+              "requested": 207,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7428.100000023842,
+              "frame": 185,
+              "requested": 208,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7528.400000035763,
+              "frame": 195,
+              "requested": 212,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7694.700000047684,
+              "frame": 203,
+              "requested": 220,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7864.100000023842,
+              "frame": 206,
+              "requested": 227,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7944.100000023842,
+              "frame": 207,
+              "requested": 230,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8044.600000023842,
+              "frame": 234,
+              "requested": 235,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8510.600000023842,
+              "frame": 235,
+              "requested": 254,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8545,
+              "frame": 236,
+              "requested": 255,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8727.600000023842,
+              "frame": 248,
+              "requested": 263,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8778.5,
+              "frame": 249,
+              "requested": 265,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8811.600000023842,
+              "frame": 254,
+              "requested": 267,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8960.700000047684,
+              "frame": 262,
+              "requested": 274,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9246.5,
+              "frame": 267,
+              "requested": 285,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9312.100000023842,
+              "frame": 273,
+              "requested": 288,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10112.700000047684,
+              "frame": 286,
+              "requested": 322,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10145.200000047684,
+              "frame": 288,
+              "requested": 323,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10562.200000047684,
+              "frame": 322,
+              "requested": 341,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10762.200000047684,
+              "frame": 324,
+              "requested": 349,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10947,
+              "frame": 342,
+              "requested": 356,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11130.200000047684,
+              "frame": 363,
+              "requested": 364,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11712.900000035763,
+              "frame": 364,
+              "requested": 389,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12012.200000047684,
+              "frame": 389,
+              "requested": 402,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12128.400000035763,
+              "frame": 390,
+              "requested": 407,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12549.800000011921,
+              "frame": 406,
+              "requested": 420,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12583.900000035763,
+              "frame": 420,
+              "requested": 420,
+              "mode": "animation",
+              "resolution": "540"
+            }
+          ],
+          "stopped": {
+            "stage": {
+              "mode": "animation",
+              "orientation": "landscape",
+              "resolution": "540",
+              "requestedFrame": "420",
+              "progress": "1.000000",
+              "targetProgress": "1.000000",
+              "settled": "true",
+              "decodedFrames": "12",
+              "maxDecodedFrames": "12",
+              "decodedBytes": "24883200",
+              "maxDecodedBytes": "49766400",
+              "maxRequests": "4",
+              "qualityLagMs": "817",
+              "qualityDrops": "2"
+            },
+            "canvas": {
+              "frame": "420",
+              "sourceFrame": "481",
+              "orientation": "landscape",
+              "resolution": "540"
+            }
+          }
+        },
+        {
+          "direction": -1,
+          "durationMs": 10640,
+          "updates": 86,
+          "intermediatePoses": 85,
+          "samples": [
+            {
+              "time": 13247.300000011921,
+              "frame": 419,
+              "requested": 419,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13278.600000023842,
+              "frame": 418,
+              "requested": 418,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13311,
+              "frame": 417,
+              "requested": 417,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13577.800000011921,
+              "frame": 406,
+              "requested": 406,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13644.900000035763,
+              "frame": 404,
+              "requested": 404,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13678.300000011921,
+              "frame": 402,
+              "requested": 402,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13944.200000047684,
+              "frame": 391,
+              "requested": 391,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13961.5,
+              "frame": 390,
+              "requested": 390,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13978.900000035763,
+              "frame": 389,
+              "requested": 389,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13994.300000011921,
+              "frame": 388,
+              "requested": 388,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14328.5,
+              "frame": 387,
+              "requested": 375,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14445.200000047684,
+              "frame": 383,
+              "requested": 370,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14527.600000023842,
+              "frame": 375,
+              "requested": 366,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14878.300000011921,
+              "frame": 369,
+              "requested": 351,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14978.300000011921,
+              "frame": 368,
+              "requested": 346,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14994.800000011921,
+              "frame": 367,
+              "requested": 345,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15160.400000035763,
+              "frame": 352,
+              "requested": 339,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15395.800000011921,
+              "frame": 348,
+              "requested": 328,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15494.800000011921,
+              "frame": 346,
+              "requested": 323,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15561,
+              "frame": 339,
+              "requested": 321,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15878.300000011921,
+              "frame": 329,
+              "requested": 308,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15994.800000011921,
+              "frame": 324,
+              "requested": 304,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16028.600000023842,
+              "frame": 323,
+              "requested": 302,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16061.700000047684,
+              "frame": 321,
+              "requested": 300,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16345.900000035763,
+              "frame": 309,
+              "requested": 289,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16376.800000011921,
+              "frame": 304,
+              "requested": 287,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16411.30000001192,
+              "frame": 303,
+              "requested": 286,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16444.30000001192,
+              "frame": 301,
+              "requested": 284,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16761.200000047684,
+              "frame": 290,
+              "requested": 270,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16827.600000023842,
+              "frame": 288,
+              "requested": 268,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16860.30000001192,
+              "frame": 286,
+              "requested": 266,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16895.100000023842,
+              "frame": 285,
+              "requested": 264,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17011.400000035763,
+              "frame": 271,
+              "requested": 259,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17176.600000023842,
+              "frame": 268,
+              "requested": 252,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17278,
+              "frame": 267,
+              "requested": 247,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17310.80000001192,
+              "frame": 265,
+              "requested": 246,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17327.700000047684,
+              "frame": 260,
+              "requested": 246,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17411.5,
+              "frame": 253,
+              "requested": 242,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17627.30000001192,
+              "frame": 248,
+              "requested": 234,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17762.700000047684,
+              "frame": 247,
+              "requested": 228,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17845.200000047684,
+              "frame": 246,
+              "requested": 225,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17895.30000001192,
+              "frame": 243,
+              "requested": 223,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17962.200000047684,
+              "frame": 235,
+              "requested": 220,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18295.700000047684,
+              "frame": 225,
+              "requested": 206,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18428.200000047684,
+              "frame": 224,
+              "requested": 199,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18446.200000047684,
+              "frame": 220,
+              "requested": 199,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18929.5,
+              "frame": 206,
+              "requested": 180,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18944.900000035763,
+              "frame": 201,
+              "requested": 179,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18979,
+              "frame": 200,
+              "requested": 177,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19011.400000035763,
+              "frame": 199,
+              "requested": 176,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19560.900000035763,
+              "frame": 180,
+              "requested": 153,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19611.700000047684,
+              "frame": 179,
+              "requested": 150,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19643.5,
+              "frame": 178,
+              "requested": 149,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19661.80000001192,
+              "frame": 177,
+              "requested": 148,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19776.900000035763,
+              "frame": 151,
+              "requested": 143,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19827.100000023842,
+              "frame": 149,
+              "requested": 141,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19861.700000047684,
+              "frame": 148,
+              "requested": 140,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20195.400000035763,
+              "frame": 144,
+              "requested": 124,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20294.200000047684,
+              "frame": 141,
+              "requested": 120,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20327.400000035763,
+              "frame": 140,
+              "requested": 119,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20378.600000023842,
+              "frame": 139,
+              "requested": 116,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20494.200000047684,
+              "frame": 125,
+              "requested": 111,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20778,
+              "frame": 121,
+              "requested": 99,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20827.200000047684,
+              "frame": 119,
+              "requested": 96,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20977.700000047684,
+              "frame": 118,
+              "requested": 91,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21010.900000035763,
+              "frame": 112,
+              "requested": 89,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21311.100000023842,
+              "frame": 100,
+              "requested": 76,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21343,
+              "frame": 97,
+              "requested": 74,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21477.100000023842,
+              "frame": 91,
+              "requested": 69,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21511.100000023842,
+              "frame": 90,
+              "requested": 67,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21661.900000035763,
+              "frame": 77,
+              "requested": 61,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21676.600000023842,
+              "frame": 75,
+              "requested": 60,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21844.100000023842,
+              "frame": 68,
+              "requested": 52,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21977.5,
+              "frame": 60,
+              "requested": 47,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22126.400000035763,
+              "frame": 53,
+              "requested": 40,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22143.30000001192,
+              "frame": 52,
+              "requested": 39,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22295.700000047684,
+              "frame": 47,
+              "requested": 33,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22311.900000035763,
+              "frame": 33,
+              "requested": 32,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22660.80000001192,
+              "frame": 32,
+              "requested": 17,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22810.700000047684,
+              "frame": 27,
+              "requested": 10,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22843.200000047684,
+              "frame": 26,
+              "requested": 9,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22944.900000035763,
+              "frame": 16,
+              "requested": 4,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23099.700000047684,
+              "frame": 11,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23249,
+              "frame": 5,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23349.5,
+              "frame": 2,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23382.600000023842,
+              "frame": 1,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            }
+          ],
+          "stopped": {
+            "stage": {
+              "mode": "animation",
+              "orientation": "landscape",
+              "resolution": "540",
+              "requestedFrame": "0",
+              "progress": "0.000000",
+              "targetProgress": "0.000000",
+              "settled": "true",
+              "decodedFrames": "12",
+              "maxDecodedFrames": "12",
+              "decodedBytes": "24883200",
+              "maxDecodedBytes": "49766400",
+              "maxRequests": "4",
+              "qualityLagMs": "817",
+              "qualityDrops": "2"
+            },
+            "canvas": {
+              "frame": "0",
+              "sourceFrame": "1",
+              "orientation": "landscape",
+              "resolution": "540"
+            }
+          }
+        }
+      ],
+      "requests": 193,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "profile": {
+        "name": "phone-throttled",
+        "width": 390,
+        "height": 844,
+        "slow": true
+      },
+      "initial": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "1080",
+          "requestedFrame": "0",
+          "progress": "0.000000",
+          "targetProgress": "0.000000",
+          "settled": "true",
+          "decodedFrames": "3",
+          "maxDecodedFrames": "3",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "24883200",
+          "maxRequests": "4"
+        },
+        "canvas": {
+          "frame": "0",
+          "sourceFrame": "1",
+          "orientation": "portrait",
+          "resolution": "1080"
+        }
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "0",
+          "progress": "0.000000",
+          "targetProgress": "0.000000",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "817",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "0",
+          "sourceFrame": "1",
+          "orientation": "portrait",
+          "resolution": "540"
+        }
+      },
+      "legs": [
+        {
+          "direction": 1,
+          "durationMs": 10730,
+          "updates": 49,
+          "intermediatePoses": 48,
+          "samples": [
+            {
+              "time": 2534.599999964237,
+              "frame": 1,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2566.300000011921,
+              "frame": 2,
+              "requested": 2,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2599.599999964237,
+              "frame": 3,
+              "requested": 3,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 2766.5,
+              "frame": 4,
+              "requested": 9,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3183.899999976158,
+              "frame": 5,
+              "requested": 27,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3216.399999976158,
+              "frame": 6,
+              "requested": 28,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3266.599999964237,
+              "frame": 7,
+              "requested": 30,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 3317.399999976158,
+              "frame": 8,
+              "requested": 32,
+              "mode": "animation",
+              "resolution": "1080"
+            },
+            {
+              "time": 4117.699999988079,
+              "frame": 40,
+              "requested": 61,
+              "mode": "animation",
+              "resolution": "720"
+            },
+            {
+              "time": 4767.099999964237,
+              "frame": 69,
+              "requested": 84,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4798.699999988079,
+              "frame": 70,
+              "requested": 85,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 4833.199999988079,
+              "frame": 71,
+              "requested": 86,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5382.899999976158,
+              "frame": 84,
+              "requested": 110,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5451.699999988079,
+              "frame": 85,
+              "requested": 112,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5465.5,
+              "frame": 87,
+              "requested": 113,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 5850.199999988079,
+              "frame": 109,
+              "requested": 130,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6032.300000011921,
+              "frame": 112,
+              "requested": 138,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6048.599999964237,
+              "frame": 113,
+              "requested": 138,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6182,
+              "frame": 130,
+              "requested": 144,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6433.199999988079,
+              "frame": 137,
+              "requested": 156,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6616.5,
+              "frame": 139,
+              "requested": 164,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6666.899999976158,
+              "frame": 143,
+              "requested": 165,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 6716.899999976158,
+              "frame": 155,
+              "requested": 168,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7166.399999976158,
+              "frame": 163,
+              "requested": 187,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7215.399999976158,
+              "frame": 164,
+              "requested": 190,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7317.599999964237,
+              "frame": 167,
+              "requested": 195,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7816.399999976158,
+              "frame": 187,
+              "requested": 215,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7833.5,
+              "frame": 189,
+              "requested": 216,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7965.800000011921,
+              "frame": 194,
+              "requested": 222,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 7982.899999976158,
+              "frame": 195,
+              "requested": 222,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8532.800000011921,
+              "frame": 215,
+              "requested": 245,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8565.899999976158,
+              "frame": 221,
+              "requested": 247,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 8599.399999976158,
+              "frame": 222,
+              "requested": 248,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9150.099999964237,
+              "frame": 249,
+              "requested": 272,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9449.699999988079,
+              "frame": 271,
+              "requested": 284,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9749.399999976158,
+              "frame": 276,
+              "requested": 298,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9782.599999964237,
+              "frame": 277,
+              "requested": 299,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 9849.699999988079,
+              "frame": 284,
+              "requested": 302,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 10315.399999976158,
+              "frame": 301,
+              "requested": 322,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11033.699999988079,
+              "frame": 322,
+              "requested": 352,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11051.699999988079,
+              "frame": 323,
+              "requested": 353,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11066.699999988079,
+              "frame": 324,
+              "requested": 354,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11682.099999964237,
+              "frame": 351,
+              "requested": 380,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 11701.699999988079,
+              "frame": 354,
+              "requested": 380,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12148.599999964237,
+              "frame": 379,
+              "requested": 400,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12216.099999964237,
+              "frame": 382,
+              "requested": 403,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12398.5,
+              "frame": 399,
+              "requested": 411,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12671.199999988079,
+              "frame": 403,
+              "requested": 419,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 12720.5,
+              "frame": 420,
+              "requested": 420,
+              "mode": "animation",
+              "resolution": "540"
+            }
+          ],
+          "stopped": {
+            "stage": {
+              "mode": "animation",
+              "orientation": "portrait",
+              "resolution": "540",
+              "requestedFrame": "420",
+              "progress": "1.000000",
+              "targetProgress": "1.000000",
+              "settled": "true",
+              "decodedFrames": "12",
+              "maxDecodedFrames": "12",
+              "decodedBytes": "24883200",
+              "maxDecodedBytes": "49766400",
+              "maxRequests": "4",
+              "qualityLagMs": "817",
+              "qualityDrops": "2"
+            },
+            "canvas": {
+              "frame": "420",
+              "sourceFrame": "481",
+              "orientation": "portrait",
+              "resolution": "540"
+            }
+          }
+        },
+        {
+          "direction": -1,
+          "durationMs": 10585,
+          "updates": 73,
+          "intermediatePoses": 73,
+          "samples": [
+            {
+              "time": 13251.5,
+              "frame": 419,
+              "requested": 419,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13282.399999976158,
+              "frame": 418,
+              "requested": 418,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13315.5,
+              "frame": 417,
+              "requested": 417,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13482,
+              "frame": 411,
+              "requested": 411,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13666,
+              "frame": 403,
+              "requested": 403,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13683.699999988079,
+              "frame": 402,
+              "requested": 402,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13699.899999976158,
+              "frame": 401,
+              "requested": 401,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 13749.199999988079,
+              "frame": 399,
+              "requested": 399,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14116,
+              "frame": 397,
+              "requested": 384,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14450.599999964237,
+              "frame": 384,
+              "requested": 370,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14483.599999964237,
+              "frame": 381,
+              "requested": 368,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14749.199999988079,
+              "frame": 370,
+              "requested": 356,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 14899.5,
+              "frame": 368,
+              "requested": 350,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15031.899999976158,
+              "frame": 367,
+              "requested": 344,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15049.599999964237,
+              "frame": 366,
+              "requested": 343,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15216.099999964237,
+              "frame": 357,
+              "requested": 336,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15266.800000011921,
+              "frame": 351,
+              "requested": 334,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15398.599999964237,
+              "frame": 345,
+              "requested": 328,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15466.099999964237,
+              "frame": 344,
+              "requested": 325,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15749.899999976158,
+              "frame": 337,
+              "requested": 313,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15816.199999988079,
+              "frame": 335,
+              "requested": 309,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15932.899999976158,
+              "frame": 329,
+              "requested": 304,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 15949.599999964237,
+              "frame": 326,
+              "requested": 304,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16332.599999964237,
+              "frame": 310,
+              "requested": 287,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16349.699999988079,
+              "frame": 305,
+              "requested": 286,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16366.099999964237,
+              "frame": 304,
+              "requested": 286,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16816.399999976158,
+              "frame": 288,
+              "requested": 266,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16833,
+              "frame": 287,
+              "requested": 265,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16848.80000001192,
+              "frame": 286,
+              "requested": 264,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 16865.80000001192,
+              "frame": 285,
+              "requested": 264,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17315.80000001192,
+              "frame": 267,
+              "requested": 244,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17332.5,
+              "frame": 265,
+              "requested": 243,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17349.69999998808,
+              "frame": 264,
+              "requested": 243,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17615.80000001192,
+              "frame": 245,
+              "requested": 232,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 17966.899999976158,
+              "frame": 242,
+              "requested": 216,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18099.099999964237,
+              "frame": 232,
+              "requested": 211,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18632.5,
+              "frame": 217,
+              "requested": 189,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18665.30000001192,
+              "frame": 215,
+              "requested": 187,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 18714.69999998808,
+              "frame": 212,
+              "requested": 185,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19115.899999976158,
+              "frame": 189,
+              "requested": 167,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19266,
+              "frame": 187,
+              "requested": 161,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19365.399999976158,
+              "frame": 185,
+              "requested": 157,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19465.80000001192,
+              "frame": 168,
+              "requested": 153,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 19818.099999964237,
+              "frame": 153,
+              "requested": 138,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20284.099999964237,
+              "frame": 139,
+              "requested": 118,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20351.399999976158,
+              "frame": 137,
+              "requested": 115,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20433.599999964237,
+              "frame": 136,
+              "requested": 111,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20447.5,
+              "frame": 135,
+              "requested": 110,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20949.69999998808,
+              "frame": 119,
+              "requested": 88,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 20966.19999998808,
+              "frame": 116,
+              "requested": 88,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21014.899999976158,
+              "frame": 112,
+              "requested": 86,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21032.80000001192,
+              "frame": 111,
+              "requested": 85,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21499,
+              "frame": 89,
+              "requested": 65,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21601.399999976158,
+              "frame": 88,
+              "requested": 61,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21616.099999964237,
+              "frame": 86,
+              "requested": 60,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21765.19999998808,
+              "frame": 66,
+              "requested": 54,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 21882.69999998808,
+              "frame": 60,
+              "requested": 49,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22082,
+              "frame": 55,
+              "requested": 40,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22166.80000001192,
+              "frame": 50,
+              "requested": 37,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22215.099999964237,
+              "frame": 45,
+              "requested": 35,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22332.399999976158,
+              "frame": 43,
+              "requested": 30,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22466.599999964237,
+              "frame": 38,
+              "requested": 24,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22515.599999964237,
+              "frame": 35,
+              "requested": 21,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22666.30000001192,
+              "frame": 30,
+              "requested": 15,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22749.099999964237,
+              "frame": 25,
+              "requested": 11,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22815.80000001192,
+              "frame": 22,
+              "requested": 8,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 22986.69999998808,
+              "frame": 17,
+              "requested": 2,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23020.30000001192,
+              "frame": 16,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23086.69999998808,
+              "frame": 12,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23103.69999998808,
+              "frame": 9,
+              "requested": 1,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23220.899999976158,
+              "frame": 2,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23269.899999976158,
+              "frame": 1,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            },
+            {
+              "time": 23453.899999976158,
+              "frame": 0,
+              "requested": 0,
+              "mode": "animation",
+              "resolution": "540"
+            }
+          ],
+          "stopped": {
+            "stage": {
+              "mode": "animation",
+              "orientation": "portrait",
+              "resolution": "540",
+              "requestedFrame": "0",
+              "progress": "0.000000",
+              "targetProgress": "0.000000",
+              "settled": "true",
+              "decodedFrames": "12",
+              "maxDecodedFrames": "12",
+              "decodedBytes": "24883200",
+              "maxDecodedBytes": "49766400",
+              "maxRequests": "4",
+              "qualityLagMs": "817",
+              "qualityDrops": "2"
+            },
+            "canvas": {
+              "frame": "0",
+              "sourceFrame": "1",
+              "orientation": "portrait",
+              "resolution": "540"
+            }
+          }
+        }
+      ],
+      "requests": 178,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Chromium on macOS, phone viewport emulation. No physical phone, Safari or Firefox checks.",
+    "Throttled profiles use 1.6 Mbps download, 150 ms latency and 4x CPU slowdown with a cold cache."
+  ]
+}

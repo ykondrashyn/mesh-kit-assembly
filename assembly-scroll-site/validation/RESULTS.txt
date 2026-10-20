@@ -50,6 +50,29 @@ The throttled phone's first animation frame took 2,230 ms. The baseline
 HTML image download finished at 498 ms and instructions were available
 from the initial document. Resource timing does not measure pixel paint.
 
+GITHUB PAGES VERIFICATION
+
+The fix was deployed from a234f8204a869dac7aa5a59a658f2dc1b15dfbd8.
+Actions run 39403726020 passed the unit tests, asset hash verification
+and Pages deployment. All five deployed runtime files and the manifest
+match the local SHA-256 fingerprints, recorded in live-source.json.
+
+The same sustained native-wheel test passed against the public site:
+
+Profile                 Final tier   Forward updates   Reverse updates
+Desktop                 540p         112               123
+Throttled desktop       540p         52                86
+Throttled phone         540p         49                73
+
+All three kept animation mode throughout, showed intermediate poses in
+both directions, settled on exact endpoints, held still after stopping,
+and respected the download and bitmap limits. No uncaught JavaScript
+errors occurred. The unthrottled public-site run also lowered resolution
+under its cold-cache conditions. Live screenshots were reviewed in both
+orientations with the LoRa close-up visible.
+
+Live evidence is in continuous-scroll-live.json and its three PNGs.
+
 LIMITS AND COVERAGE
 
 Observed peak bitmap allocation across the checks: 49,766,400 bytes.

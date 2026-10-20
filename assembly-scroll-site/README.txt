@@ -129,7 +129,9 @@ Evidence is in validation/. RESULTS.txt summarizes outcomes and tradeoffs.
 best-practices-audit.json is the unchanged
 baseline. best-practices-after.json preserves the first improvement measurement.
 adaptive-performance.json and continuous-scroll.json cover the fix that
-keeps animation active during loading delays. These are
+keeps animation active during loading delays. continuous-scroll-live.json
+records the same scrolling test against GitHub Pages, and live-source.json
+verifies the deployed runtime against local hashes. These are
 laboratory measurements on this Mac, not field Core Web Vitals or physical
 phone results. Safari, Firefox and physical devices remain unverified.
 

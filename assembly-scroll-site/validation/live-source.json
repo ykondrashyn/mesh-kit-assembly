@@ -1,0 +1,15 @@
+{
+  "url": "https://ykondrashyn.github.io/mesh-kit-assembly/",
+  "commit": "a234f8204a869dac7aa5a59a658f2dc1b15dfbd8",
+  "workflow_run": "https://github.com/ykondrashyn/mesh-kit-assembly/actions/runs/39403726020",
+  "verified_at": "2026-10-20T09:52:34.041421+00:00",
+  "source_sha256": {
+    "app.js": "acbcd123f1a2d9c4c48cc55c0eb50e52beba37bbe60ef724ee69a63be2e5f1cf",
+    "frame-loader.mjs": "b63295d84cbd608cb7a08dfcb8e20b5c6645b835da84436dfc2ab62f3174b429",
+    "index.html": "b76c51c4782f5c364cdb4145657114b7d8e6638e5d8fe59b4e9792aaec9a230d",
+    "styles.css": "2fb339f483c2faed09b5662b92ff769cc379eeb9403a0ded3dc736224327d356",
+    "timeline.mjs": "9ad0e4e0f10cc59f34575f0ae138615201ad498dbdd895bab6ed16c49ca603ad",
+    "assets/manifest.json": "eb68dd04657fca5c1e7fddb9d73ea21c6263de37a2027e70ab794f536b3951d4"
+  },
+  "all_match": true
+}
