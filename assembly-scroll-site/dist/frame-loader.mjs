@@ -26,6 +26,9 @@ export class FrameLoader {
     this.stillBlobs = new Map();
     this.stillErrors = new Map();
     this.warmOrder = [];
+    this.direction = 1;
+    this.motionEpoch = 0;
+    this.stillsOnly = false;
   }
 
   selectVariant(variant, resolution = this.manifest.variants[variant].resolutions.at(-1)) {
@@ -54,6 +57,9 @@ export class FrameLoader {
   }
 
   request(target, direction = 1, stillsOnly = false) {
+    if (direction !== this.direction || stillsOnly !== this.stillsOnly) this.motionEpoch++;
+    this.direction = direction;
+    this.stillsOnly = stillsOnly;
     this.target = target;
     const capacity = Math.min(MAX_IMAGES, Math.floor(MAX_DECODED_BYTES / this.imageBytes));
     this.order = stillsOnly ? [target] : nearbyFrames(target, direction, this.manifest.frames.length, capacity);
@@ -65,6 +71,14 @@ export class FrameLoader {
   get allocatedBytes() { return this.decodedBytes + this.reservedBytes; }
   get allocatedImages() { return this.cache.size + Number(this.reservedBytes > 0); }
   get(index) { return this.cache.get(index); }
+  frameFor(target, displayed, direction, exactOnly = false) {
+    if (this.cache.has(target)) return target;
+    if (exactOnly || !Number.isFinite(displayed)) return undefined;
+    // Advance only toward the current target, never beyond it or back to a late frame.
+    const candidates = [...this.cache.keys()].filter(index =>
+      (index - displayed) * direction >= 0 && (target - index) * direction >= 0);
+    return candidates.sort((a, b) => Math.abs(a - target) - Math.abs(b - target))[0];
+  }
   error(index) { return this.errors.get(index); }
 
   retry() {
@@ -114,7 +128,7 @@ export class FrameLoader {
     for (const index of this.order) {
       if (this.jobs.size >= MAX_REQUESTS) break;
       if (this.cache.has(index) || this.jobs.has(index) || this.errors.has(index)) continue;
-      const job = { controller: new AbortController(), epoch: this.epoch };
+      const job = { controller: new AbortController(), epoch: this.epoch, motionEpoch: this.motionEpoch };
       this.jobs.set(index, job);
       this.maxRequests = Math.max(this.maxRequests, this.jobs.size);
       this.load(index, job);
@@ -143,7 +157,10 @@ export class FrameLoader {
   async load(index, job) {
     const { controller, epoch } = job;
     const valid = () => !this.disposed && epoch === this.epoch;
-    const wanted = () => valid() && this.order.includes(index);
+    // A completed frame can still advance the picture after the target has moved.
+    // A reversal, mode change or new image selection makes old work obsolete.
+    const wanted = () => valid() && job.motionEpoch === this.motionEpoch &&
+      (!this.stillsOnly || this.order.includes(index));
     const expectedBytes = this.imageBytes;
     let timedOut = false;
     const timeout = setTimeout(() => { timedOut = true; controller.abort(); }, 8000);

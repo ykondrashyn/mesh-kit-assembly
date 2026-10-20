@@ -127,3 +127,51 @@ test('chapter stills warm before animation and remain available when the network
     assert.ok(loader.maxRequests <= MAX_REQUESTS);
   } finally { loader.dispose(); }
 });
+
+test('completed downloads advance continuous scrolling even after leaving the prefetch window', async () => {
+  const requests = [];
+  const loader = new FrameLoader(manifest, () => {}, {
+    fetchFrame: (url, { signal }) => new Promise(resolve => requests.push({ url, signal, resolve })),
+    decodeFrame: async () => image(),
+  });
+  try {
+    loader.selectVariant('landscape');
+    loader.request(20);
+    loader.request(60);
+    for (const request of requests.slice()) request.resolve(response());
+    await until(() => loader.get(20));
+    const frame = loader.frameFor(60, 10, 1);
+    assert.ok(frame >= 20 && frame < 60);
+    assert.equal(loader.frameFor(60, 30, 1), undefined, 'Late frames must not move the picture backward');
+    assert.equal(loader.frameFor(60, 10, 1, true), undefined, 'Still mode must show the requested chapter only');
+    const reverse = loader.frameFor(10, 30, -1);
+    assert.ok(reverse >= 19 && reverse <= 20, 'Reverse motion chooses a frame toward its target');
+    assert.equal(loader.frameFor(10, 15, -1), undefined, 'Reverse motion must not move forward');
+  } finally {
+    loader.dispose();
+    for (const request of requests) request.resolve(response());
+  }
+});
+
+test('a direction reversal during decoding closes the obsolete result', async () => {
+  let finish, started = false, calls = 0;
+  const obsolete = image();
+  const loader = new FrameLoader(manifest, () => {}, {
+    fetchFrame: async () => response(),
+    decodeFrame: async () => {
+      if (calls++ === 0) { started = true; return new Promise(resolve => { finish = resolve; }); }
+      return image();
+    },
+  });
+  try {
+    loader.selectVariant('landscape');
+    loader.request(200);
+    await until(() => started);
+    loader.request(100, -1);
+    finish(obsolete);
+    await until(() => loader.get(100));
+    assert.ok(obsolete.closed);
+    assert.equal(loader.get(200), undefined);
+    assert.equal(loader.frameFor(100, 150, -1), 100);
+  } finally { loader.dispose(); }
+});

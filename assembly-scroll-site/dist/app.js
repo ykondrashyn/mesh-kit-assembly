@@ -1,5 +1,5 @@
 import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit } from './timeline.mjs';
-import { FrameLoader } from './frame-loader.mjs';
+import { FrameLoader } from './frame-loader.mjs?v=continuous-2';
 
 const $ = selector => document.querySelector(selector);
 const story = $('#story'), stage = $('#stage'), artwork = $('#artwork'), canvas = $('#assembly');
@@ -13,7 +13,7 @@ const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
 let manifest, loader, progress = 0, targetProgress = 0, lastIndex = 0, direction = 1;
 let raf = 0, previousTick = 0, wakeTimer = 0, pendingSince = 0, lagSince = null;
 let displayedKey = '', currentChapter = '', variant = '', fittedStyle;
-let resizePending = false, booting = false, enhanced = false, forceSmall = false;
+let resizePending = false, booting = false, enhanced = false, resolutionCap = Infinity;
 let cachedScrollSpan = 1, previousProgress = -1, hintAtEnd = null, stylePending = true;
 let mode = reducedQuery.matches ? 'reduced' : 'animation';
 let areaWidth = 0, areaHeight = 0;
@@ -28,16 +28,15 @@ function showLoad(message, failed = false) {
 
 function updateMotionOptions() {
   motionDescription.textContent = {
-    animation: 'Scroll at your own pace', manual: 'Chapter stills', reduced: 'Reduced motion: chapter stills',
-    auto: 'Showing chapter stills because images are loading slowly.',
+    animation: resolutionCap < Infinity ? 'Lower resolution for smoother scrolling' : 'Scroll at your own pace',
+    manual: 'Chapter stills', reduced: 'Reduced motion: chapter stills',
   }[mode];
-  motionToggle.textContent = mode === 'auto' ? 'Try animation' : stillMode() ? 'Enable full animation' : 'Use chapter stills';
+  motionToggle.textContent = stillMode() ? 'Enable full animation' : 'Use chapter stills';
   stage.dataset.mode = mode;
 }
 
 function setMode(next) {
   if (next === mode) return;
-  forceSmall = next === 'animation' && mode === 'auto';
   mode = next;
   lagSince = null;
   previousTick = 0;
@@ -53,8 +52,9 @@ function resizeStage() {
   const nextVariant = variantForStage(width, height);
   const dimensions = manifest.variants[nextVariant];
   const fit = fitFrame(width, height, dimensions.width, dimensions.height);
-  const resolution = stillMode() || forceSmall ? dimensions.resolutions[0] :
-    resolutionForFit(fit, dimensions.resolutions, devicePixelRatio || 1);
+  const fitted = resolutionForFit(fit, dimensions.resolutions, devicePixelRatio || 1);
+  const resolution = stillMode() ? dimensions.resolutions[0] :
+    dimensions.resolutions.findLast(item => Number(item.id) <= Math.min(Number(fitted.id), resolutionCap));
   fittedStyle = { width: `${fit.width}px`, height: `${fit.height}px`, left: `${fit.left}px`, top: `${fit.top}px` };
   const shown = manifest.variants[canvas.dataset.orientation] || dimensions;
   const oldFit = fitFrame(width, height, shown.width, shown.height);
@@ -125,8 +125,9 @@ function render(now) {
   stage.dataset.decodedBytes = String(loader.allocatedBytes);
   stage.dataset.maxDecodedBytes = String(loader.maxDecodedBytes);
   stage.dataset.maxRequests = String(loader.maxRequests);
-  const key = `${variant}:${loader.resolution.id}:${index}`;
-  const bitmap = loader.get(index);
+  const drawnIndex = loader.frameFor(index, Number(canvas.dataset.frame), direction, stillMode());
+  const key = `${variant}:${loader.resolution.id}:${drawnIndex}`;
+  const bitmap = loader.get(drawnIndex);
   if (bitmap) {
     if (displayedKey !== key) {
       if (stylePending) { Object.assign(canvas.style, fittedStyle); stylePending = false; }
@@ -135,13 +136,15 @@ function render(now) {
       }
       context.drawImage(bitmap, 0, 0);
       displayedKey = key;
-      canvas.dataset.frame = String(index);
-      canvas.dataset.sourceFrame = String(manifest.frames[index]);
+      canvas.dataset.frame = String(drawnIndex);
+      canvas.dataset.sourceFrame = String(manifest.frames[drawnIndex]);
       canvas.dataset.orientation = variant;
       canvas.dataset.resolution = loader.resolution.id;
-      updateNavigation(index);
+      updateNavigation(drawnIndex);
       if (!enhanced) enhance();
     }
+  }
+  if (drawnIndex === index) {
     loadState.hidden = true;
     pendingSince = 0;
     lagSince = null;
@@ -150,13 +153,18 @@ function render(now) {
     const failed = loader.error(index);
     if (failed) showLoad('This image could not load. The previous view remains available.', true);
     else if (now - pendingSince >= 160) showLoad('Loading assembly…');
-    const shownIndex = Number(canvas.dataset.frame);
-    const behind = enhanced && !stillMode() && Math.abs(index - shownIndex) >= 2;
-    if (behind) {
+    const resolutions = manifest.variants[variant].resolutions;
+    const tier = resolutions.findIndex(item => item.id === loader.resolution.id);
+    const behind = enhanced && !stillMode() && Math.abs(index - Number(canvas.dataset.frame)) >= 2;
+    if (behind && tier > 0) {
       lagSince ??= now;
       if (now - lagSince >= 800) {
-        stage.dataset.fallbackLagMs = String(Math.round(now - lagSince));
-        setMode('auto');
+        stage.dataset.qualityLagMs = String(Math.round(now - lagSince));
+        stage.dataset.qualityDrops = String(Number(stage.dataset.qualityDrops || 0) + 1);
+        resolutionCap = Number(resolutions[tier - 1].id);
+        lagSince = null;
+        updateMotionOptions();
+        resizePending = true;
       }
     } else lagSince = null;
     // Timers provide loading feedback and the lag deadline without an idle RAF loop.

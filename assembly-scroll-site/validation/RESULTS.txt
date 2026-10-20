@@ -1,55 +1,79 @@
 VALIDATION RESULTS
 
-12 unit tests passed. All 14 browser checks passed, including all 421
+14 unit tests passed. All 14 browser checks passed, including all 421
 positions in both directions and orientations: 1,684 observed positions.
-Five additional fallback and accessibility checks passed.
+Six additional failure, quality adaptation and accessibility checks passed.
+Three sustained native-wheel scrolling profiles passed in both directions.
+Resolution selection and smooth-scroll checks passed in both layouts.
 All 2,526 WebP images were verified. All 30 protected files are unchanged.
 
-DESKTOP LAB PROFILE
+CONTINUOUS SCROLLING FIX
 
-Four-second traversal: 94 image updates before, 94 after.
-Completed image transfer: 4,248,424 bytes before,
-2,855,865 bytes after, a 32.8% reduction.
-Unchanged scroll-hint DOM replacements: 239 before, 0 after.
-Desktop remains in continuous-animation mode.
+Sustained lag now reduces resolution from 1080p to 720p to 540p.
+The viewer stays in animation mode at the smallest resolution.
+Stills remain an explicit option and the reduced-motion default.
+The controlled delay test observed each tier in order. At 540p, a failed
+frame retained the previous picture and animation mode, then Retry
+recovered the exact requested position.
 
-SIMULATED MOBILE PROFILE
+The loader now accepts useful completed frames beyond the latest prefetch
+window, while rejecting stale completions after direction or selection
+changes. Displayed intermediate poses only advance toward the target.
 
-390 x 844, DPR 2, 1.6 Mbps, 150 ms latency, 4x CPU slowdown, cache disabled.
-The baseline's longest frozen interval was 3583 ms.
-The new viewer changed to chapter stills after 817 ms of sustained lag.
-Longest freeze while still in continuous-animation mode: 883 ms.
-Subsequent still-image holds are intentional, not playback stalls.
-The accessible descriptions matched the displayed chapters throughout.
+Each sustained-scroll profile uses 100 native wheel events per direction,
+80 ms apart, across the complete twelve-viewport scroll span. Frames are
+not awaited between wheel events. All profiles use DPR 2 and a cold cache.
 
-The initial continuous-animation frame took 2008 ms, compared with
-1548 ms before. Preloading the five chapter stills adds startup work.
-The baseline HTML image finished downloading at 490 ms in the new
-run, and HTML instructions were present from the initial document. This
-resource timing is not a measurement of when pixels were painted.
+Profile                 Final tier   Forward updates   Reverse updates
+Desktop, 1440 x 900      1080p        417               412
+Throttled desktop       540p         69                98
+Throttled phone         540p         78                107
+
+Throttled profiles use 1.6 Mbps, 150 ms latency and 4x CPU slowdown.
+The phone viewport is 390 x 844. Both throttled profiles lowered quality
+twice. All profiles remained in animation mode, reached exact endpoints,
+held stable after stopping and initially loaded only the active orientation.
+Slow connections still skip intermediate poses while catching up.
+These counts do not imply 30 fps playback.
+
+FOUR-SECOND PERFORMANCE LAB PROFILE
+
+Desktop: 94 image updates, 2,855,865 completed image-transfer bytes,
+104 ms longest interval without a frame update, and no resolution drop.
+Throttled phone: 23 updates and two quality reductions to 540p.
+Its longest interval without a frame update was 717 ms, and it reached
+the exact requested pose 681 ms after stopping.
+Descriptions and chapter highlighting matched the displayed pose.
+Unchanged scroll-hint DOM replacements remained zero.
+
+The throttled phone's first animation frame took 2,230 ms. The baseline
+HTML image download finished at 498 ms and instructions were available
+from the initial document. Resource timing does not measure pixel paint.
 
 LIMITS AND COVERAGE
 
-Observed peak bitmap allocation in the audit: 44,236,800 bytes.
+Observed peak bitmap allocation across the checks: 49,766,400 bytes.
 Enforced maximum: 48 MiB, including a pending decode, and 12 images.
 Maximum concurrent loader jobs observed: 4.
 These limits exclude canvas, GPU and other browser memory.
 
-Chromium 153.0.8010.37 was tested on macOS, including emulated touch.
-Safari, Firefox and physical mobile devices were not tested. Playwright's
-Firefox and WebKit browser binaries are not installed on this host.
-These are laboratory results, not field Core Web Vitals.
+Coverage includes keyboard endpoints, emulated touch, orientation changes,
+rapid reversals, stale downloads, blocked script and manifest, retry,
+enlarged instructions, optional stills and reduced-motion opt-in.
+Desktop and phone screenshots were reviewed with the LoRa close-up visible.
+The original artwork, twelve-viewport travel and 100 ms easing are unchanged.
 
-The complete traversal preceded a small navigation-label wrapping fix.
-Focused enlarged-text, keyboard and failure checks and the performance
-audit were repeated afterward. Animation code and frame assets were
-unchanged by that CSS fix.
+Chromium 153.0.8010.37 was tested on macOS. Safari, Firefox and physical
+mobile devices were not tested. Playwright's Firefox and WebKit browser
+binaries are not installed on this host. These are laboratory results,
+not field Core Web Vitals.
 
 REPRODUCTION
 
 Run the commands listed in README.txt, then:
   python3 scripts/record_validation.py
 
-The baseline audit is retained in best-practices-audit.json. The current
-audit is best-practices-after.json. site-source.json fingerprints the
-validated runtime and summarizes coverage.
+best-practices-audit.json retains the original baseline and
+best-practices-after.json retains the prior automatic-stills measurement.
+adaptive-performance.json and continuous-scroll.json record this fix.
+site-source.json fingerprints the validated runtime and summarizes coverage.

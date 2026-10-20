@@ -38,7 +38,8 @@ async function fits(page) {
     const canvas = document.querySelector('canvas').getBoundingClientRect();
     const area = document.querySelector('#artwork').getBoundingClientRect();
     const controls = document.querySelector('.controls').getBoundingClientRect();
-    return { canvas: canvas.toJSON(), area: area.toJSON(), controls: controls.toJSON(), innerHeight };
+    return { canvas: canvas.toJSON(), area: area.toJSON(), controls: controls.toJSON(), innerHeight,
+      orientation: document.querySelector('canvas').dataset.orientation };
   });
   assert.ok(bounds.canvas.left >= bounds.area.left - 1);
   assert.ok(bounds.canvas.right <= bounds.area.right + 1);
@@ -179,7 +180,10 @@ async function run(name, fn) {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.waitForTimeout(100);
       const whileLoading = await fits(page);
-      assert.ok(Math.abs(whileLoading.canvas.width / whileLoading.canvas.height - 16 / 9) < .001);
+      // A nearby portrait frame may arrive before the delayed exact target.
+      // Either orientation must retain its own aspect ratio during that handoff.
+      const ratio = whileLoading.orientation === 'portrait' ? 9 / 16 : 16 / 9;
+      assert.ok(Math.abs(whileLoading.canvas.width / whileLoading.canvas.height - ratio) < .001);
       await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
       await waitFrame(page, 150);
       await page.waitForTimeout(550);

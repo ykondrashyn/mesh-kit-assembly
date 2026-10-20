@@ -1,0 +1,173 @@
+{
+  "browser": "153.0.8010.37",
+  "scenarios": [
+    {
+      "profile": {
+        "name": "desktop-local",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "cpu": 1,
+        "throttle": false
+      },
+      "firstFrameMs": 127.89999997615814,
+      "baselineImageResponseEndMs": 9,
+      "durationMs": 4005.5,
+      "scrollDistancePx": 2500,
+      "firstQualityReductionMs": null,
+      "longestAnimationFreezeMs": 104.30000003576276,
+      "maximumContinuousFrameLag": 0,
+      "chapterMismatches": 0,
+      "finalMode": "animation",
+      "qualityLagMs": 0,
+      "qualityDrops": 0,
+      "finalResolution": "720",
+      "maximumDecodedBytes": 44236800,
+      "maximumRequests": 4,
+      "frameUpdatesDuringScroll": 94,
+      "longestFrozenMs": 104.30000003576276,
+      "maximumFrameLag": 0,
+      "loadingSampleFraction": 0,
+      "scrollHintDomReplacements": 0,
+      "rafIntervalP95Ms": 16.700000000000273,
+      "displayedFrameAtScrollEnd": 94,
+      "requestedFrameAtScrollEnd": 94,
+      "displayedOrientation": "landscape",
+      "decodedFrameLimitObserved": 12,
+      "accessibleCanvasDescription": "Wi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
+      "visibleText": "XIAO + Wio\n\nScroll to assemble ↓\n\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\nScroll at your own pace\nUse chapter stills\nAssembly instructions\n\nWi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
+      "canvasCssSize": {
+        "width": 1251.546875,
+        "height": 704
+      },
+      "canvasBackingSize": {
+        "width": 1280,
+        "height": 720
+      },
+      "recoveredAfterStopping": true,
+      "recoveryAfterStoppingMs": 329,
+      "frameRequests": 117,
+      "completedFrameRequests": 117,
+      "failedFrameRequests": 0,
+      "completedFrameTransferBytes": 2855865,
+      "cancelledRequests": 0
+    },
+    {
+      "profile": {
+        "name": "simulated-slow-mobile",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "cpu": 4,
+        "throttle": true
+      },
+      "firstFrameMs": 2229.599999964237,
+      "baselineImageResponseEndMs": 498.2999999523163,
+      "durationMs": 4015.899999976158,
+      "scrollDistancePx": 2500,
+      "firstQualityReductionMs": 1163.900000023842,
+      "longestAnimationFreezeMs": 716.7000000000003,
+      "maximumContinuousFrameLag": 31,
+      "chapterMismatches": 0,
+      "finalMode": "animation",
+      "qualityLagMs": 800,
+      "qualityDrops": 2,
+      "finalResolution": "540",
+      "maximumDecodedBytes": 49766400,
+      "maximumRequests": 4,
+      "frameUpdatesDuringScroll": 23,
+      "longestFrozenMs": 716.7000000000003,
+      "maximumFrameLag": 31,
+      "loadingSampleFraction": 0.8842975206611571,
+      "scrollHintDomReplacements": 0,
+      "rafIntervalP95Ms": 16.700000000000728,
+      "displayedFrameAtScrollEnd": 82,
+      "requestedFrameAtScrollEnd": 101,
+      "displayedOrientation": "portrait",
+      "decodedFrameLimitObserved": 12,
+      "accessibleCanvasDescription": "Wi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
+      "visibleText": "XIAO + Wio\n\nScroll to assemble ↓\n\nLoading assembly…\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\nLower resolution for smoother scrolling\nUse chapter stills\nAssembly instructions\n\nWi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
+      "canvasCssSize": {
+        "width": 364.5,
+        "height": 648
+      },
+      "canvasBackingSize": {
+        "width": 540,
+        "height": 960
+      },
+      "recoveredAfterStopping": true,
+      "recoveryAfterStoppingMs": 681,
+      "frameRequests": 57,
+      "completedFrameRequests": 45,
+      "failedFrameRequests": 8,
+      "completedFrameTransferBytes": 861161,
+      "cancelledRequests": 8
+    }
+  ],
+  "scriptFailure": {
+    "renderedFrame": null,
+    "fallbackImages": 1,
+    "fallbackLoaded": true,
+    "instructionsOpen": true,
+    "errorVisible": false,
+    "bodyText": "XIAO + Wio\n\nAssembly instructions below ↓\n\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\nAssembly instructions\n\nAssembly instructions\n\nThe circles are enlarged views of the indicated connectors, not additional parts.\n\nParts\n\nCheck the four parts: the narrow LoRa antenna marked 868 MHz, the Wio-SX1262 board, the broad Wi-Fi antenna marked 2.4 GHz, and the XIAO ESP32S3 board.\n\nConnect Wi-Fi\n\nAlign the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.\n\nConnect LoRa\n\nAlign the narrow 868 MHz LoRa antenna plug with the antenna socket on Wio. Press straight down until seated. The circular close-up shows this same connection.\n\nJoin the boards\n\nTurn the boards to show the rear connector. Position Wio above XIAO, align the small board-to-board connector, then press straight down. Keep both antenna cables outside the board gap. The XIAO socket is shown simplified in the close-up.\n\nAssembled\n\nBoth antennas are connected and the boards are joined. Turn the assembly back to the front, as shown at the end of the animation."
+  },
+  "reducedMotion": {
+    "frame": "33",
+    "modeToggleVisible": true,
+    "navigationTargets": [
+      {
+        "name": "01\nParts",
+        "width": 70,
+        "height": 44
+      },
+      {
+        "name": "02\nWi-Fi",
+        "width": 70,
+        "height": 44
+      },
+      {
+        "name": "03\nLoRa",
+        "width": 70,
+        "height": 44
+      },
+      {
+        "name": "04\nBoards",
+        "width": 70,
+        "height": 44
+      },
+      {
+        "name": "✓\nAssembled",
+        "width": 70,
+        "height": 44
+      }
+    ]
+  },
+  "comparison": [
+    {
+      "profile": "desktop-local",
+      "baselineFrozenMs": 101.60000001192088,
+      "continuousAnimationFreezeMs": 104.30000003576276,
+      "qualityReductionAtMs": null,
+      "baselineHintReplacements": 239,
+      "hintReplacements": 0
+    },
+    {
+      "profile": "simulated-slow-mobile",
+      "baselineFrozenMs": 3583.2000000000003,
+      "continuousAnimationFreezeMs": 716.7000000000003,
+      "qualityReductionAtMs": 1163.900000023842,
+      "baselineHintReplacements": 239,
+      "hintReplacements": 0
+    }
+  ],
+  "limitations": [
+    "Synthetic Chromium checks on this Mac with a localhost server.",
+    "Network profile is 1.6 Mbps download, 150 ms latency and 4x CPU slowdown with browser cache disabled.",
+    "These are laboratory measurements, not real-device results or field Core Web Vitals.",
+    "Animation stays active under throttling. Slow-network frames may be skipped while catching up.",
+    "Safari, Firefox and physical mobile devices were not tested."
+  ]
+}

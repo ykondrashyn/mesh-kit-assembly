@@ -10,7 +10,8 @@ evidence = root / "validation"
 read = lambda name: json.loads((evidence / name).read_text())
 browser = read("browser-validation.json")
 fallback = read("fallback-validation.json")
-performance = read("best-practices-after.json")
+performance = read("adaptive-performance.json")
+continuous = read("continuous-scroll.json")
 assets = read("asset-validation.json")
 unit_output = (evidence / "timeline-tests.txt").read_text()
 passed = int(re.search(r"^# pass (\d+)$", unit_output, re.MULTILINE)[1])
@@ -20,16 +21,19 @@ assert all(item["passed"] for item in fallback["results"])
 assert not assets["errors"]
 assert all(item["recoveredAfterStopping"] and item["chapterMismatches"] == 0
            for item in performance["scenarios"])
+assert continuous["completed"] and all(item["passed"] for item in continuous["profiles"])
 files = sorted(path for path in (root / "dist").iterdir() if path.is_file())
 files += [root / "dist/assets/manifest.json"]
 report = {
     "local_preview": "http://127.0.0.1:8766/",
-    "publication": "local only",
+    "publication": "GitHub Pages",
+    "live_url": "https://ykondrashyn.github.io/mesh-kit-assembly/",
     "source_sha256": {str(path.relative_to(root)): hashlib.sha256(path.read_bytes()).hexdigest()
                       for path in files},
     "browser": browser["browser"],
     "browser_checks_passed": len(browser["results"]),
     "fallback_checks_passed": len(fallback["results"]),
+    "continuous_scroll_profiles_passed": len(continuous["profiles"]),
     "unit_tests_passed": passed,
     "traversed_positions": sum(item.get("details", {}).get("positionsChecked", 0)
                                for item in browser["results"] if isinstance(item.get("details"), dict)),
@@ -40,7 +44,8 @@ report = {
     "maximum_decoded_frames": 12,
     "maximum_decoded_pixel_bytes": 48 * 1024 * 1024,
     "maximum_loader_jobs": 4,
-    "fallback_lag_threshold_ms": 800,
+    "resolution_reduction_lag_threshold_ms": 800,
+    "automatic_still_fallback": False,
     "limitations": browser["limitations"] + ["Network and CPU throttling are synthetic laboratory conditions.",
         "Bitmap pixel limits exclude canvas buffers, GPU storage and other browser overhead."]
 }

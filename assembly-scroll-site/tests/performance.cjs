@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const base = process.argv[2] || 'http://127.0.0.1:8766/';
-const out = path.resolve(__dirname, '../validation/best-practices-after.json');
+const out = path.resolve(__dirname, '../validation/adaptive-performance.json');
 
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
@@ -47,7 +47,7 @@ const out = path.resolve(__dirname, '../validation/best-practices-after.json');
         mutation.observe(document.querySelector('#scroll-hint'), { childList: true });
         const intervals = [];
         let previousTick = started;
-        let firstFallbackMs = null, longestAnimationFreezeMs = 0, chapterMismatches = 0, maximumContinuousFrameLag = 0;
+        let firstQualityReductionMs = null, longestAnimationFreezeMs = 0, chapterMismatches = 0, maximumContinuousFrameLag = 0;
         await new Promise(resolve => {
           function tick(now) {
             const elapsed = now - started;
@@ -55,7 +55,7 @@ const out = path.resolve(__dirname, '../validation/best-practices-after.json');
             intervals.push(now - previousTick);
             previousTick = now;
             const frame = Number(canvas.dataset.frame);
-            if (stage.dataset.mode === 'auto' && firstFallbackMs === null) firstFallbackMs = elapsed;
+            if (Number(stage.dataset.qualityDrops) > 0 && firstQualityReductionMs === null) firstQualityReductionMs = elapsed;
             if (stage.dataset.mode === 'animation') longestAnimationFreezeMs = Math.max(longestAnimationFreezeMs, now - lastChange);
             const expectedChapter = frame >= 375 ? 'assembled' : frame >= 255 ? 'boards' : frame >= 150 ? 'lora' : frame >= 45 ? 'wifi' : 'parts';
             if (document.querySelector('[aria-current=step]')?.dataset.chapter !== expectedChapter) chapterMismatches++;
@@ -82,8 +82,8 @@ const out = path.resolve(__dirname, '../validation/best-practices-after.json');
         intervals.sort((a, b) => a - b);
         return {
           durationMs: performance.now() - started, scrollDistancePx: 2500,
-          firstFallbackMs, longestAnimationFreezeMs, maximumContinuousFrameLag, chapterMismatches,
-          finalMode: stage.dataset.mode, fallbackLagMs: Number(stage.dataset.fallbackLagMs || 0),
+          firstQualityReductionMs, longestAnimationFreezeMs, maximumContinuousFrameLag, chapterMismatches,
+          finalMode: stage.dataset.mode, qualityLagMs: Number(stage.dataset.qualityLagMs || 0), qualityDrops: Number(stage.dataset.qualityDrops || 0), finalResolution: stage.dataset.resolution,
           maximumDecodedBytes: Number(stage.dataset.maxDecodedBytes), maximumRequests: Number(stage.dataset.maxRequests),
           frameUpdatesDuringScroll: updates, longestFrozenMs, maximumFrameLag: maxLag,
           loadingSampleFraction: loadingSamples / samples, scrollHintDomReplacements: hintMutations,
@@ -119,8 +119,10 @@ const out = path.resolve(__dirname, '../validation/best-practices-after.json');
       assert.equal(experiment.scrollHintDomReplacements, 0);
       assert.equal(experiment.chapterMismatches, 0);
       if (profile.throttle) {
-        assert.equal(experiment.finalMode, 'auto');
-        assert.ok(experiment.fallbackLagMs >= 800 && experiment.fallbackLagMs < 1150);
+        assert.equal(experiment.finalMode, 'animation');
+        assert.equal(experiment.finalResolution, '540');
+        assert.ok(experiment.qualityDrops >= 1);
+        assert.ok(experiment.qualityLagMs >= 800 && experiment.qualityLagMs < 1150);
       } else assert.equal(experiment.finalMode, 'animation');
       console.log(JSON.stringify(report.scenarios.at(-1), null, 2));
       await context.close();
@@ -128,7 +130,7 @@ const out = path.resolve(__dirname, '../validation/best-practices-after.json');
 
     const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
     const page = await context.newPage();
-    await page.route('**/app.js', route => route.abort('failed'));
+    await page.route(/\/app\.js(?:\?|$)/, route => route.abort('failed'));
     await page.goto(base);
     await page.waitForTimeout(500);
     report.scriptFailure = await page.evaluate(() => ({
@@ -159,14 +161,14 @@ const out = path.resolve(__dirname, '../validation/best-practices-after.json');
     const baseline = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../validation/best-practices-audit.json')));
     report.comparison = report.scenarios.map((result, index) => ({
       profile: result.profile.name, baselineFrozenMs: baseline.scenarios[index].longestFrozenMs,
-      continuousAnimationFreezeMs: result.longestAnimationFreezeMs, fallbackAtMs: result.firstFallbackMs,
+      continuousAnimationFreezeMs: result.longestAnimationFreezeMs, qualityReductionAtMs: result.firstQualityReductionMs,
       baselineHintReplacements: baseline.scenarios[index].scrollHintDomReplacements, hintReplacements: result.scrollHintDomReplacements,
     }));
     report.limitations = [
       'Synthetic Chromium checks on this Mac with a localhost server.',
       'Network profile is 1.6 Mbps download, 150 ms latency and 4x CPU slowdown with browser cache disabled.',
       'These are laboratory measurements, not real-device results or field Core Web Vitals.',
-      'Intentional chapter holds are not continuous-animation stalls. Compare finalMode and longestAnimationFreezeMs.',
+      'Animation stays active under throttling. Slow-network frames may be skipped while catching up.',
       'Safari, Firefox and physical mobile devices were not tested.',
     ];
     fs.writeFileSync(out, JSON.stringify(report, null, 2) + '\n');

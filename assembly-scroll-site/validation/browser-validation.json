@@ -9,36 +9,37 @@
         "frameRequests": 19,
         "bounds": {
           "canvas": {
-            "x": 86.71875,
+            "x": 94.21875,
             "y": 42,
             "width": 1251.546875,
             "height": 704,
             "top": 42,
-            "right": 1338.265625,
+            "right": 1345.765625,
             "bottom": 746,
-            "left": 86.71875
+            "left": 94.21875
           },
           "area": {
             "x": 24,
             "y": 42,
-            "width": 1377,
+            "width": 1392,
             "height": 704,
             "top": 42,
-            "right": 1401,
+            "right": 1416,
             "bottom": 746,
             "left": 24
           },
           "controls": {
-            "x": 332.5,
+            "x": 340,
             "y": 746,
             "width": 760,
             "height": 142,
             "top": 746,
-            "right": 1092.5,
+            "right": 1100,
             "bottom": 888,
-            "left": 332.5
+            "left": 340
           },
-          "innerHeight": 900
+          "innerHeight": 900,
+          "orientation": "landscape"
         }
       }
     },
@@ -91,180 +92,185 @@
           "index": 33,
           "bounds": {
             "canvas": {
-              "x": 86.71875,
+              "x": 94.21875,
               "y": 42,
               "width": 1251.546875,
               "height": 704,
               "top": 42,
-              "right": 1338.265625,
+              "right": 1345.765625,
               "bottom": 746,
-              "left": 86.71875
+              "left": 94.21875
             },
             "area": {
               "x": 24,
               "y": 42,
-              "width": 1377,
+              "width": 1392,
               "height": 704,
               "top": 42,
-              "right": 1401,
+              "right": 1416,
               "bottom": 746,
               "left": 24
             },
             "controls": {
-              "x": 332.5,
+              "x": 340,
               "y": 746,
               "width": 760,
               "height": 142,
               "top": 746,
-              "right": 1092.5,
+              "right": 1100,
               "bottom": 888,
-              "left": 332.5
+              "left": 340
             },
-            "innerHeight": 900
+            "innerHeight": 900,
+            "orientation": "landscape"
           }
         },
         {
           "index": 129,
           "bounds": {
             "canvas": {
-              "x": 86.71875,
+              "x": 94.21875,
               "y": 42,
               "width": 1251.546875,
               "height": 704,
               "top": 42,
-              "right": 1338.265625,
+              "right": 1345.765625,
               "bottom": 746,
-              "left": 86.71875
+              "left": 94.21875
             },
             "area": {
               "x": 24,
               "y": 42,
-              "width": 1377,
+              "width": 1392,
               "height": 704,
               "top": 42,
-              "right": 1401,
+              "right": 1416,
               "bottom": 746,
               "left": 24
             },
             "controls": {
-              "x": 332.5,
+              "x": 340,
               "y": 746,
               "width": 760,
               "height": 142,
               "top": 746,
-              "right": 1092.5,
+              "right": 1100,
               "bottom": 888,
-              "left": 332.5
+              "left": 340
             },
-            "innerHeight": 900
+            "innerHeight": 900,
+            "orientation": "landscape"
           }
         },
         {
           "index": 234,
           "bounds": {
             "canvas": {
-              "x": 86.71875,
+              "x": 94.21875,
               "y": 42,
               "width": 1251.546875,
               "height": 704,
               "top": 42,
-              "right": 1338.265625,
+              "right": 1345.765625,
               "bottom": 746,
-              "left": 86.71875
+              "left": 94.21875
             },
             "area": {
               "x": 24,
               "y": 42,
-              "width": 1377,
+              "width": 1392,
               "height": 704,
               "top": 42,
-              "right": 1401,
+              "right": 1416,
               "bottom": 746,
               "left": 24
             },
             "controls": {
-              "x": 332.5,
+              "x": 340,
               "y": 746,
               "width": 760,
               "height": 142,
               "top": 746,
-              "right": 1092.5,
+              "right": 1100,
               "bottom": 888,
-              "left": 332.5
+              "left": 340
             },
-            "innerHeight": 900
+            "innerHeight": 900,
+            "orientation": "landscape"
           }
         },
         {
           "index": 363,
           "bounds": {
             "canvas": {
-              "x": 86.71875,
+              "x": 94.21875,
               "y": 42,
               "width": 1251.546875,
               "height": 704,
               "top": 42,
-              "right": 1338.265625,
+              "right": 1345.765625,
               "bottom": 746,
-              "left": 86.71875
+              "left": 94.21875
             },
             "area": {
               "x": 24,
               "y": 42,
-              "width": 1377,
+              "width": 1392,
               "height": 704,
               "top": 42,
-              "right": 1401,
+              "right": 1416,
               "bottom": 746,
               "left": 24
             },
             "controls": {
-              "x": 332.5,
+              "x": 340,
               "y": 746,
               "width": 760,
               "height": 142,
               "top": 746,
-              "right": 1092.5,
+              "right": 1100,
               "bottom": 888,
-              "left": 332.5
+              "left": 340
             },
-            "innerHeight": 900
+            "innerHeight": 900,
+            "orientation": "landscape"
           }
         },
         {
           "index": 420,
           "bounds": {
             "canvas": {
-              "x": 86.71875,
+              "x": 94.21875,
               "y": 42,
               "width": 1251.546875,
               "height": 704,
               "top": 42,
-              "right": 1338.265625,
+              "right": 1345.765625,
               "bottom": 746,
-              "left": 86.71875
+              "left": 94.21875
             },
             "area": {
               "x": 24,
               "y": 42,
-              "width": 1377,
+              "width": 1392,
               "height": 704,
               "top": 42,
-              "right": 1401,
+              "right": 1416,
               "bottom": 746,
               "left": 24
             },
             "controls": {
-              "x": 332.5,
+              "x": 340,
               "y": 746,
               "width": 760,
               "height": 142,
               "top": 746,
-              "right": 1092.5,
+              "right": 1100,
               "bottom": 888,
-              "left": 332.5
+              "left": 340
             },
-            "innerHeight": 900
+            "innerHeight": 900,
+            "orientation": "landscape"
           }
         }
       ]
@@ -276,7 +282,7 @@
         "frame": 420,
         "requested": 420,
         "orientation": "landscape",
-        "progress": 0.998835,
+        "progress": 0.998844,
         "decoded": 12,
         "maxDecoded": 12,
         "maxDecodedBytes": 44236800,
@@ -320,7 +326,7 @@
         "requested": 150,
         "orientation": "landscape",
         "progress": 0.35713,
-        "decoded": 6,
+        "decoded": 12,
         "maxDecoded": 12,
         "maxDecodedBytes": 44236800,
         "maxRequests": 4
@@ -396,7 +402,7 @@
         "frame": 13,
         "requested": 13,
         "orientation": "portrait",
-        "progress": 0.031974,
+        "progress": 0.031971,
         "decoded": 6,
         "maxDecoded": 6,
         "maxDecodedBytes": 49766400,

@@ -66,10 +66,19 @@ buffers, GPU storage or the five small compressed chapter images.
 
 Five 540p chapter stills are warmed before streaming animation frames.
 When displayed motion remains at least two positions behind for 800 ms,
-the viewer switches to these stills and explains why. It stays in this
-mode until the visitor selects Try animation, which uses 540p. Reduced
-motion also selects chapter stills, with an explicit animation option.
-Everyone can select Use chapter stills.
+the viewer lowers resolution one tier, from 1080p to 720p to 540p, while
+keeping continuous animation active. The lower ceiling lasts for the
+page visit, including resize and orientation changes, to avoid oscillation.
+At 540p it keeps animating and retains the last picture while loading.
+It never automatically selects chapter stills because of network delays.
+Reduced motion selects stills with an explicit animation option.
+Everyone can select Use chapter stills and resume animation at any time.
+
+Completed downloads can advance the picture even if scrolling has passed
+the original request window. Only frames between the displayed pose and
+the current target can be used. Stale results from a direction, mode,
+orientation or resolution change cannot replace the current picture.
+After scrolling stops the viewer settles on the exact requested pose.
 
 The initial HTML includes a parts image, working chapter links and full
 assembly instructions. These remain usable if JavaScript is unavailable
@@ -96,6 +105,7 @@ Run these scripts with the same environment variables:
   tests/smooth-scroll.cjs Easing, reverse motion and stable stopping
   tests/fallback.cjs      Script failures, retry, stills and readable text
   tests/performance.cjs   Repeatable desktop and throttled mobile audit
+  tests/continuous-scroll.cjs Sustained native wheel scrolling in both directions
 
 The default browser test traverses all 421 positions forward and backward
 in each orientation. SKIP_FULL_TRAVERSAL=1 explicitly skips those two
@@ -105,14 +115,21 @@ for full release validation.
 The performance test uses a fresh browser context with the cache disabled.
 The mobile profile applies 1.6 Mbps download, 150 ms latency, 4x CPU slowdown
 and device pixel ratio 2. Chapter holds are intentional, so its report
-separates continuous-animation freezes from still mode.
+records resolution reductions and animation freezes. The continuous-scroll
+regression uses a cold cache, covers the full timeline in both directions
+without waiting for individual frames, and requires intermediate poses,
+monotonic movement, exact settling and bounded resource use. Pass a live
+URL to run the same check against GitHub Pages. Set VALIDATION_OUTPUT to
+save that run separately from the local report.
 
 After completing all checks, run python3 scripts/record_validation.py to
 refresh the runtime fingerprint and coverage summary.
 
 Evidence is in validation/. RESULTS.txt summarizes outcomes and tradeoffs.
 best-practices-audit.json is the unchanged
-baseline. best-practices-after.json records the new measurement. These are
+baseline. best-practices-after.json preserves the first improvement measurement.
+adaptive-performance.json and continuous-scroll.json cover the fix that
+keeps animation active during loading delays. These are
 laboratory measurements on this Mac, not field Core Web Vitals or physical
 phone results. Safari, Firefox and physical devices remain unverified.
 

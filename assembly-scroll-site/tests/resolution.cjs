@@ -6,7 +6,8 @@ const assert = require('node:assert/strict');
     for (const profile of [
       { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, orientation: 'landscape', resolution: '720' },
       { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, orientation: 'portrait', resolution: '540' },
-      { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '720' },
+      // The fitted portrait is 364.5 CSS pixels wide, requiring 729 pixels at 2x.
+      { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '1080' },
     ]) {
       const context = await browser.newContext(profile);
       const page = await context.newPage();
