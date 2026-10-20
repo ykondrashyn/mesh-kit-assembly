@@ -55,6 +55,7 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
     assert.equal(await p.locator('[aria-current="step"]').getAttribute('data-chapter'), 'lora');
     await p.waitForTimeout(1000);
     assert.equal(await p.locator('#stage').getAttribute('data-mode'), 'animation');
+    await p.getByText('Instructions & options', { exact: true }).click();
     await p.getByRole('button', { name: 'Use chapter stills', exact: true }).click();
     await visibleFrame(p, 234);
     assert.equal(await p.locator('#stage').getAttribute('data-mode'), 'manual');

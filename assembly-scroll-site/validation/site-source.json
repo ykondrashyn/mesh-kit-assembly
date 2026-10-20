@@ -3,10 +3,10 @@
   "publication": "GitHub Pages",
   "live_url": "https://ykondrashyn.github.io/mesh-kit-assembly/",
   "source_sha256": {
-    "dist/app.js": "acbcd123f1a2d9c4c48cc55c0eb50e52beba37bbe60ef724ee69a63be2e5f1cf",
+    "dist/app.js": "f27c28003b8978e3d4d710c8ab3fa24ebb86e519fa103da7137cb4e19ecd9f03",
     "dist/frame-loader.mjs": "b63295d84cbd608cb7a08dfcb8e20b5c6645b835da84436dfc2ab62f3174b429",
-    "dist/index.html": "b76c51c4782f5c364cdb4145657114b7d8e6638e5d8fe59b4e9792aaec9a230d",
-    "dist/styles.css": "2fb339f483c2faed09b5662b92ff769cc379eeb9403a0ded3dc736224327d356",
+    "dist/index.html": "8f40d454714ce025f0e1836013150703775631d0e31a422f0473c47f878d7e0a",
+    "dist/styles.css": "cc2ba7dc4e27c5ff674e5db56fe2f79faee92dfeef980ca690b2827d714b7cd4",
     "dist/timeline.mjs": "9ad0e4e0f10cc59f34575f0ae138615201ad498dbdd895bab6ed16c49ca603ad",
     "dist/assets/manifest.json": "eb68dd04657fca5c1e7fddb9d73ea21c6263de37a2027e70ab794f536b3951d4"
   },
@@ -14,6 +14,7 @@
   "browser_checks_passed": 14,
   "fallback_checks_passed": 6,
   "continuous_scroll_profiles_passed": 3,
+  "layout_profiles_passed": 5,
   "unit_tests_passed": 14,
   "traversed_positions": 1684,
   "exported_frames_checked": 2526,

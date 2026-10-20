@@ -11,101 +11,97 @@
       "forward": [
         {
           "frame": 0,
-          "time": 392.2
+          "time": 326.9
         },
         {
           "frame": 3,
-          "time": 442.2
+          "time": 376.8
         },
         {
           "frame": 5,
-          "time": 458.9
+          "time": 393.5
         },
         {
           "frame": 7,
-          "time": 475.5
+          "time": 410.2
         },
         {
           "frame": 9,
-          "time": 492.2
+          "time": 426.8
         },
         {
           "frame": 11,
-          "time": 508.9
+          "time": 443.4
         },
         {
           "frame": 12,
-          "time": 525.5
+          "time": 460.2
         },
         {
           "frame": 13,
-          "time": 542.2
+          "time": 476.8
         },
         {
           "frame": 14,
-          "time": 558.8
+          "time": 493.5
         },
         {
           "frame": 15,
-          "time": 592.2
+          "time": 510.1
         },
         {
           "frame": 16,
-          "time": 608.9
+          "time": 543.4
         },
         {
           "frame": 17,
-          "time": 642.2
+          "time": 576.8
         },
         {
           "frame": 18,
-          "time": 708.8
+          "time": 643.5
         },
         {
           "frame": 19,
-          "time": 908.8
+          "time": 843.5
         }
       ],
       "backward": [
         {
           "frame": 19,
-          "time": 958.9
+          "time": 893.5
         },
         {
-          "frame": 17,
-          "time": 992.2
-        },
-        {
-          "frame": 16,
-          "time": 1008.9
+          "frame": 18,
+          "time": 926.8
         },
         {
           "frame": 15,
-          "time": 1025.5
+          "time": 960.2
         },
         {
           "frame": 14,
-          "time": 1042.1
+          "time": 976.8
         },
         {
           "frame": 13,
-          "time": 1058.8
+          "time": 993.4
         },
         {
           "frame": 12,
-          "time": 1092.2
+          "time": 1026.8
         },
         {
           "frame": 11,
-          "time": 1125.5
+          "time": 1060.1
         },
         {
           "frame": 10,
-          "time": 1192.2
+          "time": 1126.8
         },
         {
           "frame": 9,
-          "time": 1392.2
+          "time": 1326.8
         }
       ],
       "settledWithoutOvershoot": true
@@ -119,101 +115,101 @@
       "forward": [
         {
           "frame": 0,
-          "time": 341.1
+          "time": 320.8
         },
         {
           "frame": 3,
-          "time": 391.1
+          "time": 370.8
         },
         {
           "frame": 6,
-          "time": 407.7
+          "time": 387.6
         },
         {
           "frame": 8,
-          "time": 424.4
+          "time": 404.3
         },
         {
           "frame": 10,
-          "time": 441.1
+          "time": 420.9
         },
         {
           "frame": 11,
-          "time": 457.8
+          "time": 437.6
         },
         {
           "frame": 13,
-          "time": 474.5
+          "time": 454.2
         },
         {
           "frame": 14,
-          "time": 491.1
+          "time": 470.9
         },
         {
           "frame": 15,
-          "time": 507.7
+          "time": 487.6
         },
         {
           "frame": 16,
-          "time": 541.1
+          "time": 520.9
         },
         {
           "frame": 17,
-          "time": 557.8
+          "time": 537.5
         },
         {
           "frame": 18,
-          "time": 591.1
+          "time": 570.9
         },
         {
           "frame": 19,
-          "time": 641.1
+          "time": 620.9
         },
         {
           "frame": 20,
-          "time": 774.4
+          "time": 754.2
         }
       ],
       "backward": [
         {
           "frame": 20,
-          "time": 907.7
+          "time": 887.6
         },
         {
           "frame": 18,
-          "time": 941.1
+          "time": 920.8
         },
         {
           "frame": 17,
-          "time": 957.7
+          "time": 937.5
         },
         {
           "frame": 16,
-          "time": 974.4
+          "time": 954.2
         },
         {
           "frame": 15,
-          "time": 991.1
+          "time": 970.8
         },
         {
           "frame": 14,
-          "time": 1007.7
+          "time": 987.5
         },
         {
           "frame": 13,
-          "time": 1041.1
+          "time": 1020.9
         },
         {
           "frame": 12,
-          "time": 1074.4
+          "time": 1054.2
         },
         {
           "frame": 11,
-          "time": 1124.4
+          "time": 1104.2
         },
         {
           "frame": 10,
-          "time": 1224.4
+          "time": 1204.2
         }
       ],
       "settledWithoutOvershoot": true

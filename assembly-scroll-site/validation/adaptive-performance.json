@@ -11,46 +11,46 @@
         "cpu": 1,
         "throttle": false
       },
-      "firstFrameMs": 127.89999997615814,
-      "baselineImageResponseEndMs": 9,
-      "durationMs": 4005.5,
+      "firstFrameMs": 82.80000001192093,
+      "baselineImageResponseEndMs": 7.5,
+      "durationMs": 4010,
       "scrollDistancePx": 2500,
       "firstQualityReductionMs": null,
-      "longestAnimationFreezeMs": 104.30000003576276,
+      "longestAnimationFreezeMs": 109.1999999761581,
       "maximumContinuousFrameLag": 0,
       "chapterMismatches": 0,
       "finalMode": "animation",
       "qualityLagMs": 0,
       "qualityDrops": 0,
-      "finalResolution": "720",
-      "maximumDecodedBytes": 44236800,
+      "finalResolution": "1080",
+      "maximumDecodedBytes": 49766400,
       "maximumRequests": 4,
       "frameUpdatesDuringScroll": 94,
-      "longestFrozenMs": 104.30000003576276,
+      "longestFrozenMs": 109.1999999761581,
       "maximumFrameLag": 0,
       "loadingSampleFraction": 0,
       "scrollHintDomReplacements": 0,
-      "rafIntervalP95Ms": 16.700000000000273,
+      "rafIntervalP95Ms": 16.799999999999955,
       "displayedFrameAtScrollEnd": 94,
       "requestedFrameAtScrollEnd": 94,
       "displayedOrientation": "landscape",
-      "decodedFrameLimitObserved": 12,
+      "decodedFrameLimitObserved": 6,
       "accessibleCanvasDescription": "Wi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
-      "visibleText": "XIAO + Wio\n\nScroll to assemble ↓\n\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\nScroll at your own pace\nUse chapter stills\nAssembly instructions\n\nWi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
+      "visibleText": "Mesh kit assembly\nInstructions & options\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\n\nWi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
       "canvasCssSize": {
-        "width": 1251.546875,
-        "height": 704
+        "width": 1361.765625,
+        "height": 766
       },
       "canvasBackingSize": {
-        "width": 1280,
-        "height": 720
+        "width": 1920,
+        "height": 1080
       },
       "recoveredAfterStopping": true,
-      "recoveryAfterStoppingMs": 329,
-      "frameRequests": 117,
-      "completedFrameRequests": 117,
+      "recoveryAfterStoppingMs": 316,
+      "frameRequests": 108,
+      "completedFrameRequests": 108,
       "failedFrameRequests": 0,
-      "completedFrameTransferBytes": 2855865,
+      "completedFrameTransferBytes": 4126964,
       "cancelledRequests": 0
     },
     {
@@ -63,47 +63,47 @@
         "cpu": 4,
         "throttle": true
       },
-      "firstFrameMs": 2229.599999964237,
-      "baselineImageResponseEndMs": 498.2999999523163,
-      "durationMs": 4015.899999976158,
+      "firstFrameMs": 1988.800000011921,
+      "baselineImageResponseEndMs": 492,
+      "durationMs": 4010.600000023842,
       "scrollDistancePx": 2500,
-      "firstQualityReductionMs": 1163.900000023842,
-      "longestAnimationFreezeMs": 716.7000000000003,
-      "maximumContinuousFrameLag": 31,
+      "firstQualityReductionMs": 1375.800000011921,
+      "longestAnimationFreezeMs": 433.1999999999998,
+      "maximumContinuousFrameLag": 16,
       "chapterMismatches": 0,
       "finalMode": "animation",
       "qualityLagMs": 800,
-      "qualityDrops": 2,
+      "qualityDrops": 1,
       "finalResolution": "540",
-      "maximumDecodedBytes": 49766400,
+      "maximumDecodedBytes": 44236800,
       "maximumRequests": 4,
-      "frameUpdatesDuringScroll": 23,
-      "longestFrozenMs": 716.7000000000003,
-      "maximumFrameLag": 31,
-      "loadingSampleFraction": 0.8842975206611571,
+      "frameUpdatesDuringScroll": 46,
+      "longestFrozenMs": 433.1999999999998,
+      "maximumFrameLag": 16,
+      "loadingSampleFraction": 0.7892561983471075,
       "scrollHintDomReplacements": 0,
       "rafIntervalP95Ms": 16.700000000000728,
-      "displayedFrameAtScrollEnd": 82,
+      "displayedFrameAtScrollEnd": 86,
       "requestedFrameAtScrollEnd": 101,
       "displayedOrientation": "portrait",
       "decodedFrameLimitObserved": 12,
       "accessibleCanvasDescription": "Wi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
-      "visibleText": "XIAO + Wio\n\nScroll to assemble ↓\n\nLoading assembly…\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\nLower resolution for smoother scrolling\nUse chapter stills\nAssembly instructions\n\nWi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
+      "visibleText": "Mesh kit assembly\nInstructions & options\nLoading…\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\n\nWi-Fi. Align the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.",
       "canvasCssSize": {
-        "width": 364.5,
-        "height": 648
+        "width": 347,
+        "height": 616.875
       },
       "canvasBackingSize": {
         "width": 540,
         "height": 960
       },
       "recoveredAfterStopping": true,
-      "recoveryAfterStoppingMs": 681,
-      "frameRequests": 57,
-      "completedFrameRequests": 45,
-      "failedFrameRequests": 8,
-      "completedFrameTransferBytes": 861161,
-      "cancelledRequests": 8
+      "recoveryAfterStoppingMs": 749,
+      "frameRequests": 69,
+      "completedFrameRequests": 61,
+      "failedFrameRequests": 4,
+      "completedFrameTransferBytes": 981121,
+      "cancelledRequests": 4
     }
   ],
   "scriptFailure": {
@@ -112,7 +112,7 @@
     "fallbackLoaded": true,
     "instructionsOpen": true,
     "errorVisible": false,
-    "bodyText": "XIAO + Wio\n\nAssembly instructions below ↓\n\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\nAssembly instructions\n\nAssembly instructions\n\nThe circles are enlarged views of the indicated connectors, not additional parts.\n\nParts\n\nCheck the four parts: the narrow LoRa antenna marked 868 MHz, the Wio-SX1262 board, the broad Wi-Fi antenna marked 2.4 GHz, and the XIAO ESP32S3 board.\n\nConnect Wi-Fi\n\nAlign the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.\n\nConnect LoRa\n\nAlign the narrow 868 MHz LoRa antenna plug with the antenna socket on Wio. Press straight down until seated. The circular close-up shows this same connection.\n\nJoin the boards\n\nTurn the boards to show the rear connector. Position Wio above XIAO, align the small board-to-board connector, then press straight down. Keep both antenna cables outside the board gap. The XIAO socket is shown simplified in the close-up.\n\nAssembled\n\nBoth antennas are connected and the boards are joined. Turn the assembly back to the front, as shown at the end of the animation."
+    "bodyText": "Mesh kit assembly\nAssembly instructions\n01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled\n\nInstructions & options\n\nThe circles are enlarged views of the indicated connectors, not additional parts.\n\nParts\n\nCheck the four parts: the narrow LoRa antenna marked 868 MHz, the Wio-SX1262 board, the broad Wi-Fi antenna marked 2.4 GHz, and the XIAO ESP32S3 board.\n\nConnect Wi-Fi\n\nAlign the broad 2.4 GHz Wi-Fi antenna plug with the antenna socket on XIAO. Press straight down until seated. The circular close-up shows this same connection.\n\nConnect LoRa\n\nAlign the narrow 868 MHz LoRa antenna plug with the antenna socket on Wio. Press straight down until seated. The circular close-up shows this same connection.\n\nJoin the boards\n\nTurn the boards to show the rear connector. Position Wio above XIAO, align the small board-to-board connector, then press straight down. Keep both antenna cables outside the board gap. The XIAO socket is shown simplified in the close-up.\n\nAssembled\n\nBoth antennas are connected and the boards are joined. Turn the assembly back to the front, as shown at the end of the animation."
   },
   "reducedMotion": {
     "frame": "33",
@@ -120,27 +120,27 @@
     "navigationTargets": [
       {
         "name": "01\nParts",
-        "width": 70,
+        "width": 66.1875,
         "height": 44
       },
       {
         "name": "02\nWi-Fi",
-        "width": 70,
+        "width": 66.203125,
         "height": 44
       },
       {
         "name": "03\nLoRa",
-        "width": 70,
+        "width": 66.203125,
         "height": 44
       },
       {
         "name": "04\nBoards",
-        "width": 70,
+        "width": 66.203125,
         "height": 44
       },
       {
         "name": "✓\nAssembled",
-        "width": 70,
+        "width": 66.203125,
         "height": 44
       }
     ]
@@ -149,7 +149,7 @@
     {
       "profile": "desktop-local",
       "baselineFrozenMs": 101.60000001192088,
-      "continuousAnimationFreezeMs": 104.30000003576276,
+      "continuousAnimationFreezeMs": 109.1999999761581,
       "qualityReductionAtMs": null,
       "baselineHintReplacements": 239,
       "hintReplacements": 0
@@ -157,8 +157,8 @@
     {
       "profile": "simulated-slow-mobile",
       "baselineFrozenMs": 3583.2000000000003,
-      "continuousAnimationFreezeMs": 716.7000000000003,
-      "qualityReductionAtMs": 1163.900000023842,
+      "continuousAnimationFreezeMs": 433.1999999999998,
+      "qualityReductionAtMs": 1375.800000011921,
       "baselineHintReplacements": 239,
       "hintReplacements": 0
     }

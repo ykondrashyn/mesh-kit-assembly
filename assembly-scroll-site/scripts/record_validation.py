@@ -12,6 +12,7 @@ browser = read("browser-validation.json")
 fallback = read("fallback-validation.json")
 performance = read("adaptive-performance.json")
 continuous = read("continuous-scroll.json")
+layout = read("clean-layout.json")
 assets = read("asset-validation.json")
 unit_output = (evidence / "timeline-tests.txt").read_text()
 passed = int(re.search(r"^# pass (\d+)$", unit_output, re.MULTILINE)[1])
@@ -22,6 +23,7 @@ assert not assets["errors"]
 assert all(item["recoveredAfterStopping"] and item["chapterMismatches"] == 0
            for item in performance["scenarios"])
 assert continuous["completed"] and all(item["passed"] for item in continuous["profiles"])
+assert layout["completed"] and all(item["passed"] for item in layout["checks"])
 files = sorted(path for path in (root / "dist").iterdir() if path.is_file())
 files += [root / "dist/assets/manifest.json"]
 report = {
@@ -34,6 +36,7 @@ report = {
     "browser_checks_passed": len(browser["results"]),
     "fallback_checks_passed": len(fallback["results"]),
     "continuous_scroll_profiles_passed": len(continuous["profiles"]),
+    "layout_profiles_passed": len(layout["checks"]),
     "unit_tests_passed": passed,
     "traversed_positions": sum(item.get("details", {}).get("positionsChecked", 0)
                                for item in browser["results"] if isinstance(item.get("details"), dict)),

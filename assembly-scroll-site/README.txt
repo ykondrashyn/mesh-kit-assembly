@@ -59,8 +59,19 @@ duplicate track embedded in the bottom 64 pixels of the Blender frames,
 including the baseline parts image. Artwork sizing and all source files
 remain unchanged. The display mask follows the image actually on screen.
 validation/single-progress.json and its screenshots cover this display
-change. design/layout-concept.html is a separate chapter-still proposal
-for simplifying the remaining interface, not the production viewer.
+change before the rest of the interface was simplified.
+
+The artwork provides the step title, connector labels and short caption.
+The initial scroll hint disappears after scrolling or selecting a chapter.
+Instructions & options opens a panel at the top right with full written
+instructions and the optional still mode. Opening it preserves artwork
+size and progress. Escape closes it and returns focus to its summary.
+Clicking outside or selecting a chapter also closes it. Resolution changes
+happen quietly, with temporary loading feedback and Retry when needed.
+
+The bottom contains only the chapter links and one progress line.
+The same layout works in landscape and portrait. The separate
+design/layout-concept.html remains a chapter-still design sketch.
 
 The loader prioritizes the newest target and nearby frames. Active
 requests finish during normal scrolling instead of being repeatedly
@@ -91,7 +102,7 @@ After scrolling stops the viewer settles on the exact requested pose.
 The initial HTML includes a parts image, working chapter links and full
 assembly instructions. These remain usable if JavaScript is unavailable
 or fails. The instructions panel starts open and collapses only after the
-enhanced viewer draws successfully. Expand Assembly instructions to read
+enhanced viewer draws successfully. Expand Instructions & options to read
 all five steps. Loading failures keep the last valid image and offer
 Try again. Image descriptions and chapter highlighting follow the actual
 displayed view.
@@ -114,6 +125,7 @@ Run these scripts with the same environment variables:
   tests/fallback.cjs      Script failures, retry, stills and readable text
   tests/performance.cjs   Repeatable desktop and throttled mobile audit
   tests/continuous-scroll.cjs Sustained native wheel scrolling in both directions
+  tests/layout.cjs        Five viewport layouts, disclosure, hint and enlarged text
 
 The default browser test traverses all 421 positions forward and backward
 in each orientation. SKIP_FULL_TRAVERSAL=1 explicitly skips those two
@@ -142,6 +154,8 @@ records the same scrolling test against GitHub Pages, and live-source.json
 verifies the deployed runtime against local hashes. These are
 laboratory measurements on this Mac, not field Core Web Vitals or physical
 phone results. Safari, Firefox and physical devices remain unverified.
+clean-layout.json covers the simplified interface, with screenshots for
+desktop, tablet, phone, small phone and short landscape viewports.
 
 REPOSITORY
 

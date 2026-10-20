@@ -6,37 +6,37 @@
       "name": "initial load selects landscape only",
       "passed": true,
       "details": {
-        "frameRequests": 19,
+        "frameRequests": 10,
         "bounds": {
           "canvas": {
-            "x": 94.21875,
-            "y": 42,
-            "width": 1251.546875,
-            "height": 704,
-            "top": 42,
-            "right": 1345.765625,
-            "bottom": 746,
-            "left": 94.21875
+            "x": 31.609375,
+            "y": 56,
+            "width": 1361.765625,
+            "height": 766,
+            "top": 56,
+            "right": 1393.375,
+            "bottom": 822,
+            "left": 31.609375
           },
           "area": {
             "x": 24,
-            "y": 42,
-            "width": 1392,
-            "height": 704,
-            "top": 42,
-            "right": 1416,
-            "bottom": 746,
+            "y": 56,
+            "width": 1377,
+            "height": 766,
+            "top": 56,
+            "right": 1401,
+            "bottom": 822,
             "left": 24
           },
           "controls": {
-            "x": 340,
-            "y": 746,
+            "x": 332.5,
+            "y": 822,
             "width": 760,
-            "height": 142,
-            "top": 746,
-            "right": 1100,
+            "height": 66,
+            "top": 822,
+            "right": 1092.5,
             "bottom": 888,
-            "left": 340
+            "left": 332.5
           },
           "innerHeight": 900,
           "orientation": "landscape"
@@ -52,9 +52,9 @@
           "requested": 31,
           "orientation": "landscape",
           "progress": 0.074074,
-          "decoded": 12,
-          "maxDecoded": 12,
-          "maxDecodedBytes": 44236800,
+          "decoded": 6,
+          "maxDecoded": 6,
+          "maxDecodedBytes": 49766400,
           "maxRequests": 4
         },
         "backward": {
@@ -62,9 +62,9 @@
           "requested": 12,
           "orientation": "landscape",
           "progress": 0.027778,
-          "decoded": 12,
-          "maxDecoded": 12,
-          "maxDecodedBytes": 44236800,
+          "decoded": 6,
+          "maxDecoded": 6,
+          "maxDecodedBytes": 49766400,
           "maxRequests": 4
         }
       }
@@ -78,9 +78,9 @@
         "requested": 0,
         "orientation": "landscape",
         "progress": 0,
-        "decoded": 12,
-        "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "decoded": 6,
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -92,34 +92,34 @@
           "index": 33,
           "bounds": {
             "canvas": {
-              "x": 94.21875,
-              "y": 42,
-              "width": 1251.546875,
-              "height": 704,
-              "top": 42,
-              "right": 1345.765625,
-              "bottom": 746,
-              "left": 94.21875
+              "x": 31.609375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1393.375,
+              "bottom": 822,
+              "left": 31.609375
             },
             "area": {
               "x": 24,
-              "y": 42,
-              "width": 1392,
-              "height": 704,
-              "top": 42,
-              "right": 1416,
-              "bottom": 746,
+              "y": 56,
+              "width": 1377,
+              "height": 766,
+              "top": 56,
+              "right": 1401,
+              "bottom": 822,
               "left": 24
             },
             "controls": {
-              "x": 340,
-              "y": 746,
+              "x": 332.5,
+              "y": 822,
               "width": 760,
-              "height": 142,
-              "top": 746,
-              "right": 1100,
+              "height": 66,
+              "top": 822,
+              "right": 1092.5,
               "bottom": 888,
-              "left": 340
+              "left": 332.5
             },
             "innerHeight": 900,
             "orientation": "landscape"
@@ -129,34 +129,34 @@
           "index": 129,
           "bounds": {
             "canvas": {
-              "x": 94.21875,
-              "y": 42,
-              "width": 1251.546875,
-              "height": 704,
-              "top": 42,
-              "right": 1345.765625,
-              "bottom": 746,
-              "left": 94.21875
+              "x": 31.609375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1393.375,
+              "bottom": 822,
+              "left": 31.609375
             },
             "area": {
               "x": 24,
-              "y": 42,
-              "width": 1392,
-              "height": 704,
-              "top": 42,
-              "right": 1416,
-              "bottom": 746,
+              "y": 56,
+              "width": 1377,
+              "height": 766,
+              "top": 56,
+              "right": 1401,
+              "bottom": 822,
               "left": 24
             },
             "controls": {
-              "x": 340,
-              "y": 746,
+              "x": 332.5,
+              "y": 822,
               "width": 760,
-              "height": 142,
-              "top": 746,
-              "right": 1100,
+              "height": 66,
+              "top": 822,
+              "right": 1092.5,
               "bottom": 888,
-              "left": 340
+              "left": 332.5
             },
             "innerHeight": 900,
             "orientation": "landscape"
@@ -166,34 +166,34 @@
           "index": 234,
           "bounds": {
             "canvas": {
-              "x": 94.21875,
-              "y": 42,
-              "width": 1251.546875,
-              "height": 704,
-              "top": 42,
-              "right": 1345.765625,
-              "bottom": 746,
-              "left": 94.21875
+              "x": 31.609375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1393.375,
+              "bottom": 822,
+              "left": 31.609375
             },
             "area": {
               "x": 24,
-              "y": 42,
-              "width": 1392,
-              "height": 704,
-              "top": 42,
-              "right": 1416,
-              "bottom": 746,
+              "y": 56,
+              "width": 1377,
+              "height": 766,
+              "top": 56,
+              "right": 1401,
+              "bottom": 822,
               "left": 24
             },
             "controls": {
-              "x": 340,
-              "y": 746,
+              "x": 332.5,
+              "y": 822,
               "width": 760,
-              "height": 142,
-              "top": 746,
-              "right": 1100,
+              "height": 66,
+              "top": 822,
+              "right": 1092.5,
               "bottom": 888,
-              "left": 340
+              "left": 332.5
             },
             "innerHeight": 900,
             "orientation": "landscape"
@@ -203,34 +203,34 @@
           "index": 363,
           "bounds": {
             "canvas": {
-              "x": 94.21875,
-              "y": 42,
-              "width": 1251.546875,
-              "height": 704,
-              "top": 42,
-              "right": 1345.765625,
-              "bottom": 746,
-              "left": 94.21875
+              "x": 31.609375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1393.375,
+              "bottom": 822,
+              "left": 31.609375
             },
             "area": {
               "x": 24,
-              "y": 42,
-              "width": 1392,
-              "height": 704,
-              "top": 42,
-              "right": 1416,
-              "bottom": 746,
+              "y": 56,
+              "width": 1377,
+              "height": 766,
+              "top": 56,
+              "right": 1401,
+              "bottom": 822,
               "left": 24
             },
             "controls": {
-              "x": 340,
-              "y": 746,
+              "x": 332.5,
+              "y": 822,
               "width": 760,
-              "height": 142,
-              "top": 746,
-              "right": 1100,
+              "height": 66,
+              "top": 822,
+              "right": 1092.5,
               "bottom": 888,
-              "left": 340
+              "left": 332.5
             },
             "innerHeight": 900,
             "orientation": "landscape"
@@ -240,34 +240,34 @@
           "index": 420,
           "bounds": {
             "canvas": {
-              "x": 94.21875,
-              "y": 42,
-              "width": 1251.546875,
-              "height": 704,
-              "top": 42,
-              "right": 1345.765625,
-              "bottom": 746,
-              "left": 94.21875
+              "x": 31.609375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1393.375,
+              "bottom": 822,
+              "left": 31.609375
             },
             "area": {
               "x": 24,
-              "y": 42,
-              "width": 1392,
-              "height": 704,
-              "top": 42,
-              "right": 1416,
-              "bottom": 746,
+              "y": 56,
+              "width": 1377,
+              "height": 766,
+              "top": 56,
+              "right": 1401,
+              "bottom": 822,
               "left": 24
             },
             "controls": {
-              "x": 340,
-              "y": 746,
+              "x": 332.5,
+              "y": 822,
               "width": 760,
-              "height": 142,
-              "top": 746,
-              "right": 1100,
+              "height": 66,
+              "top": 822,
+              "right": 1092.5,
               "bottom": 888,
-              "left": 340
+              "left": 332.5
             },
             "innerHeight": 900,
             "orientation": "landscape"
@@ -282,10 +282,10 @@
         "frame": 420,
         "requested": 420,
         "orientation": "landscape",
-        "progress": 0.998844,
-        "decoded": 12,
-        "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "progress": 0.998821,
+        "decoded": 6,
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -297,9 +297,9 @@
         "requested": 420,
         "orientation": "landscape",
         "progress": 1,
-        "decoded": 4,
+        "decoded": 2,
         "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -314,7 +314,7 @@
         "progress": 0,
         "decoded": 12,
         "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -326,9 +326,9 @@
         "requested": 150,
         "orientation": "landscape",
         "progress": 0.35713,
-        "decoded": 12,
+        "decoded": 5,
         "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -340,9 +340,9 @@
         "requested": 20,
         "orientation": "landscape",
         "progress": 0.047593,
-        "decoded": 12,
+        "decoded": 6,
         "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -354,9 +354,9 @@
         "requested": 250,
         "orientation": "landscape",
         "progress": 0.595278,
-        "decoded": 12,
+        "decoded": 6,
         "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -368,9 +368,9 @@
         "requested": 129,
         "orientation": "landscape",
         "progress": 0.30713,
-        "decoded": 12,
+        "decoded": 6,
         "maxDecoded": 12,
-        "maxDecodedBytes": 44236800,
+        "maxDecodedBytes": 49766400,
         "maxRequests": 4
       }
     },
@@ -402,7 +402,7 @@
         "frame": 13,
         "requested": 13,
         "orientation": "portrait",
-        "progress": 0.031971,
+        "progress": 0.031967,
         "decoded": 6,
         "maxDecoded": 6,
         "maxDecodedBytes": 49766400,

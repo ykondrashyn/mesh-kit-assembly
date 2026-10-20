@@ -4,10 +4,11 @@ const assert = require('node:assert/strict');
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   try {
     for (const profile of [
-      { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, orientation: 'landscape', resolution: '720' },
+      { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, orientation: 'landscape', resolution: '1080' },
       { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, orientation: 'portrait', resolution: '540' },
-      // The fitted portrait is 364.5 CSS pixels wide, requiring 729 pixels at 2x.
-      { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '1080' },
+      // The fitted portrait is 347 CSS pixels wide, requiring 694 pixels
+      // at 2x. The 720p sequence covers it without loading the largest tier.
+      { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '720' },
     ]) {
       const context = await browser.newContext(profile);
       const page = await context.newPage();

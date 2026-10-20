@@ -253,6 +253,7 @@ async function run(name, fn) {
       await waitFrame(p, 234);
       await p.screenshot({ path: path.join(output, 'reduced-motion.png') });
       await fits(p);
+      await p.getByText('Instructions & options', { exact: true }).click();
       await p.getByRole('button', { name: 'Enable full animation' }).click();
       await waitFrame(p, 150);
       await go(p, 160);

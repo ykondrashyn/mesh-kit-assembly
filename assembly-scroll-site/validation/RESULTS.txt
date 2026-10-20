@@ -1,102 +1,64 @@
-VALIDATION RESULTS
+VALIDATION RESULTS: CLEANER ASSEMBLY LAYOUT
+2026-10-20
+
+The viewer uses one bottom progress line, one chapter row and a top-right
+Instructions & options panel. The extra page title is removed visually.
+The opening scroll hint disappears after scrolling or chapter selection.
+Playback options and their status are inside the panel. Resolution changes
+remain automatic without a persistent visible message.
+
+LOCAL CHECKS
 
 14 unit tests passed. All 14 browser checks passed, including all 421
-positions in both directions and orientations: 1,684 observed positions.
-Six additional failure, quality adaptation and accessibility checks passed.
-Three sustained native-wheel scrolling profiles passed in both directions.
-Resolution selection and smooth-scroll checks passed in both layouts.
-All 2,526 WebP images were verified. All 30 protected files are unchanged.
+positions forward and backward in both orientations: 1,684 positions.
+Six failure and accessibility checks passed. Five additional layout
+profiles passed: desktop, tablet, phone, small phone and short landscape.
 
-CONTINUOUS SCROLLING FIX
+The panel does not change artwork bounds or timeline progress. Tests cover
+keyboard opening, Escape and focus return, outside-click dismissal,
+optional stills, enlarged text, internal panel scrolling and one footer bar.
 
-Sustained lag now reduces resolution from 1080p to 720p to 540p.
-The viewer stays in animation mode at the smallest resolution.
-Stills remain an explicit option and the reduced-motion default.
-The controlled delay test observed each tier in order. At 540p, a failed
-frame retained the previous picture and animation mode, then Retry
-recovered the exact requested position.
+All three sustained native-wheel profiles passed with a cold cache:
+desktop: 1080p, 413 forward updates, 413 reverse updates
+desktop-throttled: 540p, 77 forward updates, 98 reverse updates
+phone-throttled: 540p, 87 forward updates, 103 reverse updates
 
-The loader now accepts useful completed frames beyond the latest prefetch
-window, while rejecting stale completions after direction or selection
-changes. Displayed intermediate poses only advance toward the target.
+Each profile crosses twelve viewport heights using 100 wheel events per
+direction at 80 ms intervals, without waiting for each image. Intermediate
+poses, monotonic motion, exact endpoint settling, stable stopping and
+bounded downloads and bitmap memory all passed. Inactive orientations
+were not downloaded initially. Slow profiles use 1.6 Mbps download,
+150 ms latency and 4x CPU slowdown.
 
-Each sustained-scroll profile uses 100 native wheel events per direction,
-80 ms apart, across the complete twelve-viewport scroll span. Frames are
-not awaited between wheel events. All profiles use DPR 2 and a cold cache.
+The separate four-second mobile audit stayed animated, reduced to 540p,
+and displayed 46 image updates. Its longest interval without a new
+image was 433 ms. It reached the exact pose 749 ms after stopping.
+This is a synthetic measurement, not a guarantee of a particular frame rate.
 
-Profile                 Final tier   Forward updates   Reverse updates
-Desktop, 1440 x 900      1080p        417               412
-Throttled desktop       540p         69                98
-Throttled phone         540p         78                107
+Resolution-selection and smooth-scroll checks passed. Current initial
+selection is 1080p on the 1440 x 900 DPR 1 desktop, 540p on the 390 x 844
+DPR 1 phone, and 720p on that phone at DPR 2.
 
-Throttled profiles use 1.6 Mbps, 150 ms latency and 4x CPU slowdown.
-The phone viewport is 390 x 844. Both throttled profiles lowered quality
-twice. All profiles remained in animation mode, reached exact endpoints,
-held stable after stopping and initially loaded only the active orientation.
-Slow connections still skip intermediate poses while catching up.
-These counts do not imply 30 fps playback.
+All 2,526 exported images passed hash verification. All 30 protected
+original files are unchanged. Twelve-viewport scroll travel, 100 ms easing,
+421 positions, chip labels and all connector illustrations are preserved.
 
-FOUR-SECOND PERFORMANCE LAB PROFILE
+PUBLICATION
 
-Desktop: 94 image updates, 2,855,865 completed image-transfer bytes,
-104 ms longest interval without a frame update, and no resolution drop.
-Throttled phone: 23 updates and two quality reductions to 540p.
-Its longest interval without a frame update was 717 ms, and it reached
-the exact requested pose 681 ms after stopping.
-Descriptions and chapter highlighting matched the displayed pose.
-Unchanged scroll-hint DOM replacements remained zero.
+Local validation is complete. Publication and live verification will be
+recorded after this source revision is deployed. Earlier live-source and
+continuous-scroll-live evidence remains historical until replaced.
 
-The throttled phone's first animation frame took 2,230 ms. The baseline
-HTML image download finished at 498 ms and instructions were available
-from the initial document. Resource timing does not measure pixel paint.
+LIMITS AND REPRODUCTION
 
-GITHUB PAGES VERIFICATION
+Chromium 153.0.8010.37 on macOS. Phone and touch checks are emulated.
+Safari, Firefox and physical devices were not tested. Slow connections
+may skip intermediate poses while catching up. The 48 MiB bitmap limit
+excludes canvas, GPU and other browser memory. The loader also limits
+allocated images to 12 and concurrent jobs to four.
 
-The fix was deployed from a234f8204a869dac7aa5a59a658f2dc1b15dfbd8.
-Actions run 39403726020 passed the unit tests, asset hash verification
-and Pages deployment. All five deployed runtime files and the manifest
-match the local SHA-256 fingerprints, recorded in live-source.json.
-
-The same sustained native-wheel test passed against the public site:
-
-Profile                 Final tier   Forward updates   Reverse updates
-Desktop                 540p         112               123
-Throttled desktop       540p         52                86
-Throttled phone         540p         49                73
-
-All three kept animation mode throughout, showed intermediate poses in
-both directions, settled on exact endpoints, held still after stopping,
-and respected the download and bitmap limits. No uncaught JavaScript
-errors occurred. The unthrottled public-site run also lowered resolution
-under its cold-cache conditions. Live screenshots were reviewed in both
-orientations with the LoRa close-up visible.
-
-Live evidence is in continuous-scroll-live.json and its three PNGs.
-
-LIMITS AND COVERAGE
-
-Observed peak bitmap allocation across the checks: 49,766,400 bytes.
-Enforced maximum: 48 MiB, including a pending decode, and 12 images.
-Maximum concurrent loader jobs observed: 4.
-These limits exclude canvas, GPU and other browser memory.
-
-Coverage includes keyboard endpoints, emulated touch, orientation changes,
-rapid reversals, stale downloads, blocked script and manifest, retry,
-enlarged instructions, optional stills and reduced-motion opt-in.
-Desktop and phone screenshots were reviewed with the LoRa close-up visible.
-The original artwork, twelve-viewport travel and 100 ms easing are unchanged.
-
-Chromium 153.0.8010.37 was tested on macOS. Safari, Firefox and physical
-mobile devices were not tested. Playwright's Firefox and WebKit browser
-binaries are not installed on this host. These are laboratory results,
-not field Core Web Vitals.
-
-REPRODUCTION
-
-Run the commands listed in README.txt, then:
-  python3 scripts/record_validation.py
-
-best-practices-audit.json retains the original baseline and
-best-practices-after.json retains the prior automatic-stills measurement.
-adaptive-performance.json and continuous-scroll.json record this fix.
-site-source.json fingerprints the validated runtime and summarizes coverage.
+Run the commands in README.txt, then scripts/record_validation.py.
+clean-layout.json records layout checks. browser-validation.json covers
+full traversal. continuous-scroll.json and adaptive-performance.json
+record motion and loading checks. site-source.json fingerprints the runtime.
+Historical baseline files are retained.

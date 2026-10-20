@@ -36,11 +36,12 @@ note merely to make the design sparse. Keep keyboard chapter navigation,
 visible focus and screen-reader descriptions. A smaller visual control
 must still have a usable pointer target.
 
-layout-concept.html demonstrates the proposed layout with the original
+layout-concept.html demonstrates the approved layout with the original
 chapter stills and working chapter buttons. It is a visual proposal,
 not the continuous-animation implementation. Open it directly in a browser.
-The main site's only implemented visual change is hiding the extra bar.
-Nothing from this review has been deployed.
+The main site's viewer now implements this layout with continuous scrolling.
+The extra bar is hidden, secondary controls sit inside the header panel,
+and the opening scroll hint disappears once the visitor starts navigating.
 
 VALIDATION
 
@@ -51,6 +52,8 @@ no-JavaScript image fitting, and concept navigation. Screenshots were
 reviewed in both orientations. Results are in validation/single-progress.json.
 Checks used Chromium on macOS with emulated viewport sizes. Physical
 devices, Safari and Firefox were not checked.
+Those checks cover the initial bar removal. For the implemented cleaner
+layout, see validation/clean-layout.json and validation/RESULTS.txt.
 
 SOURCES
 

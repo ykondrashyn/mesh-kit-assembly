@@ -148,9 +148,10 @@ const out = path.resolve(__dirname, '../validation/adaptive-performance.json');
     const reducedPage = await reduced.newPage();
     await reducedPage.goto(base);
     await reducedPage.waitForFunction(() => document.querySelector('canvas').dataset.frame === '33');
+    await reducedPage.getByText('Instructions & options', { exact: true }).click();
     report.reducedMotion = await reducedPage.evaluate(() => ({
       frame: document.querySelector('canvas').dataset.frame,
-      modeToggleVisible: !document.querySelector('#motion-options').hidden,
+      modeToggleVisible: document.querySelector('#motion-toggle').checkVisibility(),
       navigationTargets: [...document.querySelectorAll('nav a')].map(b => ({
         name: b.innerText, width: b.getBoundingClientRect().width, height: b.getBoundingClientRect().height,
       })),

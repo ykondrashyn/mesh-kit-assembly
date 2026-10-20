@@ -15,7 +15,7 @@
     {
       "name": "1080p to 720p to 540p adaptation and optional stills",
       "passed": true,
-      "elapsedMs": 1772,
+      "elapsedMs": 1751,
       "lagMs": 817
     },
     {
@@ -26,7 +26,7 @@
       "name": "expanded instructions, enlarged text and keyboard scrolling",
       "passed": true,
       "bounds": {
-        "width": 390,
+        "width": 375,
         "viewport": 390,
         "bottom": 832,
         "height": 844

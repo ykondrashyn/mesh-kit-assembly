@@ -2,85 +2,85 @@ TAP version 13
 # Subtest: rapid scrolling retains active downloads and prioritizes the newest queued target
 ok 1 - rapid scrolling retains active downloads and prioritizes the newest queued target
   ---
-  duration_ms: 3.70275
+  duration_ms: 3.581959
   type: 'test'
   ...
 # Subtest: decoded memory includes in-progress reservations and evicted bitmaps are closed
 ok 2 - decoded memory includes in-progress reservations and evicted bitmaps are closed
   ---
-  duration_ms: 3.356084
+  duration_ms: 2.429084
   type: 'test'
   ...
 # Subtest: an orientation switch during decoding closes the obsolete result
 ok 3 - an orientation switch during decoding closes the obsolete result
   ---
-  duration_ms: 0.812917
+  duration_ms: 0.419083
   type: 'test'
   ...
 # Subtest: failed targets expose an error and can be retried
 ok 4 - failed targets expose an error and can be retried
   ---
-  duration_ms: 0.86175
+  duration_ms: 0.637583
   type: 'test'
   ...
 # Subtest: chapter stills warm before animation and remain available when the network fails
 ok 5 - chapter stills warm before animation and remain available when the network fails
   ---
-  duration_ms: 0.543084
+  duration_ms: 0.620792
   type: 'test'
   ...
 # Subtest: completed downloads advance continuous scrolling even after leaving the prefetch window
 ok 6 - completed downloads advance continuous scrolling even after leaving the prefetch window
   ---
-  duration_ms: 0.485375
+  duration_ms: 0.582666
   type: 'test'
   ...
 # Subtest: a direction reversal during decoding closes the obsolete result
 ok 7 - a direction reversal during decoding closes the obsolete result
   ---
-  duration_ms: 0.368
+  duration_ms: 0.388875
   type: 'test'
   ...
 # Subtest: scroll easing is time-based, reversible and does not overshoot
 ok 8 - scroll easing is time-based, reversible and does not overshoot
   ---
-  duration_ms: 1.254125
+  duration_ms: 1.23175
   type: 'test'
   ...
 # Subtest: source map retains all motion and excludes only duplicated holds
 ok 9 - source map retains all motion and excludes only duplicated holds
   ---
-  duration_ms: 0.488541
+  duration_ms: 0.533083
   type: 'test'
   ...
 # Subtest: image resolution matches fitted size and caps high-density demand
 ok 10 - image resolution matches fitted size and caps high-density demand
   ---
-  duration_ms: 0.106167
+  duration_ms: 0.109125
   type: 'test'
   ...
 # Subtest: forward and reverse mapping round-trip all frames with clamped endpoints
 ok 11 - forward and reverse mapping round-trip all frames with clamped endpoints
   ---
-  duration_ms: 0.1835
+  duration_ms: 0.240209
   type: 'test'
   ...
 # Subtest: chapter boundaries match the original Blender timeline
 ok 12 - chapter boundaries match the original Blender timeline
   ---
-  duration_ms: 0.108083
+  duration_ms: 0.114083
   type: 'test'
   ...
 # Subtest: adaptive layout fits the full image without clipping
 ok 13 - adaptive layout fits the full image without clipping
   ---
-  duration_ms: 0.086708
+  duration_ms: 0.088083
   type: 'test'
   ...
 # Subtest: directional prefetch is bounded and prioritizes the requested frame
 ok 14 - directional prefetch is bounded and prioritizes the requested frame
   ---
-  duration_ms: 0.140375
+  duration_ms: 0.142333
   type: 'test'
   ...
 1..14
@@ -91,4 +91,4 @@ ok 14 - directional prefetch is bounded and prioritizes the requested frame
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 48.49725
+# duration_ms 43.884666

@@ -4,9 +4,10 @@ import { FrameLoader } from './frame-loader.mjs?v=continuous-2';
 const $ = selector => document.querySelector(selector);
 const story = $('#story'), stage = $('#stage'), artwork = $('#artwork'), canvas = $('#assembly');
 const context = canvas.getContext('2d', { alpha: false });
-const fallback = $('.fallback'), controls = $('.controls'), instructions = $('#instructions');
+const fallback = $('.fallback'), masthead = $('.masthead'), instructions = $('#instructions');
+const instructionsSummary = instructions.querySelector('summary');
 const loadState = $('#load-state'), loadMessage = $('#load-message'), retry = $('#retry');
-const progressFill = $('#progress-fill'), scrollHint = $('#scroll-hint'), hintArrow = scrollHint.querySelector('span');
+const progressFill = $('#progress-fill'), scrollHint = $('#scroll-hint');
 const announcement = $('#chapter-announcement'), navLinks = [...document.querySelectorAll('[data-chapter]')];
 const motionOptions = $('#motion-options'), motionToggle = $('#motion-toggle'), motionDescription = $('#motion-description');
 const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
@@ -14,7 +15,7 @@ let manifest, loader, progress = 0, targetProgress = 0, lastIndex = 0, direction
 let raf = 0, previousTick = 0, wakeTimer = 0, pendingSince = 0, lagSince = null;
 let displayedKey = '', currentChapter = '', variant = '', fittedStyle;
 let resizePending = false, booting = false, enhanced = false, resolutionCap = Infinity;
-let cachedScrollSpan = 1, previousProgress = -1, hintAtEnd = null, stylePending = true;
+let cachedScrollSpan = 1, previousProgress = -1, hintDismissed = false, stylePending = true;
 let mode = reducedQuery.matches ? 'reduced' : 'animation';
 let areaWidth = 0, areaHeight = 0;
 const stillMode = () => mode !== 'animation';
@@ -28,11 +29,17 @@ function showLoad(message, failed = false) {
 
 function updateMotionOptions() {
   motionDescription.textContent = {
-    animation: resolutionCap < Infinity ? 'Lower resolution for smoother scrolling' : 'Scroll at your own pace',
+    animation: 'Scroll animation',
     manual: 'Chapter stills', reduced: 'Reduced motion: chapter stills',
   }[mode];
   motionToggle.textContent = stillMode() ? 'Enable full animation' : 'Use chapter stills';
   stage.dataset.mode = mode;
+}
+
+function dismissHint() {
+  if (hintDismissed) return;
+  hintDismissed = true;
+  scrollHint.hidden = true;
 }
 
 function setMode(next) {
@@ -76,9 +83,10 @@ function enhance() {
   fallback.hidden = true;
   canvas.hidden = false;
   instructions.open = false;
-  controls.append(instructions);
+  masthead.append(instructions);
   $('#instructions-link').hidden = true;
   motionOptions.hidden = false;
+  scrollHint.hidden = hintDismissed;
   document.documentElement.classList.add('enhanced');
   resizePending = true;
 }
@@ -109,12 +117,6 @@ function render(now) {
   const chapter = chapterAtFrame(logicalIndex, manifest.chapters);
   const index = stillMode() ? chapter.stillIndex : logicalIndex;
   if (previousProgress !== progress) { progressFill.style.transform = `scaleX(${progress})`; previousProgress = progress; }
-  const atEnd = progress >= .999;
-  if (enhanced && hintAtEnd !== atEnd) {
-    hintAtEnd = atEnd;
-    scrollHint.firstChild.textContent = atEnd ? 'Scroll back to disassemble ' : 'Scroll to assemble ';
-    hintArrow.textContent = atEnd ? '↑' : '↓';
-  }
   loader.request(index, direction, stillMode());
   stage.dataset.requestedFrame = String(index);
   stage.dataset.progress = progress.toFixed(6);
@@ -152,7 +154,7 @@ function render(now) {
     if (!pendingSince) pendingSince = now;
     const failed = loader.error(index);
     if (failed) showLoad('This image could not load. The previous view remains available.', true);
-    else if (now - pendingSince >= 160) showLoad('Loading assembly…');
+    else if (now - pendingSince >= 160) showLoad('Loading…');
     const resolutions = manifest.variants[variant].resolutions;
     const tier = resolutions.findIndex(item => item.id === loader.resolution.id);
     const behind = enhanced && !stillMode() && Math.abs(index - Number(canvas.dataset.frame)) >= 2;
@@ -163,7 +165,6 @@ function render(now) {
         stage.dataset.qualityDrops = String(Number(stage.dataset.qualityDrops || 0) + 1);
         resolutionCap = Number(resolutions[tier - 1].id);
         lagSince = null;
-        updateMotionOptions();
         resizePending = true;
       }
     } else lagSince = null;
@@ -206,6 +207,7 @@ async function boot() {
 window.addEventListener('scroll', () => {
   if (!enhanced || resizePending) return;
   targetProgress = clamp(window.scrollY / cachedScrollSpan);
+  if (targetProgress > 0) dismissHint();
   schedule();
 }, { passive: true });
 window.addEventListener('resize', () => { if (manifest) { resizePending = true; schedule(); } }, { passive: true });
@@ -221,6 +223,8 @@ for (const link of navLinks) {
   link.addEventListener('click', event => {
     if (!enhanced || !manifest) return;
     event.preventDefault();
+    dismissHint();
+    instructions.open = false;
     const chapter = manifest.chapters.find(item => item.id === link.dataset.chapter);
     progress = targetProgress = progressAtFrame(chapter.targetIndex, manifest.frames.length);
     previousTick = 0;
@@ -233,6 +237,16 @@ retry.addEventListener('click', () => {
   else { loader.retry(); pendingSince = 0; lagSince = null; schedule(); }
 });
 motionToggle.addEventListener('click', () => setMode(stillMode() ? 'animation' : 'manual'));
+instructions.addEventListener('keydown', event => {
+  if (enhanced && instructions.open && event.key === 'Escape') {
+    instructions.open = false;
+    instructionsSummary.focus();
+    event.preventDefault();
+  }
+});
+document.addEventListener('pointerdown', event => {
+  if (enhanced && instructions.open && !instructions.contains(event.target)) instructions.open = false;
+});
 reducedQuery.addEventListener('change', () => setMode(reducedQuery.matches ? 'reduced' : 'animation'));
 window.addEventListener('pagehide', event => { if (!event.persisted) { clearTimeout(wakeTimer); loader?.dispose(); } });
 boot();
