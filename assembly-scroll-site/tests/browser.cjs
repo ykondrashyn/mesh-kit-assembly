@@ -5,6 +5,7 @@ const path = require('node:path');
 const url = process.argv[2] || 'http://127.0.0.1:8766';
 const output = path.resolve(__dirname, '../validation');
 const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
+const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 const results = [];
 const framePattern = (orientation, index) => new RegExp(`/${orientation}/(?:[0-9]+/)?frame-${String(manifest.frames[index]).padStart(4, '0')}\\.webp\\?`);
 
@@ -116,7 +117,7 @@ async function run(name, fn) {
     });
     await run('chapter links and keyboard endpoints', async () => {
       await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
-      await waitFrame(page, 150);
+      await waitFrame(page, target('lora'));
       await page.getByRole('link', { name: 'Assembled', exact: true }).click();
       await waitFrame(page, 420);
       await page.keyboard.press('Home');
@@ -167,13 +168,13 @@ async function run(name, fn) {
     });
     await run('orientation change rejects a delayed old-orientation frame', async () => {
       await go(page, 10);
-      await page.route(framePattern('landscape', 150), async route => {
+      await page.route(framePattern('landscape', target('lora')), async route => {
         await new Promise(resolve => setTimeout(resolve, 500));
         await route.continue().catch(() => {});
       });
       await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
       await page.waitForTimeout(70);
-      await page.route(framePattern('portrait', 150), async route => {
+      await page.route(framePattern('portrait', target('lora')), async route => {
         await new Promise(resolve => setTimeout(resolve, 350));
         await route.continue().catch(() => {});
       });
@@ -185,10 +186,10 @@ async function run(name, fn) {
       const ratio = whileLoading.orientation === 'portrait' ? 9 / 16 : 16 / 9;
       assert.ok(Math.abs(whileLoading.canvas.width / whileLoading.canvas.height - ratio) < .001);
       await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
-      await waitFrame(page, 150);
+      await waitFrame(page, target('lora'));
       await page.waitForTimeout(550);
       assert.equal((await state(page)).orientation, 'portrait');
-      assert.equal((await state(page)).frame, 150);
+      assert.equal((await state(page)).frame, target('lora'));
       await page.unrouteAll({ behavior: 'wait' });
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'landscape');
@@ -255,7 +256,7 @@ async function run(name, fn) {
       await fits(p);
       await p.getByText('Instructions & options', { exact: true }).click();
       await p.getByRole('button', { name: 'Enable full animation' }).click();
-      await waitFrame(p, 150);
+      await waitFrame(p, target('lora'));
       await go(p, 160);
       const result = await state(p);
       await reduced.close();

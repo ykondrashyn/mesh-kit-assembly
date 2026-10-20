@@ -61,6 +61,19 @@ test('chapter boundaries match the original Blender timeline', () => {
   }
 });
 
+test('connection links land on reviewed clear poses before seating, outside transition fades', () => {
+  // The original boundaries at 45, 150 and 255 are partially or wholly blank.
+  // These source frames show the main parts and the fully visible connector inset.
+  const entries = [['wifi', 90, 151, 93], ['lora', 180, 241, 198], ['boards', 315, 376, 318]];
+  for (const [id, target, source, seatingStart] of entries) {
+    const chapter = manifest.chapters.find(item => item.id === id);
+    assert.equal(chapter.targetIndex, target);
+    assert.equal(manifest.frames[target], source);
+    assert.ok(target > chapter.startIndex && target < seatingStart);
+    assert.equal(chapterAtFrame(target, manifest.chapters).id, id);
+  }
+});
+
 test('adaptive layout fits the full image without clipping', () => {
   for (const [width, height] of [[1392, 784], [366, 730], [744, 900], [500, 500], [820, 300]]) {
     const variant = variantForStage(width, height);

@@ -2,6 +2,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
+const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 const base = process.argv[2] || 'http://127.0.0.1:8766/';
 const output = process.env.VALIDATION_OUTPUT || path.resolve(__dirname, '../validation/continuous-scroll.json');
 const profiles = [
@@ -106,7 +108,7 @@ const waitFrame = (page, frame) => page.waitForFunction(index =>
       console.log(JSON.stringify({ profile: profile.name, resolution: final.stage.resolution,
         drops: final.stage.qualityDrops || 0, forwardUpdates: legs[0].updates, reverseUpdates: legs[1].updates }));
       await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
-      await waitFrame(page, 150);
+      await waitFrame(page, target('lora'));
       await page.evaluate(() => window.scrollTo(0, 234 / 420 *
         (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)));
       await waitFrame(page, 234);

@@ -54,6 +54,11 @@ and no overshoot. Chapter links jump directly to a step. Resize and device
 orientation changes retain progress. Drawing stops once the position
 settles. Reading time is controlled by the visitor pausing their scroll.
 
+Connection links land after the transition fades, with the connector
+close-up visible and before pressing: Wi-Fi at position 90, LoRa at 180,
+and Boards at 315. Chapter boundaries remain at 45, 150 and 255 so normal
+scrolling still includes the full transitions and rear rotation.
+
 The viewer shows one progress bar, below the chapter links. CSS hides the
 duplicate track embedded in the bottom 64 pixels of the Blender frames,
 including the baseline parts image. Artwork sizing and all source files
@@ -126,6 +131,7 @@ Run these scripts with the same environment variables:
   tests/performance.cjs   Repeatable desktop and throttled mobile audit
   tests/continuous-scroll.cjs Sustained native wheel scrolling in both directions
   tests/layout.cjs        Five viewport layouts, disclosure, hint and enlarged text
+  tests/chapters.cjs      Visible chapter entry poses and forward/reverse seating
 
 The default browser test traverses all 421 positions forward and backward
 in each orientation. SKIP_FULL_TRAVERSAL=1 explicitly skips those two
@@ -157,6 +163,10 @@ phone results. Safari, Firefox and physical devices remain unverified.
 clean-layout.json covers the simplified interface, with screenshots for
 desktop, tablet, phone, small phone and short landscape viewports.
 clean-layout-live.json repeats those checks against GitHub Pages.
+chapter-navigation.json and chapter-navigation-live.json cover the later
+chapter-link correction. They verify rendered content in the main scene
+and connector inset, keyboard activation, and wheel motion through each
+connection in both orientations. Screenshots accompany these reports.
 
 REPOSITORY
 

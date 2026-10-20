@@ -2,6 +2,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
+const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 const base = process.argv[2] || 'http://127.0.0.1:8766/';
 const output = process.env.VALIDATION_OUTPUT || path.resolve(__dirname, '../validation/clean-layout.json');
 const frame = (page, index) => page.waitForFunction(i =>
@@ -76,7 +78,7 @@ const geometry = page => page.evaluate(() => ({
 
       if (name === 'phone') {
         await page.getByRole('link', { name: '02 Wi-Fi', exact: true }).click();
-        await frame(page, 45);
+        await frame(page, target('wifi'));
         await page.locator('#instructions summary').click();
         await page.addStyleTag({ content: '#instructions {font-size:30px} nav a, #motion-options, #instructions summary {font-size:26px}' });
         await page.locator('.instruction-body').focus();

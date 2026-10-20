@@ -2,6 +2,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
+const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 
 (async () => {
   const browser = await chromium.launch({
@@ -55,7 +57,7 @@ const path = require('node:path');
       await page.waitForTimeout(400);
       assert.equal(await page.locator('canvas').getAttribute('data-frame'), String(stoppedFrame));
       await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.frame === '150');
+      await page.waitForFunction(index => Number(document.querySelector('canvas').dataset.frame) === index, target('lora'));
       assert.equal(await page.locator('#stage').getAttribute('data-settled'), 'true');
       results.push({ viewport, scrollHeight: span, forward, backward, settledWithoutOvershoot: true });
       await page.evaluate(() => { window.observeMotion = false; });

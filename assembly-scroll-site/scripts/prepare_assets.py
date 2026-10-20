@@ -70,14 +70,16 @@ def main():
                           "resolutions": [resolution_info(key, value[1], value[2], size)
                                           for size in RESOLUTIONS]}
                      for key, value in VARIANTS.items()},
+        # Navigation lands after the fades, with the close-up visible and before seating.
+        # Keep startIndex at the original boundary for ordinary scroll playback.
         "chapters": [
             {"id": "parts", "label": "Parts", "startIndex": 0, "targetIndex": 0, "stillIndex": 33,
              "description": "Step 1. Check the parts: LoRa antenna, Wio-SX1262, Wi-Fi antenna and XIAO ESP32S3."},
-            {"id": "wifi", "label": "Wi-Fi", "startIndex": 45, "targetIndex": 45, "stillIndex": 129,
+            {"id": "wifi", "label": "Wi-Fi", "startIndex": 45, "targetIndex": 90, "stillIndex": 129,
              "description": "Step 2. Connect the 2.4 GHz Wi-Fi antenna to XIAO. The circle magnifies the same connector."},
-            {"id": "lora", "label": "LoRa", "startIndex": 150, "targetIndex": 150, "stillIndex": 234,
+            {"id": "lora", "label": "LoRa", "startIndex": 150, "targetIndex": 180, "stillIndex": 234,
              "description": "Step 3. Connect the 868 MHz LoRa antenna to Wio. The circle magnifies the same connector."},
-            {"id": "boards", "label": "Boards", "startIndex": 255, "targetIndex": 255, "stillIndex": 363,
+            {"id": "boards", "label": "Boards", "startIndex": 255, "targetIndex": 315, "stillIndex": 363,
              "description": "Step 4. Turn to the rear, align the board connector and join the boards. XIAO socket shown simplified."},
             {"id": "assembled", "label": "Assembled", "startIndex": 375, "targetIndex": 420, "stillIndex": 420,
              "description": "Assembly complete. Both antennas are connected and the joined boards face the front."},

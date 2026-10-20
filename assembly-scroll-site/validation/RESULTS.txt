@@ -1,3 +1,25 @@
+CHAPTER NAVIGATION CORRECTION: 2026-10-20
+
+Connection links now land on clear poses before connector seating, with
+the circular close-up visible. Wi-Fi moves from 45 to 90, LoRa from 150
+to 180, and Boards from 255 to 315. Normal scroll chapter boundaries and
+all artwork remain unchanged. The previous LoRa target was a blank fade
+frame, and the Boards target preceded the second board reappearing.
+
+15 unit tests passed. Six chapter navigation checks passed across desktop
+landscape and phone portrait, including rendered-content checks, keyboard
+activation, stable stopping, and continuous native wheel motion forward
+through seating and backward to each landing pose. All six failure and
+accessibility checks passed, including resolution reduction, optional
+stills, failed image retry, script failures and enlarged text.
+All 2,526 WebP assets match their existing hashes. The only changed file
+under dist is assets/manifest.json, containing three targetIndex changes.
+No full-sequence traversal, Safari, Firefox or physical-device testing was
+repeated for this navigation-only fix. See chapter-navigation.json and
+its screenshots. Publication verification will be recorded separately.
+
+PREVIOUS CLEANER LAYOUT VALIDATION, BEFORE THE CHAPTER LINK CORRECTION
+
 VALIDATION RESULTS: CLEANER ASSEMBLY LAYOUT
 2026-10-20
 
