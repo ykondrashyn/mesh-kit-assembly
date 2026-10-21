@@ -1,0 +1,65 @@
+LOCAL FORMAT COMPARISON, 2026-10-21
+
+Decision: retain production WebP. AVIF 65 is a promising follow-up candidate,
+but this desktop experiment does not establish mobile Safari or Android decoding performance.
+No production images or videos were changed.
+
+Coverage: 60 full-sequence encodings, 421 positions each, two orientations,
+540p/720p/1080p. 120 browser cases passed across normal and constrained networking.
+Constrained profile: 1.6 Mbps, 150 ms latency, 4x CPU slowdown.
+Each case checks 11 random stops, 60 forward targets and 60 reverse targets.
+Target updates coalesce while decoding, exact final stops and monotonic direction are asserted.
+H.264 media timestamps were checked against the requested frame. HTTP range requests are supported.
+
+Encoder: Pillow 13.0.0, WebP method 6, AVIF speed 8. FFmpeg 8.1.2,
+libx264 fast preset, YUV420p, no B frames, CRF 18/23, GOP 1/6, faststart.
+Browser: Chrome 153.0.8010.37. One case per candidate/profile, exploratory rather than statistical.
+
+1080p sequence sizes, decimal MB:
+Codec                 Landscape   Portrait   Portrait slow seek p95 / decode p95 (ms)
+webp-80                  14.05      14.00          396 / 6.3
+webp-88                  17.57      17.48          459 / 8.0
+avif-50                   9.47       9.28          315 / 5.8
+avif-65                  12.70      12.47          369 / 5.5
+avif-80                  17.33      17.16          449 / 5.8
+webp-original            18.00      17.90          464 / 7.1
+h264-18-g1               14.83      14.68          660 / n/a
+h264-18-g6                5.49       5.31          824 / n/a
+h264-23-g1               10.42      10.18          496 / n/a
+h264-23-g6                3.53       3.41          798 / n/a
+
+All resolutions, mean detail PSNR and mean p95 random-stop latency:
+Pixel metric uses four exact source poses and a non-white mask expanded by three pixels.
+This measures pixel distortion, not human reading accuracy. Video seek/decode timings
+include browser scheduling. An isolated video decode duration is unavailable,
+so video decode values in the raw report are placeholders, not zero-cost decoding.
+Codec                 540p MB* 720p MB* 1080p MB*  PSNR dB  normal ms  slow ms
+webp-80                 5.95     8.66     14.03     37.0        8.2    321.4
+webp-88                 7.34    10.81     17.53     40.7        7.6    361.0
+avif-50                 4.27     6.09      9.37     31.6        7.2    270.0
+avif-65                 5.47     7.98     12.58     36.0        7.1    305.5
+avif-80                 7.30    10.87     17.24     41.2        8.1    356.6
+webp-original           7.49    11.05     17.95     40.9        7.0    365.5
+h264-18-g1              6.05     8.74     14.76     36.7       22.3    552.1
+h264-18-g6              2.21     3.18      5.40     40.3       19.9    705.0
+h264-23-g1              4.39     6.34     10.30     32.4       21.3    497.5
+h264-23-g6              1.49     2.13      3.47     36.4       20.2    885.8
+* MB is the mean complete sequence size across both orientations.
+
+Visual review: format-detail-comparison.png compares chips, Wi-Fi and LoRa plugs,
+and antenna labels against the original PNG. Label shapes and markings remain
+recognizable in these selected 1080p crops. AVIF 50 and H.264 CRF23 show more
+edge softening or artifacts in fine lines. AVIF 65 is a better candidate for a
+future user review than selecting the smallest encoding solely by byte count.
+The contact sheet is a spot check. It does not prove every label is readable on a phone.
+
+WebP method 6 changes size modestly at quality 88. Quality 80 reduces bytes
+but also reduces fidelity. AVIF provides larger savings with a decode tradeoff.
+H.264 can be much smaller, especially with GOP6, but slow-network random seeks
+are less predictable. A video transport would also require a separate scheduler.
+
+Reproduce using README.txt. Open http://127.0.0.1:8767/ for side-by-side frame
+inspection. Alternative assets are local generated files under .cache/format-benchmark,
+excluded from Git. Reports and reproducible scripts are tracked.
+
+Raw evidence: formats.json, format-quality.json, format-detail-comparison.png.

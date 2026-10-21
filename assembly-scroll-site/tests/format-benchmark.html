@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Local assembly format comparison</title>
+<style>
+body{font:16px Arial,sans-serif;margin:20px;color:#222}header{display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+main{display:flex;gap:16px;margin-top:20px}figure{margin:0;flex:1;min-width:0}canvas,img{width:100%;height:auto}select,input{font:inherit}video{display:none}#status{min-height:24px}
+</style>
+<header><strong>Local format comparison</strong><select id="choice" aria-label="Format"></select><input id="position" type="range" min="0" max="420" value="33" aria-label="Assembly position"></header>
+<p id="status"></p><main><figure><figcaption>Candidate</figcaption><canvas></canvas></figure><figure><figcaption>Existing WebP</figcaption><img id="reference" alt="Same pose in the existing WebP sequence"></figure></main><video muted playsinline preload="auto"></video>
+<script type="module">
+const manifest=await (await fetch('/manifest.json')).json(), choice=document.querySelector('#choice');
+manifest.entries.forEach((e,i)=>choice.add(new Option(`${e.variant} ${e.size}p ${e.codec}`,i)));
+const selected=Number(new URLSearchParams(location.search).get('entry')||0);
+choice.value=selected;
+const entry=manifest.entries[selected], canvas=document.querySelector('canvas'), ctx=canvas.getContext('2d',{alpha:false});
+canvas.width=entry.width;canvas.height=entry.height;
+const video=document.querySelector('video'), position=document.querySelector('#position'), status=document.querySelector('#status');
+let current=-1, active=false, pending=null, error=null;
+window.bench={entry, samples:[], presented:-1, errors:[]};
+if(entry.kind==='video'){
+ video.src=entry.url;
+ await new Promise((resolve,reject)=>{video.onloadeddata=resolve;video.onerror=()=>reject(new Error('Video load failed'))});
+}
+async function draw(index){
+ const start=performance.now(); let decodeMs=0, mediaTime=null;
+ if(entry.kind==='images'){
+  const response=await fetch(entry.template.replace('{frame}',String(manifest.frames[index]).padStart(4,'0')));
+  if(!response.ok)throw new Error(`Image request returned ${response.status}`);
+  const blob=await response.blob(), decodeStart=performance.now();
+  const bitmap=await createImageBitmap(blob);decodeMs=performance.now()-decodeStart;
+  ctx.drawImage(bitmap,0,0);bitmap.close();
+ }else{
+  mediaTime=await new Promise((resolve,reject)=>{
+   const timeout=setTimeout(()=>{video.cancelVideoFrameCallback(callback);reject(new Error('Video seek timed out'))},10000);
+   const callback=video.requestVideoFrameCallback((_,meta)=>{clearTimeout(timeout);resolve(meta.mediaTime)});
+   video.currentTime=(index+.5)/30;
+  });
+  ctx.drawImage(video,0,0);
+ }
+ current=index;window.bench.presented=index;
+ const row={index,latencyMs:performance.now()-start,decodeMs,mediaTime,at:performance.now()};window.bench.samples.push(row);
+ canvas.dataset.frame=index;
+ status.textContent=`${entry.codec}, ${entry.size}p, position ${index}, ${(entry.bytes/1e6).toFixed(2)} MB, ${row.latencyMs.toFixed(1)} ms`;
+ return row;
+}
+window.bench.draw=async index=>current===index ? window.bench.samples.at(-1) : draw(index);
+window.bench.target=index=>{
+ pending=index;
+ if(active)return;
+ active=true;
+ (async()=>{try{while(pending!==null){const i=pending;pending=null;if(i!==current)await draw(i)}}catch(e){error=e;window.bench.errors.push(e.message)}finally{active=false}})();
+};
+window.bench.idle=()=>!active;
+const reference=()=>{document.querySelector('#reference').src=`/original/${entry.variant}/${entry.size===1080?'':entry.size+'/'}frame-${String(manifest.frames[Number(position.value)]).padStart(4,'0')}.webp`};
+position.oninput=()=>{window.bench.target(Number(position.value));reference()};
+choice.onchange=()=>location.search=`?entry=${choice.value}`;
+if(!new URLSearchParams(location.search).has('test')){await draw(33);reference()}
+window.bench.ready=true;
+</script>

@@ -1,0 +1,1925 @@
+{
+  "method": "Luma pixel error within a three-pixel-expanded non-white source mask. This is a detail distortion metric, not an OCR or subjective readability score.",
+  "records": [
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 33,
+      "detail_rmse": 4.046611262883275,
+      "detail_psnr": 35.98897388948422
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 129,
+      "detail_rmse": 3.779767991470418,
+      "detail_psnr": 36.58150075011713
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 234,
+      "detail_rmse": 3.6220081277570055,
+      "detail_psnr": 36.951815198030204
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 363,
+      "detail_rmse": 3.584801072303199,
+      "detail_psnr": 37.041502392413264
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 33,
+      "detail_rmse": 2.573844057594917,
+      "detail_psnr": 39.91915899645407
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 129,
+      "detail_rmse": 2.4363472346075414,
+      "detail_psnr": 40.396019905430194
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 234,
+      "detail_rmse": 2.376384922291156,
+      "detail_psnr": 40.6124678447235
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 363,
+      "detail_rmse": 2.36649556653606,
+      "detail_psnr": 40.64868970499038
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 33,
+      "detail_rmse": 7.135236129509287,
+      "detail_psnr": 31.062636608941144
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 129,
+      "detail_rmse": 7.502472415454911,
+      "detail_psnr": 30.626715462330075
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 234,
+      "detail_rmse": 6.733586779928219,
+      "detail_psnr": 31.56587437833955
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 363,
+      "detail_rmse": 5.991156954513709,
+      "detail_psnr": 32.580589663587446
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 33,
+      "detail_rmse": 4.3249214717545446,
+      "detail_psnr": 35.4112390822268
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 129,
+      "detail_rmse": 4.48553765566836,
+      "detail_psnr": 35.094513470908915
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 234,
+      "detail_rmse": 4.114198051624985,
+      "detail_psnr": 35.84509972510459
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 363,
+      "detail_rmse": 3.8280627355577845,
+      "detail_psnr": 36.47122267818534
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 33,
+      "detail_rmse": 2.371772957749459,
+      "detail_psnr": 40.629341347515066
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 129,
+      "detail_rmse": 2.3566159764122574,
+      "detail_psnr": 40.685027256564666
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 234,
+      "detail_rmse": 2.2022446063347685,
+      "detail_psnr": 41.2734925086839
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 363,
+      "detail_rmse": 2.0835040129936755,
+      "detail_psnr": 41.75491678308597
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 33,
+      "detail_rmse": 2.4823583400391795,
+      "detail_psnr": 40.233514126113725
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 129,
+      "detail_rmse": 2.406012180012254,
+      "detail_psnr": 40.50484717770714
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 234,
+      "detail_rmse": 2.3170665986981263,
+      "detail_psnr": 40.832033273566466
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 363,
+      "detail_rmse": 2.305874026831494,
+      "detail_psnr": 40.874092059014174
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 33,
+      "detail_rmse": 3.6017080260655434,
+      "detail_psnr": 37.000633535666836
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 129,
+      "detail_rmse": 3.9766223827525518,
+      "detail_psnr": 36.140516555734024
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 234,
+      "detail_rmse": 3.709369886820888,
+      "detail_psnr": 36.74480076903748
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 363,
+      "detail_rmse": 3.827744523935292,
+      "detail_psnr": 36.471944731639
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 33,
+      "detail_rmse": 3.2157917492722934,
+      "detail_psnr": 37.98504527649345
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 129,
+      "detail_rmse": 2.6291658132051063,
+      "detail_psnr": 39.734444077581294
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 234,
+      "detail_rmse": 1.7907845055277127,
+      "detail_psnr": 43.069937047376186
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 363,
+      "detail_rmse": 1.8343472771636973,
+      "detail_psnr": 42.861172420620974
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 33,
+      "detail_rmse": 6.151161519877507,
+      "detail_psnr": 32.35166098733751
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 129,
+      "detail_rmse": 6.649384568441799,
+      "detail_psnr": 31.675174585017828
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 234,
+      "detail_rmse": 6.213578617755729,
+      "detail_psnr": 32.26396765568992
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 363,
+      "detail_rmse": 6.465025303355249,
+      "detail_psnr": 31.919399028725003
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 33,
+      "detail_rmse": 4.998801049777225,
+      "detail_psnr": 34.1534865615781
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 129,
+      "detail_rmse": 4.392901070434446,
+      "detail_psnr": 35.27577515023908
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 234,
+      "detail_rmse": 2.996359505858968,
+      "detail_psnr": 38.59892522489959
+    },
+    {
+      "variant": "landscape",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 363,
+      "detail_rmse": 3.1153476822736716,
+      "detail_psnr": 38.26067316298552
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 33,
+      "detail_rmse": 3.922459282564784,
+      "detail_psnr": 36.25963472767661
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 129,
+      "detail_rmse": 3.669129036975795,
+      "detail_psnr": 36.83954390034607
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 234,
+      "detail_rmse": 3.421386379234356,
+      "detail_psnr": 37.446761166813374
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 363,
+      "detail_rmse": 3.4797489758293083,
+      "detail_psnr": 37.29984529494449
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 33,
+      "detail_rmse": 2.5330002999827412,
+      "detail_psnr": 40.05809878419983
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 129,
+      "detail_rmse": 2.4471213840481436,
+      "detail_psnr": 40.35769336659765
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 234,
+      "detail_rmse": 2.233383010856532,
+      "detail_psnr": 41.15153944516699
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 363,
+      "detail_rmse": 2.275535907428458,
+      "detail_psnr": 40.989129749427
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 33,
+      "detail_rmse": 7.189279807952028,
+      "detail_psnr": 30.997095873616974
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 129,
+      "detail_rmse": 7.231228953138808,
+      "detail_psnr": 30.946561363451227
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 234,
+      "detail_rmse": 6.4862209614572395,
+      "detail_psnr": 31.89096882090076
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 363,
+      "detail_rmse": 6.329256014918612,
+      "detail_psnr": 32.10375034863199
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 33,
+      "detail_rmse": 4.29455931247605,
+      "detail_psnr": 35.47243150484139
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 129,
+      "detail_rmse": 4.335586517795023,
+      "detail_psnr": 35.389846466497765
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 234,
+      "detail_rmse": 3.902369308843476,
+      "detail_psnr": 36.30423626136234
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 363,
+      "detail_rmse": 3.878046183785591,
+      "detail_psnr": 36.35854407265052
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 33,
+      "detail_rmse": 2.395979342118392,
+      "detail_psnr": 40.54114222283668
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 129,
+      "detail_rmse": 2.389399828994397,
+      "detail_psnr": 40.56502704317601
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 234,
+      "detail_rmse": 2.1711145955299593,
+      "detail_psnr": 41.39714866982692
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 363,
+      "detail_rmse": 2.1563293136341386,
+      "detail_psnr": 41.45650187195966
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 33,
+      "detail_rmse": 2.465792409074089,
+      "detail_psnr": 40.29167338318099
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 129,
+      "detail_rmse": 2.386164963182848,
+      "detail_psnr": 40.5767943180234
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 234,
+      "detail_rmse": 2.2222798400657275,
+      "detail_psnr": 41.19482867910208
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 363,
+      "detail_rmse": 2.237948798126182,
+      "detail_psnr": 41.13380068641994
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 33,
+      "detail_rmse": 3.613493274949644,
+      "detail_psnr": 36.97225859283995
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 129,
+      "detail_rmse": 3.927407415633976,
+      "detail_psnr": 36.24868449244378
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 234,
+      "detail_rmse": 3.5943437145835815,
+      "detail_psnr": 37.018411512098545
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 363,
+      "detail_rmse": 3.63976676088631,
+      "detail_psnr": 36.90933251649735
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 33,
+      "detail_rmse": 3.224338846900092,
+      "detail_psnr": 37.96199009486335
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 129,
+      "detail_rmse": 2.6713005662212925,
+      "detail_psnr": 39.59634848466176
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 234,
+      "detail_rmse": 1.891092319576661,
+      "detail_psnr": 42.59654899260279
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 363,
+      "detail_rmse": 1.8479677643135628,
+      "detail_psnr": 42.7969157850974
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 33,
+      "detail_rmse": 6.206891058377747,
+      "detail_psnr": 32.27332115194781
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 129,
+      "detail_rmse": 6.628573156500962,
+      "detail_psnr": 31.70240253363768
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 234,
+      "detail_rmse": 6.057043588155959,
+      "detail_psnr": 32.48558962913109
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 363,
+      "detail_rmse": 6.1090632100730025,
+      "detail_psnr": 32.41131123324833
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 33,
+      "detail_rmse": 5.348033628756506,
+      "detail_psnr": 33.566921019312986
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 129,
+      "detail_rmse": 4.465527383792561,
+      "detail_psnr": 35.13334847029983
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 234,
+      "detail_rmse": 3.0523246995446693,
+      "detail_psnr": 38.43818898816106
+    },
+    {
+      "variant": "landscape",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 363,
+      "detail_rmse": 3.1423708090389866,
+      "detail_psnr": 38.18565497348301
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 33,
+      "detail_rmse": 3.7436008980117466,
+      "detail_psnr": 36.665012753031085
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 129,
+      "detail_rmse": 3.5288202179016093,
+      "detail_psnr": 37.17821294849114
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 234,
+      "detail_rmse": 3.199335806908369,
+      "detail_psnr": 38.0296070756229
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 363,
+      "detail_rmse": 3.2942003281683467,
+      "detail_psnr": 37.77580348630526
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 33,
+      "detail_rmse": 2.4459431207058024,
+      "detail_psnr": 40.361876538736105
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 129,
+      "detail_rmse": 2.331645644265874,
+      "detail_psnr": 40.777552639200074
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 234,
+      "detail_rmse": 2.147323441715319,
+      "detail_psnr": 41.49285430474645
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 363,
+      "detail_rmse": 2.1788458976012954,
+      "detail_psnr": 41.36627330561786
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 33,
+      "detail_rmse": 6.938462112614045,
+      "detail_psnr": 31.305539185226156
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 129,
+      "detail_rmse": 6.58547188863314,
+      "detail_psnr": 31.759065604236408
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 234,
+      "detail_rmse": 5.92217733649222,
+      "detail_psnr": 32.681175449312605
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 363,
+      "detail_rmse": 5.860879344044209,
+      "detail_psnr": 32.77154799270063
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 33,
+      "detail_rmse": 4.209895814053152,
+      "detail_psnr": 35.6453766465581
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 129,
+      "detail_rmse": 3.9820176541311163,
+      "detail_psnr": 36.128739986188656
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 234,
+      "detail_rmse": 3.5722742222466612,
+      "detail_psnr": 37.07190781466593
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 363,
+      "detail_rmse": 3.5328255269665902,
+      "detail_psnr": 37.16835981297786
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 33,
+      "detail_rmse": 2.308448191914765,
+      "detail_psnr": 40.86440096459859
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 129,
+      "detail_rmse": 2.1405363450478188,
+      "detail_psnr": 41.52035148272448
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 234,
+      "detail_rmse": 1.9520504600064785,
+      "detail_psnr": 42.32098281113197
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 363,
+      "detail_rmse": 1.9786440384094155,
+      "detail_psnr": 42.203450191043636
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 33,
+      "detail_rmse": 2.375857699512576,
+      "detail_psnr": 40.61439510275835
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 129,
+      "detail_rmse": 2.2689082101113027,
+      "detail_psnr": 41.01446507615889
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 234,
+      "detail_rmse": 2.0966933196868407,
+      "detail_psnr": 41.70010537903806
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 363,
+      "detail_rmse": 2.1073354302968648,
+      "detail_psnr": 41.65613022985747
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 33,
+      "detail_rmse": 3.3035651541758533,
+      "detail_psnr": 37.75114607766456
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 129,
+      "detail_rmse": 3.519764753456334,
+      "detail_psnr": 37.200530848718245
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 234,
+      "detail_rmse": 3.1116451974408443,
+      "detail_psnr": 38.27100218665892
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 363,
+      "detail_rmse": 3.218363587972152,
+      "detail_psnr": 37.97810148756306
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 33,
+      "detail_rmse": 3.229566851704136,
+      "detail_psnr": 37.94791803220602
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 129,
+      "detail_rmse": 2.6078441505161343,
+      "detail_psnr": 39.80517093644837
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 234,
+      "detail_rmse": 1.7625333429753933,
+      "detail_psnr": 43.20805677730255
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 363,
+      "detail_rmse": 1.8222485794723824,
+      "detail_psnr": 42.91865120171937
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 33,
+      "detail_rmse": 5.584579005019564,
+      "detail_psnr": 33.19099482307824
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 129,
+      "detail_rmse": 5.866293887724638,
+      "detail_psnr": 32.763527281952854
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 234,
+      "detail_rmse": 5.212395100938862,
+      "detail_psnr": 33.79005705016253
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 363,
+      "detail_rmse": 5.291274338589979,
+      "detail_psnr": 33.65959802594156
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 33,
+      "detail_rmse": 5.073040660525944,
+      "detail_psnr": 34.02543674446671
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 129,
+      "detail_rmse": 4.19862576443,
+      "detail_psnr": 35.66866027970255
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 234,
+      "detail_rmse": 2.891797984057229,
+      "detail_psnr": 38.90744459607444
+    },
+    {
+      "variant": "landscape",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 363,
+      "detail_rmse": 2.985361224267388,
+      "detail_psnr": 38.63086585605685
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 33,
+      "detail_rmse": 4.0513065107992565,
+      "detail_psnr": 35.97890156943075
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 129,
+      "detail_rmse": 3.8172672761361817,
+      "detail_psnr": 36.49575222270583
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 234,
+      "detail_rmse": 3.5928240315598394,
+      "detail_psnr": 37.02208466950686
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-80",
+      "index": 363,
+      "detail_rmse": 3.492242240042418,
+      "detail_psnr": 37.268716388736394
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 33,
+      "detail_rmse": 2.576067631962415,
+      "detail_psnr": 39.911658392978694
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 129,
+      "detail_rmse": 2.471896736680172,
+      "detail_psnr": 40.270197125219795
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 234,
+      "detail_rmse": 2.3535576150807827,
+      "detail_psnr": 40.696306922681316
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-88",
+      "index": 363,
+      "detail_rmse": 2.3101153929503213,
+      "detail_psnr": 40.85813012971141
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 33,
+      "detail_rmse": 7.164621723750979,
+      "detail_psnr": 31.02693829775059
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 129,
+      "detail_rmse": 7.549268504505971,
+      "detail_psnr": 30.572706165094825
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 234,
+      "detail_rmse": 6.9745441732857305,
+      "detail_psnr": 31.260487024234024
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-50",
+      "index": 363,
+      "detail_rmse": 6.398314294999841,
+      "detail_psnr": 32.00949221903273
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 33,
+      "detail_rmse": 4.376596343684845,
+      "detail_psnr": 35.30807374470235
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 129,
+      "detail_rmse": 4.581961156239485,
+      "detail_psnr": 34.909775546279164
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 234,
+      "detail_rmse": 4.221918511546175,
+      "detail_psnr": 35.620606676462685
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-65",
+      "index": 363,
+      "detail_rmse": 3.8441955951712465,
+      "detail_psnr": 36.434694073793324
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 33,
+      "detail_rmse": 2.4079645623084516,
+      "detail_psnr": 40.49780178509575
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 129,
+      "detail_rmse": 2.4126702503605797,
+      "detail_psnr": 40.48084422591002
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 234,
+      "detail_rmse": 2.2600583341315237,
+      "detail_psnr": 41.04841063224015
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "avif-80",
+      "index": 363,
+      "detail_rmse": 2.169847480639703,
+      "detail_psnr": 41.402219444560714
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 33,
+      "detail_rmse": 2.4822283895278003,
+      "detail_psnr": 40.23396884102233
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 129,
+      "detail_rmse": 2.4180828923359368,
+      "detail_psnr": 40.46137991915142
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 234,
+      "detail_rmse": 2.3150590490647796,
+      "detail_psnr": 40.839562152088305
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "webp-original",
+      "index": 363,
+      "detail_rmse": 2.287743321767241,
+      "detail_psnr": 40.942657683474465
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 33,
+      "detail_rmse": 4.07116690888497,
+      "detail_psnr": 35.93642545142869
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 129,
+      "detail_rmse": 4.335259795978983,
+      "detail_psnr": 35.39050104381009
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 234,
+      "detail_rmse": 4.2775551252793065,
+      "detail_psnr": 35.50689130776946
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g1",
+      "index": 363,
+      "detail_rmse": 4.100955168535222,
+      "detail_psnr": 35.87310317618077
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 33,
+      "detail_rmse": 3.322703049560035,
+      "detail_psnr": 37.70097300760122
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 129,
+      "detail_rmse": 3.0204338143550244,
+      "detail_psnr": 38.529417135959505
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 234,
+      "detail_rmse": 2.4620883444852355,
+      "detail_psnr": 40.30473096468472
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-18-g6",
+      "index": 363,
+      "detail_rmse": 2.4416294525640483,
+      "detail_psnr": 40.37720850755349
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 33,
+      "detail_rmse": 6.457995561059691,
+      "detail_psnr": 31.928848765350285
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 129,
+      "detail_rmse": 6.890762000154988,
+      "detail_psnr": 31.365458606915215
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 234,
+      "detail_rmse": 6.8167751602469355,
+      "detail_psnr": 31.459224213305564
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g1",
+      "index": 363,
+      "detail_rmse": 6.512498937901656,
+      "detail_psnr": 31.855850299075623
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 33,
+      "detail_rmse": 4.870975261690415,
+      "detail_psnr": 34.37848513031546
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 129,
+      "detail_rmse": 4.559052689287949,
+      "detail_psnr": 34.953311380631156
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 234,
+      "detail_rmse": 3.5084747512630376,
+      "detail_psnr": 37.228436499158356
+    },
+    {
+      "variant": "portrait",
+      "size": 540,
+      "codec": "h264-23-g6",
+      "index": 363,
+      "detail_rmse": 3.484507886157967,
+      "detail_psnr": 37.287974573583945
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 33,
+      "detail_rmse": 4.036678643837903,
+      "detail_psnr": 36.01032006839466
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 129,
+      "detail_rmse": 3.6826432706028998,
+      "detail_psnr": 36.80761057348744
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 234,
+      "detail_rmse": 3.409570894332486,
+      "detail_psnr": 37.476809107714544
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-80",
+      "index": 363,
+      "detail_rmse": 3.4413805366090138,
+      "detail_psnr": 37.396149645874615
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 33,
+      "detail_rmse": 2.578894194536797,
+      "detail_psnr": 39.90213311854875
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 129,
+      "detail_rmse": 2.4315107615239397,
+      "detail_psnr": 40.413279687986744
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 234,
+      "detail_rmse": 2.259309473473981,
+      "detail_psnr": 41.05128914151939
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-88",
+      "index": 363,
+      "detail_rmse": 2.2861211157812216,
+      "detail_psnr": 40.94881890794797
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 33,
+      "detail_rmse": 7.189898457627917,
+      "detail_psnr": 30.996348470293434
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 129,
+      "detail_rmse": 7.315839065551239,
+      "detail_psnr": 30.84552074342748
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 234,
+      "detail_rmse": 6.581786709136282,
+      "detail_psnr": 31.76392752184883
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-50",
+      "index": 363,
+      "detail_rmse": 6.279544189394015,
+      "detail_psnr": 32.17224119003478
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 33,
+      "detail_rmse": 4.248040505034533,
+      "detail_psnr": 35.567030626923085
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 129,
+      "detail_rmse": 4.3605352996333195,
+      "detail_psnr": 35.340007477404434
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 234,
+      "detail_rmse": 3.9654451334363823,
+      "detail_psnr": 36.16496470299934
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-65",
+      "index": 363,
+      "detail_rmse": 3.790004772903758,
+      "detail_psnr": 36.55800847082447
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 33,
+      "detail_rmse": 2.3587619468400907,
+      "detail_psnr": 40.67712135214176
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 129,
+      "detail_rmse": 2.3740837306166904,
+      "detail_psnr": 40.620882971711715
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 234,
+      "detail_rmse": 2.160188608807524,
+      "detail_psnr": 41.44097017650927
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "avif-80",
+      "index": 363,
+      "detail_rmse": 2.0877971187729254,
+      "detail_psnr": 41.73703773048751
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 33,
+      "detail_rmse": 2.4815777821535345,
+      "detail_psnr": 40.23624576469239
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 129,
+      "detail_rmse": 2.3619936502614243,
+      "detail_psnr": 40.66522909334198
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 234,
+      "detail_rmse": 2.202119338675854,
+      "detail_psnr": 41.273986591858865
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "webp-original",
+      "index": 363,
+      "detail_rmse": 2.226648011716843,
+      "detail_psnr": 41.17777222400192
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 33,
+      "detail_rmse": 3.476613939996459,
+      "detail_psnr": 37.3076742646025
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 129,
+      "detail_rmse": 3.8329085728115335,
+      "detail_psnr": 36.460234407505475
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 234,
+      "detail_rmse": 3.6694843879211647,
+      "detail_psnr": 36.83870272261454
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g1",
+      "index": 363,
+      "detail_rmse": 3.6127567622488304,
+      "detail_psnr": 36.97402915655571
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 33,
+      "detail_rmse": 3.068243618645544,
+      "detail_psnr": 38.39300681583263
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 129,
+      "detail_rmse": 2.618015507289167,
+      "detail_psnr": 39.771359315108825
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 234,
+      "detail_rmse": 1.7824435597707537,
+      "detail_psnr": 43.11048786841916
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-18-g6",
+      "index": 363,
+      "detail_rmse": 1.8085741933865314,
+      "detail_psnr": 42.98407701697863
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 33,
+      "detail_rmse": 5.960666080717926,
+      "detail_psnr": 32.62490774603202
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 129,
+      "detail_rmse": 6.430826968135513,
+      "detail_psnr": 31.965467121874948
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 234,
+      "detail_rmse": 6.1586671091515415,
+      "detail_psnr": 32.341069007522634
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g1",
+      "index": 363,
+      "detail_rmse": 5.8565351399272325,
+      "detail_psnr": 32.77798853968406
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 33,
+      "detail_rmse": 4.741631070508557,
+      "detail_psnr": 34.61224840780289
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 129,
+      "detail_rmse": 4.202990486477092,
+      "detail_psnr": 35.65963546917078
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 234,
+      "detail_rmse": 2.9796213972540233,
+      "detail_psnr": 38.64758192130988
+    },
+    {
+      "variant": "portrait",
+      "size": 720,
+      "codec": "h264-23-g6",
+      "index": 363,
+      "detail_rmse": 2.9854609353071,
+      "detail_psnr": 38.630575752260896
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 33,
+      "detail_rmse": 3.945072945055034,
+      "detail_psnr": 36.20970285274117
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 129,
+      "detail_rmse": 3.7969461829693234,
+      "detail_psnr": 36.54211477678699
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 234,
+      "detail_rmse": 3.1454945490708694,
+      "detail_psnr": 38.17702487030434
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-80",
+      "index": 363,
+      "detail_rmse": 3.172568829041496,
+      "detail_psnr": 38.10258255048431
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 33,
+      "detail_rmse": 2.5578878585195017,
+      "detail_psnr": 39.97317359936628
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 129,
+      "detail_rmse": 2.2998403312263846,
+      "detail_psnr": 40.89684989419134
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 234,
+      "detail_rmse": 2.1022857398068564,
+      "detail_psnr": 41.67696872033826
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-88",
+      "index": 363,
+      "detail_rmse": 2.13159683173349,
+      "detail_psnr": 41.5567022874319
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 33,
+      "detail_rmse": 7.115970754115486,
+      "detail_psnr": 31.086120518452493
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 129,
+      "detail_rmse": 6.634800278103369,
+      "detail_psnr": 31.694246524875325
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 234,
+      "detail_rmse": 5.897716483320785,
+      "detail_psnr": 32.71712578484784
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-50",
+      "index": 363,
+      "detail_rmse": 5.700659769397495,
+      "detail_psnr": 33.012301170222564
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 33,
+      "detail_rmse": 4.346282736309034,
+      "detail_psnr": 35.36844411227091
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 129,
+      "detail_rmse": 4.0117564834902675,
+      "detail_psnr": 36.06411234547098
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 234,
+      "detail_rmse": 3.5535240919621836,
+      "detail_psnr": 37.117618324854845
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-65",
+      "index": 363,
+      "detail_rmse": 3.5353888947231913,
+      "detail_psnr": 37.162059740828546
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 33,
+      "detail_rmse": 2.4297594670260083,
+      "detail_psnr": 40.419537949994684
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 129,
+      "detail_rmse": 2.155883780467285,
+      "detail_psnr": 41.45829670530705
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 234,
+      "detail_rmse": 1.95524431362525,
+      "detail_psnr": 42.30678297833792
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "avif-80",
+      "index": 363,
+      "detail_rmse": 1.9470129586111857,
+      "detail_psnr": 42.343426767958974
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 33,
+      "detail_rmse": 2.479913146788379,
+      "detail_psnr": 40.242074189985914
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 129,
+      "detail_rmse": 2.258488441848296,
+      "detail_psnr": 41.054446161953784
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 234,
+      "detail_rmse": 2.0728505498203775,
+      "detail_psnr": 41.79944378704381
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "webp-original",
+      "index": 363,
+      "detail_rmse": 2.07595178878765,
+      "detail_psnr": 41.78645834101403
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 33,
+      "detail_rmse": 3.8370034844186622,
+      "detail_psnr": 36.45095973697178
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 129,
+      "detail_rmse": 3.929886757955716,
+      "detail_psnr": 36.2432028866847
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 234,
+      "detail_rmse": 3.776125176415896,
+      "detail_psnr": 36.58987595905244
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g1",
+      "index": 363,
+      "detail_rmse": 3.7664531131546934,
+      "detail_psnr": 36.6121522992857
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 33,
+      "detail_rmse": 3.591912408371771,
+      "detail_psnr": 37.024288858487694
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 129,
+      "detail_rmse": 3.0154480294893675,
+      "detail_psnr": 38.543766650437114
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 234,
+      "detail_rmse": 2.455531747692023,
+      "detail_psnr": 40.327892538301796
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-18-g6",
+      "index": 363,
+      "detail_rmse": 2.543158462214002,
+      "detail_psnr": 40.02333517731554
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 33,
+      "detail_rmse": 6.109405604701112,
+      "detail_psnr": 32.41082442888711
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 129,
+      "detail_rmse": 6.159015782151708,
+      "detail_psnr": 32.34057726971338
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 234,
+      "detail_rmse": 5.762248239100212,
+      "detail_psnr": 32.9189643314255
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g1",
+      "index": 363,
+      "detail_rmse": 5.742667489387139,
+      "detail_psnr": 32.94853019688125
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 33,
+      "detail_rmse": 5.132222896381796,
+      "detail_psnr": 33.924693411571745
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 129,
+      "detail_rmse": 4.428499368009385,
+      "detail_psnr": 35.20567186796494
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 234,
+      "detail_rmse": 3.4133783332240153,
+      "detail_psnr": 37.46711506006877
+    },
+    {
+      "variant": "portrait",
+      "size": 1080,
+      "codec": "h264-23-g6",
+      "index": 363,
+      "detail_rmse": 3.512886313028986,
+      "detail_psnr": 37.21752170833021
+    }
+  ]
+}
