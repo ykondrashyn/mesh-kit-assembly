@@ -40,7 +40,7 @@ if any(path.is_symlink() for path in dist.rglob("*")):
 size = sum(path.stat().st_size for path in files)
 if size >= 1024 ** 3:
     raise ValueError("The Pages artifact exceeds 1 GiB")
-for name in ("index.html", "styles.css", "app.js", "timeline.mjs", "frame-loader.mjs"):
+for name in ("index.html", "styles.css", "app.js", "timeline.mjs", "frame-loader.mjs", "quality.mjs"):
     if not (dist / name).is_file():
         raise ValueError(f"Required website file missing: {name}")
 print(json.dumps({"verified_frames": len(record_paths), "static_files": len(files), "publish_bytes": size}, indent=2))

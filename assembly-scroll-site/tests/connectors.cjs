@@ -13,6 +13,14 @@ const waitFrame = (page, index) => page.waitForFunction(i => document.querySelec
     for (const [name, width, height] of [['desktop', 1440, 900], ['portrait', 443, 840], ['landscape', 920, 338]]) {
       const context = await browser.newContext({ viewport: { width, height }, hasTouch: name !== 'desktop', isMobile: name !== 'desktop' });
       const page = await context.newPage(), requests = [], errors = [];
+      await page.addInitScript(() => {
+        window.inspectionRequests = [];
+        const original = window.fetch;
+        window.fetch = function(url, options) {
+          if (document.documentElement.classList.contains('inspecting')) window.inspectionRequests.push(String(url));
+          return original.call(this, url, options);
+        };
+      });
       page.on('pageerror', e => errors.push(e.message));
       page.on('request', r => { if (r.url().includes('.webp')) requests.push(r.url()); });
       await page.goto(base);
@@ -22,7 +30,7 @@ const waitFrame = (page, index) => page.waitForFunction(i => document.querySelec
         await page.locator(`[data-chapter="${chapter}"]`).click();
         await waitFrame(page, index);
         const before = await page.evaluate(() => ({ y: scrollY, progress: document.querySelector('#stage').dataset.progress, resolution: document.querySelector('#assembly').dataset.resolution }));
-        const startRequests = requests.length;
+        await page.evaluate(() => { window.inspectionRequests = []; });
         await page.locator('#enlarge-connector').focus();
         await page.keyboard.press('Enter');
         await page.waitForFunction(() => document.querySelector('#connector-image').dataset.resolution === '1080');
@@ -39,13 +47,13 @@ const waitFrame = (page, index) => page.waitForFunction(i => document.querySelec
           assert.ok(await page.locator('#connector-note').isVisible());
           await page.screenshot({ path: output.replace('.json', `-${name}.png`) });
         }
-        const sharpRequests = requests.slice(startRequests).filter(url => /\/(portrait|landscape)\/frame-/.test(url));
+        const sharpRequests = (await page.evaluate(() => window.inspectionRequests)).filter(url => /\/(portrait|landscape)\/frame-/.test(url));
         assert.ok(sharpRequests.length <= 1, 'Inspection fetches only one native-resolution frame');
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('#connector-dialog').isVisible(), false);
         assert.ok(await page.locator('#enlarge-connector').evaluate(e => e === document.activeElement));
         await waitFrame(page, index);
-        await page.waitForFunction(res => document.querySelector('#assembly').dataset.resolution === res, before.resolution);
+        await page.waitForFunction(res => Number(document.querySelector('#assembly').dataset.resolution) >= Number(res), before.resolution);
         const s = await page.locator('#stage').evaluate(e => ({ ...e.dataset }));
         assert.equal(s.progress, before.progress);
         assert.ok(Number(s.maxRequests) <= 4 && Number(s.maxDecodedFrames) <= 12 && Number(s.maxDecodedBytes) <= 48 * 1024 * 1024);

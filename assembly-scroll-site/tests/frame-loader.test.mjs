@@ -11,6 +11,16 @@ async function until(condition) {
 const image = (width = 1920, height = 1080) => ({ width, height, closed: false, close() { this.closed = true; } });
 const response = () => ({ ok: true, blob: async () => ({}) });
 
+test('recovery probes include useful neighbors at either sequence endpoint', () => {
+  const loader = new FrameLoader(manifest, () => {});
+  loader.target = 420;
+  assert.deepEqual(loader.probeIndices().slice(0, 3), [420, 419, 418]);
+  loader.target = 0;
+  loader.direction = -1;
+  assert.deepEqual(loader.probeIndices().slice(0, 3), [0, 1, 2]);
+  loader.dispose();
+});
+
 test('rapid scrolling retains active downloads and prioritizes the newest queued target', async () => {
   const requests = [];
   const loader = new FrameLoader(manifest, () => {}, {
@@ -253,4 +263,60 @@ test('a direction reversal during decoding closes the obsolete result', async ()
     assert.equal(loader.get(200), undefined);
     assert.equal(loader.frameFor(100, 150, -1), 100);
   } finally { loader.dispose(); }
+});
+
+test('smaller probes cannot leave duplicate bitmaps that keep the decode queue churning', async () => {
+  let decodes=0;
+  const loader=new FrameLoader(manifest,()=>{}, {
+    fetchFrame:async url=>sizedResponse(url),
+    decodeFrame:async blob=>{decodes++;return image(blob.width,blob.height)},
+  });
+  try {
+    const [,medium,sharp]=manifest.variants.landscape.resolutions;
+    loader.selectVariant('landscape',sharp);loader.request(0);
+    await until(()=>loader.jobs.size===0);
+    loader.selectVariant('landscape',medium);
+    loader.setActivity({visible:true,enabled:true,sharp,probe:medium,preferCached:true});loader.request(0);
+    await until(()=>loader.jobs.size===0);
+    const count=decodes;
+    for(let i=0;i<10;i++){loader.request(0);await pause()}
+    assert.equal(decodes,count);
+    const poses=[...loader.cache.values()].map(x=>x.index);
+    assert.equal(new Set(poses).size,poses.length);
+    assert.ok(loader.maxDecodedBytes<=MAX_DECODED_BYTES);
+  } finally {loader.dispose()}
+});
+
+test('an urgent target can cancel a speculative download without cancelling motion downloads',async()=>{
+  const requests=[];
+  const loader=new FrameLoader(manifest,()=>{}, {
+    fetchFrame:(url,{signal})=>new Promise((resolve,reject)=>{
+      requests.push({url,signal,resolve});signal.addEventListener('abort',()=>reject(new DOMException('Aborted','AbortError')));
+    }),
+    decodeFrame:async blob=>image(blob.width,blob.height),
+  });
+  try {
+    const [small,,sharp]=manifest.variants.landscape.resolutions;
+    loader.selectVariant('landscape',small);loader.setActivity({visible:true,enabled:true,sharp});loader.request(0);
+    for(const r of requests.slice())r.resolve(sizedResponse(r.url));
+    await until(()=>[...loader.jobs.values()].some(j=>j.speculative));
+    const spec=[...loader.jobs.values()].find(j=>j.speculative);
+    loader.request(200);loader.request(300);
+    assert.ok(spec.controller.signal.aborted);
+    assert.ok([...loader.jobs.values()].filter(j=>!j.speculative).every(j=>!j.controller.signal.aborted));
+    assert.ok(loader.maxRequests<=4);
+  } finally {loader.dispose();for(const r of requests)r.resolve(sizedResponse(r.url))}
+});
+
+test('retry discards a corrupt compressed response and bypasses HTTP cache',async()=>{
+  const modes=[];let corrupt=true;
+  const loader=new FrameLoader(manifest,()=>{}, {
+    fetchFrame:async(url,options)=>{modes.push(options.cache);return sizedResponse(url)},
+    decodeFrame:async blob=>{if(corrupt)throw new Error('Invalid image');return image(blob.width,blob.height)},
+  });
+  try {
+    loader.selectVariant('landscape');loader.request(0,1,true);
+    await until(()=>loader.error(0));corrupt=false;loader.retry();await until(()=>loader.get(0));
+    assert.deepEqual(modes,['force-cache','reload']);
+  } finally {loader.dispose()}
 });

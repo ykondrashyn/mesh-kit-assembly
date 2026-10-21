@@ -15,6 +15,7 @@ export class FrameLoader {
     this.blobs = new Map();
     this.jobs = new Map();
     this.errors = new Map();
+    this.reload = new Set();
     this.attempted = new Set();
     this.probed = new Set();
     this.samples = new Map();
@@ -51,6 +52,11 @@ export class FrameLoader {
   get allocatedImages() { return this.cache.size + Number(this.reservedBytes > 0); }
   get deliveryMs() { const rows = this.tierSamples(this.resolution).slice(-8); return rows.length ? rows.reduce((n,x)=>n+x.fetchMs,0)/rows.length : 0; }
   get deliverySamples() { return this.tierSamples(this.resolution).length; }
+  preparedCount(resolution) { return [...this.blobs.values()].filter(x=>x.variant===this.variant && x.resolution.id===resolution.id).length; }
+  probeIndices() {
+    return [this.target,...Array.from({length:12},(_,i)=>this.target+(i+1)*this.direction),
+      ...Array.from({length:12},(_,i)=>this.target-(i+1)*this.direction)].filter(i=>i>=0 && i<this.manifest.frames.length);
+  }
   tierSamples(resolution) { return this.samples.get(`${this.variant}/${resolution.id}`) || []; }
   networkSummary() {
     const rows = this.transfers.filter(x=>this.clock()-x.end < 10000).sort((a,b)=>a.start-b.start);
@@ -74,7 +80,14 @@ export class FrameLoader {
       .sort((a,b)=>Math.abs(a-target)-Math.abs(b-target))[0];
   }
   error(index, resolution = this.resolution) { return this.errors.get(this.spec(index,resolution).key); }
-  retry() { this.errors.clear(); this.pump(); }
+  retry() {
+    for(const key of this.errors.keys()) {
+      this.reload.add(key);
+      const stored=this.blobs.get(key);
+      if(stored){this.compressedBytes-=stored.bytes;this.blobs.delete(key)}
+    }
+    this.errors.clear();this.pump();
+  }
   setActivity(activity) {
     this.activity = activity;
     this.visible = activity.visible !== false;
@@ -134,7 +147,7 @@ export class FrameLoader {
     if (!this.visible || !this.best(this.target) || this.error(this.target)) return null;
     const a=this.activity, candidates=[];
     if(a.enabled && !this.stillsOnly) {
-      if(a.probe) for(let offset=0;offset<3;offset++) candidates.push(this.spec(this.target+offset*this.direction,a.probe,'probe'));
+      if(a.probe) for(const index of this.probeIndices()) candidates.push(this.spec(index,a.probe,'probe'));
       if(a.sharp) {
         for(let offset=0;offset<=12;offset++) {
           candidates.push(this.spec(this.target+offset*this.direction,a.sharp,'near'));
@@ -186,9 +199,10 @@ export class FrameLoader {
       let blob=this.blobs.get(key)?.blob;
       if(!blob){
         const start=this.clock(), url=this.url(index,resolution);
-        const response=await this.fetchFrame(url,{signal:controller.signal,cache:'force-cache',priority:job.speculative?'low':index===this.target?'high':'auto'});
+        const response=await this.fetchFrame(url,{signal:controller.signal,cache:this.reload.has(key)?'reload':'force-cache',priority:job.speculative?'low':index===this.target?'high':'auto'});
         if(!response.ok)throw new Error(`Frame request returned ${response.status}`);
         blob=await response.blob();
+        this.reload.delete(key);
         fetchMs=this.clock()-start;
         const absolute=typeof location==='undefined'?url:new URL(url,location.href).href;
         const timing=this.resourceTiming(absolute);
@@ -215,9 +229,13 @@ export class FrameLoader {
             if(wanted())throw new Error('Unexpected frame dimensions');
             return;
           }
-          // Keep only the sharper bitmap of a pose, freeing redundant decoded pixels.
-          for(const other of [...this.cache.values()])if(other.variant===job.variant && other.index===index && Number(other.resolution.id)<=Number(resolution.id))this.evict(other.key);
-          this.cache.set(key,{...job,bitmap});this.decodedBytes+=bytes;
+          // A probe may measure a smaller tier without displacing an already sharper pose.
+          const sharper=[...this.cache.values()].some(x=>x.variant===job.variant && x.index===index && Number(x.resolution.id)>Number(resolution.id));
+          if(sharper)bitmap.close();
+          else {
+            for(const other of [...this.cache.values()])if(other.variant===job.variant && other.index===index)this.evict(other.key);
+            this.cache.set(key,{...job,bitmap});this.decodedBytes+=bytes;
+          }
           const tier=`${job.variant}/${resolution.id}`, rows=this.samples.get(tier)||[];
           rows.push({index,fetchMs,decodeMs:this.clock()-start,cached,at:this.clock()});
           this.samples.set(tier,rows.slice(-24));

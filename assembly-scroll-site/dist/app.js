@@ -1,6 +1,7 @@
-import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=mobile-1';
-import { FrameLoader } from './frame-loader.mjs?v=mobile-1';
-import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=mobile-1';
+import { QualityController } from './quality.mjs?v=progressive-1';
+import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=progressive-1';
+import { FrameLoader } from './frame-loader.mjs?v=progressive-1';
+import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=progressive-1';
 
 const $ = selector => document.querySelector(selector);
 const story = $('#story'), stage = $('#stage'), artwork = $('#artwork'), canvas = $('#assembly');
@@ -20,9 +21,9 @@ const announcement = $('#chapter-announcement'), navLinks = [...document.querySe
 const motionOptions = $('#motion-options'), motionToggle = $('#motion-toggle'), motionDescription = $('#motion-description');
 const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
 let manifest, loader, progress = 0, targetProgress = 0, lastIndex = 0, direction = 1;
-let raf = 0, previousTick = 0, wakeTimer = 0, pendingSince = 0, lagSince = null;
+let raf = 0, previousTick = 0, wakeTimer = 0, pendingSince = 0;
 let displayedKey = '', currentChapter = '', variant = '', fittedStyle;
-let resizePending = false, booting = false, enhanced = false, resolutionCap = Infinity;
+let resizePending = false, booting = false, enhanced = false, initialCap = Infinity, saveData = false;
 let cachedScrollSpan = 1, previousProgress = -1, hintDismissed = false, stylePending = true;
 let mode = reducedQuery.matches ? 'reduced' : 'animation';
 let areaWidth = 0, areaHeight = 0;
@@ -31,21 +32,24 @@ let lastScrollTime = 0, scrollRate = 0;
 let lastAdvanceAt = 0, chapterRequestedAt = 0;
 let layout = 'full';
 let inspection = null;
+let openingAt = null, connectorKey = '', dormant = false;
+const quality = new QualityController();
+const observedProbeFailures = new Set();
+const backgroundEnabled = new URLSearchParams(location.search).get('background') !== 'off';
+const data = (element, name, value) => { const text = String(value); if (element.dataset[name] !== text) element.dataset[name] = text; };
 const stillMode = () => mode !== 'animation';
-const schedule = () => { if (!raf) raf = requestAnimationFrame(render); };
+const schedule = () => { if (!raf && !document.hidden) raf = requestAnimationFrame(render); };
 
 function connectionChanged() {
   const connection = navigator.connection || {};
-  const cap = initialResolutionCap({
+  initialCap = initialResolutionCap({
     coarsePointer: matchMedia('(pointer: coarse)').matches,
     shortSide: Math.min(screen.width, screen.height),
     saveData: connection.saveData, effectiveType: connection.effectiveType, downlink: connection.downlink,
   });
-  if (cap < resolutionCap) {
-    resolutionCap = cap;
-    resizePending = true;
-    if (manifest) schedule();
-  }
+  saveData = Boolean(connection.saveData);
+  resizePending = true;
+  if (manifest) schedule();
 }
 connectionChanged();
 navigator.connection?.addEventListener('change', connectionChanged);
@@ -93,7 +97,7 @@ function dismissHint() {
 function setMode(next) {
   if (next === mode) return;
   mode = next;
-  lagSince = null;
+  quality.lagSince = null;
   previousTick = 0;
   updateMotionOptions();
   resizePending = true;
@@ -112,8 +116,8 @@ function resizeStage() {
   const fit = fitFrame(width, height, crop.width, crop.height);
   const sourceFit = { width: fit.width * dimensions.width / crop.width, height: fit.height * dimensions.height / crop.height };
   const fitted = resolutionForFit(sourceFit, dimensions.resolutions, devicePixelRatio || 1);
-  const resolution = stillMode() ? dimensions.resolutions[0] :
-    dimensions.resolutions.findLast(item => Number(item.id) <= Math.min(Number(fitted.id), resolutionCap));
+  quality.configure(dimensions.resolutions, fitted, initialCap, saveData);
+  const resolution = stillMode() ? dimensions.resolutions[0] : quality.motion;
   fittedStyle = { width: `${fit.width}px`, height: `${fit.height}px`, left: `${fit.left}px`, top: `${fit.top}px` };
   const shown = frameCrop(canvas.dataset.orientation || nextVariant, canvas.dataset.layout || layout);
   const oldFit = fitFrame(width, height, shown.width, shown.height);
@@ -125,7 +129,7 @@ function resizeStage() {
   stage.dataset.resolution = resolution.id;
   displayedKey = '';
   stylePending = true;
-  lagSince = null;
+  quality.lagSince = null;
   const nextSpan = Math.max(1, story.offsetHeight - stage.offsetHeight);
   const spanChanged = Math.abs(nextSpan - cachedScrollSpan) > 1;
   cachedScrollSpan = nextSpan;
@@ -165,6 +169,9 @@ function positionConnector() {
   const connector = connectorAtFrame(Number(canvas.dataset.frame));
   enlargeConnector.hidden = !connector || !enhanced || typeof connectorDialog.showModal !== 'function';
   if (enlargeConnector.hidden) return;
+  const key = `${connector.id}:${canvas.dataset.orientation}:${canvas.dataset.layout}:${canvas.style.cssText}`;
+  if (key === connectorKey) return;
+  connectorKey = key;
   const crop = frameCrop(canvas.dataset.orientation, canvas.dataset.layout);
   const circle = connectorCircle(canvas.dataset.orientation);
   const scale = parseFloat(canvas.style.width) / crop.width;
@@ -185,11 +192,15 @@ function drawConnector(source, scale, crop = { x: 0, y: 0 }) {
 }
 
 function updateLoaderMetrics() {
-  stage.dataset.decodedFrames = String(loader.allocatedImages);
-  stage.dataset.maxDecodedFrames = String(loader.maxDecoded);
-  stage.dataset.decodedBytes = String(loader.allocatedBytes);
-  stage.dataset.maxDecodedBytes = String(loader.maxDecodedBytes);
-  stage.dataset.maxRequests = String(loader.maxRequests);
+  const network = loader.networkSummary();
+  for (const [name,value] of Object.entries({ decodedFrames: loader.allocatedImages, maxDecodedFrames: loader.maxDecoded,
+    decodedBytes: loader.allocatedBytes, maxDecodedBytes: loader.maxDecodedBytes, maxRequests: loader.maxRequests,
+    compressedBytes: loader.compressedBytes, maxCompressedBytes: loader.maxCompressedBytes,
+    maxSpeculative: loader.maxSpeculative, backgroundFetched: loader.backgroundFetched, jobs: loader.jobs.size,
+    preparedFrames: loader.preparedCount(quality.desired),
+    networkSamples: network.count, networkMbps: network.mbps.toFixed(2),
+    qualityDrops: quality.drops, qualityPromotions: quality.promotions, usefulResolution: quality.desired?.id,
+    resolution: quality.motion?.id, qualityLagMs: Math.round(quality.lagDuration || 0) })) data(stage,name,value);
 }
 
 function renderInspection() {
@@ -224,6 +235,7 @@ enlargeConnector.addEventListener('click', () => {
   document.documentElement.classList.add('inspecting');
   connectorDialog.showModal();
   const sharp = manifest.variants[inspection.variant].resolutions.at(-1);
+  loader.setActivity({ visible: !document.hidden, sharp });
   loader.selectVariant(inspection.variant, sharp);
   loader.request(index, direction, true);
   schedule();
@@ -249,9 +261,11 @@ connectorRetry.addEventListener('click', () => {
 function render(now) {
   raf = 0;
   clearTimeout(wakeTimer);
-  if (!manifest) return;
+  if (!manifest || document.hidden || dormant) return;
   if (inspection) { renderInspection(); return; }
   if (resizePending) { resizePending = false; resizeStage(); }
+  openingAt ??= now;
+  const deadlines = [];
   const elapsed = previousTick ? Math.min(64, now - previousTick) : 1000 / 60;
   progress = stillMode() ? targetProgress : easeProgress(progress, targetProgress, elapsed);
   previousTick = progress === targetProgress ? 0 : now;
@@ -260,73 +274,104 @@ function render(now) {
   lastIndex = logicalIndex;
   const chapter = chapterAtFrame(logicalIndex, manifest.chapters);
   const index = stillMode() ? chapter.stillIndex : logicalIndex;
+  const current = Number(canvas.dataset.frame);
+  const lag = enhanced ? Math.abs(index - current) : 0;
+  const idle = now - Math.max(lastScrollTime, openingAt);
+  const rate = now - lastScrollTime < 300 ? scrollRate : 0;
+  if (!stillMode() && quality.observe({ now, lag, failed: Boolean(loader.error(index)), rate,
+    deliveryMs: loader.deliveryMs, samples: loader.deliverySamples })) {
+    loader.selectVariant(variant, quality.motion);
+  }
+  let probe = !stillMode() ? quality.next(now) : null;
+  if (probe) {
+    const samples = quality.usableSamples(loader.tierSamples(probe), now);
+    const failed = loader.probeIndices().some(i => {
+      const key = loader.spec(i,probe).key;
+      if (!loader.error(i,probe) || observedProbeFailures.has(key)) return false;
+      observedProbeFailures.add(key); return true;
+    });
+    if (failed || (samples.length >= 3 && !quality.hasHeadroom(samples, now))) {
+      quality.probeFailed(now); probe = null;
+    } else if (quality.promote(now, samples)) {
+      loader.selectVariant(variant, quality.motion); probe = null;
+    }
+  }
+  const sharp = stillMode() ? manifest.variants[variant].resolutions[0] : quality.desired;
+  const sharpSamples = loader.tierSamples(sharp).slice(-3);
+  const preferCached = sharpSamples.length > 0 && sharpSamples.every(x => x.decodeMs * Math.max(1,rate) <= 700);
+  const healthy = enhanced && lag <= 1 && !loader.error(index);
+  const distant = backgroundEnabled && quality.distant(now, loader.networkSummary());
+  loader.setActivity({ visible: true, enabled: backgroundEnabled && healthy && !saveData && !stillMode(),
+    sharp, probe, distant, preferCached: preferCached && !stillMode() });
+  const opening = !enhanced && !stillMode();
+  const refine = !stillMode() && enhanced && current === index && progress === targetProgress && idle >= 600;
+  const detail = opening || refine ? sharp : null;
+  const motion = !opening || now - openingAt >= 600 || loader.error(index, sharp);
+  loader.request(index, direction, stillMode(), { detail, motion });
+  if (opening && !motion) deadlines.push(openingAt + 600);
+  if (!stillMode() && enhanced && idle < 600) deadlines.push(Math.max(lastScrollTime,openingAt) + 600);
+  if (!stillMode() && enhanced && (Number(quality.motion.id) < Number(sharp.id) || backgroundEnabled)) {
+    const deadline = quality.nextDeadline(now);
+    if (Number.isFinite(deadline)) deadlines.push(deadline);
+  }
+  if (quality.lagSince !== null) deadlines.push(quality.lagSince + qualityLagDelay(loader.deliveryMs,rate,loader.deliverySamples));
   if (previousProgress !== progress) { progressFill.style.transform = `scaleX(${progress})`; previousProgress = progress; }
-  loader.request(index, direction, stillMode());
-  stage.dataset.requestedFrame = String(index);
-  stage.dataset.progress = progress.toFixed(6);
-  stage.dataset.targetProgress = targetProgress.toFixed(6);
-  stage.dataset.settled = String(progress === targetProgress);
+  data(stage,'requestedFrame',index);
+  data(stage,'progress',progress.toFixed(6));
+  data(stage,'targetProgress',targetProgress.toFixed(6));
+  data(stage,'settled',progress === targetProgress);
+  data(stage,'distantPrefetch',distant && healthy);
   updateLoaderMetrics();
-  const drawnIndex = loader.frameFor(index, Number(canvas.dataset.frame), direction, stillMode());
-  const key = `${variant}:${layout}:${loader.resolution.id}:${drawnIndex}`;
-  const bitmap = loader.get(drawnIndex);
-  if (bitmap) {
-    if (displayedKey !== key) {
+  const drawnIndex = loader.frameFor(index, current, direction, stillMode());
+  const entry = loader.best(drawnIndex, sharp);
+  if (entry) {
+    const { bitmap, resolution } = entry;
+    const samePose = canvas.dataset.orientation === variant && current === drawnIndex;
+    const sharperAlready = samePose && canvas.dataset.layout === layout && Number(canvas.dataset.resolution) > Number(resolution.id);
+    const key = `${variant}:${layout}:${resolution.id}:${drawnIndex}`;
+    if (displayedKey !== key && !sharperAlready) {
       if (stylePending) { Object.assign(canvas.style, fittedStyle); stylePending = false; }
       const crop = frameCrop(variant, layout), source = manifest.variants[variant];
       const scale = bitmap.width / source.width;
       const width = Math.round(crop.width * scale), height = Math.round(crop.height * scale);
-      if (canvas.width !== width || canvas.height !== height) {
-        canvas.width = width; canvas.height = height;
-      }
-      context.drawImage(bitmap, crop.x * scale, crop.y * scale, crop.width * scale, crop.height * scale,
-        0, 0, width, height);
-      lastAdvanceAt = now;
+      if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
+      context.drawImage(bitmap, crop.x * scale, crop.y * scale, crop.width * scale, crop.height * scale, 0, 0, width, height);
+      if (!samePose) lastAdvanceAt = now;
       displayedKey = key;
-      canvas.dataset.frame = String(drawnIndex);
-      canvas.dataset.sourceFrame = String(manifest.frames[drawnIndex]);
-      canvas.dataset.orientation = variant;
-      canvas.dataset.resolution = loader.resolution.id;
-      canvas.dataset.layout = layout;
+      data(canvas,'frame',drawnIndex);
+      data(canvas,'sourceFrame',manifest.frames[drawnIndex]);
+      data(canvas,'orientation',variant);
+      data(canvas,'resolution',resolution.id);
+      data(canvas,'layout',layout);
       updateNavigation(drawnIndex);
       if (!enhanced) enhance();
     }
   }
   positionConnector();
-  if (drawnIndex === index) {
-    loadState.hidden = true;
-    loadAnnouncement.textContent = '';
-    chapterRequestedAt = 0;
-    pendingSince = 0;
-    lagSince = null;
+  const exact = canvas.dataset.orientation === variant && Number(canvas.dataset.frame) === index;
+  if (exact) {
+    if (!loadState.hidden) loadState.hidden = true;
+    if (loadAnnouncement.textContent) loadAnnouncement.textContent = '';
+    chapterRequestedAt = pendingSince = 0;
   } else {
     if (!pendingSince) pendingSince = now;
     const failed = loader.error(index);
     const feedbackDelay = chapterRequestedAt ? 350 : 600;
-    const stalledFor = now - (chapterRequestedAt || Math.max(pendingSince, lastAdvanceAt));
+    const start = chapterRequestedAt || Math.max(pendingSince, lastAdvanceAt);
+    if (failed && !enhanced && (!detail || loader.error(index,detail))) {
+      dormant = true;
+      loader.setActivity({ visible: false });
+      document.documentElement.classList.remove('scroll-ready');
+      showLoad('Animation unavailable. Read the assembly instructions below or try again.', true);
+      return;
+    }
     if (failed) showLoad('This image could not load. The previous view remains available.', true);
-    else if (stalledFor >= feedbackDelay) showLoad('Loading…');
+    else if (now - start >= feedbackDelay) showLoad('Loading…');
     else if (enhanced) loadState.hidden = true;
-    const resolutions = manifest.variants[variant].resolutions;
-    const tier = resolutions.findIndex(item => item.id === loader.resolution.id);
-    const behind = enhanced && !stillMode() && Math.abs(index - Number(canvas.dataset.frame)) >= 2;
-    const lagDelay = qualityLagDelay(loader.deliveryMs, now - lastScrollTime < 300 ? scrollRate : 0, loader.deliverySamples);
-    if (behind && tier > 0) {
-      lagSince ??= now;
-      if (now - lagSince >= lagDelay) {
-        stage.dataset.qualityLagMs = String(Math.round(now - lagSince));
-        stage.dataset.qualityDrops = String(Number(stage.dataset.qualityDrops || 0) + 1);
-        resolutionCap = Number(resolutions[tier - 1].id);
-        lagSince = null;
-        resizePending = true;
-      }
-    } else lagSince = null;
-    // Timers provide loading feedback and the lag deadline without an idle RAF loop.
-    const deadlines = [];
-    if (lagSince !== null) deadlines.push(Math.max(1, lagDelay - (now - lagSince)));
-    if (!failed && stalledFor < feedbackDelay) deadlines.push(Math.max(1, feedbackDelay - stalledFor));
-    if (deadlines.length) wakeTimer = setTimeout(schedule, Math.min(...deadlines));
+    if (!failed && now-start < feedbackDelay) deadlines.push(start + feedbackDelay);
   }
+  const upcoming = deadlines.filter(time => time > now);
+  if (upcoming.length) wakeTimer = setTimeout(schedule, Math.max(1,Math.min(...upcoming)-now));
   if (progress !== targetProgress || resizePending) schedule();
 }
 
@@ -336,6 +381,7 @@ async function boot() {
   showLoad('Loading assembly…');
   try {
     if (!context || !window.createImageBitmap) throw new Error('Canvas image decoding is unavailable');
+    performance.setResourceTimingBufferSize?.(4096);
     const response = await fetch('./assets/manifest.json', { cache: 'no-cache', signal: AbortSignal.timeout(8000) });
     if (!response.ok) throw new Error('Could not load the frame manifest');
     const next = await response.json();
@@ -350,6 +396,10 @@ async function boot() {
       chapter.description = `${chapter.label}. ${$(`#step-${chapter.id} p`).textContent}`;
     }
     loader = new FrameLoader(manifest, schedule);
+    document.documentElement.classList.add('scroll-ready');
+    // A Retry from ordinary instructions starts at the opening pose. Prevent
+    // native scroll anchoring from following the instructions below the long stage.
+    if (!enhanced) window.scrollTo({ top: 0, behavior: 'instant' });
     updateMotionOptions();
     resizePending = true;
     schedule();
@@ -360,7 +410,18 @@ async function boot() {
 }
 
 window.addEventListener('scroll', () => {
-  if (!enhanced || resizePending || inspection) return;
+  if (!manifest || inspection || dormant) return;
+  if (resizePending) {
+    if (!enhanced) {
+      targetProgress = clamp(window.scrollY / Math.max(1,story.offsetHeight-stage.offsetHeight));
+      lastScrollTime = performance.now();
+      schedule();
+      return;
+    }
+    // Preserve progress during a real viewport change, but do not lose normal
+    // scrolling while an artwork-only layout refresh is queued.
+    if (Math.abs(story.offsetHeight-stage.offsetHeight-cachedScrollSpan)>1) return;
+  }
   const now = performance.now(), next = clamp(window.scrollY / cachedScrollSpan);
   const elapsed = now - lastScrollTime;
   const rate = Math.abs(next - targetProgress) * (manifest.frames.length - 1) * 1000 / Math.max(16, elapsed);
@@ -394,12 +455,12 @@ new ResizeObserver(entries => {
 
 for (const link of navLinks) {
   link.addEventListener('click', event => {
-    if (!enhanced || !manifest) return;
+    if (!manifest || dormant) return;
     event.preventDefault();
     dismissHint();
     instructions.open = false;
     const chapter = manifest.chapters.find(item => item.id === link.dataset.chapter);
-    chapterRequestedAt = performance.now();
+    chapterRequestedAt = lastScrollTime = performance.now();
     progress = targetProgress = progressAtFrame(chapter.targetIndex, manifest.frames.length);
     previousTick = 0;
     window.scrollTo({ top: targetProgress * cachedScrollSpan, behavior: 'instant' });
@@ -408,7 +469,14 @@ for (const link of navLinks) {
 }
 retry.addEventListener('click', () => {
   if (!manifest) boot();
-  else { loader.retry(); pendingSince = 0; lagSince = null; schedule(); }
+  else {
+    if (dormant) {
+      dormant = false; openingAt = null; targetProgress = progress = 0;
+      document.documentElement.classList.add('scroll-ready'); resizePending = true;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+    loader.retry(); pendingSince = 0; quality.lagSince = null; schedule();
+  }
 });
 motionToggle.addEventListener('click', () => setMode(stillMode() ? 'animation' : 'manual'));
 instructions.addEventListener('keydown', event => {
@@ -420,6 +488,17 @@ instructions.addEventListener('keydown', event => {
 });
 document.addEventListener('pointerdown', event => {
   if (enhanced && instructions.open && !instructions.contains(event.target)) instructions.open = false;
+});
+document.addEventListener('visibilitychange', () => {
+  if (!loader) return;
+  clearTimeout(wakeTimer);
+  if (document.hidden) {
+    cancelAnimationFrame(raf); raf = 0;
+    loader.setActivity({ ...loader.activity, visible: false });
+  } else {
+    loader.setActivity({ ...loader.activity, visible: true });
+    previousTick = 0; quality.healthySince = null; schedule();
+  }
 });
 reducedQuery.addEventListener('change', () => setMode(reducedQuery.matches ? 'reduced' : 'animation'));
 window.addEventListener('pagehide', event => { if (!event.persisted) {

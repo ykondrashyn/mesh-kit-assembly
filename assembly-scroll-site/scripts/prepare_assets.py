@@ -5,6 +5,7 @@ from pathlib import Path
 from PIL import Image
 import hashlib
 import json
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT.parent / "ppt-demo-assets"
@@ -86,6 +87,9 @@ def main():
         ],
     }
     (ROOT / "dist/assets/manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    page = ROOT / "dist/index.html"
+    page.write_text(re.sub(r'(frame-0034\.webp)(?:\?v=[a-f0-9]+)?(?=")',
+                           lambda match: f'{match[1]}?v={digest}', page.read_text()))
     evidence = ROOT / "validation"
     evidence.mkdir(exist_ok=True)
     report = {"quality": 88, "method": 4, "frames_per_orientation": len(FRAMES),

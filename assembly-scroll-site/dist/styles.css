@@ -17,7 +17,7 @@ button:disabled { cursor: default; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 #story { height: var(--viewport-height); }
 /* Browser chrome may resize the stage without changing the scroll distance. */
-.enhanced #story { height: calc(var(--scroll-height) * 12 + var(--viewport-height)); }
+.scroll-ready #story, .enhanced #story { height: calc(var(--scroll-height) * 12 + var(--viewport-height)); }
 #stage {
   position: relative;
   top: 0;
@@ -27,7 +27,7 @@ button:disabled { cursor: default; }
   padding: max(12px, env(safe-area-inset-top)) 24px max(12px, env(safe-area-inset-bottom));
   background: #fff;
 }
-.enhanced #stage { position: sticky; }
+.scroll-ready #stage, .enhanced #stage { position: sticky; }
 .masthead { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; }
 #scroll-hint { margin: 0; font-size: 12px; color: #666; }
 #scroll-hint span { margin-left: 4px; }

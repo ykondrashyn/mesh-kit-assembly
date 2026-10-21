@@ -38,7 +38,7 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
     p.on('pageerror', e => errors.push(e.message));
     await p.goto(base); await visibleFrame(p, 0);
     await p.route(/\/landscape\/(?:720\/)?frame-\d+\.webp/, async route => {
-      await new Promise(r => setTimeout(r, 1600));
+      await new Promise(r => setTimeout(r, 2600));
       await route.continue().catch(() => {});
     });
     await p.evaluate(() => {

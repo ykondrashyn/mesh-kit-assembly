@@ -30,7 +30,13 @@ async function go(page, index, expected = index, settle = true) {
     const span = document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight;
     window.scrollTo(0, i / 420 * span);
   }, index);
-  await page.waitForFunction(i => Number(document.querySelector('#stage').dataset.requestedFrame) === i, expected);
+  try {
+    await page.waitForFunction(i => Number(document.querySelector('#stage').dataset.requestedFrame) === i, expected);
+  } catch (error) {
+    console.error('Unsettled requested position', { index, expected, state: await state(page),
+      geometry: await page.evaluate(()=>({y:scrollY,span:document.querySelector('#story').offsetHeight-document.querySelector('#stage').offsetHeight})) });
+    throw error;
+  }
   await waitFrame(page, expected);
   if (settle) await waitSettled(page);
 }
