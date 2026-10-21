@@ -76,8 +76,8 @@ nav a:hover { color: #202020; }
 /* The Blender exports include a second progress track in their bottom
    64 pixels. Hide only that footer, leaving the fitted artwork unchanged.
    Follow the displayed canvas orientation during asynchronous handoffs. */
-#assembly[data-orientation="landscape"] { clip-path: inset(0 0 5.925926%); }
-#assembly[data-orientation="portrait"] { clip-path: inset(0 0 3.333334%); }
+#assembly[data-layout="full"][data-orientation="landscape"] { clip-path: inset(0 0 5.925926%); }
+#assembly[data-layout="full"][data-orientation="portrait"] { clip-path: inset(0 0 3.333334%); }
 .fallback img {
   width: min(100cqw, calc(100cqh * 9 / 16));
   height: auto;
@@ -121,8 +121,35 @@ nav a:hover { color: #202020; }
   #stage { padding-left: 14px; padding-right: 14px; }
   .masthead { gap: 8px; }
   #scroll-hint { font-size: 11px; }
-  nav a { flex: 1; flex-direction: column; gap: 4px; padding: 5px 3px; font-size: 11px; }
-  .number { font-size: 10px; }
+  nav a { flex: 1; flex-direction: column; gap: 4px; padding: 5px 2px; font-size: 13px; }
+  .number { font-size: 11px; }
+}
+
+#step-summary { display: none; font-size: 15px; line-height: 1.4; }
+#step-title { margin: 0 0 12px; font-size: 18px; line-height: 1.25; }
+#step-caption { margin: 0; }
+.enhanced #stage[data-layout="phone"] { grid-template-rows: auto minmax(0, 1fr) auto auto; }
+.enhanced [data-layout="phone"] #step-summary { display: block; padding: 4px 4px 0; text-align: center; }
+[data-layout="phone"] #step-title { display: none; }
+.enhanced #stage[data-layout="compact"] {
+  grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  column-gap: 16px;
+}
+.enhanced [data-layout="compact"] .masthead {
+  grid-column: 1; grid-row: 1; align-self: start;
+  flex-direction: column; align-items: flex-start; gap: 0;
+}
+.enhanced [data-layout="compact"] #instructions { margin: 0; }
+.enhanced [data-layout="compact"] #step-summary {
+  display: block; grid-column: 1; grid-row: 1; align-self: center;
+  max-height: calc(100% - 70px); overflow-y: auto; margin-top: 50px;
+}
+.enhanced [data-layout="compact"] #artwork { grid-column: 2; grid-row: 1; }
+.enhanced [data-layout="compact"] .controls { grid-column: 1 / -1; grid-row: 2; }
+.enhanced [data-layout="compact"] .instruction-body {
+  position: fixed; top: 52px; right: 14px;
+  width: min(420px, calc(100vw - 28px)); max-height: calc(100dvh - 120px);
 }
 @media (max-height: 460px) and (min-width: 601px) {
   #stage { padding-top: 4px; padding-bottom: 4px; }

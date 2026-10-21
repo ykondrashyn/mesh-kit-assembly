@@ -40,7 +40,8 @@ async function fits(page) {
     const area = document.querySelector('#artwork').getBoundingClientRect();
     const controls = document.querySelector('.controls').getBoundingClientRect();
     return { canvas: canvas.toJSON(), area: area.toJSON(), controls: controls.toJSON(), innerHeight,
-      orientation: document.querySelector('canvas').dataset.orientation };
+      orientation: document.querySelector('canvas').dataset.orientation,
+      layout: document.querySelector('canvas').dataset.layout };
   });
   assert.ok(bounds.canvas.left >= bounds.area.left - 1);
   assert.ok(bounds.canvas.right <= bounds.area.right + 1);
@@ -183,7 +184,9 @@ async function run(name, fn) {
       const whileLoading = await fits(page);
       // A nearby portrait frame may arrive before the delayed exact target.
       // Either orientation must retain its own aspect ratio during that handoff.
-      const ratio = whileLoading.orientation === 'portrait' ? 9 / 16 : 16 / 9;
+      const ratio = whileLoading.orientation === 'portrait'
+        ? 1080 / (whileLoading.layout === 'phone' ? 1752 : 1920)
+        : 1920 / (whileLoading.layout === 'compact' ? 720 : whileLoading.layout === 'phone' ? 920 : 1080);
       assert.ok(Math.abs(whileLoading.canvas.width / whileLoading.canvas.height - ratio) < .001);
       await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
       await waitFrame(page, target('lora'));

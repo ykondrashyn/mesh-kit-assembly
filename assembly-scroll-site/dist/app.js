@@ -1,5 +1,6 @@
 import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs';
 import { FrameLoader } from './frame-loader.mjs?v=continuous-2';
+import { presentationForStage, frameCrop, chapterCopy } from './presentation.mjs';
 
 const $ = selector => document.querySelector(selector);
 const story = $('#story'), stage = $('#stage'), artwork = $('#artwork'), canvas = $('#assembly');
@@ -9,6 +10,7 @@ const instructionsSummary = instructions.querySelector('summary');
 const loadState = $('#load-state'), loadMessage = $('#load-message'), retry = $('#retry');
 const loadAnnouncement = $('#load-announcement');
 const progressFill = $('#progress-fill'), scrollHint = $('#scroll-hint');
+const stepSummary = $('#step-summary'), stepTitle = $('#step-title'), stepCaption = $('#step-caption');
 const announcement = $('#chapter-announcement'), navLinks = [...document.querySelectorAll('[data-chapter]')];
 const motionOptions = $('#motion-options'), motionToggle = $('#motion-toggle'), motionDescription = $('#motion-description');
 const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
@@ -22,6 +24,7 @@ let areaWidth = 0, areaHeight = 0;
 let orientationTimer = 0;
 let lastScrollTime = 0, scrollRate = 0;
 let lastAdvanceAt = 0, chapterRequestedAt = 0;
+let layout = 'full';
 const stillMode = () => mode !== 'animation';
 const schedule = () => { if (!raf) raf = requestAnimationFrame(render); };
 
@@ -76,16 +79,20 @@ function setMode(next) {
 
 function resizeStage() {
   // CSS viewport units avoid persisting Chrome's transient rotation dimensions.
+  layout = presentationForStage(stage.clientWidth, stage.clientHeight);
+  stage.dataset.layout = layout;
   const { width, height } = artwork.getBoundingClientRect();
   areaWidth = width; areaHeight = height;
   const nextVariant = variantForStage(width, height);
   const dimensions = manifest.variants[nextVariant];
-  const fit = fitFrame(width, height, dimensions.width, dimensions.height);
-  const fitted = resolutionForFit(fit, dimensions.resolutions, devicePixelRatio || 1);
+  const crop = frameCrop(nextVariant, layout);
+  const fit = fitFrame(width, height, crop.width, crop.height);
+  const sourceFit = { width: fit.width * dimensions.width / crop.width, height: fit.height * dimensions.height / crop.height };
+  const fitted = resolutionForFit(sourceFit, dimensions.resolutions, devicePixelRatio || 1);
   const resolution = stillMode() ? dimensions.resolutions[0] :
     dimensions.resolutions.findLast(item => Number(item.id) <= Math.min(Number(fitted.id), resolutionCap));
   fittedStyle = { width: `${fit.width}px`, height: `${fit.height}px`, left: `${fit.left}px`, top: `${fit.top}px` };
-  const shown = manifest.variants[canvas.dataset.orientation] || dimensions;
+  const shown = frameCrop(canvas.dataset.orientation || nextVariant, canvas.dataset.layout || layout);
   const oldFit = fitFrame(width, height, shown.width, shown.height);
   Object.assign(canvas.style, { width: `${oldFit.width}px`, height: `${oldFit.height}px`, left: `${oldFit.left}px`, top: `${oldFit.top}px` });
   variant = nextVariant;
@@ -110,6 +117,8 @@ function enhance() {
   masthead.append(instructions);
   $('#instructions-link').hidden = true;
   motionOptions.hidden = false;
+  stepSummary.hidden = false;
+  scrollHint.firstChild.textContent = matchMedia('(pointer: coarse)').matches ? 'Swipe up to assemble ' : 'Scroll to assemble ';
   scrollHint.hidden = hintDismissed;
   document.documentElement.classList.add('enhanced');
   resizePending = true;
@@ -125,6 +134,8 @@ function updateNavigation(index) {
   }
   canvas.setAttribute('aria-label', chapter.description);
   announcement.textContent = chapter.description;
+  stepTitle.textContent = chapterCopy[chapter.id].title;
+  stepCaption.textContent = chapterCopy[chapter.id].instruction;
 }
 
 function render(now) {
@@ -152,21 +163,26 @@ function render(now) {
   stage.dataset.maxDecodedBytes = String(loader.maxDecodedBytes);
   stage.dataset.maxRequests = String(loader.maxRequests);
   const drawnIndex = loader.frameFor(index, Number(canvas.dataset.frame), direction, stillMode());
-  const key = `${variant}:${loader.resolution.id}:${drawnIndex}`;
+  const key = `${variant}:${layout}:${loader.resolution.id}:${drawnIndex}`;
   const bitmap = loader.get(drawnIndex);
   if (bitmap) {
     if (displayedKey !== key) {
       if (stylePending) { Object.assign(canvas.style, fittedStyle); stylePending = false; }
-      if (canvas.width !== bitmap.width || canvas.height !== bitmap.height) {
-        canvas.width = bitmap.width; canvas.height = bitmap.height;
+      const crop = frameCrop(variant, layout), source = manifest.variants[variant];
+      const scale = bitmap.width / source.width;
+      const width = Math.round(crop.width * scale), height = Math.round(crop.height * scale);
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width; canvas.height = height;
       }
-      context.drawImage(bitmap, 0, 0);
+      context.drawImage(bitmap, crop.x * scale, crop.y * scale, crop.width * scale, crop.height * scale,
+        0, 0, width, height);
       lastAdvanceAt = now;
       displayedKey = key;
       canvas.dataset.frame = String(drawnIndex);
       canvas.dataset.sourceFrame = String(manifest.frames[drawnIndex]);
       canvas.dataset.orientation = variant;
       canvas.dataset.resolution = loader.resolution.id;
+      canvas.dataset.layout = layout;
       updateNavigation(drawnIndex);
       if (!enhanced) enhance();
     }
