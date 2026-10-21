@@ -1,214 +1,214 @@
 TAP version 13
 # Subtest: recovery probes include useful neighbors at either sequence endpoint
-not ok 1 - recovery probes include useful neighbors at either sequence endpoint
+ok 1 - recovery probes include useful neighbors at either sequence endpoint
   ---
-  duration_ms: 0.52
+  duration_ms: 0.902042
   type: 'test'
-  location: '/Users/ykondras/vid/assembly-manual/assembly-scroll-site/tests/frame-loader.test.mjs:14:1'
-  failureType: 'testCodeFailure'
-  error: "Cannot read properties of undefined (reading 'bind')"
-  code: 'ERR_TEST_FAILURE'
-  name: 'TypeError'
-  stack: |-
-    new FrameLoader (file:///Users/ykondras/vid/assembly-manual/assembly-scroll-site/dist/frame-loader.mjs:13:36)
-    TestContext.<anonymous> (file:///Users/ykondras/vid/assembly-manual/assembly-scroll-site/tests/frame-loader.test.mjs:15:18)
-    Test.runInAsyncScope (node:async_hooks:214:14)
-    Test.run (node:internal/test_runner/test:1047:25)
-    Test.start (node:internal/test_runner/test:944:17)
-    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
   ...
 # Subtest: rapid scrolling retains active downloads and prioritizes the newest queued target
 ok 2 - rapid scrolling retains active downloads and prioritizes the newest queued target
   ---
-  duration_ms: 4.579167
+  duration_ms: 5.3455
   type: 'test'
   ...
 # Subtest: decoded memory includes in-progress reservations and evicted bitmaps are closed
 ok 3 - decoded memory includes in-progress reservations and evicted bitmaps are closed
   ---
-  duration_ms: 3.753334
+  duration_ms: 3.357458
   type: 'test'
   ...
 # Subtest: an orientation switch during decoding closes the obsolete result
 ok 4 - an orientation switch during decoding closes the obsolete result
   ---
-  duration_ms: 0.517584
+  duration_ms: 0.478625
   type: 'test'
   ...
 # Subtest: failed targets expose an error and can be retried
 ok 5 - failed targets expose an error and can be retried
   ---
-  duration_ms: 0.322125
+  duration_ms: 0.338583
   type: 'test'
   ...
 # Subtest: visible target loads before chapter stills, which remain available offline
 ok 6 - visible target loads before chapter stills, which remain available offline
   ---
-  duration_ms: 0.607084
+  duration_ms: 1.023042
   type: 'test'
   ...
 # Subtest: resolution changes retain compressed and decoded frames and refinement stays within shared limits
 ok 7 - resolution changes retain compressed and decoded frames and refinement stays within shared limits
   ---
-  duration_ms: 0.533125
+  duration_ms: 0.618583
+  type: 'test'
+  ...
+# Subtest: chapter warming also yields under delivery pressure
+ok 8 - chapter warming also yields under delivery pressure
+  ---
+  duration_ms: 0.41075
   type: 'test'
   ...
 # Subtest: full background preparation is compressed, bounded, single-job and never refetches evicted assets
-ok 8 - full background preparation is compressed, bounded, single-job and never refetches evicted assets
+ok 9 - full background preparation is compressed, bounded, single-job and never refetches evicted assets
   ---
-  duration_ms: 29.032
+  duration_ms: 36.809083
   type: 'test'
   ...
 # Subtest: a hidden page starts no jobs and unknown or cached timing never qualifies as network throughput
-ok 9 - a hidden page starts no jobs and unknown or cached timing never qualifies as network throughput
+ok 10 - a hidden page starts no jobs and unknown or cached timing never qualifies as network throughput
   ---
-  duration_ms: 1.063875
+  duration_ms: 1.052334
   type: 'test'
   ...
 # Subtest: completed downloads advance continuous scrolling even after leaving the prefetch window
-ok 10 - completed downloads advance continuous scrolling even after leaving the prefetch window
+ok 11 - completed downloads advance continuous scrolling even after leaving the prefetch window
   ---
-  duration_ms: 0.696083
+  duration_ms: 0.764708
   type: 'test'
   ...
 # Subtest: a direction reversal during decoding closes the obsolete result
-ok 11 - a direction reversal during decoding closes the obsolete result
+ok 12 - a direction reversal during decoding closes the obsolete result
   ---
-  duration_ms: 0.445083
+  duration_ms: 0.899833
   type: 'test'
   ...
 # Subtest: smaller probes cannot leave duplicate bitmaps that keep the decode queue churning
-ok 12 - smaller probes cannot leave duplicate bitmaps that keep the decode queue churning
+ok 13 - smaller probes cannot leave duplicate bitmaps that keep the decode queue churning
   ---
-  duration_ms: 0.9755
+  duration_ms: 2.20125
   type: 'test'
   ...
 # Subtest: an urgent target can cancel a speculative download without cancelling motion downloads
-ok 13 - an urgent target can cancel a speculative download without cancelling motion downloads
+ok 14 - an urgent target can cancel a speculative download without cancelling motion downloads
   ---
-  duration_ms: 0.418042
+  duration_ms: 1.617208
   type: 'test'
   ...
 # Subtest: retry discards a corrupt compressed response and bypasses HTTP cache
-ok 14 - retry discards a corrupt compressed response and bypasses HTTP cache
+ok 15 - retry discards a corrupt compressed response and bypasses HTTP cache
   ---
-  duration_ms: 0.937042
+  duration_ms: 0.67
   type: 'test'
   ...
 # Subtest: phone layouts retain the connector circle and replace exported page furniture
-ok 15 - phone layouts retain the connector circle and replace exported page furniture
+ok 16 - phone layouts retain the connector circle and replace exported page furniture
   ---
-  duration_ms: 0.392375
+  duration_ms: 0.485667
   type: 'test'
   ...
 # Subtest: cached sharp frames use display demand rather than skipped timeline positions
-ok 16 - cached sharp frames use display demand rather than skipped timeline positions
+ok 17 - cached sharp frames use display demand rather than skipped timeline positions
   ---
-  duration_ms: 0.622083
+  duration_ms: 0.668917
+  type: 'test'
+  ...
+# Subtest: nearby speculation yields under measured pressure until scrolling pauses
+ok 18 - nearby speculation yields under measured pressure until scrolling pauses
+  ---
+  duration_ms: 0.599292
   type: 'test'
   ...
 # Subtest: motion recovers a tier at a time with healthy-window and promotion cooldowns
-ok 17 - motion recovers a tier at a time with healthy-window and promotion cooldowns
+ok 19 - motion recovers a tier at a time with healthy-window and promotion cooldowns
   ---
-  duration_ms: 0.631959
+  duration_ms: 0.261625
   type: 'test'
   ...
 # Subtest: a downgrade delays recovery and failed probes have a separate cooldown
-ok 18 - a downgrade delays recovery and failed probes have a separate cooldown
+ok 20 - a downgrade delays recovery and failed probes have a separate cooldown
   ---
-  duration_ms: 0.095125
+  duration_ms: 0.073417
   type: 'test'
   ...
 # Subtest: Data Saver is a hard automatic ceiling while phone limits are startup choices
-ok 19 - Data Saver is a hard automatic ceiling while phone limits are startup choices
+ok 21 - Data Saver is a hard automatic ceiling while phone limits are startup choices
   ---
-  duration_ms: 0.126958
+  duration_ms: 0.120958
   type: 'test'
   ...
 # Subtest: promotion needs three distinct recent samples and both decode and transfer headroom
-ok 20 - promotion needs three distinct recent samples and both decode and transfer headroom
+ok 22 - promotion needs three distinct recent samples and both decode and transfer headroom
   ---
-  duration_ms: 0.088625
+  duration_ms: 0.077791
   type: 'test'
   ...
 # Subtest: distant loading requires health and measured network evidence
-ok 21 - distant loading requires health and measured network evidence
+ok 23 - distant loading requires health and measured network evidence
   ---
-  duration_ms: 0.053125
+  duration_ms: 0.111875
   type: 'test'
   ...
 # Subtest: jump velocity cannot block paused recovery indefinitely
-ok 22 - jump velocity cannot block paused recovery indefinitely
+ok 24 - jump velocity cannot block paused recovery indefinitely
   ---
-  duration_ms: 0.097667
+  duration_ms: 0.093625
   type: 'test'
   ...
 # Subtest: phone streaming starts conservatively and respects data-saving preferences
-ok 23 - phone streaming starts conservatively and respects data-saving preferences
+ok 25 - phone streaming starts conservatively and respects data-saving preferences
   ---
-  duration_ms: 1.515625
+  duration_ms: 1.12725
   type: 'test'
   ...
 # Subtest: quality adapts earlier only when measured delivery cannot meet scroll demand
-ok 24 - quality adapts earlier only when measured delivery cannot meet scroll demand
+ok 26 - quality adapts earlier only when measured delivery cannot meet scroll demand
   ---
-  duration_ms: 0.13025
+  duration_ms: 0.142291
   type: 'test'
   ...
 # Subtest: scroll easing is time-based, reversible and does not overshoot
-ok 25 - scroll easing is time-based, reversible and does not overshoot
+ok 27 - scroll easing is time-based, reversible and does not overshoot
   ---
-  duration_ms: 0.174167
+  duration_ms: 0.176
   type: 'test'
   ...
 # Subtest: source map retains all motion and excludes only duplicated holds
-ok 26 - source map retains all motion and excludes only duplicated holds
+ok 28 - source map retains all motion and excludes only duplicated holds
   ---
-  duration_ms: 0.44175
+  duration_ms: 0.441042
   type: 'test'
   ...
 # Subtest: image resolution matches fitted size and caps high-density demand
-ok 27 - image resolution matches fitted size and caps high-density demand
+ok 29 - image resolution matches fitted size and caps high-density demand
   ---
-  duration_ms: 0.101334
+  duration_ms: 0.110667
   type: 'test'
   ...
 # Subtest: forward and reverse mapping round-trip all frames with clamped endpoints
-ok 28 - forward and reverse mapping round-trip all frames with clamped endpoints
+ok 30 - forward and reverse mapping round-trip all frames with clamped endpoints
   ---
-  duration_ms: 0.172
+  duration_ms: 0.176209
   type: 'test'
   ...
 # Subtest: chapter boundaries match the original Blender timeline
-ok 29 - chapter boundaries match the original Blender timeline
+ok 31 - chapter boundaries match the original Blender timeline
   ---
-  duration_ms: 0.097334
+  duration_ms: 0.104
   type: 'test'
   ...
 # Subtest: connection links land on reviewed clear poses before seating, outside transition fades
-ok 30 - connection links land on reviewed clear poses before seating, outside transition fades
+ok 32 - connection links land on reviewed clear poses before seating, outside transition fades
   ---
-  duration_ms: 0.059375
+  duration_ms: 0.059625
   type: 'test'
   ...
 # Subtest: adaptive layout fits the full image without clipping
-ok 31 - adaptive layout fits the full image without clipping
+ok 33 - adaptive layout fits the full image without clipping
   ---
-  duration_ms: 0.228875
+  duration_ms: 0.228792
   type: 'test'
   ...
 # Subtest: directional prefetch is bounded and prioritizes the requested frame
-ok 32 - directional prefetch is bounded and prioritizes the requested frame
+ok 34 - directional prefetch is bounded and prioritizes the requested frame
   ---
-  duration_ms: 0.316334
+  duration_ms: 0.318458
   type: 'test'
   ...
-1..32
-# tests 32
+1..34
+# tests 34
 # suites 0
-# pass 31
-# fail 1
+# pass 34
+# fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 82.2065
+# duration_ms 105.896583

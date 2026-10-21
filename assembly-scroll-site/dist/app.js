@@ -1,4 +1,4 @@
-import { QualityController, cachedDecodeHasHeadroom } from './quality.mjs?v=progressive-1';
+import { QualityController, cachedDecodeHasHeadroom, canPrepareWhileScrolling } from './quality.mjs?v=progressive-1';
 import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=progressive-1';
 import { FrameLoader } from './frame-loader.mjs?v=progressive-1';
 import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=progressive-1';
@@ -235,7 +235,7 @@ enlargeConnector.addEventListener('click', () => {
   document.documentElement.classList.add('inspecting');
   connectorDialog.showModal();
   const sharp = manifest.variants[inspection.variant].resolutions.at(-1);
-  loader.setActivity({ visible: !document.hidden, sharp });
+  loader.setActivity({ visible: !document.hidden, sharp, warm: false });
   loader.selectVariant(inspection.variant, sharp);
   loader.request(index, direction, true);
   schedule();
@@ -300,9 +300,10 @@ function render(now) {
   const sharpSamples = loader.tierSamples(sharp).slice(-3);
   const preferCached = cachedDecodeHasHeadroom(sharpSamples, rate);
   const healthy = enhanced && lag <= 1 && !loader.error(index);
+  const preparationReady = stillMode() || canPrepareWhileScrolling(idle, loader.deliveryMs, Math.max(rate,quality.rate), loader.deliverySamples);
   const distant = backgroundEnabled && quality.distant(now, loader.networkSummary());
-  loader.setActivity({ visible: true, enabled: backgroundEnabled && healthy && !saveData && !stillMode(),
-    sharp, probe, distant, preferCached: preferCached && !stillMode() });
+  loader.setActivity({ visible: true, enabled: backgroundEnabled && healthy && preparationReady && !saveData && !stillMode(),
+    warm: healthy && preparationReady, sharp, probe, distant, preferCached: preferCached && !stillMode() });
   const opening = !enhanced && !stillMode();
   const refine = !stillMode() && enhanced && current === index && progress === targetProgress && idle >= 600;
   const detail = opening || refine ? sharp : null;
@@ -320,7 +321,7 @@ function render(now) {
   data(stage,'progress',progress.toFixed(6));
   data(stage,'targetProgress',targetProgress.toFixed(6));
   data(stage,'settled',progress === targetProgress);
-  data(stage,'distantPrefetch',distant && healthy);
+  data(stage,'distantPrefetch',distant && healthy && preparationReady && !stillMode());
   updateLoaderMetrics();
   const drawnIndex = loader.frameFor(index, current, direction, stillMode());
   const entry = loader.best(drawnIndex, sharp);

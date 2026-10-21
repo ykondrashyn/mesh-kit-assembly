@@ -12,7 +12,7 @@ const image = (width = 1920, height = 1080) => ({ width, height, closed: false, 
 const response = () => ({ ok: true, blob: async () => ({}) });
 
 test('recovery probes include useful neighbors at either sequence endpoint', () => {
-  const loader = new FrameLoader(manifest, () => {});
+  const loader = new FrameLoader(manifest, () => {}, { decodeFrame: async () => image() });
   loader.target = 420;
   assert.deepEqual(loader.probeIndices().slice(0, 3), [420, 419, 418]);
   loader.target = 0;
@@ -172,6 +172,23 @@ test('resolution changes retain compressed and decoded frames and refinement sta
     assert.ok(loader.maxCompressedBytes<=MAX_COMPRESSED_BYTES);
   }finally{loader.dispose()}
   assert.ok(bitmaps.every(b=>b.closed));
+});
+
+test('chapter warming also yields under delivery pressure', async () => {
+  const requests=[];
+  const loader=new FrameLoader(manifest,()=>{}, {
+    fetchFrame:async url=>{requests.push(url);return sizedResponse(url)},
+    decodeFrame:async blob=>image(blob.width,blob.height),
+  });
+  try {
+    loader.selectVariant('landscape',manifest.variants.landscape.resolutions[0]);
+    loader.setActivity({enabled:false,warm:false});loader.warmStills();loader.request(0,1,true);
+    await until(()=>loader.jobs.size===0);
+    assert.equal(requests.length,1);
+    loader.setActivity({enabled:false,warm:true});loader.request(0,1,true);
+    await until(()=>loader.warmReady);
+    assert.equal(requests.length,6);
+  }finally{loader.dispose()}
 });
 
 test('full background preparation is compressed, bounded, single-job and never refetches evicted assets', async () => {

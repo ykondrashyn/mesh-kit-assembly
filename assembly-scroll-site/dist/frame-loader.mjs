@@ -91,7 +91,8 @@ export class FrameLoader {
   setActivity(activity) {
     this.activity = activity;
     this.visible = activity.visible !== false;
-    if (!this.visible || !activity.enabled) for (const job of this.jobs.values()) if (job.speculative) job.controller.abort();
+    for (const job of this.jobs.values()) if (job.speculative &&
+      (!this.visible || (job.kind==='still' ? activity.warm===false : !activity.enabled))) job.controller.abort();
   }
   request(target, direction = 1, stillsOnly = false, { detail = null, motion = true } = {}) {
     if (direction !== this.direction || stillsOnly !== this.stillsOnly) this.motionEpoch++;
@@ -155,7 +156,7 @@ export class FrameLoader {
         }
       }
     }
-    if(this.warm) for(const chapter of this.manifest.chapters)candidates.push(this.spec(chapter.stillIndex,this.manifest.variants[this.variant].resolutions[0],'still'));
+    if(this.warm && a.warm!==false) for(const chapter of this.manifest.chapters)candidates.push(this.spec(chapter.stillIndex,this.manifest.variants[this.variant].resolutions[0],'still'));
     if(a.enabled && a.distant && !this.stillsOnly) {
       for(let offset=1;offset<this.manifest.frames.length;offset++) candidates.push(this.spec(this.target+offset*this.direction,a.sharp,'distant'));
       for(let offset=1;offset<this.manifest.frames.length;offset++) candidates.push(this.spec(this.target-offset*this.direction,a.sharp,'distant'));

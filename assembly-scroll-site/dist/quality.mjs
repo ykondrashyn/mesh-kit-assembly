@@ -5,6 +5,10 @@ export function cachedDecodeHasHeadroom(rows, rate) {
   return rows.length > 0 && rows.every(x => x.decodeMs * displayRate <= 700);
 }
 
+export function canPrepareWhileScrolling(idleMs, deliveryMs, rate, samples) {
+  return idleMs >= 600 || qualityLagDelay(deliveryMs, rate, samples) !== 350;
+}
+
 export class QualityController {
   constructor() {
     this.healthySince = this.lagSince = null;
