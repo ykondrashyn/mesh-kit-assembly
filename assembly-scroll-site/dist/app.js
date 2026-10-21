@@ -33,12 +33,59 @@ let lastAdvanceAt = 0, chapterRequestedAt = 0;
 let layout = 'full';
 let inspection = null;
 let openingAt = null, connectorKey = '', dormant = false;
+let historyReady = false;
 const quality = new QualityController();
 const observedProbeFailures = new Set();
 const backgroundEnabled = new URLSearchParams(location.search).get('background') !== 'off';
 const data = (element, name, value) => { const text = String(value); if (element.dataset[name] !== text) element.dataset[name] = text; };
 const stillMode = () => mode !== 'animation';
 const schedule = () => { if (!raf && !document.hidden) raf = requestAnimationFrame(render); };
+
+function chapterFromHash() {
+  let hash;
+  try { hash = decodeURIComponent(location.hash); } catch { return undefined; }
+  return manifest.chapters.find(chapter => hash === `#step-${chapter.id}`);
+}
+
+function navigationProgress() {
+  const saved = history.state?.assemblyScroll;
+  if (saved?.hash === location.hash && Number.isFinite(saved.progress)) return clamp(saved.progress);
+  const chapter = chapterFromHash();
+  return chapter ? progressAtFrame(chapter.targetIndex, manifest.frames.length) : location.hash ? null : 0;
+}
+
+function rememberPosition(next = targetProgress, method = 'replaceState', hash = location.hash) {
+  if (!historyReady || dormant) return;
+  const saved = history.state?.assemblyScroll;
+  if (method === 'replaceState' && saved?.hash === hash && saved.progress === next) return;
+  const previous = history.state && typeof history.state === 'object' ? history.state : {};
+  const url = new URL(location.href);
+  url.hash = hash;
+  history[method]({ ...previous, assemblyScroll: { hash: url.hash, progress: next } }, '', url);
+}
+
+function navigateProgress(next) {
+  progress = targetProgress = clamp(next);
+  previousTick = 0;
+  chapterRequestedAt = lastScrollTime = performance.now();
+  const top = targetProgress * Math.max(1, story.offsetHeight - stage.offsetHeight);
+  if (inspection) {
+    // The asynchronous dialog close handler must restore the new history pose.
+    inspection.scrollY = top;
+    connectorDialog.close();
+  }
+  window.scrollTo({ top, behavior: 'instant' });
+  schedule();
+}
+
+function restoreNavigation() {
+  if (!manifest || dormant || !historyReady) return;
+  const next = navigationProgress();
+  if (next === null) return;
+  instructions.open = false;
+  navigateProgress(next);
+  rememberPosition(next);
+}
 
 function connectionChanged() {
   const connection = navigator.connection || {};
@@ -140,7 +187,7 @@ function enhance() {
   enhanced = true;
   fallback.hidden = true;
   canvas.hidden = false;
-  instructions.open = false;
+  instructions.open = location.hash === '#instructions';
   masthead.append(instructions);
   $('#instructions-link').hidden = true;
   motionOptions.hidden = false;
@@ -353,6 +400,12 @@ function render(now) {
     }
   }
   positionConnector();
+  // Save after a pause, including in still mode where every scroll is already
+  // "settled". Per-frame replaceState calls can hit browser navigation limits.
+  if (enhanced && progress === targetProgress && !resizePending) {
+    if (now - lastScrollTime >= 600) rememberPosition();
+    else if (history.state?.assemblyScroll?.progress !== targetProgress) deadlines.push(lastScrollTime + 600);
+  }
   const exact = canvas.dataset.orientation === variant && Number(canvas.dataset.frame) === index;
   if (exact) {
     if (!loadState.hidden) loadState.hidden = true;
@@ -402,9 +455,12 @@ async function boot() {
     }
     loader = new FrameLoader(manifest, schedule);
     document.documentElement.classList.add('scroll-ready');
-    // A Retry from ordinary instructions starts at the opening pose. Prevent
-    // native scroll anchoring from following the instructions below the long stage.
-    if (!enhanced) window.scrollTo({ top: 0, behavior: 'instant' });
+    // Native restoration uses the short HTML fallback's geometry. Restore the
+    // same position against the enhanced scroll span instead, including on reload.
+    historyReady = true;
+    history.scrollRestoration = 'manual';
+    navigateProgress(navigationProgress() ?? 0);
+    rememberPosition();
     updateMotionOptions();
     resizePending = true;
     schedule();
@@ -460,25 +516,27 @@ new ResizeObserver(entries => {
 
 for (const link of navLinks) {
   link.addEventListener('click', event => {
-    if (!manifest || dormant) return;
+    if (!manifest || dormant || event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     dismissHint();
     instructions.open = false;
     const chapter = manifest.chapters.find(item => item.id === link.dataset.chapter);
-    chapterRequestedAt = lastScrollTime = performance.now();
-    progress = targetProgress = progressAtFrame(chapter.targetIndex, manifest.frames.length);
-    previousTick = 0;
-    window.scrollTo({ top: targetProgress * cachedScrollSpan, behavior: 'instant' });
-    schedule();
+    const next = progressAtFrame(chapter.targetIndex, manifest.frames.length);
+    rememberPosition();
+    rememberPosition(next, location.hash === link.hash ? 'replaceState' : 'pushState', link.hash);
+    navigateProgress(next);
   });
 }
+window.addEventListener('popstate', restoreNavigation);
+window.addEventListener('hashchange', restoreNavigation);
 retry.addEventListener('click', () => {
   if (!manifest) boot();
   else {
     if (dormant) {
-      dormant = false; openingAt = null; targetProgress = progress = 0;
+      dormant = false; openingAt = null;
       document.documentElement.classList.add('scroll-ready'); resizePending = true;
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      navigateProgress(navigationProgress() ?? 0);
     }
     loader.retry(); pendingSince = 0; quality.lagSince = null; schedule();
   }
@@ -502,6 +560,7 @@ document.addEventListener('visibilitychange', () => {
   if (!loader) return;
   clearTimeout(wakeTimer);
   if (document.hidden) {
+    rememberPosition();
     cancelAnimationFrame(raf); raf = 0;
     loader.setActivity({ ...loader.activity, visible: false });
   } else {
@@ -510,7 +569,10 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 reducedQuery.addEventListener('change', () => setMode(reducedQuery.matches ? 'reduced' : 'animation'));
-window.addEventListener('pagehide', event => { if (!event.persisted) {
-  clearTimeout(wakeTimer); clearTimeout(orientationTimer); loader?.dispose();
-} });
+window.addEventListener('pagehide', event => {
+  rememberPosition();
+  if (!event.persisted) {
+    clearTimeout(wakeTimer); clearTimeout(orientationTimer); loader?.dispose();
+  }
+});
 boot();

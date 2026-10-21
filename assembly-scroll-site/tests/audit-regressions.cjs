@@ -135,6 +135,88 @@ const state = page => page.evaluate(() => ({ stage: { ...document.querySelector(
         return { width, height, exposed };
       }, { viewport: { width, height } });
     }
+    for (const [width, height] of [[1440, 900], [390, 844]]) {
+      await check(`chapter URL and history navigation at ${width}x${height}`, async page => {
+        const url = new URL(base);
+        url.searchParams.set('background', 'off');
+        url.hash = 'step-lora';
+        await page.goto(url.href);
+        await frame(page, 180);
+        assert.equal(await page.locator('[aria-current="step"]').getAttribute('data-chapter'), 'lora');
+        for (const [chapter, index] of [['boards', 315], ['wifi', 90]]) {
+          await page.locator(`[data-chapter="${chapter}"]`).click();
+          await frame(page, index);
+          assert.equal(new URL(page.url()).hash, `#step-${chapter}`);
+        }
+        await page.goBack(); await frame(page, 315);
+        await page.goBack(); await frame(page, 180);
+        await page.goForward(); await frame(page, 315);
+        await page.reload(); await frame(page, 315);
+        const entries = await page.evaluate(() => history.length);
+        await page.evaluate(() => scrollTo(0, 350 / 420 * (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)));
+        await frame(page, 350);
+        await page.waitForFunction(() => document.querySelector('#stage').dataset.settled === 'true');
+        assert.equal(await page.evaluate(() => history.length), entries, 'Scrolling must not add history entries');
+        await page.waitForFunction(() => Math.abs(history.state.assemblyScroll.progress - 350 / 420) < 0.0001);
+        await page.reload(); await frame(page, 350);
+        await page.locator('[data-chapter="assembled"]').click(); await frame(page, 420);
+        await page.goBack(); await frame(page, 350);
+        await page.goForward(); await frame(page, 420);
+        await page.evaluate(() => { location.hash = '#step-wifi'; });
+        await frame(page, 90);
+        const sameChapterEntries = await page.evaluate(() => history.length);
+        await page.locator('[data-chapter="wifi"]').click(); await frame(page, 90);
+        assert.equal(await page.evaluate(() => history.length), sameChapterEntries);
+        await page.goBack(); await frame(page, 420);
+        // History navigation remains usable while the connector modal is open.
+        await page.goForward(); await frame(page, 90);
+        await page.locator('#enlarge-connector').click();
+        await page.goBack(); await frame(page, 420);
+        assert.equal(await page.locator('#connector-dialog').evaluate(element => element.open), false);
+        return { entries, hash: new URL(page.url()).hash };
+      }, { viewport: { width, height }, deviceScaleFactor: 2 });
+    }
+    await check('chapter history preserves reduced motion', async page => {
+      const url = new URL(base); url.hash = 'step-lora';
+      await page.goto(url.href); await frame(page, 234);
+      await page.locator('[data-chapter="boards"]').click(); await frame(page, 363);
+      await page.goBack(); await frame(page, 234);
+      await page.reload(); await frame(page, 234);
+      assert.equal((await state(page)).stage.mode, 'reduced');
+    }, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+    await check('chapter history restores an unfragmented entry and preserves modified clicks', async (page, context) => {
+      const url = new URL(base); url.hash = ''; url.searchParams.set('background', 'off');
+      await page.goto(url.href); await frame(page, 0);
+      await page.evaluate(() => scrollTo(0, 129 / 420 * (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)));
+      await frame(page, 129);
+      await page.locator('[data-chapter="boards"]').click(); await frame(page, 315);
+      await page.goBack(); await frame(page, 129);
+      assert.equal(new URL(page.url()).hash, '');
+      await page.goForward(); await frame(page, 315);
+      const popupPromise = context.waitForEvent('page');
+      await page.locator('[data-chapter="lora"]').click({ modifiers: [process.platform === 'darwin' ? 'Meta' : 'Control'] });
+      const popup = await popupPromise;
+      await popup.waitForLoadState(); await frame(popup, 180);
+      assert.equal(new URL(popup.url()).hash, '#step-lora');
+      assert.equal((await state(page)).canvas.frame, '315');
+      await popup.close();
+    });
+    await check('reduced-motion scrolling saves history only after a pause', async page => {
+      await page.addInitScript(() => {
+        window.historyWrites = 0;
+        const replace = history.replaceState.bind(history);
+        history.replaceState = (...args) => { window.historyWrites++; return replace(...args); };
+      });
+      await page.goto(base); await frame(page, 33);
+      await page.evaluate(() => { window.historyWrites = 0; });
+      for (let i = 1; i <= 20; i++) {
+        await page.evaluate(i => scrollTo(0, i / 40 * (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)), i);
+        await page.waitForTimeout(40);
+      }
+      assert.equal(await page.evaluate(() => window.historyWrites), 0);
+      await page.waitForFunction(() => history.state.assemblyScroll.progress === 0.5);
+      assert.equal(await page.evaluate(() => window.historyWrites), 1);
+    }, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     report.completed = true;
   } finally {
     fs.mkdirSync(path.dirname(output), { recursive: true });

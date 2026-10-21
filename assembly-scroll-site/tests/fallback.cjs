@@ -26,7 +26,8 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
       if (failure === 'manifest-blocked') {
         await p.unroute('**/manifest.json');
         await p.getByRole('button', { name: 'Try again', exact: true }).click();
-        await visibleFrame(p, 0);
+        await visibleFrame(p, target('wifi'));
+        assert.equal(new URL(p.url()).hash, '#step-wifi', 'Retry must honor the chapter selected in the HTML fallback');
       }
       results.push({ name: failure, passed: true });
       await p.screenshot({ path: path.join(output, `${failure}.png`) });
@@ -43,7 +44,10 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
     });
     await p.evaluate(() => {
       window.qualityTiers = [document.querySelector('#stage').dataset.resolution];
-      new MutationObserver(() => window.qualityTiers.push(document.querySelector('#stage').dataset.resolution))
+      new MutationObserver(() => {
+        const tier = document.querySelector('#stage').dataset.resolution;
+        if (window.qualityTiers.at(-1) !== tier) window.qualityTiers.push(tier);
+      })
         .observe(document.querySelector('#stage'), { attributes: true, attributeFilter: ['data-resolution'] });
     });
     const started = Date.now();

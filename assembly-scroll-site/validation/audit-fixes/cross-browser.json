@@ -1,0 +1,94 @@
+[
+  {
+    "browser": "firefox",
+    "checks": [
+      {
+        "canvas": {
+          "frame": "315",
+          "layout": "full",
+          "orientation": "landscape",
+          "resolution": "720",
+          "sourceFrame": "376"
+        },
+        "height": 815,
+        "stage": {
+          "backgroundFetched": "10",
+          "compressedBytes": "638512",
+          "decodedBytes": "44236800",
+          "decodedFrames": "12",
+          "distantPrefetch": "false",
+          "jobs": "0",
+          "layout": "full",
+          "maxCompressedBytes": "638512",
+          "maxDecodedBytes": "44236800",
+          "maxDecodedFrames": "12",
+          "maxRequests": "4",
+          "maxSpeculative": "1",
+          "mode": "animation",
+          "networkMbps": "0.00",
+          "networkSamples": "0",
+          "orientation": "landscape",
+          "preparedFrames": "17",
+          "progress": "0.750000",
+          "qualityDrops": "0",
+          "qualityLagMs": "0",
+          "qualityPromotions": "0",
+          "requestedFrame": "315",
+          "resolution": "720",
+          "settled": "true",
+          "targetProgress": "0.750000",
+          "usefulResolution": "720"
+        },
+        "width": 1440
+      },
+      {
+        "canvas": {
+          "frame": "315",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "540",
+          "sourceFrame": "376"
+        },
+        "height": 815,
+        "stage": {
+          "backgroundFetched": "10",
+          "compressedBytes": "471264",
+          "decodedBytes": "24883200",
+          "decodedFrames": "12",
+          "distantPrefetch": "false",
+          "jobs": "0",
+          "layout": "phone",
+          "maxCompressedBytes": "471264",
+          "maxDecodedBytes": "24883200",
+          "maxDecodedFrames": "12",
+          "maxRequests": "4",
+          "maxSpeculative": "1",
+          "mode": "animation",
+          "networkMbps": "0.00",
+          "networkSamples": "0",
+          "orientation": "portrait",
+          "preparedFrames": "22",
+          "progress": "0.750000",
+          "qualityDrops": "0",
+          "qualityLagMs": "0",
+          "qualityPromotions": "0",
+          "requestedFrame": "315",
+          "resolution": "540",
+          "settled": "true",
+          "targetProgress": "0.750000",
+          "usefulResolution": "540"
+        },
+        "width": 500
+      }
+    ],
+    "version": "158.0",
+    "passed": true
+  },
+  {
+    "browser": "safari",
+    "checks": [],
+    "passed": false,
+    "status": "unavailable",
+    "reason": "Message: Could not create a session: The session timed out while connecting to a Safari instance. The following asynchronous operation timed out: Finding or launching a compatible local Safari and waiting for its RWIApplication to appear and become ready.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception\n"
+  }
+]

@@ -1,0 +1,219 @@
+{
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "checks": [
+    {
+      "name": "chapter URL and history navigation at 1440x900",
+      "passed": true,
+      "details": {
+        "entries": 4,
+        "hash": "#step-assembled"
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "full",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "requestedFrame": "420",
+          "progress": "1.000000",
+          "targetProgress": "1.000000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "6",
+          "maxDecodedFrames": "6",
+          "decodedBytes": "49766400",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "935424",
+          "maxCompressedBytes": "935424",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "17",
+          "networkSamples": "2",
+          "networkMbps": "118.47",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "420",
+          "sourceFrame": "481",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "layout": "full"
+        }
+      }
+    },
+    {
+      "name": "chapter URL and history navigation at 390x844",
+      "passed": true,
+      "details": {
+        "entries": 4,
+        "hash": "#step-assembled"
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "720",
+          "requestedFrame": "420",
+          "progress": "1.000000",
+          "targetProgress": "1.000000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "48844800",
+          "maxDecodedBytes": "48844800",
+          "maxRequests": "4",
+          "compressedBytes": "1150060",
+          "maxCompressedBytes": "1150060",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "33",
+          "networkSamples": "5",
+          "networkMbps": "76.64",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "720",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "420",
+          "sourceFrame": "481",
+          "orientation": "portrait",
+          "resolution": "720",
+          "layout": "phone"
+        }
+      }
+    },
+    {
+      "name": "chapter history preserves reduced motion",
+      "passed": true,
+      "final": {
+        "stage": {
+          "mode": "reduced",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "234",
+          "progress": "0.428614",
+          "targetProgress": "0.428614",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "1",
+          "maxDecodedFrames": "1",
+          "decodedBytes": "2073600",
+          "maxDecodedBytes": "2073600",
+          "maxRequests": "1",
+          "compressedBytes": "24788",
+          "maxCompressedBytes": "24788",
+          "maxSpeculative": "1",
+          "backgroundFetched": "0",
+          "jobs": "1",
+          "preparedFrames": "1",
+          "networkSamples": "0",
+          "networkMbps": "0.00",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "540",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "234",
+          "sourceFrame": "295",
+          "orientation": "portrait",
+          "resolution": "540",
+          "layout": "phone"
+        }
+      }
+    },
+    {
+      "name": "chapter history restores an unfragmented entry and preserves modified clicks",
+      "passed": true,
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "full",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "requestedFrame": "315",
+          "progress": "0.750000",
+          "targetProgress": "0.750000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "6",
+          "maxDecodedFrames": "6",
+          "decodedBytes": "49766400",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "2974460",
+          "maxCompressedBytes": "2974460",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "58",
+          "networkSamples": "62",
+          "networkMbps": "147.24",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "layout": "full"
+        }
+      }
+    },
+    {
+      "name": "reduced-motion scrolling saves history only after a pause",
+      "passed": true,
+      "final": {
+        "stage": {
+          "mode": "reduced",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "234",
+          "progress": "0.500000",
+          "targetProgress": "0.500000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "3",
+          "maxDecodedFrames": "3",
+          "decodedBytes": "6220800",
+          "maxDecodedBytes": "6220800",
+          "maxRequests": "1",
+          "compressedBytes": "93658",
+          "maxCompressedBytes": "93658",
+          "maxSpeculative": "1",
+          "backgroundFetched": "4",
+          "jobs": "0",
+          "preparedFrames": "5",
+          "networkSamples": "4",
+          "networkMbps": "118.34",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "540",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "234",
+          "sourceFrame": "295",
+          "orientation": "portrait",
+          "resolution": "540",
+          "layout": "phone"
+        }
+      }
+    }
+  ]
+}
