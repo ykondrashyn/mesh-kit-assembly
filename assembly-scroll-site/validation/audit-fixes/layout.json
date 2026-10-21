@@ -1,0 +1,195 @@
+{
+  "url": "http://127.0.0.1:8766/",
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "checks": [
+    {
+      "name": "desktop",
+      "passed": true,
+      "geometry": {
+        "image": {
+          "x": 31.609375,
+          "y": 56,
+          "width": 1361.765625,
+          "height": 766,
+          "top": 56,
+          "right": 1393.375,
+          "bottom": 822,
+          "left": 31.609375
+        },
+        "progress": "0.307130",
+        "footer": {
+          "x": 332.5,
+          "y": 822,
+          "width": 760,
+          "height": 66,
+          "top": 822,
+          "right": 1092.5,
+          "bottom": 888,
+          "left": 332.5
+        },
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "panel": {
+        "x": 981,
+        "y": 64,
+        "width": 420,
+        "height": 612
+      }
+    },
+    {
+      "name": "tablet",
+      "passed": true,
+      "geometry": {
+        "image": {
+          "x": 126.1875,
+          "y": 56,
+          "width": 500.625,
+          "height": 890,
+          "top": 56,
+          "right": 626.8125,
+          "bottom": 946,
+          "left": 126.1875
+        },
+        "progress": "0.307129",
+        "footer": {
+          "x": 24,
+          "y": 946,
+          "width": 705,
+          "height": 66,
+          "top": 946,
+          "right": 729,
+          "bottom": 1012,
+          "left": 24
+        },
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        }
+      },
+      "panel": {
+        "x": 309,
+        "y": 64,
+        "width": 420,
+        "height": 696.3125
+      }
+    },
+    {
+      "name": "phone",
+      "passed": true,
+      "geometry": {
+        "image": {
+          "x": 14,
+          "y": 106.53125,
+          "width": 347,
+          "height": 562.90625,
+          "top": 106.53125,
+          "right": 361,
+          "bottom": 669.4375,
+          "left": 14
+        },
+        "progress": "0.307168",
+        "footer": {
+          "x": 14,
+          "y": 766,
+          "width": 347,
+          "height": 66,
+          "top": 766,
+          "right": 361,
+          "bottom": 832,
+          "left": 14
+        },
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "panel": {
+        "x": 14,
+        "y": 64,
+        "width": 347,
+        "height": 573.90625
+      }
+    },
+    {
+      "name": "small-phone",
+      "passed": true,
+      "geometry": {
+        "image": {
+          "x": 32.90625,
+          "y": 56,
+          "width": 239.171875,
+          "height": 388,
+          "top": 56,
+          "right": 272.078125,
+          "bottom": 444,
+          "left": 32.90625
+        },
+        "progress": "0.307072",
+        "footer": {
+          "x": 14,
+          "y": 490,
+          "width": 277,
+          "height": 66,
+          "top": 490,
+          "right": 291,
+          "bottom": 556,
+          "left": 14
+        },
+        "viewport": {
+          "width": 320,
+          "height": 568
+        }
+      },
+      "panel": {
+        "x": 14,
+        "y": 64,
+        "width": 277,
+        "height": 386.234375
+      }
+    },
+    {
+      "name": "short-landscape",
+      "passed": true,
+      "geometry": {
+        "image": {
+          "x": 230,
+          "y": 60.1875,
+          "width": 575,
+          "height": 215.625,
+          "top": 60.1875,
+          "right": 805,
+          "bottom": 275.8125,
+          "left": 230
+        },
+        "progress": "0.307051",
+        "footer": {
+          "x": 34.5,
+          "y": 332,
+          "width": 760,
+          "height": 54,
+          "top": 332,
+          "right": 794.5,
+          "bottom": 386,
+          "left": 34.5
+        },
+        "viewport": {
+          "width": 844,
+          "height": 390
+        }
+      },
+      "panel": {
+        "x": 395,
+        "y": 52,
+        "width": 420,
+        "height": 270
+      }
+    }
+  ],
+  "limitations": [
+    "Chromium viewport emulation on macOS. Safari, Firefox and physical devices were not tested."
+  ]
+}

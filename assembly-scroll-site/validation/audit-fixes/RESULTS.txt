@@ -1,0 +1,142 @@
+ASSEMBLY AUDIT FIXES
+2026-10-21
+
+Scope and delivery
+
+Baseline: 71c42a693dd62c1da194757a9d3ce0841021f721
+Final implementation: b6ae05a1
+Preview: http://127.0.0.1:8766/?v=audit-fixes-4
+Local implementation and validation only. No push, deployment or publication.
+No Save data option was added. Existing browser/system Data Saver behavior remains.
+
+The four implementation commits are:
+  95de82af  Let urgent frames bypass obsolete neighboring transfers.
+  60ffcc24  Renew cached recovery probes after cooldowns.
+  b2167908  Keep keyboard focus visible outside Instructions & options.
+  b6ae05a1  Restore chapter fragments and browser history.
+This report and the wider validation evidence are committed separately.
+
+Fixes and regression evidence
+
+1. Urgent frame scheduling
+   A newest visible frame can release one obsolete, never-demanded neighboring
+   transfer. Demanded transfers and completed neighbor downloads are protected.
+   Cancellation cleanup releases the slot before another job starts.
+   The browser regression holds four neighbors indefinitely and requires the
+   Boards request to start before those neighbors are released. It passed in
+   93 ms. The original audit reproduction delayed neighbors for 3.2 seconds and
+   measured a 3,156 ms target-start delay, retained in baseline-jump.json.
+   These controlled failure-injection cases demonstrate removal of queue
+   blocking. They are not an ordinary-network performance benchmark.
+
+2. Quality recovery
+   Per-visit speculative network attempts are separate from recovery-round
+   eligibility. A round measures at most three candidates. After the existing
+   15-second cooldown, cached compressed images can be decoded again. Expired or
+   aborted batches also receive a bounded retry opportunity.
+   The unit regression fails five rounds, then promotes at the unchanged final
+   pose. The browser regression observes at least four slow 720p probe rounds,
+   removes an injected decode delay, and recovers scrolling quality from 540p
+   through 720p to 1080p without moving or reloading. The same 720p URL is never
+   requested twice. Cached probes do not count as background transfers.
+
+3. Keyboard access
+   Instructions close when focus leaves the disclosure. Tab and Shift+Tab within
+   it keep it open. Escape closes it from anywhere on the page and returns focus
+   to its summary only when focus was inside. The connector modal retains its
+   native Escape and focus return.
+   Browser checks cover 1440x900, 390x844, 320x568 and 568x320. They verify both
+   focus state and hit-test visibility of the connector plus icon after closing.
+
+4. Chapter navigation
+   Direct fragments, chapter clicks, Back/Forward, reload and modified-click
+   opening work. Saved progress is namespaced in history.state. Chapter clicks
+   create history entries, while ordinary scrolling updates the current entry
+   after a 600 ms pause. Reload restores the saved position or the linked chapter.
+   Immediate reload before that pause can restore the previous saved position.
+   Reduced-motion scrolling does not write history on every frame.
+   Regression checks also cover an initially unfragmented page, external hash
+   changes, same-chapter clicks, navigation with a connector modal open, reduced
+   motion and Retry after an ordinary HTML fallback chapter selection.
+
+Validation completed
+
+Chrome 153.0.8010.37, local preview:
+  - 37 unit tests passed, unit-tests.txt.
+  - 11 targeted browser regressions passed, regressions.json.
+  - 14 existing browser checks passed, browser/browser-validation.json.
+    This includes every one of 421 positions in forward and reverse order in
+    landscape and portrait, 1,684 exact stops, plus wheel, touch emulation,
+    rapid reversals, resize, late results, Retry and reduced motion.
+  - 8 progressive-loading checks passed, progressive.json.
+    Sharp opening, the 600 ms fallback, immediate scrolling, slow-to-fast quality
+    recovery, system Data Saver, absent connection API, hidden tabs, orientation,
+    failed refinement and full background preparation remain functional.
+    All 421 useful-resolution frames were prepared on the qualifying connection,
+    with no further background requests after completion. Repeat traversal reused
+    those files. This run recorded 18,067,312 compressed bytes, below 24 MiB.
+  - 6 fallback checks passed, fallback/fallback-validation.json.
+    JavaScript disabled, blocked scripts/manifest, optional stills, resolution
+    adaptation, retained valid image, Retry and enlarged instructions were covered.
+  - 5 layout checks passed, layout.json, with screenshots for desktop, tablet,
+    phone, small phone, short landscape and enlarged instructions.
+  - 3 native wheel traversal profiles passed, continuous-scroll.json.
+    Normal desktop produced 414 forward and 412 reverse displayed updates.
+    At 1.6 Mbps, 150 ms latency and 4x CPU slowdown, desktop produced 85/81 and
+    phone emulation produced 91/70. Animation stayed enabled and endpoints were
+    reached. The throttled runs still skip poses and have visible delivery gaps.
+    These are functional checks, not evidence of smooth 30 fps delivery or a new
+    controlled before-and-after performance study. Some suites ran concurrently.
+
+Firefox 158.0:
+  Desktop and narrow-window smoke checks passed, cross-browser.json.
+  Includes connector inspection, chapter stills, fragments, Back/Forward, reload
+  and cache bounds. Firefox's narrow actual viewport was 500x815, recorded in JSON.
+
+Bounds retained across the targeted checks:
+  At most 4 active jobs and 1 speculative job.
+  At most 12 decoded bitmaps and 48 MiB, including decode reservations.
+  At most 24 MiB compressed cache. These are application counters, not total
+  browser process memory, which also includes canvas buffers and browser caches.
+
+Validation notes and limits
+
+The broad traversal and continuous-scroll runs preceded the final change to
+debounce history writes. That final change was covered by the complete targeted
+regression rerun and the progressive-loading rerun. No loader changes followed
+the broad traversal runs.
+
+Two older test assumptions were updated: Retry now honors the chapter selected
+in fallback HTML, and repeated same-value quality notifications are deduplicated
+before asserting the 1080p to 720p to 540p sequence. The reload regression waits
+for the documented paused-position save rather than assuming every frame writes
+history. A separate regression asserts zero history writes during continuous
+reduced-motion scrolling and one write after pausing.
+
+Safari WebDriver could not establish a session. Its checks are unavailable, not
+passed. No Safari settings were changed. Physical Android, iPhone and screen
+reader tests were not repeated for this change. Mobile checks are Chrome
+emulation, which does not prove behavior on physical devices or real networks.
+
+Preservation and reproduction
+
+preservation.json records source hashes and scope checks against the baseline.
+All 2,526 original WebP frame hashes passed scripts/verify_publish.py. The script
+verified 2,534 static files without uploading them. No original media, models,
+renders, archives, existing WebP files or styles were modified.
+
+From assembly-scroll-site, configure PLAYWRIGHT_MODULE and CHROME_PATH as needed:
+  node --test tests/*.test.mjs
+  node tests/audit-regressions.cjs http://127.0.0.1:8766/
+  node tests/progressive.cjs
+  node tests/browser.cjs
+  node tests/fallback.cjs
+  node tests/layout.cjs
+  node tests/continuous-scroll.cjs
+  python3 tests/cross_browser.py
+  python3 scripts/verify_publish.py
+
+Use VALIDATION_OUTPUT for audit, progressive, layout, continuous and cross-browser
+JSON output. Use VALIDATION_DIR for browser and fallback evidence. See README.txt
+for dependencies and preview commands. Existing evidence from earlier work was
+preserved.

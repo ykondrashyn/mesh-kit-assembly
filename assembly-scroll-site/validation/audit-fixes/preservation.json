@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "71c42a693dd62c1da194757a9d3ce0841021f721",
+  "implementation_commit": "b6ae05a11ee6294105e6d76e4562f7d7d6878c55",
+  "tracked_changes_scoped_to_site_source_tests_docs_and_audit_evidence": true,
+  "protected_media_models_renders_archives_and_existing_assets_changed": false,
+  "existing_frame_hash_verification": {
+    "verified_frames": 2526,
+    "static_files": 2534,
+    "publish_bytes": 73037288
+  },
+  "source_sha256": {
+    "assembly-scroll-site/README.txt": "a506f582e77a701c20839f0040fab9c5670a0882b21ed2d3b970d155c57befc4",
+    "assembly-scroll-site/dist/app.js": "b78760c1188be4e8dfd0467b88d0a8d6739f6d369043b93ed665ea9d8514f054",
+    "assembly-scroll-site/dist/frame-loader.mjs": "b72f6d110e76d488c382655dd77ee7c01a9cd00606ec2dec9cb480f939d6874a",
+    "assembly-scroll-site/dist/index.html": "43133abcffaf49e84cbb909643b6677560b93fc46cfe8b89dcaa2f4c12913f83",
+    "assembly-scroll-site/dist/quality.mjs": "5d2d28f8328b4e7afb364a7be0452323f6bf83f219b802822b4b4d37c608a502"
+  },
+  "ui_save_data_option_added": false,
+  "publication_performed": false
+}

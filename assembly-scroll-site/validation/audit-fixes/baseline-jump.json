@@ -1,0 +1,100 @@
+{
+  "before": [
+    {
+      "index": 1,
+      "kind": "motion",
+      "speculative": false
+    },
+    {
+      "index": 2,
+      "kind": "motion",
+      "speculative": false
+    },
+    {
+      "index": 3,
+      "kind": "motion",
+      "speculative": false
+    },
+    {
+      "index": 4,
+      "kind": "motion",
+      "speculative": false
+    }
+  ],
+  "clickedAt": 1792601779046,
+  "finishedAt": 1792601782226,
+  "calls": [
+    {
+      "frame": 34,
+      "url": "http://127.0.0.1:8766/assets/landscape/540/frame-0034.webp?v=6654678198c78ad9",
+      "at": 1792601778939
+    },
+    {
+      "frame": 1,
+      "url": "http://127.0.0.1:8766/assets/landscape/frame-0001.webp?v=6654678198c78ad9",
+      "at": 1792601778995
+    },
+    {
+      "frame": 2,
+      "url": "http://127.0.0.1:8766/assets/landscape/frame-0002.webp?v=6654678198c78ad9",
+      "at": 1792601778996
+    },
+    {
+      "frame": 3,
+      "url": "http://127.0.0.1:8766/assets/landscape/frame-0003.webp?v=6654678198c78ad9",
+      "at": 1792601778996
+    },
+    {
+      "frame": 4,
+      "url": "http://127.0.0.1:8766/assets/landscape/frame-0004.webp?v=6654678198c78ad9",
+      "at": 1792601778996
+    },
+    {
+      "frame": 5,
+      "url": "http://127.0.0.1:8766/assets/landscape/frame-0005.webp?v=6654678198c78ad9",
+      "at": 1792601779010
+    },
+    {
+      "frame": 376,
+      "url": "http://127.0.0.1:8766/assets/landscape/720/frame-0376.webp?v=6654678198c78ad9",
+      "at": 1792601782202
+    },
+    {
+      "frame": 377,
+      "url": "http://127.0.0.1:8766/assets/landscape/720/frame-0377.webp?v=6654678198c78ad9",
+      "at": 1792601782202
+    },
+    {
+      "frame": 375,
+      "url": "http://127.0.0.1:8766/assets/landscape/720/frame-0375.webp?v=6654678198c78ad9",
+      "at": 1792601782202
+    },
+    {
+      "frame": 378,
+      "url": "http://127.0.0.1:8766/assets/landscape/720/frame-0378.webp?v=6654678198c78ad9",
+      "at": 1792601782208
+    },
+    {
+      "frame": 379,
+      "url": "http://127.0.0.1:8766/assets/landscape/720/frame-0379.webp?v=6654678198c78ad9",
+      "at": 1792601782212
+    },
+    {
+      "frame": 380,
+      "url": "http://127.0.0.1:8766/assets/landscape/720/frame-0380.webp?v=6654678198c78ad9",
+      "at": 1792601782214
+    },
+    {
+      "frame": 376,
+      "url": "http://127.0.0.1:8766/assets/landscape/frame-0376.webp?v=6654678198c78ad9",
+      "at": 1792601782228
+    },
+    {
+      "frame": 34,
+      "url": "http://127.0.0.1:8766/assets/landscape/540/frame-0034.webp?v=6654678198c78ad9",
+      "at": 1792601782228
+    }
+  ],
+  "targetStartDelay": 3156,
+  "displayDelay": 3180
+}

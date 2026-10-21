@@ -366,3 +366,40 @@ labels. Read validation/progressive/FORMAT-COMPARISON.txt for the conclusions.
 Generated candidates are retained locally but excluded from Git. Scripts and
 measurement evidence are committed. Production remains WebP pending a separate
 format decision and broader device validation.
+
+AUDIT REGRESSIONS, 2026-10-21
+
+The loader can release one obsolete neighboring download for a new visible
+pose while retaining demanded downloads. Recovery uses batches of three
+measurements. A failed batch may remeasure cached compressed images after
+the 15-second cooldown, without resetting per-visit network-attempt tracking.
+
+Instructions close when keyboard focus leaves the disclosure. Escape works
+throughout the page while the disclosure is open and preserves outside focus.
+The connector dialog retains its native Escape and focus-return behavior.
+
+Chapter links support direct fragments such as #step-lora, Back/Forward,
+reload and modified-click opening. Chapter clicks save the current position
+and create a history entry. Scrolling saves the position on the current entry
+after a 600 ms pause, without creating extra history entries or writing history
+on every frame. Reload restores the saved position, or the linked chapter when
+no position has been saved. Reduced motion continues to show chapter stills.
+
+Run from assembly-scroll-site with Playwright and Chrome configured as above:
+
+  node --test tests/*.test.mjs
+  node tests/audit-regressions.cjs http://127.0.0.1:8766/
+
+The browser suite covers blocked request slots, multiple unsuccessful recovery
+rounds followed by successful recovery at the same pose, keyboard disclosure,
+chapter fragments, history, reload, new tabs and bounded history writes.
+The repeated-recovery check takes about 70 seconds because it exercises real
+cooldowns. CHECK=urgent, CHECK=recovery, CHECK=disclosure or CHECK=history selects
+a group. VALIDATION_OUTPUT selects the JSON report and screenshot prefix.
+
+The existing cross_browser.py also checks fragments, Back/Forward and reload.
+Set VALIDATION_OUTPUT to save a fresh Firefox/Safari report without overwriting
+older evidence. Safari still requires Remote Automation enabled by the user.
+
+Final evidence and coverage limits are in validation/audit-fixes/RESULTS.txt.
+All fixes remain local until publication is separately requested.
