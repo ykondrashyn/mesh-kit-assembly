@@ -1,9 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { QualityController } from '../dist/quality.mjs';
+import { QualityController, cachedDecodeHasHeadroom } from '../dist/quality.mjs';
 const tiers=[540,720,1080].map(id=>({id:String(id)}));
 const rows=now=>[1,2,3].map(index=>({index,at:now,fetchMs:50,decodeMs:3,cached:false}));
 const healthy=(q,now)=>q.observe({now,lag:0,failed:false,rate:20,deliveryMs:100,samples:8});
+test('cached sharp frames use display demand rather than skipped timeline positions',()=>{
+ assert.equal(cachedDecodeHasHeadroom([{decodeMs:8}],120),true);
+ assert.equal(cachedDecodeHasHeadroom([{decodeMs:15}],120),false);
+ assert.equal(cachedDecodeHasHeadroom([],30),false);
+});
 test('motion recovers a tier at a time with healthy-window and promotion cooldowns',()=>{
  const q=new QualityController();q.configure(tiers,tiers[2],540,false);
  healthy(q,0);assert.equal(q.next(2999),null);

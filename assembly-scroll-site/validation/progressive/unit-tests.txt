@@ -2,7 +2,7 @@ TAP version 13
 # Subtest: recovery probes include useful neighbors at either sequence endpoint
 not ok 1 - recovery probes include useful neighbors at either sequence endpoint
   ---
-  duration_ms: 0.485333
+  duration_ms: 0.52
   type: 'test'
   location: '/Users/ykondras/vid/assembly-manual/assembly-scroll-site/tests/frame-loader.test.mjs:14:1'
   failureType: 'testCodeFailure'
@@ -20,189 +20,195 @@ not ok 1 - recovery probes include useful neighbors at either sequence endpoint
 # Subtest: rapid scrolling retains active downloads and prioritizes the newest queued target
 ok 2 - rapid scrolling retains active downloads and prioritizes the newest queued target
   ---
-  duration_ms: 4.713667
+  duration_ms: 4.579167
   type: 'test'
   ...
 # Subtest: decoded memory includes in-progress reservations and evicted bitmaps are closed
 ok 3 - decoded memory includes in-progress reservations and evicted bitmaps are closed
   ---
-  duration_ms: 2.952625
+  duration_ms: 3.753334
   type: 'test'
   ...
 # Subtest: an orientation switch during decoding closes the obsolete result
 ok 4 - an orientation switch during decoding closes the obsolete result
   ---
-  duration_ms: 0.439417
+  duration_ms: 0.517584
   type: 'test'
   ...
 # Subtest: failed targets expose an error and can be retried
 ok 5 - failed targets expose an error and can be retried
   ---
-  duration_ms: 0.302208
+  duration_ms: 0.322125
   type: 'test'
   ...
 # Subtest: visible target loads before chapter stills, which remain available offline
 ok 6 - visible target loads before chapter stills, which remain available offline
   ---
-  duration_ms: 0.587459
+  duration_ms: 0.607084
   type: 'test'
   ...
 # Subtest: resolution changes retain compressed and decoded frames and refinement stays within shared limits
 ok 7 - resolution changes retain compressed and decoded frames and refinement stays within shared limits
   ---
-  duration_ms: 0.550416
+  duration_ms: 0.533125
   type: 'test'
   ...
 # Subtest: full background preparation is compressed, bounded, single-job and never refetches evicted assets
 ok 8 - full background preparation is compressed, bounded, single-job and never refetches evicted assets
   ---
-  duration_ms: 28.884209
+  duration_ms: 29.032
   type: 'test'
   ...
 # Subtest: a hidden page starts no jobs and unknown or cached timing never qualifies as network throughput
 ok 9 - a hidden page starts no jobs and unknown or cached timing never qualifies as network throughput
   ---
-  duration_ms: 0.644666
+  duration_ms: 1.063875
   type: 'test'
   ...
 # Subtest: completed downloads advance continuous scrolling even after leaving the prefetch window
 ok 10 - completed downloads advance continuous scrolling even after leaving the prefetch window
   ---
-  duration_ms: 0.755333
+  duration_ms: 0.696083
   type: 'test'
   ...
 # Subtest: a direction reversal during decoding closes the obsolete result
 ok 11 - a direction reversal during decoding closes the obsolete result
   ---
-  duration_ms: 0.396292
+  duration_ms: 0.445083
   type: 'test'
   ...
 # Subtest: smaller probes cannot leave duplicate bitmaps that keep the decode queue churning
 ok 12 - smaller probes cannot leave duplicate bitmaps that keep the decode queue churning
   ---
-  duration_ms: 0.928792
+  duration_ms: 0.9755
   type: 'test'
   ...
 # Subtest: an urgent target can cancel a speculative download without cancelling motion downloads
 ok 13 - an urgent target can cancel a speculative download without cancelling motion downloads
   ---
-  duration_ms: 0.394625
+  duration_ms: 0.418042
   type: 'test'
   ...
 # Subtest: retry discards a corrupt compressed response and bypasses HTTP cache
 ok 14 - retry discards a corrupt compressed response and bypasses HTTP cache
   ---
-  duration_ms: 0.507583
+  duration_ms: 0.937042
   type: 'test'
   ...
 # Subtest: phone layouts retain the connector circle and replace exported page furniture
 ok 15 - phone layouts retain the connector circle and replace exported page furniture
   ---
-  duration_ms: 0.3445
+  duration_ms: 0.392375
+  type: 'test'
+  ...
+# Subtest: cached sharp frames use display demand rather than skipped timeline positions
+ok 16 - cached sharp frames use display demand rather than skipped timeline positions
+  ---
+  duration_ms: 0.622083
   type: 'test'
   ...
 # Subtest: motion recovers a tier at a time with healthy-window and promotion cooldowns
-ok 16 - motion recovers a tier at a time with healthy-window and promotion cooldowns
+ok 17 - motion recovers a tier at a time with healthy-window and promotion cooldowns
   ---
-  duration_ms: 0.462542
+  duration_ms: 0.631959
   type: 'test'
   ...
 # Subtest: a downgrade delays recovery and failed probes have a separate cooldown
-ok 17 - a downgrade delays recovery and failed probes have a separate cooldown
+ok 18 - a downgrade delays recovery and failed probes have a separate cooldown
   ---
-  duration_ms: 0.112333
+  duration_ms: 0.095125
   type: 'test'
   ...
 # Subtest: Data Saver is a hard automatic ceiling while phone limits are startup choices
-ok 18 - Data Saver is a hard automatic ceiling while phone limits are startup choices
+ok 19 - Data Saver is a hard automatic ceiling while phone limits are startup choices
   ---
-  duration_ms: 0.161541
+  duration_ms: 0.126958
   type: 'test'
   ...
 # Subtest: promotion needs three distinct recent samples and both decode and transfer headroom
-ok 19 - promotion needs three distinct recent samples and both decode and transfer headroom
+ok 20 - promotion needs three distinct recent samples and both decode and transfer headroom
   ---
-  duration_ms: 0.091542
+  duration_ms: 0.088625
   type: 'test'
   ...
 # Subtest: distant loading requires health and measured network evidence
-ok 20 - distant loading requires health and measured network evidence
+ok 21 - distant loading requires health and measured network evidence
   ---
-  duration_ms: 0.061959
+  duration_ms: 0.053125
   type: 'test'
   ...
 # Subtest: jump velocity cannot block paused recovery indefinitely
-ok 21 - jump velocity cannot block paused recovery indefinitely
+ok 22 - jump velocity cannot block paused recovery indefinitely
   ---
-  duration_ms: 0.055792
+  duration_ms: 0.097667
   type: 'test'
   ...
 # Subtest: phone streaming starts conservatively and respects data-saving preferences
-ok 22 - phone streaming starts conservatively and respects data-saving preferences
+ok 23 - phone streaming starts conservatively and respects data-saving preferences
   ---
-  duration_ms: 1.188458
+  duration_ms: 1.515625
   type: 'test'
   ...
 # Subtest: quality adapts earlier only when measured delivery cannot meet scroll demand
-ok 23 - quality adapts earlier only when measured delivery cannot meet scroll demand
+ok 24 - quality adapts earlier only when measured delivery cannot meet scroll demand
   ---
-  duration_ms: 0.125583
+  duration_ms: 0.13025
   type: 'test'
   ...
 # Subtest: scroll easing is time-based, reversible and does not overshoot
-ok 24 - scroll easing is time-based, reversible and does not overshoot
+ok 25 - scroll easing is time-based, reversible and does not overshoot
   ---
-  duration_ms: 0.169666
+  duration_ms: 0.174167
   type: 'test'
   ...
 # Subtest: source map retains all motion and excludes only duplicated holds
-ok 25 - source map retains all motion and excludes only duplicated holds
+ok 26 - source map retains all motion and excludes only duplicated holds
   ---
-  duration_ms: 0.420125
+  duration_ms: 0.44175
   type: 'test'
   ...
 # Subtest: image resolution matches fitted size and caps high-density demand
-ok 26 - image resolution matches fitted size and caps high-density demand
+ok 27 - image resolution matches fitted size and caps high-density demand
   ---
-  duration_ms: 0.098958
+  duration_ms: 0.101334
   type: 'test'
   ...
 # Subtest: forward and reverse mapping round-trip all frames with clamped endpoints
-ok 27 - forward and reverse mapping round-trip all frames with clamped endpoints
+ok 28 - forward and reverse mapping round-trip all frames with clamped endpoints
   ---
-  duration_ms: 0.171292
+  duration_ms: 0.172
   type: 'test'
   ...
 # Subtest: chapter boundaries match the original Blender timeline
-ok 28 - chapter boundaries match the original Blender timeline
+ok 29 - chapter boundaries match the original Blender timeline
   ---
-  duration_ms: 0.098458
+  duration_ms: 0.097334
   type: 'test'
   ...
 # Subtest: connection links land on reviewed clear poses before seating, outside transition fades
-ok 29 - connection links land on reviewed clear poses before seating, outside transition fades
+ok 30 - connection links land on reviewed clear poses before seating, outside transition fades
   ---
-  duration_ms: 0.057917
+  duration_ms: 0.059375
   type: 'test'
   ...
 # Subtest: adaptive layout fits the full image without clipping
-ok 30 - adaptive layout fits the full image without clipping
+ok 31 - adaptive layout fits the full image without clipping
   ---
-  duration_ms: 0.230834
+  duration_ms: 0.228875
   type: 'test'
   ...
 # Subtest: directional prefetch is bounded and prioritizes the requested frame
-ok 31 - directional prefetch is bounded and prioritizes the requested frame
+ok 32 - directional prefetch is bounded and prioritizes the requested frame
   ---
-  duration_ms: 0.323583
+  duration_ms: 0.316334
   type: 'test'
   ...
-1..31
-# tests 31
+1..32
+# tests 32
 # suites 0
-# pass 30
+# pass 31
 # fail 1
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 79.43175
+# duration_ms 82.2065

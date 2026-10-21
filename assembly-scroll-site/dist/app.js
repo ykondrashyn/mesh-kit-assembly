@@ -1,4 +1,4 @@
-import { QualityController } from './quality.mjs?v=progressive-1';
+import { QualityController, cachedDecodeHasHeadroom } from './quality.mjs?v=progressive-1';
 import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=progressive-1';
 import { FrameLoader } from './frame-loader.mjs?v=progressive-1';
 import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=progressive-1';
@@ -298,7 +298,7 @@ function render(now) {
   }
   const sharp = stillMode() ? manifest.variants[variant].resolutions[0] : quality.desired;
   const sharpSamples = loader.tierSamples(sharp).slice(-3);
-  const preferCached = sharpSamples.length > 0 && sharpSamples.every(x => x.decodeMs * Math.max(1,rate) <= 700);
+  const preferCached = cachedDecodeHasHeadroom(sharpSamples, rate);
   const healthy = enhanced && lag <= 1 && !loader.error(index);
   const distant = backgroundEnabled && quality.distant(now, loader.networkSummary());
   loader.setActivity({ visible: true, enabled: backgroundEnabled && healthy && !saveData && !stillMode(),

@@ -1,5 +1,10 @@
 import { qualityLagDelay } from './timeline.mjs?v=progressive-1';
 
+export function cachedDecodeHasHeadroom(rows, rate) {
+  const displayRate = Math.max(1, Math.min(60, rate));
+  return rows.length > 0 && rows.every(x => x.decodeMs * displayRate <= 700);
+}
+
 export class QualityController {
   constructor() {
     this.healthySince = this.lagSince = null;
