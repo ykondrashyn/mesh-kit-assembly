@@ -1,4 +1,4 @@
-import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit } from './timeline.mjs';
+import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs';
 import { FrameLoader } from './frame-loader.mjs?v=continuous-2';
 
 const $ = selector => document.querySelector(selector);
@@ -19,8 +19,25 @@ let cachedScrollSpan = 1, previousProgress = -1, hintDismissed = false, stylePen
 let mode = reducedQuery.matches ? 'reduced' : 'animation';
 let areaWidth = 0, areaHeight = 0;
 let orientationTimer = 0;
+let lastScrollTime = 0, scrollRate = 0;
 const stillMode = () => mode !== 'animation';
 const schedule = () => { if (!raf) raf = requestAnimationFrame(render); };
+
+function connectionChanged() {
+  const connection = navigator.connection || {};
+  const cap = initialResolutionCap({
+    coarsePointer: matchMedia('(pointer: coarse)').matches,
+    shortSide: Math.min(screen.width, screen.height),
+    saveData: connection.saveData, effectiveType: connection.effectiveType, downlink: connection.downlink,
+  });
+  if (cap < resolutionCap) {
+    resolutionCap = cap;
+    resizePending = true;
+    if (manifest) schedule();
+  }
+}
+connectionChanged();
+navigator.connection?.addEventListener('change', connectionChanged);
 
 function showLoad(message, failed = false) {
   if (loadMessage.textContent !== message) loadMessage.textContent = message;
@@ -161,9 +178,10 @@ function render(now) {
     const resolutions = manifest.variants[variant].resolutions;
     const tier = resolutions.findIndex(item => item.id === loader.resolution.id);
     const behind = enhanced && !stillMode() && Math.abs(index - Number(canvas.dataset.frame)) >= 2;
+    const lagDelay = qualityLagDelay(loader.deliveryMs, now - lastScrollTime < 300 ? scrollRate : 0, loader.deliverySamples);
     if (behind && tier > 0) {
       lagSince ??= now;
-      if (now - lagSince >= 800) {
+      if (now - lagSince >= lagDelay) {
         stage.dataset.qualityLagMs = String(Math.round(now - lagSince));
         stage.dataset.qualityDrops = String(Number(stage.dataset.qualityDrops || 0) + 1);
         resolutionCap = Number(resolutions[tier - 1].id);
@@ -172,7 +190,7 @@ function render(now) {
       }
     } else lagSince = null;
     // Timers provide loading feedback and the lag deadline without an idle RAF loop.
-    const nextWake = lagSince !== null ? Math.max(1, 800 - (now - lagSince)) : now - pendingSince < 160 ? 165 : 0;
+    const nextWake = lagSince !== null ? Math.max(1, lagDelay - (now - lagSince)) : now - pendingSince < 160 ? 165 : 0;
     if (nextWake) wakeTimer = setTimeout(schedule, nextWake);
   }
   if (progress !== targetProgress || resizePending) schedule();
@@ -209,7 +227,12 @@ async function boot() {
 
 window.addEventListener('scroll', () => {
   if (!enhanced || resizePending) return;
-  targetProgress = clamp(window.scrollY / cachedScrollSpan);
+  const now = performance.now(), next = clamp(window.scrollY / cachedScrollSpan);
+  const elapsed = now - lastScrollTime;
+  const rate = Math.abs(next - targetProgress) * (manifest.frames.length - 1) * 1000 / Math.max(16, elapsed);
+  scrollRate = elapsed < 300 ? scrollRate * .5 + rate * .5 : 0;
+  lastScrollTime = now;
+  targetProgress = next;
   if (targetProgress > 0) dismissHint();
   schedule();
 }, { passive: true });

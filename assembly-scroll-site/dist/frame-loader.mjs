@@ -29,6 +29,8 @@ export class FrameLoader {
     this.direction = 1;
     this.motionEpoch = 0;
     this.stillsOnly = false;
+    this.deliveryMs = 0;
+    this.deliverySamples = 0;
   }
 
   selectVariant(variant, resolution = this.manifest.variants[variant].resolutions.at(-1)) {
@@ -45,6 +47,8 @@ export class FrameLoader {
     }
     this.variant = variant;
     this.resolution = resolution;
+    this.deliveryMs = 0;
+    this.deliverySamples = 0;
   }
 
   warmStills() {
@@ -167,9 +171,15 @@ export class FrameLoader {
     try {
       let blob = this.resolution.id === '540' && this.stillBlobs.get(index);
       if (!blob) {
+        const started = performance.now();
         const response = await this.fetchFrame(this.url(index), { signal: controller.signal, cache: 'force-cache' });
         if (!response.ok) throw new Error(`Frame request returned ${response.status}`);
         blob = await response.blob();
+        if (valid()) {
+          const elapsed = performance.now() - started;
+          this.deliveryMs = this.deliverySamples ? this.deliveryMs * .75 + elapsed * .25 : elapsed;
+          this.deliverySamples++;
+        }
       }
       clearTimeout(timeout);
       const decode = this.decodeChain.then(async () => {

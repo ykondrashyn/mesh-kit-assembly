@@ -6,12 +6,18 @@ const assert = require('node:assert/strict');
     for (const profile of [
       { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, orientation: 'landscape', resolution: '1080' },
       { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, orientation: 'portrait', resolution: '540' },
-      // The fitted portrait is 347 CSS pixels wide, requiring 694 pixels
-      // at 2x. The 720p sequence covers it without loading the largest tier.
-      { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '720' },
+      // A narrow desktop window can still request a sharp 2x image.
+      { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, orientation: 'portrait', resolution: '1080' },
+      { viewport: { width: 443, height: 840 }, screen: { width: 443, height: 986 }, deviceScaleFactor: 2.4375,
+        hasTouch: true, isMobile: true, orientation: 'portrait', resolution: '720' },
+      { viewport: { width: 443, height: 840 }, screen: { width: 443, height: 986 }, deviceScaleFactor: 2.4375,
+        hasTouch: true, isMobile: true, orientation: 'portrait', resolution: '540', constrained: true },
     ]) {
       const context = await browser.newContext(profile);
       const page = await context.newPage();
+      if (profile.isMobile) await page.addInitScript(constrained => {
+        Object.defineProperty(navigator, 'connection', { value: { effectiveType: '4g', downlink: constrained ? 1.6 : 10, addEventListener() {} } });
+      }, Boolean(profile.constrained));
       const requests = [], errors = [];
       page.on('request', request => requests.push(request.url()));
       page.on('pageerror', error => errors.push(error.message));

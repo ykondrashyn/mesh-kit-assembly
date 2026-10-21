@@ -1,9 +1,27 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, nearbyFrames, resolutionForFit } from '../dist/timeline.mjs';
+import { easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, nearbyFrames, resolutionForFit, initialResolutionCap, qualityLagDelay } from '../dist/timeline.mjs';
 
 const manifest = JSON.parse(readFileSync(new URL('../dist/assets/manifest.json', import.meta.url)));
+
+test('phone streaming starts conservatively and respects data-saving preferences', () => {
+  const phone = { coarsePointer: true, shortSide: 443 };
+  assert.equal(initialResolutionCap(phone), 720, 'Unknown networks still start conservatively');
+  assert.equal(initialResolutionCap({ ...phone, effectiveType: '4g', downlink: 10 }), 720);
+  assert.equal(initialResolutionCap({ ...phone, effectiveType: '4g', downlink: 1.6 }), 540);
+  assert.equal(initialResolutionCap({ ...phone, effectiveType: '3g' }), 540);
+  assert.equal(initialResolutionCap({ ...phone, shortSide: 820 }), Infinity, 'Tablets retain fitted resolution');
+  assert.equal(initialResolutionCap({ ...phone, coarsePointer: false }), Infinity);
+  assert.equal(initialResolutionCap({ coarsePointer: false, saveData: true }), 540);
+});
+
+test('quality adapts earlier only when measured delivery cannot meet scroll demand', () => {
+  assert.equal(qualityLagDelay(300, 30, 4), 350);
+  assert.equal(qualityLagDelay(300, 5, 4), 800);
+  assert.equal(qualityLagDelay(300, 0, 4), 800);
+  assert.equal(qualityLagDelay(300, 30, 1), 800, 'Wait for several completed samples');
+});
 
 test('scroll easing is time-based, reversible and does not overshoot', () => {
   let at60Hz = 0;

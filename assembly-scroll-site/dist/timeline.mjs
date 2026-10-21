@@ -27,6 +27,18 @@ export function resolutionForFit(fit, resolutions, pixelRatio = 1) {
   return resolutions.find(item => Math.min(item.width, item.height) >= required) || resolutions.at(-1);
 }
 
+export function initialResolutionCap({ coarsePointer, shortSide, saveData, effectiveType, downlink }) {
+  if (saveData) return 540;
+  if (!coarsePointer || shortSide > 600) return Infinity;
+  const constrained = ['slow-2g', '2g', '3g'].includes(effectiveType) || (downlink > 0 && downlink <= 2);
+  return constrained ? 540 : 720;
+}
+
+export function qualityLagDelay(deliveryMs, framesPerSecond, samples) {
+  // Four concurrent deliveries cannot keep up with demand beyond this window.
+  return samples >= 3 && deliveryMs * framesPerSecond / 1000 > 4 ? 350 : 800;
+}
+
 export function fitFrame(width, height, sourceWidth, sourceHeight) {
   const scale = Math.min(width / sourceWidth, height / sourceHeight);
   const fittedWidth = sourceWidth * scale;
