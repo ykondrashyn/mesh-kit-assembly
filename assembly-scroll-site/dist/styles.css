@@ -46,13 +46,18 @@ button:disabled { cursor: default; }
   animation: scroll-intro-dismiss 1.5s ease-out forwards;
 }
 #scroll-intro span { display: block; font-size: clamp(26px, 4vw, 42px); font-weight: 700; letter-spacing: .16em; padding-left: .16em; }
-#scroll-intro svg { display: block; width: 52px; height: 60px; margin: 14px auto 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+#scroll-intro svg { display: block; width: 52px; height: 60px; margin: 14px auto 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; animation: scroll-intro-arrows .75s ease-in-out 2; }
+@keyframes scroll-intro-arrows {
+  0%, 100% { transform: translateY(-5px); opacity: .45; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
 @keyframes scroll-intro-dismiss {
   0%, 86% { opacity: 1; visibility: visible; }
   100% { opacity: 0; visibility: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   #scroll-intro { animation-timing-function: step-end; }
+  #scroll-intro svg { animation: none; }
 }
 #enlarge-connector { position: absolute; padding: 0; border: 0; border-radius: 50%; background: transparent; min-width: 44px; min-height: 44px; }
 #enlarge-connector span { position: absolute; right: 0; bottom: 0; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #888; border-radius: 50%; background: #fff; font-size: 24px; }

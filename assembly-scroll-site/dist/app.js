@@ -10,6 +10,7 @@ const instructionsSummary = instructions.querySelector('summary');
 const loadState = $('#load-state'), loadMessage = $('#load-message'), retry = $('#retry');
 const loadAnnouncement = $('#load-announcement');
 const progressFill = $('#progress-fill'), scrollHint = $('#scroll-hint');
+const scrollIntro = $('#scroll-intro'), introEvents = new AbortController();
 const stepSummary = $('#step-summary'), stepTitle = $('#step-title'), stepCaption = $('#step-caption');
 const enlargeConnector = $('#enlarge-connector'), connectorDialog = $('#connector-dialog'), connectorImage = $('#connector-image');
 const connectorContext = connectorImage.getContext('2d', { alpha: false });
@@ -66,7 +67,24 @@ function updateMotionOptions() {
   stage.dataset.mode = mode;
 }
 
+function dismissScrollIntro() {
+  if (scrollIntro.hidden) return;
+  scrollIntro.hidden = true;
+  introEvents.abort();
+}
+// Dismiss on scroll intent, before native scrolling or frame loading catches up.
+for (const type of ['wheel', 'touchmove', 'scroll']) {
+  window.addEventListener(type, dismissScrollIntro, { passive: true, signal: introEvents.signal });
+}
+window.addEventListener('keydown', event => {
+  if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) dismissScrollIntro();
+}, { signal: introEvents.signal });
+scrollIntro.addEventListener('animationend', event => {
+  if (event.target === scrollIntro) dismissScrollIntro();
+}, { signal: introEvents.signal });
+
 function dismissHint() {
+  dismissScrollIntro();
   if (hintDismissed) return;
   hintDismissed = true;
   scrollHint.hidden = true;
