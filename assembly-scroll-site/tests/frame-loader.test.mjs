@@ -21,7 +21,7 @@ test('recovery probes include useful neighbors at either sequence endpoint', () 
   loader.dispose();
 });
 
-test('rapid scrolling retains active downloads and prioritizes the newest queued target', async () => {
+test('rapid scrolling protects demanded downloads and cancels at most one obsolete neighbor at a time', async () => {
   const requests = [];
   const loader = new FrameLoader(manifest, () => {}, {
     fetchFrame: (url, { signal }) => new Promise(resolve => requests.push({ url, signal, resolve })),
@@ -33,7 +33,8 @@ test('rapid scrolling retains active downloads and prioritizes the newest queued
     loader.request(150);
     loader.request(300, -1);
     assert.equal(requests.length, MAX_REQUESTS);
-    assert.ok(requests.every(item => !item.signal.aborted));
+    assert.equal(requests[0].signal.aborted, false, 'An active demanded frame must be allowed to finish');
+    assert.equal(requests.filter(item => item.signal.aborted).length, 1);
     for (const item of requests.slice()) item.resolve(response());
     await until(() => requests.length === 8);
     assert.ok(requests[4].url.includes(`frame-${String(manifest.frames[300]).padStart(4, '0')}`));
@@ -43,6 +44,55 @@ test('rapid scrolling retains active downloads and prioritizes the newest queued
   } finally {
     loader.dispose();
     for (const item of requests) item.resolve(response());
+  }
+});
+
+test('an urgent chapter starts while four obsolete neighbors remain stalled', async () => {
+  const requests = [];
+  const loader = new FrameLoader(manifest, () => {}, {
+    fetchFrame: (url, { signal }) => new Promise((resolve, reject) => {
+      requests.push({ url, signal, resolve });
+      signal.addEventListener('abort', () => reject(new DOMException('Aborted', 'AbortError')));
+    }),
+    decodeFrame: async () => image(),
+  });
+  try {
+    loader.selectVariant('landscape');
+    loader.request(0);
+    requests[0].resolve(response());
+    await until(() => loader.get(0) && requests.length === 5);
+    const neighbors = requests.slice(1);
+    loader.request(315);
+    await until(() => requests.some(r => r.url.includes('frame-0376.webp')));
+    assert.equal(neighbors.filter(r => r.signal.aborted).length, 1);
+    const urgent = requests.find(r => r.url.includes('frame-0376.webp'));
+    urgent.resolve(response());
+    await until(() => loader.get(315));
+    assert.ok(loader.maxRequests <= MAX_REQUESTS);
+    assert.ok(neighbors.filter(r => !r.signal.aborted).length >= 3);
+  } finally {
+    loader.dispose();
+    for (const request of requests) request.resolve(response());
+  }
+});
+
+test('a neighbor that becomes the requested pose is protected from later cancellation', async () => {
+  const requests = [];
+  const loader = new FrameLoader(manifest, () => {}, {
+    fetchFrame: (url, { signal }) => new Promise(resolve => requests.push({ url, signal, resolve })),
+    decodeFrame: async () => image(),
+  });
+  try {
+    loader.selectVariant('landscape');
+    loader.request(0);
+    loader.request(1);
+    loader.request(315);
+    assert.equal(requests[0].signal.aborted, false);
+    assert.equal(requests[1].signal.aborted, false);
+    assert.equal(requests.filter(r => r.signal.aborted).length, 1);
+  } finally {
+    loader.dispose();
+    for (const request of requests) request.resolve(response());
   }
 });
 

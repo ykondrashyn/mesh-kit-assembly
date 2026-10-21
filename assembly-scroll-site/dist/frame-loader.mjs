@@ -168,10 +168,20 @@ export class FrameLoader {
   pump() {
     if(this.disposed || !this.visible || this.target===undefined) return;
     const foreground=[...(this.detail?[this.detail]:[]),...this.order];
+    // Once a frame is actually requested, let its transfer finish even if the
+    // scroll target moves again. Only unused neighbor preparation may yield.
+    for (const job of this.jobs.values()) {
+      if (job.variant === this.variant && job.index === this.target) job.demanded = true;
+    }
     const urgent=foreground.find(x=>x.index===this.target && !this.satisfies(x) && !this.jobs.has(x.key) && !this.errors.has(x.key));
-    if(urgent && this.jobs.size>=MAX_REQUESTS) {
-      const speculative=[...this.jobs.values()].find(x=>x.speculative);
-      speculative?.controller.abort();
+    if(urgent && this.jobs.size>=MAX_REQUESTS && ![...this.jobs.values()].some(job => job.controller.signal.aborted)) {
+      const jobs = [...this.jobs.values()];
+      const speculative = jobs.find(job => job.speculative);
+      const obsoleteNeighbor = jobs.find(job => job.kind === 'motion' && !job.demanded && !job.downloaded &&
+        !foreground.some(spec => spec.key === job.key));
+      // Wait for abort cleanup to release the slot. Never exceed the job limit,
+      // cancel an active decode, or repeatedly cancel demanded frames.
+      (speculative || obsoleteNeighbor)?.controller.abort();
     }
     for(const spec of foreground) {
       if(this.jobs.size>=MAX_REQUESTS) break;
@@ -184,7 +194,7 @@ export class FrameLoader {
     }
   }
   start(spec,speculative) {
-    const job={...spec,speculative,controller:new AbortController(),epoch:this.epoch,motionEpoch:this.motionEpoch};
+    const job={...spec,speculative,demanded:spec.index===this.target,controller:new AbortController(),epoch:this.epoch,motionEpoch:this.motionEpoch};
     this.jobs.set(spec.key,job);
     this.maxRequests=Math.max(this.maxRequests,this.jobs.size);
     this.maxSpeculative=Math.max(this.maxSpeculative,[...this.jobs.values()].filter(x=>x.speculative).length);
@@ -214,6 +224,7 @@ export class FrameLoader {
         }
       }
       clearTimeout(timeout);
+      job.downloaded = true;
       if(!this.disposed && !controller.signal.aborted)this.remember(job,blob);
       if(job.speculative)this.backgroundFetched++;
       if(job.speculative && job.kind!=='probe')return;

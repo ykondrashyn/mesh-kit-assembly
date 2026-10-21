@@ -1,6 +1,6 @@
 import { QualityController, cachedDecodeHasHeadroom, canPrepareWhileScrolling } from './quality.mjs?v=progressive-1';
 import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=progressive-1';
-import { FrameLoader } from './frame-loader.mjs?v=progressive-1';
+import { FrameLoader } from './frame-loader.mjs?v=audit-fixes-1';
 import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=progressive-1';
 
 const $ = selector => document.querySelector(selector);

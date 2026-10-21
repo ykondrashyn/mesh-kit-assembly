@@ -1,0 +1,51 @@
+{
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "checks": [
+    {
+      "name": "urgent chapter bypasses four stalled neighbors",
+      "passed": true,
+      "details": {
+        "targetStartMs": 86,
+        "delayedNeighbors": 4
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "full",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "requestedFrame": "315",
+          "progress": "0.750000",
+          "targetProgress": "0.750000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "4",
+          "maxDecodedFrames": "4",
+          "decodedBytes": "33177600",
+          "maxDecodedBytes": "33177600",
+          "maxRequests": "4",
+          "compressedBytes": "187066",
+          "maxCompressedBytes": "187066",
+          "maxSpeculative": "0",
+          "backgroundFetched": "0",
+          "jobs": "4",
+          "preparedFrames": "4",
+          "networkSamples": "4",
+          "networkMbps": "111.68",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "layout": "full"
+        }
+      }
+    }
+  ]
+}
