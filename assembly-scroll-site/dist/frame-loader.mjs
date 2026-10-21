@@ -1,4 +1,5 @@
 import { nearbyFrames } from './timeline.mjs?v=progressive-1';
+import { RECOVERY_SAMPLE_COUNT } from './quality.mjs?v=audit-fixes-2';
 
 export const MAX_IMAGES = 12;
 export const MAX_DECODED_BYTES = 48 * 1024 * 1024;
@@ -58,6 +59,14 @@ export class FrameLoader {
       ...Array.from({length:12},(_,i)=>this.target-(i+1)*this.direction)].filter(i=>i>=0 && i<this.manifest.frames.length);
   }
   tierSamples(resolution) { return this.samples.get(`${this.variant}/${resolution.id}`) || []; }
+  probeCount(resolution) {
+    const prefix = `${this.variant}/${resolution.id}/`;
+    return [...this.probed].filter(key => key.startsWith(prefix)).length;
+  }
+  probeBatchFinished(resolution) {
+    return this.probeCount(resolution) >= RECOVERY_SAMPLE_COUNT &&
+      ![...this.jobs.values()].some(job => job.kind === 'probe' && job.variant === this.variant && job.resolution.id === resolution.id);
+  }
   networkSummary() {
     const rows = this.transfers.filter(x=>this.clock()-x.end < 10000).sort((a,b)=>a.start-b.start);
     let duration = 0, end = -Infinity;
@@ -89,10 +98,14 @@ export class FrameLoader {
     this.errors.clear();this.pump();
   }
   setActivity(activity) {
+    // Probe eligibility belongs to a recovery round. Network attempt tracking
+    // belongs to the page visit and must survive every round and cooldown.
+    if (activity.probeAfter !== this.activity.probeAfter) this.probed.clear();
     this.activity = activity;
     this.visible = activity.visible !== false;
     for (const job of this.jobs.values()) if (job.speculative &&
-      (!this.visible || (job.kind==='still' ? activity.warm===false : !activity.enabled))) job.controller.abort();
+      (!this.visible || (job.kind==='still' ? activity.warm===false : !activity.enabled) ||
+        (job.kind === 'probe' && (job.probeAfter !== activity.probeAfter || job.resolution.id !== activity.probe?.id)))) job.controller.abort();
   }
   request(target, direction = 1, stillsOnly = false, { detail = null, motion = true } = {}) {
     if (direction !== this.direction || stillsOnly !== this.stillsOnly) this.motionEpoch++;
@@ -148,7 +161,9 @@ export class FrameLoader {
     if (!this.visible || !this.best(this.target) || this.error(this.target)) return null;
     const a=this.activity, candidates=[];
     if(a.enabled && !this.stillsOnly) {
-      if(a.probe) for(const index of this.probeIndices()) candidates.push(this.spec(index,a.probe,'probe'));
+      if(a.probe && this.probeCount(a.probe) < RECOVERY_SAMPLE_COUNT) {
+        for(const index of this.probeIndices()) candidates.push(this.spec(index,a.probe,'probe'));
+      }
       if(a.sharp) {
         for(let offset=0;offset<=12;offset++) {
           candidates.push(this.spec(this.target+offset*this.direction,a.sharp,'near'));
@@ -163,7 +178,7 @@ export class FrameLoader {
     }
     return candidates.find(x=>x.index>=0 && x.index<this.manifest.frames.length &&
       (x.kind==='probe' ? !this.probed.has(x.key) && (this.blobs.has(x.key) || !this.attempted.has(x.key)) : !this.attempted.has(x.key)) &&
-      !this.jobs.has(x.key) && (x.kind==='probe' ? !this.cache.has(x.key) : !this.blobs.has(x.key)));
+      !this.jobs.has(x.key) && (x.kind==='probe' ? !this.errors.has(x.key) : !this.blobs.has(x.key)));
   }
   pump() {
     if(this.disposed || !this.visible || this.target===undefined) return;
@@ -194,7 +209,7 @@ export class FrameLoader {
     }
   }
   start(spec,speculative) {
-    const job={...spec,speculative,demanded:spec.index===this.target,controller:new AbortController(),epoch:this.epoch,motionEpoch:this.motionEpoch};
+    const job={...spec,speculative,demanded:spec.index===this.target,probeAfter:this.activity.probeAfter,controller:new AbortController(),epoch:this.epoch,motionEpoch:this.motionEpoch};
     this.jobs.set(spec.key,job);
     this.maxRequests=Math.max(this.maxRequests,this.jobs.size);
     this.maxSpeculative=Math.max(this.maxSpeculative,[...this.jobs.values()].filter(x=>x.speculative).length);
@@ -203,11 +218,14 @@ export class FrameLoader {
   async load(job) {
     const {controller,key,index,resolution}=job;
     const valid=()=>!this.disposed && !controller.signal.aborted && job.epoch===this.epoch && job.motionEpoch===this.motionEpoch;
-    const wanted=()=>valid() && (job.kind==='detail' ? this.detail?.key===key : !this.stillsOnly || index===this.target);
+    const wanted=()=>valid() && (job.kind === 'probe'
+      ? this.activity.enabled && this.activity.probe?.id === resolution.id && job.probeAfter === this.activity.probeAfter
+      : job.kind==='detail' ? this.detail?.key===key : !this.stillsOnly || index===this.target);
     let timedOut=false, fetchMs=0, cached=true;
     const timeout=setTimeout(()=>{timedOut=true;controller.abort()},8000);
     try {
       let blob=this.blobs.get(key)?.blob;
+      const fromBlobCache = Boolean(blob);
       if(!blob){
         const start=this.clock(), url=this.url(index,resolution);
         const response=await this.fetchFrame(url,{signal:controller.signal,cache:this.reload.has(key)?'reload':'force-cache',priority:job.speculative?'low':index===this.target?'high':'auto'});
@@ -226,10 +244,10 @@ export class FrameLoader {
       clearTimeout(timeout);
       job.downloaded = true;
       if(!this.disposed && !controller.signal.aborted)this.remember(job,blob);
-      if(job.speculative)this.backgroundFetched++;
+      if(job.speculative && !fromBlobCache)this.backgroundFetched++;
       if(job.speculative && job.kind!=='probe')return;
       const decode=this.decodeChain.then(async()=>{
-        if(!wanted() || this.cache.has(key) || (job.kind==='motion' && this.satisfies(job)))return;
+        if(!wanted() || (job.kind !== 'probe' && this.cache.has(key)) || (job.kind==='motion' && this.satisfies(job)))return;
         const bytes=resolution.width*resolution.height*4;
         this.reserve(bytes);
         let bitmap;
@@ -243,7 +261,7 @@ export class FrameLoader {
           }
           // A probe may measure a smaller tier without displacing an already sharper pose.
           const sharper=[...this.cache.values()].some(x=>x.variant===job.variant && x.index===index && Number(x.resolution.id)>Number(resolution.id));
-          if(sharper)bitmap.close();
+          if(sharper || (job.kind === 'probe' && this.cache.has(key)))bitmap.close();
           else {
             for(const other of [...this.cache.values()])if(other.variant===job.variant && other.index===index)this.evict(other.key);
             this.cache.set(key,{...job,bitmap});this.decodedBytes+=bytes;

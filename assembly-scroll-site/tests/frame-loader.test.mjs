@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { FrameLoader, MAX_DECODED_BYTES, MAX_IMAGES, MAX_REQUESTS, MAX_COMPRESSED_BYTES } from '../dist/frame-loader.mjs';
+import { QualityController } from '../dist/quality.mjs';
 const manifest = JSON.parse(readFileSync(new URL('../dist/assets/manifest.json', import.meta.url)));
 const pause = () => new Promise(resolve => setImmediate(resolve));
 async function until(condition) {
@@ -386,4 +387,64 @@ test('retry discards a corrupt compressed response and bypasses HTTP cache',asyn
     await until(()=>loader.error(0));corrupt=false;loader.retry();await until(()=>loader.get(0));
     assert.deepEqual(modes,['force-cache','reload']);
   } finally {loader.dispose()}
+});
+
+test('repeated failed recovery rounds remeasure cached images and eventually promote at the same pose', async () => {
+  let now = 1000, slow = true;
+  const requests = [], decoded = [];
+  const [small, medium, sharp] = manifest.variants.portrait.resolutions;
+  const quality = new QualityController();
+  const loader = new FrameLoader(manifest, () => {}, {
+    clock: () => now,
+    resourceTiming: () => ({ transferSize: 1000 }),
+    fetchFrame: async url => { requests.push(url); return sizedResponse(url); },
+    decodeFrame: async blob => {
+      now += slow && blob.width >= 720 ? 80 : 2;
+      const bitmap = image(blob.width, blob.height);
+      decoded.push(bitmap);
+      return bitmap;
+    },
+  });
+  const observe = () => quality.observe({ now, lag: 0, failed: false, rate: 30, deliveryMs: 5, samples: 8 });
+  try {
+    quality.configure(manifest.variants.portrait.resolutions, sharp, 540, false);
+    observe();
+    loader.selectVariant('portrait', small);
+    loader.setActivity({ sharp });
+    loader.request(420);
+    await until(() => loader.jobs.size === 0);
+    now += 3000;
+    let mediumRequests, backgroundFetched;
+    for (let round = 0; round < 6; round++) {
+      slow = round < 5;
+      observe();
+      assert.equal(quality.next(now).id, '720');
+      const before = loader.tierSamples(medium).length;
+      loader.setActivity({ enabled: true, sharp, probe: medium, probeAfter: quality.sampleAfter });
+      loader.request(420);
+      await until(() => loader.jobs.size === 0);
+      const rows = loader.tierSamples(medium);
+      assert.equal(rows.length - before, 3, 'Each recovery round must have a bounded batch of three samples');
+      const count = requests.filter(url => url.includes('/720/')).length;
+      mediumRequests ??= count;
+      assert.equal(count, mediumRequests, 'Later probe rounds must reuse compressed images');
+      backgroundFetched ??= loader.backgroundFetched;
+      assert.equal(loader.backgroundFetched, backgroundFetched, 'Cached probes are not background transfers');
+      if (slow) {
+        assert.equal(quality.promote(now, rows), false);
+        quality.probeFailed(now);
+        assert.equal(quality.nextDeadline(now), now + 15000);
+        now += 15000;
+      } else {
+        assert.ok(rows.slice(-3).every(row => row.cached));
+        assert.ok(quality.promote(now, rows));
+        assert.equal(quality.motion.id, '720');
+      }
+    }
+    assert.equal(new Set(requests).size, requests.length);
+    assert.ok(loader.maxRequests <= 4 && loader.maxSpeculative <= 1);
+    assert.ok(loader.maxDecoded <= 12 && loader.maxDecodedBytes <= MAX_DECODED_BYTES);
+    assert.ok(loader.maxCompressedBytes <= MAX_COMPRESSED_BYTES);
+  } finally { loader.dispose(); }
+  assert.ok(decoded.every(bitmap => bitmap.closed));
 });

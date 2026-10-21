@@ -56,6 +56,39 @@ const state = page => page.evaluate(() => ({ stage: { ...document.querySelector(
         return { targetStartMs, delayedNeighbors: held.length };
       } finally { release(); }
     });
+    await check('recovery survives repeated slow probes at an unchanged endpoint', async page => {
+      const requests = [];
+      page.on('request', request => { if (request.url().includes('/720/')) requests.push(request.url()); });
+      await page.addInitScript(() => {
+        Object.defineProperty(navigator, 'connection', { value: { saveData: false, downlink: 1.6, effectiveType: '4g', addEventListener() {} } });
+        window.auditDecodeSlow = true;
+        window.auditDecodeSamples = [];
+        const decode = window.createImageBitmap.bind(window);
+        window.createImageBitmap = async (...args) => {
+          const bitmap = await decode(...args);
+          if (window.auditDecodeSlow && bitmap.width >= 720) await new Promise(resolve => setTimeout(resolve, 80));
+          window.auditDecodeSamples.push({ width: bitmap.width, at: performance.now(), slow: window.auditDecodeSlow });
+          return bitmap;
+        };
+      });
+      await page.goto(base);
+      await frame(page, 0);
+      for (let i = 1; i <= 12; i++) {
+        await page.evaluate(i => scrollTo(0, i * 10 / 420 * (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)), i);
+        await page.waitForTimeout(40);
+      }
+      await page.evaluate(() => scrollTo(0, document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight));
+      await frame(page, 420);
+      await page.waitForFunction(() => window.auditDecodeSamples.filter(row => row.width === 720).length >= 12, null, { timeout: 70000 });
+      const before = await state(page);
+      assert.equal(before.stage.resolution, '540');
+      await page.waitForTimeout(300);
+      await page.evaluate(() => { window.auditDecodeSlow = false; });
+      await page.waitForFunction(() => document.querySelector('#stage').dataset.resolution === '1080', null, { timeout: 26000 });
+      await frame(page, 420);
+      assert.equal(new Set(requests).size, requests.length, 'Repeated recovery probes must not redownload the same asset');
+      return { before, mediumRequests: requests.length, samples: await page.evaluate(() => window.auditDecodeSamples.filter(row => row.width === 720)) };
+    }, { viewport: { width: 443, height: 840 }, screen: { width: 443, height: 986 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
     report.completed = true;
   } finally {
     fs.mkdirSync(path.dirname(output), { recursive: true });

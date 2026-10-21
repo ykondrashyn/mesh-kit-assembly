@@ -1,6 +1,6 @@
-import { QualityController, cachedDecodeHasHeadroom, canPrepareWhileScrolling } from './quality.mjs?v=progressive-1';
+import { QualityController, RECOVERY_SAMPLE_COUNT, cachedDecodeHasHeadroom, canPrepareWhileScrolling } from './quality.mjs?v=audit-fixes-2';
 import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=progressive-1';
-import { FrameLoader } from './frame-loader.mjs?v=audit-fixes-1';
+import { FrameLoader } from './frame-loader.mjs?v=audit-fixes-2';
 import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=progressive-1';
 
 const $ = selector => document.querySelector(selector);
@@ -290,10 +290,14 @@ function render(now) {
       if (!loader.error(i,probe) || observedProbeFailures.has(key)) return false;
       observedProbeFailures.add(key); return true;
     });
-    if (failed || (samples.length >= 3 && !quality.hasHeadroom(samples, now))) {
+    if (failed || (samples.length >= RECOVERY_SAMPLE_COUNT && !quality.hasHeadroom(samples, now))) {
       quality.probeFailed(now); probe = null;
     } else if (quality.promote(now, samples)) {
       loader.selectVariant(variant, quality.motion); probe = null;
+    } else if (loader.probeBatchFinished(probe)) {
+      // Aborted or expired samples can leave a batch short of three useful
+      // measurements. Retry cached decodes after a cooldown instead of stalling.
+      quality.probeFailed(now); probe = null;
     }
   }
   const sharp = stillMode() ? manifest.variants[variant].resolutions[0] : quality.desired;
@@ -303,7 +307,7 @@ function render(now) {
   const preparationReady = stillMode() || canPrepareWhileScrolling(idle, loader.deliveryMs, Math.max(rate,quality.rate), loader.deliverySamples);
   const distant = backgroundEnabled && quality.distant(now, loader.networkSummary());
   loader.setActivity({ visible: true, enabled: backgroundEnabled && healthy && preparationReady && !saveData && !stillMode(),
-    warm: healthy && preparationReady, sharp, probe, distant, preferCached: preferCached && !stillMode() });
+    warm: healthy && preparationReady, sharp, probe, probeAfter: quality.sampleAfter, distant, preferCached: preferCached && !stillMode() });
   const opening = !enhanced && !stillMode();
   const refine = !stillMode() && enhanced && current === index && progress === targetProgress && idle >= 600;
   const detail = opening || refine ? sharp : null;

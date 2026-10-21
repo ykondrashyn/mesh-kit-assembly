@@ -1,5 +1,8 @@
 import { qualityLagDelay } from './timeline.mjs?v=progressive-1';
 
+export const RECOVERY_SAMPLE_COUNT = 3;
+export const RECOVERY_RETRY_MS = 15000;
+
 export function cachedDecodeHasHeadroom(rows, rate) {
   const displayRate = Math.max(1, Math.min(60, rate));
   return rows.length > 0 && rows.every(x => x.decodeMs * displayRate <= 700);
@@ -49,11 +52,11 @@ export class QualityController {
     return this.resolutions.find(x=>Number(x.id)>Number(this.motion.id) && Number(x.id)<=Number(this.desired.id)) || null;
   }
   usableSamples(rows,now) {
-    return [...new Map(rows.filter(x=>now-x.at<=10000 && x.at>=this.sampleAfter).map(x=>[x.index,x])).values()].slice(-3);
+    return [...new Map(rows.filter(x=>now-x.at<=10000 && x.at>=this.sampleAfter).map(x=>[x.index,x])).values()].slice(-RECOVERY_SAMPLE_COUNT);
   }
   hasHeadroom(rows,now) {
     const unique=this.usableSamples(rows,now);
-    return unique.length===3 && unique.every(x=>x.decodeMs*this.rate<=700 && (x.cached || x.fetchMs*this.rate<=2800));
+    return unique.length===RECOVERY_SAMPLE_COUNT && unique.every(x=>x.decodeMs*this.rate<=700 && (x.cached || x.fetchMs*this.rate<=2800));
   }
   promote(now,rows) {
     const next=this.next(now);
@@ -61,7 +64,7 @@ export class QualityController {
     this.motion=next;this.lastPromotion=now;this.promotions++;
     return true;
   }
-  probeFailed(now) { this.retryAt=now+15000; this.sampleAfter=now; }
+  probeFailed(now) { this.retryAt=now+RECOVERY_RETRY_MS; this.sampleAfter=now; }
   distant(now,network) { return !this.saveData && this.healthy(now) && network.count>=8 && network.mbps>=5; }
   nextDeadline(now) {
     const deadlines=[this.healthySince===null?0:this.healthySince+3000,this.lastDrop+10000,this.lastPromotion+5000,this.retryAt];
