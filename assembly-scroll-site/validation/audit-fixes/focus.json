@@ -1,0 +1,190 @@
+{
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "checks": [
+    {
+      "name": "disclosure keeps keyboard focus visible at 1440x900",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "height": 900,
+        "exposed": true
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "full",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "requestedFrame": "315",
+          "progress": "0.750000",
+          "targetProgress": "0.750000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "6",
+          "maxDecodedFrames": "6",
+          "decodedBytes": "49766400",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "571380",
+          "maxCompressedBytes": "571380",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "11",
+          "networkSamples": "15",
+          "networkMbps": "54.38",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "layout": "full"
+        }
+      }
+    },
+    {
+      "name": "disclosure keeps keyboard focus visible at 390x844",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "height": 844,
+        "exposed": true
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750000",
+          "targetProgress": "0.750000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "24883200",
+          "maxRequests": "4",
+          "compressedBytes": "454760",
+          "maxCompressedBytes": "454760",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "26",
+          "networkSamples": "25",
+          "networkMbps": "68.64",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "540",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540",
+          "layout": "phone"
+        }
+      }
+    },
+    {
+      "name": "disclosure keeps keyboard focus visible at 320x568",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "height": 568,
+        "exposed": true
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750000",
+          "targetProgress": "0.750000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "24883200",
+          "maxRequests": "4",
+          "compressedBytes": "454760",
+          "maxCompressedBytes": "454760",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "26",
+          "networkSamples": "25",
+          "networkMbps": "85.01",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "540",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540",
+          "layout": "phone"
+        }
+      }
+    },
+    {
+      "name": "disclosure keeps keyboard focus visible at 568x320",
+      "passed": true,
+      "details": {
+        "width": 568,
+        "height": 320,
+        "exposed": true
+      },
+      "final": {
+        "stage": {
+          "mode": "animation",
+          "layout": "phone",
+          "orientation": "landscape",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750000",
+          "targetProgress": "0.750000",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "24883200",
+          "maxRequests": "4",
+          "compressedBytes": "479682",
+          "maxCompressedBytes": "479682",
+          "maxSpeculative": "1",
+          "backgroundFetched": "5",
+          "jobs": "0",
+          "preparedFrames": "26",
+          "networkSamples": "25",
+          "networkMbps": "99.56",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "540",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "540",
+          "layout": "phone"
+        }
+      }
+    }
+  ]
+}

@@ -89,6 +89,52 @@ const state = page => page.evaluate(() => ({ stage: { ...document.querySelector(
       assert.equal(new Set(requests).size, requests.length, 'Repeated recovery probes must not redownload the same asset');
       return { before, mediumRequests: requests.length, samples: await page.evaluate(() => window.auditDecodeSamples.filter(row => row.width === 720)) };
     }, { viewport: { width: 443, height: 840 }, screen: { width: 443, height: 986 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+    for (const [width, height] of [[1440, 900], [390, 844], [320, 568], [568, 320]]) {
+      await check(`disclosure keeps keyboard focus visible at ${width}x${height}`, async page => {
+        await page.goto(new URL('?background=off', base).href);
+        await frame(page, 0);
+        await page.locator('[data-chapter="boards"]').click();
+        await frame(page, 315);
+        const summary = page.locator('#instructions summary');
+        const isOpen = () => page.locator('#instructions').evaluate(element => element.open);
+        await summary.focus();
+        await page.keyboard.press('Enter');
+        for (let i = 0; i < 3; i++) {
+          await page.keyboard.press('Tab');
+          assert.equal(await isOpen(), true, 'Moving within the disclosure must keep it open');
+        }
+        await page.keyboard.press('Shift+Tab');
+        assert.equal(await page.evaluate(() => document.activeElement.id), 'motion-toggle');
+        assert.equal(await isOpen(), true);
+        await page.keyboard.press('Tab');
+        await page.keyboard.press('Tab');
+        assert.equal(await page.evaluate(() => document.activeElement.id), 'enlarge-connector');
+        assert.equal(await isOpen(), false, 'Leaving the disclosure must reveal the focused connector');
+        const exposed = await page.locator('#enlarge-connector').evaluate(element => {
+          const box = element.querySelector('span').getBoundingClientRect();
+          return element.contains(document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2));
+        });
+        assert.ok(exposed);
+        await page.screenshot({ path: output.replace('.json', `-focus-${width}x${height}.png`) });
+        // Escape must also work if the disclosure opens without moving focus.
+        await page.evaluate(() => { document.querySelector('#instructions').open = true; });
+        await page.keyboard.press('Escape');
+        assert.equal(await isOpen(), false);
+        assert.equal(await page.evaluate(() => document.activeElement.id), 'enlarge-connector');
+        await summary.focus();
+        await page.keyboard.press('Enter');
+        await page.keyboard.press('Tab');
+        await page.keyboard.press('Escape');
+        assert.equal(await isOpen(), false);
+        assert.ok(await summary.evaluate(element => document.activeElement === element));
+        // The connector modal keeps its native Escape and focus return behavior.
+        await page.locator('#enlarge-connector').click();
+        await page.keyboard.press('Escape');
+        assert.equal(await page.locator('#connector-dialog').evaluate(element => element.open), false);
+        assert.equal(await page.evaluate(() => document.activeElement.id), 'enlarge-connector');
+        return { width, height, exposed };
+      }, { viewport: { width, height } });
+    }
     report.completed = true;
   } finally {
     fs.mkdirSync(path.dirname(output), { recursive: true });

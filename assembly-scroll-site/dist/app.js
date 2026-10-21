@@ -484,10 +484,14 @@ retry.addEventListener('click', () => {
   }
 });
 motionToggle.addEventListener('click', () => setMode(stillMode() ? 'animation' : 'manual'));
-instructions.addEventListener('keydown', event => {
-  if (enhanced && instructions.open && event.key === 'Escape') {
+document.addEventListener('focusin', event => {
+  if (enhanced && instructions.open && !instructions.contains(event.target)) instructions.open = false;
+});
+document.addEventListener('keydown', event => {
+  if (enhanced && instructions.open && !connectorDialog.open && event.key === 'Escape') {
+    const returnFocus = instructions.contains(document.activeElement);
     instructions.open = false;
-    instructionsSummary.focus();
+    if (returnFocus) instructionsSummary.focus({ preventScroll: true });
     event.preventDefault();
   }
 });
