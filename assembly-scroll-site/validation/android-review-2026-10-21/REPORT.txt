@@ -1,0 +1,103 @@
+MOBILE ASSEMBLY SITE REVIEW
+21 October 2026
+
+Conclusion
+The existing architecture is suitable for the task. Keep native scrolling, a single bottom progress line, the two artwork orientations and optional chapter stills. The highest priority is a reproducible Android rotation defect. Next improve phone landscape legibility and choose a smaller initial image tier. A framework migration or replacing the renderer is not justified by these tests.
+
+Device and scope
+Physical Pixel 10 Pro XL, Android 17, Chrome 155.0.8059.81. Screen 1080 x 2404, DPR 2.4375. Portrait content viewport 443 x 840 CSS pixels with browser controls shown, growing to about 443 x 920 as controls collapse. Landscape content viewport about 920 x 338 with browser controls shown.
+
+Tested the public GitHub Pages site through USB remote debugging, using Android input swipes and Chrome touch injection. Rotation used Android's display rotation setting. This is actual phone execution, not a desktop viewport simulation. Normal and constrained-network runs bypassed the HTTP cache. The constrained run used 1.6 Mbps download and 150 ms latency on the phone's real CPU, with no artificial CPU slowdown.
+
+The live app.js SHA-256 matched the local source:
+f27c28003b8978e3d4d710c8ab3fa24ebb86e519fa103da7137cb4e19ecd9f03
+Local repository HEAD: 142191c3fbc23de1cc857ea4871eb68fb93fb392.
+No production code, artwork or deployment was changed by this review.
+
+Prioritized improvements
+
+1. HIGH: Correct viewport sizing after rotation.
+Reproduction: open Boards, rotate portrait to landscape, then return to portrait. Repeated twice from a fresh navigation. The viewport returned to 840 CSS pixels, but --viewport-height and the stage stayed at 1244 pixels. The footer bottom was at y=1232, outside the visible screen. The connector circle was partly cut off. The mismatch persisted for at least three seconds. Progress stayed approximately 0.75, so preserving progress alone did not prevent the layout defect.
+Evidence: rotation-check.json, rotation-phone-0.png, rotation-return-0.png.
+Source: dist/app.js resizeStage() writes innerHeight into a persistent CSS variable. The listeners at lines 213-220 use window resize and the artwork ResizeObserver. A transient measurement during rotation is a strong explanation, not a fully isolated browser-event root cause.
+Recommendation: derive the stage from a reliable live viewport size, validate the final size after orientation settles, and handle visualViewport changes without counteracting pinch zoom. Keep scroll distance stable during toolbar animation, then preserve logical progress when a real orientation change requires a new span. Do not simply replace every height with dvh, since dynamic viewport updates are throttled and can make the scroll denominator move under the user's finger. Add the real-device rotation sequence as a regression check. [1, 2, 3]
+
+2. HIGH: Improve readability in phone landscape.
+The whole landscape frame fitted into only 412 x 232 CSS pixels in a 920 x 338 viewport. Most horizontal space was unused, and the connector circle and its text were much smaller than in portrait. This is a consequence of fitting a 16:9 composition into the remaining short screen area, not an image-download problem.
+Evidence: landscape-boards.png and the rotation check's canvasRect measurements.
+Recommendation: offer a tap-to-enlarge connector view, and use a compact landscape-phone composition or rearranged artwork regions for very wide, short stages. Keep both orientations supported. Raising WebP resolution alone will not enlarge the captions. [3, 4]
+
+3. HIGH: Begin mobile animation at a conservative image tier.
+This phone selected 1080p on entry because of the DPR-based rule, then dropped to 720p and 540p in both network profiles. First decoded animation frame appeared at 0.779 s on the unthrottled connection and 2.157 s on the constrained connection. The latter continued animating but showed only 134 distinct updates during roughly 16.3 s of forward assembly. The largest interval between changed images was 693 ms. Reverse traversal had 147 changes in 15.3 s. These are changed-image counts, not GPU display-frame-rate measurements.
+Recommendation: test 720p as the general phone starting tier and 540p for constrained or data-saving conditions. Use measured delivery speed and scroll velocity to adapt. Consider fetching a sharper current image once the user stops or zooms, without upgrading the entire stream.
+The complete portrait sequence is 17.90 MB at 1080p, 11.06 MB at 720p, and 7.47 MB at 540p. These are file totals, not the amount every visit necessarily downloads. [5]
+
+4. MEDIUM: Make loading feedback reflect an actual stall.
+In the normal cold-cache forward leg, the loading badge was visible in about 91% of periodic samples. On the constrained run it was visible in about 96% of samples taken while scrolling. Images were still advancing during much of that time.
+Recommendation: show a subtle pending state only when the displayed image has not advanced for a sustained interval, or after a chapter tap has not resolved. Keep clear error text and Retry for actual failures. Avoid announcing repeated minor loading gaps through a live region. The lower resolution default should reduce the underlying lag as well.
+Evidence: normal.json, slow-recovered.json and slow-measurements.json.gz. The sampled definitions differ slightly, so treat these percentages as the scale of the issue rather than a precisely matched comparison.
+
+5. MEDIUM: Increase important text size while retaining the minimal layout.
+Bottom navigation labels are 11 CSS pixels, despite adequate tap areas of about 80 x 44 pixels. Portrait connector captions are also small because their typography is baked into a scaled image. The landscape case is more severe.
+Recommendation: test 13-14 CSS pixels for navigation and 15-16 pixels for a short responsive HTML step instruction. These are design targets, not WCAG-prescribed minimum font sizes. Keep detailed instructions in the expandable panel and retain authentic chip/antenna markings in the artwork. Provide a high-quality enlarged connector view for inspection. [4, 6]
+
+6. LOWER: Clarify the mobile gesture without making the page longer.
+One forward traversal took 18 large deliberate swipes, with 17 to return. That distance allows fine control but is already substantial. Keep the chapter shortcuts. Use a brief mobile hint such as "Swipe up to assemble" and consider "Scroll or tap a step" when useful. Do not add more scroll distance as a substitute for fixing loading lag. This is a design recommendation from the observed interaction, not a measured user-comprehension result.
+
+What already works
+- Actual touch scrolling reached both endpoints, stopped when input stopped, and reversed without stale images moving in the wrong direction.
+- Wi-Fi, LoRa and Boards taps landed on reviewed frames 90, 180 and 315. The correct board, connector and close-up were visible in portrait.
+- The normal test downloaded no inactive landscape images initially.
+- The loader's reported peak was 4 requests, 12 decoded/reserved images and 49,766,400 bytes, about 47.46 MiB, within its 48 MiB budget. This does not measure the browser's complete process or GPU memory.
+- No JavaScript long tasks over 50 ms were observed in either instrumented traversal. Network/frame availability appears more important than a demonstrated CPU bottleneck in these runs.
+- Pinch zoom reached approximately 2x, and panning the tested zoomed view did not advance the assembly frame.
+- The instructions panel scrolled independently without moving the assembly.
+- Reduced-motion media preference selected chapter stills. Explicitly enabling animation and manually returning to stills worked.
+- A blocked Boards target image retained a previous valid image, showed an error, and Retry recovered frame 315 after the request was unblocked.
+- With JavaScript disabled, the normal parts image loaded, all five written instructions were present and open, and the Boards anchor link worked.
+- Doubling the HTML text size in the test produced no document or panel horizontal overflow. This was a CSS enlargement stress check, not a test of Android's global accessibility font setting.
+- The navigation meets the 44 x 44 CSS pixel enhanced target-size recommendation in the measured portrait layout. WCAG 2.2 AA specifies a smaller 24 x 24 minimum with exceptions. [6, 7]
+
+Performance measurements
+Unthrottled cold cache: first animation image 779 ms, forward 277 changed images over 16.30 s, reverse 402 over 15.11 s. Forward p95 interval between changes 150 ms, maximum 273 ms.
+Constrained cold cache: first animation image 2157 ms, forward 134 changed images over 16.29 s, reverse 147 over 15.32 s. Forward p95 interval 392 ms, maximum 693 ms.
+Normal run transferred approximately 15.67 MB across both traversals and chapter checks with cache bypass enabled. This is not a normal repeat-visit data estimate.
+The fallback/text painted earlier than the canvas became ready. Standard LCP alone therefore does not describe the readiness or smoothness of this viewer. Track time to first usable frame, image age during gestures and chapter-response time alongside Core Web Vitals. Google's field targets are LCP <=2.5 s, INP <=200 ms and CLS <=0.1 at the 75th percentile. This single-device lab test does not establish field compliance. [8]
+
+Validation limits and test interruptions
+- One recent high-end Android phone and Chrome only. No iPhone Safari, Samsung Internet, Firefox Android, low-end Android, TalkBack user journey, battery benchmark, or physical cellular-radio test.
+- Native swipes were injected through ADB and rotation through Android settings. They exercise the real browser/device but are not a human usability study.
+- Network constraint was applied through DevTools while the phone remained on its existing connection.
+- The Mac ran out of disk space during two attempts to save the constrained run. The second run's in-page measurements were recovered and compressed. Its original request log and exact outer-loop timestamps were not recovered. The incomplete slow.json was removed. Use slow-recovered.json, slow-measurements.json.gz and summary.json.
+- The first accessibility sequence attempted to tap an offscreen toggle after the instructions panel had been scrolled. Its uncleared reduced-motion emulation also invalidated later frame-0 waits. The isolated rerun in accessibility-check.json reset state for each case and passed. Those earlier harness errors are not site defects.
+- Redundant screenshots created during this audit were removed to retain space for the useful evidence. No existing project files or unrelated user files were deleted.
+
+Sources, checked 21 October 2026
+[1] Google, mobile viewport units and their update caveats:
+https://web.dev/blog/viewport-units
+[2] MDN, VisualViewport:
+https://developer.mozilla.org/en-US/docs/Web/API/Window/visualViewport
+[3] W3C, orientation support:
+https://www.w3.org/WAI/WCAG22/Understanding/orientation.html
+[4] W3C, text enlargement:
+https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html
+[5] Google, responsive images and transfer size:
+https://web.dev/articles/serve-responsive-images/
+[6] W3C, 44-pixel enhanced touch targets:
+https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html
+[7] W3C, 24-pixel minimum touch targets:
+https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+[8] Google, Core Web Vitals and field thresholds:
+https://web.dev/articles/vitals
+[9] W3C, user control over interaction-triggered motion:
+https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html
+[10] MDN, canvas rendering efficiency:
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
+[11] Chrome, real Android remote debugging:
+https://developer.chrome.com/docs/devtools/remote-debugging/
+
+Reproduction
+Scripts in this folder use Node 22's WebSocket implementation and adb, with no package installation. Open a dedicated Chrome tab containing audit=android-mobile-20261021 in its URL, then forward localhost TCP 9227 to chrome_devtools_remote. Run audit.cjs normal, audit.cjs slow, rotation-check.cjs and accessibility-check.cjs sequentially. device.cjs prints current measurements. The gesture coordinates are specific to this phone's 1080 x 2404 screen. rotation-check.cjs assumes the tested locked-portrait setting and restores user_rotation=0. Use and restore the actual starting device settings on any future device.
+
+Cleanup verified
+Closed the two audit tabs only. Restored screen timeout to 30000 ms, locked-portrait rotation settings to accelerometer_rotation=0 and user_rotation=0, and removed the temporary TCP 9227 forwarding. Repository diff is empty, with this evidence folder untracked. No commit, push or deployment was made.

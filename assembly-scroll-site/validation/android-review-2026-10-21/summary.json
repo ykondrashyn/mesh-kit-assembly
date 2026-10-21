@@ -1,0 +1,59 @@
+{
+  "normal": {
+    "firstAnimationMs": 778.5999999996275,
+    "legs": [
+      {
+        "direction": "forward",
+        "updates": 277,
+        "maxFrameGapMs": 272.90000000037253,
+        "p95FrameGapMs": 149.5,
+        "first": 1,
+        "last": 420,
+        "durationMs": 16295.700000001118,
+        "backwardsUpdates": 0
+      },
+      {
+        "direction": "reverse",
+        "updates": 402,
+        "maxFrameGapMs": 150.40000000037253,
+        "p95FrameGapMs": 67.20000000111759,
+        "first": 420,
+        "last": 0,
+        "durationMs": 15111.400000000373,
+        "backwardsUpdates": 0
+      }
+    ],
+    "longTasks": 0
+  },
+  "slow": {
+    "firstAnimationMs": 2157.4000000003725,
+    "legs": [
+      {
+        "direction": "forward",
+        "updates": 134,
+        "maxFrameGapMs": 693.2999999988824,
+        "p95FrameGapMs": 392.3999999985099,
+        "first": 1,
+        "last": 420,
+        "durationMs": 16293,
+        "backwardsUpdates": 0
+      },
+      {
+        "direction": "reverse",
+        "updates": 147,
+        "maxFrameGapMs": 542,
+        "p95FrameGapMs": 234.09999999962747,
+        "first": 420,
+        "last": 0,
+        "durationMs": 15318.900000000373,
+        "backwardsUpdates": 0
+      }
+    ],
+    "longTasks": 0
+  },
+  "normalTransferBytes": 15667125,
+  "normalInitialInactiveRequests": 0,
+  "normalMaxRequests": "4",
+  "normalMaxDecodedBytes": "49766400",
+  "normalMaxDecodedFrames": "12"
+}

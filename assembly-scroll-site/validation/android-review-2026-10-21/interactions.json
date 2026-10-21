@@ -1,0 +1,1128 @@
+{
+  "date": "2026-10-21T13:13:47.753Z",
+  "checks": [
+    {
+      "name": "rotation",
+      "before": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "180",
+          "progress": "0.428571",
+          "targetProgress": "0.428571",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "180",
+          "sourceFrame": "241",
+          "orientation": "portrait",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 839.7948608398438,
+          "visualWidth": 443.0769348144531,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 4320
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 706,
+          "bottom": 762
+        },
+        "canvasRect": {
+          "x": 22.9743595123291,
+          "y": 56,
+          "width": 397.1217956542969,
+          "height": 706,
+          "bottom": 762
+        },
+        "controls": {
+          "x": 14,
+          "y": 762,
+          "width": 415.0769348144531,
+          "height": 66,
+          "bottom": 828
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 774,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 818
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 774,
+              "width": 79.82051086425781,
+              "height": 44,
+              "bottom": 818
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 774,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 818
+            },
+            "font": "11px",
+            "current": "step"
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 774,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 818
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 774,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 818
+            },
+            "font": "11px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 10080,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "landscape": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "landscape",
+          "resolution": "540",
+          "requestedFrame": "180",
+          "progress": "0.428564",
+          "targetProgress": "0.428564",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "180",
+          "sourceFrame": "241",
+          "orientation": "landscape",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 920,
+          "height": 338,
+          "dpr": 2.4375,
+          "visualHeight": 338.4615478515625,
+          "visualWidth": 920.2051391601562,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 1738.2564697265625
+        },
+        "artwork": {
+          "x": 24,
+          "y": 48,
+          "width": 872.2051391601562,
+          "height": 232,
+          "bottom": 280
+        },
+        "canvasRect": {
+          "x": 253.87820434570312,
+          "y": 48,
+          "width": 412.44232177734375,
+          "height": 232,
+          "bottom": 280
+        },
+        "controls": {
+          "x": 80.1025619506836,
+          "y": 280,
+          "width": 760,
+          "height": 54,
+          "bottom": 334
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 750.8204956054688,
+          "y": 56,
+          "width": 145.38461303710938,
+          "height": 158,
+          "bottom": 214
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 80.1025619506836,
+              "y": 280,
+              "width": 67.2371826171875,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 243.9166717529297,
+              "y": 280,
+              "width": 64.98076629638672,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 405.474365234375,
+              "y": 280,
+              "width": 66.26282501220703,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": "step"
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 568.3076782226562,
+              "y": 280,
+              "width": 77.25,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 742.1346435546875,
+              "y": 280,
+              "width": 97.96794891357422,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 4056,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "boards": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "landscape",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750013",
+          "targetProgress": "0.750013",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 920,
+          "height": 338,
+          "dpr": 2.4375,
+          "visualHeight": 338.4615478515625,
+          "visualWidth": 920.2051391601562,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 3042.05126953125
+        },
+        "artwork": {
+          "x": 24,
+          "y": 48,
+          "width": 872.2051391601562,
+          "height": 232,
+          "bottom": 280
+        },
+        "canvasRect": {
+          "x": 253.87820434570312,
+          "y": 48,
+          "width": 412.44232177734375,
+          "height": 232,
+          "bottom": 280
+        },
+        "controls": {
+          "x": 80.1025619506836,
+          "y": 280,
+          "width": 760,
+          "height": 54,
+          "bottom": 334
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 750.8204956054688,
+          "y": 56,
+          "width": 145.38461303710938,
+          "height": 158,
+          "bottom": 214
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 80.1025619506836,
+              "y": 280,
+              "width": 67.2371826171875,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 243.87820434570312,
+              "y": 280,
+              "width": 64.98076629638672,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 405.3910217285156,
+              "y": 280,
+              "width": 65.84615325927734,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 567.775634765625,
+              "y": 280,
+              "width": 77.8269271850586,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 742.1346435546875,
+              "y": 280,
+              "width": 97.96794891357422,
+              "height": 44,
+              "bottom": 324
+            },
+            "font": "13px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 4056,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "portrait": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750021",
+          "targetProgress": "0.750021",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 839.7948608398438,
+          "visualWidth": 443.0769348144531,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 11196.3076171875
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 1110,
+          "bottom": 1166
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 242.03846740722656,
+          "width": 415.0769348144531,
+          "height": 737.9102783203125,
+          "bottom": 979.9487457275391
+        },
+        "controls": {
+          "x": 14,
+          "y": 1166,
+          "width": 415.0769348144531,
+          "height": 66,
+          "bottom": 1232
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 1178,
+              "width": 79.82051086425781,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 14928,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "summary": {
+        "before": "0.428571",
+        "landscape": "0.428564",
+        "boards": "315",
+        "portrait": "0.750021"
+      },
+      "completed": true
+    },
+    {
+      "name": "instructions",
+      "state": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750021",
+          "targetProgress": "0.750021",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 839.7948608398438,
+          "visualWidth": 443.0769348144531,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 11196.3076171875
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 1110,
+          "bottom": 1166
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 242.03846740722656,
+          "width": 415.0769348144531,
+          "height": 737.9102783203125,
+          "bottom": 979.9487457275391
+        },
+        "controls": {
+          "x": 14,
+          "y": 1166,
+          "width": 415.0769348144531,
+          "height": 66,
+          "bottom": 1232
+        },
+        "panelOpen": true,
+        "panel": {
+          "x": 14,
+          "y": 64,
+          "width": 415.0769348144531,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 1178,
+              "width": 79.82051086425781,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 14928,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "before": 11196.3076171875,
+      "after": {
+        "page": 11196.3076171875,
+        "panel": 242.05128479003906,
+        "maximum": 242
+      },
+      "summary": {
+        "panelWidth": 415.0769348144531,
+        "pageMoved": 0,
+        "panelScroll": 242.05128479003906
+      },
+      "completed": true
+    },
+    {
+      "name": "pinch-zoom",
+      "before": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750021",
+          "targetProgress": "0.750021",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 839.7948608398438,
+          "visualWidth": 443.0769348144531,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 11196.3076171875
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 1110,
+          "bottom": 1166
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 242.03846740722656,
+          "width": 415.0769348144531,
+          "height": 737.9102783203125,
+          "bottom": 979.9487457275391
+        },
+        "controls": {
+          "x": 14,
+          "y": 1166,
+          "width": 415.0769348144531,
+          "height": 66,
+          "bottom": 1232
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 1178,
+              "width": 79.82051086425781,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 14928,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "zoomed": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750021",
+          "targetProgress": "0.750021",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 419.8977966308594,
+          "visualWidth": 221.53863525390625,
+          "visualScale": 1.9999983310699463,
+          "visualOffset": 179.6923065185547,
+          "scrollY": 11196.3076171875
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 1110,
+          "bottom": 1166
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 242.03846740722656,
+          "width": 415.0769348144531,
+          "height": 737.9102783203125,
+          "bottom": 979.9487457275391
+        },
+        "controls": {
+          "x": 14,
+          "y": 1166,
+          "width": 415.0769348144531,
+          "height": 66,
+          "bottom": 1232
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 1178,
+              "width": 79.82051086425781,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 1178,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 1222
+            },
+            "font": "11px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 14928,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "panned": {
+        "stage": {
+          "mode": "animation",
+          "orientation": "portrait",
+          "resolution": "540",
+          "requestedFrame": "315",
+          "progress": "0.750019",
+          "targetProgress": "0.750019",
+          "settled": "true",
+          "decodedFrames": "12",
+          "maxDecodedFrames": "12",
+          "decodedBytes": "24883200",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "qualityLagMs": "800",
+          "qualityDrops": "2"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "540"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 920,
+          "dpr": 2.4375,
+          "visualHeight": 460.10296630859375,
+          "visualWidth": 221.53863525390625,
+          "visualScale": 1.9999983310699463,
+          "visualOffset": 320.4102478027344,
+          "scrollY": 8280.205078125
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 773,
+          "bottom": 829
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 73.53845977783203,
+          "width": 415.0769348144531,
+          "height": 737.9102783203125,
+          "bottom": 811.4487380981445
+        },
+        "controls": {
+          "x": 14,
+          "y": 829,
+          "width": 415.0769348144531,
+          "height": 66,
+          "bottom": 895
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 841,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 885
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 841,
+              "width": 79.82051086425781,
+              "height": 44,
+              "bottom": 885
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 841,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 885
+            },
+            "font": "11px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 841,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 885
+            },
+            "font": "11px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 841,
+              "width": 79.81410217285156,
+              "height": 44,
+              "bottom": 885
+            },
+            "font": "11px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 11040,
+        "connection": {
+          "type": "4g",
+          "downlink": 1.65,
+          "rtt": 50,
+          "saveData": false
+        }
+      },
+      "summary": {
+        "scale": 1.9999983310699463,
+        "beforeFrame": "315",
+        "zoomedFrame": "315",
+        "pannedFrame": "315"
+      },
+      "completed": true
+    },
+    {
+      "name": "reduced-motion-and-manual",
+      "error": "Wait failed: document.querySelector('#stage').dataset.mode==='animation'",
+      "completed": false
+    },
+    {
+      "name": "failed-frame-and-retry",
+      "error": "Wait failed: document.querySelector('canvas')?.dataset.frame==='0'",
+      "completed": false
+    },
+    {
+      "name": "javascript-disabled",
+      "error": "Wait failed: document.querySelector('canvas')?.dataset.frame==='0'",
+      "completed": false
+    }
+  ],
+  "completed": true
+}

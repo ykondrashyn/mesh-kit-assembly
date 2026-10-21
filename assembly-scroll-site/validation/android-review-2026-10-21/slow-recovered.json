@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-21T13:19:00.912Z",
+  "note": "Recovered browser instrumentation after host ENOSPC prevented the original report save. Request logs and exact per-leg timestamps were not recovered. Network constrained to 1.6 Mbps and 150 ms. No CPU throttle. Cache disabled.",
+  "summary": {
+    "paint": [
+      {
+        "name": "first-paint",
+        "t": 416,
+        "duration": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "t": 416,
+        "duration": 0
+      }
+    ],
+    "lcp": [
+      {
+        "name": "",
+        "t": 416,
+        "duration": 0
+      },
+      {
+        "name": "",
+        "t": 492,
+        "duration": 0
+      }
+    ],
+    "firstFrame": {
+      "t": 2157.4000000003725,
+      "frame": 0,
+      "requested": 0,
+      "mode": "animation",
+      "resolution": "1080",
+      "progress": 0,
+      "y": 0,
+      "h": 840,
+      "vh": 839.7948608398438,
+      "loading": false
+    },
+    "longTasks": [],
+    "shifts": [
+      {
+        "name": "",
+        "t": 396.40000000037253,
+        "duration": 0,
+        "value": 0.0013676228785830119,
+        "hadRecentInput": true
+      },
+      {
+        "name": "",
+        "t": 3365,
+        "duration": 0,
+        "value": 0.0003880855350650388,
+        "hadRecentInput": false
+      },
+      {
+        "name": "",
+        "t": 3383.300000000745,
+        "duration": 0,
+        "value": 0.0003099608772256437,
+        "hadRecentInput": false
+      },
+      {
+        "name": "",
+        "t": 3985.800000000745,
+        "duration": 0,
+        "value": 0.07160538929798184,
+        "hadRecentInput": true
+      },
+      {
+        "name": "",
+        "t": 20419.200000001118,
+        "duration": 0,
+        "value": 0.0004956731499153023,
+        "hadRecentInput": false
+      },
+      {
+        "name": "",
+        "t": 20438.200000001118,
+        "duration": 0,
+        "value": 0.004936143580101394,
+        "hadRecentInput": false
+      },
+      {
+        "name": "",
+        "t": 21296.800000000745,
+        "duration": 0,
+        "value": 0.0768108795739995,
+        "hadRecentInput": true
+      }
+    ],
+    "resize": [
+      {
+        "t": 379.7000000011176,
+        "frame": -1,
+        "requested": -1,
+        "progress": 0,
+        "y": 0,
+        "h": 840,
+        "vh": 839.7948608398438,
+        "loading": false
+      },
+      {
+        "t": 3972.5,
+        "frame": 8,
+        "requested": 21,
+        "mode": "animation",
+        "resolution": "1080",
+        "progress": 0.054253,
+        "y": 548.923095703125,
+        "h": 920,
+        "vh": 920.2051391601562,
+        "loading": true
+      },
+      {
+        "t": 21293.200000001118,
+        "frame": 405,
+        "requested": 400,
+        "mode": "animation",
+        "resolution": "540",
+        "progress": 0.94935,
+        "y": 10480.8203125,
+        "h": 840,
+        "vh": 839.7948608398438,
+        "loading": true
+      }
+    ],
+    "forward": {
+      "samples": 162,
+      "loadingPct": 96.29629629629629,
+      "lagP95": 21
+    },
+    "reverse": {
+      "samples": 149,
+      "loadingPct": 95.97315436241611,
+      "lagP95": 18
+    },
+    "allFrameUpdates": 300
+  },
+  "state": {
+    "stage": {
+      "mode": "animation",
+      "orientation": "portrait",
+      "resolution": "540",
+      "requestedFrame": "315",
+      "progress": "0.750020",
+      "targetProgress": "0.750020",
+      "settled": "true",
+      "decodedFrames": "12",
+      "maxDecodedFrames": "12",
+      "decodedBytes": "24883200",
+      "maxDecodedBytes": "49766400",
+      "maxRequests": "4",
+      "qualityLagMs": "800",
+      "qualityDrops": "2"
+    },
+    "canvas": {
+      "frame": "315",
+      "sourceFrame": "376",
+      "orientation": "portrait",
+      "resolution": "540"
+    },
+    "viewport": {
+      "width": 443,
+      "height": 840,
+      "dpr": 2.4375,
+      "visualHeight": 839.7948608398438,
+      "visualWidth": 443.0769348144531,
+      "visualScale": 1,
+      "visualOffset": 0,
+      "scrollY": 7560.205078125
+    },
+    "artwork": {
+      "x": 14,
+      "y": 56,
+      "width": 415.0769348144531,
+      "height": 706,
+      "bottom": 762
+    },
+    "canvasRect": {
+      "x": 22.9743595123291,
+      "y": 56,
+      "width": 397.1217956542969,
+      "height": 706,
+      "bottom": 762
+    },
+    "controls": {
+      "x": 14,
+      "y": 762,
+      "width": 415.0769348144531,
+      "height": 66,
+      "bottom": 828
+    },
+    "panelOpen": false,
+    "panel": {
+      "x": 283.69232177734375,
+      "y": 64,
+      "width": 145.38461303710938,
+      "height": 571.0576782226562,
+      "bottom": 635.0576782226562
+    },
+    "nav": [
+      {
+        "text": "01Parts",
+        "rect": {
+          "x": 14,
+          "y": 774,
+          "width": 79.81410217285156,
+          "height": 44,
+          "bottom": 818
+        },
+        "font": "11px",
+        "current": null
+      },
+      {
+        "text": "02Wi-Fi",
+        "rect": {
+          "x": 97.81410217285156,
+          "y": 774,
+          "width": 79.82051086425781,
+          "height": 44,
+          "bottom": 818
+        },
+        "font": "11px",
+        "current": null
+      },
+      {
+        "text": "03LoRa",
+        "rect": {
+          "x": 181.63461303710938,
+          "y": 774,
+          "width": 79.81410217285156,
+          "height": 44,
+          "bottom": 818
+        },
+        "font": "11px",
+        "current": null
+      },
+      {
+        "text": "04Boards",
+        "rect": {
+          "x": 265.44873046875,
+          "y": 774,
+          "width": 79.81410217285156,
+          "height": 44,
+          "bottom": 818
+        },
+        "font": "11px",
+        "current": "step"
+      },
+      {
+        "text": "✓Assembled",
+        "rect": {
+          "x": 349.2628173828125,
+          "y": 774,
+          "width": 79.81410217285156,
+          "height": 44,
+          "bottom": 818
+        },
+        "font": "11px",
+        "current": null
+      }
+    ],
+    "horizontalOverflow": false,
+    "load": "",
+    "span": 10080,
+    "connection": {
+      "type": "4g",
+      "downlink": 1.65,
+      "rtt": 50,
+      "saveData": false
+    }
+  }
+}
