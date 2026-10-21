@@ -141,6 +141,7 @@ nav a:hover { color: #202020; }
 #instructions summary { cursor: pointer; min-height: 44px; padding: 12px 4px; }
 #instructions h2 { font-size: 1em; margin: 14px 0 4px; }
 #instructions p { margin: 0 0 10px; }
+#instructions .kit-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: inherit; text-underline-offset: 3px; }
 #instructions ol { padding-left: 24px; margin-bottom: 0; }
 #instructions li { padding-left: 4px; scroll-margin: 12px; }
 #motion-options { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #ddd; font-size: 13px; color: #666; }
