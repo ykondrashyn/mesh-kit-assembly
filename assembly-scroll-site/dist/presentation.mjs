@@ -16,3 +16,14 @@ export const chapterCopy = {
   boards: { title: '04 Join the boards', instruction: 'Align the rear connector. Press straight down.' },
   assembled: { title: 'Assembled', instruction: 'Both antennas connected. Boards joined.' },
 };
+
+export function connectorAtFrame(index) {
+  if (index >= 87 && index <= 143) return { id: 'wifi', label: 'Wi-Fi antenna connector' };
+  if (index >= 159 && index <= 248) return { id: 'lora', label: 'LoRa antenna connector' };
+  if (index >= 315 && index <= 368) return { id: 'boards', label: 'Board connector' };
+  return null;
+}
+
+export function connectorCircle(orientation) {
+  return orientation === 'portrait' ? { x: 540, y: 1390, r: 300 } : { x: 1570, y: 515, r: 252 };
+}

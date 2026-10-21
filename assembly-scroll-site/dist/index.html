@@ -7,8 +7,8 @@
   <meta name="description" content="Assemble the XIAO ESP32S3 and Wio-SX1262 kit at your own pace. Scroll to connect the antennas and join the boards.">
   <title>Mesh kit · Scroll to assemble</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=clean-layout-1">
-  <script type="module" src="./app.js?v=clean-layout-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=mobile-1">
+  <script type="module" src="./app.js?v=mobile-1"></script>
 </head>
 <body>
   <main id="story" aria-label="Interactive mesh kit assembly">
@@ -24,6 +24,7 @@
           <img src="./assets/portrait/540/frame-0034.webp" fetchpriority="high" alt="Four parts: LoRa antenna, 868 MHz, Wio-SX1262 board, Wi-Fi antenna, 2.4 GHz, and XIAO ESP32S3 board.">
         </picture>
         <canvas id="assembly" role="img" aria-label="Assembly animation" hidden></canvas>
+        <button id="enlarge-connector" type="button" aria-haspopup="dialog" aria-label="Enlarge connector" hidden><span aria-hidden="true">+</span></button>
         <div id="load-state" hidden>
           <span id="load-message"></span>
           <button id="retry" type="button" hidden>Try again</button>
@@ -64,5 +65,18 @@
       </ol>
     </div>
   </details>
+  <dialog id="connector-dialog" aria-labelledby="connector-title" aria-describedby="connector-description">
+    <header><h2 id="connector-title">Connector</h2><button id="close-connector" type="button" autofocus>Close <span aria-hidden="true">×</span></button></header>
+    <div class="connector-content">
+      <canvas id="connector-image" role="img" aria-label="Enlarged connector"></canvas>
+      <div class="connector-copy">
+        <p id="connector-description">Enlarged view of the same connector. Animation is paused.</p>
+        <p id="connector-instruction"></p>
+        <p id="connector-note" hidden>XIAO socket shown simplified.</p>
+        <p id="connector-status" role="status"></p>
+        <button id="connector-retry" type="button" hidden>Try sharper image again</button>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>

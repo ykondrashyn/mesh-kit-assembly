@@ -14,7 +14,7 @@ const entries = [
   { id: 'boards', index: 315, source: 376, seated: 363 },
 ];
 const waitFrame = (page, index) => page.waitForFunction(i =>
-  Number(document.querySelector('canvas').dataset.frame) === i &&
+  Number(document.querySelector('#assembly').dataset.frame) === i &&
   document.querySelector('#stage').dataset.settled === 'true', index, { timeout: 20000 });
 
 (async () => {
@@ -34,11 +34,11 @@ const waitFrame = (page, index) => page.waitForFunction(i =>
       await waitFrame(page, 0);
       const served = await context.request.get(new URL('./assets/manifest.json', base).href);
       assert.equal(createHash('sha256').update(await served.body()).digest('hex'), report.manifestSHA256);
-      assert.equal(await page.locator('canvas').getAttribute('data-orientation'), orientation);
+      assert.equal(await page.locator('#assembly').getAttribute('data-orientation'), orientation);
       await page.evaluate(() => {
         window.chapterFrames = [];
-        new MutationObserver(() => window.chapterFrames.push(Number(document.querySelector('canvas').dataset.frame)))
-          .observe(document.querySelector('canvas'), { attributes: true, attributeFilter: ['data-frame'] });
+        new MutationObserver(() => window.chapterFrames.push(Number(document.querySelector('#assembly').dataset.frame)))
+          .observe(document.querySelector('#assembly'), { attributes: true, attributeFilter: ['data-frame'] });
       });
       for (const entry of entries) {
         const link = page.locator(`[data-chapter="${entry.id}"]`);
@@ -51,11 +51,11 @@ const waitFrame = (page, index) => page.waitForFunction(i =>
         }
         await waitFrame(page, entry.index);
         assert.equal(await link.getAttribute('aria-current'), 'step');
-        assert.equal(await page.locator('canvas').getAttribute('data-source-frame'), String(entry.source));
+        assert.equal(await page.locator('#assembly').getAttribute('data-source-frame'), String(entry.source));
         // Index-only tests previously accepted a blank fade frame. Check rendered
         // pixels in both the main scene and the circular connector region too.
         const ink = await page.evaluate(orientation => {
-          const canvas = document.querySelector('canvas');
+          const canvas = document.querySelector('#assembly');
           const pixels = canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height);
           const regions = orientation === 'landscape'
             ? { assembly: [.04, .18, .57, .75], connector: [.66, .21, .97, .79] }
@@ -75,7 +75,7 @@ const waitFrame = (page, index) => page.waitForFunction(i =>
         assert.ok(ink.connector > .0015, `${orientation} ${entry.id}: connector close-up is blank`);
         await page.screenshot({ path: output.replace('.json', `-${orientation}-${entry.id}.png`) });
         await page.waitForTimeout(300);
-        assert.equal(await page.locator('canvas').getAttribute('data-frame'), String(entry.index));
+        assert.equal(await page.locator('#assembly').getAttribute('data-frame'), String(entry.index));
 
         // Continue with native wheel events through seating, then reverse to the
         // same entry pose without waiting for individual animation frames.

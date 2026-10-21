@@ -1,0 +1,216 @@
+{
+  "checks": [
+    {
+      "name": "desktop",
+      "chapter": "wifi",
+      "index": 90,
+      "sharpRequests": [],
+      "size": 600,
+      "metrics": {
+        "mode": "animation",
+        "layout": "full",
+        "orientation": "landscape",
+        "resolution": "1080",
+        "requestedFrame": "90",
+        "progress": "0.214259",
+        "targetProgress": "0.214259",
+        "settled": "true",
+        "decodedFrames": "6",
+        "maxDecodedFrames": "6",
+        "decodedBytes": "49766400",
+        "maxDecodedBytes": "49766400",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "desktop",
+      "chapter": "lora",
+      "index": 180,
+      "sharpRequests": [],
+      "size": 600,
+      "metrics": {
+        "mode": "animation",
+        "layout": "full",
+        "orientation": "landscape",
+        "resolution": "1080",
+        "requestedFrame": "180",
+        "progress": "0.428611",
+        "targetProgress": "0.428611",
+        "settled": "true",
+        "decodedFrames": "6",
+        "maxDecodedFrames": "6",
+        "decodedBytes": "49766400",
+        "maxDecodedBytes": "49766400",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "desktop",
+      "chapter": "boards",
+      "index": 315,
+      "sharpRequests": [],
+      "size": 600,
+      "metrics": {
+        "mode": "animation",
+        "layout": "full",
+        "orientation": "landscape",
+        "resolution": "1080",
+        "requestedFrame": "315",
+        "progress": "0.750000",
+        "targetProgress": "0.750000",
+        "settled": "true",
+        "decodedFrames": "5",
+        "maxDecodedFrames": "6",
+        "decodedBytes": "41472000",
+        "maxDecodedBytes": "49766400",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "portrait",
+      "chapter": "wifi",
+      "index": 90,
+      "sharpRequests": [
+        "http://127.0.0.1:8766/assets/portrait/frame-0151.webp?v=6654678198c78ad9"
+      ],
+      "size": 371,
+      "metrics": {
+        "mode": "animation",
+        "layout": "phone",
+        "orientation": "portrait",
+        "resolution": "540",
+        "requestedFrame": "90",
+        "progress": "0.214286",
+        "targetProgress": "0.214286",
+        "settled": "true",
+        "decodedFrames": "0",
+        "maxDecodedFrames": "12",
+        "decodedBytes": "0",
+        "maxDecodedBytes": "24883200",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "portrait",
+      "chapter": "lora",
+      "index": 180,
+      "sharpRequests": [
+        "http://127.0.0.1:8766/assets/portrait/frame-0241.webp?v=6654678198c78ad9"
+      ],
+      "size": 371,
+      "metrics": {
+        "mode": "animation",
+        "layout": "phone",
+        "orientation": "portrait",
+        "resolution": "540",
+        "requestedFrame": "180",
+        "progress": "0.428571",
+        "targetProgress": "0.428571",
+        "settled": "true",
+        "decodedFrames": "4",
+        "maxDecodedFrames": "12",
+        "decodedBytes": "8294400",
+        "maxDecodedBytes": "24883200",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "portrait",
+      "chapter": "boards",
+      "index": 315,
+      "sharpRequests": [
+        "http://127.0.0.1:8766/assets/portrait/frame-0376.webp?v=6654678198c78ad9"
+      ],
+      "size": 371,
+      "metrics": {
+        "mode": "animation",
+        "layout": "phone",
+        "orientation": "portrait",
+        "resolution": "540",
+        "requestedFrame": "315",
+        "progress": "0.750000",
+        "targetProgress": "0.750000",
+        "settled": "true",
+        "decodedFrames": "0",
+        "maxDecodedFrames": "12",
+        "decodedBytes": "0",
+        "maxDecodedBytes": "24883200",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "landscape",
+      "chapter": "wifi",
+      "index": 90,
+      "sharpRequests": [
+        "http://127.0.0.1:8766/assets/landscape/frame-0151.webp?v=6654678198c78ad9"
+      ],
+      "size": 230,
+      "metrics": {
+        "mode": "animation",
+        "layout": "compact",
+        "orientation": "landscape",
+        "resolution": "540",
+        "requestedFrame": "90",
+        "progress": "0.214250",
+        "targetProgress": "0.214250",
+        "settled": "true",
+        "decodedFrames": "0",
+        "maxDecodedFrames": "12",
+        "decodedBytes": "0",
+        "maxDecodedBytes": "24883200",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "landscape",
+      "chapter": "lora",
+      "index": 180,
+      "sharpRequests": [
+        "http://127.0.0.1:8766/assets/landscape/frame-0241.webp?v=6654678198c78ad9"
+      ],
+      "size": 230,
+      "metrics": {
+        "mode": "animation",
+        "layout": "compact",
+        "orientation": "landscape",
+        "resolution": "540",
+        "requestedFrame": "180",
+        "progress": "0.428501",
+        "targetProgress": "0.428501",
+        "settled": "true",
+        "decodedFrames": "1",
+        "maxDecodedFrames": "12",
+        "decodedBytes": "8294400",
+        "maxDecodedBytes": "24883200",
+        "maxRequests": "4"
+      }
+    },
+    {
+      "name": "landscape",
+      "chapter": "boards",
+      "index": 315,
+      "sharpRequests": [
+        "http://127.0.0.1:8766/assets/landscape/frame-0376.webp?v=6654678198c78ad9"
+      ],
+      "size": 230,
+      "metrics": {
+        "mode": "animation",
+        "layout": "compact",
+        "orientation": "landscape",
+        "resolution": "540",
+        "requestedFrame": "315",
+        "progress": "0.750000",
+        "targetProgress": "0.750000",
+        "settled": "true",
+        "decodedFrames": "0",
+        "maxDecodedFrames": "12",
+        "decodedBytes": "0",
+        "maxDecodedBytes": "24883200",
+        "maxRequests": "4"
+      }
+    }
+  ],
+  "passed": true,
+  "failureAndCancellation": true
+}

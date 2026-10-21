@@ -1,4 +1,4 @@
-import { nearbyFrames } from './timeline.mjs';
+import { nearbyFrames } from './timeline.mjs?v=mobile-1';
 
 export const MAX_IMAGES = 12;
 export const MAX_DECODED_BYTES = 48 * 1024 * 1024;

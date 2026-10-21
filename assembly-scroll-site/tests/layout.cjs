@@ -7,10 +7,10 @@ const target = id => manifest.chapters.find(chapter => chapter.id === id).target
 const base = process.argv[2] || 'http://127.0.0.1:8766/';
 const output = process.env.VALIDATION_OUTPUT || path.resolve(__dirname, '../validation/clean-layout.json');
 const frame = (page, index) => page.waitForFunction(i =>
-  document.querySelector('canvas').dataset.frame === String(i) &&
+  document.querySelector('#assembly').dataset.frame === String(i) &&
   document.querySelector('#stage').dataset.settled === 'true', index);
 const geometry = page => page.evaluate(() => ({
-  image: document.querySelector('canvas').getBoundingClientRect().toJSON(),
+  image: document.querySelector('#assembly').getBoundingClientRect().toJSON(),
   progress: document.querySelector('#stage').dataset.targetProgress,
   footer: document.querySelector('.controls').getBoundingClientRect().toJSON(),
   viewport: { width: innerWidth, height: innerHeight },
@@ -40,7 +40,7 @@ const geometry = page => page.evaluate(() => ({
       assert.equal(await page.locator('.masthead #instructions').count(), 1);
       assert.equal(await page.locator('.controls').innerText(), '01\nParts\n02\nWi-Fi\n03\nLoRa\n04\nBoards\n✓\nAssembled');
       await page.mouse.wheel(0, 480);
-      await page.waitForFunction(() => Number(document.querySelector('canvas').dataset.frame) > 0);
+      await page.waitForFunction(() => Number(document.querySelector('#assembly').dataset.frame) > 0);
       assert.equal(await page.locator('#scroll-hint').isVisible(), false);
       await page.evaluate(() => scrollTo(0, 129 / 420 *
         (document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight)));
@@ -49,7 +49,7 @@ const geometry = page => page.evaluate(() => ({
       assert.ok(before.image.bottom <= before.footer.top + 1);
       assert.ok(before.footer.bottom <= height);
       assert.ok(height - before.footer.bottom <= 14);
-      assert.equal(await page.locator('canvas').getAttribute('data-orientation'),
+      assert.equal(await page.locator('#assembly').getAttribute('data-orientation'),
         width > height ? 'landscape' : 'portrait');
       await page.screenshot({ path: output.replace('.json', `-${name}.png`) });
 

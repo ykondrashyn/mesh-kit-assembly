@@ -1,6 +1,6 @@
-import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs';
-import { FrameLoader } from './frame-loader.mjs?v=continuous-2';
-import { presentationForStage, frameCrop, chapterCopy } from './presentation.mjs';
+import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, variantForStage, fitFrame, resolutionForFit, initialResolutionCap, qualityLagDelay } from './timeline.mjs?v=mobile-1';
+import { FrameLoader } from './frame-loader.mjs?v=mobile-1';
+import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=mobile-1';
 
 const $ = selector => document.querySelector(selector);
 const story = $('#story'), stage = $('#stage'), artwork = $('#artwork'), canvas = $('#assembly');
@@ -11,6 +11,10 @@ const loadState = $('#load-state'), loadMessage = $('#load-message'), retry = $(
 const loadAnnouncement = $('#load-announcement');
 const progressFill = $('#progress-fill'), scrollHint = $('#scroll-hint');
 const stepSummary = $('#step-summary'), stepTitle = $('#step-title'), stepCaption = $('#step-caption');
+const enlargeConnector = $('#enlarge-connector'), connectorDialog = $('#connector-dialog'), connectorImage = $('#connector-image');
+const connectorContext = connectorImage.getContext('2d', { alpha: false });
+const connectorTitle = $('#connector-title'), connectorInstruction = $('#connector-instruction');
+const connectorNote = $('#connector-note'), connectorStatus = $('#connector-status'), connectorRetry = $('#connector-retry');
 const announcement = $('#chapter-announcement'), navLinks = [...document.querySelectorAll('[data-chapter]')];
 const motionOptions = $('#motion-options'), motionToggle = $('#motion-toggle'), motionDescription = $('#motion-description');
 const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
@@ -25,6 +29,7 @@ let orientationTimer = 0;
 let lastScrollTime = 0, scrollRate = 0;
 let lastAdvanceAt = 0, chapterRequestedAt = 0;
 let layout = 'full';
+let inspection = null;
 const stillMode = () => mode !== 'animation';
 const schedule = () => { if (!raf) raf = requestAnimationFrame(render); };
 
@@ -138,10 +143,96 @@ function updateNavigation(index) {
   stepCaption.textContent = chapterCopy[chapter.id].instruction;
 }
 
+function positionConnector() {
+  const connector = connectorAtFrame(Number(canvas.dataset.frame));
+  enlargeConnector.hidden = !connector || !enhanced || typeof connectorDialog.showModal !== 'function';
+  if (enlargeConnector.hidden) return;
+  const crop = frameCrop(canvas.dataset.orientation, canvas.dataset.layout);
+  const circle = connectorCircle(canvas.dataset.orientation);
+  const scale = parseFloat(canvas.style.width) / crop.width;
+  Object.assign(enlargeConnector.style, {
+    left: `${parseFloat(canvas.style.left) + (circle.x - circle.r - crop.x) * scale}px`,
+    top: `${parseFloat(canvas.style.top) + (circle.y - circle.r - crop.y) * scale}px`,
+    width: `${circle.r * 2 * scale}px`, height: `${circle.r * 2 * scale}px`,
+  });
+  enlargeConnector.setAttribute('aria-label', `Enlarge ${connector.label}`);
+}
+
+function drawConnector(source, scale, crop = { x: 0, y: 0 }) {
+  const { x, y, r } = connectorCircle(inspection.variant), radius = r + 6;
+  const size = Math.round(radius * 2 * scale);
+  connectorImage.width = connectorImage.height = size;
+  connectorContext.drawImage(source, (x - radius - crop.x) * scale, (y - radius - crop.y) * scale,
+    radius * 2 * scale, radius * 2 * scale, 0, 0, size, size);
+}
+
+function updateLoaderMetrics() {
+  stage.dataset.decodedFrames = String(loader.allocatedImages);
+  stage.dataset.maxDecodedFrames = String(loader.maxDecoded);
+  stage.dataset.decodedBytes = String(loader.allocatedBytes);
+  stage.dataset.maxDecodedBytes = String(loader.maxDecodedBytes);
+  stage.dataset.maxRequests = String(loader.maxRequests);
+}
+
+function renderInspection() {
+  updateLoaderMetrics();
+  const bitmap = loader.get(inspection.index);
+  if (bitmap && !inspection.ready) {
+    drawConnector(bitmap, bitmap.width / manifest.variants[inspection.variant].width);
+    inspection.ready = true;
+    connectorImage.dataset.resolution = loader.resolution.id;
+    connectorStatus.textContent = '';
+    connectorRetry.hidden = true;
+  } else if (loader.error(inspection.index)) {
+    connectorStatus.textContent = 'The sharper image could not load. The current view is still available.';
+    connectorRetry.hidden = false;
+  }
+}
+
+enlargeConnector.addEventListener('click', () => {
+  const index = Number(canvas.dataset.frame), connector = connectorAtFrame(index);
+  if (!connector || inspection) return;
+  inspection = { index, variant: canvas.dataset.orientation, scrollY, ready: false };
+  connectorTitle.textContent = connector.label;
+  connectorInstruction.textContent = chapterCopy[connector.id].instruction;
+  connectorNote.hidden = connector.id !== 'boards';
+  connectorImage.setAttribute('aria-label', `${connector.label}, enlarged from the displayed assembly pose`);
+  connectorImage.dataset.frame = String(index);
+  connectorImage.dataset.resolution = canvas.dataset.resolution;
+  connectorStatus.textContent = '';
+  connectorRetry.hidden = true;
+  const crop = frameCrop(inspection.variant, canvas.dataset.layout);
+  drawConnector(canvas, canvas.width / crop.width, crop);
+  document.documentElement.classList.add('inspecting');
+  connectorDialog.showModal();
+  const sharp = manifest.variants[inspection.variant].resolutions.at(-1);
+  loader.selectVariant(inspection.variant, sharp);
+  loader.request(index, direction, true);
+  schedule();
+});
+$('#close-connector').addEventListener('click', () => connectorDialog.close());
+connectorDialog.addEventListener('close', () => {
+  if (!inspection) return;
+  const saved = inspection;
+  inspection = null;
+  document.documentElement.classList.remove('inspecting');
+  window.scrollTo({ top: saved.scrollY, behavior: 'instant' });
+  previousTick = 0;
+  resizePending = true;
+  enlargeConnector.focus({ preventScroll: true });
+  schedule();
+});
+connectorRetry.addEventListener('click', () => {
+  connectorRetry.hidden = true;
+  connectorStatus.textContent = 'Loading sharper image…';
+  loader.retry(); schedule();
+});
+
 function render(now) {
   raf = 0;
   clearTimeout(wakeTimer);
   if (!manifest) return;
+  if (inspection) { renderInspection(); return; }
   if (resizePending) { resizePending = false; resizeStage(); }
   const elapsed = previousTick ? Math.min(64, now - previousTick) : 1000 / 60;
   progress = stillMode() ? targetProgress : easeProgress(progress, targetProgress, elapsed);
@@ -157,11 +248,7 @@ function render(now) {
   stage.dataset.progress = progress.toFixed(6);
   stage.dataset.targetProgress = targetProgress.toFixed(6);
   stage.dataset.settled = String(progress === targetProgress);
-  stage.dataset.decodedFrames = String(loader.allocatedImages);
-  stage.dataset.maxDecodedFrames = String(loader.maxDecoded);
-  stage.dataset.decodedBytes = String(loader.allocatedBytes);
-  stage.dataset.maxDecodedBytes = String(loader.maxDecodedBytes);
-  stage.dataset.maxRequests = String(loader.maxRequests);
+  updateLoaderMetrics();
   const drawnIndex = loader.frameFor(index, Number(canvas.dataset.frame), direction, stillMode());
   const key = `${variant}:${layout}:${loader.resolution.id}:${drawnIndex}`;
   const bitmap = loader.get(drawnIndex);
@@ -187,6 +274,7 @@ function render(now) {
       if (!enhanced) enhance();
     }
   }
+  positionConnector();
   if (drawnIndex === index) {
     loadState.hidden = true;
     loadAnnouncement.textContent = '';
@@ -254,7 +342,7 @@ async function boot() {
 }
 
 window.addEventListener('scroll', () => {
-  if (!enhanced || resizePending) return;
+  if (!enhanced || resizePending || inspection) return;
   const now = performance.now(), next = clamp(window.scrollY / cachedScrollSpan);
   const elapsed = now - lastScrollTime;
   const rate = Math.abs(next - targetProgress) * (manifest.frames.length - 1) * 1000 / Math.max(16, elapsed);

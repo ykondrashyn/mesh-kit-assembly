@@ -34,6 +34,24 @@ button:disabled { cursor: default; }
 #instructions-link { margin-left: auto; min-height: 44px; padding: 14px 4px; font-size: 13px; color: inherit; text-underline-offset: 3px; }
 #artwork { position: relative; min-width: 0; min-height: 0; }
 #assembly { position: absolute; display: block; }
+#enlarge-connector { position: absolute; padding: 0; border: 0; border-radius: 50%; background: transparent; min-width: 44px; min-height: 44px; }
+#enlarge-connector span { position: absolute; right: 0; bottom: 0; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #888; border-radius: 50%; background: #fff; font-size: 24px; }
+.inspecting { overflow: hidden; }
+#connector-dialog { width: min(860px, calc(100% - 24px)); max-height: calc(100dvh - 24px); padding: 16px; border: 1px solid #ddd; color: inherit; background: #fff; overscroll-behavior: contain; }
+#connector-dialog::backdrop { background: rgb(255 255 255 / 94%); }
+#connector-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+#connector-title { font-size: 18px; margin: 0; }
+#close-connector, #connector-retry { min-width: 44px; min-height: 44px; padding: 8px; border: 0; background: transparent; }
+#connector-retry { text-decoration: underline; }
+.connector-content { display: grid; justify-items: center; gap: 16px; }
+#connector-image { width: min(100%, 600px, calc(100dvh - 270px)); height: auto; aspect-ratio: 1; border-radius: 50%; }
+.connector-copy { font-size: 15px; line-height: 1.45; max-width: 560px; }
+.connector-copy p { margin: 0 0 10px; }
+#connector-status { color: #666; }
+@media (min-width: 601px) and (max-height: 500px) {
+  .connector-content { grid-template-columns: 1fr 1fr; align-items: center; }
+  #connector-image { width: min(100%, calc(100dvh - 108px)); }
+}
 #load-state {
   position: absolute;
   bottom: 8px;

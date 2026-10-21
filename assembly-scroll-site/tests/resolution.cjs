@@ -22,7 +22,7 @@ const assert = require('node:assert/strict');
       page.on('request', request => requests.push(request.url()));
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(process.argv[2] || 'http://127.0.0.1:8766/');
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.frame === '0');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.frame === '0');
       const actual = await page.locator('#stage').evaluate(stage => ({ orientation: stage.dataset.orientation, resolution: stage.dataset.resolution }));
       assert.equal(actual.orientation, profile.orientation);
       assert.equal(actual.resolution, profile.resolution);

@@ -15,7 +15,7 @@ const target = id => manifest.chapters.find(chapter => chapter.id === id).target
     for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 }]) {
       const page = await browser.newPage({ viewport });
       await page.goto(process.argv[2] || 'http://127.0.0.1:8766/');
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.frame === '0');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.frame === '0');
       const span = await page.evaluate(() =>
         document.querySelector('#story').offsetHeight - document.querySelector('#stage').offsetHeight);
       assert.equal(span, viewport.height * 12);
@@ -25,7 +25,7 @@ const target = id => manifest.chapters.find(chapter => chapter.id === id).target
         window.observeMotion = true;
         function sample(now) {
           if (!window.observeMotion) return;
-          const value = Number(document.querySelector('canvas').dataset.frame);
+          const value = Number(document.querySelector('#assembly').dataset.frame);
           if (window.observedFrames.at(-1)?.frame !== value) {
             window.observedFrames.push({ frame: value, time: now });
           }
@@ -55,9 +55,9 @@ const target = id => manifest.chapters.find(chapter => chapter.id === id).target
       }
       const stoppedFrame = backward.at(-1).frame;
       await page.waitForTimeout(400);
-      assert.equal(await page.locator('canvas').getAttribute('data-frame'), String(stoppedFrame));
+      assert.equal(await page.locator('#assembly').getAttribute('data-frame'), String(stoppedFrame));
       await page.getByRole('link', { name: '03 LoRa', exact: true }).click();
-      await page.waitForFunction(index => Number(document.querySelector('canvas').dataset.frame) === index, target('lora'));
+      await page.waitForFunction(index => Number(document.querySelector('#assembly').dataset.frame) === index, target('lora'));
       assert.equal(await page.locator('#stage').getAttribute('data-settled'), 'true');
       results.push({ viewport, scrollHeight: span, forward, backward, settledWithoutOvershoot: true });
       await page.evaluate(() => { window.observeMotion = false; });

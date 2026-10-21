@@ -6,7 +6,7 @@ const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/ass
 const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 const base = process.argv[2] || 'http://127.0.0.1:8766/';
 const results = [];
-const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector('canvas').dataset.frame === String(i), frame);
+const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector('#assembly').dataset.frame === String(i), frame);
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   try {
@@ -72,7 +72,7 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
     await p.waitForTimeout(1000);
     assert.equal(await p.locator('#stage').getAttribute('data-mode'), 'animation');
     assert.equal(await p.locator('#stage').getAttribute('data-resolution'), '540');
-    assert.notEqual(await p.locator('canvas').getAttribute('data-frame'), String(target('boards')));
+    assert.notEqual(await p.locator('#assembly').getAttribute('data-frame'), String(target('boards')));
     await p.unroute(failedFrame);
     await p.getByRole('button', { name: 'Try again', exact: true }).click();
     await visibleFrame(p, target('boards'));
@@ -84,7 +84,7 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
     await p.setViewportSize({ width: 390, height: 844 });
     await p.waitForFunction(() => {
       const area = document.querySelector('#artwork').getBoundingClientRect();
-      return document.querySelector('canvas').dataset.orientation === (area.width > area.height ? 'landscape' : 'portrait');
+      return document.querySelector('#assembly').dataset.orientation === (area.width > area.height ? 'landscape' : 'portrait');
     });
     await visibleFrame(p, target('lora'));
     assert.equal(await p.locator('#stage').getAttribute('data-resolution'), '540');

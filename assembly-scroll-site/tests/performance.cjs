@@ -32,13 +32,13 @@ const out = path.resolve(__dirname, '../validation/adaptive-performance.json');
       });
       cdp.on('Network.loadingFailed', e => { if (frameRequests.has(e.requestId)) { failedFrameRequests++; if (e.canceled) cancelledRequests++; } });
       await page.goto(base, { waitUntil: 'domcontentloaded' });
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.frame === '0', null, { timeout: 20000 });
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.frame === '0', null, { timeout: 20000 });
       const firstFrameMs = await page.evaluate(() => performance.now());
       const baselineImageResponseEndMs = await page.evaluate(() => performance.getEntriesByType('resource').find(entry => /frame-0034\.webp$/.test(entry.name))?.responseEnd ?? null);
       await page.waitForTimeout(700);
       const experiment = await page.evaluate(async () => {
         const stage = document.querySelector('#stage');
-        const canvas = document.querySelector('canvas');
+        const canvas = document.querySelector('#assembly');
         let hintMutations = 0, longestFrozenMs = 0, updates = 0, loadingSamples = 0, samples = 0, maxLag = 0;
         let lastFrame = Number(canvas.dataset.frame);
         const started = performance.now();
@@ -106,7 +106,7 @@ const out = path.resolve(__dirname, '../validation/adaptive-performance.json');
           const position = Math.round(window.scrollY / span * (count - 1));
           const expected = stage.dataset.mode === 'animation' ? position :
             position >= 375 ? 420 : position >= 255 ? 363 : position >= 150 ? 234 : position >= 45 ? 129 : 33;
-          return Number(document.querySelector('canvas').dataset.frame) === expected && stage.dataset.settled === 'true';
+          return Number(document.querySelector('#assembly').dataset.frame) === expected && stage.dataset.settled === 'true';
         }, null, { timeout: 20000 });
       } catch { recovered = false; }
       report.scenarios.push({ profile, firstFrameMs, baselineImageResponseEndMs, ...experiment,
@@ -134,7 +134,7 @@ const out = path.resolve(__dirname, '../validation/adaptive-performance.json');
     await page.goto(base);
     await page.waitForTimeout(500);
     report.scriptFailure = await page.evaluate(() => ({
-      renderedFrame: document.querySelector('canvas').dataset.frame || null,
+      renderedFrame: document.querySelector('#assembly').dataset.frame || null,
       fallbackImages: document.querySelectorAll('.fallback img').length,
       fallbackLoaded: document.querySelector('.fallback img')?.naturalWidth > 0,
       instructionsOpen: document.querySelector('#instructions').open,
@@ -147,10 +147,10 @@ const out = path.resolve(__dirname, '../validation/adaptive-performance.json');
     const reduced = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     const reducedPage = await reduced.newPage();
     await reducedPage.goto(base);
-    await reducedPage.waitForFunction(() => document.querySelector('canvas').dataset.frame === '33');
+    await reducedPage.waitForFunction(() => document.querySelector('#assembly').dataset.frame === '33');
     await reducedPage.getByText('Instructions & options', { exact: true }).click();
     report.reducedMotion = await reducedPage.evaluate(() => ({
-      frame: document.querySelector('canvas').dataset.frame,
+      frame: document.querySelector('#assembly').dataset.frame,
       modeToggleVisible: document.querySelector('#motion-toggle').checkVisibility(),
       navigationTargets: [...document.querySelectorAll('nav a')].map(b => ({
         name: b.innerText, width: b.getBoundingClientRect().width, height: b.getBoundingClientRect().height,

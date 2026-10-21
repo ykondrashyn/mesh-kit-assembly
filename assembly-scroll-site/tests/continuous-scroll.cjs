@@ -13,10 +13,10 @@ const profiles = [
 ];
 const state = page => page.evaluate(() => ({
   stage: { ...document.querySelector('#stage').dataset },
-  canvas: { ...document.querySelector('canvas').dataset },
+  canvas: { ...document.querySelector('#assembly').dataset },
 }));
 const waitFrame = (page, frame) => page.waitForFunction(index =>
-  Number(document.querySelector('canvas').dataset.frame) === index &&
+  Number(document.querySelector('#assembly').dataset.frame) === index &&
   document.querySelector('#stage').dataset.settled === 'true', frame, { timeout: 20000 });
 
 (async () => {
@@ -54,12 +54,12 @@ const waitFrame = (page, frame) => page.waitForFunction(index =>
       await page.evaluate(() => {
         window.motionSamples = [];
         const sample = () => window.motionSamples.push({
-          time: performance.now(), frame: Number(document.querySelector('canvas').dataset.frame),
+          time: performance.now(), frame: Number(document.querySelector('#assembly').dataset.frame),
           requested: Number(document.querySelector('#stage').dataset.requestedFrame),
           mode: document.querySelector('#stage').dataset.mode,
           resolution: document.querySelector('#stage').dataset.resolution,
         });
-        new MutationObserver(sample).observe(document.querySelector('canvas'), {
+        new MutationObserver(sample).observe(document.querySelector('#assembly'), {
           attributes: true, attributeFilter: ['data-frame'],
         });
       });

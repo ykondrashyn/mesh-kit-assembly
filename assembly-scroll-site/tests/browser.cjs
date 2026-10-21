@@ -3,16 +3,16 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const url = process.argv[2] || 'http://127.0.0.1:8766';
-const output = path.resolve(__dirname, '../validation');
+const output = process.env.VALIDATION_DIR || path.resolve(__dirname, '../validation');
 const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
 const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 const results = [];
 const framePattern = (orientation, index) => new RegExp(`/${orientation}/(?:[0-9]+/)?frame-${String(manifest.frames[index]).padStart(4, '0')}\\.webp\\?`);
 
 const state = page => page.evaluate(() => ({
-  frame: Number(document.querySelector('canvas').dataset.frame),
+  frame: Number(document.querySelector('#assembly').dataset.frame),
   requested: Number(document.querySelector('#stage').dataset.requestedFrame),
-  orientation: document.querySelector('canvas').dataset.orientation,
+  orientation: document.querySelector('#assembly').dataset.orientation,
   progress: Number(document.querySelector('#stage').dataset.progress),
   decoded: Number(document.querySelector('#stage').dataset.decodedFrames),
   maxDecoded: Number(document.querySelector('#stage').dataset.maxDecodedFrames),
@@ -20,7 +20,7 @@ const state = page => page.evaluate(() => ({
   maxRequests: Number(document.querySelector('#stage').dataset.maxRequests),
 }));
 async function waitFrame(page, index) {
-  await page.waitForFunction(i => Number(document.querySelector('canvas').dataset.frame) === i, index);
+  await page.waitForFunction(i => Number(document.querySelector('#assembly').dataset.frame) === i, index);
 }
 async function waitSettled(page) {
   await page.waitForFunction(() => document.querySelector('#stage').dataset.settled === 'true');
@@ -36,12 +36,12 @@ async function go(page, index, expected = index, settle = true) {
 }
 async function fits(page) {
   const bounds = await page.evaluate(() => {
-    const canvas = document.querySelector('canvas').getBoundingClientRect();
+    const canvas = document.querySelector('#assembly').getBoundingClientRect();
     const area = document.querySelector('#artwork').getBoundingClientRect();
     const controls = document.querySelector('.controls').getBoundingClientRect();
     return { canvas: canvas.toJSON(), area: area.toJSON(), controls: controls.toJSON(), innerHeight,
-      orientation: document.querySelector('canvas').dataset.orientation,
-      layout: document.querySelector('canvas').dataset.layout };
+      orientation: document.querySelector('#assembly').dataset.orientation,
+      layout: document.querySelector('#assembly').dataset.layout };
   });
   assert.ok(bounds.canvas.left >= bounds.area.left - 1);
   assert.ok(bounds.canvas.right <= bounds.area.right + 1);
@@ -86,11 +86,11 @@ async function run(name, fn) {
     });
     await run('mouse wheel advances and reverse wheel reverses', async () => {
       await page.mouse.wheel(0, 800);
-      await page.waitForFunction(() => Number(document.querySelector('canvas').dataset.frame) > 20);
+      await page.waitForFunction(() => Number(document.querySelector('#assembly').dataset.frame) > 20);
       await waitSettled(page);
       const forward = await state(page);
       await page.mouse.wheel(0, -500);
-      await page.waitForFunction(i => Number(document.querySelector('canvas').dataset.frame) < i, forward.frame);
+      await page.waitForFunction(i => Number(document.querySelector('#assembly').dataset.frame) < i, forward.frame);
       await waitSettled(page);
       const backward = await state(page);
       await page.waitForTimeout(350);
@@ -132,10 +132,10 @@ async function run(name, fn) {
       await page.evaluate(() => document.activeElement?.blur());
       for (const viewport of [{ width: 768, height: 1024 }, { width: 390, height: 844 }]) {
         await page.setViewportSize(viewport);
-        await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
+        await page.waitForFunction(() => document.querySelector('#assembly').dataset.orientation === 'portrait');
         await waitFrame(page, 129);
         await page.waitForFunction(() => {
-          const image = document.querySelector('canvas').getBoundingClientRect();
+          const image = document.querySelector('#assembly').getBoundingClientRect();
           const area = document.querySelector('#artwork').getBoundingClientRect();
           return image.right <= area.right + 1 && image.bottom <= area.bottom + 1 &&
             document.querySelector('#stage').offsetHeight === window.innerHeight;
@@ -149,13 +149,13 @@ async function run(name, fn) {
         await page.screenshot({ path: path.join(output, `phone-${index}.png`) });
       }
       await page.setViewportSize({ width: 1440, height: 900 });
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'landscape');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.orientation === 'landscape');
       await waitFrame(page, 420);
       return await state(page);
     });
     await run('portrait traverses every frame forward and backward', async () => {
       await page.setViewportSize({ width: 390, height: 844 });
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.orientation === 'portrait');
       for (let index = 0; index <= 420; index++) await go(page, index, index, false);
       for (let index = 420; index >= 0; index--) await go(page, index, index, false);
       await waitSettled(page);
@@ -164,7 +164,7 @@ async function run(name, fn) {
       assert.ok(result.maxDecodedBytes <= 48 * 1024 * 1024);
       assert.ok(result.maxRequests <= 4);
       await page.setViewportSize({ width: 1440, height: 900 });
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'landscape');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.orientation === 'landscape');
       return { positionsChecked: 842, ...result };
     });
     await run('orientation change rejects a delayed old-orientation frame', async () => {
@@ -188,14 +188,14 @@ async function run(name, fn) {
         ? 1080 / (whileLoading.layout === 'phone' ? 1752 : 1920)
         : 1920 / (whileLoading.layout === 'compact' ? 720 : whileLoading.layout === 'phone' ? 920 : 1080);
       assert.ok(Math.abs(whileLoading.canvas.width / whileLoading.canvas.height - ratio) < .001);
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'portrait');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.orientation === 'portrait');
       await waitFrame(page, target('lora'));
       await page.waitForTimeout(550);
       assert.equal((await state(page)).orientation, 'portrait');
       assert.equal((await state(page)).frame, target('lora'));
       await page.unrouteAll({ behavior: 'wait' });
       await page.setViewportSize({ width: 1440, height: 900 });
-      await page.waitForFunction(() => document.querySelector('canvas').dataset.orientation === 'landscape');
+      await page.waitForFunction(() => document.querySelector('#assembly').dataset.orientation === 'landscape');
       return await state(page);
     });
     await run('delayed frames retain the current picture and stale results cannot replace it', async () => {
@@ -289,7 +289,7 @@ async function run(name, fn) {
         await p.waitForTimeout(20);
       }
       await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
-      await p.waitForFunction(() => Number(document.querySelector('canvas').dataset.frame) > 5);
+      await p.waitForFunction(() => Number(document.querySelector('#assembly').dataset.frame) > 5);
       const result = await state(p);
       await mobile.close();
       return result;
