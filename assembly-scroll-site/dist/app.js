@@ -18,6 +18,7 @@ let resizePending = false, booting = false, enhanced = false, resolutionCap = In
 let cachedScrollSpan = 1, previousProgress = -1, hintDismissed = false, stylePending = true;
 let mode = reducedQuery.matches ? 'reduced' : 'animation';
 let areaWidth = 0, areaHeight = 0;
+let orientationTimer = 0;
 const stillMode = () => mode !== 'animation';
 const schedule = () => { if (!raf) raf = requestAnimationFrame(render); };
 
@@ -53,7 +54,7 @@ function setMode(next) {
 }
 
 function resizeStage() {
-  document.documentElement.style.setProperty('--viewport-height', `${innerHeight}px`);
+  // CSS viewport units avoid persisting Chrome's transient rotation dimensions.
   const { width, height } = artwork.getBoundingClientRect();
   areaWidth = width; areaHeight = height;
   const nextVariant = variantForStage(width, height);
@@ -74,8 +75,10 @@ function resizeStage() {
   displayedKey = '';
   stylePending = true;
   lagSince = null;
-  cachedScrollSpan = Math.max(1, story.offsetHeight - stage.offsetHeight);
-  if (enhanced) window.scrollTo({ top: targetProgress * cachedScrollSpan, behavior: 'instant' });
+  const nextSpan = Math.max(1, story.offsetHeight - stage.offsetHeight);
+  const spanChanged = Math.abs(nextSpan - cachedScrollSpan) > 1;
+  cachedScrollSpan = nextSpan;
+  if (enhanced && spanChanged) window.scrollTo({ top: targetProgress * cachedScrollSpan, behavior: 'instant' });
 }
 
 function enhance() {
@@ -210,7 +213,20 @@ window.addEventListener('scroll', () => {
   if (targetProgress > 0) dismissHint();
   schedule();
 }, { passive: true });
-window.addEventListener('resize', () => { if (manifest) { resizePending = true; schedule(); } }, { passive: true });
+function viewportChanged() {
+  // Pinch zoom changes the visual viewport, not the assembly's layout or timeline.
+  if (manifest && (!window.visualViewport || Math.abs(visualViewport.scale - 1) < .01)) {
+    resizePending = true;
+    schedule();
+  }
+}
+window.addEventListener('resize', viewportChanged, { passive: true });
+window.visualViewport?.addEventListener('resize', viewportChanged, { passive: true });
+screen.orientation?.addEventListener('change', () => {
+  viewportChanged();
+  clearTimeout(orientationTimer);
+  orientationTimer = setTimeout(viewportChanged, 250);
+});
 new ResizeObserver(entries => {
   if (!manifest) return;
   const { width, height } = entries[0].contentRect;
@@ -248,5 +264,7 @@ document.addEventListener('pointerdown', event => {
   if (enhanced && instructions.open && !instructions.contains(event.target)) instructions.open = false;
 });
 reducedQuery.addEventListener('change', () => setMode(reducedQuery.matches ? 'reduced' : 'animation'));
-window.addEventListener('pagehide', event => { if (!event.persisted) { clearTimeout(wakeTimer); loader?.dispose(); } });
+window.addEventListener('pagehide', event => { if (!event.persisted) {
+  clearTimeout(wakeTimer); clearTimeout(orientationTimer); loader?.dispose();
+} });
 boot();

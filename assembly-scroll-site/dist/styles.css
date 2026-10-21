@@ -4,7 +4,9 @@
   background: #fff;
   color-scheme: light;
   --viewport-height: 100svh;
+  --scroll-height: 100svh;
 }
+@supports (height: 100dvh) { :root { --viewport-height: 100dvh; } }
 * { box-sizing: border-box; }
 html { scrollbar-gutter: stable; overflow-anchor: none; }
 body { margin: 0; }
@@ -14,7 +16,8 @@ button:disabled { cursor: default; }
 [hidden] { display: none !important; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 #story { height: var(--viewport-height); }
-.enhanced #story { height: calc(var(--viewport-height) * 13); }
+/* Browser chrome may resize the stage without changing the scroll distance. */
+.enhanced #story { height: calc(var(--scroll-height) * 12 + var(--viewport-height)); }
 #stage {
   position: relative;
   top: 0;
