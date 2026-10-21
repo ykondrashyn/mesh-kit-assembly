@@ -5,6 +5,7 @@ const path = require('node:path');
 const manifest = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/assets/manifest.json')));
 const target = id => manifest.chapters.find(chapter => chapter.id === id).targetIndex;
 const base = process.argv[2] || 'http://127.0.0.1:8766/';
+const output = process.env.VALIDATION_DIR || path.resolve(__dirname, '../validation');
 const results = [];
 const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector('#assembly').dataset.frame === String(i), frame);
 (async () => {
@@ -28,7 +29,7 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
         await visibleFrame(p, 0);
       }
       results.push({ name: failure, passed: true });
-      await p.screenshot({ path: path.resolve(__dirname, `../validation/${failure}.png`) });
+      await p.screenshot({ path: path.join(output, `${failure}.png`) });
       await context.close();
     }
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
@@ -99,13 +100,13 @@ const visibleFrame = (p, frame) => p.waitForFunction(i => document.querySelector
     await p.locator('.instruction-body').focus();
     await p.keyboard.press('End');
     await p.waitForFunction(() => document.querySelector('.instruction-body').scrollTop > 0);
-    await p.screenshot({ path: path.resolve(__dirname, '../validation/instructions-enlarged-phone.png') });
+    await p.screenshot({ path: path.join(output, 'instructions-enlarged-phone.png') });
     results.push({ name: 'expanded instructions, enlarged text and keyboard scrolling', passed: true, bounds });
     assert.deepEqual(errors, []);
     await context.close();
     console.log(JSON.stringify(results, null, 2));
   } finally {
-    fs.writeFileSync(path.resolve(__dirname, '../validation/fallback-validation.json'), JSON.stringify({ results }, null, 2) + '\n');
+    fs.writeFileSync(path.join(output, 'fallback-validation.json'), JSON.stringify({ results }, null, 2) + '\n');
     await browser.close();
   }
 })().catch(e => { console.error(e); process.exitCode = 1; });

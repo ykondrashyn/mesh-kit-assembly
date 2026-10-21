@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: rapid scrolling retains active downloads and prioritizes the newest queued target
+ok 1 - rapid scrolling retains active downloads and prioritizes the newest queued target
+  ---
+  duration_ms: 3.623292
+  type: 'test'
+  ...
+# Subtest: decoded memory includes in-progress reservations and evicted bitmaps are closed
+ok 2 - decoded memory includes in-progress reservations and evicted bitmaps are closed
+  ---
+  duration_ms: 2.348667
+  type: 'test'
+  ...
+# Subtest: an orientation switch during decoding closes the obsolete result
+ok 3 - an orientation switch during decoding closes the obsolete result
+  ---
+  duration_ms: 0.886
+  type: 'test'
+  ...
+# Subtest: failed targets expose an error and can be retried
+ok 4 - failed targets expose an error and can be retried
+  ---
+  duration_ms: 0.302958
+  type: 'test'
+  ...
+# Subtest: chapter stills warm before animation and remain available when the network fails
+ok 5 - chapter stills warm before animation and remain available when the network fails
+  ---
+  duration_ms: 0.488167
+  type: 'test'
+  ...
+# Subtest: completed downloads advance continuous scrolling even after leaving the prefetch window
+ok 6 - completed downloads advance continuous scrolling even after leaving the prefetch window
+  ---
+  duration_ms: 0.511458
+  type: 'test'
+  ...
+# Subtest: a direction reversal during decoding closes the obsolete result
+ok 7 - a direction reversal during decoding closes the obsolete result
+  ---
+  duration_ms: 0.381583
+  type: 'test'
+  ...
+# Subtest: phone layouts retain the connector circle and replace exported page furniture
+ok 8 - phone layouts retain the connector circle and replace exported page furniture
+  ---
+  duration_ms: 0.355833
+  type: 'test'
+  ...
+# Subtest: phone streaming starts conservatively and respects data-saving preferences
+ok 9 - phone streaming starts conservatively and respects data-saving preferences
+  ---
+  duration_ms: 0.767833
+  type: 'test'
+  ...
+# Subtest: quality adapts earlier only when measured delivery cannot meet scroll demand
+ok 10 - quality adapts earlier only when measured delivery cannot meet scroll demand
+  ---
+  duration_ms: 0.102916
+  type: 'test'
+  ...
+# Subtest: scroll easing is time-based, reversible and does not overshoot
+ok 11 - scroll easing is time-based, reversible and does not overshoot
+  ---
+  duration_ms: 0.163
+  type: 'test'
+  ...
+# Subtest: source map retains all motion and excludes only duplicated holds
+ok 12 - source map retains all motion and excludes only duplicated holds
+  ---
+  duration_ms: 0.390375
+  type: 'test'
+  ...
+# Subtest: image resolution matches fitted size and caps high-density demand
+ok 13 - image resolution matches fitted size and caps high-density demand
+  ---
+  duration_ms: 0.096541
+  type: 'test'
+  ...
+# Subtest: forward and reverse mapping round-trip all frames with clamped endpoints
+ok 14 - forward and reverse mapping round-trip all frames with clamped endpoints
+  ---
+  duration_ms: 0.167834
+  type: 'test'
+  ...
+# Subtest: chapter boundaries match the original Blender timeline
+ok 15 - chapter boundaries match the original Blender timeline
+  ---
+  duration_ms: 0.098375
+  type: 'test'
+  ...
+# Subtest: connection links land on reviewed clear poses before seating, outside transition fades
+ok 16 - connection links land on reviewed clear poses before seating, outside transition fades
+  ---
+  duration_ms: 0.057833
+  type: 'test'
+  ...
+# Subtest: adaptive layout fits the full image without clipping
+ok 17 - adaptive layout fits the full image without clipping
+  ---
+  duration_ms: 0.233584
+  type: 'test'
+  ...
+# Subtest: directional prefetch is bounded and prioritizes the requested frame
+ok 18 - directional prefetch is bounded and prioritizes the requested frame
+  ---
+  duration_ms: 0.312959
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 42.748708

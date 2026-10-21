@@ -1,0 +1,12 @@
+{
+  "closedAuditTabs": [
+    "12428"
+  ],
+  "settings": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "0",
+    "screen_off_timeout": "30000"
+  },
+  "forwarding": "\n",
+  "reverse": "\n"
+}

@@ -1,0 +1,158 @@
+MOBILE ASSEMBLY IMPROVEMENTS
+21 October 2026
+
+Status
+Implemented and committed locally. No push or GitHub Pages deployment was
+performed. Existing Blender projects, PNGs, videos, archives and all 2,526
+website frame files remain unchanged. The site still has one bottom
+progress line, native scrolling, twelve viewport heights of travel,
+100 ms easing, both orientations and optional chapter stills.
+
+Changes by commit
+ad3b6763 test: capture Android mobile audit baseline
+5a0e3c1f fix: keep the mobile stage visible after rotation
+bfc9aabc perf: start phone animation with smaller image sequences
+679bad40 fix: show loading feedback only when the picture stalls
+07aa73ba feat: improve mobile assembly readability
+c902388f feat: add enlarged connector inspection views
+The final test commit contains the remaining evidence, reproduction
+scripts, runtime fingerprints and preview documentation.
+
+Behavior
+The stage follows the visible viewport, while small viewport units keep
+scroll distance stable during browser toolbar changes. Rotation receives
+a settled geometry check. Pinch zoom remains available.
+
+Phones start at 720p, or 540p when data-saving or constrained-network
+information is available. Measured image delivery time and scroll speed
+can shorten the quality reduction delay from 800 ms to 350 ms. Slow
+delivery never automatically changes the site to chapter stills.
+
+Loading feedback stays quiet while images advance. It appears after a
+600 ms stall, or an unresolved chapter tap lasting 350 ms. Actual failures
+retain the current view, expose Retry and use an accessible announcement.
+
+Navigation uses 13px text on phones. Short 15px HTML instructions replace
+the small exported caption. Compact landscape places text beside the
+assembly and uses more horizontal space. The original connector circles,
+part labels and chip markings remain in the artwork. The first touch hint
+reads Swipe up to assemble.
+
+Each fully visible connector circle is a tap target with a plus button.
+It opens an accessible dialog on the currently displayed pose, immediately
+enlarges the existing image, then requests one 1080p source image through
+the bounded loader. The assembly pauses during inspection. Close or Escape
+returns focus and resumes at the same progress and streaming resolution.
+Failures retain the immediate enlargement and offer Retry. Rotation while
+the dialog is open preserves the selected connector.
+
+Physical Android checks
+Pixel 10 Pro XL, Android 17, Chrome 155.0.8059.81. Portrait viewport about
+443 x 840 CSS pixels with controls shown. Landscape about 920 x 338.
+Actual Android touch input and Chrome remote debugging were used.
+
+- Two portrait/landscape/portrait cycles at Boards passed. Stage and
+  footer remain within the visible viewport, with progress preserved.
+- Toolbar collapse preserves scroll distance. Pinch zoom reaches about
+  2x without moving the assembly timeline.
+- Main landscape artwork grew from the prior 412 x 232 CSS pixel fit to
+  about 666 x 250, with complete connector circles visible.
+- Wi-Fi, LoRa and Boards taps open the correct enlarged connector.
+  Native swipes while inspecting do not move progress or the background.
+  Closing, including after rotation, returns to the same assembly pose.
+- Full forward and reverse touch traversal stayed in animation mode and
+  settled at the correct endpoints. No stale completion reversed motion.
+- No inactive orientation was requested initially. Peak loader usage
+  remained at four jobs and twelve decoded/reserved images.
+- Phone rotation and timeout settings were restored. Only the dedicated
+  audit tab was closed, and both temporary USB forwardings were removed.
+  The original 30-second screen timeout and locked portrait settings are
+  confirmed in device-restored.json.
+
+Measured phone results
+                           Normal local     Constrained local
+Initial image tier         720p             540p
+First animation image      159 ms           2453 ms
+Forward changed poses      420              170
+Forward gesture duration   15.31 s          17.45 s
+Forward p95 change gap     59 ms            217 ms
+Forward largest change gap 108 ms           426 ms
+Reverse changed poses      420              153
+Reverse gesture duration   15.24 s          15.71 s
+Reverse largest gap        109 ms           367 ms
+Loading badge samples      0%               0%
+Peak decoded pixel bytes   44,236,800        24,883,200
+Observed JS long tasks     0                0
+
+The constrained profile is 1.6 Mbps download and 150 ms latency with cache
+bypassed, using the real phone CPU. No CPU slowdown was applied to it.
+The normal run uses the local server through USB forwarding.
+
+For context, the earlier public-site constrained audit recorded 134
+forward poses, a 693 ms maximum change gap and a 2157 ms first image.
+The new initial image did not become faster in that profile. The earlier
+normal audit reported loading feedback in roughly 91% of samples, and
+the constrained audit about 96%. Both current profiles recorded zero
+loading samples while traversing. Artificial stall and failed-image tests
+separately verify that feedback and Retry still appear when appropriate.
+
+These are not controlled before/after performance claims. The previous
+audit used GitHub Pages, the current run uses a USB-forwarded local server,
+and gesture duration differs. This evidence supports the functional fixes
+and continued animation under constraint, not universal smoothness.
+
+Only changes of image index count as changed poses. The raw observer also
+records a redraw after toolbar geometry changes. In the slow forward run,
+190 raw observations become 170 changed poses after deduplication. The
+apparent 1093 ms gap was a repeated redraw of final frame 420 while already
+assembled, not an animation stall. summary.json uses corrected counts.
+Changed-pose counts are not display FPS or GPU frame-time measurements.
+
+Desktop browser and asset checks
+- 18 unit tests passed.
+- 14 browser groups passed, including all 421 positions forward and
+  backward in both orientations, 1,684 visited positions total.
+- Three continuous native-wheel profiles passed. Desktop, throttled
+  desktop and throttled phone viewport each reached both endpoints,
+  stopped correctly and retained intermediate animation poses.
+  Throttled profiles use 1.6 Mbps, 150 ms and 4x CPU slowdown.
+- Six connector navigation/seating/reverse cases passed in both
+  orientations, including visible main scenes and circular insets.
+- Five viewport layouts, keyboard controls, expanded instructions and
+  200% HTML text enlargement passed without horizontal overflow.
+- Nine connector inspection cases passed across desktop, portrait and
+  short landscape. Tests cover a single sharp-image request, modal
+  focus, Escape, background scroll lock, failed sharp-image retry and
+  closing before a delayed result arrives.
+- JavaScript disabled, blocked script, blocked manifest, frame failure,
+  retry, reduced motion and optional stills passed.
+- All 2,526 WebP hashes match the protected asset manifest.
+- Source fingerprints and machine-checked results are in summary.json.
+
+Validation notes
+Two early phone layout attempts encountered stale locally cached HTML
+while development assets changed. A reload with cache bypass recovered
+the page. The Android layout test now uses a fresh run URL. A connector
+tap issued immediately after the first canvas draw raced the initial
+layout update, so that harness waits 500 ms before its first touch. The
+isolated reruns passed. Runtime asset URLs are versioned together for
+the next authorized publication. These interruptions are not counted as
+passing checks in the final evidence.
+
+Limits
+One recent high-end Android phone and Chrome. No iPhone Safari, Firefox,
+Samsung Internet, lower-end phone, TalkBack user journey, battery test or
+physical cellular-radio test. The 200% text check changes CSS sizes, not
+Android's global accessibility setting. The bitmap budget excludes canvas
+buffers, GPU storage and total browser memory. No field Core Web Vitals
+or public deployment validation was performed in this task.
+
+Reproduction
+Use README.txt and tests/android-*.cjs for phone setup and restoration.
+Run browser.cjs and fallback.cjs with VALIDATION_DIR pointing here. Other
+browser scripts accept VALIDATION_OUTPUT. After saving test evidence, run:
+
+  python3 scripts/record_mobile_validation.py
+
+That script checks the evidence, deduplicates pose changes, verifies
+resource limits and protected-file scope, and fingerprints the runtime.

@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "name": "javascript-disabled",
+      "passed": true
+    },
+    {
+      "name": "script-blocked",
+      "passed": true
+    },
+    {
+      "name": "manifest-blocked",
+      "passed": true
+    },
+    {
+      "name": "1080p to 720p to 540p adaptation and optional stills",
+      "passed": true,
+      "elapsedMs": 1765,
+      "lagMs": 817
+    },
+    {
+      "name": "540p failure retains animation mode and retry recovers",
+      "passed": true
+    },
+    {
+      "name": "expanded instructions, enlarged text and keyboard scrolling",
+      "passed": true,
+      "bounds": {
+        "width": 390,
+        "viewport": 390,
+        "bottom": 832,
+        "height": 844
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "publication": "Local commits only, GitHub Pages unchanged",
+  "sourceSha256": {
+    "dist/app.js": "2378c74db87eda7544e5f6adcb0d5edb96d8e6aea081c58cb4ff05537661da03",
+    "dist/frame-loader.mjs": "dfa13396a32cc65f8535576fdd349b74f6a29f4388824195d6fe4a9c9c5b6e4d",
+    "dist/index.html": "c191ac2d069ea9a8fea863ebb8c52db0fcd436c627dcaa5c6ee3a767d03c189d",
+    "dist/presentation.mjs": "b3669a160f615d4a1d854b7b199908c7131679215e54d7583642e0d018c6c5f2",
+    "dist/styles.css": "41e1db72d5a4e65f3743ba10325e633624d0a884886d2624790174198ec889a9",
+    "dist/timeline.mjs": "46cad0d26c51e2dfed8fe87d01cecdc475122ba4b675c83e5d338bc25da253e3",
+    "dist/assets/manifest.json": "f026e519b7d147ebec821a4f83a86b3138a040a3a47944a279847011a2452975"
+  },
+  "unitTests": 18,
+  "browserChecks": 14,
+  "continuousProfiles": 3,
+  "traversedPositions": 1684,
+  "verifiedFrames": 2526,
+  "protectedOriginalDeliverablesChanged": [],
+  "phone": {
+    "normal": {
+      "initialResolution": "720",
+      "firstAnimationMs": 159,
+      "legs": [
+        {
+          "direction": 1,
+          "changedPoses": 420,
+          "durationMs": 15315,
+          "p95ChangeGapMs": 59,
+          "maxChangeGapMs": 108,
+          "loadingSamplePercent": 0.0,
+          "stoppedAtEndpoint": true
+        },
+        {
+          "direction": -1,
+          "changedPoses": 420,
+          "durationMs": 15242,
+          "p95ChangeGapMs": 58,
+          "maxChangeGapMs": 109,
+          "loadingSamplePercent": 0.0,
+          "stoppedAtEndpoint": true
+        }
+      ],
+      "longTasks": 0,
+      "maxRequests": 4,
+      "maxDecodedImages": 12,
+      "maxDecodedBytes": 44236800,
+      "initialInactiveRequests": 0
+    },
+    "slow": {
+      "initialResolution": "540",
+      "firstAnimationMs": 2453,
+      "legs": [
+        {
+          "direction": 1,
+          "changedPoses": 170,
+          "durationMs": 17453,
+          "p95ChangeGapMs": 217,
+          "maxChangeGapMs": 426,
+          "loadingSamplePercent": 0.0,
+          "stoppedAtEndpoint": true
+        },
+        {
+          "direction": -1,
+          "changedPoses": 153,
+          "durationMs": 15713,
+          "p95ChangeGapMs": 292,
+          "maxChangeGapMs": 367,
+          "loadingSamplePercent": 0.0,
+          "stoppedAtEndpoint": true
+        }
+      ],
+      "longTasks": 0,
+      "maxRequests": 4,
+      "maxDecodedImages": 12,
+      "maxDecodedBytes": 24883200,
+      "initialInactiveRequests": 0
+    }
+  },
+  "baseline": {
+    "normal": {
+      "firstAnimationMs": 778.5999999996275,
+      "legs": [
+        {
+          "direction": "forward",
+          "updates": 277,
+          "maxFrameGapMs": 272.90000000037253,
+          "p95FrameGapMs": 149.5,
+          "first": 1,
+          "last": 420,
+          "durationMs": 16295.700000001118,
+          "backwardsUpdates": 0
+        },
+        {
+          "direction": "reverse",
+          "updates": 402,
+          "maxFrameGapMs": 150.40000000037253,
+          "p95FrameGapMs": 67.20000000111759,
+          "first": 420,
+          "last": 0,
+          "durationMs": 15111.400000000373,
+          "backwardsUpdates": 0
+        }
+      ],
+      "longTasks": 0
+    },
+    "slow": {
+      "firstAnimationMs": 2157.4000000003725,
+      "legs": [
+        {
+          "direction": "forward",
+          "updates": 134,
+          "maxFrameGapMs": 693.2999999988824,
+          "p95FrameGapMs": 392.3999999985099,
+          "first": 1,
+          "last": 420,
+          "durationMs": 16293,
+          "backwardsUpdates": 0
+        },
+        {
+          "direction": "reverse",
+          "updates": 147,
+          "maxFrameGapMs": 542,
+          "p95FrameGapMs": 234.09999999962747,
+          "first": 420,
+          "last": 0,
+          "durationMs": 15318.900000000373,
+          "backwardsUpdates": 0
+        }
+      ],
+      "longTasks": 0
+    },
+    "normalTransferBytes": 15667125,
+    "normalInitialInactiveRequests": 0,
+    "normalMaxRequests": "4",
+    "normalMaxDecodedBytes": "49766400",
+    "normalMaxDecodedFrames": "12"
+  },
+  "limitations": [
+    "One Pixel 10 Pro XL, Android 17 and Chrome 155. No iPhone, Safari, Firefox, lower-end Android or TalkBack journey.",
+    "Current phone runs use a local USB-forwarded server. The baseline used public GitHub Pages. Timing is not a controlled A/B comparison.",
+    "Phone network limits are synthetic, with the real phone CPU. Desktop throttling additionally uses 4x CPU slowdown.",
+    "Changed poses are not display FPS. Identical-index repaint events are removed before interval calculations.",
+    "Decoded pixel limits exclude canvas, GPU and complete browser process memory.",
+    "No production deployment or field Core Web Vitals validation in this update."
+  ]
+}

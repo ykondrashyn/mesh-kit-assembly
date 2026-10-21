@@ -1,0 +1,143 @@
+{
+  "url": "http://127.0.0.1:8766/",
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "manifestSHA256": "f026e519b7d147ebec821a4f83a86b3138a040a3a47944a279847011a2452975",
+  "checks": [
+    {
+      "orientation": "landscape",
+      "id": "wifi",
+      "index": 90,
+      "source": 151,
+      "seated": 129,
+      "ink": {
+        "assembly": 0.06154174579100977,
+        "connector": 0.04131844996366434
+      },
+      "legs": [
+        {
+          "end": 129,
+          "updates": 39
+        },
+        {
+          "end": 90,
+          "updates": 39
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "landscape",
+      "id": "lora",
+      "index": 180,
+      "source": 241,
+      "seated": 234,
+      "ink": {
+        "assembly": 0.044087659151447176,
+        "connector": 0.0436669089043731
+      },
+      "legs": [
+        {
+          "end": 234,
+          "updates": 54
+        },
+        {
+          "end": 180,
+          "updates": 54
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "landscape",
+      "id": "boards",
+      "index": 315,
+      "source": 376,
+      "seated": 363,
+      "ink": {
+        "assembly": 0.04914099639320444,
+        "connector": 0.09196127046552388
+      },
+      "legs": [
+        {
+          "end": 363,
+          "updates": 48
+        },
+        {
+          "end": 315,
+          "updates": 48
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "portrait",
+      "id": "wifi",
+      "index": 90,
+      "source": 151,
+      "seated": 129,
+      "ink": {
+        "assembly": 0.0435270891702427,
+        "connector": 0.054923580112315636
+      },
+      "legs": [
+        {
+          "end": 129,
+          "updates": 39
+        },
+        {
+          "end": 90,
+          "updates": 39
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "portrait",
+      "id": "lora",
+      "index": 180,
+      "source": 241,
+      "seated": 234,
+      "ink": {
+        "assembly": 0.055082692012152594,
+        "connector": 0.05577726122642092
+      },
+      "legs": [
+        {
+          "end": 234,
+          "updates": 54
+        },
+        {
+          "end": 180,
+          "updates": 54
+        }
+      ],
+      "passed": true
+    },
+    {
+      "orientation": "portrait",
+      "id": "boards",
+      "index": 315,
+      "source": 376,
+      "seated": 363,
+      "ink": {
+        "assembly": 0.03391022685628495,
+        "connector": 0.10590788472219365
+      },
+      "legs": [
+        {
+          "end": 363,
+          "updates": 48
+        },
+        {
+          "end": 315,
+          "updates": 48
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Chromium on macOS with a phone viewport. No physical phone, Safari or Firefox checks."
+  ]
+}

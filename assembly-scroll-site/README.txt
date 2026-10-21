@@ -42,13 +42,18 @@ validation/asset-manifest.json. The whole sequence is not preloaded.
 The manifest retains the shared frame map and chapter boundaries. Each
 orientation adds a resolutions array with id, width, height and
 urlTemplate. The browser chooses the smallest image covering the fitted
-artwork at device pixel ratio capped at 2. Orientation follows the
-available artwork area. The baseline HTML picture uses viewport
+artwork at device pixel ratio capped at 2. Phones start at no more than
+720p, or 540p when data saving or a constrained connection is reported.
+A measured delivery deficit lowers quality earlier during fast scrolling.
+Orientation follows the available artwork area. The baseline HTML picture uses viewport
 orientation before enhancement.
 
 INTERACTION AND LOADING
 
-The stage remains visible over twelve viewport heights of scroll travel.
+The stage follows the visible viewport, while the scroll distance remains
+twelve small viewport heights. Collapsing browser controls changes the
+stage without moving the scroll denominator. Rotation retains progress
+and checks the settled viewport. Pinch zoom remains native.
 Motion eases toward the requested position with a 100 ms response constant
 and no overshoot. Chapter links jump directly to a step. Resize and device
 orientation changes retain progress. Drawing stops once the position
@@ -61,13 +66,17 @@ scrolling still includes the full transitions and rear rotation.
 
 The viewer shows one progress bar, below the chapter links. CSS hides the
 duplicate track embedded in the bottom 64 pixels of the Blender frames,
-including the baseline parts image. Artwork sizing and all source files
-remain unchanged. The display mask follows the image actually on screen.
+including the baseline parts image. All source files remain unchanged.
+Phone layouts crop exported page furniture and keep the assembly and
+complete connector circles. The mask follows the image actually on screen.
 validation/single-progress.json and its screenshots cover this display
 change before the rest of the interface was simplified.
 
-The artwork provides the step title, connector labels and short caption.
-The initial scroll hint disappears after scrolling or selecting a chapter.
+The artwork retains its connector labels, chip markings and antenna labels.
+Phones use 13px navigation labels and a 15px HTML step instruction. Short
+landscape screens place the instruction beside a larger artwork region.
+The mobile hint reads Swipe up to assemble. The hint disappears after
+scrolling or selecting a chapter.
 Instructions & options opens a panel at the top right with full written
 instructions and the optional still mode. Opening it preserves artwork
 size and progress. Escape closes it and returns focus to its summary.
@@ -75,7 +84,7 @@ Clicking outside or selecting a chapter also closes it. Resolution changes
 happen quietly, with temporary loading feedback and Retry when needed.
 
 The bottom contains only the chapter links and one progress line.
-The same layout works in landscape and portrait. The separate
+Both landscape and portrait remain supported. The separate
 design/layout-concept.html remains a chapter-still design sketch.
 
 The loader prioritizes the newest target and nearby frames. Active
@@ -90,11 +99,16 @@ buffers, GPU storage or the five small compressed chapter images.
 
 Five 540p chapter stills are warmed before streaming animation frames.
 When displayed motion remains at least two positions behind for 800 ms,
-the viewer lowers resolution one tier, from 1080p to 720p to 540p, while
-keeping continuous animation active. The lower ceiling lasts for the
+the viewer lowers resolution one tier. After three delivery samples, a
+delivery time and scroll-rate estimate that exceeds four concurrent
+requests shortens that delay to 350 ms. Quality drops through 1080p, 720p
+and 540p while keeping continuous animation active. The lower ceiling lasts for the
 page visit, including resize and orientation changes, to avoid oscillation.
 At 540p it keeps animating and retains the last picture while loading.
 It never automatically selects chapter stills because of network delays.
+Routine loading feedback appears only after the picture stops advancing
+for 600 ms, or a chapter tap remains unresolved for 350 ms. Only actual
+failures are announced through the loading live region.
 Reduced motion selects stills with an explicit animation option.
 Everyone can select Use chapter stills and resume animation at any time.
 
@@ -111,6 +125,16 @@ enhanced viewer draws successfully. Expand Instructions & options to read
 all five steps. Loading failures keep the last valid image and offer
 Try again. Image descriptions and chapter highlighting follow the actual
 displayed view.
+
+CONNECTOR INSPECTION
+
+Tap the circular close-up or its plus button to inspect that connector.
+The dialog opens immediately with the displayed pose, then loads exactly
+one native-resolution frame through the same bounded loader. Scrolling
+pauses while the dialog is open. Close or Escape returns focus and resumes
+the same progress at the streaming resolution. Rotation during inspection
+is supported. A failed sharp image keeps the immediate view and offers
+Retry. These are enlarged views of the same parts, not additional pieces.
 
 CHECKS
 
@@ -132,6 +156,8 @@ Run these scripts with the same environment variables:
   tests/continuous-scroll.cjs Sustained native wheel scrolling in both directions
   tests/layout.cjs        Five viewport layouts, disclosure, hint and enlarged text
   tests/chapters.cjs      Visible chapter entry poses and forward/reverse seating
+  tests/connectors.cjs    Enlargement, single-image loading, focus, retry and cancellation
+  tests/loading-feedback.cjs Quiet advancing images, stalled taps and error announcements
 
 The default browser test traverses all 421 positions forward and backward
 in each orientation. SKIP_FULL_TRAVERSAL=1 explicitly skips those two
@@ -148,8 +174,10 @@ monotonic movement, exact settling and bounded resource use. Pass a live
 URL to run the same check against GitHub Pages. Set VALIDATION_OUTPUT to
 save that run separately from the local report.
 
-After completing all checks, run python3 scripts/record_validation.py to
-refresh the runtime fingerprint and coverage summary.
+The current mobile suite uses scripts/record_mobile_validation.py to
+record its runtime fingerprint and coverage. The older record_validation.py
+supports the root-level evidence and should run only after that entire
+earlier suite has been repeated.
 
 Evidence is in validation/. RESULTS.txt summarizes outcomes and tradeoffs.
 best-practices-audit.json is the unchanged
@@ -159,7 +187,9 @@ keeps animation active during loading delays. continuous-scroll-live.json
 records the same scrolling test against GitHub Pages, and live-source.json
 verifies the deployed runtime against local hashes. These are
 laboratory measurements on this Mac, not field Core Web Vitals or physical
-phone results. Safari, Firefox and physical devices remain unverified.
+phone results. The later mobile-improvements folder contains actual Pixel
+10 Pro XL Chrome checks, recorded separately from those older reports.
+Safari, Firefox, iPhone and lower-end Android devices remain unverified.
 clean-layout.json covers the simplified interface, with screenshots for
 desktop, tablet, phone, small phone and short landscape viewports.
 clean-layout-live.json repeats those checks against GitHub Pages.
@@ -185,3 +215,36 @@ on main deploy automatically. The Actions tab also supports manual runs.
 Original Blender projects, videos and manual archives remain in the
 repository and are not part of the Pages payload. Local validation
 reports retain the context in which their measurements were captured.
+
+MOBILE VALIDATION, 21 OCTOBER 2026
+
+validation/mobile-improvements/RESULTS.txt covers this local-only update.
+The earlier android-review-2026-10-21 folder preserves the public-site
+baseline. Mobile tests use one dedicated tab and never clear browser data.
+With the phone available and Chrome foreground, set up USB forwarding:
+
+  adb reverse tcp:8766 tcp:8766
+  adb forward tcp:9227 localabstract:chrome_devtools_remote
+
+Open http://127.0.0.1:8766/?audit=android-mobile-fixes in a dedicated phone
+Chrome tab. Record initial rotation and screen timeout settings before
+changing them. The scripts expect Node 22 or later, adb, the original
+1080 x 2404 test phone and locked portrait rotation. The swipe coordinates
+are device-specific. Do not run the phone scripts concurrently.
+
+  node tests/android-viewport.cjs
+  node tests/android-layout.cjs
+  node tests/android-connectors.cjs
+  node tests/android-scroll.cjs normal
+  node tests/android-scroll.cjs slow
+
+The slow phone run applies 1.6 Mbps and 150 ms latency to the real phone CPU.
+It does not emulate a low-end device. Desktop continuous-scroll.cjs also
+checks a 4x CPU slowdown. Disconnect only the dedicated audit tab, remove
+the two temporary forwardings and restore recorded device settings when
+done. The scripts restore network emulation and rotations they change.
+
+Use VALIDATION_DIR=validation/mobile-improvements for browser.cjs and
+fallback.cjs. Other browser scripts accept VALIDATION_OUTPUT for report
+paths when documented in their source. Generate the current evidence
+summary with python3 scripts/record_mobile_validation.py after testing.
