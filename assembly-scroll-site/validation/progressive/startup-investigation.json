@@ -1,0 +1,187 @@
+{
+  "method": "15 alternating reloads after priming each version. Identical local server with explicit HTTP caching isolates warm startup scheduling from revalidation. This supplements the main unchanged-server runs.",
+  "baseline": "95a4a91c2e5b7bffceb406a505951e294f1c3ee1",
+  "browser": "153.0.8010.37",
+  "rows": [
+    {
+      "version": "before",
+      "run": 0,
+      "firstImageMs": 38.30000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 0,
+      "firstImageMs": 36.40000003576279,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 1,
+      "firstImageMs": 40.80000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 1,
+      "firstImageMs": 37.30000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 2,
+      "firstImageMs": 39.799999952316284,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 2,
+      "firstImageMs": 36.80000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 3,
+      "firstImageMs": 39.89999997615814,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 3,
+      "firstImageMs": 36.5,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 4,
+      "firstImageMs": 40.89999997615814,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 4,
+      "firstImageMs": 37.39999997615814,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 5,
+      "firstImageMs": 40.89999997615814,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 5,
+      "firstImageMs": 34.700000047683716,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 6,
+      "firstImageMs": 24.400000035762787,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 6,
+      "firstImageMs": 35.10000002384186,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 7,
+      "firstImageMs": 41.60000002384186,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 7,
+      "firstImageMs": 37,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 8,
+      "firstImageMs": 24.399999976158142,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 8,
+      "firstImageMs": 36,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 9,
+      "firstImageMs": 40.80000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 9,
+      "firstImageMs": 37.39999997615814,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 10,
+      "firstImageMs": 24.399999976158142,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 10,
+      "firstImageMs": 36.10000002384186,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 11,
+      "firstImageMs": 24.80000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 11,
+      "firstImageMs": 35.80000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 12,
+      "firstImageMs": 24.399999976158142,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 12,
+      "firstImageMs": 36.09999996423721,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 13,
+      "firstImageMs": 41.30000001192093,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 13,
+      "firstImageMs": 37.40000003576279,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "before",
+      "run": 14,
+      "firstImageMs": 24.69999998807907,
+      "resourceBytes": 6539
+    },
+    {
+      "version": "after",
+      "run": 14,
+      "firstImageMs": 36,
+      "resourceBytes": 6539
+    }
+  ]
+}

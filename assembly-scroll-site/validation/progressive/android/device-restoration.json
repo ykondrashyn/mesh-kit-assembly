@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "accelerometer_rotation": "0",
+    "user_rotation": "0",
+    "screen_off_timeout": "30000"
+  },
+  "size": "Physical size: 1080x2404",
+  "model": "Pixel 10 Pro XL",
+  "android": "17",
+  "targetId": "12435",
+  "tabCloseResult": "Target is closing",
+  "restored": {
+    "accelerometer_rotation": "0",
+    "user_rotation": "0",
+    "screen_off_timeout": "30000"
+  },
+  "forwardingsRemoved": true
+}

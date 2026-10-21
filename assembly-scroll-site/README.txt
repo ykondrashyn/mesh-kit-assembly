@@ -37,14 +37,18 @@ There are 421 images in each orientation at each resolution:
 
 Total sequence sizes are about 7.5 MB, 11.1 MB and 18.0 MB respectively
 for each orientation. Exact byte totals and source/output hashes are in
-validation/asset-manifest.json. The whole sequence is not preloaded.
+validation/asset-manifest.json. Complete background preparation is gated by
+measured delivery and never blocks the opening frame.
 
 The manifest retains the shared frame map and chapter boundaries. Each
 orientation adds a resolutions array with id, width, height and
-urlTemplate. The browser chooses the smallest image covering the fitted
-artwork at device pixel ratio capped at 2. Phones start at no more than
-720p, or 540p when data saving or a constrained connection is reported.
-A measured delivery deficit lowers quality earlier during fast scrolling.
+urlTemplate. The opening pose requests the smallest image covering the fitted artwork
+at device pixel ratio capped at 2, up to 1080p. A conservative request
+starts after 600 ms if that sharp opening is still unavailable. The normal
+HTML parts image remains visible while loading. Phones begin scrolling at
+up to 720p, or 540p on a reported constrained connection. Those are startup
+choices, not permanent ceilings. Data Saver caps automatic requests at
+540p. Explicit connector enlargement can still request 1080p.
 Orientation follows the available artwork area. The baseline HTML picture uses viewport
 orientation before enhancement.
 
@@ -87,30 +91,67 @@ The bottom contains only the chapter links and one progress line.
 Both landscape and portrait remain supported. The separate
 design/layout-concept.html remains a chapter-still design sketch.
 
-The loader prioritizes the newest target and nearby frames. Active
-requests finish during normal scrolling instead of being repeatedly
-cancelled. Changes to orientation or resolution cancel the old selection.
-There are at most four loader jobs, with serial image decoding.
+PROGRESSIVE LOADING AND QUALITY RECOVERY
 
-Decoded images are limited to both 12 bitmaps and 48 MiB. Reservations for
-an in-progress decode count toward the limit. Evicted images are closed.
-The byte limit covers bitmap pixels, not total browser memory, canvas
-buffers, GPU storage or the five small compressed chapter images.
+The loader prioritizes the requested pose before nearby motion frames.
+Opening and paused-pose detail requests share the same scheduler. Ordinary
+scrolling does not repeatedly cancel active motion downloads. A speculative
+request can be cancelled to free a slot for an urgent target. Requests carry
+browser priority hints, but the scheduler controls admission itself.
 
-Five 540p chapter stills are warmed before streaming animation frames.
-When displayed motion remains at least two positions behind for 800 ms,
-the viewer lowers resolution one tier. After three delivery samples, a
-delivery time and scroll-rate estimate that exceeds four concurrent
-requests shortens that delay to 350 ms. Quality drops through 1080p, 720p
-and 540p while keeping continuous animation active. The lower ceiling lasts for the
-page visit, including resize and orientation changes, to avoid oscillation.
-At 540p it keeps animating and retains the last picture while loading.
-It never automatically selects chapter stills because of network delays.
-Routine loading feedback appears only after the picture stops advancing
-for 600 ms, or a chapter tap remains unresolved for 350 ms. Only actual
-failures are announced through the loading live region.
-Reduced motion selects stills with an explicit animation option.
-Everyone can select Use chapter stills and resume animation at any time.
+There are at most four jobs and one speculative job at a time, with serial
+image decoding. Decoded images are limited to twelve bitmaps and 48 MiB,
+including reservations for an in-progress decode. A separate 24 MiB cache
+holds compressed image files. All limits are shared with connector inspection
+and refinement. These are application cache limits, not total browser, GPU,
+canvas or in-flight response memory measurements.
+
+Decoded entries and compressed files are keyed by orientation, resolution
+and frame. Useful entries survive resolution changes. Redundant decoded
+versions of the same pose are removed. The compressed cache evicts unused
+orientations and lower-resolution files before useful high-resolution files.
+Fallback and runtime requests use matching versioned URLs for HTTP-cache reuse.
+
+Five small chapter stills warm after foreground work rather than blocking
+startup. High-resolution background preparation covers twelve positions ahead
+and four behind, then reverses direction with scrolling. After three healthy
+seconds and at least eight measured network responses averaging 5 Mbps or
+more, it can prepare the rest of the active orientation. Browser-cache hits
+are excluded from that throughput estimate. It never preloads the inactive
+orientation or every resolution. Each asset gets only one speculative network
+attempt per visit, preventing refetch loops after eviction or failure.
+
+Speculation pauses when delivery falls behind, the target fails, Data Saver
+is active, or the page is hidden. Measured transfer pressure also suspends
+preparation until scrolling has paused for 600 ms. Briefly catching up does
+not compete with the next visible request on a constrained link.
+New work stops after preparation completes.
+The ?background=off query is a validation switch that disables speculative
+high-resolution preparation. It is not a user-facing quality control.
+
+After 600 ms without scrolling, the exact displayed pose can sharpen to the
+useful screen resolution without changing progress or the streaming tier.
+A late or failed refinement preserves the valid image. Resuming scroll uses
+the established motion tier, or already prepared sharper files when decoding
+has sufficient headroom. Decode demand is capped at 60 displayed frames per
+second so skipped timeline positions do not reject usable cached images.
+A lower-quality result cannot replace a sharper
+version of the same pose and layout.
+
+Motion two or more positions behind for 800 ms lowers quality one tier.
+Measured delivery pressure shortens that delay to 350 ms. Continuous animation
+remains active even at 540p. Recovery needs three healthy seconds and three
+distinct recent next-tier samples with at least 30 percent transfer and decode
+headroom at the scrolling rate. Cached files only need decode headroom.
+Wait ten seconds after a downgrade, five seconds between promotions, and
+fifteen seconds after a failed probe. Connection APIs are optional hints.
+Measured delivery supports recovery without them and without reloading.
+
+Loading feedback appears only after a 600 ms image stall or an unresolved
+chapter tap lasting 350 ms. Actual target failures retain the current view and
+offer Retry. Corrupt compressed responses are discarded on retry, which also
+bypasses HTTP cache. Reduced motion selects optional chapter stills. Everyone
+can switch between stills and animation from Instructions & options.
 
 Completed downloads can advance the picture even if scrolling has passed
 the original request window. Only frames between the displayed pose and
@@ -132,7 +173,7 @@ Tap the circular close-up or its plus button to inspect that connector.
 The dialog opens immediately with the displayed pose, then loads exactly
 one native-resolution frame through the same bounded loader. Scrolling
 pauses while the dialog is open. Close or Escape returns focus and resumes
-the same progress at the streaming resolution. Rotation during inspection
+the same progress, retaining a sharper cached pose when useful. Rotation during inspection
 is supported. A failed sharp image keeps the immediate view and offers
 Retry. These are enlarged views of the same parts, not additional pieces.
 
@@ -189,7 +230,8 @@ verifies the deployed runtime against local hashes. These are
 laboratory measurements on this Mac, not field Core Web Vitals or physical
 phone results. The later mobile-improvements folder contains actual Pixel
 10 Pro XL Chrome checks, recorded separately from those older reports.
-Safari, Firefox, iPhone and lower-end Android devices remain unverified.
+Those earlier reports did not cover Safari, Firefox, iPhone or lower-end Android.
+Current progressive-loading coverage is listed in validation/progressive/RESULTS.txt.
 clean-layout.json covers the simplified interface, with screenshots for
 desktop, tablet, phone, small phone and short landscape viewports.
 clean-layout-live.json repeats those checks against GitHub Pages.
@@ -237,6 +279,7 @@ are device-specific. Do not run the phone scripts concurrently.
   node tests/android-connectors.cjs
   node tests/android-scroll.cjs normal
   node tests/android-scroll.cjs slow
+  node tests/android-progressive.cjs
 
 The slow phone run applies 1.6 Mbps and 150 ms latency to the real phone CPU.
 It does not emulate a low-end device. Desktop continuous-scroll.cjs also
@@ -248,3 +291,78 @@ Use VALIDATION_DIR=validation/mobile-improvements for browser.cjs and
 fallback.cjs. Other browser scripts accept VALIDATION_OUTPUT for report
 paths when documented in their source. Generate the current evidence
 summary with python3 scripts/record_mobile_validation.py after testing.
+
+PROGRESSIVE LOADING VALIDATION
+
+  node --test tests/*.test.mjs
+  PLAYWRIGHT_MODULE=/absolute/path/to/playwright node tests/progressive.cjs
+  PLAYWRIGHT_MODULE=/absolute/path/to/playwright node tests/progressive-performance.cjs
+
+The performance script takes three cold/warm runs for desktop, phone and
+throttled phone. Set VALIDATION_OUTPUT to preserve a separate report. The
+comparison uses a fresh baseline in validation/progressive/before.json.
+The ?background=off URL allows a matched contention comparison:
+
+  VALIDATION_OUTPUT=validation/progressive/background-off.json \
+  PLAYWRIGHT_MODULE=/absolute/path/to/playwright \
+  node tests/progressive-performance.cjs 'http://127.0.0.1:8766/?background=off'
+  python3 scripts/compare_progressive_performance.py
+
+The focused warm-start investigation is reproducible with
+node tests/startup-comparison.cjs using the same Playwright environment.
+Add SLOW=1 for the constrained phone profile. It uses a temporary explicit-cache
+server to isolate warm reloads, and does not replace the primary server results.
+
+See validation/progressive/RESULTS.txt for measured improvements, byte costs,
+regressions and unavailable coverage. Firefox/Safari smoke checks use Selenium:
+
+  python3 tests/cross_browser.py
+
+The Safari check requires Remote Automation already enabled by the user.
+This script does not change browser preferences. Android checks require a
+connected, authorized phone and are not replaced by desktop emulation.
+The final progressive audit includes a connected Pixel 10 Pro XL. Its reports
+are under validation/progressive/android. For a dedicated phone audit, set
+VALIDATION_DIR=validation/progressive/android and optionally ANDROID_TARGET_ID
+to the exact new Chrome tab ID. The phone scripts now record live device and
+browser versions. Restore the settings and forwarding documented above afterward.
+
+Scheduler references:
+https://web.dev/articles/fetch-priority
+https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/transferSize
+https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/close
+
+LOCAL FORMAT COMPARISON
+
+The production format remains WebP. Comparison outputs are reproducible,
+local-only files under .cache/format-benchmark, excluded from Git and Pages.
+Install Pillow with AVIF support in a Python environment and use FFmpeg with
+libx264 available. The recorded run uses Pillow 13 and AVIF speed 8, one codec
+thread per image worker. Each candidate uses original PNGs, not transcoded WebP.
+
+  python3 scripts/benchmark_formats.py --workers 2
+  python3 scripts/benchmark_server.py
+
+Open http://127.0.0.1:8767 to compare formats and poses. The server implements
+HTTP byte ranges. Generation resumes by retaining completed output files.
+The benchmark includes all 421 poses, both orientations and all three sizes.
+WebP candidates use quality 80/88 and method 6, AVIF uses quality 50/65/80,
+and H.264 uses CRF 18/23 with GOP 1/6, no B-frames and faststart.
+
+  PLAYWRIGHT_MODULE=/absolute/path/to/playwright node tests/format-benchmark.cjs
+
+This records normal and throttled cases, precise random seeks, continuous
+forward/reverse traces, transferred bytes and presented-frame latency.
+Video remains paused and seeks with currentTime. Presented timestamps are
+checked with requestVideoFrameCallback. Requested frames are not counted as
+presented frames until confirmed. Different codec quality numbers are not
+equivalent visual-quality ratings. Read the comparison report before choosing
+a new production format. The original MP4 demos are unchanged.
+
+  python3 scripts/compare_format_quality.py
+
+This adds source-pixel comparisons and a contact sheet of chip, plug and antenna
+labels. Read validation/progressive/FORMAT-COMPARISON.txt for the conclusions.
+Generated candidates are retained locally but excluded from Git. Scripts and
+measurement evidence are committed. Production remains WebP pending a separate
+format decision and broader device validation.

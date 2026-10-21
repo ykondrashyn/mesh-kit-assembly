@@ -1,0 +1,17 @@
+{
+  "capturedUTC": "2026-10-21T16:41:23.578850+00:00",
+  "records": [
+    {
+      "url": "http://127.0.0.1:8766/app.js?v=progressive-1",
+      "status": 200,
+      "cacheControl": null,
+      "lastModified": "Wed, 21 Oct 2026 16:37:11 GMT"
+    },
+    {
+      "url": "https://ykondrashyn.github.io/mesh-kit-assembly/app.js?v=scroll-intro-2",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "lastModified": "Wed, 21 Oct 2026 14:59:34 GMT"
+    }
+  ]
+}

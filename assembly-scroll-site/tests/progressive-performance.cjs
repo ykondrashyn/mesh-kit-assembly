@@ -17,7 +17,7 @@ const median = values => [...values].sort((a,b) => a-b)[Math.floor(values.length
   const report = { url: base, browser: await browser.version(), runs: [], completed: false };
   fs.mkdirSync(path.dirname(output), { recursive: true });
   try {
-    for (const profile of profiles) for (let run = 0; run < runs; run++) {
+    for (const profile of profiles.filter(p => !process.env.PROFILE || p.name === process.env.PROFILE)) for (let run = 0; run < runs; run++) {
       const context = await browser.newContext({ viewport: { width: profile.width, height: profile.height },
         screen: { width: profile.width, height: profile.height }, deviceScaleFactor: 2,
         hasTouch: Boolean(profile.phone), isMobile: Boolean(profile.phone) });
@@ -84,7 +84,7 @@ const median = values => [...values].sort((a,b) => a-b)[Math.floor(values.length
       }
       await context.close();
     }
-    report.summary = profiles.flatMap(p=>['cold','warm'].map(cache=>{
+    report.summary = profiles.filter(p=>report.runs.some(r=>r.profile===p.name)).flatMap(p=>['cold','warm'].map(cache=>{
       const rows=report.runs.filter(r=>r.profile===p.name && r.cache===cache);
       return { profile:p.name,cache, firstImageMs:median(rows.map(r=>r.firstImageMs)), bytes:median(rows.map(r=>r.bytes)),
         p95GapMs:median(rows.map(r=>Math.max(...r.legs.map(l=>l.p95GapMs)))), poses:median(rows.map(r=>r.legs.reduce((n,l)=>n+l.poses,0))) };

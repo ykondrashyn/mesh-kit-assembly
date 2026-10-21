@@ -57,6 +57,7 @@ function bounds(s){assert.ok(Number(s.stage.maxRequests)<=4);assert.ok(Number(s.
    await cdp.send('Network.emulateNetworkConditions',{offline:false,latency:0,downloadThroughput:5000000,uploadThroughput:1000000});
    await p.waitForFunction(()=>Number(document.querySelector('#stage').dataset.resolution)>=720,null,{timeout:25000});
    await p.waitForFunction(()=>document.querySelector('#assembly').dataset.resolution==='1080');
+   await p.waitForFunction(()=>document.querySelector('#stage').dataset.resolution==='1080',null,{timeout:30000});
    return {slow};
   },{downlink:1.6,effectiveType:'4g',saveData:false});
   await check('Data Saver prevents automatic high-resolution and distant downloads',async(p,c,requests)=>{

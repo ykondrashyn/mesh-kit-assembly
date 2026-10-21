@@ -8,8 +8,11 @@ const instrumentation=`(() => {
  addEventListener('DOMContentLoaded',()=>{const c=document.querySelector('#assembly');new MutationObserver(()=>m.frames.push(read())).observe(c,{attributes:true,attributeFilter:['data-frame']});setInterval(()=>m.samples.push(read()),100);});
 })()`;
 (async()=>{
- const c=await CDP.open();const phase=process.argv[2]||'normal'; const report={phase,date:new Date().toISOString(),device:'Pixel 10 Pro XL',android:'17',chrome:'155.0.8059.81',cpuThrottling:false,cacheDisabled:true,network:phase==='slow'?{downloadBps:200000,latencyMs:150}:{throttled:false},requests:[],errors:[],chapters:[],legs:[]};let script;
+ const c=await CDP.open();const phase=process.argv[2]||'normal'; const report={phase,date:new Date().toISOString(),device:null,android:null,chrome:null,cpuThrottling:false,cacheDisabled:true,network:phase==='slow'?{downloadBps:200000,latencyMs:150}:{throttled:false},requests:[],errors:[],chapters:[],legs:[]};let script;
  try{
+ report.device=adb(['shell','getprop','ro.product.model']).toString().trim();
+ report.android=adb(['shell','getprop','ro.build.version.release']).toString().trim();
+ report.chrome=(await c.send('Browser.getVersion')).product;
  await c.send('Page.enable');await c.send('Network.enable');await c.send('Runtime.enable');
  c.handlers.push(m=>{if(m.method==='Network.requestWillBeSent')report.requests.push({id:m.params.requestId,url:m.params.request.url,t:m.params.timestamp});if(m.method==='Network.loadingFinished'){const r=report.requests.find(r=>r.id===m.params.requestId);if(r)r.bytes=m.params.encodedDataLength;}if(m.method==='Network.loadingFailed')report.errors.push({type:'request',...m.params});if(m.method==='Runtime.exceptionThrown')report.errors.push({type:'exception',details:m.params.exceptionDetails});});
  await c.send('Network.setCacheDisabled',{cacheDisabled:true});

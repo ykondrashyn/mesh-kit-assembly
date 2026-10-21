@@ -1,0 +1,1060 @@
+{
+  "date": "2026-10-21T16:31:48.136Z",
+  "checks": [
+    {
+      "run": 0,
+      "rotation": 1,
+      "state": {
+        "stage": {
+          "mode": "animation",
+          "layout": "compact",
+          "orientation": "landscape",
+          "resolution": "720",
+          "requestedFrame": "315",
+          "progress": "0.750016",
+          "targetProgress": "0.750016",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "7",
+          "maxDecodedFrames": "9",
+          "decodedBytes": "48844800",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "2748592",
+          "maxCompressedBytes": "2748592",
+          "maxSpeculative": "1",
+          "backgroundFetched": "55",
+          "jobs": "2",
+          "preparedFrames": "17",
+          "networkSamples": "17",
+          "networkMbps": "41.86",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "layout": "compact"
+        },
+        "viewport": {
+          "width": 920,
+          "height": 338,
+          "dpr": 2.4375,
+          "visualHeight": 338.4615478515625,
+          "visualWidth": 920.2051391601562,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 3046.564208984375
+        },
+        "artwork": {
+          "x": 230,
+          "y": 4,
+          "width": 666.2051391601562,
+          "height": 276.4615478515625,
+          "bottom": 280.4615478515625
+        },
+        "canvasRect": {
+          "x": 230,
+          "y": 17.314102172851562,
+          "width": 666.2051391601562,
+          "height": 249.82691955566406,
+          "bottom": 267.1410217285156
+        },
+        "controls": {
+          "x": 80.1025619506836,
+          "y": 280.4615478515625,
+          "width": 760,
+          "height": 54,
+          "bottom": 334.4615478515625
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": -264.6153869628906,
+          "y": 100,
+          "width": 420,
+          "height": 218.4615478515625,
+          "bottom": 318.4615478515625
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 80.1025619506836,
+              "y": 280.4615478515625,
+              "width": 67.2371826171875,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 243.87820434570312,
+              "y": 280.4615478515625,
+              "width": 64.98076629638672,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 405.3910217285156,
+              "y": 280.4615478515625,
+              "width": 65.84615325927734,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 567.775634765625,
+              "y": 280.4615478515625,
+              "width": 77.8269271850586,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 742.1346435546875,
+              "y": 280.4615478515625,
+              "width": 97.96794891357422,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 4062,
+        "connection": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "stageHeight": 338
+      }
+    },
+    {
+      "run": 0,
+      "rotation": 0,
+      "state": {
+        "stage": {
+          "mode": "animation",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "720",
+          "requestedFrame": "315",
+          "progress": "0.749999",
+          "targetProgress": "0.749999",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "6",
+          "maxDecodedFrames": "9",
+          "decodedBytes": "49766400",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "2748592",
+          "maxCompressedBytes": "2748592",
+          "maxSpeculative": "1",
+          "backgroundFetched": "55",
+          "jobs": "0",
+          "preparedFrames": "30",
+          "networkSamples": "17",
+          "networkMbps": "41.86",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "1080",
+          "layout": "phone"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 839.7948608398438,
+          "visualWidth": 443.0769348144531,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 7557.74365234375
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 680.4359130859375,
+          "bottom": 736.4359130859375
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 59.5384635925293,
+          "width": 415.0769348144531,
+          "height": 673.34619140625,
+          "bottom": 732.8846549987793
+        },
+        "controls": {
+          "x": 14,
+          "y": 761.4359130859375,
+          "width": 415.0769348144531,
+          "height": 66.35897827148438,
+          "bottom": 827.7948913574219
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 773.4359130859375,
+              "width": 79.82051086425781,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 10077,
+        "connection": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "stageHeight": 840
+      }
+    },
+    {
+      "run": 1,
+      "rotation": 1,
+      "state": {
+        "stage": {
+          "mode": "animation",
+          "layout": "compact",
+          "orientation": "landscape",
+          "resolution": "720",
+          "requestedFrame": "315",
+          "progress": "0.750016",
+          "targetProgress": "0.750016",
+          "settled": "true",
+          "distantPrefetch": "false",
+          "decodedFrames": "6",
+          "maxDecodedFrames": "9",
+          "decodedBytes": "49766400",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "2748592",
+          "maxCompressedBytes": "2748592",
+          "maxSpeculative": "1",
+          "backgroundFetched": "55",
+          "jobs": "0",
+          "preparedFrames": "17",
+          "networkSamples": "17",
+          "networkMbps": "41.86",
+          "qualityDrops": "0",
+          "qualityPromotions": "0",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "landscape",
+          "resolution": "1080",
+          "layout": "compact"
+        },
+        "viewport": {
+          "width": 920,
+          "height": 338,
+          "dpr": 2.4375,
+          "visualHeight": 338.4615478515625,
+          "visualWidth": 920.2051391601562,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 3046.564208984375
+        },
+        "artwork": {
+          "x": 230,
+          "y": 4,
+          "width": 666.2051391601562,
+          "height": 276.4615478515625,
+          "bottom": 280.4615478515625
+        },
+        "canvasRect": {
+          "x": 230,
+          "y": 17.314102172851562,
+          "width": 666.2051391601562,
+          "height": 249.82691955566406,
+          "bottom": 267.1410217285156
+        },
+        "controls": {
+          "x": 80.1025619506836,
+          "y": 280.4615478515625,
+          "width": 760,
+          "height": 54,
+          "bottom": 334.4615478515625
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": -264.6153869628906,
+          "y": 100,
+          "width": 420,
+          "height": 218.4615478515625,
+          "bottom": 318.4615478515625
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 80.1025619506836,
+              "y": 280.4615478515625,
+              "width": 67.2371826171875,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 243.87820434570312,
+              "y": 280.4615478515625,
+              "width": 64.98076629638672,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 405.3910217285156,
+              "y": 280.4615478515625,
+              "width": 65.84615325927734,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 567.775634765625,
+              "y": 280.4615478515625,
+              "width": 77.8269271850586,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 742.1346435546875,
+              "y": 280.4615478515625,
+              "width": 97.96794891357422,
+              "height": 44,
+              "bottom": 324.4615478515625
+            },
+            "font": "13px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 4062,
+        "connection": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "stageHeight": 338
+      }
+    },
+    {
+      "run": 1,
+      "rotation": 0,
+      "state": {
+        "stage": {
+          "mode": "animation",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "1080",
+          "requestedFrame": "315",
+          "progress": "0.749999",
+          "targetProgress": "0.749999",
+          "settled": "true",
+          "distantPrefetch": "true",
+          "decodedFrames": "6",
+          "maxDecodedFrames": "9",
+          "decodedBytes": "49766400",
+          "maxDecodedBytes": "49766400",
+          "maxRequests": "4",
+          "compressedBytes": "13092274",
+          "maxCompressedBytes": "13092274",
+          "maxSpeculative": "1",
+          "backgroundFetched": "294",
+          "jobs": "1",
+          "preparedFrames": "262",
+          "networkSamples": "24",
+          "networkMbps": "29.37",
+          "qualityDrops": "0",
+          "qualityPromotions": "1",
+          "usefulResolution": "1080",
+          "qualityLagMs": "0"
+        },
+        "canvas": {
+          "frame": "315",
+          "sourceFrame": "376",
+          "orientation": "portrait",
+          "resolution": "1080",
+          "layout": "phone"
+        },
+        "viewport": {
+          "width": 443,
+          "height": 840,
+          "dpr": 2.4375,
+          "visualHeight": 839.7948608398438,
+          "visualWidth": 443.0769348144531,
+          "visualScale": 1,
+          "visualOffset": 0,
+          "scrollY": 7557.74365234375
+        },
+        "artwork": {
+          "x": 14,
+          "y": 56,
+          "width": 415.0769348144531,
+          "height": 680.4359130859375,
+          "bottom": 736.4359130859375
+        },
+        "canvasRect": {
+          "x": 14,
+          "y": 59.5384635925293,
+          "width": 415.0769348144531,
+          "height": 673.34619140625,
+          "bottom": 732.8846549987793
+        },
+        "controls": {
+          "x": 14,
+          "y": 761.4359130859375,
+          "width": 415.0769348144531,
+          "height": 66.35897827148438,
+          "bottom": 827.7948913574219
+        },
+        "panelOpen": false,
+        "panel": {
+          "x": 283.69232177734375,
+          "y": 64,
+          "width": 145.38461303710938,
+          "height": 571.0576782226562,
+          "bottom": 635.0576782226562
+        },
+        "nav": [
+          {
+            "text": "01Parts",
+            "rect": {
+              "x": 14,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "02Wi-Fi",
+            "rect": {
+              "x": 97.81410217285156,
+              "y": 773.4359130859375,
+              "width": 79.82051086425781,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "03LoRa",
+            "rect": {
+              "x": 181.63461303710938,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          },
+          {
+            "text": "04Boards",
+            "rect": {
+              "x": 265.44873046875,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": "step"
+          },
+          {
+            "text": "✓Assembled",
+            "rect": {
+              "x": 349.2628173828125,
+              "y": 773.4359130859375,
+              "width": 79.81410217285156,
+              "height": 44.35897445678711,
+              "bottom": 817.7948875427246
+            },
+            "font": "13px",
+            "current": null
+          }
+        ],
+        "horizontalOverflow": false,
+        "load": "",
+        "span": 10077,
+        "connection": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "stageHeight": 840
+      }
+    }
+  ],
+  "passed": true,
+  "toolbar": {
+    "before": {
+      "stage": {
+        "mode": "animation",
+        "layout": "phone",
+        "orientation": "portrait",
+        "resolution": "1080",
+        "requestedFrame": "315",
+        "progress": "0.749999",
+        "targetProgress": "0.749999",
+        "settled": "true",
+        "distantPrefetch": "true",
+        "decodedFrames": "6",
+        "maxDecodedFrames": "9",
+        "decodedBytes": "49766400",
+        "maxDecodedBytes": "49766400",
+        "maxRequests": "4",
+        "compressedBytes": "15060998",
+        "maxCompressedBytes": "15060998",
+        "maxSpeculative": "1",
+        "backgroundFetched": "338",
+        "jobs": "1",
+        "preparedFrames": "306",
+        "networkSamples": "24",
+        "networkMbps": "29.37",
+        "qualityDrops": "0",
+        "qualityPromotions": "1",
+        "usefulResolution": "1080",
+        "qualityLagMs": "0"
+      },
+      "canvas": {
+        "frame": "315",
+        "sourceFrame": "376",
+        "orientation": "portrait",
+        "resolution": "1080",
+        "layout": "phone"
+      },
+      "viewport": {
+        "width": 443,
+        "height": 840,
+        "dpr": 2.4375,
+        "visualHeight": 839.7948608398438,
+        "visualWidth": 443.0769348144531,
+        "visualScale": 1,
+        "visualOffset": 0,
+        "scrollY": 7557.74365234375
+      },
+      "artwork": {
+        "x": 14,
+        "y": 56,
+        "width": 415.0769348144531,
+        "height": 680.4359130859375,
+        "bottom": 736.4359130859375
+      },
+      "canvasRect": {
+        "x": 14,
+        "y": 59.5384635925293,
+        "width": 415.0769348144531,
+        "height": 673.34619140625,
+        "bottom": 732.8846549987793
+      },
+      "controls": {
+        "x": 14,
+        "y": 761.4359130859375,
+        "width": 415.0769348144531,
+        "height": 66.35897827148438,
+        "bottom": 827.7948913574219
+      },
+      "panelOpen": false,
+      "panel": {
+        "x": 283.69232177734375,
+        "y": 64,
+        "width": 145.38461303710938,
+        "height": 571.0576782226562,
+        "bottom": 635.0576782226562
+      },
+      "nav": [
+        {
+          "text": "01Parts",
+          "rect": {
+            "x": 14,
+            "y": 773.4359130859375,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 817.7948875427246
+          },
+          "font": "13px",
+          "current": null
+        },
+        {
+          "text": "02Wi-Fi",
+          "rect": {
+            "x": 97.81410217285156,
+            "y": 773.4359130859375,
+            "width": 79.82051086425781,
+            "height": 44.35897445678711,
+            "bottom": 817.7948875427246
+          },
+          "font": "13px",
+          "current": null
+        },
+        {
+          "text": "03LoRa",
+          "rect": {
+            "x": 181.63461303710938,
+            "y": 773.4359130859375,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 817.7948875427246
+          },
+          "font": "13px",
+          "current": null
+        },
+        {
+          "text": "04Boards",
+          "rect": {
+            "x": 265.44873046875,
+            "y": 773.4359130859375,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 817.7948875427246
+          },
+          "font": "13px",
+          "current": "step"
+        },
+        {
+          "text": "✓Assembled",
+          "rect": {
+            "x": 349.2628173828125,
+            "y": 773.4359130859375,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 817.7948875427246
+          },
+          "font": "13px",
+          "current": null
+        }
+      ],
+      "horizontalOverflow": false,
+      "load": "",
+      "span": 10077,
+      "connection": {
+        "type": "4g",
+        "downlink": 10,
+        "rtt": 50,
+        "saveData": false
+      },
+      "stageHeight": 840
+    },
+    "after": {
+      "stage": {
+        "mode": "animation",
+        "layout": "phone",
+        "orientation": "portrait",
+        "resolution": "1080",
+        "requestedFrame": "358",
+        "progress": "0.852207",
+        "targetProgress": "0.852513",
+        "settled": "false",
+        "distantPrefetch": "true",
+        "decodedFrames": "6",
+        "maxDecodedFrames": "9",
+        "decodedBytes": "49766400",
+        "maxDecodedBytes": "49766400",
+        "maxRequests": "4",
+        "compressedBytes": "19766864",
+        "maxCompressedBytes": "19766864",
+        "maxSpeculative": "1",
+        "backgroundFetched": "453",
+        "jobs": "0",
+        "preparedFrames": "421",
+        "networkSamples": "24",
+        "networkMbps": "29.37",
+        "qualityDrops": "0",
+        "qualityPromotions": "1",
+        "usefulResolution": "1080",
+        "qualityLagMs": "0"
+      },
+      "canvas": {
+        "frame": "358",
+        "sourceFrame": "419",
+        "orientation": "portrait",
+        "resolution": "1080",
+        "layout": "phone"
+      },
+      "viewport": {
+        "width": 443,
+        "height": 920,
+        "dpr": 2.4375,
+        "visualHeight": 920.2051391601562,
+        "visualWidth": 443.0769348144531,
+        "visualScale": 1,
+        "visualOffset": 0,
+        "scrollY": 8590.76953125
+      },
+      "artwork": {
+        "x": 14,
+        "y": 56,
+        "width": 415.0769348144531,
+        "height": 747.84619140625,
+        "bottom": 803.84619140625
+      },
+      "canvasRect": {
+        "x": 14,
+        "y": 93.24359130859375,
+        "width": 415.0769348144531,
+        "height": 673.34619140625,
+        "bottom": 766.5897827148438
+      },
+      "controls": {
+        "x": 14,
+        "y": 828.84619140625,
+        "width": 415.0769348144531,
+        "height": 66.35897827148438,
+        "bottom": 895.2051696777344
+      },
+      "panelOpen": false,
+      "panel": {
+        "x": 283.69232177734375,
+        "y": 64,
+        "width": 145.38461303710938,
+        "height": 571.0576782226562,
+        "bottom": 635.0576782226562
+      },
+      "nav": [
+        {
+          "text": "01Parts",
+          "rect": {
+            "x": 14,
+            "y": 840.84619140625,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 885.2051658630371
+          },
+          "font": "13px",
+          "current": null
+        },
+        {
+          "text": "02Wi-Fi",
+          "rect": {
+            "x": 97.81410217285156,
+            "y": 840.84619140625,
+            "width": 79.82051086425781,
+            "height": 44.35897445678711,
+            "bottom": 885.2051658630371
+          },
+          "font": "13px",
+          "current": null
+        },
+        {
+          "text": "03LoRa",
+          "rect": {
+            "x": 181.63461303710938,
+            "y": 840.84619140625,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 885.2051658630371
+          },
+          "font": "13px",
+          "current": null
+        },
+        {
+          "text": "04Boards",
+          "rect": {
+            "x": 265.44873046875,
+            "y": 840.84619140625,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 885.2051658630371
+          },
+          "font": "13px",
+          "current": "step"
+        },
+        {
+          "text": "✓Assembled",
+          "rect": {
+            "x": 349.2628173828125,
+            "y": 840.84619140625,
+            "width": 79.81410217285156,
+            "height": 44.35897445678711,
+            "bottom": 885.2051658630371
+          },
+          "font": "13px",
+          "current": null
+        }
+      ],
+      "horizontalOverflow": false,
+      "load": "",
+      "span": 10078,
+      "connection": {
+        "type": "4g",
+        "downlink": 10,
+        "rtt": 50,
+        "saveData": false
+      },
+      "stageHeight": 920
+    }
+  },
+  "zoom": {
+    "stage": {
+      "mode": "animation",
+      "layout": "phone",
+      "orientation": "portrait",
+      "resolution": "1080",
+      "requestedFrame": "358",
+      "progress": "0.852513",
+      "targetProgress": "0.852513",
+      "settled": "true",
+      "distantPrefetch": "true",
+      "decodedFrames": "6",
+      "maxDecodedFrames": "9",
+      "decodedBytes": "49766400",
+      "maxDecodedBytes": "49766400",
+      "maxRequests": "4",
+      "compressedBytes": "19766864",
+      "maxCompressedBytes": "19766864",
+      "maxSpeculative": "1",
+      "backgroundFetched": "453",
+      "jobs": "0",
+      "preparedFrames": "421",
+      "networkSamples": "24",
+      "networkMbps": "29.37",
+      "qualityDrops": "0",
+      "qualityPromotions": "1",
+      "usefulResolution": "1080",
+      "qualityLagMs": "0"
+    },
+    "canvas": {
+      "frame": "358",
+      "sourceFrame": "419",
+      "orientation": "portrait",
+      "resolution": "1080",
+      "layout": "phone"
+    },
+    "viewport": {
+      "width": 443,
+      "height": 920,
+      "dpr": 2.4375,
+      "visualHeight": 460.1026611328125,
+      "visualWidth": 221.53851318359375,
+      "visualScale": 1.9999996423721313,
+      "visualOffset": 179.6923065185547,
+      "scrollY": 8590.76953125
+    },
+    "artwork": {
+      "x": 14,
+      "y": 56,
+      "width": 415.0769348144531,
+      "height": 747.84619140625,
+      "bottom": 803.84619140625
+    },
+    "canvasRect": {
+      "x": 14,
+      "y": 93.24359130859375,
+      "width": 415.0769348144531,
+      "height": 673.34619140625,
+      "bottom": 766.5897827148438
+    },
+    "controls": {
+      "x": 14,
+      "y": 828.84619140625,
+      "width": 415.0769348144531,
+      "height": 66.35897827148438,
+      "bottom": 895.2051696777344
+    },
+    "panelOpen": false,
+    "panel": {
+      "x": 283.69232177734375,
+      "y": 64,
+      "width": 145.38461303710938,
+      "height": 571.0576782226562,
+      "bottom": 635.0576782226562
+    },
+    "nav": [
+      {
+        "text": "01Parts",
+        "rect": {
+          "x": 14,
+          "y": 840.84619140625,
+          "width": 79.81410217285156,
+          "height": 44.35897445678711,
+          "bottom": 885.2051658630371
+        },
+        "font": "13px",
+        "current": null
+      },
+      {
+        "text": "02Wi-Fi",
+        "rect": {
+          "x": 97.81410217285156,
+          "y": 840.84619140625,
+          "width": 79.82051086425781,
+          "height": 44.35897445678711,
+          "bottom": 885.2051658630371
+        },
+        "font": "13px",
+        "current": null
+      },
+      {
+        "text": "03LoRa",
+        "rect": {
+          "x": 181.63461303710938,
+          "y": 840.84619140625,
+          "width": 79.81410217285156,
+          "height": 44.35897445678711,
+          "bottom": 885.2051658630371
+        },
+        "font": "13px",
+        "current": null
+      },
+      {
+        "text": "04Boards",
+        "rect": {
+          "x": 265.44873046875,
+          "y": 840.84619140625,
+          "width": 79.81410217285156,
+          "height": 44.35897445678711,
+          "bottom": 885.2051658630371
+        },
+        "font": "13px",
+        "current": "step"
+      },
+      {
+        "text": "✓Assembled",
+        "rect": {
+          "x": 349.2628173828125,
+          "y": 840.84619140625,
+          "width": 79.81410217285156,
+          "height": 44.35897445678711,
+          "bottom": 885.2051658630371
+        },
+        "font": "13px",
+        "current": null
+      }
+    ],
+    "horizontalOverflow": false,
+    "load": "",
+    "span": 10078,
+    "connection": {
+      "type": "4g",
+      "downlink": 10,
+      "rtt": 50,
+      "saveData": false
+    },
+    "stageHeight": 920
+  }
+}

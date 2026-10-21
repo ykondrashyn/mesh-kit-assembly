@@ -1,0 +1,1073 @@
+{
+  "method": "15 alternating reloads after priming each version. Identical local server with explicit HTTP caching isolates warm startup scheduling from revalidation. This supplements the main unchanged-server runs.",
+  "baseline": "95a4a91c2e5b7bffceb406a505951e294f1c3ee1",
+  "throttled": true,
+  "browser": "153.0.8010.37",
+  "rows": [
+    {
+      "version": "before",
+      "run": 0,
+      "firstImageMs": 402.30000001192093,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 187.10000002384186
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 0,
+      "firstImageMs": 424.69999998807907,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.79999995231628
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 1,
+      "firstImageMs": 414.39999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 191.39999997615814
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 1,
+      "firstImageMs": 409.80000001192093,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 187.60000002384186
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 2,
+      "firstImageMs": 417.89999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 2,
+      "firstImageMs": 410.7000000476837,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.19999998807907
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 3,
+      "firstImageMs": 415.0999999642372,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.9000000357628
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 3,
+      "firstImageMs": 410.5,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 186.39999997615814
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 4,
+      "firstImageMs": 399.2999999523163,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 185.19999998807907
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 4,
+      "firstImageMs": 408.9000000357628,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 185.30000001192093
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 5,
+      "firstImageMs": 416.2000000476837,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.39999997615814
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 5,
+      "firstImageMs": 409.89999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 186.4000000357628
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 6,
+      "firstImageMs": 416.0999999642372,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.69999998807907
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 6,
+      "firstImageMs": 410.5999999642372,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 193.30000001192093
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 7,
+      "firstImageMs": 415.69999998807907,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.4000000357628
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 7,
+      "firstImageMs": 410.39999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.79999995231628
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 8,
+      "firstImageMs": 415.9000000357628,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.5
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 8,
+      "firstImageMs": 410,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 191.20000004768372
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 9,
+      "firstImageMs": 415.80000001192093,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 191.60000002384186
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 9,
+      "firstImageMs": 393.69999998807907,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 183.89999997615814
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 10,
+      "firstImageMs": 397.5999999642372,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 186
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 10,
+      "firstImageMs": 409.89999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 184.89999997615814
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 11,
+      "firstImageMs": 415.60000002384186,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 193.39999997615814
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 11,
+      "firstImageMs": 410.0999999642372,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 189.10000002384186
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 12,
+      "firstImageMs": 415.39999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.80000001192093
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 12,
+      "firstImageMs": 410.4000000357628,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.80000001192093
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 13,
+      "firstImageMs": 416.30000001192093,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 193.10000002384186
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 13,
+      "firstImageMs": 409.89999997615814,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 188.4000000357628
+        }
+      ]
+    },
+    {
+      "version": "before",
+      "run": 14,
+      "firstImageMs": 416,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/before/app.js?v=scroll-intro-2",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/timeline.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/frame-loader.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/presentation.mjs?v=mobile-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/before/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192.5999999642372
+        }
+      ]
+    },
+    {
+      "version": "after",
+      "run": 14,
+      "firstImageMs": 410.5999999642372,
+      "resourceBytes": 6539,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:50991/after/app.js?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/quality.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/timeline.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/frame-loader.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/presentation.mjs?v=progressive-1",
+          "transferSize": 0,
+          "duration": 0
+        },
+        {
+          "url": "http://127.0.0.1:50991/after/assets/manifest.json",
+          "transferSize": 6539,
+          "duration": 192
+        }
+      ]
+    }
+  ]
+}

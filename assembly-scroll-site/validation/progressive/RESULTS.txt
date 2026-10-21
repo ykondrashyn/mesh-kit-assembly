@@ -1,0 +1,148 @@
+PROGRESSIVE LOADING VALIDATION, 2026-10-21
+
+Delivered locally. No push, deployment or production format change.
+Preview: http://127.0.0.1:8766/?v=progressive-loading
+Format comparison: http://127.0.0.1:8767/
+
+Implemented
+- Useful-resolution opening, a 600 ms conservative fallback, paused refinement.
+- Separate desired, streaming and displayed quality, with measured recovery and cooldowns.
+- Foreground-first scheduling, one speculative job within four total jobs.
+- Twelve decoded bitmaps / 48 MiB including decode reservations, plus a separate 24 MiB compressed cache.
+- Active-orientation lookahead and qualified full preparation, with no repeated speculative attempts.
+- Speculation and chapter warming yield under delivery pressure until a 600 ms pause.
+- Data Saver, optional stills, reduced motion, Retry and connector inspection remain available.
+- Both orientations, 421 positions, 12 viewport heights and 100 ms easing are preserved.
+
+PERFORMANCE: THREE COLD AND THREE WARM RUNS PER PROFILE
+
+Same Mac and Chrome 153.0.8010.37, same local server and scripted traversal.
+Phone emulation: 443 x 840, DPR 2. Slow profile: 1.6 Mbps, 150 ms, 4x CPU.
+Each entry is a median of three independent contexts. Warm follows cold in the same context.
+First measures the first canvas frame marker, not LCP or first HTML-fallback visibility.
+Gap is the worse forward/reverse 95th percentile between displayed pose changes.
+Bytes are completed-response bytes reported by CDP. Canceled partial transfers and protocol
+overhead are not fully counted. These are lab measurements, not field Core Web Vitals.
+
+Profile / cache       First frame ms   p95 gap ms     Completed MB     1080p pose changes
+                      before -> after  before -> after before -> after  after
+desktop/cold               64 ->    66      18 ->    18   18.25 ->  18.25   100.0%
+desktop/warm               39 ->    39      18 ->    18    0.00 ->   0.00   100.0%
+phone/cold                 54 ->    66      18 ->    17    7.62 ->  18.71    94.1%
+phone/warm                 45 ->    47      18 ->    17    0.00 ->   0.00    99.8%
+phone-slow/cold          1983 ->  1440     550 ->   550    1.64 ->   1.69     0.0%
+phone-slow/warm           196 ->   363     533 ->   534    1.37 ->   1.39     1.7%
+
+The constrained cold opening improved from 1.98 s to 1.44 s, about 27 percent.
+Fast-phone cold traversal used 1080p for 94 percent of displayed pose changes,
+compared with a 540p baseline. The warm pass used 1080p for nearly all changes.
+That quality costs bandwidth: fast-phone cold transfer rose from 7.62 MB to 18.71 MB,
+about 11.09 MB extra. Desktop transfer stayed about 18.25 MB. Slow cold transfer
+rose about 45 KB. Full-sequence preparation is intentionally restricted to measured fast links.
+
+BACKGROUND CONTENTION CHECK
+
+Three matched cold/warm runs per profile with ?background=off.
+Final background-on versus background-off p95 gaps:
+desktop/cold             17.6 vs   17.2 ms (+2.3%)
+desktop/warm             17.5 vs   17.3 ms (+1.2%)
+phone/cold               17.3 vs   17.3 ms (+0.0%)
+phone/warm               17.1 vs   17.1 ms (-0.0%)
+phone-slow/cold         549.7 vs  516.5 ms (+6.4%)
+phone-slow/warm         533.5 vs  533.4 ms (+0.0%)
+
+An earlier version increased slow cold p95 gaps by 18 percent against background-off.
+The final pressure guard reduced the measured increase to 6 percent, while warm gaps
+were effectively equal. Completed bytes were about 3 percent higher on the slow cold pass.
+Intermediate raw reports are retained as *-initial.json and *-cached-fix.json.
+
+REGRESSIONS AND INVESTIGATION
+
+Normal-phone cold startup increased from 54.5 ms to 66.1 ms, about 12 ms, while the
+opening changed from 540p to 1080p. The absolute change is below one 60 Hz refresh.
+First-frame speculation is disabled until a valid canvas frame exists, so speculative
+downloads cannot account for the initial canvas delay. Short-run scheduling variation
+and the sharper decode/draw remain part of this measurement. No universal startup gain is claimed.
+
+The final local slow warm run increased from 196 ms to 363 ms. This raw regression is
+retained, not removed from the summary. The Python preview server supplies Last-Modified
+but no explicit Cache-Control, while the deployed Pages response has max-age=600.
+Recently edited modules can therefore revalidate differently from the older baseline.
+This is a likely explanation, not a directly observed revalidation trace from those runs.
+
+A separate 15-pair controlled warm-reload investigation used the same server and explicit
+HTTP caching for both revisions. JavaScript transfer sizes were zero, and both still fetched
+the manifest. Under slow network / 4x CPU, baseline median was 416 ms and new code 410 ms.
+The normal-network warm comparison was 40 ms versus 36 ms. This does not reproduce a
+runtime startup slowdown, but it uses a different reload protocol and does not replace
+the primary results. No performance claim is made for a newly deployed release.
+
+The first implementation also rejected cached sharp images using skipped timeline
+positions as decode demand. Capping demand at 60 displayed frames per second raised
+fast-phone sharp-pose coverage from about 10 percent to above 90 percent and reduced
+redundant lower-tier transfer. Guards still require 30 percent decoding headroom.
+
+FUNCTIONAL AND RESOURCE CHECKS
+
+- 34 deterministic unit checks passed.
+- All 421 positions traversed forward and reverse in both orientations, 1,684 stops.
+- Native wheel traversal passed on desktop and constrained desktop/phone profiles.
+- Exact chapter and seating poses, reverse motion, jumps, clamping and resize preservation passed.
+- Eight progressive scenarios cover sharp opening, delayed fallback, immediate scroll,
+  recovery, Data Saver, absent connection APIs, hidden-page suspension, rotation and failures.
+- The healthy connection test prepared all 421 high-resolution frames, stopped new requests,
+  and reused those files on repeat traversal without additional high-resolution HTTP requests.
+- Initial loading did not request the inactive orientation. One speculative job, four total
+  jobs, 12 bitmaps, 48 MiB decoded/reserved and 24 MiB compressed limits remained bounded.
+- Failed/corrupt responses preserve the valid picture, Retry recovers, and speculative
+  eviction or failure does not cause repeated background downloads.
+- Blocked JavaScript and manifest, ordinary HTML links, reduced motion, optional stills,
+  enlarged instructions, keyboard focus and nine connector views passed.
+- Screenshots reviewed include phone seating, connector enlargement and the physical-phone final pose.
+
+BROWSER AND DEVICE COVERAGE
+
+Chrome 153.0.8010.37 on macOS: desktop, tablet and phone emulation, including 4x CPU.
+Firefox 158.0: desktop and narrow layouts, forward/reverse stops, chapter navigation,
+connector enlargement, optional stills and cache limits passed.
+Safari: unavailable because Remote Automation is disabled. No preference was changed.
+
+Physical Pixel 10 Pro XL, Android 17, Chrome 155.0.8059.81:
+- Normal and 1.6 Mbps / 150 ms native swipe traversals passed forward and backward.
+- Toolbar collapse, stable scroll travel, pinch zoom, portrait/landscape rotation passed.
+- Connector taps, enlarged-view rotation, stopped scrolling and progress preservation passed.
+- Slow-to-fast recovery retained pose 420, restored streaming from 540p to 720p and
+  sharpened the paused canvas to 1080p, without a reload or a switch to stills.
+- 1080p streaming was withheld when measured decoding could not meet headroom.
+  Recorded 1080p samples of roughly 27-35 ms exceed the 23.3 ms budget at 30 fps.
+  This is correct adaptive behavior, not a permanent phone-resolution ceiling.
+- The dedicated tab was closed, temporary forwarding removed, and original rotation
+  and 30-second screen timeout restored and verified. See android/device-restoration.json.
+
+Android uses the real phone CPU, not a 4x CPU simulation. No iPhone, lower-end Android,
+screen-reader session, field telemetry, browser-process RAM or GPU memory audit was performed.
+Visibility tests simulate the document visibility signal, not OS process suspension.
+Application cache limits exclude canvas buffers, browser caches and in-flight response memory.
+
+FORMAT COMPARISON
+
+120 browser cases passed: 60 orientation/resolution/format combinations at normal and
+constrained networking, with forward/reverse seeking and exact stopping checks.
+240 source-pixel samples and a labeled contact sheet supplement the timing results.
+AVIF 65 saves about 30 percent at 1080p relative to current WebP. H.264 GOP6 is smaller
+but had slower random seeking on the constrained connection. Keep production WebP pending
+broader device format validation. Details are in FORMAT-COMPARISON.txt and formats.json.
+
+PRESERVATION AND REPRODUCTION
+
+All 2,526 existing WebP hashes, 842 original source PNG hashes and 30 protected
+deliverables pass verification.
+Original source PNGs, videos, Blender projects and presentation exports remain unchanged.
+The benchmark candidates are generated locally under the ignored .cache directory.
+No service worker, persistent application cache, framework, backend or new artwork was added.
+README.txt lists reproduction commands and preview instructions. The baseline is revision
+95a4a91c2e5b7bffceb406a505951e294f1c3ee1. Production changes are local commits only.
+
+Evidence: before.json, after.json, background-off.json, performance-comparison.json,
+startup-investigation.json, startup-slow-investigation.json, cache-header-investigation.json,
+behavior.json, browser/, connectors.json, continuous-scroll.json, cross-browser.json, android/.

@@ -1,0 +1,13 @@
+{
+  "productionCommit": "2777f9e6634884ee3ba5068de05eb6bc87c4f470",
+  "files": {
+    "app.js": "57113fd755bb3a1c10715bae4577bf485365b5bd309468f5c9e7aed3fe71ff0a",
+    "frame-loader.mjs": "4e27239d4b17d93a9c4f5dbd87ff854dfc7b0298b9f7d30912829ac63fc615b6",
+    "quality.mjs": "0f176eb012905d7106cee1a066dff53db0d52324ff43bfb0c15bd5fb1f85ad77",
+    "timeline.mjs": "46cad0d26c51e2dfed8fe87d01cecdc475122ba4b675c83e5d338bc25da253e3",
+    "presentation.mjs": "b3669a160f615d4a1d854b7b199908c7131679215e54d7583642e0d018c6c5f2",
+    "styles.css": "3d5ba5c83b8f62159c7ddc01116bcc113958591649fccc7f9ba6da14710d078b",
+    "index.html": "6ddb173d457abf1800ffebb37e1d3e0bd4b1c79fe097755abea9c8eefe124966",
+    "assets/manifest.json": "f026e519b7d147ebec821a4f83a86b3138a040a3a47944a279847011a2452975"
+  }
+}

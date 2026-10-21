@@ -1,0 +1,353 @@
+{
+  "aggregation": "Median of three independent runs per profile and cache state. Gap uses the worse forward/reverse p95 in each run. Sharp pose percentage counts displayed pose changes, not time on screen.",
+  "comparisons": [
+    {
+      "profile": "desktop",
+      "cache": "cold",
+      "before": {
+        "profile": "desktop",
+        "cache": "cold",
+        "firstImageMs": 63.5,
+        "bytes": 18249446,
+        "p95GapMs": 17.599999964237213,
+        "poses": 487,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 100.0
+      },
+      "after": {
+        "profile": "desktop",
+        "cache": "cold",
+        "firstImageMs": 65.80000001192093,
+        "bytes": 18246901,
+        "p95GapMs": 17.599999964237213,
+        "poses": 489,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 100.0
+      },
+      "background-off": {
+        "profile": "desktop",
+        "cache": "cold",
+        "firstImageMs": 69.60000002384186,
+        "bytes": 18246916,
+        "p95GapMs": 17.19999998807907,
+        "poses": 490,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 100.0
+      },
+      "after-vs-before": {
+        "firstImageMs": 3.6220472628676115,
+        "p95GapMs": 0.0,
+        "bytes": -0.013945628815248412,
+        "poses": 0.4106776180698102
+      },
+      "after-vs-background-off": {
+        "firstImageMs": -5.459770130200026,
+        "p95GapMs": 2.3255812583451885,
+        "bytes": -8.220567245809107e-05,
+        "poses": -0.20408163265306367
+      }
+    },
+    {
+      "profile": "desktop",
+      "cache": "warm",
+      "before": {
+        "profile": "desktop",
+        "cache": "warm",
+        "firstImageMs": 39.30000001192093,
+        "bytes": 104,
+        "p95GapMs": 17.5,
+        "poses": 487,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 100.0
+      },
+      "after": {
+        "profile": "desktop",
+        "cache": "warm",
+        "firstImageMs": 38.69999998807907,
+        "bytes": 104,
+        "p95GapMs": 17.5,
+        "poses": 490,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 100.0
+      },
+      "background-off": {
+        "profile": "desktop",
+        "cache": "warm",
+        "firstImageMs": 42.69999998807907,
+        "bytes": 104,
+        "p95GapMs": 17.30000001192093,
+        "poses": 488,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 100.0
+      },
+      "after-vs-before": {
+        "firstImageMs": -1.526717617455109,
+        "p95GapMs": 0.0,
+        "bytes": 0.0,
+        "poses": 0.6160164271047153
+      },
+      "after-vs-background-off": {
+        "firstImageMs": -9.367681501444292,
+        "p95GapMs": 1.1560692944581286,
+        "bytes": 0.0,
+        "poses": 0.4098360655737654
+      }
+    },
+    {
+      "profile": "phone",
+      "cache": "cold",
+      "before": {
+        "profile": "phone",
+        "cache": "cold",
+        "firstImageMs": 54.5,
+        "bytes": 7619392,
+        "p95GapMs": 17.600000023841858,
+        "poses": 491,
+        "initialResolutions": [
+          "540",
+          "540",
+          "540"
+        ],
+        "sharpPosePercent": 0.0
+      },
+      "after": {
+        "profile": "phone",
+        "cache": "cold",
+        "firstImageMs": 66.09999996423721,
+        "bytes": 18709054,
+        "p95GapMs": 17.30000001192093,
+        "poses": 491,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 94.05737704918033
+      },
+      "background-off": {
+        "profile": "phone",
+        "cache": "cold",
+        "firstImageMs": 50.69999998807907,
+        "bytes": 7644257,
+        "p95GapMs": 17.30000001192093,
+        "poses": 490,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 0.20408163265306123
+      },
+      "after-vs-before": {
+        "firstImageMs": 21.284403604104973,
+        "p95GapMs": -1.7045455199689363,
+        "bytes": 145.54523510537325,
+        "poses": 0.0
+      },
+      "after-vs-background-off": {
+        "firstImageMs": 30.374753411793076,
+        "p95GapMs": 0.0,
+        "bytes": 144.7465332471161,
+        "poses": 0.20408163265306367
+      }
+    },
+    {
+      "profile": "phone",
+      "cache": "warm",
+      "before": {
+        "profile": "phone",
+        "cache": "warm",
+        "firstImageMs": 45,
+        "bytes": 104,
+        "p95GapMs": 17.69999998807907,
+        "poses": 489,
+        "initialResolutions": [
+          "540",
+          "540",
+          "540"
+        ],
+        "sharpPosePercent": 0.0
+      },
+      "after": {
+        "profile": "phone",
+        "cache": "warm",
+        "firstImageMs": 47.40000003576279,
+        "bytes": 104,
+        "p95GapMs": 17.099999964237213,
+        "poses": 491,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 99.79633401221996
+      },
+      "background-off": {
+        "profile": "phone",
+        "cache": "warm",
+        "firstImageMs": 41.299999952316284,
+        "bytes": 104,
+        "p95GapMs": 17.100000023841858,
+        "poses": 489,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 0.20449897750511248
+      },
+      "after-vs-before": {
+        "firstImageMs": 5.333333412806196,
+        "p95GapMs": -3.389830645457381,
+        "bytes": 0.0,
+        "poses": 0.4089979550102152
+      },
+      "after-vs-background-off": {
+        "firstImageMs": 14.769976006027541,
+        "p95GapMs": -3.485651767221043e-07,
+        "bytes": 0.0,
+        "poses": 0.4089979550102152
+      }
+    },
+    {
+      "profile": "phone-slow",
+      "cache": "cold",
+      "before": {
+        "profile": "phone-slow",
+        "cache": "cold",
+        "firstImageMs": 1983.1000000238419,
+        "bytes": 1640749,
+        "p95GapMs": 550.3999999761581,
+        "poses": 67,
+        "initialResolutions": [
+          "540",
+          "540",
+          "540"
+        ],
+        "sharpPosePercent": 0.0
+      },
+      "after": {
+        "profile": "phone-slow",
+        "cache": "cold",
+        "firstImageMs": 1440,
+        "bytes": 1685635,
+        "p95GapMs": 549.6999999880791,
+        "poses": 73,
+        "initialResolutions": [
+          "540",
+          "540",
+          "540"
+        ],
+        "sharpPosePercent": 0.0
+      },
+      "background-off": {
+        "profile": "phone-slow",
+        "cache": "cold",
+        "firstImageMs": 1428.5,
+        "bytes": 1634076,
+        "p95GapMs": 516.5,
+        "poses": 75,
+        "initialResolutions": [
+          "540",
+          "540",
+          "540"
+        ],
+        "sharpPosePercent": 0.0
+      },
+      "after-vs-before": {
+        "firstImageMs": -27.38641520938493,
+        "p95GapMs": -0.12718023039778314,
+        "bytes": 2.73570180448075,
+        "poses": 8.955223880597018
+      },
+      "after-vs-background-off": {
+        "firstImageMs": 0.805040252012601,
+        "p95GapMs": 6.427879958969807,
+        "bytes": 3.155238801622451,
+        "poses": -2.6666666666666616
+      }
+    },
+    {
+      "profile": "phone-slow",
+      "cache": "warm",
+      "before": {
+        "profile": "phone-slow",
+        "cache": "warm",
+        "firstImageMs": 196.30000001192093,
+        "bytes": 1371788,
+        "p95GapMs": 533.0999999642372,
+        "poses": 62,
+        "initialResolutions": [
+          "540",
+          "540",
+          "540"
+        ],
+        "sharpPosePercent": 0.0
+      },
+      "after": {
+        "profile": "phone-slow",
+        "cache": "warm",
+        "firstImageMs": 363.19999998807907,
+        "bytes": 1393319,
+        "p95GapMs": 533.5,
+        "poses": 60,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 1.6666666666666667
+      },
+      "background-off": {
+        "profile": "phone-slow",
+        "cache": "warm",
+        "firstImageMs": 212.20000004768372,
+        "bytes": 1345187,
+        "p95GapMs": 533.3999999761581,
+        "poses": 60,
+        "initialResolutions": [
+          "1080",
+          "1080",
+          "1080"
+        ],
+        "sharpPosePercent": 1.6666666666666667
+      },
+      "after-vs-before": {
+        "firstImageMs": 85.02292407846288,
+        "p95GapMs": 0.07503283357523927,
+        "bytes": 1.5695573951660213,
+        "poses": -3.2258064516129004
+      },
+      "after-vs-background-off": {
+        "firstImageMs": 71.15928365054853,
+        "p95GapMs": 0.018747661013551742,
+        "bytes": 3.5780898863875477,
+        "poses": 0.0
+      }
+    }
+  ]
+}

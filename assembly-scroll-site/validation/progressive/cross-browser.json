@@ -1,0 +1,94 @@
+[
+  {
+    "browser": "firefox",
+    "checks": [
+      {
+        "canvas": {
+          "frame": "315",
+          "layout": "full",
+          "orientation": "landscape",
+          "resolution": "720",
+          "sourceFrame": "376"
+        },
+        "height": 815,
+        "stage": {
+          "backgroundFetched": "119",
+          "compressedBytes": "10922452",
+          "decodedBytes": "48844800",
+          "decodedFrames": "12",
+          "distantPrefetch": "false",
+          "jobs": "2",
+          "layout": "full",
+          "maxCompressedBytes": "10922452",
+          "maxDecodedBytes": "48844800",
+          "maxDecodedFrames": "12",
+          "maxRequests": "4",
+          "maxSpeculative": "1",
+          "mode": "animation",
+          "networkMbps": "44.05",
+          "networkSamples": "64",
+          "orientation": "landscape",
+          "preparedFrames": "409",
+          "progress": "0.750000",
+          "qualityDrops": "0",
+          "qualityLagMs": "0",
+          "qualityPromotions": "0",
+          "requestedFrame": "315",
+          "resolution": "720",
+          "settled": "true",
+          "targetProgress": "0.750000",
+          "usefulResolution": "720"
+        },
+        "width": 1440
+      },
+      {
+        "canvas": {
+          "frame": "315",
+          "layout": "phone",
+          "orientation": "portrait",
+          "resolution": "540",
+          "sourceFrame": "376"
+        },
+        "height": 815,
+        "stage": {
+          "backgroundFetched": "167",
+          "compressedBytes": "7523042",
+          "decodedBytes": "31104000",
+          "decodedFrames": "12",
+          "distantPrefetch": "false",
+          "jobs": "2",
+          "layout": "phone",
+          "maxCompressedBytes": "7523042",
+          "maxDecodedBytes": "31104000",
+          "maxDecodedFrames": "12",
+          "maxRequests": "4",
+          "maxSpeculative": "1",
+          "mode": "animation",
+          "networkMbps": "61.42",
+          "networkSamples": "64",
+          "orientation": "portrait",
+          "preparedFrames": "421",
+          "progress": "0.750000",
+          "qualityDrops": "0",
+          "qualityLagMs": "0",
+          "qualityPromotions": "0",
+          "requestedFrame": "315",
+          "resolution": "540",
+          "settled": "true",
+          "targetProgress": "0.750000",
+          "usefulResolution": "540"
+        },
+        "width": 500
+      }
+    ],
+    "version": "158.0",
+    "passed": true
+  },
+  {
+    "browser": "safari",
+    "checks": [],
+    "passed": false,
+    "status": "unavailable",
+    "reason": "Message: Could not create a session: You must enable 'Allow remote automation' in the Developer section of Safari Settings to control Safari via WebDriver.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception\n"
+  }
+]
