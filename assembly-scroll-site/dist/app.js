@@ -3,6 +3,14 @@ import { clamp, easeProgress, frameAtProgress, progressAtFrame, chapterAtFrame, 
 import { FrameLoader } from './frame-loader.mjs?v=audit-fixes-2';
 import { presentationForStage, frameCrop, chapterCopy, connectorAtFrame, connectorCircle } from './presentation.mjs?v=progressive-1';
 
+function removePageVersion() {
+  const url = new URL(location.href);
+  if (!url.searchParams.has('v')) return;
+  url.searchParams.delete('v');
+  history.replaceState(history.state, '', url);
+}
+removePageVersion();
+
 const $ = selector => document.querySelector(selector);
 const story = $('#story'), stage = $('#stage'), artwork = $('#artwork'), canvas = $('#assembly');
 const context = canvas.getContext('2d', { alpha: false });
@@ -79,6 +87,7 @@ function navigateProgress(next) {
 }
 
 function restoreNavigation() {
+  removePageVersion();
   if (!manifest || dormant || !historyReady) return;
   const next = navigationProgress();
   if (next === null) return;

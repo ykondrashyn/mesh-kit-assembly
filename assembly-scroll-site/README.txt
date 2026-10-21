@@ -14,6 +14,11 @@ Open http://127.0.0.1:8766 in your browser. Use --port for another local
 port. The dist directory is the complete static site. Use an HTTP server
 rather than a file URL because the application fetches a JSON manifest.
 
+Use the plain page URL, optionally with a chapter fragment such as #step-lora.
+Old page-level v query labels are removed in place without reloading or adding a
+history entry. Chapter selection, saved progress and other query parameters are
+preserved. Internal asset cache tags remain separate from the page URL.
+
 ARTWORK AND RESOLUTIONS
 
 The website uses the original Blender PNGs in ../ppt-demo-assets.

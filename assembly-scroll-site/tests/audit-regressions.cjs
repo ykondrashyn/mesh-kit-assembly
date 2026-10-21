@@ -176,6 +176,38 @@ const state = page => page.evaluate(() => ({ stage: { ...document.querySelector(
         return { entries, hash: new URL(page.url()).hash };
       }, { viewport: { width, height }, deviceScaleFactor: 2 });
     }
+    await check('chapter history removes page version labels without losing state', async page => {
+      await page.addInitScript(() => {
+        window.initialHistoryLength = history.length;
+        history.replaceState({ ...history.state, unrelatedState: 'preserved' }, '');
+      });
+      const url = new URL(base);
+      url.search = '?v=audit-fixes-4&background=off&v=progressive-loading&note=hello%20world';
+      url.hash = 'step-lora';
+      await page.goto(url.href); await frame(page, 180);
+      const clean = new URL(page.url());
+      assert.equal(clean.searchParams.has('v'), false);
+      assert.equal(clean.searchParams.get('background'), 'off');
+      assert.equal(clean.searchParams.get('note'), 'hello world');
+      assert.equal(clean.hash, '#step-lora');
+      assert.equal(await page.evaluate(() => history.length === window.initialHistoryLength), true);
+      assert.equal(await page.evaluate(() => history.state.unrelatedState), 'preserved');
+      await page.locator('[data-chapter="boards"]').click(); await frame(page, 315);
+      await page.goBack(); await frame(page, 180);
+      assert.equal(new URL(page.url()).searchParams.has('v'), false);
+      await page.goForward(); await frame(page, 315);
+      // A bookmarked label must not reset progress already saved on this entry.
+      await page.evaluate(() => {
+        const url = new URL(location.href); url.searchParams.set('v', 'old-bookmark');
+        history.replaceState({ ...history.state, assemblyScroll: { hash: location.hash, progress: 350 / 420 } }, '', url);
+      });
+      await page.reload(); await frame(page, 350);
+      assert.equal(new URL(page.url()).searchParams.has('v'), false);
+      assert.equal(await page.evaluate(() => history.state.unrelatedState), 'preserved');
+      await page.goto(new URL('?v=', base).href); await frame(page, 0);
+      assert.equal(new URL(page.url()).search, '');
+      return { cleanedURL: page.url() };
+    });
     await check('chapter history preserves reduced motion', async page => {
       const url = new URL(base); url.hash = 'step-lora';
       await page.goto(url.href); await frame(page, 234);
