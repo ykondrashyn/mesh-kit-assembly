@@ -7,7 +7,7 @@
   <meta name="description" content="Assemble the XIAO ESP32S3 and Wio-SX1262 kit at your own pace. Scroll to connect the antennas and join the boards.">
   <title>Mesh kit · Scroll to assemble</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=mobile-1">
+  <link rel="stylesheet" href="./styles.css?v=scroll-intro-1">
   <script type="module" src="./app.js?v=mobile-1"></script>
 </head>
 <body>
@@ -24,6 +24,14 @@
           <img src="./assets/portrait/540/frame-0034.webp" fetchpriority="high" alt="Four parts: LoRa antenna, 868 MHz, Wio-SX1262 board, Wi-Fi antenna, 2.4 GHz, and XIAO ESP32S3 board.">
         </picture>
         <canvas id="assembly" role="img" aria-label="Assembly animation" hidden></canvas>
+        <div id="scroll-intro" aria-hidden="true">
+          <div>
+            <span>SCROLL</span>
+            <svg viewBox="0 0 52 60" focusable="false" aria-hidden="true">
+              <path d="M8 12 26 30 44 12 M8 30 26 48 44 30" />
+            </svg>
+          </div>
+        </div>
         <button id="enlarge-connector" type="button" aria-haspopup="dialog" aria-label="Enlarge connector" hidden><span aria-hidden="true">+</span></button>
         <div id="load-state" hidden>
           <span id="load-message"></span>

@@ -34,6 +34,26 @@ button:disabled { cursor: default; }
 #instructions-link { margin-left: auto; min-height: 44px; padding: 14px 4px; font-size: 13px; color: inherit; text-underline-offset: 3px; }
 #artwork { position: relative; min-width: 0; min-height: 0; }
 #assembly { position: absolute; display: block; }
+#scroll-intro {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  background: rgb(255 255 255 / 88%);
+  text-align: center;
+  pointer-events: none;
+  animation: scroll-intro-dismiss 1.5s ease-out forwards;
+}
+#scroll-intro span { display: block; font-size: clamp(26px, 4vw, 42px); font-weight: 700; letter-spacing: .16em; padding-left: .16em; }
+#scroll-intro svg { display: block; width: 52px; height: 60px; margin: 14px auto 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes scroll-intro-dismiss {
+  0%, 86% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #scroll-intro { animation-timing-function: step-end; }
+}
 #enlarge-connector { position: absolute; padding: 0; border: 0; border-radius: 50%; background: transparent; min-width: 44px; min-height: 44px; }
 #enlarge-connector span { position: absolute; right: 0; bottom: 0; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #888; border-radius: 50%; background: #fff; font-size: 24px; }
 .inspecting { overflow: hidden; }
