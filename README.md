@@ -4,6 +4,8 @@ Interactive assembly guide for XIAO ESP32S3 and Wio-SX1262.
 
 [Get the XIAO ESP32S3 & Wio-SX1262 Kit from Seeed Studio](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html)
 
+[Read the Seeed kit documentation](https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit)
+
 [Open the scroll-controlled website](https://ykondrashyn.github.io/mesh-kit-assembly/)
 
 Scroll to connect the Wi-Fi and LoRa antennas and join the boards. The website includes landscape and portrait artwork, circular connector close-ups, optional chapter stills and written assembly instructions.
