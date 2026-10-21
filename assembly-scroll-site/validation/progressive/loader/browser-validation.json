@@ -1,0 +1,403 @@
+{
+  "browser": "153.0.8010.37",
+  "completed": true,
+  "results": [
+    {
+      "name": "initial load selects landscape only",
+      "passed": true,
+      "details": {
+        "frameRequests": 10,
+        "bounds": {
+          "canvas": {
+            "x": 39.109375,
+            "y": 56,
+            "width": 1361.765625,
+            "height": 766,
+            "top": 56,
+            "right": 1400.875,
+            "bottom": 822,
+            "left": 39.109375
+          },
+          "area": {
+            "x": 24,
+            "y": 56,
+            "width": 1392,
+            "height": 766,
+            "top": 56,
+            "right": 1416,
+            "bottom": 822,
+            "left": 24
+          },
+          "controls": {
+            "x": 340,
+            "y": 822,
+            "width": 760,
+            "height": 66,
+            "top": 822,
+            "right": 1100,
+            "bottom": 888,
+            "left": 340
+          },
+          "innerHeight": 900,
+          "orientation": "landscape",
+          "layout": "full"
+        }
+      }
+    },
+    {
+      "name": "mouse wheel advances and reverse wheel reverses",
+      "passed": true,
+      "details": {
+        "forward": {
+          "frame": 31,
+          "requested": 31,
+          "orientation": "landscape",
+          "progress": 0.074074,
+          "decoded": 6,
+          "maxDecoded": 6,
+          "maxDecodedBytes": 49766400,
+          "maxRequests": 4
+        },
+        "backward": {
+          "frame": 12,
+          "requested": 12,
+          "orientation": "landscape",
+          "progress": 0.027778,
+          "decoded": 6,
+          "maxDecoded": 6,
+          "maxDecodedBytes": 49766400,
+          "maxRequests": 4
+        }
+      }
+    },
+    {
+      "name": "complete forward and reverse frame traversal",
+      "skipped": true,
+      "reason": "Explicitly skipped by SKIP_FULL_TRAVERSAL."
+    },
+    {
+      "name": "desktop labels and connection seating views fit",
+      "passed": true,
+      "details": [
+        {
+          "index": 33,
+          "bounds": {
+            "canvas": {
+              "x": 39.109375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1400.875,
+              "bottom": 822,
+              "left": 39.109375
+            },
+            "area": {
+              "x": 24,
+              "y": 56,
+              "width": 1392,
+              "height": 766,
+              "top": 56,
+              "right": 1416,
+              "bottom": 822,
+              "left": 24
+            },
+            "controls": {
+              "x": 340,
+              "y": 822,
+              "width": 760,
+              "height": 66,
+              "top": 822,
+              "right": 1100,
+              "bottom": 888,
+              "left": 340
+            },
+            "innerHeight": 900,
+            "orientation": "landscape",
+            "layout": "full"
+          }
+        },
+        {
+          "index": 129,
+          "bounds": {
+            "canvas": {
+              "x": 39.109375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1400.875,
+              "bottom": 822,
+              "left": 39.109375
+            },
+            "area": {
+              "x": 24,
+              "y": 56,
+              "width": 1392,
+              "height": 766,
+              "top": 56,
+              "right": 1416,
+              "bottom": 822,
+              "left": 24
+            },
+            "controls": {
+              "x": 340,
+              "y": 822,
+              "width": 760,
+              "height": 66,
+              "top": 822,
+              "right": 1100,
+              "bottom": 888,
+              "left": 340
+            },
+            "innerHeight": 900,
+            "orientation": "landscape",
+            "layout": "full"
+          }
+        },
+        {
+          "index": 234,
+          "bounds": {
+            "canvas": {
+              "x": 39.109375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1400.875,
+              "bottom": 822,
+              "left": 39.109375
+            },
+            "area": {
+              "x": 24,
+              "y": 56,
+              "width": 1392,
+              "height": 766,
+              "top": 56,
+              "right": 1416,
+              "bottom": 822,
+              "left": 24
+            },
+            "controls": {
+              "x": 340,
+              "y": 822,
+              "width": 760,
+              "height": 66,
+              "top": 822,
+              "right": 1100,
+              "bottom": 888,
+              "left": 340
+            },
+            "innerHeight": 900,
+            "orientation": "landscape",
+            "layout": "full"
+          }
+        },
+        {
+          "index": 363,
+          "bounds": {
+            "canvas": {
+              "x": 39.109375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1400.875,
+              "bottom": 822,
+              "left": 39.109375
+            },
+            "area": {
+              "x": 24,
+              "y": 56,
+              "width": 1392,
+              "height": 766,
+              "top": 56,
+              "right": 1416,
+              "bottom": 822,
+              "left": 24
+            },
+            "controls": {
+              "x": 340,
+              "y": 822,
+              "width": 760,
+              "height": 66,
+              "top": 822,
+              "right": 1100,
+              "bottom": 888,
+              "left": 340
+            },
+            "innerHeight": 900,
+            "orientation": "landscape",
+            "layout": "full"
+          }
+        },
+        {
+          "index": 420,
+          "bounds": {
+            "canvas": {
+              "x": 39.109375,
+              "y": 56,
+              "width": 1361.765625,
+              "height": 766,
+              "top": 56,
+              "right": 1400.875,
+              "bottom": 822,
+              "left": 39.109375
+            },
+            "area": {
+              "x": 24,
+              "y": 56,
+              "width": 1392,
+              "height": 766,
+              "top": 56,
+              "right": 1416,
+              "bottom": 822,
+              "left": 24
+            },
+            "controls": {
+              "x": 340,
+              "y": 822,
+              "width": 760,
+              "height": 66,
+              "top": 822,
+              "right": 1100,
+              "bottom": 888,
+              "left": 340
+            },
+            "innerHeight": 900,
+            "orientation": "landscape",
+            "layout": "full"
+          }
+        }
+      ]
+    },
+    {
+      "name": "chapter links and keyboard endpoints",
+      "passed": true,
+      "details": {
+        "frame": 420,
+        "requested": 420,
+        "orientation": "landscape",
+        "progress": 0.999077,
+        "decoded": 6,
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "tablet and phone resize preserve progress",
+      "passed": true,
+      "details": {
+        "frame": 420,
+        "requested": 420,
+        "orientation": "landscape",
+        "progress": 1,
+        "decoded": 12,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "portrait traverses every frame forward and backward",
+      "skipped": true,
+      "reason": "Explicitly skipped by SKIP_FULL_TRAVERSAL."
+    },
+    {
+      "name": "orientation change rejects a delayed old-orientation frame",
+      "passed": true,
+      "details": {
+        "frame": 180,
+        "requested": 180,
+        "orientation": "landscape",
+        "progress": 0.428611,
+        "decoded": 6,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "delayed frames retain the current picture and stale results cannot replace it",
+      "passed": true,
+      "details": {
+        "frame": 20,
+        "requested": 20,
+        "orientation": "landscape",
+        "progress": 0.047593,
+        "decoded": 6,
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "frame failure exposes retry and recovers",
+      "passed": true,
+      "details": {
+        "frame": 250,
+        "requested": 250,
+        "orientation": "landscape",
+        "progress": 0.595278,
+        "decoded": 6,
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "rapid direction changes settle at the exact requested frame",
+      "passed": true,
+      "details": {
+        "frame": 129,
+        "requested": 129,
+        "orientation": "landscape",
+        "progress": 0.30713,
+        "decoded": 6,
+        "maxDecoded": 6,
+        "maxDecodedBytes": 49766400,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "reduced motion uses chapter stills with opt-in full animation",
+      "passed": true,
+      "details": {
+        "frame": 160,
+        "requested": 160,
+        "orientation": "portrait",
+        "progress": 0.380924,
+        "decoded": 12,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 24883200,
+        "maxRequests": 4
+      }
+    },
+    {
+      "name": "JavaScript-disabled fallback displays the labeled parts",
+      "passed": true,
+      "details": {
+        "imageLoaded": true
+      }
+    },
+    {
+      "name": "emulated phone touch swipe advances the assembly",
+      "passed": true,
+      "details": {
+        "frame": 15,
+        "requested": 15,
+        "orientation": "portrait",
+        "progress": 0.035522,
+        "decoded": 12,
+        "maxDecoded": 12,
+        "maxDecodedBytes": 24883200,
+        "maxRequests": 4
+      }
+    }
+  ],
+  "uncaughtErrors": [],
+  "limitations": [
+    "Chromium tested on macOS. Safari, Firefox and physical mobile devices were not tested."
+  ]
+}

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { FrameLoader, MAX_DECODED_BYTES, MAX_IMAGES, MAX_REQUESTS } from '../dist/frame-loader.mjs';
+import { FrameLoader, MAX_DECODED_BYTES, MAX_IMAGES, MAX_REQUESTS, MAX_COMPRESSED_BYTES } from '../dist/frame-loader.mjs';
 const manifest = JSON.parse(readFileSync(new URL('../dist/assets/manifest.json', import.meta.url)));
 const pause = () => new Promise(resolve => setImmediate(resolve));
 async function until(condition) {
@@ -101,7 +101,7 @@ test('failed targets expose an error and can be retried', async () => {
   } finally { loader.dispose(); }
 });
 
-test('chapter stills warm before animation and remain available when the network fails', async () => {
+test('visible target loads before chapter stills, which remain available offline', async () => {
   const requests = [];
   let offline = false;
   const loader = new FrameLoader(manifest, () => {}, {
@@ -118,7 +118,8 @@ test('chapter stills warm before animation and remain available when the network
     loader.request(0, 1, true);
     await until(() => loader.get(0));
     assert.equal(loader.stillBlobs.size, 5);
-    assert.ok(requests.slice(0, 5).every(url => /frame-(0034|0190|0295|0424|0481)\.webp/.test(url)));
+    assert.ok(requests[0].includes('frame-0001.webp'));
+    assert.ok(requests.slice(1, 6).every(url => /frame-(0034|0190|0295|0424|0481)\.webp/.test(url)));
     const before = requests.length;
     offline = true;
     loader.request(363, 1, true);
@@ -126,6 +127,84 @@ test('chapter stills warm before animation and remain available when the network
     assert.equal(requests.length, before);
     assert.ok(loader.maxRequests <= MAX_REQUESTS);
   } finally { loader.dispose(); }
+});
+
+function sizedResponse(url, size = 100) {
+  const short = url.includes('/540/') ? 540 : url.includes('/720/') ? 720 : 1080;
+  const portrait = url.includes('/portrait/');
+  return { ok: true, blob: async () => ({ size, width: portrait ? short : short*16/9, height:portrait ? short*16/9 : short }) };
+}
+
+test('resolution changes retain compressed and decoded frames and refinement stays within shared limits', async () => {
+  const requests = [], bitmaps = [];
+  const loader = new FrameLoader(manifest, () => {}, {
+    fetchFrame: async url => { requests.push(url); return sizedResponse(url); },
+    decodeFrame: async blob => { const b = image(blob.width,blob.height);bitmaps.push(b);return b; },
+  });
+  try {
+    const [small,,sharp]=manifest.variants.landscape.resolutions;
+    loader.selectVariant('landscape',small);
+    loader.setActivity({visible:true,sharp});
+    loader.request(0);
+    await until(()=>loader.jobs.size===0);
+    const count=requests.length;
+    loader.request(0,1,false,{detail:sharp});
+    await until(()=>loader.get(0,sharp));
+    loader.request(0);
+    await until(()=>loader.jobs.size===0);
+    assert.equal(requests.length,count+1);
+    assert.equal(loader.best(0).resolution.id,'1080');
+    loader.selectVariant('landscape',sharp);
+    loader.request(0,1,true);
+    await until(()=>loader.jobs.size===0);
+    assert.equal(requests.length,count+1);
+    assert.ok(loader.maxDecodedBytes<=MAX_DECODED_BYTES && loader.maxDecoded<=MAX_IMAGES);
+    assert.ok(loader.maxCompressedBytes<=MAX_COMPRESSED_BYTES);
+  }finally{loader.dispose()}
+  assert.ok(bitmaps.every(b=>b.closed));
+});
+
+test('full background preparation is compressed, bounded, single-job and never refetches evicted assets', async () => {
+  const requests=[];
+  let decodes=0;
+  const loader=new FrameLoader(manifest,()=>{}, {
+    fetchFrame:async url=>{requests.push(url);return sizedResponse(url,1024*1024)},
+    decodeFrame:async blob=>{decodes++;return image(blob.width,blob.height)},
+  });
+  try{
+    const [small,,sharp]=manifest.variants.landscape.resolutions;
+    loader.selectVariant('landscape',small);
+    loader.setActivity({visible:true,enabled:true,distant:true,sharp});
+    loader.request(0);
+    await until(()=>loader.backgroundFetched===421 && loader.jobs.size===0);
+    assert.equal(new Set(requests).size,requests.length);
+    assert.ok(decodes<=12,'Distant frames must not be decoded');
+    assert.equal(loader.maxSpeculative,1);
+    assert.ok(loader.maxRequests<=4 && loader.maxCompressedBytes<=MAX_COMPRESSED_BYTES);
+    const before=requests.length;
+    loader.request(0);
+    await pause();
+    assert.equal(requests.length,before);
+    assert.ok(requests.every(url=>!url.includes('/portrait/')));
+  }finally{loader.dispose()}
+});
+
+test('a hidden page starts no jobs and unknown or cached timing never qualifies as network throughput', async () => {
+  let requests=0;
+  const loader=new FrameLoader(manifest,()=>{}, {
+    fetchFrame:async url=>{requests++;return sizedResponse(url)},
+    decodeFrame:async blob=>image(blob.width,blob.height),
+    resourceTiming:()=>({transferSize:0}),
+  });
+  try{
+    loader.selectVariant('portrait');
+    loader.setActivity({visible:false});loader.request(0);
+    await pause();assert.equal(requests,0);
+    loader.setActivity({visible:true});loader.request(0);
+    await until(()=>loader.jobs.size===0);
+    assert.equal(loader.networkSummary().count,0);
+    assert.ok(loader.tierSamples(loader.resolution).every(x=>x.cached));
+  }finally{loader.dispose()}
 });
 
 test('completed downloads advance continuous scrolling even after leaving the prefetch window', async () => {

@@ -1,224 +1,243 @@
-import { nearbyFrames } from './timeline.mjs?v=mobile-1';
+import { nearbyFrames } from './timeline.mjs?v=progressive-1';
 
 export const MAX_IMAGES = 12;
 export const MAX_DECODED_BYTES = 48 * 1024 * 1024;
+export const MAX_COMPRESSED_BYTES = 24 * 1024 * 1024;
 export const MAX_REQUESTS = 4;
 
 export class FrameLoader {
-  constructor(manifest, notify, { fetchFrame = globalThis.fetch, decodeFrame = globalThis.createImageBitmap } = {}) {
-    this.manifest = manifest;
-    this.notify = notify;
+  constructor(manifest, notify, { fetchFrame = globalThis.fetch, decodeFrame = globalThis.createImageBitmap,
+    clock = () => performance.now(), resourceTiming = url => performance.getEntriesByName?.(url).at(-1) } = {}) {
+    Object.assign(this, { manifest, notify, clock, resourceTiming });
     this.fetchFrame = fetchFrame.bind(globalThis);
     this.decodeFrame = decodeFrame.bind(globalThis);
-    this.variant = null;
-    this.epoch = 0;
     this.cache = new Map();
+    this.blobs = new Map();
     this.jobs = new Map();
     this.errors = new Map();
-    this.order = [];
+    this.attempted = new Set();
+    this.probed = new Set();
+    this.samples = new Map();
+    this.transfers = [];
     this.decodeChain = Promise.resolve();
-    this.decodedBytes = 0;
-    this.reservedBytes = 0;
-    this.maxDecoded = 0;
-    this.maxDecodedBytes = 0;
-    this.maxRequests = 0;
-    this.disposed = false;
-    this.stillBlobs = new Map();
-    this.stillErrors = new Map();
-    this.warmOrder = [];
+    this.decodedBytes = this.reservedBytes = this.compressedBytes = 0;
+    this.maxDecoded = this.maxDecodedBytes = this.maxCompressedBytes = this.maxRequests = this.maxSpeculative = 0;
+    this.epoch = this.motionEpoch = this.backgroundFetched = 0;
     this.direction = 1;
-    this.motionEpoch = 0;
-    this.stillsOnly = false;
-    this.deliveryMs = 0;
-    this.deliverySamples = 0;
+    this.order = [];
+    this.visible = true;
+    this.activity = {};
   }
 
+  spec(index, resolution = this.resolution, kind = 'motion') {
+    return { index, resolution, variant: this.variant, key: `${this.variant}/${resolution.id}/${index}`, kind };
+  }
   selectVariant(variant, resolution = this.manifest.variants[variant].resolutions.at(-1)) {
     if (variant === this.variant && resolution.id === this.resolution?.id) return;
     this.epoch++;
-    for (const job of this.jobs.values()) job.controller.abort();
-    // Keep aborted jobs accounted for until their promises settle.
-    for (const index of this.cache.keys()) this.evict(index);
-    this.errors.clear();
-    this.order = [];
-    if (variant !== this.variant) {
-      this.stillBlobs.clear();
-      this.stillErrors.clear();
-    }
+    this.motionEpoch++;
+    for (const job of this.jobs.values()) if (job.variant !== variant) job.controller.abort();
     this.variant = variant;
     this.resolution = resolution;
-    this.deliveryMs = 0;
-    this.deliverySamples = 0;
+    this.order = [];
+    this.detail = null;
+    this.target = undefined;
   }
-
-  warmStills() {
-    this.warmOrder = this.manifest.chapters.map(chapter => chapter.stillIndex);
-    this.pump();
-  }
-
-  get warmReady() {
-    return this.warmOrder.every(index => this.stillBlobs.has(index) || this.stillErrors.has(index));
-  }
-
-  request(target, direction = 1, stillsOnly = false) {
-    if (direction !== this.direction || stillsOnly !== this.stillsOnly) this.motionEpoch++;
-    this.direction = direction;
-    this.stillsOnly = stillsOnly;
-    this.target = target;
-    const capacity = Math.min(MAX_IMAGES, Math.floor(MAX_DECODED_BYTES / this.imageBytes));
-    this.order = stillsOnly ? [target] : nearbyFrames(target, direction, this.manifest.frames.length, capacity);
-    // Replace queued work, but let active downloads finish so scrolling cannot starve them.
-    this.pump();
-  }
-
+  warmStills() { this.warm = true; }
+  get warmReady() { return this.manifest.chapters.every(c => this.blobs.has(this.spec(c.stillIndex, this.manifest.variants[this.variant].resolutions[0]).key)); }
+  get stillBlobs() { return new Map(this.manifest.chapters.map(c => [c.stillIndex, this.blobs.get(this.spec(c.stillIndex, this.manifest.variants[this.variant].resolutions[0]).key)?.blob]).filter(([,v])=>v)); }
   get imageBytes() { return this.resolution.width * this.resolution.height * 4; }
   get allocatedBytes() { return this.decodedBytes + this.reservedBytes; }
   get allocatedImages() { return this.cache.size + Number(this.reservedBytes > 0); }
-  get(index) { return this.cache.get(index); }
-  frameFor(target, displayed, direction, exactOnly = false) {
-    if (this.cache.has(target)) return target;
-    if (exactOnly || !Number.isFinite(displayed)) return undefined;
-    // Advance only toward the current target, never beyond it or back to a late frame.
-    const candidates = [...this.cache.keys()].filter(index =>
-      (index - displayed) * direction >= 0 && (target - index) * direction >= 0);
-    return candidates.sort((a, b) => Math.abs(a - target) - Math.abs(b - target))[0];
+  get deliveryMs() { const rows = this.tierSamples(this.resolution).slice(-8); return rows.length ? rows.reduce((n,x)=>n+x.fetchMs,0)/rows.length : 0; }
+  get deliverySamples() { return this.tierSamples(this.resolution).length; }
+  tierSamples(resolution) { return this.samples.get(`${this.variant}/${resolution.id}`) || []; }
+  networkSummary() {
+    const rows = this.transfers.filter(x=>this.clock()-x.end < 10000).sort((a,b)=>a.start-b.start);
+    let duration = 0, end = -Infinity;
+    for (const row of rows) { duration += Math.max(0,row.end-Math.max(end,row.start)); end=Math.max(end,row.end); }
+    return { count: rows.length, mbps: duration ? rows.reduce((n,x)=>n+x.bytes,0)*8/duration/1000 : 0 };
   }
-  error(index) { return this.errors.get(index); }
-
-  retry() {
-    this.errors.clear();
-    this.stillErrors.clear();
+  url(index, resolution = this.resolution) {
+    return `${resolution.urlTemplate.replace('{frame}', String(this.manifest.frames[index]).padStart(4,'0'))}?v=${this.manifest.version}`;
+  }
+  get(index, resolution = this.resolution) { return this.cache.get(this.spec(index,resolution).key)?.bitmap; }
+  best(index, ceiling = this.activity.sharp || this.resolution) {
+    return [...this.cache.values()].filter(x=>x.variant===this.variant && x.index===index && Number(x.resolution.id)<=Number(ceiling.id))
+      .sort((a,b)=>Number(b.resolution.id)-Number(a.resolution.id))[0];
+  }
+  frameFor(target, displayed, direction, exactOnly = false) {
+    if (this.best(target)) return target;
+    if (exactOnly || !Number.isFinite(displayed)) return undefined;
+    return [...new Set([...this.cache.values()].filter(x=>x.variant===this.variant && this.best(x.index)).map(x=>x.index))]
+      .filter(index=>(index-displayed)*direction>=0 && (target-index)*direction>=0)
+      .sort((a,b)=>Math.abs(a-target)-Math.abs(b-target))[0];
+  }
+  error(index, resolution = this.resolution) { return this.errors.get(this.spec(index,resolution).key); }
+  retry() { this.errors.clear(); this.pump(); }
+  setActivity(activity) {
+    this.activity = activity;
+    this.visible = activity.visible !== false;
+    if (!this.visible || !activity.enabled) for (const job of this.jobs.values()) if (job.speculative) job.controller.abort();
+  }
+  request(target, direction = 1, stillsOnly = false, { detail = null, motion = true } = {}) {
+    if (direction !== this.direction || stillsOnly !== this.stillsOnly) this.motionEpoch++;
+    Object.assign(this, { direction, stillsOnly, target });
+    // Use a worst-case pixel capacity so a mixed-resolution window cannot churn forever.
+    const largest = this.activity.sharp || this.resolution;
+    const capacity = Math.min(MAX_IMAGES,Math.floor(MAX_DECODED_BYTES / Math.max(this.imageBytes,largest.width*largest.height*4)));
+    const indices = stillsOnly ? [target] : nearbyFrames(target,direction,this.manifest.frames.length,capacity);
+    this.order = motion ? indices.map(i=> {
+      const sharp=this.activity.sharp;
+      return this.spec(i,this.activity.preferCached && sharp && this.blobs.has(this.spec(i,sharp).key) ? sharp : this.resolution);
+    }) : [];
+    this.detail = detail ? this.spec(target,detail,'detail') : null;
     this.pump();
   }
-
-  url(index, resolution = this.resolution) {
-    const source = String(this.manifest.frames[index]).padStart(4, '0');
-    return `${resolution.urlTemplate.replace('{frame}', source)}?v=${this.manifest.version}`;
+  satisfies(spec) {
+    if (this.cache.has(spec.key)) return true;
+    return spec.kind === 'motion' && [...this.cache.values()].some(x=>x.variant===spec.variant && x.index===spec.index &&
+      Number(x.resolution.id)>=Number(spec.resolution.id) && Number(x.resolution.id)<=Number((this.activity.sharp||this.resolution).id));
   }
-
-  evict(index) {
-    const bitmap = this.cache.get(index);
-    this.decodedBytes -= bitmap.width * bitmap.height * 4;
-    bitmap.close();
-    this.cache.delete(index);
+  priority(entry) {
+    if (entry.variant !== this.variant) return 0;
+    if (entry.index === this.target) return 5;
+    if (this.order.some(x=>x.index===entry.index)) return 4;
+    return Number(entry.resolution.id) < Number((this.activity.sharp||this.resolution).id) ? 1 : 2;
   }
-
+  evict(key) {
+    const entry=this.cache.get(key);
+    this.decodedBytes-=entry.bitmap.width*entry.bitmap.height*4;
+    entry.bitmap.close(); this.cache.delete(key);
+  }
   reserve(bytes) {
-    while (this.cache.size && (this.cache.size >= MAX_IMAGES || this.decodedBytes + bytes > MAX_DECODED_BYTES)) {
-      const victim = [...this.cache.keys()].sort((a, b) =>
-        Number(this.order.includes(a)) - Number(this.order.includes(b)) ||
-        Math.abs(b - this.target) - Math.abs(a - this.target))[0];
-      this.evict(victim);
+    while(this.cache.size && (this.cache.size>=MAX_IMAGES || this.decodedBytes+bytes>MAX_DECODED_BYTES)) {
+      const victim=[...this.cache.values()].sort((a,b)=>this.priority(a)-this.priority(b) || Math.abs(b.index-this.target)-Math.abs(a.index-this.target))[0];
+      this.evict(victim.key);
     }
-    this.reservedBytes = bytes;
-    this.maxDecoded = Math.max(this.maxDecoded, this.allocatedImages);
-    this.maxDecodedBytes = Math.max(this.maxDecodedBytes, this.allocatedBytes);
+    this.reservedBytes=bytes;
+    this.maxDecoded=Math.max(this.maxDecoded,this.allocatedImages);
+    this.maxDecodedBytes=Math.max(this.maxDecodedBytes,this.allocatedBytes);
   }
-
-  pump() {
-    if (this.disposed) return;
-    if (!this.warmReady) {
-      for (const index of this.warmOrder) {
-        if (this.jobs.size >= MAX_REQUESTS) break;
-        const key = `still:${index}`;
-        if (this.stillBlobs.has(index) || this.stillErrors.has(index) || this.jobs.has(key)) continue;
-        const job = { controller: new AbortController(), epoch: this.epoch };
-        this.jobs.set(key, job);
-        this.maxRequests = Math.max(this.maxRequests, this.jobs.size);
-        this.loadStill(index, key, job);
+  remember(spec,blob) {
+    const bytes=blob.size || 0;
+    if (this.blobs.has(spec.key) || bytes>MAX_COMPRESSED_BYTES) return;
+    while(this.blobs.size && this.compressedBytes+bytes>MAX_COMPRESSED_BYTES) {
+      const victim=[...this.blobs.values()].sort((a,b)=>this.priority(a)-this.priority(b) || a.used-b.used)[0];
+      this.compressedBytes-=victim.bytes; this.blobs.delete(victim.key);
+    }
+    this.blobs.set(spec.key,{...spec,blob,bytes,used:this.clock()});
+    this.compressedBytes+=bytes;
+    this.maxCompressedBytes=Math.max(this.maxCompressedBytes,this.compressedBytes);
+  }
+  background() {
+    if (!this.visible || !this.best(this.target) || this.error(this.target)) return null;
+    const a=this.activity, candidates=[];
+    if(a.enabled && !this.stillsOnly) {
+      if(a.probe) for(let offset=0;offset<3;offset++) candidates.push(this.spec(this.target+offset*this.direction,a.probe,'probe'));
+      if(a.sharp) {
+        for(let offset=0;offset<=12;offset++) {
+          candidates.push(this.spec(this.target+offset*this.direction,a.sharp,'near'));
+          if(offset>0 && offset<=4)candidates.push(this.spec(this.target-offset*this.direction,a.sharp,'near'));
+        }
       }
-      return;
     }
-    for (const index of this.order) {
-      if (this.jobs.size >= MAX_REQUESTS) break;
-      if (this.cache.has(index) || this.jobs.has(index) || this.errors.has(index)) continue;
-      const job = { controller: new AbortController(), epoch: this.epoch, motionEpoch: this.motionEpoch };
-      this.jobs.set(index, job);
-      this.maxRequests = Math.max(this.maxRequests, this.jobs.size);
-      this.load(index, job);
+    if(this.warm) for(const chapter of this.manifest.chapters)candidates.push(this.spec(chapter.stillIndex,this.manifest.variants[this.variant].resolutions[0],'still'));
+    if(a.enabled && a.distant && !this.stillsOnly) {
+      for(let offset=1;offset<this.manifest.frames.length;offset++) candidates.push(this.spec(this.target+offset*this.direction,a.sharp,'distant'));
+      for(let offset=1;offset<this.manifest.frames.length;offset++) candidates.push(this.spec(this.target-offset*this.direction,a.sharp,'distant'));
+    }
+    return candidates.find(x=>x.index>=0 && x.index<this.manifest.frames.length &&
+      (x.kind==='probe' ? !this.probed.has(x.key) && (this.blobs.has(x.key) || !this.attempted.has(x.key)) : !this.attempted.has(x.key)) &&
+      !this.jobs.has(x.key) && (x.kind==='probe' ? !this.cache.has(x.key) : !this.blobs.has(x.key)));
+  }
+  pump() {
+    if(this.disposed || !this.visible || this.target===undefined) return;
+    const foreground=[...(this.detail?[this.detail]:[]),...this.order];
+    const urgent=foreground.find(x=>x.index===this.target && !this.satisfies(x) && !this.jobs.has(x.key) && !this.errors.has(x.key));
+    if(urgent && this.jobs.size>=MAX_REQUESTS) {
+      const speculative=[...this.jobs.values()].find(x=>x.speculative);
+      speculative?.controller.abort();
+    }
+    for(const spec of foreground) {
+      if(this.jobs.size>=MAX_REQUESTS) break;
+      if(this.satisfies(spec) || this.jobs.has(spec.key) || this.errors.has(spec.key))continue;
+      this.start(spec,false);
+    }
+    if(this.jobs.size<MAX_REQUESTS && ![...this.jobs.values()].some(x=>x.speculative)) {
+      const spec=this.background();
+      if(spec){this.attempted.add(spec.key);if(spec.kind==='probe')this.probed.add(spec.key);this.start(spec,true)}
     }
   }
-
-  async loadStill(index, key, job) {
-    const valid = () => !this.disposed && job.epoch === this.epoch;
-    const timeout = setTimeout(() => job.controller.abort(), 8000);
-    try {
-      const small = this.manifest.variants[this.variant].resolutions[0];
-      const response = await this.fetchFrame(this.url(index, small), { signal: job.controller.signal, cache: 'force-cache' });
-      if (!response.ok) throw new Error(`Chapter request returned ${response.status}`);
-      const blob = await response.blob();
-      if (valid()) this.stillBlobs.set(index, blob);
-    } catch (error) {
-      if (valid()) this.stillErrors.set(index, error.message);
-    } finally {
-      clearTimeout(timeout);
-      if (this.jobs.get(key) === job) this.jobs.delete(key);
-      if (valid()) this.notify();
-      this.pump();
-    }
+  start(spec,speculative) {
+    const job={...spec,speculative,controller:new AbortController(),epoch:this.epoch,motionEpoch:this.motionEpoch};
+    this.jobs.set(spec.key,job);
+    this.maxRequests=Math.max(this.maxRequests,this.jobs.size);
+    this.maxSpeculative=Math.max(this.maxSpeculative,[...this.jobs.values()].filter(x=>x.speculative).length);
+    this.load(job);
   }
-
-  async load(index, job) {
-    const { controller, epoch } = job;
-    const valid = () => !this.disposed && epoch === this.epoch;
-    // A completed frame can still advance the picture after the target has moved.
-    // A reversal, mode change or new image selection makes old work obsolete.
-    const wanted = () => valid() && job.motionEpoch === this.motionEpoch &&
-      (!this.stillsOnly || this.order.includes(index));
-    const expectedBytes = this.imageBytes;
-    let timedOut = false;
-    const timeout = setTimeout(() => { timedOut = true; controller.abort(); }, 8000);
+  async load(job) {
+    const {controller,key,index,resolution}=job;
+    const valid=()=>!this.disposed && !controller.signal.aborted && job.epoch===this.epoch && job.motionEpoch===this.motionEpoch;
+    const wanted=()=>valid() && (job.kind==='detail' ? this.detail?.key===key : !this.stillsOnly || index===this.target);
+    let timedOut=false, fetchMs=0, cached=true;
+    const timeout=setTimeout(()=>{timedOut=true;controller.abort()},8000);
     try {
-      let blob = this.resolution.id === '540' && this.stillBlobs.get(index);
-      if (!blob) {
-        const started = performance.now();
-        const response = await this.fetchFrame(this.url(index), { signal: controller.signal, cache: 'force-cache' });
-        if (!response.ok) throw new Error(`Frame request returned ${response.status}`);
-        blob = await response.blob();
-        if (valid()) {
-          const elapsed = performance.now() - started;
-          this.deliveryMs = this.deliverySamples ? this.deliveryMs * .75 + elapsed * .25 : elapsed;
-          this.deliverySamples++;
+      let blob=this.blobs.get(key)?.blob;
+      if(!blob){
+        const start=this.clock(), url=this.url(index,resolution);
+        const response=await this.fetchFrame(url,{signal:controller.signal,cache:'force-cache',priority:job.speculative?'low':index===this.target?'high':'auto'});
+        if(!response.ok)throw new Error(`Frame request returned ${response.status}`);
+        blob=await response.blob();
+        fetchMs=this.clock()-start;
+        const absolute=typeof location==='undefined'?url:new URL(url,location.href).href;
+        const timing=this.resourceTiming(absolute);
+        cached=Boolean(timing && timing.transferSize===0);
+        if(timing?.transferSize>300){
+          this.transfers.push({start,end:this.clock(),bytes:blob.size});
+          this.transfers=this.transfers.slice(-64);
         }
       }
       clearTimeout(timeout);
-      const decode = this.decodeChain.then(async () => {
-        if (!wanted()) return;
-        this.reserve(expectedBytes);
+      if(!this.disposed && !controller.signal.aborted)this.remember(job,blob);
+      if(job.speculative)this.backgroundFetched++;
+      if(job.speculative && job.kind!=='probe')return;
+      const decode=this.decodeChain.then(async()=>{
+        if(!wanted() || this.cache.has(key) || (job.kind==='motion' && this.satisfies(job)))return;
+        const bytes=resolution.width*resolution.height*4;
+        this.reserve(bytes);
         let bitmap;
-        try {
-          bitmap = await this.decodeFrame(blob);
-          if (!wanted() || bitmap.width * bitmap.height * 4 !== expectedBytes) {
+        const start=this.clock();
+        try{
+          bitmap=await this.decodeFrame(blob);
+          if(!wanted() || bitmap.width*bitmap.height*4!==bytes){
             bitmap.close();
-            if (wanted()) throw new Error('Unexpected frame dimensions');
+            if(wanted())throw new Error('Unexpected frame dimensions');
             return;
           }
-          this.cache.set(index, bitmap);
-          this.decodedBytes += expectedBytes;
-        } finally {
-          this.reservedBytes = 0;
-        }
-        this.notify();
+          // Keep only the sharper bitmap of a pose, freeing redundant decoded pixels.
+          for(const other of [...this.cache.values()])if(other.variant===job.variant && other.index===index && Number(other.resolution.id)<=Number(resolution.id))this.evict(other.key);
+          this.cache.set(key,{...job,bitmap});this.decodedBytes+=bytes;
+          const tier=`${job.variant}/${resolution.id}`, rows=this.samples.get(tier)||[];
+          rows.push({index,fetchMs,decodeMs:this.clock()-start,cached,at:this.clock()});
+          this.samples.set(tier,rows.slice(-24));
+        }finally{this.reservedBytes=0}
       });
-      this.decodeChain = decode.catch(() => {});
+      this.decodeChain=decode.catch(()=>{});
       await decode;
-    } catch (error) {
-      if (wanted() && (timedOut || error.name !== 'AbortError')) {
-        this.errors.set(index, timedOut ? 'Frame request timed out' : error.message);
-        this.notify();
-      }
-    } finally {
+    }catch(error){
+      if(!this.disposed && job.epoch===this.epoch && (timedOut || error.name!=='AbortError'))this.errors.set(key,timedOut?'Frame request timed out':error.message);
+    }finally{
       clearTimeout(timeout);
-      if (this.jobs.get(index) === job) this.jobs.delete(index);
+      this.jobs.delete(key);
+      if(!this.disposed)this.notify();
       this.pump();
     }
   }
-
   dispose() {
-    this.disposed = true;
-    this.epoch++;
-    for (const job of this.jobs.values()) job.controller.abort();
-    for (const index of this.cache.keys()) this.evict(index);
-    this.stillBlobs.clear();
+    this.disposed=true;this.epoch++;
+    for(const job of this.jobs.values())job.controller.abort();
+    for(const key of this.cache.keys())this.evict(key);
+    this.blobs.clear();this.compressedBytes=0;
   }
 }
