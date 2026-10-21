@@ -7,6 +7,7 @@ const context = canvas.getContext('2d', { alpha: false });
 const fallback = $('.fallback'), masthead = $('.masthead'), instructions = $('#instructions');
 const instructionsSummary = instructions.querySelector('summary');
 const loadState = $('#load-state'), loadMessage = $('#load-message'), retry = $('#retry');
+const loadAnnouncement = $('#load-announcement');
 const progressFill = $('#progress-fill'), scrollHint = $('#scroll-hint');
 const announcement = $('#chapter-announcement'), navLinks = [...document.querySelectorAll('[data-chapter]')];
 const motionOptions = $('#motion-options'), motionToggle = $('#motion-toggle'), motionDescription = $('#motion-description');
@@ -20,6 +21,7 @@ let mode = reducedQuery.matches ? 'reduced' : 'animation';
 let areaWidth = 0, areaHeight = 0;
 let orientationTimer = 0;
 let lastScrollTime = 0, scrollRate = 0;
+let lastAdvanceAt = 0, chapterRequestedAt = 0;
 const stillMode = () => mode !== 'animation';
 const schedule = () => { if (!raf) raf = requestAnimationFrame(render); };
 
@@ -43,6 +45,8 @@ function showLoad(message, failed = false) {
   if (loadMessage.textContent !== message) loadMessage.textContent = message;
   retry.hidden = !failed;
   loadState.hidden = false;
+  const announcement = failed ? message : '';
+  if (loadAnnouncement.textContent !== announcement) loadAnnouncement.textContent = announcement;
 }
 
 function updateMotionOptions() {
@@ -157,6 +161,7 @@ function render(now) {
         canvas.width = bitmap.width; canvas.height = bitmap.height;
       }
       context.drawImage(bitmap, 0, 0);
+      lastAdvanceAt = now;
       displayedKey = key;
       canvas.dataset.frame = String(drawnIndex);
       canvas.dataset.sourceFrame = String(manifest.frames[drawnIndex]);
@@ -168,13 +173,18 @@ function render(now) {
   }
   if (drawnIndex === index) {
     loadState.hidden = true;
+    loadAnnouncement.textContent = '';
+    chapterRequestedAt = 0;
     pendingSince = 0;
     lagSince = null;
   } else {
     if (!pendingSince) pendingSince = now;
     const failed = loader.error(index);
+    const feedbackDelay = chapterRequestedAt ? 350 : 600;
+    const stalledFor = now - (chapterRequestedAt || Math.max(pendingSince, lastAdvanceAt));
     if (failed) showLoad('This image could not load. The previous view remains available.', true);
-    else if (now - pendingSince >= 160) showLoad('Loading…');
+    else if (stalledFor >= feedbackDelay) showLoad('Loading…');
+    else if (enhanced) loadState.hidden = true;
     const resolutions = manifest.variants[variant].resolutions;
     const tier = resolutions.findIndex(item => item.id === loader.resolution.id);
     const behind = enhanced && !stillMode() && Math.abs(index - Number(canvas.dataset.frame)) >= 2;
@@ -190,8 +200,10 @@ function render(now) {
       }
     } else lagSince = null;
     // Timers provide loading feedback and the lag deadline without an idle RAF loop.
-    const nextWake = lagSince !== null ? Math.max(1, lagDelay - (now - lagSince)) : now - pendingSince < 160 ? 165 : 0;
-    if (nextWake) wakeTimer = setTimeout(schedule, nextWake);
+    const deadlines = [];
+    if (lagSince !== null) deadlines.push(Math.max(1, lagDelay - (now - lagSince)));
+    if (!failed && stalledFor < feedbackDelay) deadlines.push(Math.max(1, feedbackDelay - stalledFor));
+    if (deadlines.length) wakeTimer = setTimeout(schedule, Math.min(...deadlines));
   }
   if (progress !== targetProgress || resizePending) schedule();
 }
@@ -265,6 +277,7 @@ for (const link of navLinks) {
     dismissHint();
     instructions.open = false;
     const chapter = manifest.chapters.find(item => item.id === link.dataset.chapter);
+    chapterRequestedAt = performance.now();
     progress = targetProgress = progressAtFrame(chapter.targetIndex, manifest.frames.length);
     previousTick = 0;
     window.scrollTo({ top: targetProgress * cachedScrollSpan, behavior: 'instant' });

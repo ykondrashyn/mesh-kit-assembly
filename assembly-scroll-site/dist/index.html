@@ -24,10 +24,11 @@
           <img src="./assets/portrait/540/frame-0034.webp" fetchpriority="high" alt="Four parts: LoRa antenna, 868 MHz, Wio-SX1262 board, Wi-Fi antenna, 2.4 GHz, and XIAO ESP32S3 board.">
         </picture>
         <canvas id="assembly" role="img" aria-label="Assembly animation" hidden></canvas>
-        <div id="load-state" role="status" aria-live="polite" hidden>
+        <div id="load-state" hidden>
           <span id="load-message"></span>
           <button id="retry" type="button" hidden>Try again</button>
         </div>
+        <span id="load-announcement" class="visually-hidden" role="status" aria-live="polite"></span>
       </div>
       <footer class="controls">
         <nav aria-label="Assembly steps">
